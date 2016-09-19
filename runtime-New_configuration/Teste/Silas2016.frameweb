@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frameweb:NavigationModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015">
+  <packagedElement xsi:type="frameweb:ViewPackage">
+    <packagedElement xsi:type="frameweb:Page" name="PaginaPrincipal.html">
+      <nestedClassifier xsi:type="frameweb:Tag" name="Head"/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:UIComponent" name="Form"/>
+  </packagedElement>
+</frameweb:NavigationModel>
