@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <frameweb:NavigationModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015">
   <packagedElement xsi:type="frameweb:ViewPackage">
-    <packagedElement xsi:type="frameweb:Page" name="PaginaPrincipal"/>
-    <packagedElement xsi:type="frameweb:UIComponent" name="Form"/>
-    <packagedElement xsi:type="frameweb:Template" name="Page Template"/>
+    <packagedElement xsi:type="frameweb:Page" name="index"/>
+    <packagedElement xsi:type="frameweb:UIComponent" name="frmLogin"/>
+    <packagedElement xsi:type="frameweb:Template" name="login"/>
+    <packagedElement xsi:type="frameweb:Template" name="home"/>
   </packagedElement>
 </frameweb:NavigationModel>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description" xmi:id="_Cr5G0IArEea4F-gKUNk65g" selectedViews="_VF6yIIArEea4F-gKUNk65g" version="11.0.0.201604141600">
+  <semanticResources>SCAP.frameweb</semanticResources>
+  <ownedViews xmi:type="viewpoint:DView" xmi:id="_VF6yIIArEea4F-gKUNk65g">
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/FrameWeb.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']"/>
+    <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_rD4eQIArEea4F-gKUNk65g" name="WebMedia_Modelo de Navegação">
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_rD4eQYArEea4F-gKUNk65g" source="DANNOTATION_CUSTOMIZATION_KEY">
+        <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_rD4eQoArEea4F-gKUNk65g"/>
+      </ownedAnnotationEntries>
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_rEI88IArEea4F-gKUNk65g" source="GMF_DIAGRAMS">
+        <data xmi:type="notation:Diagram" xmi:id="_rEI88YArEea4F-gKUNk65g" type="Sirius" element="_rD4eQIArEea4F-gKUNk65g" measurementUnit="Pixel">
+          <styles xmi:type="notation:DiagramStyle" xmi:id="_rEI88oArEea4F-gKUNk65g"/>
+        </data>
+      </ownedAnnotationEntries>
+      <description xmi:type="description_1:DiagramDescription" href="platform:/resource/FrameWeb.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']"/>
+      <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_rD4eQ4ArEea4F-gKUNk65g"/>
+      <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/FrameWeb.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer"/>
+      <target xmi:type="frameweb:NavigationModel" href="SCAP.frameweb#//@compose.0"/>
+    </ownedRepresentations>
+  </ownedViews>
+</viewpoint:DAnalysis>

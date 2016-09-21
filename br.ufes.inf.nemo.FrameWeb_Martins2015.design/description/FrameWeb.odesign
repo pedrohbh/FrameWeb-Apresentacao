@@ -52,6 +52,14 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
           </style>
         </nodeMappings>
+        <edgeMappings name="Page_to_UIComponent" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@additionalLayers[name='NavigationClass']/@nodeMappings[name='UI%20Component%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@additionalLayers[name='NavigationClass']/@nodeMappings[name='Page%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@additionalLayers[name='NavigationClass']/@nodeMappings[name='Template%20Node']" targetFinderExpression="feature:">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
       </additionalLayers>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWebPersistenceModel"/>
