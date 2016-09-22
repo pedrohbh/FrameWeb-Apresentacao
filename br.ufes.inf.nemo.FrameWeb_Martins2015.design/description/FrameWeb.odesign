@@ -59,14 +59,12 @@
           </ownedTools>
         </toolSections>
         <toolSections name="View">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="createPage" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@nodeMappings[name='Page%20Node']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Page" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@nodeMappings[name='Page%20Node']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.Page">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Name"/>
-                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.Page" referenceName="packagedElement"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
