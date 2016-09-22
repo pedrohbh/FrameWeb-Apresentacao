@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:validation="http://www.eclipse.org/sirius/description/validation/1.1.0" name="FrameWeb" version="11.0.0.201601261200">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:validation="http://www.eclipse.org/sirius/description/validation/1.1.0" name="FrameWeb" version="11.0.0.201601261200">
   <ownedViewpoints label="FrameWebViewPoint" modelFileExtension="frameweb">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWebNavigationModel" domainClass="NavigationModel">
       <validationSet>
@@ -22,15 +22,6 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
           </style>
         </nodeMappings>
-        <toolSections name="FrontController">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="FrontControllerClass" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@nodeMappings[name='FrontControllerClass']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation/>
-          </ownedTools>
-        </toolSections>
-      </defaultLayer>
-      <additionalLayers name="NavigationClass">
         <nodeMappings name="Page Node" domainClass="Page">
           <style xsi:type="style:SquareDescription" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -52,7 +43,7 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="Page_to_UIComponent" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@additionalLayers[name='NavigationClass']/@nodeMappings[name='UI%20Component%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@additionalLayers[name='NavigationClass']/@nodeMappings[name='Page%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@additionalLayers[name='NavigationClass']/@nodeMappings[name='Template%20Node']" targetFinderExpression="feature:">
+        <edgeMappings name="Page_to_UIComponent" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@nodeMappings[name='UI%20Component%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@nodeMappings[name='Page%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@nodeMappings[name='Template%20Node']" targetFinderExpression="feature:">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
@@ -60,7 +51,27 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-      </additionalLayers>
+        <toolSections name="FrontController">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="FrontControllerClass" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@nodeMappings[name='FrontControllerClass']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation/>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="View">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createPage" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@nodeMappings[name='Page%20Node']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.Page">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Name"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWebPersistenceModel"/>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWebNavigationModel"/>

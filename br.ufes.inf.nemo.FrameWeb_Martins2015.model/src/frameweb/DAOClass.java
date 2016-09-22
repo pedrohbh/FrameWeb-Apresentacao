@@ -10,12 +10,12 @@ package frameweb;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.DAOClass#getSufix <em>Sufix</em>}</li>
  *   <li>{@link frameweb.DAOClass#getInfix <em>Infix</em>}</li>
  *   <li>{@link frameweb.DAOClass#getPrefix <em>Prefix</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getDAOClass()
  * @model

@@ -11,10 +11,10 @@ import org.eclipse.uml2.uml.GeneralizationSet;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.DomainGeneralizationSet#getMapping <em>Mapping</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getDomainGeneralizationSet()
  * @model

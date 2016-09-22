@@ -21,10 +21,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.IOParameterImpl#getDisplay <em>Display</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -11,11 +11,11 @@ import org.eclipse.uml2.uml.Interface;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.DAOInterface#getInfix <em>Infix</em>}</li>
  *   <li>{@link frameweb.DAOInterface#getSufix <em>Sufix</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getDAOInterface()
  * @model

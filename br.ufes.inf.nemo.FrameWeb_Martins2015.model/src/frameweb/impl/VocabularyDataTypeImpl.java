@@ -26,11 +26,11 @@ import org.eclipse.uml2.uml.UMLPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.VocabularyDataTypeImpl#getOwnedAttributes <em>Owned Attribute</em>}</li>
  *   <li>{@link frameweb.impl.VocabularyDataTypeImpl#getOwnedOperations <em>Owned Operation</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

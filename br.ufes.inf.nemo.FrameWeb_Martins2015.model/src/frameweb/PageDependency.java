@@ -10,10 +10,10 @@ package frameweb;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.PageDependency#getPageDependencyCosntraint <em>Page Dependency Cosntraint</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getPageDependency()
  * @model annotation="Ecore constraints='PageDepencencyContent'"

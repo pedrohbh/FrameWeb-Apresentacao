@@ -10,10 +10,10 @@ package frameweb;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.IdAttribute#getGeneration <em>Generation</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getIdAttribute()
  * @model

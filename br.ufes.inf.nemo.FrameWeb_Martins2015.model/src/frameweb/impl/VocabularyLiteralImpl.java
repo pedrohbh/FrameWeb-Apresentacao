@@ -13,8 +13,6 @@ import org.eclipse.uml2.uml.internal.impl.LiteralStringImpl;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Vocabulary Literal</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

@@ -19,10 +19,10 @@ import org.eclipse.uml2.uml.internal.impl.ClassImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.DomainClassImpl#getTable <em>Table</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -10,10 +10,10 @@ package frameweb;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.DateTimeAttribute#getDateTimePrecision <em>Date Time Precision</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getDateTimeAttribute()
  * @model

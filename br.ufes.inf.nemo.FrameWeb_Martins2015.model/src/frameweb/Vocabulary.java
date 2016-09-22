@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.Vocabulary#getDirectlyImportsDocuments <em>Directly Imports Documents</em>}</li>
  *   <li>{@link frameweb.Vocabulary#getVocabularyIRI <em>Vocabulary IRI</em>}</li>
@@ -18,7 +19,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link frameweb.Vocabulary#getAnnotations <em>Annotations</em>}</li>
  *   <li>{@link frameweb.Vocabulary#getVocabularyDocument <em>Vocabulary Document</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getVocabulary()
  * @model

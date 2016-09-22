@@ -21,10 +21,10 @@ import org.eclipse.uml2.uml.internal.impl.ClassifierImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.VocabularyEntityImpl#getEntityIRI <em>Entity IRI</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

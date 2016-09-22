@@ -18,10 +18,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.DateTimeAttributeImpl#getDateTimePrecision <em>Date Time Precision</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

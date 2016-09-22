@@ -10,12 +10,12 @@ package frameweb;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.ChainingDependency#getOutMethod <em>Out Method</em>}</li>
  *   <li>{@link frameweb.ChainingDependency#getInMethod <em>In Method</em>}</li>
  *   <li>{@link frameweb.ChainingDependency#getChainingDependendencyConstraint <em>Chaining Dependendency Constraint</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getChainingDependency()
  * @model annotation="Ecore constraints='ChainingDependencyContent'"

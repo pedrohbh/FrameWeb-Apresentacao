@@ -28,6 +28,7 @@ import org.eclipse.uml2.uml.ValueSpecification;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.Property#getDatatype <em>Datatype</em>}</li>
  *   <li>{@link frameweb.Property#getInterface <em>Interface</em>}</li>
@@ -46,7 +47,6 @@ import org.eclipse.uml2.uml.ValueSpecification;
  *   <li>{@link frameweb.Property#getSubsettedProperty <em>Subsetted Property</em>}</li>
  *   <li>{@link frameweb.Property#getAssociation <em>Association</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getProperty()
  * @model features="default" 

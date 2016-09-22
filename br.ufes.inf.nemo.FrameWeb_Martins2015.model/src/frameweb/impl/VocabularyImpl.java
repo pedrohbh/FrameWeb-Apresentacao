@@ -31,6 +31,7 @@ import org.eclipse.uml2.uml.internal.impl.PackageImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.VocabularyImpl#getDirectlyImportsDocuments <em>Directly Imports Documents</em>}</li>
  *   <li>{@link frameweb.impl.VocabularyImpl#getVocabularyIRI <em>Vocabulary IRI</em>}</li>
@@ -38,7 +39,6 @@ import org.eclipse.uml2.uml.internal.impl.PackageImpl;
  *   <li>{@link frameweb.impl.VocabularyImpl#getAnnotations <em>Annotations</em>}</li>
  *   <li>{@link frameweb.impl.VocabularyImpl#getVocabularyDocument <em>Vocabulary Document</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -17,11 +17,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.IRIImpl#getIri <em>Iri</em>}</li>
  *   <li>{@link frameweb.impl.IRIImpl#getIriVersion <em>Iri Version</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

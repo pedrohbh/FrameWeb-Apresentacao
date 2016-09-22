@@ -11,10 +11,10 @@ import org.eclipse.uml2.uml.Classifier;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.VocabularyEntity#getEntityIRI <em>Entity IRI</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getVocabularyEntity()
  * @model abstract="true"

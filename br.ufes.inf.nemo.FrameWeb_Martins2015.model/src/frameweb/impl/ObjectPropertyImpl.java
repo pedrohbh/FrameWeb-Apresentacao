@@ -47,6 +47,7 @@ import org.eclipse.uml2.uml.UMLPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.ObjectPropertyImpl#getRelatedElements <em>Related Element</em>}</li>
  *   <li>{@link frameweb.impl.ObjectPropertyImpl#getEndType <em>End Type</em>}</li>
@@ -55,7 +56,6 @@ import org.eclipse.uml2.uml.UMLPackage;
  *   <li>{@link frameweb.impl.ObjectPropertyImpl#getOwnedEnd <em>Owned End</em>}</li>
  *   <li>{@link frameweb.impl.ObjectPropertyImpl#getNavigableOwnedEnd <em>Navigable Owned End</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

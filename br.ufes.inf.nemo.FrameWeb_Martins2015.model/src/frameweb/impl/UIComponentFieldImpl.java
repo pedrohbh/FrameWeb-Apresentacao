@@ -54,10 +54,10 @@ import org.eclipse.uml2.uml.VisibilityKind;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.UIComponentFieldImpl#getInject <em>Inject</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

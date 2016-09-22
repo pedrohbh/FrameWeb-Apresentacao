@@ -4476,6 +4476,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEAnnotation0Annotations();
 		// http:///org/eclipse/emf/ecore/util/ExtendedMetaData
 		createExtendedMetaDataAnnotations();
+		// http://www.eclipse.org/emf/2002/GenModel
+		createGenModelAnnotations();
 		// duplicates
 		createDuplicatesAnnotations();
 		// http://www.eclipse.org/uml2/2.0.0/UML
@@ -4745,6 +4747,621 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		   source, 
 		   new String[] {
 			 "name", "IRI"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/GenModel</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGenModelAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/GenModel";	
+		addAnnotation
+		  (propertyEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "A Property is a StructuralFeature. A Property related by ownedAttribute to a Classifier (other than an association) represents an attribute and might also represent an association end. It relates an instance of the Classifier to a value or set of values of the type of the attribute. A Property related by memberEnd to an Association represents an end of the Association. The type of the Property is the type of the end of the Association. A Property has the capability of being a DeploymentTarget in a Deployment relationship. This enables modeling the deployment to hierarchical nodes that have Properties functioning as internal parts.  Property specializes ParameterableElement to specify that a Property can be exposed as a formal template parameter, and provided as an actual parameter in a binding of a template.\n<p>From package UML::Classification.</p>"
+		   });	
+		addAnnotation
+		  (getProperty__Subsetting_context_conforms__DiagnosticChain_Map(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Subsetting may only occur when the context of the subsetting property conforms to the context of the subsetted property.\nsubsettedProperty->notEmpty() implies\n  (subsettingContext()->notEmpty() and subsettingContext()->forAll (sc |\n    subsettedProperty->forAll(sp |\n      sp.subsettingContext()->exists(c | sc.conformsTo(c)))))"
+		   });	
+		addAnnotation
+		  ((getProperty__Subsetting_context_conforms__DiagnosticChain_Map()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "The chain of diagnostics to which problems are to be appended."
+		   });	
+		addAnnotation
+		  ((getProperty__Subsetting_context_conforms__DiagnosticChain_Map()).getEParameters().get(1), 
+		   source, 
+		   new String[] {
+			 "documentation", "The cache of context-specific information."
+		   });	
+		addAnnotation
+		  (getProperty__Derived_union_is_read_only__DiagnosticChain_Map(), 
+		   source, 
+		   new String[] {
+			 "documentation", "A derived union is read only.\nisDerivedUnion implies isReadOnly"
+		   });	
+		addAnnotation
+		  ((getProperty__Derived_union_is_read_only__DiagnosticChain_Map()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "The chain of diagnostics to which problems are to be appended."
+		   });	
+		addAnnotation
+		  ((getProperty__Derived_union_is_read_only__DiagnosticChain_Map()).getEParameters().get(1), 
+		   source, 
+		   new String[] {
+			 "documentation", "The cache of context-specific information."
+		   });	
+		addAnnotation
+		  (getProperty__Multiplicity_of_composite__DiagnosticChain_Map(), 
+		   source, 
+		   new String[] {
+			 "documentation", "A multiplicity on the composing end of a composite aggregation must not have an upper bound greater than 1.\nisComposite and association <> null implies opposite.upperBound() <= 1"
+		   });	
+		addAnnotation
+		  ((getProperty__Multiplicity_of_composite__DiagnosticChain_Map()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "The chain of diagnostics to which problems are to be appended."
+		   });	
+		addAnnotation
+		  ((getProperty__Multiplicity_of_composite__DiagnosticChain_Map()).getEParameters().get(1), 
+		   source, 
+		   new String[] {
+			 "documentation", "The cache of context-specific information."
+		   });	
+		addAnnotation
+		  (getProperty__Redefined_property_inherited__DiagnosticChain_Map(), 
+		   source, 
+		   new String[] {
+			 "documentation", "A redefined Property must be inherited from a more general Classifier.\n(redefinedProperty->notEmpty()) implies\r\n  (redefinitionContext->notEmpty() and\r\n      redefinedProperty->forAll(rp|\r\n        ((redefinitionContext->collect(fc|\r\n          fc.allParents()))->asSet())->collect(c| c.allFeatures())->asSet()->includes(rp)))"
+		   });	
+		addAnnotation
+		  ((getProperty__Redefined_property_inherited__DiagnosticChain_Map()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "The chain of diagnostics to which problems are to be appended."
+		   });	
+		addAnnotation
+		  ((getProperty__Redefined_property_inherited__DiagnosticChain_Map()).getEParameters().get(1), 
+		   source, 
+		   new String[] {
+			 "documentation", "The cache of context-specific information."
+		   });	
+		addAnnotation
+		  (getProperty__Subsetting_rules__DiagnosticChain_Map(), 
+		   source, 
+		   new String[] {
+			 "documentation", "A subsetting Property may strengthen the type of the subsetted Property, and its upper bound may be less.\nsubsettedProperty->forAll(sp |\n  self.type.conformsTo(sp.type) and\n    ((self.upperBound()->notEmpty() and sp.upperBound()->notEmpty()) implies\n      self.upperBound() <= sp.upperBound() ))"
+		   });	
+		addAnnotation
+		  ((getProperty__Subsetting_rules__DiagnosticChain_Map()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "The chain of diagnostics to which problems are to be appended."
+		   });	
+		addAnnotation
+		  ((getProperty__Subsetting_rules__DiagnosticChain_Map()).getEParameters().get(1), 
+		   source, 
+		   new String[] {
+			 "documentation", "The cache of context-specific information."
+		   });	
+		addAnnotation
+		  (getProperty__Binding_to_attribute__DiagnosticChain_Map(), 
+		   source, 
+		   new String[] {
+			 "documentation", "A binding of a PropertyTemplateParameter representing an attribute must be to an attribute.\n(self.isAttribute()\r\nand (templateParameterSubstitution->notEmpty())\r\nimplies (templateParameterSubstitution->forAll(ts |\r\n    ts.formal.oclIsKindOf(Property)\r\n    and ts.formal.oclAsType(Property).isAttribute())))"
+		   });	
+		addAnnotation
+		  ((getProperty__Binding_to_attribute__DiagnosticChain_Map()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "The chain of diagnostics to which problems are to be appended."
+		   });	
+		addAnnotation
+		  ((getProperty__Binding_to_attribute__DiagnosticChain_Map()).getEParameters().get(1), 
+		   source, 
+		   new String[] {
+			 "documentation", "The cache of context-specific information."
+		   });	
+		addAnnotation
+		  (getProperty__Derived_union_is_derived__DiagnosticChain_Map(), 
+		   source, 
+		   new String[] {
+			 "documentation", "A derived union is derived.\nisDerivedUnion implies isDerived"
+		   });	
+		addAnnotation
+		  ((getProperty__Derived_union_is_derived__DiagnosticChain_Map()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "The chain of diagnostics to which problems are to be appended."
+		   });	
+		addAnnotation
+		  ((getProperty__Derived_union_is_derived__DiagnosticChain_Map()).getEParameters().get(1), 
+		   source, 
+		   new String[] {
+			 "documentation", "The cache of context-specific information."
+		   });	
+		addAnnotation
+		  (getProperty__Deployment_target__DiagnosticChain_Map(), 
+		   source, 
+		   new String[] {
+			 "documentation", "A Property can be a DeploymentTarget if it is a kind of Node and functions as a part in the internal structure of an encompassing Node.\ndeployment->notEmpty() implies owner.oclIsKindOf(Node) and Node.allInstances()->exists(n | n.part->exists(p | p = self))"
+		   });	
+		addAnnotation
+		  ((getProperty__Deployment_target__DiagnosticChain_Map()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "The chain of diagnostics to which problems are to be appended."
+		   });	
+		addAnnotation
+		  ((getProperty__Deployment_target__DiagnosticChain_Map()).getEParameters().get(1), 
+		   source, 
+		   new String[] {
+			 "documentation", "The cache of context-specific information."
+		   });	
+		addAnnotation
+		  (getProperty__Subsetted_property_names__DiagnosticChain_Map(), 
+		   source, 
+		   new String[] {
+			 "documentation", "A Property may not subset a Property with the same name.\nsubsettedProperty->forAll(sp | sp.name <> name)"
+		   });	
+		addAnnotation
+		  ((getProperty__Subsetted_property_names__DiagnosticChain_Map()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "The chain of diagnostics to which problems are to be appended."
+		   });	
+		addAnnotation
+		  ((getProperty__Subsetted_property_names__DiagnosticChain_Map()).getEParameters().get(1), 
+		   source, 
+		   new String[] {
+			 "documentation", "The cache of context-specific information."
+		   });	
+		addAnnotation
+		  (getProperty__Type_of_opposite_end__DiagnosticChain_Map(), 
+		   source, 
+		   new String[] {
+			 "documentation", "If a Property is a classifier-owned end of a binary Association, its owner must be the type of the opposite end.\n(opposite->notEmpty() and owningAssociation->isEmpty()) implies classifier = opposite.type"
+		   });	
+		addAnnotation
+		  ((getProperty__Type_of_opposite_end__DiagnosticChain_Map()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "The chain of diagnostics to which problems are to be appended."
+		   });	
+		addAnnotation
+		  ((getProperty__Type_of_opposite_end__DiagnosticChain_Map()).getEParameters().get(1), 
+		   source, 
+		   new String[] {
+			 "documentation", "The cache of context-specific information."
+		   });	
+		addAnnotation
+		  (getProperty__Qualified_is_association_end__DiagnosticChain_Map(), 
+		   source, 
+		   new String[] {
+			 "documentation", "All qualified Properties must be Association ends\nqualifier->notEmpty() implies association->notEmpty()"
+		   });	
+		addAnnotation
+		  ((getProperty__Qualified_is_association_end__DiagnosticChain_Map()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "The chain of diagnostics to which problems are to be appended."
+		   });	
+		addAnnotation
+		  ((getProperty__Qualified_is_association_end__DiagnosticChain_Map()).getEParameters().get(1), 
+		   source, 
+		   new String[] {
+			 "documentation", "The cache of context-specific information."
+		   });	
+		addAnnotation
+		  (getProperty__GetDefault(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Retrieves a string representation of the default value for this property."
+		   });	
+		addAnnotation
+		  (getProperty__GetOtherEnd(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Retrieves the other end of the (binary) association in which this property is a member end."
+		   });	
+		addAnnotation
+		  (getProperty__IsSetDefault(), 
+		   source, 
+		   new String[] {
+			 "suppressedVisibility", "true"
+		   });	
+		addAnnotation
+		  (getProperty__SetBooleanDefaultValue__boolean(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Sets the default value for this property to the specified Boolean value."
+		   });	
+		addAnnotation
+		  ((getProperty__SetBooleanDefaultValue__boolean()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "The new default value."
+		   });	
+		addAnnotation
+		  (getProperty__SetDefault__String(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Sets the default value for this property based on the specified string representation."
+		   });	
+		addAnnotation
+		  ((getProperty__SetDefault__String()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "A string repesentation of the new default value."
+		   });	
+		addAnnotation
+		  (getProperty__SetIntegerDefaultValue__int(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Sets the default value for this property to the specified integer value."
+		   });	
+		addAnnotation
+		  ((getProperty__SetIntegerDefaultValue__int()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "The new default value."
+		   });	
+		addAnnotation
+		  (getProperty__SetIsComposite__boolean(), 
+		   source, 
+		   new String[] {
+			 "suppressedVisibility", "true"
+		   });	
+		addAnnotation
+		  (getProperty__SetIsNavigable__boolean(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Sets the navigability of this property as indicated."
+		   });	
+		addAnnotation
+		  ((getProperty__SetIsNavigable__boolean()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "The new navigability."
+		   });	
+		addAnnotation
+		  (getProperty__SetNullDefaultValue(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Sets the default value for this property to the null value."
+		   });	
+		addAnnotation
+		  (getProperty__SetOpposite__Property(), 
+		   source, 
+		   new String[] {
+			 "suppressedVisibility", "true"
+		   });	
+		addAnnotation
+		  (getProperty__SetRealDefaultValue__double(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Sets the default value for this property to the specified real value."
+		   });	
+		addAnnotation
+		  ((getProperty__SetRealDefaultValue__double()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "The new default value."
+		   });	
+		addAnnotation
+		  (getProperty__SetStringDefaultValue__String(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Sets the default value for this property to the specified string value."
+		   });	
+		addAnnotation
+		  ((getProperty__SetStringDefaultValue__String()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "The new default value."
+		   });	
+		addAnnotation
+		  (getProperty__SetUnlimitedNaturalDefaultValue__int(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Sets the default value for this property to the specified unlimited natural value."
+		   });	
+		addAnnotation
+		  ((getProperty__SetUnlimitedNaturalDefaultValue__int()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "The new default value."
+		   });	
+		addAnnotation
+		  (getProperty__UnsetDefault(), 
+		   source, 
+		   new String[] {
+			 "suppressedVisibility", "true"
+		   });	
+		addAnnotation
+		  (getProperty__IsAttribute(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The query isAttribute() is true if the Property is defined as an attribute of some Classifier.\nresult = (not classifier->isEmpty())\n<p>From package UML::Classification.</p>"
+		   });	
+		addAnnotation
+		  (getProperty__IsComposite(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The value of isComposite is true only if aggregation is composite.\nresult = (aggregation = AggregationKind::composite)\n<p>From package UML::Classification.</p>"
+		   });	
+		addAnnotation
+		  (getProperty__IsNavigable(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The query isNavigable() indicates whether it is possible to navigate across the property.\nresult = (not classifier->isEmpty() or association.navigableOwnedEnd->includes(self))\n<p>From package UML::Classification.</p>"
+		   });	
+		addAnnotation
+		  (getProperty__GetOpposite(), 
+		   source, 
+		   new String[] {
+			 "documentation", "If this property is a memberEnd of a binary association, then opposite gives the other end.\nresult = (if association <> null and association.memberEnd->size() = 2\nthen\n    association.memberEnd->any(e | e <> self)\nelse\n    null\nendif)\n<p>From package UML::Classification.</p>",
+			 "suppressedVisibility", "true"
+		   });	
+		addAnnotation
+		  (getProperty__SubsettingContext(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The query subsettingContext() gives the context for subsetting a Property. It consists, in the case of an attribute, of the corresponding Classifier, and in the case of an association end, all of the Classifiers at the other ends.\nresult = (if association <> null\nthen association.memberEnd->excluding(self)->collect(type)->asSet()\nelse \n  if classifier<>null\n  then classifier->asSet()\n  else Set{} \n  endif\nendif)\n<p>From package UML::Classification.</p>"
+		   });	
+		addAnnotation
+		  (getProperty_Datatype(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The DataType that owns this Property, if any.\n<p>From package UML::Classification.</p>"
+		   });	
+		addAnnotation
+		  (getProperty_Interface(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The Interface that owns this Property, if any.\n<p>From package UML::Classification.</p>"
+		   });	
+		addAnnotation
+		  (getProperty_Default(), 
+		   source, 
+		   new String[] {
+			 "suppressedGetVisibility", "true",
+			 "suppressedSetVisibility", "true",
+			 "suppressedIsSetVisibility", "true",
+			 "suppressedUnsetVisibility", "true"
+		   });	
+		addAnnotation
+		  (getProperty_Aggregation(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Specifies the kind of aggregation that applies to the Property.\n<p>From package UML::Classification.</p>"
+		   });	
+		addAnnotation
+		  (getProperty_AssociationEnd(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Designates the optional association end that owns a qualifier attribute.\n<p>From package UML::Classification.</p>"
+		   });	
+		addAnnotation
+		  (getProperty_Qualifier(), 
+		   source, 
+		   new String[] {
+			 "documentation", "An optional list of ordered qualifier attributes for the end.\n<p>From package UML::Classification.</p>"
+		   });	
+		addAnnotation
+		  (getProperty_Class(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The Class that owns this Property, if any.\n<p>From package UML::Classification.</p>"
+		   });	
+		addAnnotation
+		  (getProperty_DefaultValue(), 
+		   source, 
+		   new String[] {
+			 "documentation", "A ValueSpecification that is evaluated to give a default value for the Property when an instance of the owning Classifier is instantiated.\n<p>From package UML::Classification.</p>"
+		   });	
+		addAnnotation
+		  (getProperty_IsComposite(), 
+		   source, 
+		   new String[] {
+			 "documentation", "If isComposite is true, the object containing the attribute is a container for the object or value contained in the attribute. This is a derived value, indicating whether the aggregation of the Property is composite or not.\n<p>From package UML::Classification.</p>"
+		   });	
+		addAnnotation
+		  (getProperty_IsDerived(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Specifies whether the Property is derived, i.e., whether its value or values can be computed from other information.\n<p>From package UML::Classification.</p>"
+		   });	
+		addAnnotation
+		  (getProperty_IsDerivedUnion(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Specifies whether the property is derived as the union of all of the Properties that are constrained to subset it.\n<p>From package UML::Classification.</p>"
+		   });	
+		addAnnotation
+		  (getProperty_IsID(), 
+		   source, 
+		   new String[] {
+			 "documentation", "True indicates this property can be used to uniquely identify an instance of the containing Class.\n<p>From package UML::Classification.</p>"
+		   });	
+		addAnnotation
+		  (getProperty_Opposite(), 
+		   source, 
+		   new String[] {
+			 "documentation", "In the case where the Property is one end of a binary association this gives the other end.\n<p>From package UML::Classification.</p>"
+		   });	
+		addAnnotation
+		  (getProperty_OwningAssociation(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The owning association of this property, if any.\n<p>From package UML::Classification.</p>"
+		   });	
+		addAnnotation
+		  (getProperty_RedefinedProperty(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The properties that are redefined by this property, if any.\n<p>From package UML::Classification.</p>"
+		   });	
+		addAnnotation
+		  (getProperty_SubsettedProperty(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The properties of which this Property is constrained to be a subset, if any.\n<p>From package UML::Classification.</p>"
+		   });	
+		addAnnotation
+		  (getProperty_Association(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The Association of which this Property is a member, if any.\n<p>From package UML::Classification.</p>"
+		   });	
+		addAnnotation
+		  (associationEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "A link is a tuple of values that refer to typed objects.  An Association classifies a set of links, each of which is an instance of the Association.  Each value in the link refers to an instance of the type of the corresponding end of the Association.\n<p>From package UML::StructuredClassifiers.</p>"
+		   });	
+		addAnnotation
+		  (getAssociation__Specialized_end_number__DiagnosticChain_Map(), 
+		   source, 
+		   new String[] {
+			 "documentation", "An Association specializing another Association has the same number of ends as the other Association.\nparents()->select(oclIsKindOf(Association)).oclAsType(Association)->forAll(p | p.memberEnd->size() = self.memberEnd->size())"
+		   });	
+		addAnnotation
+		  ((getAssociation__Specialized_end_number__DiagnosticChain_Map()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "The chain of diagnostics to which problems are to be appended."
+		   });	
+		addAnnotation
+		  ((getAssociation__Specialized_end_number__DiagnosticChain_Map()).getEParameters().get(1), 
+		   source, 
+		   new String[] {
+			 "documentation", "The cache of context-specific information."
+		   });	
+		addAnnotation
+		  (getAssociation__Specialized_end_types__DiagnosticChain_Map(), 
+		   source, 
+		   new String[] {
+			 "documentation", "When an Association specializes another Association, every end of the specific Association corresponds to an end of the general Association, and the specific end reaches the same type or a subtype of the corresponding general end.\nSequence{1..memberEnd->size()}->\r\n\tforAll(i | general->select(oclIsKindOf(Association)).oclAsType(Association)->\r\n\t\tforAll(ga | self.memberEnd->at(i).type.conformsTo(ga.memberEnd->at(i).type)))"
+		   });	
+		addAnnotation
+		  ((getAssociation__Specialized_end_types__DiagnosticChain_Map()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "The chain of diagnostics to which problems are to be appended."
+		   });	
+		addAnnotation
+		  ((getAssociation__Specialized_end_types__DiagnosticChain_Map()).getEParameters().get(1), 
+		   source, 
+		   new String[] {
+			 "documentation", "The cache of context-specific information."
+		   });	
+		addAnnotation
+		  (getAssociation__Binary_associations__DiagnosticChain_Map(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Only binary Associations can be aggregations.\nmemberEnd->exists(aggregation <> AggregationKind::none) implies (memberEnd->size() = 2 and memberEnd->exists(aggregation = AggregationKind::none))"
+		   });	
+		addAnnotation
+		  ((getAssociation__Binary_associations__DiagnosticChain_Map()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "The chain of diagnostics to which problems are to be appended."
+		   });	
+		addAnnotation
+		  ((getAssociation__Binary_associations__DiagnosticChain_Map()).getEParameters().get(1), 
+		   source, 
+		   new String[] {
+			 "documentation", "The cache of context-specific information."
+		   });	
+		addAnnotation
+		  (getAssociation__Association_ends__DiagnosticChain_Map(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Ends of Associations with more than two ends must be owned by the Association itself.\nmemberEnd->size() > 2 implies ownedEnd->includesAll(memberEnd)"
+		   });	
+		addAnnotation
+		  ((getAssociation__Association_ends__DiagnosticChain_Map()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "The chain of diagnostics to which problems are to be appended."
+		   });	
+		addAnnotation
+		  ((getAssociation__Association_ends__DiagnosticChain_Map()).getEParameters().get(1), 
+		   source, 
+		   new String[] {
+			 "documentation", "The cache of context-specific information."
+		   });	
+		addAnnotation
+		  (getAssociation__Ends_must_be_typed__DiagnosticChain_Map(), 
+		   source, 
+		   new String[] {
+			 "documentation", "memberEnd->forAll(type->notEmpty())"
+		   });	
+		addAnnotation
+		  ((getAssociation__Ends_must_be_typed__DiagnosticChain_Map()).getEParameters().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "The chain of diagnostics to which problems are to be appended."
+		   });	
+		addAnnotation
+		  ((getAssociation__Ends_must_be_typed__DiagnosticChain_Map()).getEParameters().get(1), 
+		   source, 
+		   new String[] {
+			 "documentation", "The cache of context-specific information."
+		   });	
+		addAnnotation
+		  (getAssociation__IsBinary(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Determines whether this association is a binary association, i.e. whether it has exactly two member ends."
+		   });	
+		addAnnotation
+		  (getAssociation__GetEndTypes(), 
+		   source, 
+		   new String[] {
+			 "documentation", "endType is derived from the types of the member ends.\nresult = (memberEnd->collect(type)->asSet())\n<p>From package UML::StructuredClassifiers.</p>",
+			 "suppressedVisibility", "true"
+		   });	
+		addAnnotation
+		  (getAssociation_EndType(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The Classifiers that are used as types of the ends of the Association.\n<p>From package UML::StructuredClassifiers.</p>"
+		   });	
+		addAnnotation
+		  (getAssociation_IsDerived(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Specifies whether the Association is derived from other model elements such as other Associations.\n<p>From package UML::StructuredClassifiers.</p>"
+		   });	
+		addAnnotation
+		  (getAssociation_MemberEnd(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Each end represents participation of instances of the Classifier connected to the end in links of the Association.\n<p>From package UML::StructuredClassifiers.</p>"
+		   });	
+		addAnnotation
+		  (getAssociation_OwnedEnd(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The ends that are owned by the Association itself.\n<p>From package UML::StructuredClassifiers.</p>"
+		   });	
+		addAnnotation
+		  (getAssociation_NavigableOwnedEnd(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The navigable ends that are owned by the Association itself.\n<p>From package UML::StructuredClassifiers.</p>"
 		   });
 	}
 

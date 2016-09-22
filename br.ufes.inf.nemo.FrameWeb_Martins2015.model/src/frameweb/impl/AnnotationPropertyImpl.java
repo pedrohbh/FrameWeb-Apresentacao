@@ -2,44 +2,36 @@
  */
 package frameweb.impl;
 
-import frameweb.AnnotationProperty;
-import frameweb.Association;
-import frameweb.FramewebPackage;
-import frameweb.Property;
-import frameweb.VocabularyAssociation;
-
-import frameweb.util.FramewebValidator;
-
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
 import java.util.Map;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.Relationship;
 import org.eclipse.uml2.uml.Type;
 import org.eclipse.uml2.uml.UMLPackage;
+
+import frameweb.AnnotationProperty;
+import frameweb.Association;
+import frameweb.FramewebPackage;
+import frameweb.Property;
+import frameweb.VocabularyAssociation;
+import frameweb.util.FramewebValidator;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,6 +39,7 @@ import org.eclipse.uml2.uml.UMLPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.AnnotationPropertyImpl#getRelatedElements <em>Related Element</em>}</li>
  *   <li>{@link frameweb.impl.AnnotationPropertyImpl#getEndType <em>End Type</em>}</li>
@@ -55,7 +48,6 @@ import org.eclipse.uml2.uml.UMLPackage;
  *   <li>{@link frameweb.impl.AnnotationPropertyImpl#getOwnedEnd <em>Owned End</em>}</li>
  *   <li>{@link frameweb.impl.AnnotationPropertyImpl#getNavigableOwnedEnd <em>Navigable Owned End</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

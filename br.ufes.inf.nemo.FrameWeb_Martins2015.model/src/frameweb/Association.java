@@ -23,6 +23,7 @@ import org.eclipse.uml2.uml.Type;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.Association#getEndType <em>End Type</em>}</li>
  *   <li>{@link frameweb.Association#isIsDerived <em>Is Derived</em>}</li>
@@ -30,7 +31,6 @@ import org.eclipse.uml2.uml.Type;
  *   <li>{@link frameweb.Association#getOwnedEnd <em>Owned End</em>}</li>
  *   <li>{@link frameweb.Association#getNavigableOwnedEnd <em>Navigable Owned End</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getAssociation()
  * @model

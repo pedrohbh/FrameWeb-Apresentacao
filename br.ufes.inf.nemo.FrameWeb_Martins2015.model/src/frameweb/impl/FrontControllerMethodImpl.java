@@ -19,10 +19,10 @@ import org.eclipse.uml2.uml.internal.impl.OperationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.FrontControllerMethodImpl#isIsDefault <em>Is Default</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

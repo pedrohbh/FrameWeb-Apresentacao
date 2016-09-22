@@ -23,13 +23,13 @@ import org.eclipse.uml2.uml.internal.impl.AssociationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.DomainAssociationImpl#getCollection <em>Collection</em>}</li>
  *   <li>{@link frameweb.impl.DomainAssociationImpl#getCascade <em>Cascade</em>}</li>
  *   <li>{@link frameweb.impl.DomainAssociationImpl#getFetch <em>Fetch</em>}</li>
  *   <li>{@link frameweb.impl.DomainAssociationImpl#getOrder <em>Order</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

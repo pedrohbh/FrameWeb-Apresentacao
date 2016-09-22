@@ -13,8 +13,6 @@ import org.eclipse.uml2.uml.internal.impl.InterfaceImpl;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Service Interface</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

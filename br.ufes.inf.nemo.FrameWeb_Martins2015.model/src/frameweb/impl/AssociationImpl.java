@@ -7,7 +7,6 @@ import frameweb.FramewebPackage;
 import frameweb.Property;
 
 import frameweb.util.FramewebValidator;
-
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
@@ -27,7 +26,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectValidator;
@@ -47,6 +45,7 @@ import org.eclipse.uml2.uml.internal.impl.ClassifierImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.AssociationImpl#getRelatedElements <em>Related Element</em>}</li>
  *   <li>{@link frameweb.impl.AssociationImpl#getEndType <em>End Type</em>}</li>
@@ -55,7 +54,6 @@ import org.eclipse.uml2.uml.internal.impl.ClassifierImpl;
  *   <li>{@link frameweb.impl.AssociationImpl#getOwnedEnd <em>Owned End</em>}</li>
  *   <li>{@link frameweb.impl.AssociationImpl#getNavigableOwnedEnd <em>Navigable Owned End</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

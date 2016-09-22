@@ -11,10 +11,10 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.Page#getPageTagLib <em>Page Tag Lib</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getPage()
  * @model

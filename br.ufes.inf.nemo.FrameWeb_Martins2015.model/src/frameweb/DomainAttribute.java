@@ -11,12 +11,12 @@ import org.eclipse.uml2.uml.Property;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.DomainAttribute#getSize <em>Size</em>}</li>
  *   <li>{@link frameweb.DomainAttribute#isIsNull <em>Is Null</em>}</li>
  *   <li>{@link frameweb.DomainAttribute#isIsPersistent <em>Is Persistent</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getDomainAttribute()
  * @model abstract="true"

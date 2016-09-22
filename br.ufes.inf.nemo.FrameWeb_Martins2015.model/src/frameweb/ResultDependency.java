@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.ResultDependency#getResultResult <em>Result Result</em>}</li>
  *   <li>{@link frameweb.ResultDependency#getResultMethod <em>Result Method</em>}</li>
@@ -19,7 +20,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link frameweb.ResultDependency#getExecute <em>Execute</em>}</li>
  *   <li>{@link frameweb.ResultDependency#isAjax <em>Ajax</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getResultDependency()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='ResultDependencyConstraint\r\n'"

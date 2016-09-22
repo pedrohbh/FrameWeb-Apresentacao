@@ -19,11 +19,11 @@ import org.eclipse.uml2.uml.internal.impl.InterfaceImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.DAOInterfaceImpl#getInfix <em>Infix</em>}</li>
  *   <li>{@link frameweb.impl.DAOInterfaceImpl#getSufix <em>Sufix</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

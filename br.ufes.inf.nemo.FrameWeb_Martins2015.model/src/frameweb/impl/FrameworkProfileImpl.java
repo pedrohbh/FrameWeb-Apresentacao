@@ -21,11 +21,11 @@ import org.eclipse.uml2.uml.internal.impl.ProfileImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.FrameworkProfileImpl#getCategory <em>Category</em>}</li>
  *   <li>{@link frameweb.impl.FrameworkProfileImpl#getKind <em>Kind</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

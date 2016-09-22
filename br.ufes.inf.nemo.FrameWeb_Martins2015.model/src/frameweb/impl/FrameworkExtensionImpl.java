@@ -13,8 +13,6 @@ import org.eclipse.uml2.uml.internal.impl.ExtensionImpl;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Framework Extension</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

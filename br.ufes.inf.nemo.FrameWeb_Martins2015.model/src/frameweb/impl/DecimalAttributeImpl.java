@@ -17,11 +17,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.DecimalAttributeImpl#getDecimalPrecision <em>Decimal Precision</em>}</li>
  *   <li>{@link frameweb.impl.DecimalAttributeImpl#getDecimalScale <em>Decimal Scale</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

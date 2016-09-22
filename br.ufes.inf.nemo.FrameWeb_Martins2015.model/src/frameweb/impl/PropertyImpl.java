@@ -47,6 +47,7 @@ import org.eclipse.uml2.uml.internal.impl.StructuralFeatureImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.PropertyImpl#getOwningTemplateParameter <em>Owning Template Parameter</em>}</li>
  *   <li>{@link frameweb.impl.PropertyImpl#getTemplateParameter <em>Template Parameter</em>}</li>
@@ -71,7 +72,6 @@ import org.eclipse.uml2.uml.internal.impl.StructuralFeatureImpl;
  *   <li>{@link frameweb.impl.PropertyImpl#getSubsettedProperty <em>Subsetted Property</em>}</li>
  *   <li>{@link frameweb.impl.PropertyImpl#getAssociation <em>Association</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

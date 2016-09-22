@@ -52,6 +52,7 @@ import org.eclipse.uml2.uml.util.UMLValidator;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.NamedIndividualImpl#getFeaturingClassifiers <em>Featuring Classifier</em>}</li>
  *   <li>{@link frameweb.impl.NamedIndividualImpl#isStatic <em>Is Static</em>}</li>
@@ -84,7 +85,6 @@ import org.eclipse.uml2.uml.util.UMLValidator;
  *   <li>{@link frameweb.impl.NamedIndividualImpl#getSubsettedProperty <em>Subsetted Property</em>}</li>
  *   <li>{@link frameweb.impl.NamedIndividualImpl#getAssociation <em>Association</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.FramewebProject#getCompose <em>Compose</em>}</li>
  *   <li>{@link frameweb.FramewebProject#getConfigures <em>Configures</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getFramewebProject()
  * @model annotation="Ecore constraints='FramewebProjectContent'"

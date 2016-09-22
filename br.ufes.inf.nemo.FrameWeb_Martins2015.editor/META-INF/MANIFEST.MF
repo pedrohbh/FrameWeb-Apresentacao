@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: br.ufes.inf.nemo.FrameWeb_Martins2015.editor;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-ClassPath: .
+Bundle-ClassPath: br.ufes.inf.nemo.FrameWeb_Martins2015.editor.jar
 Bundle-Activator: frameweb.presentation.FrameWebEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin

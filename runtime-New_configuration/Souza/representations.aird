@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description" xmi:id="_fodwMH_xEea9C70JTkqO3w" selectedViews="_1Ru6sIAdEeaVafE-zS-5nw" version="11.0.0.201604141600">
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description" xmi:id="_fodwMH_xEea9C70JTkqO3w" selectedViews="_CY35YIDJEeaKv9gafxClTQ" version="11.0.0.201604141600">
   <semanticResources>Souza2007.frameweb</semanticResources>
   <ownedViews xmi:type="viewpoint:DView" xmi:id="_1Ru6sIAdEeaVafE-zS-5nw">
     <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/FrameWeb.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']"/>
@@ -17,5 +17,8 @@
       <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/FrameWeb.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer"/>
       <target xmi:type="frameweb:NavigationModel" href="Souza2007.frameweb#//@compose.0"/>
     </ownedRepresentations>
+  </ownedViews>
+  <ownedViews xmi:type="viewpoint:DView" xmi:id="_CY35YIDJEeaKv9gafxClTQ">
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']"/>
   </ownedViews>
 </viewpoint:DAnalysis>

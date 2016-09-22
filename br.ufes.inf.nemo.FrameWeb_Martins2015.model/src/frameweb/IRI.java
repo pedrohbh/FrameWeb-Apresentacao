@@ -10,11 +10,11 @@ package frameweb;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.IRI#getIri <em>Iri</em>}</li>
  *   <li>{@link frameweb.IRI#getIriVersion <em>Iri Version</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getIRI()
  * @model extendedMetaData="name='IRI'"

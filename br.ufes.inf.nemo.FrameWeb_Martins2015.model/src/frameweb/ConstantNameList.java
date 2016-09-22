@@ -300,6 +300,8 @@ public enum ConstantNameList implements Enumerator {
 	 * Returns the '<em><b>Constant Name List</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static ConstantNameList get(String literal) {
@@ -316,6 +318,8 @@ public enum ConstantNameList implements Enumerator {
 	 * Returns the '<em><b>Constant Name List</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static ConstantNameList getByName(String name) {
@@ -332,6 +336,8 @@ public enum ConstantNameList implements Enumerator {
 	 * Returns the '<em><b>Constant Name List</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static ConstantNameList get(int value) {

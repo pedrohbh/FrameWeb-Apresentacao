@@ -11,10 +11,10 @@ import org.eclipse.uml2.uml.Operation;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.FrontControllerMethod#isIsDefault <em>Is Default</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getFrontControllerMethod()
  * @model

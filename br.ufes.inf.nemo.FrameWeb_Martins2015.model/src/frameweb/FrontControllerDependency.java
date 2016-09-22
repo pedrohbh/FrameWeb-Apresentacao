@@ -10,11 +10,11 @@ package frameweb;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.FrontControllerDependency#getMethod <em>Method</em>}</li>
  *   <li>{@link frameweb.FrontControllerDependency#getMethodDependendencyConstraint <em>Method Dependendency Constraint</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getFrontControllerDependency()
  * @model annotation="Ecore constraints='FrontControllerDependencyContent'"

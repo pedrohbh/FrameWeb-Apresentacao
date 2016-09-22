@@ -20,10 +20,10 @@ import org.eclipse.uml2.uml.internal.impl.GeneralizationSetImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.DomainGeneralizationSetImpl#getMapping <em>Mapping</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

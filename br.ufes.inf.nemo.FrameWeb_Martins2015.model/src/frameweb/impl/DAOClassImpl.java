@@ -15,12 +15,12 @@ import org.eclipse.uml2.uml.internal.impl.ClassImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.DAOClassImpl#getSufix <em>Sufix</em>}</li>
  *   <li>{@link frameweb.impl.DAOClassImpl#getInfix <em>Infix</em>}</li>
  *   <li>{@link frameweb.impl.DAOClassImpl#getPrefix <em>Prefix</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

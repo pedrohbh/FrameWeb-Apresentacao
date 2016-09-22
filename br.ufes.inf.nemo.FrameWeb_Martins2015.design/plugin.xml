@@ -4,7 +4,7 @@
   <extension point="org.eclipse.sirius.componentization">
     <component class="br.ufes.inf.nemo.FrameWeb_Martins2015.design.Activator"
                id="br.ufes.inf.nemo.FrameWeb_Martins2015.design"
-	       name="br.ufes.inf.nemo.FrameWeb_Martins2015.design">
+	       name="FrameWeb">
     </component>
   </extension>
 </plugin>

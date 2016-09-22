@@ -48,6 +48,7 @@ import org.eclipse.uml2.uml.util.UMLValidator;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.VocabularyClassImpl#getOwnedAttributes <em>Owned Attribute</em>}</li>
  *   <li>{@link frameweb.impl.VocabularyClassImpl#getOwnedConnectors <em>Owned Connector</em>}</li>
@@ -64,7 +65,6 @@ import org.eclipse.uml2.uml.util.UMLValidator;
  *   <li>{@link frameweb.impl.VocabularyClassImpl#getOwnedReceptions <em>Owned Reception</em>}</li>
  *   <li>{@link frameweb.impl.VocabularyClassImpl#getSuperClasses <em>Super Class</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

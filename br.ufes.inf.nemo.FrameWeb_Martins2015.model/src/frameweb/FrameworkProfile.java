@@ -11,11 +11,11 @@ import org.eclipse.uml2.uml.Profile;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.FrameworkProfile#getCategory <em>Category</em>}</li>
  *   <li>{@link frameweb.FrameworkProfile#getKind <em>Kind</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getFrameworkProfile()
  * @model

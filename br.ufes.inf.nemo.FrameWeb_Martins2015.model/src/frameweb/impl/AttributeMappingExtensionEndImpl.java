@@ -13,8 +13,6 @@ import org.eclipse.uml2.uml.internal.impl.ExtensionEndImpl;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Attribute Mapping Extension End</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

@@ -10,10 +10,10 @@ package frameweb;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.TagLib#getPrefix <em>Prefix</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getTagLib()
  * @model

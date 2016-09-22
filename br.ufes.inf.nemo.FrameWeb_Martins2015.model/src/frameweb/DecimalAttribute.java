@@ -10,11 +10,11 @@ package frameweb;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.DecimalAttribute#getDecimalPrecision <em>Decimal Precision</em>}</li>
  *   <li>{@link frameweb.DecimalAttribute#getDecimalScale <em>Decimal Scale</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getDecimalAttribute()
  * @model

@@ -11,13 +11,13 @@ import org.eclipse.uml2.uml.Association;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.DomainAssociation#getCollection <em>Collection</em>}</li>
  *   <li>{@link frameweb.DomainAssociation#getCascade <em>Cascade</em>}</li>
  *   <li>{@link frameweb.DomainAssociation#getFetch <em>Fetch</em>}</li>
  *   <li>{@link frameweb.DomainAssociation#getOrder <em>Order</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getDomainAssociation()
  * @model

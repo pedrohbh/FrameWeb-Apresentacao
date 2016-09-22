@@ -19,12 +19,12 @@ import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.DomainAttributeImpl#getSize <em>Size</em>}</li>
  *   <li>{@link frameweb.impl.DomainAttributeImpl#isIsNull <em>Is Null</em>}</li>
  *   <li>{@link frameweb.impl.DomainAttributeImpl#isIsPersistent <em>Is Persistent</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -19,10 +19,10 @@ import org.eclipse.uml2.uml.internal.impl.PackageImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.impl.TagLibImpl#getPrefix <em>Prefix</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

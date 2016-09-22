@@ -13,8 +13,6 @@ import org.eclipse.uml2.uml.internal.impl.ClassImpl;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Service Class</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

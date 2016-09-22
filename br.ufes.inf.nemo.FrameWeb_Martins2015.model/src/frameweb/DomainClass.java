@@ -10,10 +10,10 @@ package frameweb;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link frameweb.DomainClass#getTable <em>Table</em>}</li>
  * </ul>
- * </p>
  *
  * @see frameweb.FramewebPackage#getDomainClass()
  * @model
