@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<frameweb:NavigationModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015" name="nome da parada">
-  <packagedElement xsi:type="frameweb:ViewPackage">
-    <packagedElement xsi:type="frameweb:Page" name="index"/>
-    <packagedElement xsi:type="frameweb:UIComponent" name="frmLogin"/>
-    <packagedElement xsi:type="frameweb:Template" name="login"/>
-    <packagedElement xsi:type="frameweb:Template" name="home"/>
+<frameweb:NavigationModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015" name="Modelo de Navegação">
+  <packagedElement xsi:type="frameweb:ViewPackage" name="View">
+    <packagedElement xsi:type="frameweb:Page" name="sucess.xhtml"/>
+    <packagedElement xsi:type="frameweb:Page" name="form.xhtml"/>
+    <packagedElement xsi:type="frameweb:UIComponent" name="requestLeaveForm">
+      <ownedAttribute xsi:type="frameweb:UIComponentField" name="request.leaveType"/>
+      <ownedAttribute xsi:type="frameweb:UIComponentField" name="request.onus"/>
+      <ownedAttribute xsi:type="frameweb:UIComponentField" name="request.eventName"/>
+      <ownedAttribute xsi:type="frameweb:UIComponentField" name="eventCity"/>
+      <ownedAttribute xsi:type="frameweb:UIComponentField" name="eventBeginDate"/>
+      <ownedAttribute xsi:type="frameweb:UIComponentField" name="request.eventEndDate"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xsi:type="frameweb:ControllerPackage" name="Controller">
+    <packagedElement xsi:type="frameweb:FrontControllerClass" name="RequestLeaveController">
+      <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="submit"/>
+    </packagedElement>
   </packagedElement>
 </frameweb:NavigationModel>
