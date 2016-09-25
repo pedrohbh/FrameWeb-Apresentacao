@@ -19,4 +19,8 @@
     </packagedElement>
   </packagedElement>
   <packagedElement xsi:type="frameweb:ResultDependency" name="success" client="//Controller%20Package/RequestLeaveController" supplier="//View%20Package/sucess.xhtml" resultMethod="//Controller%20Package/RequestLeaveController/submit"/>
+  <packagedElement xsi:type="frameweb:ResultDependency" name="failure" client="//Controller%20Package/RequestLeaveController" supplier="//View%20Package/form.xhtml" resultMethod="//Controller%20Package/RequestLeaveController/submit">
+    <resultDependendencyCosntraint name="method=submit, result=null"/>
+  </packagedElement>
+  <packagedElement xsi:type="frameweb:FrontControllerDependency" name="submission" client="//View%20Package/requestLeaveForm" supplier="//Controller%20Package/RequestLeaveController" method="//Controller%20Package/RequestLeaveController/submit"/>
 </frameweb:NavigationModel>
