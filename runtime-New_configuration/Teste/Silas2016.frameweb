@@ -18,4 +18,5 @@
       <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="submit"/>
     </packagedElement>
   </packagedElement>
+  <packagedElement xsi:type="frameweb:ResultDependency" name="success" client="//Controller%20Package/RequestLeaveController" supplier="//View%20Package/sucess.xhtml" resultMethod="//Controller%20Package/RequestLeaveController/submit"/>
 </frameweb:NavigationModel>
