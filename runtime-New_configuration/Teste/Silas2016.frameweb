@@ -17,11 +17,13 @@
       <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" name="New Navigation Composition Whole" type="//View%20Package/New%20UI%20Component"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:UIComponent" name="New UI Component"/>
+    <packagedElement xsi:type="frameweb:Page" name="New Page"/>
   </packagedElement>
   <packagedElement xsi:type="frameweb:ControllerPackage" name="Controller Package">
     <packagedElement xsi:type="frameweb:FrontControllerClass" name="RequestLeaveController">
       <ownedAttribute xsi:type="frameweb:IOParameter" name="request"/>
       <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="submit"/>
+      <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="New Method"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:FrontControllerClass" name="New Front Controller">
       <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="New Method"/>
@@ -34,4 +36,5 @@
   <packagedElement xsi:type="frameweb:FrontControllerDependency" name="submission" client="//View%20Package/requestLeaveForm" supplier="//Controller%20Package/RequestLeaveController" method="//Controller%20Package/RequestLeaveController/submit"/>
   <packagedElement xsi:type="frameweb:FrontControllerDependency" name="New Front Controller Dependency" client="//View%20Package/New%20UI%20Component" supplier="//Controller%20Package/New%20Front%20Controller" method="//Controller%20Package/New%20Front%20Controller/New%20Method"/>
   <packagedElement xsi:type="frameweb:ResultDependency" name="New Result Dependency" client="//Controller%20Package/New%20Front%20Controller" supplier="//View%20Package/New%20Page" resultMethod="//Controller%20Package/New%20Front%20Controller/New%20Method"/>
+  <packagedElement xsi:type="frameweb:ResultDependency" name="New Result Dependency" client="//Controller%20Package/New%20Front%20Controller" supplier="//View%20Package/New%20Page.1" resultMethod="//Controller%20Package/New%20Front%20Controller/New%20Method"/>
 </frameweb:NavigationModel>
