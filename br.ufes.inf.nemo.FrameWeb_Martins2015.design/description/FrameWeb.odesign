@@ -24,6 +24,14 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
+        <edgeMappings name="Navigation Composition Line" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Page%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']" targetFinderExpression="aql:self.type" sourceFinderExpression="aql:self.eContainer()" domainClass="NavigationCompositionWhole" useDomainElement="true">
+          <style sourceArrow="FillDiamond" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
         <containerMappings name="View Package" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.1/@ownedTools[name='EditName']" domainClass="ViewPackage">
           <subNodeMappings name="Template Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.1/@ownedTools[name='EditName']" domainClass="Template">
             <style xsi:type="style:SquareDescription" labelAlignment="RIGHT" resizeKind="NSEW">
@@ -123,13 +131,34 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ResultDependency Creation" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@edgeMappings[name='ResultDependency%20Line']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Result Dependency" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@edgeMappings[name='ResultDependency%20Line']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source"/>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer().eContainer()">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.ResultDependency" referenceName="packagedElement">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="client" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="supplier" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Result Dependency"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Front Controller Dependency" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@edgeMappings[name='FrontControllerDependency%20Line']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer().eContainer()">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.FrontControllerDependency" referenceName="packagedElement">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="client" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="supplier" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Front Controller Dependency"/>
+                </subModelOperations>
+              </firstModelOperations>
             </initialOperation>
           </ownedTools>
         </toolSections>
@@ -164,6 +193,20 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.UIComponentField" referenceName="ownedAttribute">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New UIComponentField"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Navigation Composition" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@edgeMappings[name='Navigation%20Composition%20Line']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.NavigationCompositionWhole" referenceName="ownedAttribute">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Navigation Composition Whole"/>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>

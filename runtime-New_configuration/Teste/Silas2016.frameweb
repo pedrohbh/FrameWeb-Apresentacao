@@ -2,7 +2,9 @@
 <frameweb:NavigationModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015" name="Modelo de Navegação">
   <packagedElement xsi:type="frameweb:ViewPackage" name="View Package">
     <packagedElement xsi:type="frameweb:Page" name="sucess.xhtml"/>
-    <packagedElement xsi:type="frameweb:Page" name="form.xhtml"/>
+    <packagedElement xsi:type="frameweb:Page" name="form.xhtml">
+      <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//View%20Package/requestLeaveForm"/>
+    </packagedElement>
     <packagedElement xsi:type="frameweb:UIComponent" name="requestLeaveForm">
       <ownedAttribute xsi:type="frameweb:UIComponentField" name="request.leaveType"/>
       <ownedAttribute xsi:type="frameweb:UIComponentField" name="request.onus"/>
@@ -11,11 +13,18 @@
       <ownedAttribute xsi:type="frameweb:UIComponentField" name="eventBeginDate"/>
       <ownedAttribute xsi:type="frameweb:UIComponentField" name="request.eventEndDate"/>
     </packagedElement>
+    <packagedElement xsi:type="frameweb:Page" name="New Page">
+      <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" name="New Navigation Composition Whole" type="//View%20Package/New%20UI%20Component"/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:UIComponent" name="New UI Component"/>
   </packagedElement>
   <packagedElement xsi:type="frameweb:ControllerPackage" name="Controller Package">
     <packagedElement xsi:type="frameweb:FrontControllerClass" name="RequestLeaveController">
       <ownedAttribute xsi:type="frameweb:IOParameter" name="request"/>
       <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="submit"/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:FrontControllerClass" name="New Front Controller">
+      <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="New Method"/>
     </packagedElement>
   </packagedElement>
   <packagedElement xsi:type="frameweb:ResultDependency" name="success" client="//Controller%20Package/RequestLeaveController" supplier="//View%20Package/sucess.xhtml" resultMethod="//Controller%20Package/RequestLeaveController/submit"/>
@@ -23,4 +32,6 @@
     <resultDependendencyCosntraint name="method=submit, result=null"/>
   </packagedElement>
   <packagedElement xsi:type="frameweb:FrontControllerDependency" name="submission" client="//View%20Package/requestLeaveForm" supplier="//Controller%20Package/RequestLeaveController" method="//Controller%20Package/RequestLeaveController/submit"/>
+  <packagedElement xsi:type="frameweb:FrontControllerDependency" name="New Front Controller Dependency" client="//View%20Package/New%20UI%20Component" supplier="//Controller%20Package/New%20Front%20Controller" method="//Controller%20Package/New%20Front%20Controller/New%20Method"/>
+  <packagedElement xsi:type="frameweb:ResultDependency" name="New Result Dependency" client="//Controller%20Package/New%20Front%20Controller" supplier="//View%20Package/New%20Page" resultMethod="//Controller%20Package/New%20Front%20Controller/New%20Method"/>
 </frameweb:NavigationModel>
