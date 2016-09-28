@@ -24,10 +24,10 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="Navigation Composition Line" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Page%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']" targetFinderExpression="aql:self.type" sourceFinderExpression="aql:self.eContainer()" domainClass="NavigationCompositionWhole" useDomainElement="true" reconnections="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Reconnect%20Navigation%20Composition']">
+        <edgeMappings name="Navigation Association" deletionDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Delete%20Association']" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Page%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']" targetFinderExpression="aql:self.memberEnd->at(2).type" sourceFinderExpression="aql:self.memberEnd->at(1).type" domainClass="NavigationAssociation" useDomainElement="true" reconnections="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Reconnect%20Navigation%20Association']">
           <style sourceArrow="FillDiamond" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
-            <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="aql:self.upper">
+            <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="aql:self.memberEnd->at(2).upper">
               <labelFormat>bold</labelFormat>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </endLabelStyleDescription>
@@ -158,7 +158,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Navigation Composition" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@edgeMappings[name='Navigation%20Composition%20Line']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Association_composite.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Navigation Association" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@edgeMappings[name='Navigation%20Association']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Association_composite.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -182,7 +182,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="Reconnect Navigation Composition">
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="Reconnect Navigation Association">
             <source name="source"/>
             <target name="target"/>
             <sourceView name="sourceView"/>
@@ -190,11 +190,26 @@
             <element name="element"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
-                <subModelOperations xsi:type="tool_1:Unset" featureName="type" elementExpression="var:source"/>
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:target"/>
+                <subModelOperations xsi:type="tool_1:Unset" featureName="type" elementExpression="aql:self.memberEnd->at(2)"/>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.memberEnd->at(2)">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:target"/>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
             <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete Association">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.memberEnd->at(2)">
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                  <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
           </ownedTools>
         </toolSections>
         <toolSections name="Controller">
