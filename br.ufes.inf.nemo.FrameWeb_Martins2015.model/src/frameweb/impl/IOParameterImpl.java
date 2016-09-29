@@ -8,10 +8,12 @@ import frameweb.UIComponent;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -24,6 +26,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link frameweb.impl.IOParameterImpl#getDisplay <em>Display</em>}</li>
+ *   <li>{@link frameweb.impl.IOParameterImpl#getParameterType <em>Parameter Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -38,6 +41,26 @@ public class IOParameterImpl extends NavigationAttributeImpl implements IOParame
 	 * @ordered
 	 */
 	protected EList<UIComponent> display;
+
+	/**
+	 * The default value of the '{@link #getParameterType() <em>Parameter Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParameterType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PARAMETER_TYPE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getParameterType() <em>Parameter Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParameterType()
+	 * @generated
+	 * @ordered
+	 */
+	protected String parameterType = PARAMETER_TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -68,6 +91,27 @@ public class IOParameterImpl extends NavigationAttributeImpl implements IOParame
 			display = new EObjectWithInverseResolvingEList<UIComponent>(UIComponent.class, this, FramewebPackage.IO_PARAMETER__DISPLAY, FramewebPackage.UI_COMPONENT_FIELD__INJECT);
 		}
 		return display;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getParameterType() {
+		return parameterType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setParameterType(String newParameterType) {
+		String oldParameterType = parameterType;
+		parameterType = newParameterType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.IO_PARAMETER__PARAMETER_TYPE, oldParameterType, parameterType));
 	}
 
 	/**
@@ -109,6 +153,8 @@ public class IOParameterImpl extends NavigationAttributeImpl implements IOParame
 		switch (featureID) {
 			case FramewebPackage.IO_PARAMETER__DISPLAY:
 				return getDisplay();
+			case FramewebPackage.IO_PARAMETER__PARAMETER_TYPE:
+				return getParameterType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -126,6 +172,9 @@ public class IOParameterImpl extends NavigationAttributeImpl implements IOParame
 				getDisplay().clear();
 				getDisplay().addAll((Collection<? extends UIComponent>)newValue);
 				return;
+			case FramewebPackage.IO_PARAMETER__PARAMETER_TYPE:
+				setParameterType((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -141,6 +190,9 @@ public class IOParameterImpl extends NavigationAttributeImpl implements IOParame
 			case FramewebPackage.IO_PARAMETER__DISPLAY:
 				getDisplay().clear();
 				return;
+			case FramewebPackage.IO_PARAMETER__PARAMETER_TYPE:
+				setParameterType(PARAMETER_TYPE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -155,8 +207,26 @@ public class IOParameterImpl extends NavigationAttributeImpl implements IOParame
 		switch (featureID) {
 			case FramewebPackage.IO_PARAMETER__DISPLAY:
 				return display != null && !display.isEmpty();
+			case FramewebPackage.IO_PARAMETER__PARAMETER_TYPE:
+				return PARAMETER_TYPE_EDEFAULT == null ? parameterType != null : !PARAMETER_TYPE_EDEFAULT.equals(parameterType);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (parameterType: ");
+		result.append(parameterType);
+		result.append(')');
+		return result.toString();
 	}
 
 } //IOParameterImpl

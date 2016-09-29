@@ -88,6 +88,7 @@
     <genClasses ecoreClass="FrameWeb.ecore#//FrameworkProfile">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//FrameworkProfile/category"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//FrameworkProfile/kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//FrameworkProfile/version"/>
     </genClasses>
     <genClasses ecoreClass="FrameWeb.ecore#//EntityModel"/>
     <genClasses ecoreClass="FrameWeb.ecore#//NavigationModel"/>
@@ -136,6 +137,7 @@
     <genClasses ecoreClass="FrameWeb.ecore#//FrontControllerClass"/>
     <genClasses ecoreClass="FrameWeb.ecore#//IOParameter">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FrameWeb.ecore#//IOParameter/display"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//IOParameter/parameterType"/>
     </genClasses>
     <genClasses ecoreClass="FrameWeb.ecore#//ResultDependency">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FrameWeb.ecore#//ResultDependency/resultResult"/>
@@ -148,6 +150,7 @@
     <genClasses ecoreClass="FrameWeb.ecore#//NavigationAssociation"/>
     <genClasses ecoreClass="FrameWeb.ecore#//FrontControllerMethod">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//FrontControllerMethod/isDefault"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//FrontControllerMethod/methodType"/>
     </genClasses>
     <genClasses ecoreClass="FrameWeb.ecore#//ServiceClass"/>
     <genClasses ecoreClass="FrameWeb.ecore#//ServiceInterface"/>

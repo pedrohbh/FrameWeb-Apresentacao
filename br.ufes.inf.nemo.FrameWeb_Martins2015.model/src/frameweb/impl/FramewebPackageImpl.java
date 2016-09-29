@@ -1234,6 +1234,15 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getFrameworkProfile_Version() {
+		return (EAttribute)frameworkProfileEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEntityModel() {
 		return entityModelEClass;
 	}
@@ -1576,6 +1585,15 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getIOParameter_ParameterType() {
+		return (EAttribute)ioParameterEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getResultDependency() {
 		return resultDependencyEClass;
 	}
@@ -1659,6 +1677,15 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 */
 	public EAttribute getFrontControllerMethod_IsDefault() {
 		return (EAttribute)frontControllerMethodEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFrontControllerMethod_MethodType() {
+		return (EAttribute)frontControllerMethodEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3363,6 +3390,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		frameworkProfileEClass = createEClass(FRAMEWORK_PROFILE);
 		createEAttribute(frameworkProfileEClass, FRAMEWORK_PROFILE__CATEGORY);
 		createEAttribute(frameworkProfileEClass, FRAMEWORK_PROFILE__KIND);
+		createEAttribute(frameworkProfileEClass, FRAMEWORK_PROFILE__VERSION);
 
 		entityModelEClass = createEClass(ENTITY_MODEL);
 
@@ -3420,6 +3448,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		ioParameterEClass = createEClass(IO_PARAMETER);
 		createEReference(ioParameterEClass, IO_PARAMETER__DISPLAY);
+		createEAttribute(ioParameterEClass, IO_PARAMETER__PARAMETER_TYPE);
 
 		resultDependencyEClass = createEClass(RESULT_DEPENDENCY);
 		createEReference(resultDependencyEClass, RESULT_DEPENDENCY__RESULT_RESULT);
@@ -3433,6 +3462,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		frontControllerMethodEClass = createEClass(FRONT_CONTROLLER_METHOD);
 		createEAttribute(frontControllerMethodEClass, FRONT_CONTROLLER_METHOD__IS_DEFAULT);
+		createEAttribute(frontControllerMethodEClass, FRONT_CONTROLLER_METHOD__METHOD_TYPE);
 
 		serviceClassEClass = createEClass(SERVICE_CLASS);
 
@@ -3892,6 +3922,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEClass(frameworkProfileEClass, FrameworkProfile.class, "FrameworkProfile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFrameworkProfile_Category(), this.getFrameworkCategoryList(), "category", null, 0, 1, FrameworkProfile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFrameworkProfile_Kind(), this.getFrameworkKindList(), "kind", null, 0, 1, FrameworkProfile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFrameworkProfile_Version(), theTypesPackage.getString(), "version", null, 0, 1, FrameworkProfile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(entityModelEClass, EntityModel.class, "EntityModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3949,6 +3980,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		initEClass(ioParameterEClass, IOParameter.class, "IOParameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIOParameter_Display(), this.getUIComponentField(), this.getUIComponentField_Inject(), "display", null, 0, -1, IOParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIOParameter_ParameterType(), theTypesPackage.getString(), "parameterType", null, 0, 1, IOParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resultDependencyEClass, ResultDependency.class, "ResultDependency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResultDependency_ResultResult(), this.getResult(), null, "resultResult", null, 0, -1, ResultDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3962,6 +3994,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		initEClass(frontControllerMethodEClass, FrontControllerMethod.class, "FrontControllerMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFrontControllerMethod_IsDefault(), ecorePackage.getEBoolean(), "isDefault", null, 0, 1, FrontControllerMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFrontControllerMethod_MethodType(), theTypesPackage.getString(), "methodType", null, 0, 1, FrontControllerMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(serviceClassEClass, ServiceClass.class, "ServiceClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

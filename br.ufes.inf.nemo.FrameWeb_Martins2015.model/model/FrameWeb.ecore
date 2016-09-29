@@ -36,6 +36,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="FrameworkProfile" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Profile">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" eType="#//FrameworkCategoryList"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="#//FrameworkKindList"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType platform:/plugin/org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EntityModel" eSuperTypes="#//FramewebModel">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -139,6 +140,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="IOParameter" eSuperTypes="#//NavigationAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="display" upperBound="-1"
         eType="#//UIComponentField" derived="true" eOpposite="#//UIComponentField/inject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameterType" eType="ecore:EDataType platform:/plugin/org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="FrameworkCategoryList">
     <eLiterals name="FrontController" literal="FrontController"/>
@@ -170,6 +172,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="NavigationAssociation" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Association"/>
   <eClassifiers xsi:type="ecore:EClass" name="FrontControllerMethod" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isDefault" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="methodType" eType="ecore:EDataType platform:/plugin/org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceClass" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceInterface" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>

@@ -25,6 +25,7 @@ import org.eclipse.uml2.uml.internal.impl.ProfileImpl;
  * <ul>
  *   <li>{@link frameweb.impl.FrameworkProfileImpl#getCategory <em>Category</em>}</li>
  *   <li>{@link frameweb.impl.FrameworkProfileImpl#getKind <em>Kind</em>}</li>
+ *   <li>{@link frameweb.impl.FrameworkProfileImpl#getVersion <em>Version</em>}</li>
  * </ul>
  *
  * @generated
@@ -69,6 +70,26 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 	 * @ordered
 	 */
 	protected FrameworkKindList kind = KIND_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getVersion() <em>Version</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVersion()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String VERSION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getVersion() <em>Version</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVersion()
+	 * @generated
+	 * @ordered
+	 */
+	protected String version = VERSION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -136,6 +157,27 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getVersion() {
+		return version;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVersion(String newVersion) {
+		String oldVersion = version;
+		version = newVersion;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.FRAMEWORK_PROFILE__VERSION, oldVersion, version));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -143,6 +185,8 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 				return getCategory();
 			case FramewebPackage.FRAMEWORK_PROFILE__KIND:
 				return getKind();
+			case FramewebPackage.FRAMEWORK_PROFILE__VERSION:
+				return getVersion();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -160,6 +204,9 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 				return;
 			case FramewebPackage.FRAMEWORK_PROFILE__KIND:
 				setKind((FrameworkKindList)newValue);
+				return;
+			case FramewebPackage.FRAMEWORK_PROFILE__VERSION:
+				setVersion((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -179,6 +226,9 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 			case FramewebPackage.FRAMEWORK_PROFILE__KIND:
 				setKind(KIND_EDEFAULT);
 				return;
+			case FramewebPackage.FRAMEWORK_PROFILE__VERSION:
+				setVersion(VERSION_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -195,6 +245,8 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 				return category != CATEGORY_EDEFAULT;
 			case FramewebPackage.FRAMEWORK_PROFILE__KIND:
 				return kind != KIND_EDEFAULT;
+			case FramewebPackage.FRAMEWORK_PROFILE__VERSION:
+				return VERSION_EDEFAULT == null ? version != null : !VERSION_EDEFAULT.equals(version);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -213,6 +265,8 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 		result.append(category);
 		result.append(", kind: ");
 		result.append(kind);
+		result.append(", version: ");
+		result.append(version);
 		result.append(')');
 		return result.toString();
 	}

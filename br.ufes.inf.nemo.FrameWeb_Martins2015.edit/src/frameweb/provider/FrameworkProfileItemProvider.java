@@ -54,6 +54,7 @@ public class FrameworkProfileItemProvider extends ProfileItemProvider {
 
 			addCategoryPropertyDescriptor(object);
 			addKindPropertyDescriptor(object);
+			addVersionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -103,6 +104,28 @@ public class FrameworkProfileItemProvider extends ProfileItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Version feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addVersionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FrameworkProfile_version_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FrameworkProfile_version_feature", "_UI_FrameworkProfile_type"),
+				 FramewebPackage.Literals.FRAMEWORK_PROFILE__VERSION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns FrameworkProfile.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -142,6 +165,7 @@ public class FrameworkProfileItemProvider extends ProfileItemProvider {
 		switch (notification.getFeatureID(FrameworkProfile.class)) {
 			case FramewebPackage.FRAMEWORK_PROFILE__CATEGORY:
 			case FramewebPackage.FRAMEWORK_PROFILE__KIND:
+			case FramewebPackage.FRAMEWORK_PROFILE__VERSION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

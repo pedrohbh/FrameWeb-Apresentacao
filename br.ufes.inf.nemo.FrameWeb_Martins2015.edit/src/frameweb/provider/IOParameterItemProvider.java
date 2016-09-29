@@ -15,6 +15,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.uml2.uml.UMLPackage;
 
 /**
@@ -46,6 +48,7 @@ public class IOParameterItemProvider extends NavigationAttributeItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addDisplayPropertyDescriptor(object);
+			addParameterTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -68,6 +71,28 @@ public class IOParameterItemProvider extends NavigationAttributeItemProvider {
 				 false,
 				 true,
 				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Parameter Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addParameterTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_IOParameter_parameterType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_IOParameter_parameterType_feature", "_UI_IOParameter_type"),
+				 FramewebPackage.Literals.IO_PARAMETER__PARAMETER_TYPE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -108,6 +133,12 @@ public class IOParameterItemProvider extends NavigationAttributeItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(IOParameter.class)) {
+			case FramewebPackage.IO_PARAMETER__PARAMETER_TYPE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

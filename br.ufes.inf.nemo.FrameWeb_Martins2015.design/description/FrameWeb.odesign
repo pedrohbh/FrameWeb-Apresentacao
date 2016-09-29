@@ -76,14 +76,14 @@
         <containerMappings name="Controller Package" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" domainClass="ControllerPackage">
           <subContainerMappings name="Front Controller Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" semanticCandidatesExpression="feature:eAllContents" domainClass="FrontControllerClass" childrenPresentation="List">
             <subNodeMappings name="IO Parameter Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" semanticCandidatesExpression="feature:eAllContents" domainClass="IOParameter">
-              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:' - ' + self.name" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:' - ' + self.name + ' : ' + self.parameterType" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               </style>
             </subNodeMappings>
             <subNodeMappings name="Front Controller Method Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" semanticCandidatesExpression="feature:eAllContents" domainClass="FrontControllerMethod">
-              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:' + ' + self.name + '()'" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:' + ' + self.name + '()' + ' : ' + self.methodType" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>

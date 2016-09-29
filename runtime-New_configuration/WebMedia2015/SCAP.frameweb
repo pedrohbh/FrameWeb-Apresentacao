@@ -40,8 +40,8 @@
     </packagedElement>
     <packagedElement xsi:type="frameweb:ControllerPackage" name="SCAP_LeaveAbsence_Controller">
       <packagedElement xsi:type="frameweb:FrontControllerClass" name="RequestLeaveController">
-        <ownedAttribute xsi:type="frameweb:IOParameter" name="request"/>
-        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="submit"/>
+        <ownedAttribute xsi:type="frameweb:IOParameter" name="request" parameterType="Request"/>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="submit" methodType="String"/>
       </packagedElement>
     </packagedElement>
   </compose>

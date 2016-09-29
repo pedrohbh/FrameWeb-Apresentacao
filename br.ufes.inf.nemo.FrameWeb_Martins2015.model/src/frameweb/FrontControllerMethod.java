@@ -14,6 +14,7 @@ import org.eclipse.uml2.uml.Operation;
  * </p>
  * <ul>
  *   <li>{@link frameweb.FrontControllerMethod#isIsDefault <em>Is Default</em>}</li>
+ *   <li>{@link frameweb.FrontControllerMethod#getMethodType <em>Method Type</em>}</li>
  * </ul>
  *
  * @see frameweb.FramewebPackage#getFrontControllerMethod()
@@ -46,5 +47,31 @@ public interface FrontControllerMethod extends Operation {
 	 * @generated
 	 */
 	void setIsDefault(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Method Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Method Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Method Type</em>' attribute.
+	 * @see #setMethodType(String)
+	 * @see frameweb.FramewebPackage#getFrontControllerMethod_MethodType()
+	 * @model dataType="org.eclipse.uml2.types.String"
+	 * @generated
+	 */
+	String getMethodType();
+
+	/**
+	 * Sets the value of the '{@link frameweb.FrontControllerMethod#getMethodType <em>Method Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Method Type</em>' attribute.
+	 * @see #getMethodType()
+	 * @generated
+	 */
+	void setMethodType(String value);
 
 } // FrontControllerMethod
