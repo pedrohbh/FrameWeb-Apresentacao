@@ -362,8 +362,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 				return createResultConstraintAdapter();
 			}
 			@Override
-			public Adapter caseMethodCosntraint(MethodCosntraint object) {
-				return createMethodCosntraintAdapter();
+			public Adapter caseMethodConstraint(MethodConstraint object) {
+				return createMethodConstraintAdapter();
 			}
 			@Override
 			public Adapter caseChainingConstraint(ChainingConstraint object) {
@@ -1676,16 +1676,16 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link frameweb.MethodCosntraint <em>Method Cosntraint</em>}'.
+	 * Creates a new adapter for an object of class '{@link frameweb.MethodConstraint <em>Method Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see frameweb.MethodCosntraint
+	 * @see frameweb.MethodConstraint
 	 * @generated
 	 */
-	public Adapter createMethodCosntraintAdapter() {
+	public Adapter createMethodConstraintAdapter() {
 		return null;
 	}
 

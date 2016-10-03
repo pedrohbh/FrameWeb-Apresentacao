@@ -62,7 +62,7 @@ public class PageDependencyItemProvider extends NavigationDependencyItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(FramewebPackage.Literals.PAGE_DEPENDENCY__PAGE_DEPENDENCY_COSNTRAINT);
+			childrenFeatures.add(FramewebPackage.Literals.PAGE_DEPENDENCY__PAGE_DEPENDENCY_CONSTRAINT);
 		}
 		return childrenFeatures;
 	}
@@ -118,7 +118,7 @@ public class PageDependencyItemProvider extends NavigationDependencyItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PageDependency.class)) {
-			case FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_COSNTRAINT:
+			case FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_CONSTRAINT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -138,7 +138,7 @@ public class PageDependencyItemProvider extends NavigationDependencyItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(FramewebPackage.Literals.PAGE_DEPENDENCY__PAGE_DEPENDENCY_COSNTRAINT,
+				(FramewebPackage.Literals.PAGE_DEPENDENCY__PAGE_DEPENDENCY_CONSTRAINT,
 				 FramewebFactory.eINSTANCE.createPageConstraint()));
 	}
 

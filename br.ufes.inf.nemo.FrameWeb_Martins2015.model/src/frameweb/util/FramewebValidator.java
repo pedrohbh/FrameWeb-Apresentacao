@@ -351,8 +351,8 @@ public class FramewebValidator extends EObjectValidator {
 				return validatePageConstraint((PageConstraint)value, diagnostics, context);
 			case FramewebPackage.RESULT_CONSTRAINT:
 				return validateResultConstraint((ResultConstraint)value, diagnostics, context);
-			case FramewebPackage.METHOD_COSNTRAINT:
-				return validateMethodCosntraint((MethodCosntraint)value, diagnostics, context);
+			case FramewebPackage.METHOD_CONSTRAINT:
+				return validateMethodConstraint((MethodConstraint)value, diagnostics, context);
 			case FramewebPackage.CHAINING_CONSTRAINT:
 				return validateChainingConstraint((ChainingConstraint)value, diagnostics, context);
 			case FramewebPackage.NAVIGATION_GENERALIZATION:
@@ -2704,25 +2704,25 @@ public class FramewebValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateMethodCosntraint(MethodCosntraint methodCosntraint, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(methodCosntraint, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(methodCosntraint, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(methodCosntraint, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(methodCosntraint, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(methodCosntraint, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(methodCosntraint, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(methodCosntraint, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(methodCosntraint, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(methodCosntraint, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateElement_validateHasOwner(methodCosntraint, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateElement_validateNotOwnSelf(methodCosntraint, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateNamedElement_validateVisibilityNeedsOwnership(methodCosntraint, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateNamedElement_validateHasQualifiedName(methodCosntraint, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateNamedElement_validateHasNoQualifiedName(methodCosntraint, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validatePackageableElement_validateNamespaceNeedsVisibility(methodCosntraint, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateConstraint_validateBooleanValue(methodCosntraint, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateConstraint_validateNoSideEffects(methodCosntraint, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateConstraint_validateNotApplyToSelf(methodCosntraint, diagnostics, context);
+	public boolean validateMethodConstraint(MethodConstraint methodConstraint, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(methodConstraint, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(methodConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(methodConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(methodConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(methodConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(methodConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(methodConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(methodConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(methodConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= umlValidator.validateElement_validateHasOwner(methodConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= umlValidator.validateElement_validateNotOwnSelf(methodConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= umlValidator.validateNamedElement_validateVisibilityNeedsOwnership(methodConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= umlValidator.validateNamedElement_validateHasQualifiedName(methodConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= umlValidator.validateNamedElement_validateHasNoQualifiedName(methodConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= umlValidator.validatePackageableElement_validateNamespaceNeedsVisibility(methodConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= umlValidator.validateConstraint_validateBooleanValue(methodConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= umlValidator.validateConstraint_validateNoSideEffects(methodConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= umlValidator.validateConstraint_validateNotApplyToSelf(methodConstraint, diagnostics, context);
 		return result;
 	}
 

@@ -2,138 +2,7 @@
  */
 package frameweb.impl;
 
-import frameweb.Annotation;
-import frameweb.AnnotationProperty;
-import frameweb.AnonymousIndividual;
-import frameweb.ApplicationModel;
-import frameweb.ApplicationPackage;
-import frameweb.Association;
-import frameweb.AttributeMapping;
-import frameweb.AttributeMappingExtension;
-import frameweb.AttributeMappingExtensionEnd;
-import frameweb.AttributeMappingProperty;
-import frameweb.Axiom;
-import frameweb.Cascade;
-import frameweb.ChainingConstraint;
-import frameweb.ChainingDependency;
-import frameweb.ClassMapping;
-import frameweb.ClassMappingExtension;
-import frameweb.ClassMappingExtensionEnd;
-import frameweb.ClassMappingPropery;
-import frameweb.Collection;
-import frameweb.ConstantNameList;
-import frameweb.Controller;
-import frameweb.ControllerExtension;
-import frameweb.ControllerExtensionEnd;
-import frameweb.ControllerPackage;
-import frameweb.ControllerProperty;
-import frameweb.ControllerSet;
-import frameweb.DAOAttribute;
-import frameweb.DAOClass;
-import frameweb.DAOGeneralization;
-import frameweb.DAOGeneralizationSet;
-import frameweb.DAOInterface;
-import frameweb.DAOMethod;
-import frameweb.DAORealization;
-import frameweb.DAOServiceAssociation;
-import frameweb.DataProperty;
-import frameweb.DateTimeAttribute;
-import frameweb.DateTimePrecision;
-import frameweb.DecimalAttribute;
-import frameweb.DomainAssociation;
-import frameweb.DomainAttribute;
-import frameweb.DomainClass;
-import frameweb.DomainConstraints;
-import frameweb.DomainExtension;
-import frameweb.DomainGeneralization;
-import frameweb.DomainGeneralizationSet;
-import frameweb.DomainMethod;
-import frameweb.DomainPackage;
-import frameweb.DomainProperty;
-import frameweb.EmbeddedAttribute;
-import frameweb.EntityModel;
-import frameweb.Fetch;
-import frameweb.FramewebFactory;
-import frameweb.FramewebModel;
-import frameweb.FramewebPackage;
-import frameweb.FramewebProject;
-import frameweb.FrameworkApplication;
-import frameweb.FrameworkCategoryList;
-import frameweb.FrameworkExtension;
-import frameweb.FrameworkKindList;
-import frameweb.FrameworkProfile;
-import frameweb.FrontControllerClass;
-import frameweb.FrontControllerDependency;
-import frameweb.FrontControllerMethod;
-import frameweb.Generation;
-import frameweb.IOParameter;
-import frameweb.IdAttribute;
-import frameweb.Individual;
-import frameweb.InheritanceMapping;
-import frameweb.LOBAttribute;
-import frameweb.MappingLib;
-import frameweb.MethodCosntraint;
-import frameweb.NamedIndividual;
-import frameweb.NavigationAssociation;
-import frameweb.NavigationAttribute;
-import frameweb.NavigationClass;
-import frameweb.NavigationCompositionPart;
-import frameweb.NavigationCompositionWhole;
-import frameweb.NavigationConstraint;
-import frameweb.NavigationDependency;
-import frameweb.NavigationExtension;
-import frameweb.NavigationGeneralization;
-import frameweb.NavigationGeneralizationSet;
-import frameweb.NavigationModel;
-import frameweb.NavigationPackage;
-import frameweb.NavigationProperty;
-import frameweb.NewInterface115;
-import frameweb.ObjectProperty;
-import frameweb.Order;
-import frameweb.Page;
-import frameweb.PageConstraint;
-import frameweb.PageDependency;
-import frameweb.PersistenceModel;
-import frameweb.PersistencePackage;
-import frameweb.Property;
-import frameweb.Result;
-import frameweb.ResultConstraint;
-import frameweb.ResultDependency;
-import frameweb.ResultExtension;
-import frameweb.ResultExtensionEnd;
-import frameweb.ResultProperty;
-import frameweb.ResultSet;
-import frameweb.ResultType;
-import frameweb.SemanticPackage;
-import frameweb.ServiceAssociation;
-import frameweb.ServiceAttribute;
-import frameweb.ServiceClass;
-import frameweb.ServiceControllerAssociation;
-import frameweb.ServiceGeneralization;
-import frameweb.ServiceGeneralizationSet;
-import frameweb.ServiceInterface;
-import frameweb.ServiceMethod;
-import frameweb.SeviceRealization;
-import frameweb.Tag;
-import frameweb.TagExtension;
-import frameweb.TagExtensionEnd;
-import frameweb.TagLib;
-import frameweb.TagProperty;
-import frameweb.Template;
-import frameweb.UIComponent;
-import frameweb.VersionAttribute;
-import frameweb.ViewPackage;
-import frameweb.Vocabulary;
-import frameweb.VocabularyAssociation;
-import frameweb.VocabularyClass;
-import frameweb.VocabularyClassExpression;
-import frameweb.VocabularyConstraints;
-import frameweb.VocabularyDataType;
-import frameweb.VocabularyEntity;
-import frameweb.VocabularyLiteral;
-import frameweb.VocabularyModel;
-import frameweb.VocabularyProperty;
-
+import frameweb.*;
 import frameweb.util.FramewebValidator;
 
 import org.eclipse.emf.common.util.URI;
@@ -608,7 +477,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass methodCosntraintEClass = null;
+	private EClass methodConstraintEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1621,7 +1490,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getResultDependency_ResultDependendencyCosntraint() {
+	public EReference getResultDependency_ResultDependencyConstraint() {
 		return (EReference)resultDependencyEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1792,7 +1661,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPageDependency_PageDependencyCosntraint() {
+	public EReference getPageDependency_PageDependencyConstraint() {
 		return (EReference)pageDependencyEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2116,8 +1985,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMethodCosntraint() {
-		return methodCosntraintEClass;
+	public EClass getMethodConstraint() {
+		return methodConstraintEClass;
 	}
 
 	/**
@@ -3453,7 +3322,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		resultDependencyEClass = createEClass(RESULT_DEPENDENCY);
 		createEReference(resultDependencyEClass, RESULT_DEPENDENCY__RESULT_RESULT);
 		createEReference(resultDependencyEClass, RESULT_DEPENDENCY__RESULT_METHOD);
-		createEReference(resultDependencyEClass, RESULT_DEPENDENCY__RESULT_DEPENDENDENCY_COSNTRAINT);
+		createEReference(resultDependencyEClass, RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT);
 		createEAttribute(resultDependencyEClass, RESULT_DEPENDENCY__RENDER);
 		createEAttribute(resultDependencyEClass, RESULT_DEPENDENCY__EXECUTE);
 		createEAttribute(resultDependencyEClass, RESULT_DEPENDENCY__AJAX);
@@ -3482,7 +3351,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEReference(frontControllerDependencyEClass, FRONT_CONTROLLER_DEPENDENCY__METHOD_DEPENDENDENCY_CONSTRAINT);
 
 		pageDependencyEClass = createEClass(PAGE_DEPENDENCY);
-		createEReference(pageDependencyEClass, PAGE_DEPENDENCY__PAGE_DEPENDENCY_COSNTRAINT);
+		createEReference(pageDependencyEClass, PAGE_DEPENDENCY__PAGE_DEPENDENCY_CONSTRAINT);
 
 		chainingDependencyEClass = createEClass(CHAINING_DEPENDENCY);
 		createEReference(chainingDependencyEClass, CHAINING_DEPENDENCY__OUT_METHOD);
@@ -3549,7 +3418,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		resultConstraintEClass = createEClass(RESULT_CONSTRAINT);
 
-		methodCosntraintEClass = createEClass(METHOD_COSNTRAINT);
+		methodConstraintEClass = createEClass(METHOD_CONSTRAINT);
 
 		chainingConstraintEClass = createEClass(CHAINING_CONSTRAINT);
 
@@ -3845,7 +3714,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		navigationConstraintEClass.getESuperTypes().add(theUMLPackage.getConstraint());
 		pageConstraintEClass.getESuperTypes().add(this.getNavigationConstraint());
 		resultConstraintEClass.getESuperTypes().add(this.getNavigationConstraint());
-		methodCosntraintEClass.getESuperTypes().add(this.getNavigationConstraint());
+		methodConstraintEClass.getESuperTypes().add(this.getNavigationConstraint());
 		chainingConstraintEClass.getESuperTypes().add(this.getNavigationConstraint());
 		navigationGeneralizationEClass.getESuperTypes().add(theUMLPackage.getGeneralization());
 		domainConstraintsEClass.getESuperTypes().add(theUMLPackage.getConstraint());
@@ -3985,7 +3854,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEClass(resultDependencyEClass, ResultDependency.class, "ResultDependency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResultDependency_ResultResult(), this.getResult(), null, "resultResult", null, 0, -1, ResultDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResultDependency_ResultMethod(), this.getFrontControllerMethod(), null, "resultMethod", null, 0, 1, ResultDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getResultDependency_ResultDependendencyCosntraint(), this.getResultConstraint(), null, "resultDependendencyCosntraint", null, 1, 1, ResultDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getResultDependency_ResultDependencyConstraint(), this.getResultConstraint(), null, "resultDependencyConstraint", null, 1, 1, ResultDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getResultDependency_Render(), theEcorePackage.getEString(), "render", "@none", 0, 1, ResultDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResultDependency_Execute(), theEcorePackage.getEString(), "execute", "@this", 0, 1, ResultDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResultDependency_Ajax(), ecorePackage.getEBoolean(), "ajax", "false", 0, 1, ResultDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4011,10 +3880,10 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		initEClass(frontControllerDependencyEClass, FrontControllerDependency.class, "FrontControllerDependency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFrontControllerDependency_Method(), this.getFrontControllerMethod(), null, "method", null, 0, 1, FrontControllerDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFrontControllerDependency_MethodDependendencyConstraint(), this.getMethodCosntraint(), null, "methodDependendencyConstraint", null, 1, 1, FrontControllerDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getFrontControllerDependency_MethodDependendencyConstraint(), this.getMethodConstraint(), null, "methodDependendencyConstraint", null, 1, 1, FrontControllerDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(pageDependencyEClass, PageDependency.class, "PageDependency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPageDependency_PageDependencyCosntraint(), this.getPageConstraint(), null, "pageDependencyCosntraint", null, 1, 1, PageDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getPageDependency_PageDependencyConstraint(), this.getPageConstraint(), null, "pageDependencyConstraint", null, 1, 1, PageDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(chainingDependencyEClass, ChainingDependency.class, "ChainingDependency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getChainingDependency_OutMethod(), this.getFrontControllerMethod(), null, "outMethod", null, 0, 1, ChainingDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4081,7 +3950,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		initEClass(resultConstraintEClass, ResultConstraint.class, "ResultConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(methodCosntraintEClass, MethodCosntraint.class, "MethodCosntraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(methodConstraintEClass, MethodConstraint.class, "MethodConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(chainingConstraintEClass, ChainingConstraint.class, "ChainingConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

@@ -12,7 +12,7 @@ package frameweb;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link frameweb.PageDependency#getPageDependencyCosntraint <em>Page Dependency Cosntraint</em>}</li>
+ *   <li>{@link frameweb.PageDependency#getPageDependencyConstraint <em>Page Dependency Constraint</em>}</li>
  * </ul>
  *
  * @see frameweb.FramewebPackage#getPageDependency()
@@ -23,29 +23,29 @@ package frameweb;
  */
 public interface PageDependency extends NavigationDependency {
 	/**
-	 * Returns the value of the '<em><b>Page Dependency Cosntraint</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Page Dependency Constraint</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Page Dependency Cosntraint</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Page Dependency Constraint</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Page Dependency Cosntraint</em>' containment reference.
-	 * @see #setPageDependencyCosntraint(PageConstraint)
-	 * @see frameweb.FramewebPackage#getPageDependency_PageDependencyCosntraint()
+	 * @return the value of the '<em>Page Dependency Constraint</em>' containment reference.
+	 * @see #setPageDependencyConstraint(PageConstraint)
+	 * @see frameweb.FramewebPackage#getPageDependency_PageDependencyConstraint()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
-	PageConstraint getPageDependencyCosntraint();
+	PageConstraint getPageDependencyConstraint();
 
 	/**
-	 * Sets the value of the '{@link frameweb.PageDependency#getPageDependencyCosntraint <em>Page Dependency Cosntraint</em>}' containment reference.
+	 * Sets the value of the '{@link frameweb.PageDependency#getPageDependencyConstraint <em>Page Dependency Constraint</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Page Dependency Cosntraint</em>' containment reference.
-	 * @see #getPageDependencyCosntraint()
+	 * @param value the new value of the '<em>Page Dependency Constraint</em>' containment reference.
+	 * @see #getPageDependencyConstraint()
 	 * @generated
 	 */
-	void setPageDependencyCosntraint(PageConstraint value);
+	void setPageDependencyConstraint(PageConstraint value);
 
 } // PageDependency

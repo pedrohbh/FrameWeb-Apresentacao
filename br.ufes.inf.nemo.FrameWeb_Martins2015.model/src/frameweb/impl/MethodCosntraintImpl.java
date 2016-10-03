@@ -31,7 +31,7 @@ public class MethodCosntraintImpl extends NavigationConstraintImpl implements Me
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return FramewebPackage.Literals.METHOD_COSNTRAINT;
+		return FramewebPackage.Literals.METHOD_CONSTRAINT;
 	}
 
 } //MethodCosntraintImpl

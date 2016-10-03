@@ -179,7 +179,7 @@ public class ResultDependencyItemProvider extends NavigationDependencyItemProvid
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(FramewebPackage.Literals.RESULT_DEPENDENCY__RESULT_DEPENDENDENCY_COSNTRAINT);
+			childrenFeatures.add(FramewebPackage.Literals.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT);
 		}
 		return childrenFeatures;
 	}
@@ -240,7 +240,7 @@ public class ResultDependencyItemProvider extends NavigationDependencyItemProvid
 			case FramewebPackage.RESULT_DEPENDENCY__AJAX:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENDENCY_COSNTRAINT:
+			case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -260,7 +260,7 @@ public class ResultDependencyItemProvider extends NavigationDependencyItemProvid
 
 		newChildDescriptors.add
 			(createChildParameter
-				(FramewebPackage.Literals.RESULT_DEPENDENCY__RESULT_DEPENDENDENCY_COSNTRAINT,
+				(FramewebPackage.Literals.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT,
 				 FramewebFactory.eINSTANCE.createResultConstraint()));
 	}
 

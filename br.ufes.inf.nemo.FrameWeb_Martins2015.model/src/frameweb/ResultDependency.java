@@ -15,7 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link frameweb.ResultDependency#getResultResult <em>Result Result</em>}</li>
  *   <li>{@link frameweb.ResultDependency#getResultMethod <em>Result Method</em>}</li>
- *   <li>{@link frameweb.ResultDependency#getResultDependendencyCosntraint <em>Result Dependendency Cosntraint</em>}</li>
+ *   <li>{@link frameweb.ResultDependency#getResultDependencyConstraint <em>Result Dependency Constraint</em>}</li>
  *   <li>{@link frameweb.ResultDependency#getRender <em>Render</em>}</li>
  *   <li>{@link frameweb.ResultDependency#getExecute <em>Execute</em>}</li>
  *   <li>{@link frameweb.ResultDependency#isAjax <em>Ajax</em>}</li>
@@ -71,30 +71,30 @@ public interface ResultDependency extends NavigationDependency {
 	void setResultMethod(FrontControllerMethod value);
 
 	/**
-	 * Returns the value of the '<em><b>Result Dependendency Cosntraint</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Result Dependency Constraint</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Result Dependendency Cosntraint</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Result Dependency Constraint</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Result Dependendency Cosntraint</em>' containment reference.
-	 * @see #setResultDependendencyCosntraint(ResultConstraint)
-	 * @see frameweb.FramewebPackage#getResultDependency_ResultDependendencyCosntraint()
+	 * @return the value of the '<em>Result Dependency Constraint</em>' containment reference.
+	 * @see #setResultDependencyConstraint(ResultConstraint)
+	 * @see frameweb.FramewebPackage#getResultDependency_ResultDependencyConstraint()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
-	ResultConstraint getResultDependendencyCosntraint();
+	ResultConstraint getResultDependencyConstraint();
 
 	/**
-	 * Sets the value of the '{@link frameweb.ResultDependency#getResultDependendencyCosntraint <em>Result Dependendency Cosntraint</em>}' containment reference.
+	 * Sets the value of the '{@link frameweb.ResultDependency#getResultDependencyConstraint <em>Result Dependency Constraint</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Result Dependendency Cosntraint</em>' containment reference.
-	 * @see #getResultDependendencyCosntraint()
+	 * @param value the new value of the '<em>Result Dependency Constraint</em>' containment reference.
+	 * @see #getResultDependencyConstraint()
 	 * @generated
 	 */
-	void setResultDependendencyCosntraint(ResultConstraint value);
+	void setResultDependencyConstraint(ResultConstraint value);
 
 	/**
 	 * Returns the value of the '<em><b>Render</b></em>' attribute.

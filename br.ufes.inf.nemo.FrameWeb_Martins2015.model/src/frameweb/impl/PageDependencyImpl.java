@@ -22,22 +22,21 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link frameweb.impl.PageDependencyImpl#getPageDependencyCosntraint <em>Page Dependency Cosntraint</em>}</li>
+ *   <li>{@link frameweb.impl.PageDependencyImpl#getPageDependencyConstraint <em>Page Dependency Constraint</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class PageDependencyImpl extends NavigationDependencyImpl implements PageDependency {
 	/**
-	 * The cached value of the '{@link #getPageDependencyCosntraint() <em>Page Dependency Cosntraint</em>}' containment reference.
+	 * The cached value of the '{@link #getPageDependencyConstraint() <em>Page Dependency Constraint</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPageDependencyCosntraint()
+	 * @see #getPageDependencyConstraint()
 	 * @generated
 	 * @ordered
 	 */
-	protected PageConstraint pageDependencyCosntraint;
-
+	protected PageConstraint pageDependencyConstraint;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -62,8 +61,8 @@ public class PageDependencyImpl extends NavigationDependencyImpl implements Page
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PageConstraint getPageDependencyCosntraint() {
-		return pageDependencyCosntraint;
+	public PageConstraint getPageDependencyConstraint() {
+		return pageDependencyConstraint;
 	}
 
 	/**
@@ -71,11 +70,11 @@ public class PageDependencyImpl extends NavigationDependencyImpl implements Page
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPageDependencyCosntraint(PageConstraint newPageDependencyCosntraint, NotificationChain msgs) {
-		PageConstraint oldPageDependencyCosntraint = pageDependencyCosntraint;
-		pageDependencyCosntraint = newPageDependencyCosntraint;
+	public NotificationChain basicSetPageDependencyConstraint(PageConstraint newPageDependencyConstraint, NotificationChain msgs) {
+		PageConstraint oldPageDependencyConstraint = pageDependencyConstraint;
+		pageDependencyConstraint = newPageDependencyConstraint;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_COSNTRAINT, oldPageDependencyCosntraint, newPageDependencyCosntraint);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_CONSTRAINT, oldPageDependencyConstraint, newPageDependencyConstraint);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -86,18 +85,18 @@ public class PageDependencyImpl extends NavigationDependencyImpl implements Page
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPageDependencyCosntraint(PageConstraint newPageDependencyCosntraint) {
-		if (newPageDependencyCosntraint != pageDependencyCosntraint) {
+	public void setPageDependencyConstraint(PageConstraint newPageDependencyConstraint) {
+		if (newPageDependencyConstraint != pageDependencyConstraint) {
 			NotificationChain msgs = null;
-			if (pageDependencyCosntraint != null)
-				msgs = ((InternalEObject)pageDependencyCosntraint).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_COSNTRAINT, null, msgs);
-			if (newPageDependencyCosntraint != null)
-				msgs = ((InternalEObject)newPageDependencyCosntraint).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_COSNTRAINT, null, msgs);
-			msgs = basicSetPageDependencyCosntraint(newPageDependencyCosntraint, msgs);
+			if (pageDependencyConstraint != null)
+				msgs = ((InternalEObject)pageDependencyConstraint).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_CONSTRAINT, null, msgs);
+			if (newPageDependencyConstraint != null)
+				msgs = ((InternalEObject)newPageDependencyConstraint).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_CONSTRAINT, null, msgs);
+			msgs = basicSetPageDependencyConstraint(newPageDependencyConstraint, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_COSNTRAINT, newPageDependencyCosntraint, newPageDependencyCosntraint));
+			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_CONSTRAINT, newPageDependencyConstraint, newPageDependencyConstraint));
 	}
 
 	/**
@@ -108,8 +107,8 @@ public class PageDependencyImpl extends NavigationDependencyImpl implements Page
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_COSNTRAINT:
-				return basicSetPageDependencyCosntraint(null, msgs);
+			case FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_CONSTRAINT:
+				return basicSetPageDependencyConstraint(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -122,8 +121,8 @@ public class PageDependencyImpl extends NavigationDependencyImpl implements Page
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_COSNTRAINT:
-				return getPageDependencyCosntraint();
+			case FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_CONSTRAINT:
+				return getPageDependencyConstraint();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -136,8 +135,8 @@ public class PageDependencyImpl extends NavigationDependencyImpl implements Page
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_COSNTRAINT:
-				setPageDependencyCosntraint((PageConstraint)newValue);
+			case FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_CONSTRAINT:
+				setPageDependencyConstraint((PageConstraint)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -151,8 +150,8 @@ public class PageDependencyImpl extends NavigationDependencyImpl implements Page
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_COSNTRAINT:
-				setPageDependencyCosntraint((PageConstraint)null);
+			case FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_CONSTRAINT:
+				setPageDependencyConstraint((PageConstraint)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -166,8 +165,8 @@ public class PageDependencyImpl extends NavigationDependencyImpl implements Page
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_COSNTRAINT:
-				return pageDependencyCosntraint != null;
+			case FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_CONSTRAINT:
+				return pageDependencyConstraint != null;
 		}
 		return super.eIsSet(featureID);
 	}

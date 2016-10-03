@@ -508,13 +508,13 @@ public interface FramewebFactory extends EFactory {
 	ResultConstraint createResultConstraint();
 
 	/**
-	 * Returns a new object of class '<em>Method Cosntraint</em>'.
+	 * Returns a new object of class '<em>Method Constraint</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Method Cosntraint</em>'.
+	 * @return a new object of class '<em>Method Constraint</em>'.
 	 * @generated
 	 */
-	MethodCosntraint createMethodCosntraint();
+	MethodConstraint createMethodConstraint();
 
 	/**
 	 * Returns a new object of class '<em>Chaining Constraint</em>'.

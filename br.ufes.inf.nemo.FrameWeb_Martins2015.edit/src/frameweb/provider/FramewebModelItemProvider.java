@@ -104,7 +104,7 @@ public class FramewebModelItemProvider extends ModelItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(UMLPackage.Literals.NAMESPACE__OWNED_RULE,
-				 FramewebFactory.eINSTANCE.createMethodCosntraint()));
+				 FramewebFactory.eINSTANCE.createMethodConstraint()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -579,7 +579,7 @@ public class FramewebModelItemProvider extends ModelItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
-				 FramewebFactory.eINSTANCE.createMethodCosntraint()));
+				 FramewebFactory.eINSTANCE.createMethodConstraint()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -58,12 +58,12 @@ public interface FrontControllerDependency extends NavigationDependency {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Method Dependendency Constraint</em>' containment reference.
-	 * @see #setMethodDependendencyConstraint(MethodCosntraint)
+	 * @see #setMethodDependendencyConstraint(MethodConstraint)
 	 * @see frameweb.FramewebPackage#getFrontControllerDependency_MethodDependendencyConstraint()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
-	MethodCosntraint getMethodDependendencyConstraint();
+	MethodConstraint getMethodDependendencyConstraint();
 
 	/**
 	 * Sets the value of the '{@link frameweb.FrontControllerDependency#getMethodDependendencyConstraint <em>Method Dependendency Constraint</em>}' containment reference.
@@ -73,6 +73,6 @@ public interface FrontControllerDependency extends NavigationDependency {
 	 * @see #getMethodDependendencyConstraint()
 	 * @generated
 	 */
-	void setMethodDependendencyConstraint(MethodCosntraint value);
+	void setMethodDependendencyConstraint(MethodConstraint value);
 
 } // FrontControllerDependency

@@ -5,8 +5,7 @@ package frameweb.impl;
 import frameweb.FramewebPackage;
 import frameweb.FrontControllerDependency;
 import frameweb.FrontControllerMethod;
-import frameweb.MethodCosntraint;
-
+import frameweb.MethodConstraint;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -48,7 +47,7 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 	 * @generated
 	 * @ordered
 	 */
-	protected MethodCosntraint methodDependendencyConstraint;
+	protected MethodConstraint methodDependendencyConstraint;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,7 +111,7 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MethodCosntraint getMethodDependendencyConstraint() {
+	public MethodConstraint getMethodDependendencyConstraint() {
 		return methodDependendencyConstraint;
 	}
 
@@ -121,8 +120,8 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetMethodDependendencyConstraint(MethodCosntraint newMethodDependendencyConstraint, NotificationChain msgs) {
-		MethodCosntraint oldMethodDependendencyConstraint = methodDependendencyConstraint;
+	public NotificationChain basicSetMethodDependendencyConstraint(MethodConstraint newMethodDependendencyConstraint, NotificationChain msgs) {
+		MethodConstraint oldMethodDependendencyConstraint = methodDependendencyConstraint;
 		methodDependendencyConstraint = newMethodDependendencyConstraint;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FramewebPackage.FRONT_CONTROLLER_DEPENDENCY__METHOD_DEPENDENDENCY_CONSTRAINT, oldMethodDependendencyConstraint, newMethodDependendencyConstraint);
@@ -136,7 +135,7 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMethodDependendencyConstraint(MethodCosntraint newMethodDependendencyConstraint) {
+	public void setMethodDependendencyConstraint(MethodConstraint newMethodDependendencyConstraint) {
 		if (newMethodDependendencyConstraint != methodDependendencyConstraint) {
 			NotificationChain msgs = null;
 			if (methodDependendencyConstraint != null)
@@ -193,7 +192,7 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 				setMethod((FrontControllerMethod)newValue);
 				return;
 			case FramewebPackage.FRONT_CONTROLLER_DEPENDENCY__METHOD_DEPENDENDENCY_CONSTRAINT:
-				setMethodDependendencyConstraint((MethodCosntraint)newValue);
+				setMethodDependendencyConstraint((MethodConstraint)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -211,7 +210,7 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 				setMethod((FrontControllerMethod)null);
 				return;
 			case FramewebPackage.FRONT_CONTROLLER_DEPENDENCY__METHOD_DEPENDENDENCY_CONSTRAINT:
-				setMethodDependendencyConstraint((MethodCosntraint)null);
+				setMethodDependendencyConstraint((MethodConstraint)null);
 				return;
 		}
 		super.eUnset(featureID);

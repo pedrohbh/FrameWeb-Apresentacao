@@ -109,7 +109,7 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			case FramewebPackage.RESULT_SET: return createResultSet();
 			case FramewebPackage.PAGE_CONSTRAINT: return createPageConstraint();
 			case FramewebPackage.RESULT_CONSTRAINT: return createResultConstraint();
-			case FramewebPackage.METHOD_COSNTRAINT: return createMethodCosntraint();
+			case FramewebPackage.METHOD_CONSTRAINT: return createMethodConstraint();
 			case FramewebPackage.CHAINING_CONSTRAINT: return createChainingConstraint();
 			case FramewebPackage.NAVIGATION_GENERALIZATION: return createNavigationGeneralization();
 			case FramewebPackage.DOMAIN_CONSTRAINTS: return createDomainConstraints();
@@ -784,9 +784,9 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MethodCosntraint createMethodCosntraint() {
-		MethodCosntraintImpl methodCosntraint = new MethodCosntraintImpl();
-		return methodCosntraint;
+	public MethodConstraint createMethodConstraint() {
+		MethodConstraintImpl methodConstraint = new MethodConstraintImpl();
+		return methodConstraint;
 	}
 
 	/**

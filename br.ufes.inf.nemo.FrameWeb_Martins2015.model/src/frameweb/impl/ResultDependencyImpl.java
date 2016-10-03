@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <ul>
  *   <li>{@link frameweb.impl.ResultDependencyImpl#getResultResult <em>Result Result</em>}</li>
  *   <li>{@link frameweb.impl.ResultDependencyImpl#getResultMethod <em>Result Method</em>}</li>
- *   <li>{@link frameweb.impl.ResultDependencyImpl#getResultDependendencyCosntraint <em>Result Dependendency Cosntraint</em>}</li>
+ *   <li>{@link frameweb.impl.ResultDependencyImpl#getResultDependencyConstraint <em>Result Dependency Constraint</em>}</li>
  *   <li>{@link frameweb.impl.ResultDependencyImpl#getRender <em>Render</em>}</li>
  *   <li>{@link frameweb.impl.ResultDependencyImpl#getExecute <em>Execute</em>}</li>
  *   <li>{@link frameweb.impl.ResultDependencyImpl#isAjax <em>Ajax</em>}</li>
@@ -62,14 +62,14 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	protected FrontControllerMethod resultMethod;
 
 	/**
-	 * The cached value of the '{@link #getResultDependendencyCosntraint() <em>Result Dependendency Cosntraint</em>}' containment reference.
+	 * The cached value of the '{@link #getResultDependencyConstraint() <em>Result Dependency Constraint</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getResultDependendencyCosntraint()
+	 * @see #getResultDependencyConstraint()
 	 * @generated
 	 * @ordered
 	 */
-	protected ResultConstraint resultDependendencyCosntraint;
+	protected ResultConstraint resultDependencyConstraint;
 
 	/**
 	 * The default value of the '{@link #getRender() <em>Render</em>}' attribute.
@@ -205,8 +205,8 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResultConstraint getResultDependendencyCosntraint() {
-		return resultDependendencyCosntraint;
+	public ResultConstraint getResultDependencyConstraint() {
+		return resultDependencyConstraint;
 	}
 
 	/**
@@ -214,11 +214,11 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetResultDependendencyCosntraint(ResultConstraint newResultDependendencyCosntraint, NotificationChain msgs) {
-		ResultConstraint oldResultDependendencyCosntraint = resultDependendencyCosntraint;
-		resultDependendencyCosntraint = newResultDependendencyCosntraint;
+	public NotificationChain basicSetResultDependencyConstraint(ResultConstraint newResultDependencyConstraint, NotificationChain msgs) {
+		ResultConstraint oldResultDependencyConstraint = resultDependencyConstraint;
+		resultDependencyConstraint = newResultDependencyConstraint;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENDENCY_COSNTRAINT, oldResultDependendencyCosntraint, newResultDependendencyCosntraint);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT, oldResultDependencyConstraint, newResultDependencyConstraint);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -229,18 +229,18 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setResultDependendencyCosntraint(ResultConstraint newResultDependendencyCosntraint) {
-		if (newResultDependendencyCosntraint != resultDependendencyCosntraint) {
+	public void setResultDependencyConstraint(ResultConstraint newResultDependencyConstraint) {
+		if (newResultDependencyConstraint != resultDependencyConstraint) {
 			NotificationChain msgs = null;
-			if (resultDependendencyCosntraint != null)
-				msgs = ((InternalEObject)resultDependendencyCosntraint).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENDENCY_COSNTRAINT, null, msgs);
-			if (newResultDependendencyCosntraint != null)
-				msgs = ((InternalEObject)newResultDependendencyCosntraint).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENDENCY_COSNTRAINT, null, msgs);
-			msgs = basicSetResultDependendencyCosntraint(newResultDependendencyCosntraint, msgs);
+			if (resultDependencyConstraint != null)
+				msgs = ((InternalEObject)resultDependencyConstraint).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT, null, msgs);
+			if (newResultDependencyConstraint != null)
+				msgs = ((InternalEObject)newResultDependencyConstraint).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT, null, msgs);
+			msgs = basicSetResultDependencyConstraint(newResultDependencyConstraint, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENDENCY_COSNTRAINT, newResultDependendencyCosntraint, newResultDependendencyCosntraint));
+			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT, newResultDependencyConstraint, newResultDependencyConstraint));
 	}
 
 	/**
@@ -314,8 +314,8 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENDENCY_COSNTRAINT:
-				return basicSetResultDependendencyCosntraint(null, msgs);
+			case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT:
+				return basicSetResultDependencyConstraint(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -333,8 +333,8 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 			case FramewebPackage.RESULT_DEPENDENCY__RESULT_METHOD:
 				if (resolve) return getResultMethod();
 				return basicGetResultMethod();
-			case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENDENCY_COSNTRAINT:
-				return getResultDependendencyCosntraint();
+			case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT:
+				return getResultDependencyConstraint();
 			case FramewebPackage.RESULT_DEPENDENCY__RENDER:
 				return getRender();
 			case FramewebPackage.RESULT_DEPENDENCY__EXECUTE:
@@ -361,8 +361,8 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 			case FramewebPackage.RESULT_DEPENDENCY__RESULT_METHOD:
 				setResultMethod((FrontControllerMethod)newValue);
 				return;
-			case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENDENCY_COSNTRAINT:
-				setResultDependendencyCosntraint((ResultConstraint)newValue);
+			case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT:
+				setResultDependencyConstraint((ResultConstraint)newValue);
 				return;
 			case FramewebPackage.RESULT_DEPENDENCY__RENDER:
 				setRender((String)newValue);
@@ -391,8 +391,8 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 			case FramewebPackage.RESULT_DEPENDENCY__RESULT_METHOD:
 				setResultMethod((FrontControllerMethod)null);
 				return;
-			case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENDENCY_COSNTRAINT:
-				setResultDependendencyCosntraint((ResultConstraint)null);
+			case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT:
+				setResultDependencyConstraint((ResultConstraint)null);
 				return;
 			case FramewebPackage.RESULT_DEPENDENCY__RENDER:
 				setRender(RENDER_EDEFAULT);
@@ -419,8 +419,8 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 				return resultResult != null && !resultResult.isEmpty();
 			case FramewebPackage.RESULT_DEPENDENCY__RESULT_METHOD:
 				return resultMethod != null;
-			case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENDENCY_COSNTRAINT:
-				return resultDependendencyCosntraint != null;
+			case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT:
+				return resultDependencyConstraint != null;
 			case FramewebPackage.RESULT_DEPENDENCY__RENDER:
 				return RENDER_EDEFAULT == null ? render != null : !RENDER_EDEFAULT.equals(render);
 			case FramewebPackage.RESULT_DEPENDENCY__EXECUTE:

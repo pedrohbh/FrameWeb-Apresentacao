@@ -90,16 +90,16 @@
           <children xmi:type="notation:Node" xmi:id="_jG_L8IQXEea2YbEzLAJXFw" type="2002" element="_jGFNAIQXEea2YbEzLAJXFw">
             <children xmi:type="notation:Node" xmi:id="_jG_zAIQXEea2YbEzLAJXFw" type="5006"/>
             <children xmi:type="notation:Node" xmi:id="_jG_zAYQXEea2YbEzLAJXFw" type="7001">
-              <children xmi:type="notation:Node" xmi:id="_jHFSkIQXEea2YbEzLAJXFw" type="3009" element="_jGF0EIQXEea2YbEzLAJXFw">
+              <children xmi:type="notation:Node" xmi:id="_jHFSkIQXEea2YbEzLAJXFw" type="3009" element="_Oc26QIcMEealbqc-qqxdGw">
                 <children xmi:type="notation:Node" xmi:id="_jHFSk4QXEea2YbEzLAJXFw" type="5004"/>
                 <children xmi:type="notation:Node" xmi:id="_jHFSlIQXEea2YbEzLAJXFw" type="7003">
-                  <children xmi:type="notation:Node" xmi:id="_jHF5oIQXEea2YbEzLAJXFw" type="3010" element="_jGGbIYQXEea2YbEzLAJXFw">
-                    <styles xmi:type="notation:FontStyle" xmi:id="_jHF5oYQXEea2YbEzLAJXFw" fontName="Segoe UI" fontHeight="8"/>
-                    <layoutConstraint xmi:type="notation:Location" xmi:id="_jHF5ooQXEea2YbEzLAJXFw"/>
+                  <children xmi:type="notation:Node" xmi:id="_OdM4gIcMEealbqc-qqxdGw" type="3010" element="_OdHY8IcMEealbqc-qqxdGw">
+                    <styles xmi:type="notation:FontStyle" xmi:id="_OdM4gYcMEealbqc-qqxdGw" fontName="Segoe UI" fontHeight="8"/>
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_OdM4gocMEealbqc-qqxdGw"/>
                   </children>
-                  <children xmi:type="notation:Node" xmi:id="_jHF5o4QXEea2YbEzLAJXFw" type="3010" element="_jGHCMYQXEea2YbEzLAJXFw">
-                    <styles xmi:type="notation:FontStyle" xmi:id="_jHF5pIQXEea2YbEzLAJXFw" fontName="Segoe UI" fontHeight="8"/>
-                    <layoutConstraint xmi:type="notation:Location" xmi:id="_jHF5pYQXEea2YbEzLAJXFw"/>
+                  <children xmi:type="notation:Node" xmi:id="_OdNfkIcMEealbqc-qqxdGw" type="3010" element="_OdIAAYcMEealbqc-qqxdGw">
+                    <styles xmi:type="notation:FontStyle" xmi:id="_OdNfkYcMEealbqc-qqxdGw" fontName="Segoe UI" fontHeight="8"/>
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_OdNfkocMEealbqc-qqxdGw"/>
                   </children>
                   <styles xmi:type="notation:SortingStyle" xmi:id="_jHFSlYQXEea2YbEzLAJXFw"/>
                   <styles xmi:type="notation:FilteringStyle" xmi:id="_jHFSloQXEea2YbEzLAJXFw"/>
@@ -285,36 +285,33 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']"/>
-        <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_jGF0EIQXEea2YbEzLAJXFw" name="RequestLeaveController" outgoingEdges="_jGI3YIQXEea2YbEzLAJXFw _jGJecIQXEea2YbEzLAJXFw" incomingEdges="_jGKFgIQXEea2YbEzLAJXFw">
+        <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_Oc26QIcMEealbqc-qqxdGw" name="RequestLeaveController" outgoingEdges="_jGI3YIQXEea2YbEzLAJXFw _jGJecIQXEea2YbEzLAJXFw" incomingEdges="_jGKFgIQXEea2YbEzLAJXFw">
           <target xmi:type="frameweb:FrontControllerClass" href="SCAP.frameweb#//@compose.0/SCAP_LeaveAbsence_Controller/RequestLeaveController"/>
           <semanticElements xmi:type="frameweb:FrontControllerClass" href="SCAP.frameweb#//@compose.0/SCAP_LeaveAbsence_Controller/RequestLeaveController"/>
-          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_jGGbIIQXEea2YbEzLAJXFw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,245,181">
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_Oc26QYcMEealbqc-qqxdGw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,245,181">
             <labelFormat>bold</labelFormat>
             <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']"/>
-          <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_jGGbIYQXEea2YbEzLAJXFw" name=" - request : Request">
+          <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_OdHY8IcMEealbqc-qqxdGw" name=" - request : Request">
             <target xmi:type="frameweb:IOParameter" href="SCAP.frameweb#//@compose.0/SCAP_LeaveAbsence_Controller/RequestLeaveController/request"/>
             <semanticElements xmi:type="frameweb:IOParameter" href="SCAP.frameweb#//@compose.0/SCAP_LeaveAbsence_Controller/RequestLeaveController/request"/>
-            <ownedStyle xmi:type="diagram:Dot" xmi:id="_jGHCMIQXEea2YbEzLAJXFw" showIcon="false" labelAlignment="LEFT" labelPosition="node">
+            <ownedStyle xmi:type="diagram:Dot" xmi:id="_OdIAAIcMEealbqc-qqxdGw" showIcon="false" labelAlignment="LEFT" labelPosition="node">
               <description xmi:type="style:DotDescription" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='IO%20Parameter%20Node']/@style"/>
             </ownedStyle>
             <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='IO%20Parameter%20Node']"/>
           </ownedElements>
-          <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_jGHCMYQXEea2YbEzLAJXFw" name=" + submit() : String">
+          <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_OdIAAYcMEealbqc-qqxdGw" name=" + submit() : String">
             <target xmi:type="frameweb:FrontControllerMethod" href="SCAP.frameweb#//@compose.0/SCAP_LeaveAbsence_Controller/RequestLeaveController/submit"/>
             <semanticElements xmi:type="frameweb:FrontControllerMethod" href="SCAP.frameweb#//@compose.0/SCAP_LeaveAbsence_Controller/RequestLeaveController/submit"/>
-            <ownedStyle xmi:type="diagram:Dot" xmi:id="_jGHCMoQXEea2YbEzLAJXFw" showIcon="false" labelAlignment="LEFT" labelPosition="node">
+            <ownedStyle xmi:type="diagram:Dot" xmi:id="_OdIAAocMEealbqc-qqxdGw" showIcon="false" labelAlignment="LEFT" labelPosition="node">
               <description xmi:type="style:DotDescription" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='Front%20Controller%20Method%20Node']/@style"/>
             </ownedStyle>
             <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='Front%20Controller%20Method%20Node']"/>
           </ownedElements>
         </ownedDiagramElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_jGI3YIQXEea2YbEzLAJXFw" name="{method=submit, result=null}" sourceNode="_jGF0EIQXEea2YbEzLAJXFw" targetNode="_jGEl8YQXEea2YbEzLAJXFw">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_jGI3YIQXEea2YbEzLAJXFw" name="{method=submit, result=null}" sourceNode="_Oc26QIcMEealbqc-qqxdGw" targetNode="_jGEl8YQXEea2YbEzLAJXFw">
         <target xmi:type="frameweb:ResultDependency" href="SCAP.frameweb#//@compose.0/Failure"/>
         <semanticElements xmi:type="frameweb:ResultDependency" href="SCAP.frameweb#//@compose.0/Failure"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_jGI3YYQXEea2YbEzLAJXFw" lineStyle="dash" size="2" routingStyle="manhattan" strokeColor="69,69,69">
@@ -323,7 +320,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@edgeMappings[name='ResultDependency%20Line']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_jGJecIQXEea2YbEzLAJXFw" name="{method=submit, result=success.xhtml}" sourceNode="_jGF0EIQXEea2YbEzLAJXFw" targetNode="_jGD-4IQXEea2YbEzLAJXFw">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_jGJecIQXEea2YbEzLAJXFw" name="{method=submit, result=success.xhtml}" sourceNode="_Oc26QIcMEealbqc-qqxdGw" targetNode="_jGD-4IQXEea2YbEzLAJXFw">
         <target xmi:type="frameweb:ResultDependency" href="SCAP.frameweb#//@compose.0/Success"/>
         <semanticElements xmi:type="frameweb:ResultDependency" href="SCAP.frameweb#//@compose.0/Success"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_jGJecYQXEea2YbEzLAJXFw" lineStyle="dash" size="2" routingStyle="manhattan" strokeColor="69,69,69">
@@ -332,7 +329,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@edgeMappings[name='ResultDependency%20Line']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_jGKFgIQXEea2YbEzLAJXFw" name="{method=submit}" sourceNode="_jFwc4IQXEea2YbEzLAJXFw" targetNode="_jGF0EIQXEea2YbEzLAJXFw">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_jGKFgIQXEea2YbEzLAJXFw" name="{method=submit}" sourceNode="_jFwc4IQXEea2YbEzLAJXFw" targetNode="_Oc26QIcMEealbqc-qqxdGw">
         <target xmi:type="frameweb:FrontControllerDependency" href="SCAP.frameweb#//@compose.0/Submission"/>
         <semanticElements xmi:type="frameweb:FrontControllerDependency" href="SCAP.frameweb#//@compose.0/Submission"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_jGKFgYQXEea2YbEzLAJXFw" lineStyle="dash" size="2" routingStyle="manhattan" strokeColor="69,69,69">

@@ -160,7 +160,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="resultResult" upperBound="-1"
         eType="#//Result"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="resultMethod" eType="#//FrontControllerMethod"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="resultDependendencyCosntraint"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resultDependencyConstraint"
         ordered="false" lowerBound="1" eType="#//ResultConstraint" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="render" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral="@none"/>
@@ -208,7 +208,7 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="method" eType="#//FrontControllerMethod"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="methodDependendencyConstraint"
-        ordered="false" lowerBound="1" eType="#//MethodCosntraint" containment="true"/>
+        ordered="false" lowerBound="1" eType="#//MethodConstraint" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PageDependency" eSuperTypes="#//NavigationDependency">
     <eAnnotations source="Ecore">
@@ -220,7 +220,7 @@
     <eAnnotations source="OCL" references="#//PageDependency/%Ecore%/@details.0">
       <details key="PageDepencencyContent" value="(self.client.oclIsTypeOf(Page)) and ((self.supplier.oclIsTypeOf(Page)) or (self.supplier.oclIsTypeOf(Template)))"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pageDependencyCosntraint"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pageDependencyConstraint"
         ordered="false" lowerBound="1" eType="#//PageConstraint" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ChainingDependency" eSuperTypes="#//NavigationDependency">
@@ -286,7 +286,7 @@
       eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Constraint"/>
   <eClassifiers xsi:type="ecore:EClass" name="PageConstraint" eSuperTypes="#//NavigationConstraint"/>
   <eClassifiers xsi:type="ecore:EClass" name="ResultConstraint" eSuperTypes="#//NavigationConstraint"/>
-  <eClassifiers xsi:type="ecore:EClass" name="MethodCosntraint" eSuperTypes="#//NavigationConstraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodConstraint" eSuperTypes="#//NavigationConstraint"/>
   <eClassifiers xsi:type="ecore:EClass" name="ChainingConstraint" eSuperTypes="#//NavigationConstraint"/>
   <eClassifiers xsi:type="ecore:EClass" name="NavigationGeneralization" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>
   <eClassifiers xsi:type="ecore:EClass" name="DomainConstraints" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Constraint"/>

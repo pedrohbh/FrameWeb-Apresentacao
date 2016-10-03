@@ -172,7 +172,7 @@ public class DAOInterfaceItemProvider extends InterfaceItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(UMLPackage.Literals.NAMESPACE__OWNED_RULE,
-				 FramewebFactory.eINSTANCE.createMethodCosntraint()));
+				 FramewebFactory.eINSTANCE.createMethodConstraint()));
 
 		newChildDescriptors.add
 			(createChildParameter

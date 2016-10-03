@@ -1167,16 +1167,16 @@ public class FramewebSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case FramewebPackage.METHOD_COSNTRAINT: {
-				MethodCosntraint methodCosntraint = (MethodCosntraint)theEObject;
-				T result = caseMethodCosntraint(methodCosntraint);
-				if (result == null) result = caseNavigationConstraint(methodCosntraint);
-				if (result == null) result = caseConstraint(methodCosntraint);
-				if (result == null) result = casePackageableElement(methodCosntraint);
-				if (result == null) result = caseNamedElement(methodCosntraint);
-				if (result == null) result = caseParameterableElement(methodCosntraint);
-				if (result == null) result = caseElement(methodCosntraint);
-				if (result == null) result = caseEModelElement(methodCosntraint);
+			case FramewebPackage.METHOD_CONSTRAINT: {
+				MethodConstraint methodConstraint = (MethodConstraint)theEObject;
+				T result = caseMethodConstraint(methodConstraint);
+				if (result == null) result = caseNavigationConstraint(methodConstraint);
+				if (result == null) result = caseConstraint(methodConstraint);
+				if (result == null) result = casePackageableElement(methodConstraint);
+				if (result == null) result = caseNamedElement(methodConstraint);
+				if (result == null) result = caseParameterableElement(methodConstraint);
+				if (result == null) result = caseElement(methodConstraint);
+				if (result == null) result = caseEModelElement(methodConstraint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -3114,17 +3114,17 @@ public class FramewebSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Method Cosntraint</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Method Constraint</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Method Cosntraint</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Method Constraint</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMethodCosntraint(MethodCosntraint object) {
+	public T caseMethodConstraint(MethodConstraint object) {
 		return null;
 	}
 

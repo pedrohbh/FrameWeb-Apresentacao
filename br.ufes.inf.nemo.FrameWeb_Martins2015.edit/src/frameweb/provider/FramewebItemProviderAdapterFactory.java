@@ -1314,26 +1314,26 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link frameweb.MethodCosntraint} instances.
+	 * This keeps track of the one adapter used for all {@link frameweb.MethodConstraint} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MethodCosntraintItemProvider methodCosntraintItemProvider;
+	protected MethodConstraintItemProvider methodConstraintItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link frameweb.MethodCosntraint}.
+	 * This creates an adapter for a {@link frameweb.MethodConstraint}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createMethodCosntraintAdapter() {
-		if (methodCosntraintItemProvider == null) {
-			methodCosntraintItemProvider = new MethodCosntraintItemProvider(this);
+	public Adapter createMethodConstraintAdapter() {
+		if (methodConstraintItemProvider == null) {
+			methodConstraintItemProvider = new MethodConstraintItemProvider(this);
 		}
 
-		return methodCosntraintItemProvider;
+		return methodConstraintItemProvider;
 	}
 
 	/**
@@ -2639,7 +2639,7 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory i
 		if (resultSetItemProvider != null) resultSetItemProvider.dispose();
 		if (pageConstraintItemProvider != null) pageConstraintItemProvider.dispose();
 		if (resultConstraintItemProvider != null) resultConstraintItemProvider.dispose();
-		if (methodCosntraintItemProvider != null) methodCosntraintItemProvider.dispose();
+		if (methodConstraintItemProvider != null) methodConstraintItemProvider.dispose();
 		if (chainingConstraintItemProvider != null) chainingConstraintItemProvider.dispose();
 		if (navigationGeneralizationItemProvider != null) navigationGeneralizationItemProvider.dispose();
 		if (domainConstraintsItemProvider != null) domainConstraintsItemProvider.dispose();

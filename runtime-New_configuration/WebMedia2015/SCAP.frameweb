@@ -2,10 +2,10 @@
 <frameweb:FramewebProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015">
   <compose xsi:type="frameweb:NavigationModel" name="SCAP_LeaveAbsence_NM">
     <packagedElement xsi:type="frameweb:ResultDependency" name="Failure" client="//@compose.0/SCAP_LeaveAbsence_Controller/RequestLeaveController" supplier="//@compose.0/SCAP_LeaveAbsence_View/form.xhtml" resultMethod="//@compose.0/SCAP_LeaveAbsence_Controller/RequestLeaveController/submit">
-      <resultDependendencyCosntraint name="method=submit, result=null"/>
+      <resultDependencyConstraint name="method=submit, result=null"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:ResultDependency" name="Success" client="//@compose.0/SCAP_LeaveAbsence_Controller/RequestLeaveController" supplier="//@compose.0/SCAP_LeaveAbsence_View/success.xhtml" resultMethod="//@compose.0/SCAP_LeaveAbsence_Controller/RequestLeaveController/submit">
-      <resultDependendencyCosntraint name="method=submit, result=success.xhtml"/>
+      <resultDependencyConstraint name="method=submit, result=success.xhtml"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" name="Submission" client="//@compose.0/SCAP_LeaveAbsence_View/requestLeaveForm" supplier="//@compose.0/SCAP_LeaveAbsence_Controller/RequestLeaveController" method="//@compose.0/SCAP_LeaveAbsence_Controller/RequestLeaveController/submit"/>
     <packagedElement xsi:type="frameweb:ViewPackage" name="SCAP_LeaveAbsence_View">

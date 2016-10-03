@@ -163,7 +163,7 @@ public class FrontControllerDependencyItemProvider extends NavigationDependencyI
 		newChildDescriptors.add
 			(createChildParameter
 				(FramewebPackage.Literals.FRONT_CONTROLLER_DEPENDENCY__METHOD_DEPENDENDENCY_CONSTRAINT,
-				 FramewebFactory.eINSTANCE.createMethodCosntraint()));
+				 FramewebFactory.eINSTANCE.createMethodConstraint()));
 	}
 
 }
