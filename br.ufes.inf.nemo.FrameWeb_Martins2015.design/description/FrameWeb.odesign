@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:validation="http://www.eclipse.org/sirius/description/validation/1.1.0" name="FrameWeb" version="11.0.0.201601261200">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:validation="http://www.eclipse.org/sirius/description/validation/1.1.0" name="FrameWeb" version="11.0.0.201601261200">
   <ownedViewpoints label="FrameWebViewPoint" modelFileExtension="frameweb">
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWebNavigationModel" domainClass="NavigationModel">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWebNavigationModel" domainClass="NavigationModel" enablePopupBars="true">
       <validationSet>
         <ownedRules xsi:type="validation:SemanticValidationRule" targetClass="frameweb.ResultDependency">
           <audits auditExpression="(self.oclAsType(Dependency).client.oclIsTypeOf(FrontControllerClass)) and ((self.oclAsType(Dependency).supplier.oclIsTypeOf(NavigationClass)) or (self.oclAsType(Dependency).supplier.oclIsTypeOf(FormComponent)))"/>
@@ -55,7 +55,7 @@
               <labelFormat>bold</labelFormat>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
             </style>
           </subContainerMappings>
           <subContainerMappings name="Page Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" semanticCandidatesExpression="feature:eAllContents" domainClass="Page" childrenPresentation="List">
@@ -64,7 +64,7 @@
               <labelFormat>bold</labelFormat>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
             </style>
           </subContainerMappings>
           <subContainerMappings name="Template Node" semanticCandidatesExpression="feature:eAllContents" domainClass="Template" childrenPresentation="List">
@@ -92,8 +92,8 @@
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               </style>
             </subNodeMappings>
-            <subNodeMappings name="Front Controller Method Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" semanticCandidatesExpression="feature:eAllContents" domainClass="FrontControllerMethod">
-              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:' + ' + self.name + '(' + self.ownedParameter.name + ': ' + self.ownedParameter.type.name + ')' + ' : ' + self.methodType" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+            <subNodeMappings name="Front Controller Method Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Method%20Click']" domainClass="FrontControllerMethod">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:' + ' + self.name + '(' + (self.ownedParameter.name + ': ' + self.ownedParameter.type.name + ')' + ' : ' + self.methodType" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -104,7 +104,7 @@
               <labelFormat>bold</labelFormat>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
             </style>
           </subContainerMappings>
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
@@ -348,6 +348,15 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Method Click" mappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='Front%20Controller%20Method%20Node']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='Method%20Diagram']"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
@@ -519,10 +528,169 @@
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
           </style>
         </containerMappings>
+        <containerMappings name="EntityModel" domainClass="EntityModel">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="PersistenceModel" domainClass="PersistenceModel">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="ApplicationModel" domainClass="ApplicationModel">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Models">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Navigation Model" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@containerMappings[name='NavigationModel']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.NavigationModel" referenceName="compose">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Navigation Model"/>
+                <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Entity Model" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@containerMappings[name='EntityModel']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.EntityModel" referenceName="compose">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Entity Model"/>
+                <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']"/>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="Package" referenceName="packagedElement" variableName="pack">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Primitive Types"/>
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:pack">
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.PrimitiveType" referenceName="packagedElement">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="byte"/>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.PrimitiveType" referenceName="packagedElement">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="short"/>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.PrimitiveType" referenceName="packagedElement">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="int"/>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.PrimitiveType" referenceName="packagedElement">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="long"/>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.PrimitiveType" referenceName="packagedElement">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="float"/>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.PrimitiveType" referenceName="packagedElement">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="double"/>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.PrimitiveType" referenceName="packagedElement">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="boolean"/>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.PrimitiveType" referenceName="packagedElement">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="char"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Persistence Model" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@containerMappings[name='PersistenceModel']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.PersistenceModel" referenceName="compose">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Persistence Model"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Application Model" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@containerMappings[name='ApplicationModel']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.ApplicationModel" referenceName="compose">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Application Model"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
       </defaultLayer>
     </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="Method" titleExpression="aql:self.name" domainClass="FrontControllerMethod" initialHeaderColumnWidth="100">
+      <ownedLineMappings name="Parametro" domainClass="Parameter" semanticCandidatesExpression="aql:self.ownedParameter"/>
+      <ownedCreateLine name="New Parameter" mapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='Method']/@ownedLineMappings[name='Parametro']">
+        <variables name="root" documentation="The semantic root element of the table."/>
+        <variables name="element" documentation="The semantic currently edited element."/>
+        <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        <firstModelOperation xsi:type="tool_1:ChangeContext" browseExpression="aql:self">
+          <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.Parameter" referenceName="ownedParameter">
+            <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Parameter"/>
+          </subModelOperations>
+        </firstModelOperation>
+      </ownedCreateLine>
+      <ownedColumnMappings label="Name" headerLabelExpression="Name" featureName="name" labelExpression="aql:self.name"/>
+      <ownedColumnMappings label="Type" headerLabelExpression="Type" featureName="type" labelExpression="aql:self.type.name"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Method Diagram" initialisation="true" domainClass="FrontControllerMethod" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="Parameter" semanticCandidatesExpression="aql:self.ownedParameter" domainClass="Parameter">
+          <style xsi:type="style:SquareDescription" labelPosition="node" resizeKind="EAST_WEST" width="10" height="3">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>italic</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="FrontControllerMethod" semanticCandidatesExpression="aql:self" domainClass="FrontControllerMethod">
+          <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="EAST_WEST" width="10" height="3">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>italic</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="ParameterRelation" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='Method%20Diagram']/@defaultLayer/@nodeMappings[name='Parameter']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='Method%20Diagram']/@defaultLayer/@nodeMappings[name='FrontControllerMethod']" targetFinderExpression="aql:self.owner">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="Extend"/>
   </ownedViewpoints>
+  <extensions xsi:type="properties:ViewExtensionDescription" identifier="properties">
+    <pages identifier="ParameterMenu" labelExpression="Parameter Menu" domainClass="frameweb.FrontControllerMethod" groups="//@extensions.0/@groups.0"/>
+    <groups identifier="Parameters" labelExpression="Parameters" domainClass="FrontControllerMethod" semanticCandidateExpression="aql:self">
+      <controls xsi:type="properties:DynamicMappingFor" identifier="ParameterNames" iterator="Parameter" domainClassExpression="aql:self.ownedParameter">
+        <ifs predicateExpression="aql:1=1">
+          <widget xsi:type="properties:LabelDescription" valueExpression="aql:Parameter.name"/>
+        </ifs>
+      </controls>
+      <controls xsi:type="properties:ButtonDescription" identifier="addParameter" buttonLabelExpression="Add Parameter">
+        <initialOperation>
+          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self">
+            <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.Parameter" referenceName="ownedParameter">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Parameter"/>
+            </subModelOperations>
+          </firstModelOperations>
+        </initialOperation>
+      </controls>
+      <controls xsi:type="properties:LabelDescription" identifier="ads" labelExpression="Double Click in the method do edit Parameters"/>
+    </groups>
+  </extensions>
 </description:Group>

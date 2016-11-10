@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<frameweb:FramewebProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015">
+<frameweb:FramewebProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
   <compose xsi:type="frameweb:NavigationModel" name="SCAP_LeaveAbsence_NM">
     <packagedElement xsi:type="frameweb:ResultDependency" name="Failure" client="//@compose.0/SCAP_LeaveAbsence_Controller/RequestLeaveController" supplier="//@compose.0/SCAP_LeaveAbsence_View/form.xhtml" resultMethod="//@compose.0/SCAP_LeaveAbsence_Controller/RequestLeaveController/submit">
       <resultDependencyConstraint name="method=submit, result=null"/>
@@ -46,5 +46,8 @@
         <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="submit" methodType="String"/>
       </packagedElement>
     </packagedElement>
+  </compose>
+  <compose xsi:type="frameweb:EntityModel" name="Entity Model">
+    <packagedElement xsi:type="uml:Package" name="Primitive Types"/>
   </compose>
 </frameweb:FramewebProject>

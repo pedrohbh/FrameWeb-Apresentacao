@@ -1,34 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <frameweb:FramewebProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
-  <compose xsi:type="frameweb:EntityModel">
-    <packagedElement xsi:type="frameweb:DomainPackage" name="Domain Package">
-      <packagedElement xsi:type="frameweb:DomainClass" name="Person">
-        <ownedAttribute xsi:type="frameweb:EmbeddedAttribute" name="New Embedded Attribute"/>
-        <ownedAttribute xsi:type="frameweb:IdAttribute" name="New Id Attribute"/>
-        <ownedAttribute xsi:type="frameweb:VersionAttribute" name="New Version Attribute"/>
-        <ownedAttribute xsi:type="frameweb:DecimalAttribute" name="New Decimal Attribute"/>
-        <ownedAttribute xsi:type="frameweb:DateTimeAttribute" name="New DateTime Attribute"/>
-        <ownedAttribute xsi:type="frameweb:LOBAttribute" name="New LOB Attribute"/>
-        <ownedOperation xsi:type="frameweb:DomainMethod" name="getName"/>
-        <ownedOperation xsi:type="frameweb:DomainMethod" name="New Method"/>
-      </packagedElement>
-      <packagedElement xsi:type="frameweb:DomainClass" name="New Class"/>
-    </packagedElement>
-    <packagedElement xsi:type="uml:Package" name="Primitive Types">
-      <packagedElement xsi:type="uml:PrimitiveType" name="int"/>
-      <packagedElement xsi:type="uml:PrimitiveType" name="String"/>
-    </packagedElement>
-  </compose>
+  <compose xsi:type="frameweb:PersistenceModel" name="Persistence Model"/>
+  <compose xsi:type="frameweb:ApplicationModel" name="Application Model"/>
   <compose xsi:type="frameweb:NavigationModel" name="Navigation Model">
+    <packagedElement xsi:type="frameweb:ViewPackage" name="View Package"/>
     <packagedElement xsi:type="frameweb:ControllerPackage" name="Controller Package">
       <packagedElement xsi:type="frameweb:FrontControllerClass" name="New Front Controller">
-        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="Method 1" methodType="String">
-          <ownedParameter name="Parametro 1" type="//@compose.0/Domain%20Package/Person"/>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="New Method" methodType="int">
+          <ownedParameter name="Parameter 1" type="//@compose.3/Primitive%20Types/int"/>
+          <ownedParameter name="Parameter 2" type="//@compose.3/Primitive%20Types/int"/>
+          <ownedParameter name="Parameter 3" type="//@compose.3/Primitive%20Types/float"/>
         </ownedOperation>
       </packagedElement>
     </packagedElement>
-    <packagedElement xsi:type="frameweb:PageDependency">
-      <pageDependencyConstraint name="method=, result="/>
+  </compose>
+  <compose xsi:type="frameweb:EntityModel" name="Entity Model">
+    <packagedElement xsi:type="uml:Package" name="Primitive Types">
+      <packagedElement xsi:type="uml:PrimitiveType" name="byte"/>
+      <packagedElement xsi:type="uml:PrimitiveType" name="short"/>
+      <packagedElement xsi:type="uml:PrimitiveType" name="int"/>
+      <packagedElement xsi:type="uml:PrimitiveType" name="long"/>
+      <packagedElement xsi:type="uml:PrimitiveType" name="float"/>
+      <packagedElement xsi:type="uml:PrimitiveType" name="double"/>
+      <packagedElement xsi:type="uml:PrimitiveType" name="boolean"/>
+      <packagedElement xsi:type="uml:PrimitiveType" name="char"/>
     </packagedElement>
   </compose>
 </frameweb:FramewebProject>
