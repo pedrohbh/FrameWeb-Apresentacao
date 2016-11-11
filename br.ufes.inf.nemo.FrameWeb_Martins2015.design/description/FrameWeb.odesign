@@ -92,8 +92,8 @@
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               </style>
             </subNodeMappings>
-            <subNodeMappings name="Front Controller Method Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Method%20Click']" domainClass="FrontControllerMethod">
-              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:' + ' + self.name + '(' + (self.ownedParameter.name + ': ' + self.ownedParameter.type.name + ')' + ' : ' + self.methodType" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+            <subNodeMappings name="Front Controller Method Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Open%20EEF%20Descriptor']" domainClass="FrontControllerMethod">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:' + ' + self.printParameters()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -348,13 +348,20 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="Method Click" mappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='Front%20Controller%20Method%20Node']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Method Click">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
                 <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='Method%20Diagram']"/>
               </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Open EEF Descriptor" elementsToSelect="aql:self" mappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='Front%20Controller%20Method%20Node']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="Open EEF Wizard Action" id="org.eclipse.sirius.eef.actions.openPropertiesWizard"/>
             </initialOperation>
           </ownedTools>
         </toolSections>
@@ -671,16 +678,11 @@
         </edgeMappings>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedJavaExtensions qualifiedClassName="Extend"/>
+    <ownedJavaExtensions qualifiedClassName="br.ufes.inf.nemo.FrameWeb_Martins2015.design.Extend"/>
   </ownedViewpoints>
   <extensions xsi:type="properties:ViewExtensionDescription" identifier="properties">
     <pages identifier="ParameterMenu" labelExpression="Parameter Menu" domainClass="frameweb.FrontControllerMethod" groups="//@extensions.0/@groups.0"/>
     <groups identifier="Parameters" labelExpression="Parameters" domainClass="FrontControllerMethod" semanticCandidateExpression="aql:self">
-      <controls xsi:type="properties:DynamicMappingFor" identifier="ParameterNames" iterator="Parameter" domainClassExpression="aql:self.ownedParameter">
-        <ifs predicateExpression="aql:1=1">
-          <widget xsi:type="properties:LabelDescription" valueExpression="aql:Parameter.name"/>
-        </ifs>
-      </controls>
       <controls xsi:type="properties:ButtonDescription" identifier="addParameter" buttonLabelExpression="Add Parameter">
         <initialOperation>
           <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self">
@@ -690,7 +692,16 @@
           </firstModelOperations>
         </initialOperation>
       </controls>
+      <controls xsi:type="properties:SelectDescription" identifier="select" labelExpression="Select Parameter to Edit" candidatesExpression="aql:self.ownedParameter"/>
+      <controls xsi:type="properties:DynamicMappingFor" identifier="ParameterNames" iterator="Parameter" domainClassExpression="aql:self.ownedParameter">
+        <ifs predicateExpression="aql:1=1">
+          <widget xsi:type="properties:LabelDescription" valueExpression="aql:Parameter.name"/>
+        </ifs>
+      </controls>
       <controls xsi:type="properties:LabelDescription" identifier="ads" labelExpression="Double Click in the method do edit Parameters"/>
+      <controls xsi:type="properties:ButtonDescription" identifier="aadewr" buttonLabelExpression="Change Context">
+        <initialOperation/>
+      </controls>
     </groups>
   </extensions>
 </description:Group>
