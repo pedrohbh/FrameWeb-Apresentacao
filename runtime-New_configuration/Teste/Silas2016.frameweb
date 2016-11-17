@@ -7,7 +7,7 @@
     <packagedElement xsi:type="frameweb:ControllerPackage" name="Controller Package">
       <packagedElement xsi:type="frameweb:FrontControllerClass" name="New Front Controller">
         <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="New Method" methodType="int">
-          <ownedParameter name="Parameter 1" type="//@compose.3/Primitive%20Types/int"/>
+          <ownedParameter name="Parameter 1" type="//@compose.3/Primitive%20Types/short"/>
           <ownedParameter name="Parameter 2" type="//@compose.3/Primitive%20Types/int"/>
           <ownedParameter name="Parameter 3" type="//@compose.3/Primitive%20Types/float"/>
         </ownedOperation>
@@ -24,6 +24,9 @@
       <packagedElement xsi:type="uml:PrimitiveType" name="double"/>
       <packagedElement xsi:type="uml:PrimitiveType" name="boolean"/>
       <packagedElement xsi:type="uml:PrimitiveType" name="char"/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:DomainPackage" name="Domain Package">
+      <packagedElement xsi:type="frameweb:DomainClass" name="Person"/>
     </packagedElement>
   </compose>
 </frameweb:FramewebProject>

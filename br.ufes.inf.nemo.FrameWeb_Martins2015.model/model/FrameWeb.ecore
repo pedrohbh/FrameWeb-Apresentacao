@@ -255,7 +255,9 @@
       interface="true" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Association"/>
   <eClassifiers xsi:type="ecore:EClass" name="NavigationDependency" abstract="true"
       eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Dependency"/>
-  <eClassifiers xsi:type="ecore:EClass" name="DAOMethod" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DAOMethod" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="methodType" eType="ecore:EDataType platform:/plugin/org.eclipse.uml2.types/model/Types.ecore#//String"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DomainPackage" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData"/>
   </eClassifiers>

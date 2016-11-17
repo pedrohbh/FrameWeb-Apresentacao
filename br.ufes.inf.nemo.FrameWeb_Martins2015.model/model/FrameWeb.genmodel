@@ -142,7 +142,7 @@
     <genClasses ecoreClass="FrameWeb.ecore#//ResultDependency">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FrameWeb.ecore#//ResultDependency/resultResult"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FrameWeb.ecore#//ResultDependency/resultMethod"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FrameWeb.ecore#//ResultDependency/resultDependendencyCosntraint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FrameWeb.ecore#//ResultDependency/resultDependencyConstraint"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//ResultDependency/render"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//ResultDependency/execute"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//ResultDependency/ajax"/>
@@ -165,7 +165,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FrameWeb.ecore#//FrontControllerDependency/methodDependendencyConstraint"/>
     </genClasses>
     <genClasses ecoreClass="FrameWeb.ecore#//PageDependency">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FrameWeb.ecore#//PageDependency/pageDependencyCosntraint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FrameWeb.ecore#//PageDependency/pageDependencyConstraint"/>
     </genClasses>
     <genClasses ecoreClass="FrameWeb.ecore#//ChainingDependency">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FrameWeb.ecore#//ChainingDependency/outMethod"/>
@@ -181,7 +181,9 @@
     <genClasses ecoreClass="FrameWeb.ecore#//ServiceAttribute"/>
     <genClasses image="false" ecoreClass="FrameWeb.ecore#//ServiceAssociation"/>
     <genClasses image="false" ecoreClass="FrameWeb.ecore#//NavigationDependency"/>
-    <genClasses ecoreClass="FrameWeb.ecore#//DAOMethod"/>
+    <genClasses ecoreClass="FrameWeb.ecore#//DAOMethod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//DAOMethod/methodType"/>
+    </genClasses>
     <genClasses ecoreClass="FrameWeb.ecore#//DomainPackage"/>
     <genClasses ecoreClass="FrameWeb.ecore#//ViewPackage"/>
     <genClasses ecoreClass="FrameWeb.ecore#//ControllerPackage"/>
@@ -205,7 +207,7 @@
     <genClasses ecoreClass="FrameWeb.ecore#//NavigationConstraint"/>
     <genClasses ecoreClass="FrameWeb.ecore#//PageConstraint"/>
     <genClasses ecoreClass="FrameWeb.ecore#//ResultConstraint"/>
-    <genClasses ecoreClass="FrameWeb.ecore#//MethodCosntraint"/>
+    <genClasses ecoreClass="FrameWeb.ecore#//MethodConstraint"/>
     <genClasses ecoreClass="FrameWeb.ecore#//ChainingConstraint"/>
     <genClasses ecoreClass="FrameWeb.ecore#//NavigationGeneralization"/>
     <genClasses ecoreClass="FrameWeb.ecore#//DomainConstraints"/>

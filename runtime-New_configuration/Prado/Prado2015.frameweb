@@ -39,10 +39,10 @@
         <methodDependendencyConstraint name="saveConstraint" constrainedElement="//@compose.0/LeaveAbsenceControl/RequestLeaveController/save"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:ResultDependency" name="requestLeave" client="//@compose.0/LeaveAbsenceControl/RequestLeaveController" supplier="//@compose.0/LeaveAbsenseView/RequestLeave.xhtml" resultMethod="//@compose.0/LeaveAbsenceControl/RequestLeaveController/formulary">
-        <resultDependendencyCosntraint name="requestLeaveConstraint" constrainedElement="//@compose.0/LeaveAbsenceControl/RequestLeaveController/formulary"/>
+        <resultDependencyConstraint name="requestLeaveConstraint" constrainedElement="//@compose.0/LeaveAbsenceControl/RequestLeaveController/formulary"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:ResultDependency" name="index" client="//@compose.0/LeaveAbsenceControl/RequestLeaveController" supplier="//@compose.0/LeaveAbsenseView/index.xhtml" resultMethod="//@compose.0/LeaveAbsenceControl/RequestLeaveController/save">
-        <resultDependendencyCosntraint name="indexConstraint" constrainedElement="//@compose.0/LeaveAbsenceControl/RequestLeaveController/save"/>
+        <resultDependencyConstraint name="indexConstraint" constrainedElement="//@compose.0/LeaveAbsenceControl/RequestLeaveController/save"/>
       </packagedElement>
     </packagedElement>
   </compose>

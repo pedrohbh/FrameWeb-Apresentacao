@@ -293,7 +293,7 @@
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
           <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
           <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_7Pn_toZjEea-R8v0hdzcoA" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,245,181">
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_7Pn_toZjEea-R8v0hdzcoA" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="217,196,215">
             <labelFormat>bold</labelFormat>
             <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@style"/>
           </ownedStyle>
@@ -366,7 +366,7 @@
         <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_7Pn_x4ZjEea-R8v0hdzcoA" name="&lt;&lt;page>>&#xA;index.xhtml" outgoingEdges="_IuIMMIZkEea-R8v0hdzcoA" incomingEdges="_7Pn_2oZjEea-R8v0hdzcoA">
           <target xmi:type="frameweb:Page" href="Prado2015.frameweb#//@compose.0/LeaveAbsenseView/index.xhtml"/>
           <semanticElements xmi:type="frameweb:Page" href="Prado2015.frameweb#//@compose.0/LeaveAbsenseView/index.xhtml"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_7Pn_yIZjEea-R8v0hdzcoA" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,245,181">
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_7Pn_yIZjEea-R8v0hdzcoA" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="217,196,215">
             <labelFormat>bold</labelFormat>
             <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Page%20Node']/@style"/>
           </ownedStyle>
@@ -375,7 +375,7 @@
         <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_7Pn_yYZjEea-R8v0hdzcoA" name="&lt;&lt;page>>&#xA;RequestLeave.xhtml" incomingEdges="_7Pn_14ZjEea-R8v0hdzcoA _ffedEIZkEea-R8v0hdzcoA">
           <target xmi:type="frameweb:Page" href="Prado2015.frameweb#//@compose.0/LeaveAbsenseView/RequestLeave.xhtml"/>
           <semanticElements xmi:type="frameweb:Page" href="Prado2015.frameweb#//@compose.0/LeaveAbsenseView/RequestLeave.xhtml"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_7Pn_yoZjEea-R8v0hdzcoA" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,245,181">
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_7Pn_yoZjEea-R8v0hdzcoA" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="217,196,215">
             <labelFormat>bold</labelFormat>
             <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Page%20Node']/@style"/>
           </ownedStyle>
@@ -387,7 +387,7 @@
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
           <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
           <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_7Pn_zIZjEea-R8v0hdzcoA" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,245,181">
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_7Pn_zIZjEea-R8v0hdzcoA" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="217,196,215">
             <labelFormat>bold</labelFormat>
             <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Page%20Node']/@style"/>
           </ownedStyle>
@@ -407,7 +407,7 @@
         <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_7Pn_z4ZjEea-R8v0hdzcoA" name="RequestLeaveController" outgoingEdges="_7Pn_14ZjEea-R8v0hdzcoA _7Pn_2oZjEea-R8v0hdzcoA">
           <target xmi:type="frameweb:FrontControllerClass" href="Prado2015.frameweb#//@compose.0/LeaveAbsenceControl/RequestLeaveController"/>
           <semanticElements xmi:type="frameweb:FrontControllerClass" href="Prado2015.frameweb#//@compose.0/LeaveAbsenceControl/RequestLeaveController"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_7Pn_0IZjEea-R8v0hdzcoA" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,245,181">
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_7Pn_0IZjEea-R8v0hdzcoA" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="217,196,215">
             <labelFormat>bold</labelFormat>
             <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@style"/>
           </ownedStyle>
@@ -420,7 +420,7 @@
             </ownedStyle>
             <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='IO%20Parameter%20Node']"/>
           </ownedElements>
-          <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_7Pn_04ZjEea-R8v0hdzcoA" name=" + formulary() : ">
+          <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_7Pn_04ZjEea-R8v0hdzcoA" name=" + ">
             <target xmi:type="frameweb:FrontControllerMethod" href="Prado2015.frameweb#//@compose.0/LeaveAbsenceControl/RequestLeaveController/formulary"/>
             <semanticElements xmi:type="frameweb:FrontControllerMethod" href="Prado2015.frameweb#//@compose.0/LeaveAbsenceControl/RequestLeaveController/formulary"/>
             <ownedStyle xmi:type="diagram:Dot" xmi:id="_7Pn_1IZjEea-R8v0hdzcoA" showIcon="false" labelAlignment="LEFT" labelPosition="node">
@@ -428,7 +428,7 @@
             </ownedStyle>
             <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='Front%20Controller%20Method%20Node']"/>
           </ownedElements>
-          <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_7Pn_1YZjEea-R8v0hdzcoA" name=" + save() : ">
+          <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_7Pn_1YZjEea-R8v0hdzcoA" name=" + ">
             <target xmi:type="frameweb:FrontControllerMethod" href="Prado2015.frameweb#//@compose.0/LeaveAbsenceControl/RequestLeaveController/save"/>
             <semanticElements xmi:type="frameweb:FrontControllerMethod" href="Prado2015.frameweb#//@compose.0/LeaveAbsenceControl/RequestLeaveController/save"/>
             <ownedStyle xmi:type="diagram:Dot" xmi:id="_7Pn_1oZjEea-R8v0hdzcoA" showIcon="false" labelAlignment="LEFT" labelPosition="node">
@@ -438,7 +438,7 @@
           </ownedElements>
         </ownedDiagramElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_7Pn_14ZjEea-R8v0hdzcoA" name="{method=formulary,&#xA; result=RequestLeave.xhtml}" sourceNode="_7Pn_z4ZjEea-R8v0hdzcoA" targetNode="_7Pn_yYZjEea-R8v0hdzcoA">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_7Pn_14ZjEea-R8v0hdzcoA" name="{requestLeaveConstraint}" sourceNode="_7Pn_z4ZjEea-R8v0hdzcoA" targetNode="_7Pn_yYZjEea-R8v0hdzcoA">
         <target xmi:type="frameweb:ResultDependency" href="Prado2015.frameweb#//@compose.0/LeaveAbsenseView/requestLeave"/>
         <semanticElements xmi:type="frameweb:ResultDependency" href="Prado2015.frameweb#//@compose.0/LeaveAbsenseView/requestLeave"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_7Pn_2IZjEea-R8v0hdzcoA" lineStyle="dash" size="2" routingStyle="manhattan" strokeColor="69,69,69">
@@ -447,7 +447,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@edgeMappings[name='ResultDependency%20Line']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_7Pn_2oZjEea-R8v0hdzcoA" name="{method=save,&#xA; result=index.xhtml}" sourceNode="_7Pn_z4ZjEea-R8v0hdzcoA" targetNode="_7Pn_x4ZjEea-R8v0hdzcoA">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_7Pn_2oZjEea-R8v0hdzcoA" name="{indexConstraint}" sourceNode="_7Pn_z4ZjEea-R8v0hdzcoA" targetNode="_7Pn_x4ZjEea-R8v0hdzcoA">
         <target xmi:type="frameweb:ResultDependency" href="Prado2015.frameweb#//@compose.0/LeaveAbsenseView/index"/>
         <semanticElements xmi:type="frameweb:ResultDependency" href="Prado2015.frameweb#//@compose.0/LeaveAbsenseView/index"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_7Pn_24ZjEea-R8v0hdzcoA" lineStyle="dash" size="2" routingStyle="manhattan" strokeColor="69,69,69">

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frameweb:FramewebProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015" xmlns:ocl.uml="http://www.eclipse.org/ocl/1.1.0/UML" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <compose xsi:type="frameweb:NavigationModel" name="Navigation Model"/>
+  <compose xsi:type="frameweb:PersistenceModel" name="Persistence Model">
+    <packagedElement xsi:type="frameweb:PersistencePackage" name="Núcleo">
+      <packagedElement xsi:type="frameweb:DAOClass" name="BaseDAOJPA">
+        <ownedOperation xsi:type="frameweb:DAOMethod" name="save">
+          <ownedParameter name="T" type="//@compose.3/Primitive%20Types/Object"/>
+        </ownedOperation>
+        <ownedOperation xsi:type="frameweb:DAOMethod" name="merge">
+          <ownedParameter name="T" type="//@compose.3/Primitive%20Types/Object"/>
+        </ownedOperation>
+        <ownedOperation xsi:type="frameweb:DAOMethod" name="delete">
+          <ownedParameter name="T" type="//@compose.3/Primitive%20Types/Object"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DAOInterface" name="BaseDAO"/>
+      <packagedElement xsi:type="frameweb:DAORealization" name="" client="//@compose.1/Núcleo/BaseDAOJPA" supplier="//@compose.1/Núcleo/BaseDAO"/>
+      <packagedElement xsi:type="frameweb:DAOClass" name="AfastamentoDAOJPA"/>
+      <packagedElement xsi:type="frameweb:DAOInterface" name="AfastamentoDAO"/>
+      <packagedElement xsi:type="frameweb:DAORealization" client="//@compose.1/Núcleo/AfastamentoDAOJPA" supplier="//@compose.1/Núcleo/AfastamentoDAO"/>
+      <packagedElement xsi:type="frameweb:DAOClass" name="ParecerDAOJPA"/>
+      <packagedElement xsi:type="frameweb:DAOInterface" name="ParecerDAO"/>
+      <packagedElement xsi:type="frameweb:DAORealization" client="//@compose.1/Núcleo/ParecerDAOJPA" supplier="//@compose.1/Núcleo/ParecerDAO"/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:PersistencePackage" name="Secretaria"/>
+  </compose>
+  <compose xsi:type="frameweb:ApplicationModel" name="Application Model"/>
+  <compose xsi:type="frameweb:EntityModel" name="Entity Model">
+    <packagedElement xsi:type="uml:Package" name="Primitive Types">
+      <packagedElement xsi:type="ocl.uml:PrimitiveType" name="byte"/>
+      <packagedElement xsi:type="ocl.uml:PrimitiveType" name="short"/>
+      <packagedElement xsi:type="ocl.uml:PrimitiveType" name="int"/>
+      <packagedElement xsi:type="ocl.uml:PrimitiveType" name="long"/>
+      <packagedElement xsi:type="ocl.uml:PrimitiveType" name="float"/>
+      <packagedElement xsi:type="ocl.uml:PrimitiveType" name="double"/>
+      <packagedElement xsi:type="ocl.uml:PrimitiveType" name="boolean"/>
+      <packagedElement xsi:type="ocl.uml:PrimitiveType" name="char"/>
+      <packagedElement xsi:type="ocl.uml:PrimitiveType" name="Object"/>
+      <packagedElement xsi:type="ocl.uml:PrimitiveType" name="String"/>
+    </packagedElement>
+  </compose>
+</frameweb:FramewebProject>
