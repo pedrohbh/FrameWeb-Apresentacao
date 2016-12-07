@@ -230,10 +230,6 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 				return createDomainClassAdapter();
 			}
 			@Override
-			public Adapter caseResult(Result object) {
-				return createResultAdapter();
-			}
-			@Override
 			public Adapter caseFrontControllerDependency(FrontControllerDependency object) {
 				return createFrontControllerDependencyAdapter();
 			}
@@ -1210,20 +1206,6 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDomainClassAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link frameweb.Result <em>Result</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see frameweb.Result
-	 * @generated
-	 */
-	public Adapter createResultAdapter() {
 		return null;
 	}
 

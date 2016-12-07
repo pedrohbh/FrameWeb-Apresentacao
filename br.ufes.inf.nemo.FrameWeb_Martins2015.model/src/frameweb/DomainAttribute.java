@@ -19,7 +19,7 @@ import org.eclipse.uml2.uml.Property;
  * </ul>
  *
  * @see frameweb.FramewebPackage#getDomainAttribute()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface DomainAttribute extends Property {

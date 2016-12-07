@@ -352,10 +352,7 @@ public class ResultItemProvider extends ClassItemProvider {
 				(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
 				 FramewebFactory.eINSTANCE.createDomainClass()));
 
-		newChildDescriptors.add
-			(createChildParameter
-				(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
-				 FramewebFactory.eINSTANCE.createResult()));
+		
 
 		newChildDescriptors.add
 			(createChildParameter

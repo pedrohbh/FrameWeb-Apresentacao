@@ -28,7 +28,7 @@ import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
  *
  * @generated
  */
-public abstract class DomainAttributeImpl extends PropertyImpl implements DomainAttribute {
+public class DomainAttributeImpl extends PropertyImpl implements DomainAttribute {
 	/**
 	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
 	 * <!-- begin-user-doc -->

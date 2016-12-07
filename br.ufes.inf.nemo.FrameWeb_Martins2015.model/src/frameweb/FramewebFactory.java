@@ -85,6 +85,15 @@ public interface FramewebFactory extends EFactory {
 	DomainAssociation createDomainAssociation();
 
 	/**
+	 * Returns a new object of class '<em>Domain Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Domain Attribute</em>'.
+	 * @generated
+	 */
+	DomainAttribute createDomainAttribute();
+
+	/**
 	 * Returns a new object of class '<em>Version Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -272,15 +281,6 @@ public interface FramewebFactory extends EFactory {
 	 * @generated
 	 */
 	DomainClass createDomainClass();
-
-	/**
-	 * Returns a new object of class '<em>Result</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Result</em>'.
-	 * @generated
-	 */
-	Result createResult();
 
 	/**
 	 * Returns a new object of class '<em>Front Controller Dependency</em>'.

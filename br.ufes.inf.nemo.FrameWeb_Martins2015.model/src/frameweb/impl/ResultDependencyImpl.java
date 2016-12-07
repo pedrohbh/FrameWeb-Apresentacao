@@ -4,23 +4,14 @@ package frameweb.impl;
 
 import frameweb.FramewebPackage;
 import frameweb.FrontControllerMethod;
-import frameweb.Result;
 import frameweb.ResultConstraint;
 import frameweb.ResultDependency;
-
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,27 +21,17 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link frameweb.impl.ResultDependencyImpl#getResultResult <em>Result Result</em>}</li>
  *   <li>{@link frameweb.impl.ResultDependencyImpl#getResultMethod <em>Result Method</em>}</li>
  *   <li>{@link frameweb.impl.ResultDependencyImpl#getResultDependencyConstraint <em>Result Dependency Constraint</em>}</li>
  *   <li>{@link frameweb.impl.ResultDependencyImpl#getRender <em>Render</em>}</li>
  *   <li>{@link frameweb.impl.ResultDependencyImpl#getExecute <em>Execute</em>}</li>
  *   <li>{@link frameweb.impl.ResultDependencyImpl#isAjax <em>Ajax</em>}</li>
+ *   <li>{@link frameweb.impl.ResultDependencyImpl#getResult <em>Result</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ResultDependencyImpl extends NavigationDependencyImpl implements ResultDependency {
-	/**
-	 * The cached value of the '{@link #getResultResult() <em>Result Result</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getResultResult()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Result> resultResult;
-
 	/**
 	 * The cached value of the '{@link #getResultMethod() <em>Result Method</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -132,6 +113,26 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	protected boolean ajax = AJAX_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getResult() <em>Result</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResult()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String RESULT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getResult() <em>Result</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResult()
+	 * @generated
+	 * @ordered
+	 */
+	protected String result = RESULT_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -148,18 +149,6 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	@Override
 	protected EClass eStaticClass() {
 		return FramewebPackage.Literals.RESULT_DEPENDENCY;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Result> getResultResult() {
-		if (resultResult == null) {
-			resultResult = new EObjectResolvingEList<Result>(Result.class, this, FramewebPackage.RESULT_DEPENDENCY__RESULT_RESULT);
-		}
-		return resultResult;
 	}
 
 	/**
@@ -311,6 +300,27 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getResult() {
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setResult(String newResult) {
+		String oldResult = result;
+		result = newResult;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.RESULT_DEPENDENCY__RESULT, oldResult, result));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -328,8 +338,6 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case FramewebPackage.RESULT_DEPENDENCY__RESULT_RESULT:
-				return getResultResult();
 			case FramewebPackage.RESULT_DEPENDENCY__RESULT_METHOD:
 				if (resolve) return getResultMethod();
 				return basicGetResultMethod();
@@ -341,6 +349,8 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 				return getExecute();
 			case FramewebPackage.RESULT_DEPENDENCY__AJAX:
 				return isAjax();
+			case FramewebPackage.RESULT_DEPENDENCY__RESULT:
+				return getResult();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -354,10 +364,6 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case FramewebPackage.RESULT_DEPENDENCY__RESULT_RESULT:
-				getResultResult().clear();
-				getResultResult().addAll((Collection<? extends Result>)newValue);
-				return;
 			case FramewebPackage.RESULT_DEPENDENCY__RESULT_METHOD:
 				setResultMethod((FrontControllerMethod)newValue);
 				return;
@@ -373,6 +379,9 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 			case FramewebPackage.RESULT_DEPENDENCY__AJAX:
 				setAjax((Boolean)newValue);
 				return;
+			case FramewebPackage.RESULT_DEPENDENCY__RESULT:
+				setResult((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -385,9 +394,6 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case FramewebPackage.RESULT_DEPENDENCY__RESULT_RESULT:
-				getResultResult().clear();
-				return;
 			case FramewebPackage.RESULT_DEPENDENCY__RESULT_METHOD:
 				setResultMethod((FrontControllerMethod)null);
 				return;
@@ -403,6 +409,9 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 			case FramewebPackage.RESULT_DEPENDENCY__AJAX:
 				setAjax(AJAX_EDEFAULT);
 				return;
+			case FramewebPackage.RESULT_DEPENDENCY__RESULT:
+				setResult(RESULT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -415,8 +424,6 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case FramewebPackage.RESULT_DEPENDENCY__RESULT_RESULT:
-				return resultResult != null && !resultResult.isEmpty();
 			case FramewebPackage.RESULT_DEPENDENCY__RESULT_METHOD:
 				return resultMethod != null;
 			case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT:
@@ -427,6 +434,8 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 				return EXECUTE_EDEFAULT == null ? execute != null : !EXECUTE_EDEFAULT.equals(execute);
 			case FramewebPackage.RESULT_DEPENDENCY__AJAX:
 				return ajax != AJAX_EDEFAULT;
+			case FramewebPackage.RESULT_DEPENDENCY__RESULT:
+				return RESULT_EDEFAULT == null ? result != null : !RESULT_EDEFAULT.equals(result);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -447,6 +456,8 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 		result.append(execute);
 		result.append(", ajax: ");
 		result.append(ajax);
+		result.append(", result: ");
+		result.append(result);
 		result.append(')');
 		return result.toString();
 	}

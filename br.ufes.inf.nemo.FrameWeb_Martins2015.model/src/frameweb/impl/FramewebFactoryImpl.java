@@ -62,6 +62,7 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			case FramewebPackage.APPLICATION_MODEL: return createApplicationModel();
 			case FramewebPackage.PERSISTENCE_MODEL: return createPersistenceModel();
 			case FramewebPackage.DOMAIN_ASSOCIATION: return createDomainAssociation();
+			case FramewebPackage.DOMAIN_ATTRIBUTE: return createDomainAttribute();
 			case FramewebPackage.VERSION_ATTRIBUTE: return createVersionAttribute();
 			case FramewebPackage.ID_ATTRIBUTE: return createIdAttribute();
 			case FramewebPackage.LOB_ATTRIBUTE: return createLOBAttribute();
@@ -83,7 +84,6 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			case FramewebPackage.SERVICE_GENERALIZATION: return createServiceGeneralization();
 			case FramewebPackage.SERVICE_CONTROLLER_ASSOCIATION: return createServiceControllerAssociation();
 			case FramewebPackage.DOMAIN_CLASS: return createDomainClass();
-			case FramewebPackage.RESULT: return createResult();
 			case FramewebPackage.FRONT_CONTROLLER_DEPENDENCY: return createFrontControllerDependency();
 			case FramewebPackage.PAGE_DEPENDENCY: return createPageDependency();
 			case FramewebPackage.CHAINING_DEPENDENCY: return createChainingDependency();
@@ -314,6 +314,16 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public DomainAttribute createDomainAttribute() {
+		DomainAttributeImpl domainAttribute = new DomainAttributeImpl();
+		return domainAttribute;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public VersionAttribute createVersionAttribute() {
 		VersionAttributeImpl versionAttribute = new VersionAttributeImpl();
 		return versionAttribute;
@@ -517,16 +527,6 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	public DomainClass createDomainClass() {
 		DomainClassImpl domainClass = new DomainClassImpl();
 		return domainClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Result createResult() {
-		ResultImpl result = new ResultImpl();
-		return result;
 	}
 
 	/**

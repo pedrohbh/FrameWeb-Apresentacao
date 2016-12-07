@@ -233,6 +233,29 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link frameweb.DomainAttribute} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DomainAttributeItemProvider domainAttributeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link frameweb.DomainAttribute}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDomainAttributeAdapter() {
+		if (domainAttributeItemProvider == null) {
+			domainAttributeItemProvider = new DomainAttributeItemProvider(this);
+		}
+
+		return domainAttributeItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link frameweb.VersionAttribute} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -713,29 +736,6 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory i
 		}
 
 		return domainClassItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link frameweb.Result} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ResultItemProvider resultItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link frameweb.Result}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createResultAdapter() {
-		if (resultItemProvider == null) {
-			resultItemProvider = new ResultItemProvider(this);
-		}
-
-		return resultItemProvider;
 	}
 
 	/**
@@ -2592,6 +2592,7 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory i
 		if (applicationModelItemProvider != null) applicationModelItemProvider.dispose();
 		if (persistenceModelItemProvider != null) persistenceModelItemProvider.dispose();
 		if (domainAssociationItemProvider != null) domainAssociationItemProvider.dispose();
+		if (domainAttributeItemProvider != null) domainAttributeItemProvider.dispose();
 		if (versionAttributeItemProvider != null) versionAttributeItemProvider.dispose();
 		if (idAttributeItemProvider != null) idAttributeItemProvider.dispose();
 		if (lobAttributeItemProvider != null) lobAttributeItemProvider.dispose();
@@ -2613,7 +2614,6 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory i
 		if (serviceGeneralizationItemProvider != null) serviceGeneralizationItemProvider.dispose();
 		if (serviceControllerAssociationItemProvider != null) serviceControllerAssociationItemProvider.dispose();
 		if (domainClassItemProvider != null) domainClassItemProvider.dispose();
-		if (resultItemProvider != null) resultItemProvider.dispose();
 		if (frontControllerDependencyItemProvider != null) frontControllerDependencyItemProvider.dispose();
 		if (pageDependencyItemProvider != null) pageDependencyItemProvider.dispose();
 		if (chainingDependencyItemProvider != null) chainingDependencyItemProvider.dispose();

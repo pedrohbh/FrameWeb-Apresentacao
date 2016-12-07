@@ -6,12 +6,15 @@
     <packagedElement xsi:type="frameweb:ViewPackage" name="View Package"/>
     <packagedElement xsi:type="frameweb:ControllerPackage" name="Controller Package">
       <packagedElement xsi:type="frameweb:FrontControllerClass" name="New Front Controller">
+        <generalization xsi:type="frameweb:NavigationGeneralization" generalizationSet="//@compose.2/Controller%20Package/1"/>
         <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="New Method" methodType="int">
           <ownedParameter name="Parameter 1" type="//@compose.3/Primitive%20Types/short"/>
           <ownedParameter name="Parameter 2" type="//@compose.3/Primitive%20Types/int"/>
           <ownedParameter name="Parameter 3" type="//@compose.3/Primitive%20Types/float"/>
         </ownedOperation>
       </packagedElement>
+      <packagedElement xsi:type="frameweb:FrontControllerClass" name="Front Controller Pai" powertypeExtent="//@compose.2/Controller%20Package/1"/>
+      <packagedElement xsi:type="frameweb:NavigationGeneralizationSet" name="1" powertype="//@compose.2/Controller%20Package/Front%20Controller%20Pai" generalization="//@compose.2/Controller%20Package/New%20Front%20Controller/@generalization.0"/>
     </packagedElement>
   </compose>
   <compose xsi:type="frameweb:EntityModel" name="Entity Model">
@@ -26,7 +29,17 @@
       <packagedElement xsi:type="uml:PrimitiveType" name="char"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:DomainPackage" name="Domain Package">
-      <packagedElement xsi:type="frameweb:DomainClass" name="Person"/>
+      <packagedElement xsi:type="frameweb:DomainClass" name="Estudante">
+        <generalization xsi:type="frameweb:DomainGeneralization" generalizationSet="//@compose.3/Domain%20Package/Pai"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainClass" name="Pessoa" powertypeExtent="//@compose.3/Domain%20Package/Pai">
+        <nestedClassifier xsi:type="frameweb:DomainAssociation" name="Possui" memberEnd="//@compose.3/Domain%20Package/Pessoa/Possui/@ownedEnd.0">
+          <ownedRule xsi:type="frameweb:DomainConstraints" constrainedElement="//@compose.3/Domain%20Package/Pessoa/Possui"/>
+          <ownedEnd xsi:type="frameweb:DomainProperty" type="//@compose.3/Domain%20Package/Telefone" association="//@compose.3/Domain%20Package/Pessoa/Possui"/>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainGeneralizationSet" name="Pai" powertype="//@compose.3/Domain%20Package/Pessoa" generalization="//@compose.3/Domain%20Package/Estudante/@generalization.0"/>
+      <packagedElement xsi:type="frameweb:DomainClass" name="Telefone"/>
     </packagedElement>
   </compose>
 </frameweb:FramewebProject>

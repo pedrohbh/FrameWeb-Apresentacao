@@ -628,26 +628,6 @@ public class FramewebSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case FramewebPackage.RESULT: {
-				Result result = (Result)theEObject;
-				T theResult = caseResult(result);
-				if (theResult == null) theResult = caseClass(result);
-				if (theResult == null) theResult = caseEncapsulatedClassifier(result);
-				if (theResult == null) theResult = caseBehavioredClassifier(result);
-				if (theResult == null) theResult = caseStructuredClassifier(result);
-				if (theResult == null) theResult = caseClassifier(result);
-				if (theResult == null) theResult = caseNamespace(result);
-				if (theResult == null) theResult = caseRedefinableElement(result);
-				if (theResult == null) theResult = caseType(result);
-				if (theResult == null) theResult = caseTemplateableElement(result);
-				if (theResult == null) theResult = casePackageableElement(result);
-				if (theResult == null) theResult = caseNamedElement(result);
-				if (theResult == null) theResult = caseParameterableElement(result);
-				if (theResult == null) theResult = caseElement(result);
-				if (theResult == null) theResult = caseEModelElement(result);
-				if (theResult == null) theResult = defaultCase(theEObject);
-				return theResult;
-			}
 			case FramewebPackage.FRONT_CONTROLLER_DEPENDENCY: {
 				FrontControllerDependency frontControllerDependency = (FrontControllerDependency)theEObject;
 				T result = caseFrontControllerDependency(frontControllerDependency);
@@ -2615,21 +2595,6 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDomainClass(DomainClass object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Result</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Result</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseResult(Result object) {
 		return null;
 	}
 

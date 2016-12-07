@@ -60,7 +60,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fetch" eType="#//Fetch"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" eType="#//Order"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DomainAttribute" abstract="true" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property">
+  <eClassifiers xsi:type="ecore:EClass" name="DomainAttribute" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isNull" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isPersistent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
@@ -157,8 +157,6 @@
     <eAnnotations source="OCL" references="#//ResultDependency/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FEcore%/@details.0">
       <details key="ResultDependencyConstraint" value="(self.client.oclIsTypeOf(FrontControllerClass)) and (self.supplier.oclIsTypeOf(NavigationClass))"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="resultResult" upperBound="-1"
-        eType="#//Result"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="resultMethod" eType="#//FrontControllerMethod"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="resultDependencyConstraint"
         ordered="false" lowerBound="1" eType="#//ResultConstraint" containment="true"/>
@@ -168,6 +166,7 @@
         defaultValueLiteral="@this"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ajax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="result" eType="ecore:EDataType platform:/plugin/org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NavigationAssociation" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Association"/>
   <eClassifiers xsi:type="ecore:EClass" name="FrontControllerMethod" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation">
@@ -192,9 +191,6 @@
     <eLiterals name="Persistence" literal="Persistence"/>
     <eLiterals name="Application"/>
     <eLiterals name="View"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Result" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class">
-    <eAnnotations source="EAnnotation0"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FrontControllerDependency" eSuperTypes="#//NavigationDependency">
     <eAnnotations source="Ecore">
@@ -278,7 +274,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="prefix" lowerBound="1"
         eType="ecore:EDataType platform:/plugin/org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Tag" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Stereotype"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Tag" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Stereotype">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeGenerationTemplate"
+        eType="ecore:EDataType platform:/plugin/org.eclipse.uml2.types/model/Types.ecore#//String"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NavigationCompositionPart" eSuperTypes="#//NavigationProperty"/>
   <eClassifiers xsi:type="ecore:EClass" name="NavigationCompositionWhole" eSuperTypes="#//NavigationProperty"/>
   <eClassifiers xsi:type="ecore:EClass" name="NavigationProperty" abstract="true"

@@ -246,13 +246,6 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass resultEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass frontControllerDependencyEClass = null;
 
 	/**
@@ -1472,7 +1465,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getResultDependency_ResultResult() {
+	public EReference getResultDependency_ResultMethod() {
 		return (EReference)resultDependencyEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1481,7 +1474,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getResultDependency_ResultMethod() {
+	public EReference getResultDependency_ResultDependencyConstraint() {
 		return (EReference)resultDependencyEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1490,17 +1483,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getResultDependency_ResultDependencyConstraint() {
-		return (EReference)resultDependencyEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getResultDependency_Render() {
-		return (EAttribute)resultDependencyEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)resultDependencyEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1509,7 +1493,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	public EAttribute getResultDependency_Execute() {
-		return (EAttribute)resultDependencyEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)resultDependencyEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1518,6 +1502,15 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	public EAttribute getResultDependency_Ajax() {
+		return (EAttribute)resultDependencyEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getResultDependency_Result() {
 		return (EAttribute)resultDependencyEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -1609,15 +1602,6 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 */
 	public EAttribute getDomainClass_Table() {
 		return (EAttribute)domainClassEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getResult() {
-		return resultEClass;
 	}
 
 	/**
@@ -1789,6 +1773,15 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 */
 	public EClass getDAOMethod() {
 		return daoMethodEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDAOMethod_MethodType() {
+		return (EAttribute)daoMethodEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3320,12 +3313,12 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEAttribute(ioParameterEClass, IO_PARAMETER__PARAMETER_TYPE);
 
 		resultDependencyEClass = createEClass(RESULT_DEPENDENCY);
-		createEReference(resultDependencyEClass, RESULT_DEPENDENCY__RESULT_RESULT);
 		createEReference(resultDependencyEClass, RESULT_DEPENDENCY__RESULT_METHOD);
 		createEReference(resultDependencyEClass, RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT);
 		createEAttribute(resultDependencyEClass, RESULT_DEPENDENCY__RENDER);
 		createEAttribute(resultDependencyEClass, RESULT_DEPENDENCY__EXECUTE);
 		createEAttribute(resultDependencyEClass, RESULT_DEPENDENCY__AJAX);
+		createEAttribute(resultDependencyEClass, RESULT_DEPENDENCY__RESULT);
 
 		navigationAssociationEClass = createEClass(NAVIGATION_ASSOCIATION);
 
@@ -3343,8 +3336,6 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		domainClassEClass = createEClass(DOMAIN_CLASS);
 		createEAttribute(domainClassEClass, DOMAIN_CLASS__TABLE);
-
-		resultEClass = createEClass(RESULT);
 
 		frontControllerDependencyEClass = createEClass(FRONT_CONTROLLER_DEPENDENCY);
 		createEReference(frontControllerDependencyEClass, FRONT_CONTROLLER_DEPENDENCY__METHOD);
@@ -3377,6 +3368,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		navigationDependencyEClass = createEClass(NAVIGATION_DEPENDENCY);
 
 		daoMethodEClass = createEClass(DAO_METHOD);
+		createEAttribute(daoMethodEClass, DAO_METHOD__METHOD_TYPE);
 
 		domainPackageEClass = createEClass(DOMAIN_PACKAGE);
 
@@ -3681,7 +3673,6 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		serviceGeneralizationEClass.getESuperTypes().add(theUMLPackage.getGeneralization());
 		serviceControllerAssociationEClass.getESuperTypes().add(this.getServiceAssociation());
 		domainClassEClass.getESuperTypes().add(theUMLPackage.getClass_());
-		resultEClass.getESuperTypes().add(theUMLPackage.getClass_());
 		frontControllerDependencyEClass.getESuperTypes().add(this.getNavigationDependency());
 		pageDependencyEClass.getESuperTypes().add(this.getNavigationDependency());
 		chainingDependencyEClass.getESuperTypes().add(this.getNavigationDependency());
@@ -3807,7 +3798,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getDomainAssociation_Fetch(), this.getFetch(), "fetch", null, 0, 1, DomainAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDomainAssociation_Order(), this.getOrder(), "order", null, 0, 1, DomainAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(domainAttributeEClass, DomainAttribute.class, "DomainAttribute", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(domainAttributeEClass, DomainAttribute.class, "DomainAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDomainAttribute_Size(), ecorePackage.getELong(), "size", null, 0, 1, DomainAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDomainAttribute_IsNull(), ecorePackage.getEBoolean(), "isNull", null, 0, 1, DomainAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDomainAttribute_IsPersistent(), ecorePackage.getEBoolean(), "isPersistent", null, 0, 1, DomainAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3852,12 +3843,12 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getIOParameter_ParameterType(), theTypesPackage.getString(), "parameterType", null, 0, 1, IOParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resultDependencyEClass, ResultDependency.class, "ResultDependency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getResultDependency_ResultResult(), this.getResult(), null, "resultResult", null, 0, -1, ResultDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResultDependency_ResultMethod(), this.getFrontControllerMethod(), null, "resultMethod", null, 0, 1, ResultDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResultDependency_ResultDependencyConstraint(), this.getResultConstraint(), null, "resultDependencyConstraint", null, 1, 1, ResultDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getResultDependency_Render(), theEcorePackage.getEString(), "render", "@none", 0, 1, ResultDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResultDependency_Execute(), theEcorePackage.getEString(), "execute", "@this", 0, 1, ResultDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResultDependency_Ajax(), ecorePackage.getEBoolean(), "ajax", "false", 0, 1, ResultDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getResultDependency_Result(), theTypesPackage.getString(), "result", null, 0, 1, ResultDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(navigationAssociationEClass, NavigationAssociation.class, "NavigationAssociation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3875,8 +3866,6 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		initEClass(domainClassEClass, DomainClass.class, "DomainClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDomainClass_Table(), ecorePackage.getEString(), "table", null, 0, 1, DomainClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(resultEClass, Result.class, "Result", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(frontControllerDependencyEClass, FrontControllerDependency.class, "FrontControllerDependency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFrontControllerDependency_Method(), this.getFrontControllerMethod(), null, "method", null, 0, 1, FrontControllerDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3909,6 +3898,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEClass(navigationDependencyEClass, NavigationDependency.class, "NavigationDependency", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(daoMethodEClass, DAOMethod.class, "DAOMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDAOMethod_MethodType(), theTypesPackage.getString(), "methodType", null, 0, 1, DAOMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(domainPackageEClass, DomainPackage.class, "DomainPackage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -4374,8 +4364,6 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createCommentsAnnotations();
 		// comments
 		createComments_1Annotations();
-		// EAnnotation0
-		createEAnnotation0Annotations();
 		// http:///org/eclipse/emf/ecore/util/ExtendedMetaData
 		createExtendedMetaDataAnnotations();
 		// http://www.eclipse.org/emf/2002/GenModel
@@ -4613,21 +4601,6 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		   },
 		   new URI[] {
 			 URI.createURI(eNS_URI).appendFragment("//EntityModel/%http:%2F%2Fwww.eclipse.org%2Femf%2F2002%2FEcore%/@details.0")
-		   });
-	}
-
-	/**
-	 * Initializes the annotations for <b>EAnnotation0</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createEAnnotation0Annotations() {
-		String source = "EAnnotation0";	
-		addAnnotation
-		  (resultEClass, 
-		   source, 
-		   new String[] {
 		   });
 	}
 

@@ -48,35 +48,13 @@ public class ResultDependencyItemProvider extends NavigationDependencyItemProvid
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addResultResultPropertyDescriptor(object);
 			addResultMethodPropertyDescriptor(object);
 			addRenderPropertyDescriptor(object);
 			addExecutePropertyDescriptor(object);
 			addAjaxPropertyDescriptor(object);
+			addResultPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Result Result feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addResultResultPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ResultDependency_resultResult_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ResultDependency_resultResult_feature", "_UI_ResultDependency_type"),
-				 FramewebPackage.Literals.RESULT_DEPENDENCY__RESULT_RESULT,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -168,6 +146,28 @@ public class ResultDependencyItemProvider extends NavigationDependencyItemProvid
 	}
 
 	/**
+	 * This adds a property descriptor for the Result feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addResultPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ResultDependency_result_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ResultDependency_result_feature", "_UI_ResultDependency_type"),
+				 FramewebPackage.Literals.RESULT_DEPENDENCY__RESULT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -238,6 +238,7 @@ public class ResultDependencyItemProvider extends NavigationDependencyItemProvid
 			case FramewebPackage.RESULT_DEPENDENCY__RENDER:
 			case FramewebPackage.RESULT_DEPENDENCY__EXECUTE:
 			case FramewebPackage.RESULT_DEPENDENCY__AJAX:
+			case FramewebPackage.RESULT_DEPENDENCY__RESULT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT:
