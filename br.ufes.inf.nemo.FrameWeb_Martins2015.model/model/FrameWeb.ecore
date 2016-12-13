@@ -290,7 +290,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="MethodConstraint" eSuperTypes="#//NavigationConstraint"/>
   <eClassifiers xsi:type="ecore:EClass" name="ChainingConstraint" eSuperTypes="#//NavigationConstraint"/>
   <eClassifiers xsi:type="ecore:EClass" name="NavigationGeneralization" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>
-  <eClassifiers xsi:type="ecore:EClass" name="DomainConstraints" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainConstraints" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Constraint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="collection" eType="#//Collection"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fetch" eType="#//Fetch"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" eType="#//Order"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cascade" eType="#//Cascade"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DomainProperty" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
   <eClassifiers xsi:type="ecore:EClass" name="DAOGeneralization" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>
   <eClassifiers xsi:type="ecore:EClass" name="MappingLib" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package"/>

@@ -1915,6 +1915,15 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getTag_CodeGenerationTemplate() {
+		return (EAttribute)tagEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getNavigationCompositionPart() {
 		return navigationCompositionPartEClass;
 	}
@@ -2007,6 +2016,42 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 */
 	public EClass getDomainConstraints() {
 		return domainConstraintsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDomainConstraints_Collection() {
+		return (EAttribute)domainConstraintsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDomainConstraints_Fetch() {
+		return (EAttribute)domainConstraintsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDomainConstraints_Order() {
+		return (EAttribute)domainConstraintsEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDomainConstraints_Cascade() {
+		return (EAttribute)domainConstraintsEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -3395,6 +3440,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEAttribute(tagLibEClass, TAG_LIB__PREFIX);
 
 		tagEClass = createEClass(TAG);
+		createEAttribute(tagEClass, TAG__CODE_GENERATION_TEMPLATE);
 
 		navigationCompositionPartEClass = createEClass(NAVIGATION_COMPOSITION_PART);
 
@@ -3417,6 +3463,10 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		navigationGeneralizationEClass = createEClass(NAVIGATION_GENERALIZATION);
 
 		domainConstraintsEClass = createEClass(DOMAIN_CONSTRAINTS);
+		createEAttribute(domainConstraintsEClass, DOMAIN_CONSTRAINTS__COLLECTION);
+		createEAttribute(domainConstraintsEClass, DOMAIN_CONSTRAINTS__FETCH);
+		createEAttribute(domainConstraintsEClass, DOMAIN_CONSTRAINTS__ORDER);
+		createEAttribute(domainConstraintsEClass, DOMAIN_CONSTRAINTS__CASCADE);
 
 		domainPropertyEClass = createEClass(DOMAIN_PROPERTY);
 
@@ -3925,6 +3975,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getTagLib_Prefix(), theTypesPackage.getString(), "prefix", null, 1, 1, TagLib.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tagEClass, Tag.class, "Tag", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTag_CodeGenerationTemplate(), theTypesPackage.getString(), "codeGenerationTemplate", null, 0, 1, Tag.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(navigationCompositionPartEClass, NavigationCompositionPart.class, "NavigationCompositionPart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3947,6 +3998,10 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEClass(navigationGeneralizationEClass, NavigationGeneralization.class, "NavigationGeneralization", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(domainConstraintsEClass, DomainConstraints.class, "DomainConstraints", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDomainConstraints_Collection(), this.getCollection(), "collection", null, 0, 1, DomainConstraints.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDomainConstraints_Fetch(), this.getFetch(), "fetch", null, 0, 1, DomainConstraints.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDomainConstraints_Order(), this.getOrder(), "order", null, 0, 1, DomainConstraints.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDomainConstraints_Cascade(), this.getCascade(), "cascade", null, 0, 1, DomainConstraints.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(domainPropertyEClass, DomainProperty.class, "DomainProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

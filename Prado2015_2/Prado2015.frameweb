@@ -13,7 +13,7 @@
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.0/View%20Cadastrar%20Afastamento/formularioCadastro" association="//@compose.0/View%20Cadastrar%20Afastamento/@packagedElement.5"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:UIComponent" name="formularioCadastro">
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="nome_evento"/>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="nome_evento" visibility="private"/>
         <ownedAttribute xsi:type="frameweb:UIComponentField" name="nome_cidade"/>
         <ownedAttribute xsi:type="frameweb:UIComponentField" name="data_iniAfast"/>
         <ownedAttribute xsi:type="frameweb:UIComponentField" name="data_fimAfast"/>
@@ -91,6 +91,7 @@
       <packagedElement xsi:type="frameweb:DAOInterface" name="BaseDAO"/>
       <packagedElement xsi:type="frameweb:DAORealization" name="" client="//@compose.1/Nucleo/BaseDAOJPA" supplier="//@compose.1/Nucleo/BaseDAO"/>
       <packagedElement xsi:type="frameweb:DAOClass" name="AfastamentoDAOJPA">
+        <generalization xsi:type="frameweb:DAOGeneralization"/>
         <ownedOperation xsi:type="frameweb:DAOMethod" name="buscaId" methodType="Afastamento">
           <ownedParameter name="id_afastamento">
             <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/long"/>
@@ -116,7 +117,7 @@
     <packagedElement xsi:type="frameweb:PersistencePackage" name="Secretaria">
       <packagedElement xsi:type="frameweb:DAOInterface" name="PessoaDAo"/>
       <packagedElement xsi:type="frameweb:DAOClass" name="PessoaDAOJPA">
-        <ownedOperation xsi:type="frameweb:DAOMethod" name="buscaId" methodType="Pessoa">
+        <ownedOperation xsi:type="frameweb:DAOMethod" name="buscaId" visibility="public" methodType="Pessoa">
           <ownedParameter name="id_pessoa">
             <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/long"/>
           </ownedParameter>
@@ -174,7 +175,10 @@
     </packagedElement>
   </compose>
   <compose xsi:type="frameweb:ApplicationModel" name="Application Model">
-    <packagedElement xsi:type="frameweb:ApplicationPackage" name="Application Package"/>
+    <packagedElement xsi:type="frameweb:ApplicationPackage" name="Application Package">
+      <packagedElement xsi:type="frameweb:ServiceInterface" name="AplAfastamento"/>
+      <packagedElement xsi:type="frameweb:ServiceClass" name="AplAfastamentoImp"/>
+    </packagedElement>
   </compose>
   <compose xsi:type="frameweb:EntityModel" name="Entity Model">
     <packagedElement xsi:type="frameweb:DomainPackage" name="Domain Package">
@@ -209,7 +213,7 @@
         </ownedAttribute>
       </packagedElement>
       <packagedElement xsi:type="frameweb:DomainClass" name="Afastamento">
-        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="dataSolic">
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="dataSolic" visibility="private">
           <type xsi:type="uml:Class" href="JAVA.frameweb#//@compose.0/Calendar"/>
         </ownedAttribute>
         <ownedAttribute xsi:type="frameweb:DomainAttribute" name="dataIniAfast">
@@ -253,6 +257,72 @@
         <ownedAttribute xsi:type="frameweb:DomainAttribute" name="dataJuntada">
           <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
         </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainAssociation" name="Parentesco" memberEnd="//@compose.3/Domain%20Package/Parentesco/Source //@compose.3/Domain%20Package/Parentesco/Target">
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.3/Domain%20Package/Parentesco/Source"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.3/Domain%20Package/Parentesco/Target"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.3/Domain%20Package/Professor" association="//@compose.3/Domain%20Package/Parentesco">
+          <lowerValue xsi:type="uml:LiteralInteger"/>
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
+        </ownedEnd>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.3/Domain%20Package/Professor" association="//@compose.3/Domain%20Package/Parentesco">
+          <lowerValue xsi:type="uml:LiteralInteger"/>
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainAssociation" name="Exerce" memberEnd="//@compose.3/Domain%20Package/Exerce/Source //@compose.3/Domain%20Package/Exerce/Target">
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.3/Domain%20Package/Exerce/Source"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.3/Domain%20Package/Exerce/Target"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.3/Domain%20Package/Professor" association="//@compose.3/Domain%20Package/Exerce"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.3/Domain%20Package/Mandato" association="//@compose.3/Domain%20Package/Exerce">
+          <lowerValue xsi:type="uml:LiteralInteger"/>
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainAssociation" name="Solicita" memberEnd="//@compose.3/Domain%20Package/Solicita/Source //@compose.3/Domain%20Package/Solicita/Target">
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.3/Domain%20Package/Solicita/Source"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.3/Domain%20Package/Solicita/Target"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.3/Domain%20Package/Professor" association="//@compose.3/Domain%20Package/Solicita"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.3/Domain%20Package/Afastamento" association="//@compose.3/Domain%20Package/Solicita">
+          <lowerValue xsi:type="uml:LiteralInteger"/>
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainAssociation" name="Relator" memberEnd="//@compose.3/Domain%20Package/Relator/Source //@compose.3/Domain%20Package/Relator/Target">
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.3/Domain%20Package/Relator/Source"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.3/Domain%20Package/Relator/Target"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.3/Domain%20Package/Professor" association="//@compose.3/Domain%20Package/Relator"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.3/Domain%20Package/Afastamento" association="//@compose.3/Domain%20Package/Relator">
+          <lowerValue xsi:type="uml:LiteralInteger"/>
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainAssociation" name="Recebe" memberEnd="//@compose.3/Domain%20Package/Recebe/Source //@compose.3/Domain%20Package/Recebe/Target">
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.3/Domain%20Package/Recebe/Source"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.3/Domain%20Package/Recebe/Target"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.3/Domain%20Package/Afastamento" association="//@compose.3/Domain%20Package/Recebe"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.3/Domain%20Package/Parecer" association="//@compose.3/Domain%20Package/Recebe">
+          <lowerValue xsi:type="uml:LiteralInteger"/>
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainAssociation" name="Recebe" memberEnd="//@compose.3/Domain%20Package/Recebe.1/Source //@compose.3/Domain%20Package/Recebe.1/Target">
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.3/Domain%20Package/Recebe.1/Source"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.3/Domain%20Package/Recebe.1/Target"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.3/Domain%20Package/Afastamento" association="//@compose.3/Domain%20Package/Recebe.1"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.3/Domain%20Package/Documento" association="//@compose.3/Domain%20Package/Recebe.1">
+          <lowerValue xsi:type="uml:LiteralInteger"/>
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainAssociation" name="Emite" memberEnd="//@compose.3/Domain%20Package/Emite/Source //@compose.3/Domain%20Package/Emite/Target">
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.3/Domain%20Package/Emite/Source"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.3/Domain%20Package/Emite/Target"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.3/Domain%20Package/Professor" association="//@compose.3/Domain%20Package/Emite"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.3/Domain%20Package/Parecer" association="//@compose.3/Domain%20Package/Emite">
+          <lowerValue xsi:type="uml:LiteralInteger"/>
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
+        </ownedEnd>
       </packagedElement>
     </packagedElement>
     <packagedElement xsi:type="uml:Enumeration" name="SituacaoSolicitacao">

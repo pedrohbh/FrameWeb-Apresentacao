@@ -211,7 +211,12 @@
     <genClasses ecoreClass="FrameWeb.ecore#//MethodConstraint"/>
     <genClasses ecoreClass="FrameWeb.ecore#//ChainingConstraint"/>
     <genClasses ecoreClass="FrameWeb.ecore#//NavigationGeneralization"/>
-    <genClasses ecoreClass="FrameWeb.ecore#//DomainConstraints"/>
+    <genClasses ecoreClass="FrameWeb.ecore#//DomainConstraints">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//DomainConstraints/collection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//DomainConstraints/fetch"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//DomainConstraints/order"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//DomainConstraints/cascade"/>
+    </genClasses>
     <genClasses ecoreClass="FrameWeb.ecore#//DomainProperty"/>
     <genClasses ecoreClass="FrameWeb.ecore#//DAOGeneralization"/>
     <genClasses ecoreClass="FrameWeb.ecore#//MappingLib"/>

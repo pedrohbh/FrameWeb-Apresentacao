@@ -1,5 +1,6 @@
 package br.ufes.inf.nemo.FrameWeb_Martins2015.design;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -85,6 +86,31 @@ public class Extend {
 		}
 		
 		return lower_value + ".." + upper_value;
+	}
+	
+	public String printVisibility(EObject o){
+		
+		EStructuralFeature visibility_feature = o.eClass().getEAllAttributes().get(2);
+		String visibility_value = o.eGet(visibility_feature).toString();
+		
+		
+		
+		if(visibility_value=="public"){
+			return " + ";
+		}
+		if(visibility_value=="package"){
+			return " ~ ";
+		}
+		if(visibility_value=="private"){
+			return " - ";
+		}
+		if(visibility_value=="protected"){
+			return " # ";
+		}
+		
+		
+		
+		return " ? ";
 	}
 	
 	
