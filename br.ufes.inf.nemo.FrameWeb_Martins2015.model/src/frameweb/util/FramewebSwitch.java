@@ -1648,20 +1648,20 @@ public class FramewebSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case FramewebPackage.SEVICE_REALIZATION: {
-				SeviceRealization seviceRealization = (SeviceRealization)theEObject;
-				T result = caseSeviceRealization(seviceRealization);
-				if (result == null) result = caseInterfaceRealization(seviceRealization);
-				if (result == null) result = caseRealization(seviceRealization);
-				if (result == null) result = caseAbstraction(seviceRealization);
-				if (result == null) result = caseDependency(seviceRealization);
-				if (result == null) result = casePackageableElement(seviceRealization);
-				if (result == null) result = caseDirectedRelationship(seviceRealization);
-				if (result == null) result = caseNamedElement(seviceRealization);
-				if (result == null) result = caseParameterableElement(seviceRealization);
-				if (result == null) result = caseRelationship(seviceRealization);
-				if (result == null) result = caseElement(seviceRealization);
-				if (result == null) result = caseEModelElement(seviceRealization);
+			case FramewebPackage.SERVICE_REALIZATION: {
+				ServiceRealization serviceRealization = (ServiceRealization)theEObject;
+				T result = caseServiceRealization(serviceRealization);
+				if (result == null) result = caseInterfaceRealization(serviceRealization);
+				if (result == null) result = caseRealization(serviceRealization);
+				if (result == null) result = caseAbstraction(serviceRealization);
+				if (result == null) result = caseDependency(serviceRealization);
+				if (result == null) result = casePackageableElement(serviceRealization);
+				if (result == null) result = caseDirectedRelationship(serviceRealization);
+				if (result == null) result = caseNamedElement(serviceRealization);
+				if (result == null) result = caseParameterableElement(serviceRealization);
+				if (result == null) result = caseRelationship(serviceRealization);
+				if (result == null) result = caseElement(serviceRealization);
+				if (result == null) result = caseEModelElement(serviceRealization);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -3514,17 +3514,17 @@ public class FramewebSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sevice Realization</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Service Realization</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sevice Realization</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Service Realization</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSeviceRealization(SeviceRealization object) {
+	public T caseServiceRealization(ServiceRealization object) {
 		return null;
 	}
 

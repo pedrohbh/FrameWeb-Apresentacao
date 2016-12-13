@@ -407,8 +407,8 @@ public class FramewebValidator extends EObjectValidator {
 				return validateClassMappingPropery((ClassMappingPropery)value, diagnostics, context);
 			case FramewebPackage.ATTRIBUTE_MAPPING_PROPERTY:
 				return validateAttributeMappingProperty((AttributeMappingProperty)value, diagnostics, context);
-			case FramewebPackage.SEVICE_REALIZATION:
-				return validateSeviceRealization((SeviceRealization)value, diagnostics, context);
+			case FramewebPackage.SERVICE_REALIZATION:
+				return validateServiceRealization((ServiceRealization)value, diagnostics, context);
 			case FramewebPackage.NAVIGATION_EXTENSION:
 				return validateNavigationExtension((NavigationExtension)value, diagnostics, context);
 			case FramewebPackage.DOMAIN_EXTENSION:
@@ -3747,22 +3747,22 @@ public class FramewebValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateSeviceRealization(SeviceRealization seviceRealization, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(seviceRealization, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(seviceRealization, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(seviceRealization, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(seviceRealization, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(seviceRealization, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(seviceRealization, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(seviceRealization, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(seviceRealization, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(seviceRealization, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateElement_validateHasOwner(seviceRealization, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateElement_validateNotOwnSelf(seviceRealization, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateNamedElement_validateVisibilityNeedsOwnership(seviceRealization, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateNamedElement_validateHasQualifiedName(seviceRealization, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateNamedElement_validateHasNoQualifiedName(seviceRealization, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validatePackageableElement_validateNamespaceNeedsVisibility(seviceRealization, diagnostics, context);
+	public boolean validateServiceRealization(ServiceRealization serviceRealization, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(serviceRealization, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(serviceRealization, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(serviceRealization, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(serviceRealization, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(serviceRealization, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(serviceRealization, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(serviceRealization, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(serviceRealization, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(serviceRealization, diagnostics, context);
+		if (result || diagnostics != null) result &= umlValidator.validateElement_validateHasOwner(serviceRealization, diagnostics, context);
+		if (result || diagnostics != null) result &= umlValidator.validateElement_validateNotOwnSelf(serviceRealization, diagnostics, context);
+		if (result || diagnostics != null) result &= umlValidator.validateNamedElement_validateVisibilityNeedsOwnership(serviceRealization, diagnostics, context);
+		if (result || diagnostics != null) result &= umlValidator.validateNamedElement_validateHasQualifiedName(serviceRealization, diagnostics, context);
+		if (result || diagnostics != null) result &= umlValidator.validateNamedElement_validateHasNoQualifiedName(serviceRealization, diagnostics, context);
+		if (result || diagnostics != null) result &= umlValidator.validatePackageableElement_validateNamespaceNeedsVisibility(serviceRealization, diagnostics, context);
 		return result;
 	}
 

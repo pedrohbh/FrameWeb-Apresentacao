@@ -760,13 +760,13 @@ public interface FramewebFactory extends EFactory {
 	AttributeMappingProperty createAttributeMappingProperty();
 
 	/**
-	 * Returns a new object of class '<em>Sevice Realization</em>'.
+	 * Returns a new object of class '<em>Service Realization</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sevice Realization</em>'.
+	 * @return a new object of class '<em>Service Realization</em>'.
 	 * @generated
 	 */
-	SeviceRealization createSeviceRealization();
+	ServiceRealization createServiceRealization();
 
 	/**
 	 * Returns a new object of class '<em>Navigation Generalization Set</em>'.

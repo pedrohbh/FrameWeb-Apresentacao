@@ -244,7 +244,7 @@
     <genClasses ecoreClass="FrameWeb.ecore#//ResultProperty"/>
     <genClasses ecoreClass="FrameWeb.ecore#//ClassMappingPropery"/>
     <genClasses ecoreClass="FrameWeb.ecore#//AttributeMappingProperty"/>
-    <genClasses ecoreClass="FrameWeb.ecore#//SeviceRealization"/>
+    <genClasses ecoreClass="FrameWeb.ecore#//ServiceRealization"/>
     <genClasses ecoreClass="FrameWeb.ecore#//NavigationExtension"/>
     <genClasses ecoreClass="FrameWeb.ecore#//DomainExtension"/>
     <genClasses ecoreClass="FrameWeb.ecore#//NavigationGeneralizationSet"/>

@@ -269,7 +269,7 @@ public class NavigationClassItemProvider extends ClassItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(UMLPackage.Literals.BEHAVIORED_CLASSIFIER__INTERFACE_REALIZATION,
-				 FramewebFactory.eINSTANCE.createSeviceRealization()));
+				 FramewebFactory.eINSTANCE.createServiceRealization()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -1958,26 +1958,26 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link frameweb.SeviceRealization} instances.
+	 * This keeps track of the one adapter used for all {@link frameweb.ServiceRealization} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SeviceRealizationItemProvider seviceRealizationItemProvider;
+	protected ServiceRealizationItemProvider serviceRealizationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link frameweb.SeviceRealization}.
+	 * This creates an adapter for a {@link frameweb.ServiceRealization}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSeviceRealizationAdapter() {
-		if (seviceRealizationItemProvider == null) {
-			seviceRealizationItemProvider = new SeviceRealizationItemProvider(this);
+	public Adapter createServiceRealizationAdapter() {
+		if (serviceRealizationItemProvider == null) {
+			serviceRealizationItemProvider = new ServiceRealizationItemProvider(this);
 		}
 
-		return seviceRealizationItemProvider;
+		return serviceRealizationItemProvider;
 	}
 
 	/**
@@ -2667,7 +2667,7 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory i
 		if (resultPropertyItemProvider != null) resultPropertyItemProvider.dispose();
 		if (classMappingProperyItemProvider != null) classMappingProperyItemProvider.dispose();
 		if (attributeMappingPropertyItemProvider != null) attributeMappingPropertyItemProvider.dispose();
-		if (seviceRealizationItemProvider != null) seviceRealizationItemProvider.dispose();
+		if (serviceRealizationItemProvider != null) serviceRealizationItemProvider.dispose();
 		if (navigationGeneralizationSetItemProvider != null) navigationGeneralizationSetItemProvider.dispose();
 		if (daoGeneralizationSetItemProvider != null) daoGeneralizationSetItemProvider.dispose();
 		if (serviceGeneralizationSetItemProvider != null) serviceGeneralizationSetItemProvider.dispose();

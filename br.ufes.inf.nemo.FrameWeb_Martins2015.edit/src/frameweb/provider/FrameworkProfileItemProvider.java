@@ -731,7 +731,7 @@ public class FrameworkProfileItemProvider extends ProfileItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
-				 FramewebFactory.eINSTANCE.createSeviceRealization()));
+				 FramewebFactory.eINSTANCE.createServiceRealization()));
 
 		newChildDescriptors.add
 			(createChildParameter

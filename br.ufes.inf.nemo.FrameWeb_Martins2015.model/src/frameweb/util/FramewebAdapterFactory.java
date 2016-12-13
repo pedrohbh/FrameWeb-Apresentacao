@@ -474,8 +474,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 				return createAttributeMappingPropertyAdapter();
 			}
 			@Override
-			public Adapter caseSeviceRealization(SeviceRealization object) {
-				return createSeviceRealizationAdapter();
+			public Adapter caseServiceRealization(ServiceRealization object) {
+				return createServiceRealizationAdapter();
 			}
 			@Override
 			public Adapter caseNavigationExtension(NavigationExtension object) {
@@ -2064,16 +2064,16 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link frameweb.SeviceRealization <em>Sevice Realization</em>}'.
+	 * Creates a new adapter for an object of class '{@link frameweb.ServiceRealization <em>Service Realization</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see frameweb.SeviceRealization
+	 * @see frameweb.ServiceRealization
 	 * @generated
 	 */
-	public Adapter createSeviceRealizationAdapter() {
+	public Adapter createServiceRealizationAdapter() {
 		return null;
 	}
 

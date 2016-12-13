@@ -137,7 +137,7 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			case FramewebPackage.RESULT_PROPERTY: return createResultProperty();
 			case FramewebPackage.CLASS_MAPPING_PROPERY: return createClassMappingPropery();
 			case FramewebPackage.ATTRIBUTE_MAPPING_PROPERTY: return createAttributeMappingProperty();
-			case FramewebPackage.SEVICE_REALIZATION: return createSeviceRealization();
+			case FramewebPackage.SERVICE_REALIZATION: return createServiceRealization();
 			case FramewebPackage.NAVIGATION_GENERALIZATION_SET: return createNavigationGeneralizationSet();
 			case FramewebPackage.DAO_GENERALIZATION_SET: return createDAOGeneralizationSet();
 			case FramewebPackage.SERVICE_GENERALIZATION_SET: return createServiceGeneralizationSet();
@@ -1064,9 +1064,9 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SeviceRealization createSeviceRealization() {
-		SeviceRealizationImpl seviceRealization = new SeviceRealizationImpl();
-		return seviceRealization;
+	public ServiceRealization createServiceRealization() {
+		ServiceRealizationImpl serviceRealization = new ServiceRealizationImpl();
+		return serviceRealization;
 	}
 
 	/**

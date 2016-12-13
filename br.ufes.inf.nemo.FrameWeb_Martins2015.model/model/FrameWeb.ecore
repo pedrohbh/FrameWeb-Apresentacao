@@ -330,7 +330,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ResultProperty" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
   <eClassifiers xsi:type="ecore:EClass" name="ClassMappingPropery" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeMappingProperty" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SeviceRealization" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//InterfaceRealization"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceRealization" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//InterfaceRealization"/>
   <eClassifiers xsi:type="ecore:EClass" name="NavigationExtension" abstract="true"
       eSuperTypes="#//FrameworkExtension"/>
   <eClassifiers xsi:type="ecore:EClass" name="DomainExtension" abstract="true" eSuperTypes="#//FrameworkExtension"/>
