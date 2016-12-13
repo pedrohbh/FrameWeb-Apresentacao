@@ -176,7 +176,9 @@
     <genClasses image="false" ecoreClass="FrameWeb.ecore#//NavigationClass"/>
     <genClasses ecoreClass="FrameWeb.ecore#//DomainMethod"/>
     <genClasses ecoreClass="FrameWeb.ecore#//DAOAttribute"/>
-    <genClasses ecoreClass="FrameWeb.ecore#//ServiceMethod"/>
+    <genClasses ecoreClass="FrameWeb.ecore#//ServiceMethod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//ServiceMethod/methodType"/>
+    </genClasses>
     <genClasses ecoreClass="FrameWeb.ecore#//ServiceAttribute"/>
     <genClasses image="false" ecoreClass="FrameWeb.ecore#//ServiceAssociation"/>
     <genClasses image="false" ecoreClass="FrameWeb.ecore#//NavigationDependency"/>

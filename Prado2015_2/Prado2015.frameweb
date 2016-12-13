@@ -177,7 +177,9 @@
   <compose xsi:type="frameweb:ApplicationModel" name="Application Model">
     <packagedElement xsi:type="frameweb:ApplicationPackage" name="Application Package">
       <packagedElement xsi:type="frameweb:ServiceInterface" name="AplAfastamento"/>
-      <packagedElement xsi:type="frameweb:ServiceClass" name="AplAfastamentoImp"/>
+      <packagedElement xsi:type="frameweb:ServiceClass" name="AplAfastamentoImp">
+        <ownedOperation xsi:type="frameweb:ServiceMethod" name="salvar" methodType="void"/>
+      </packagedElement>
       <packagedElement xsi:type="frameweb:ServiceRealization" client="//@compose.2/Application%20Package/AplAfastamentoImp" supplier="//@compose.2/Application%20Package/AplAfastamento"/>
     </packagedElement>
   </compose>

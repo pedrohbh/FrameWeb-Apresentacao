@@ -245,7 +245,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="NavigationClass" abstract="true" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
   <eClassifiers xsi:type="ecore:EClass" name="DomainMethod" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
   <eClassifiers xsi:type="ecore:EClass" name="DAOAttribute" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ServiceMethod" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceMethod" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="methodType" eType="ecore:EDataType platform:/plugin/org.eclipse.uml2.types/model/Types.ecore#//String"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceAttribute" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceAssociation" abstract="true"
       interface="true" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Association"/>

@@ -2796,6 +2796,10 @@
               <children xmi:type="notation:Node" xmi:id="_gJwDUMFjEea1nLdWyON2LA" type="3009" element="_gJu1MMFjEea1nLdWyON2LA">
                 <children xmi:type="notation:Node" xmi:id="_gJwDU8FjEea1nLdWyON2LA" type="5004"/>
                 <children xmi:type="notation:Node" xmi:id="_gJwDVMFjEea1nLdWyON2LA" type="7003">
+                  <children xmi:type="notation:Node" xmi:id="_x-2qYMFoEea3RaXRJ2tkhw" type="3010" element="_x-XiMMFoEea3RaXRJ2tkhw">
+                    <styles xmi:type="notation:FontStyle" xmi:id="_x-2qYcFoEea3RaXRJ2tkhw" fontName="Segoe UI" fontHeight="8"/>
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_x-2qYsFoEea3RaXRJ2tkhw"/>
+                  </children>
                   <styles xmi:type="notation:SortingStyle" xmi:id="_gJwDVcFjEea1nLdWyON2LA"/>
                   <styles xmi:type="notation:FilteringStyle" xmi:id="_gJwDVsFjEea1nLdWyON2LA"/>
                 </children>
@@ -2880,6 +2884,14 @@
             <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']"/>
+          <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_x-XiMMFoEea3RaXRJ2tkhw" name=" + salvar () : void">
+            <target xmi:type="frameweb:ServiceMethod" href="Prado2015.frameweb#//@compose.2/Application%20Package/AplAfastamentoImp/salvar"/>
+            <semanticElements xmi:type="frameweb:ServiceMethod" href="Prado2015.frameweb#//@compose.2/Application%20Package/AplAfastamentoImp/salvar"/>
+            <ownedStyle xmi:type="diagram:Dot" xmi:id="_x-kWgMFoEea3RaXRJ2tkhw" showIcon="false" labelAlignment="LEFT" labelPosition="node">
+              <description xmi:type="style:DotDescription" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']/@subNodeMappings[name='Service%20Method%20Node']/@style"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']/@subNodeMappings[name='Service%20Method%20Node']"/>
+          </ownedElements>
         </ownedDiagramElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_vAHskMFhEea1nLdWyON2LA" name="Controller ">

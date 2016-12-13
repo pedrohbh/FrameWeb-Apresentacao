@@ -2,136 +2,6 @@
  */
 package frameweb.impl;
 
-import frameweb.Annotation;
-import frameweb.AnnotationProperty;
-import frameweb.AnonymousIndividual;
-import frameweb.ApplicationModel;
-import frameweb.ApplicationPackage;
-import frameweb.Association;
-import frameweb.AttributeMapping;
-import frameweb.AttributeMappingExtension;
-import frameweb.AttributeMappingExtensionEnd;
-import frameweb.AttributeMappingProperty;
-import frameweb.Axiom;
-import frameweb.Cascade;
-import frameweb.ChainingConstraint;
-import frameweb.ChainingDependency;
-import frameweb.ClassMapping;
-import frameweb.ClassMappingExtension;
-import frameweb.ClassMappingExtensionEnd;
-import frameweb.ClassMappingPropery;
-import frameweb.Collection;
-import frameweb.ConstantNameList;
-import frameweb.Controller;
-import frameweb.ControllerExtension;
-import frameweb.ControllerExtensionEnd;
-import frameweb.ControllerPackage;
-import frameweb.ControllerProperty;
-import frameweb.ControllerSet;
-import frameweb.DAOAttribute;
-import frameweb.DAOClass;
-import frameweb.DAOGeneralization;
-import frameweb.DAOGeneralizationSet;
-import frameweb.DAOInterface;
-import frameweb.DAOMethod;
-import frameweb.DAORealization;
-import frameweb.DAOServiceAssociation;
-import frameweb.DataProperty;
-import frameweb.DateTimeAttribute;
-import frameweb.DateTimePrecision;
-import frameweb.DecimalAttribute;
-import frameweb.DomainAssociation;
-import frameweb.DomainAttribute;
-import frameweb.DomainClass;
-import frameweb.DomainConstraints;
-import frameweb.DomainExtension;
-import frameweb.DomainGeneralization;
-import frameweb.DomainGeneralizationSet;
-import frameweb.DomainMethod;
-import frameweb.DomainPackage;
-import frameweb.DomainProperty;
-import frameweb.EmbeddedAttribute;
-import frameweb.EntityModel;
-import frameweb.Fetch;
-import frameweb.FramewebFactory;
-import frameweb.FramewebModel;
-import frameweb.FramewebPackage;
-import frameweb.FramewebProject;
-import frameweb.FrameworkApplication;
-import frameweb.FrameworkCategoryList;
-import frameweb.FrameworkExtension;
-import frameweb.FrameworkKindList;
-import frameweb.FrameworkProfile;
-import frameweb.FrontControllerClass;
-import frameweb.FrontControllerDependency;
-import frameweb.FrontControllerMethod;
-import frameweb.Generation;
-import frameweb.IOParameter;
-import frameweb.IdAttribute;
-import frameweb.Individual;
-import frameweb.InheritanceMapping;
-import frameweb.LOBAttribute;
-import frameweb.MappingLib;
-import frameweb.MethodConstraint;
-import frameweb.NamedIndividual;
-import frameweb.NavigationAssociation;
-import frameweb.NavigationAttribute;
-import frameweb.NavigationClass;
-import frameweb.NavigationCompositionPart;
-import frameweb.NavigationCompositionWhole;
-import frameweb.NavigationConstraint;
-import frameweb.NavigationDependency;
-import frameweb.NavigationExtension;
-import frameweb.NavigationGeneralization;
-import frameweb.NavigationGeneralizationSet;
-import frameweb.NavigationModel;
-import frameweb.NavigationPackage;
-import frameweb.NavigationProperty;
-import frameweb.NewInterface115;
-import frameweb.ObjectProperty;
-import frameweb.Order;
-import frameweb.Page;
-import frameweb.PageConstraint;
-import frameweb.PageDependency;
-import frameweb.PersistenceModel;
-import frameweb.PersistencePackage;
-import frameweb.Property;
-import frameweb.ResultConstraint;
-import frameweb.ResultDependency;
-import frameweb.ResultExtension;
-import frameweb.ResultExtensionEnd;
-import frameweb.ResultProperty;
-import frameweb.ResultSet;
-import frameweb.ResultType;
-import frameweb.SemanticPackage;
-import frameweb.ServiceAssociation;
-import frameweb.ServiceAttribute;
-import frameweb.ServiceClass;
-import frameweb.ServiceControllerAssociation;
-import frameweb.ServiceGeneralization;
-import frameweb.ServiceGeneralizationSet;
-import frameweb.ServiceInterface;
-import frameweb.ServiceMethod;
-import frameweb.ServiceRealization;
-import frameweb.Tag;
-import frameweb.TagExtension;
-import frameweb.TagExtensionEnd;
-import frameweb.TagLib;
-import frameweb.TagProperty;
-import frameweb.Template;
-import frameweb.UIComponent;
-import frameweb.VersionAttribute;
-import frameweb.ViewPackage;
-import frameweb.Vocabulary;
-import frameweb.VocabularyAssociation;
-import frameweb.VocabularyClass;
-import frameweb.VocabularyClassExpression;
-import frameweb.VocabularyConstraints;
-import frameweb.VocabularyDataType;
-import frameweb.VocabularyEntity;
-import frameweb.VocabularyLiteral;
-import frameweb.VocabularyModel;
-import frameweb.VocabularyProperty;
 import frameweb.*;
 import frameweb.util.FramewebValidator;
 
@@ -1874,6 +1744,15 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getServiceMethod_MethodType() {
+		return (EAttribute)serviceMethodEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getServiceAttribute() {
 		return serviceAttributeEClass;
 	}
@@ -3535,6 +3414,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		daoAttributeEClass = createEClass(DAO_ATTRIBUTE);
 
 		serviceMethodEClass = createEClass(SERVICE_METHOD);
+		createEAttribute(serviceMethodEClass, SERVICE_METHOD__METHOD_TYPE);
 
 		serviceAttributeEClass = createEClass(SERVICE_ATTRIBUTE);
 
@@ -4070,6 +3950,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEClass(daoAttributeEClass, DAOAttribute.class, "DAOAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(serviceMethodEClass, ServiceMethod.class, "ServiceMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getServiceMethod_MethodType(), theTypesPackage.getString(), "methodType", null, 0, 1, ServiceMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(serviceAttributeEClass, ServiceAttribute.class, "ServiceAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

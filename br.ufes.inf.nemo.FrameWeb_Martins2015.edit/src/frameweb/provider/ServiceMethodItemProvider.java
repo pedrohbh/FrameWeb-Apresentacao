@@ -4,6 +4,7 @@ package frameweb.provider;
 
 
 import frameweb.FramewebFactory;
+import frameweb.FramewebPackage;
 import frameweb.ServiceMethod;
 
 import java.util.Collection;
@@ -14,8 +15,11 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.uml2.uml.UMLPackage;
 
 import org.eclipse.uml2.uml.edit.providers.OperationItemProvider;
@@ -48,8 +52,31 @@ public class ServiceMethodItemProvider extends OperationItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addMethodTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Method Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMethodTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ServiceMethod_methodType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ServiceMethod_methodType_feature", "_UI_ServiceMethod_type"),
+				 FramewebPackage.Literals.SERVICE_METHOD__METHOD_TYPE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -88,6 +115,12 @@ public class ServiceMethodItemProvider extends OperationItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(ServiceMethod.class)) {
+			case FramewebPackage.SERVICE_METHOD__METHOD_TYPE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 
