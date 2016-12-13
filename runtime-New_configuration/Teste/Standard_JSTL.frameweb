@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<frameweb:FrameworkProfile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015" name="JSTL">
-  <packagedElement xsi:type="frameweb:TagLib" name="JSTLformatting" URI="http://java.sun.com/jsp/jstl/fmt" prefix="fmt">
+<frameweb:FramewebProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015">
+  <configures name="JSTL">
+  	<packagedElement xsi:type="frameweb:TagLib" name="JSTLformatting" URI="http://java.sun.com/jsp/jstl/fmt" prefix="fmt">
     <packagedElement xsi:type="frameweb:Tag" name="formatNumber"/>
     <packagedElement xsi:type="frameweb:Tag" name="parseNumber"/>
     <packagedElement xsi:type="frameweb:Tag" name="formatDate"/>
@@ -64,4 +65,6 @@
     <packagedElement xsi:type="frameweb:Tag" name="redirect"/>
     <packagedElement xsi:type="frameweb:Tag" name="url"/>
   </packagedElement>
-</frameweb:FrameworkProfile>
+  
+  </configures>
+</frameweb:FramewebProject>

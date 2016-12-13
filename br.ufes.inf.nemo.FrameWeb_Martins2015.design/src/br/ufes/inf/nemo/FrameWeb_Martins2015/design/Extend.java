@@ -68,4 +68,25 @@ public class Extend {
 		return result;
 	}
 	
+	public String printCardinalidade(EObject o){
+		
+		EStructuralFeature upper = o.eClass().getEStructuralFeature("upper");
+		Integer upper_value = (Integer) o.eGet(upper);
+		
+		EStructuralFeature lower = o.eClass().getEStructuralFeature("lower");
+		Integer lower_value = (Integer) o.eGet(lower);
+		
+		if(upper_value==lower_value){
+			return lower_value.toString();
+		}
+		
+		if(upper_value==-1){
+			return lower_value + "..*";
+		}
+		
+		return lower_value + ".." + upper_value;
+	}
+	
+	
+	
 }

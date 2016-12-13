@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<frameweb:FramewebProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+<frameweb:FramewebProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015">
   <compose xsi:type="frameweb:PersistenceModel" name="Persistence Model"/>
   <compose xsi:type="frameweb:ApplicationModel" name="Application Model"/>
   <compose xsi:type="frameweb:NavigationModel" name="Navigation Model">
@@ -8,9 +8,9 @@
       <packagedElement xsi:type="frameweb:FrontControllerClass" name="New Front Controller">
         <generalization xsi:type="frameweb:NavigationGeneralization" generalizationSet="//@compose.2/Controller%20Package/1"/>
         <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="New Method" methodType="int">
-          <ownedParameter name="Parameter 1" type="//@compose.3/Primitive%20Types/short"/>
-          <ownedParameter name="Parameter 2" type="//@compose.3/Primitive%20Types/int"/>
-          <ownedParameter name="Parameter 3" type="//@compose.3/Primitive%20Types/float"/>
+          <ownedParameter name="Parameter 1"/>
+          <ownedParameter name="Parameter 2"/>
+          <ownedParameter name="Parameter 3"/>
         </ownedOperation>
       </packagedElement>
       <packagedElement xsi:type="frameweb:FrontControllerClass" name="Front Controller Pai" powertypeExtent="//@compose.2/Controller%20Package/1"/>
@@ -18,28 +18,19 @@
     </packagedElement>
   </compose>
   <compose xsi:type="frameweb:EntityModel" name="Entity Model">
-    <packagedElement xsi:type="uml:Package" name="Primitive Types">
-      <packagedElement xsi:type="uml:PrimitiveType" name="byte"/>
-      <packagedElement xsi:type="uml:PrimitiveType" name="short"/>
-      <packagedElement xsi:type="uml:PrimitiveType" name="int"/>
-      <packagedElement xsi:type="uml:PrimitiveType" name="long"/>
-      <packagedElement xsi:type="uml:PrimitiveType" name="float"/>
-      <packagedElement xsi:type="uml:PrimitiveType" name="double"/>
-      <packagedElement xsi:type="uml:PrimitiveType" name="boolean"/>
-      <packagedElement xsi:type="uml:PrimitiveType" name="char"/>
-    </packagedElement>
     <packagedElement xsi:type="frameweb:DomainPackage" name="Domain Package">
       <packagedElement xsi:type="frameweb:DomainClass" name="Estudante">
         <generalization xsi:type="frameweb:DomainGeneralization" generalizationSet="//@compose.3/Domain%20Package/Pai"/>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:DomainClass" name="Pessoa" powertypeExtent="//@compose.3/Domain%20Package/Pai">
-        <nestedClassifier xsi:type="frameweb:DomainAssociation" name="Possui" memberEnd="//@compose.3/Domain%20Package/Pessoa/Possui/@ownedEnd.0">
-          <ownedRule xsi:type="frameweb:DomainConstraints" constrainedElement="//@compose.3/Domain%20Package/Pessoa/Possui"/>
-          <ownedEnd xsi:type="frameweb:DomainProperty" type="//@compose.3/Domain%20Package/Telefone" association="//@compose.3/Domain%20Package/Pessoa/Possui"/>
-        </nestedClassifier>
-      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainClass" name="Pessoa" powertypeExtent="//@compose.3/Domain%20Package/Pai"/>
       <packagedElement xsi:type="frameweb:DomainGeneralizationSet" name="Pai" powertype="//@compose.3/Domain%20Package/Pessoa" generalization="//@compose.3/Domain%20Package/Estudante/@generalization.0"/>
       <packagedElement xsi:type="frameweb:DomainClass" name="Telefone"/>
+      <packagedElement xsi:type="frameweb:DomainAssociation" name="Possui" memberEnd="//@compose.3/Domain%20Package/Possui/Source //@compose.3/Domain%20Package/Possui/Target">
+        <ownedRule xsi:type="frameweb:DomainConstraints" constrainedElement="//@compose.3/Domain%20Package/Pessoa"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" constrainedElement="//@compose.3/Domain%20Package/Telefone"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.3/Domain%20Package/Pessoa" association="//@compose.3/Domain%20Package/Possui"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.3/Domain%20Package/Telefone" association="//@compose.3/Domain%20Package/Possui"/>
+      </packagedElement>
     </packagedElement>
   </compose>
 </frameweb:FramewebProject>

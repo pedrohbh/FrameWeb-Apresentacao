@@ -197,28 +197,6 @@
       </packagedElement>
       <packagedElement xsi:type="frameweb:DomainClass" name="Professor">
         <generalization xsi:type="frameweb:DomainGeneralization" generalizationSet="//@compose.3/Domain%20Package/Pessoa.2"/>
-        <nestedClassifier xsi:type="frameweb:DomainAssociation" name="Exerce" memberEnd="//@compose.3/Domain%20Package/Professor/Exerce/@ownedEnd.0">
-          <ownedRule xsi:type="frameweb:DomainConstraints" constrainedElement="//@compose.3/Domain%20Package/Professor/Exerce"/>
-          <ownedEnd xsi:type="frameweb:DomainProperty" type="//@compose.3/Domain%20Package/Mandato" association="//@compose.3/Domain%20Package/Professor/Exerce"/>
-        </nestedClassifier>
-        <nestedClassifier xsi:type="frameweb:DomainAssociation" name="Parentesco" memberEnd="//@compose.3/Domain%20Package/Professor/Parentesco/@ownedEnd.0">
-          <ownedRule xsi:type="frameweb:DomainConstraints" constrainedElement="//@compose.3/Domain%20Package/Professor/Parentesco"/>
-          <ownedEnd xsi:type="frameweb:DomainProperty" type="//@compose.3/Domain%20Package/Professor" association="//@compose.3/Domain%20Package/Professor/Parentesco">
-            <lowerValue xsi:type="uml:LiteralInteger" value="1"/>
-          </ownedEnd>
-        </nestedClassifier>
-        <nestedClassifier xsi:type="frameweb:DomainAssociation" name="Solicita" memberEnd="//@compose.3/Domain%20Package/Professor/Solicita/@ownedEnd.0">
-          <ownedRule xsi:type="frameweb:DomainConstraints" constrainedElement="//@compose.3/Domain%20Package/Professor/Solicita"/>
-          <ownedEnd xsi:type="frameweb:DomainProperty" type="//@compose.3/Domain%20Package/Afastamento" association="//@compose.3/Domain%20Package/Professor/Solicita"/>
-        </nestedClassifier>
-        <nestedClassifier xsi:type="frameweb:DomainAssociation" name="Relator" memberEnd="//@compose.3/Domain%20Package/Professor/Relator/@ownedEnd.0">
-          <ownedRule xsi:type="frameweb:DomainConstraints" constrainedElement="//@compose.3/Domain%20Package/Professor/Relator"/>
-          <ownedEnd xsi:type="frameweb:DomainProperty" type="//@compose.3/Domain%20Package/Afastamento" association="//@compose.3/Domain%20Package/Professor/Relator"/>
-        </nestedClassifier>
-        <nestedClassifier xsi:type="frameweb:DomainAssociation" name="Emite" memberEnd="//@compose.3/Domain%20Package/Professor/Emite/@ownedEnd.0">
-          <ownedRule xsi:type="frameweb:DomainConstraints" constrainedElement="//@compose.3/Domain%20Package/Professor/Emite"/>
-          <ownedEnd xsi:type="frameweb:DomainProperty" type="//@compose.3/Domain%20Package/Parecer" association="//@compose.3/Domain%20Package/Professor/Emite"/>
-        </nestedClassifier>
       </packagedElement>
       <packagedElement xsi:type="frameweb:DomainGeneralizationSet" name="Pessoa" powertype="//@compose.3/Domain%20Package/Pessoa" generalization="//@compose.3/Domain%20Package/Secretario/@generalization.0"/>
       <packagedElement xsi:type="frameweb:DomainGeneralizationSet" name="Pessoa" powertype="//@compose.3/Domain%20Package/Pessoa" generalization="//@compose.3/Domain%20Package/Professor/@generalization.0"/>
@@ -255,14 +233,6 @@
         <ownedAttribute xsi:type="frameweb:DomainAttribute" name="nomeEvento">
           <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
         </ownedAttribute>
-        <nestedClassifier xsi:type="frameweb:DomainAssociation" name="Recebe" memberEnd="//@compose.3/Domain%20Package/Afastamento/Recebe/@ownedEnd.0">
-          <ownedRule xsi:type="frameweb:DomainConstraints" constrainedElement="//@compose.3/Domain%20Package/Afastamento/Recebe"/>
-          <ownedEnd xsi:type="frameweb:DomainProperty" type="//@compose.3/Domain%20Package/Parecer" association="//@compose.3/Domain%20Package/Afastamento/Recebe"/>
-        </nestedClassifier>
-        <nestedClassifier xsi:type="frameweb:DomainAssociation" name="Possui" memberEnd="//@compose.3/Domain%20Package/Afastamento/Possui/@ownedEnd.0">
-          <ownedRule xsi:type="frameweb:DomainConstraints" constrainedElement="//@compose.3/Domain%20Package/Afastamento/Possui"/>
-          <ownedEnd xsi:type="frameweb:DomainProperty" type="//@compose.3/Domain%20Package/Documento" association="//@compose.3/Domain%20Package/Afastamento/Possui"/>
-        </nestedClassifier>
       </packagedElement>
       <packagedElement xsi:type="frameweb:DomainClass" name="Parecer">
         <ownedAttribute xsi:type="frameweb:DomainAttribute" name="dataParecer">
