@@ -46,7 +46,7 @@
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
           </style>
         </edgeMappings>
-        <containerMappings name="View Package" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" domainClass="ViewPackage">
+        <containerMappings name="View Package" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" semanticCandidatesExpression="feature:eAllContents" domainClass="ViewPackage">
           <subContainerMappings name="UI Component Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" semanticCandidatesExpression="feature:eAllContents" domainClass="UIComponent" childrenPresentation="List">
             <subNodeMappings name="UI Component Field Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" semanticCandidatesExpression="feature:eAllContents" domainClass="UIComponentField">
               <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
@@ -88,7 +88,7 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
           </style>
         </containerMappings>
-        <containerMappings name="Controller Package" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" domainClass="ControllerPackage">
+        <containerMappings name="Controller Package" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" semanticCandidatesExpression="feature:eAllContents" domainClass="ControllerPackage">
           <subContainerMappings name="Front Controller Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" semanticCandidatesExpression="feature:eAllContents" domainClass="FrontControllerClass" childrenPresentation="List">
             <subNodeMappings name="IO Parameter Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" semanticCandidatesExpression="feature:eAllContents" domainClass="IOParameter">
               <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.parameterType" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
@@ -350,7 +350,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="Method Click" mappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='Front%20Controller%20Method%20Node']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Method Click" mappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='Front%20Controller%20Method%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@containerMappings[name='PersistencePackage']/@subContainerMappings[name='DAOClass']/@subNodeMappings[name='DAO%20Method%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']/@subNodeMappings[name='Service%20Method%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='DomainMethod']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -417,9 +417,9 @@
             </endLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="Domain Package" domainClass="DomainPackage">
+        <containerMappings name="Domain Package" semanticCandidatesExpression="feature:eAllContents" domainClass="DomainPackage">
           <subContainerMappings name="DomainClass Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Class']" semanticCandidatesExpression="feature:eAllContents" domainClass="DomainClass" childrenPresentation="List">
-            <subNodeMappings name="DomainMethod" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Method%20Click']" domainClass="DomainMethod">
+            <subNodeMappings name="DomainMethod" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Method%20Click']" domainClass="DomainMethod">
               <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.printParameters()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -674,7 +674,7 @@
               <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="Method Click" mappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='DomainMethod']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Method Click">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -718,7 +718,7 @@
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               </style>
             </subNodeMappings>
-            <subNodeMappings name="DAO Method Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Method%20Click']" domainClass="DAOMethod">
+            <subNodeMappings name="DAO Method Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Method%20Click']" domainClass="DAOMethod">
               <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.printParameters()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -842,7 +842,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="Method Click" mappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@containerMappings[name='PersistencePackage']/@subContainerMappings[name='DAOClass']/@subNodeMappings[name='DAO%20Method%20Node']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Method Click">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -856,12 +856,27 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWebApplicationModel" domainClass="ApplicationModel">
       <defaultLayer name="Default">
-        <edgeMappings name="Realization Line" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subNodeMappings[name='ServiceInterface']" targetFinderExpression="feature:supplier" sourceFinderExpression="feature:client" domainClass="ServiceRealization" useDomainElement="true" reconnections="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Reconnect%20Front%20Controller%20Dependency']">
+        <edgeMappings name="Service Realization Line" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subNodeMappings[name='ServiceInterface']" targetFinderExpression="feature:supplier" sourceFinderExpression="feature:client" domainClass="ServiceRealization" useDomainElement="true" reconnections="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Reconnect%20Front%20Controller%20Dependency']">
           <style targetArrow="InputClosedArrow" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
             <centerLabelStyleDescription showIcon="false">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ServiceGeneralizationSet" deletionDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Delete%20Generalization%20Set']" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']" targetFinderExpression="aql:self.powertype" sourceFinderExpression="aql:self.generalization.owner" domainClass="ServiceGeneralizationSet" useDomainElement="true">
+          <style targetArrow="InputClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="DAOServiceAssociation" deletionDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Delete%20Association']" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Class']" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@containerMappings[name='PersistencePackage']/@subNodeMappings[name='DAOInterface'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='PersistencePackage']/@subNodeMappings[name='DAOInterface']" targetFinderExpression="aql:self.memberEnd->at(2).type" sourceFinderExpression="aql:self.memberEnd->at(1).type" domainClass="DAOServiceAssociation" useDomainElement="true" reconnections="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Reconnect%20Navigation%20Association']">
+          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ServiceControllerAssociation" deletionDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Delete%20Association']" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Class']" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subNodeMappings[name='Front%20Controller%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subNodeMappings[name='ServiceInterface']" targetFinderExpression="aql:self.memberEnd->at(2).type" sourceFinderExpression="aql:self.memberEnd->at(1).type" domainClass="ServiceControllerAssociation" useDomainElement="true" reconnections="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Reconnect%20Navigation%20Association']">
+          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
           </style>
         </edgeMappings>
         <containerMappings name="ApplicationPackage" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" semanticCandidatesExpression="feature:eAllContents" domainClass="ApplicationPackage">
@@ -881,7 +896,7 @@
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               </style>
             </subNodeMappings>
-            <subNodeMappings name="Service Method Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" semanticCandidatesExpression="feature:eAllContents" domainClass="ServiceMethod">
+            <subNodeMappings name="Service Method Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Method%20Click']" domainClass="ServiceMethod">
               <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.printParameters()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -918,6 +933,22 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
           </style>
         </containerMappings>
+        <containerMappings name="PersistencePackage" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" domainClass="PersistencePackage">
+          <subNodeMappings name="DAOInterface" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@toolSections.1/@ownedTools[name='DAOInterface']" semanticCandidatesExpression="feature:eAllContents" domainClass="DAOInterface">
+            <style xsi:type="style:DotDescription" showIcon="false">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
         <toolSections name="Package">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Application Package" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
             <variable name="container"/>
@@ -925,6 +956,166 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.ApplicationPackage" referenceName="packagedElement">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Application Package"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Service">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Service Class" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Class.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.ServiceClass" referenceName="packagedElement">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New ServiceClass"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Service Interface" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subNodeMappings[name='ServiceInterface']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Class.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.ServiceInterface" referenceName="packagedElement">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New ServiceInterface"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Realization" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@edgeMappings[name='Service%20Realization%20Line']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Association.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer()">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.ServiceRealization" referenceName="packagedElement">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="client" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="supplier" valueExpression="var:target"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Generalization" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@edgeMappings[name='ServiceGeneralizationSet']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Association.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer()">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.ServiceGeneralizationSet" referenceName="packagedElement" variableName="gset">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="powertype" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:self.powertype.name"/>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.ServiceGeneralization" referenceName="generalization">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="generalizationSet" valueExpression="var:gset"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Service Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']/@subNodeMappings[name='Service%20Attribute%20Node']" iconPath="/org.eclipse.acceleo.model.edit/icons/full/obj16/Variable.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.ServiceAttribute" referenceName="ownedAttribute">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Attribute"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Service Method" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']/@subNodeMappings[name='Service%20Method%20Node']" iconPath="/org.eclipse.acceleo.model.edit/icons/full/obj16/Variable.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.ServiceMethod" referenceName="ownedOperation">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Method"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="methodType" valueExpression="void"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DAOServiceAssociation" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@edgeMappings[name='DAOServiceAssociation']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Association.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer()">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.DAOServiceAssociation" referenceName="packagedElement" variableName="gset">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:gset">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.Property" referenceName="ownedEnd" variableName="proper">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:proper">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:source">
+                          <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:gset">
+                            <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.DomainConstraints" referenceName="ownedRule" variableName="cons">
+                              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="cons">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="constrainedElement" valueExpression="var:proper"/>
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Source Constraint"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </subModelOperations>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Source"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.Property" referenceName="ownedEnd" variableName="proper2">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:proper2">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:target">
+                          <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:gset">
+                            <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.DomainConstraints" referenceName="ownedRule" variableName="cons">
+                              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="cons">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="constrainedElement" valueExpression="var:proper2"/>
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Target Constraint"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </subModelOperations>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Target"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ServiceControllerAssociation" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@edgeMappings[name='ServiceControllerAssociation']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Association.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer()">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.ServiceControllerAssociation" referenceName="packagedElement" variableName="gset">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:gset">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.Property" referenceName="ownedEnd" variableName="proper">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:proper">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:source">
+                          <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:gset">
+                            <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.DomainConstraints" referenceName="ownedRule" variableName="cons">
+                              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="cons">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="constrainedElement" valueExpression="var:proper"/>
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Source Constraint"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </subModelOperations>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Source"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.Property" referenceName="ownedEnd" variableName="proper2">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:proper2">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:target">
+                          <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:gset">
+                            <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.DomainConstraints" referenceName="ownedRule" variableName="cons">
+                              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="cons">
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="constrainedElement" valueExpression="var:proper2"/>
+                                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Target Constraint"/>
+                              </subModelOperations>
+                            </subModelOperations>
+                          </subModelOperations>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Target"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -965,7 +1156,7 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
           </style>
         </containerMappings>
-        <containerMappings name="FrameworkProfile" domainClass="FrameworkProfile">
+        <containerMappings name="FrameworkProfile" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='GoToDiagramFramework']" domainClass="FrameworkProfile">
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1097,6 +1288,13 @@
             <containerVariable name="container"/>
             <representationNameVariable name="diagramName"/>
           </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="GoToDiagramFramework" mappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@containerMappings[name='FrameworkProfile']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWork']"/>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
@@ -1110,7 +1308,15 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="FrontControllerMethod" semanticCandidatesExpression="aql:self" domainClass="Operation">
+        <nodeMappings name="ServiceMethod" semanticCandidatesExpression="aql:self" domainClass="frameweb.ServiceMethod">
+          <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="EAST_WEST" width="10" height="3">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>italic</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="FrontControllerMethod" semanticCandidatesExpression="aql:self" domainClass="frameweb.FrontControllerMethod">
           <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="EAST_WEST" width="10" height="3">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>italic</labelFormat>
@@ -1118,7 +1324,23 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="ParameterRelation" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='Method%20Diagram']/@defaultLayer/@nodeMappings[name='Parameter']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='Method%20Diagram']/@defaultLayer/@nodeMappings[name='FrontControllerMethod'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@containerMappings[name='PersistencePackage']/@subContainerMappings[name='DAOClass']/@subNodeMappings[name='DAO%20Method%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='DomainMethod']" targetFinderExpression="aql:self.owner">
+        <nodeMappings name="DAOMethod" semanticCandidatesExpression="aql:self" domainClass="frameweb.DAOMethod">
+          <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="EAST_WEST" width="10" height="3">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>italic</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DomainMethod" semanticCandidatesExpression="aql:self" domainClass="frameweb.DomainMethod">
+          <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="EAST_WEST" width="10" height="3">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>italic</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="ParameterRelation" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='Method%20Diagram']/@defaultLayer/@nodeMappings[name='Parameter']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='Method%20Diagram']/@defaultLayer/@nodeMappings[name='ServiceMethod'] //@ownedViewpoints[name='']/@ownedRepresentations[name='Method%20Diagram']/@defaultLayer/@nodeMappings[name='FrontControllerMethod'] //@ownedViewpoints[name='']/@ownedRepresentations[name='Method%20Diagram']/@defaultLayer/@nodeMappings[name='DAOMethod'] //@ownedViewpoints[name='']/@ownedRepresentations[name='Method%20Diagram']/@defaultLayer/@nodeMappings[name='DomainMethod']" targetFinderExpression="aql:self.owner">
           <style targetArrow="NoDecoration" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
@@ -1180,6 +1402,45 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWork" domainClass="FrameworkProfile" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <containerMappings name="TagLib" semanticCandidatesExpression="feature:eAllContents" domainClass="TagLib" childrenPresentation="List">
+          <subNodeMappings name="Tag" semanticCandidatesExpression="feature:eAllContents" domainClass="Tag">
+            <style xsi:type="style:DotDescription" showIcon="false" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Tags">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="TagLib" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWork']/@defaultLayer/@containerMappings[name='TagLib']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.TagLib" referenceName="packagedElement">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New TagLib"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Tag" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWork']/@defaultLayer/@containerMappings[name='TagLib']/@subNodeMappings[name='Tag']" iconPath="/org.eclipse.acceleo.model.edit/icons/full/obj16/Variable.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.Tag" referenceName="packagedElement">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Tag"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
       </defaultLayer>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="br.ufes.inf.nemo.FrameWeb_Martins2015.design.Extend"/>

@@ -38,6 +38,12 @@
         <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="formRelator" methodType="void"/>
         <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="salvarRelator" methodType="void"/>
       </packagedElement>
+      <packagedElement xsi:type="frameweb:ServiceControllerAssociation" memberEnd="//@compose.0/Controller%20/@packagedElement.1/Source //@compose.0/Controller%20/@packagedElement.1/Target">
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/Controller%20/@packagedElement.1/Source"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/Controller%20/@packagedElement.1/Target"/>
+        <ownedEnd name="Source" type="//@compose.0/Controller%20/AfastamentoController" association="//@compose.0/Controller%20/@packagedElement.1"/>
+        <ownedEnd name="Target" type="//@compose.2/Application%20Package/AplAfastamento" association="//@compose.0/Controller%20/@packagedElement.1"/>
+      </packagedElement>
     </packagedElement>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" name="" client="//@compose.0/View%20Cadastrar%20Afastamento/header" supplier="//@compose.0/Controller%20/AfastamentoController" method="//@compose.0/Controller%20/AfastamentoController/formulario"/>
     <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.0/Controller%20/AfastamentoController" supplier="//@compose.0/View%20Cadastrar%20Afastamento/index" resultMethod="//@compose.0/Controller%20/AfastamentoController/salvar" result="index">
@@ -65,9 +71,6 @@
       <resultDependencyConstraint/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.0/View%20Consultar%20Afastamento/formBusca" supplier="//@compose.0/Controller%20/AfastamentoController" method="//@compose.0/Controller%20/AfastamentoController/mostrar"/>
-    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.0/Controller%20/AfastamentoController" supplier="//@compose.0/View%20Consultar%20Afastamento/mostrar" resultMethod="//@compose.0/Controller%20/AfastamentoController/mostrar" result="mostrar">
-      <resultDependencyConstraint/>
-    </packagedElement>
   </compose>
   <compose xsi:type="frameweb:PersistenceModel" name="Persistence Model">
     <packagedElement xsi:type="frameweb:PersistencePackage" name="Nucleo">
@@ -115,7 +118,7 @@
       <packagedElement xsi:type="frameweb:DAORealization" client="//@compose.1/Nucleo/ParecerDAOJPA" supplier="//@compose.1/Nucleo/ParecerDAO"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:PersistencePackage" name="Secretaria">
-      <packagedElement xsi:type="frameweb:DAOInterface" name="PessoaDAo"/>
+      <packagedElement xsi:type="frameweb:DAOInterface" name="PessoaDAO"/>
       <packagedElement xsi:type="frameweb:DAOClass" name="PessoaDAOJPA">
         <ownedOperation xsi:type="frameweb:DAOMethod" name="buscaId" visibility="public" methodType="Pessoa">
           <ownedParameter name="id_pessoa">
@@ -134,7 +137,7 @@
         </ownedOperation>
         <ownedOperation xsi:type="frameweb:DAOMethod" name="listaProfessores" methodType="List&lt;Pessoa>"/>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:DAORealization" client="//@compose.1/Secretaria/PessoaDAOJPA" supplier="//@compose.1/Secretaria/PessoaDAo"/>
+      <packagedElement xsi:type="frameweb:DAORealization" client="//@compose.1/Secretaria/PessoaDAOJPA" supplier="//@compose.1/Secretaria/PessoaDAO"/>
       <packagedElement xsi:type="frameweb:DAOInterface" name="MandatoDAO"/>
       <packagedElement xsi:type="frameweb:DAOClass" name="MandatoDAOJPA">
         <ownedOperation xsi:type="frameweb:DAOMethod" name="buscaId" methodType="Mandato">
@@ -159,7 +162,7 @@
         </ownedOperation>
       </packagedElement>
       <packagedElement xsi:type="frameweb:DAORealization" client="//@compose.1/Secretaria/DocumentoDAOJPA" supplier="//@compose.1/Secretaria/DocumentoDAO"/>
-      <packagedElement xsi:type="frameweb:DAOInterface" name="ParentescoDao"/>
+      <packagedElement xsi:type="frameweb:DAOInterface" name="ParentescoDAO"/>
       <packagedElement xsi:type="frameweb:DAOClass" name="ParentescoDAOJPA">
         <ownedOperation xsi:type="frameweb:DAOMethod" name="buscaId" methodType="Parentesco">
           <ownedParameter name="id_parentesco">
@@ -171,16 +174,30 @@
           <ownedParameter name="dois" type="//@compose.3/Domain%20Package/Pessoa"/>
         </ownedOperation>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:DAORealization" client="//@compose.1/Secretaria/ParentescoDAOJPA" supplier="//@compose.1/Secretaria/ParentescoDao"/>
+      <packagedElement xsi:type="frameweb:DAORealization" client="//@compose.1/Secretaria/ParentescoDAOJPA" supplier="//@compose.1/Secretaria/ParentescoDAO"/>
     </packagedElement>
   </compose>
   <compose xsi:type="frameweb:ApplicationModel" name="Application Model">
     <packagedElement xsi:type="frameweb:ApplicationPackage" name="Application Package">
       <packagedElement xsi:type="frameweb:ServiceInterface" name="AplAfastamento"/>
       <packagedElement xsi:type="frameweb:ServiceClass" name="AplAfastamentoImp">
-        <ownedOperation xsi:type="frameweb:ServiceMethod" name="salvar" methodType="void"/>
+        <ownedOperation xsi:type="frameweb:ServiceMethod" name="salvar" methodType="void">
+          <ownedParameter name="P1">
+            <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/int"/>
+          </ownedParameter>
+        </ownedOperation>
       </packagedElement>
       <packagedElement xsi:type="frameweb:ServiceRealization" client="//@compose.2/Application%20Package/AplAfastamentoImp" supplier="//@compose.2/Application%20Package/AplAfastamento"/>
+      <packagedElement xsi:type="frameweb:DAOServiceAssociation" memberEnd="//@compose.2/Application%20Package/@packagedElement.3/Source //@compose.2/Application%20Package/@packagedElement.3/Target" navigableOwnedEnd="//@compose.2/Application%20Package/@packagedElement.3/Source">
+        <ownedEnd name="Source" type="//@compose.2/Application%20Package/AplAfastamentoImp" association="//@compose.2/Application%20Package/@packagedElement.3"/>
+        <ownedEnd name="Target" type="//@compose.1/Nucleo/AfastamentoDAO" association="//@compose.2/Application%20Package/@packagedElement.3"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DAOServiceAssociation" memberEnd="//@compose.2/Application%20Package/@packagedElement.4/Source //@compose.2/Application%20Package/@packagedElement.4/Target">
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.2/Application%20Package/@packagedElement.4/Source"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.2/Application%20Package/@packagedElement.4/Target"/>
+        <ownedEnd name="Source" type="//@compose.2/Application%20Package/AplAfastamentoImp" association="//@compose.2/Application%20Package/@packagedElement.4"/>
+        <ownedEnd name="Target" type="//@compose.1/Secretaria/PessoaDAO" association="//@compose.2/Application%20Package/@packagedElement.4"/>
+      </packagedElement>
     </packagedElement>
   </compose>
   <compose xsi:type="frameweb:EntityModel" name="Entity Model">
