@@ -3,6 +3,7 @@
 package frameweb.provider;
 
 
+import frameweb.FramewebPackage;
 import frameweb.ResultConstraint;
 
 import java.util.Collection;
@@ -11,8 +12,11 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.uml2.uml.UMLPackage;
 
 /**
@@ -43,8 +47,100 @@ public class ResultConstraintItemProvider extends NavigationConstraintItemProvid
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addExecutePropertyDescriptor(object);
+			addAjaxPropertyDescriptor(object);
+			addResultPropertyDescriptor(object);
+			addRenderPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Execute feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addExecutePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ResultConstraint_execute_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ResultConstraint_execute_feature", "_UI_ResultConstraint_type"),
+				 FramewebPackage.Literals.RESULT_CONSTRAINT__EXECUTE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Ajax feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAjaxPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ResultConstraint_ajax_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ResultConstraint_ajax_feature", "_UI_ResultConstraint_type"),
+				 FramewebPackage.Literals.RESULT_CONSTRAINT__AJAX,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Result feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addResultPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ResultConstraint_result_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ResultConstraint_result_feature", "_UI_ResultConstraint_type"),
+				 FramewebPackage.Literals.RESULT_CONSTRAINT__RESULT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Render feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRenderPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ResultConstraint_render_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ResultConstraint_render_feature", "_UI_ResultConstraint_type"),
+				 FramewebPackage.Literals.RESULT_CONSTRAINT__RENDER,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -83,6 +179,15 @@ public class ResultConstraintItemProvider extends NavigationConstraintItemProvid
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(ResultConstraint.class)) {
+			case FramewebPackage.RESULT_CONSTRAINT__EXECUTE:
+			case FramewebPackage.RESULT_CONSTRAINT__AJAX:
+			case FramewebPackage.RESULT_CONSTRAINT__RESULT:
+			case FramewebPackage.RESULT_CONSTRAINT__RENDER:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

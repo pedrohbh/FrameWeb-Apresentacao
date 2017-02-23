@@ -1996,6 +1996,42 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getResultConstraint_Execute() {
+		return (EAttribute)resultConstraintEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getResultConstraint_Ajax() {
+		return (EAttribute)resultConstraintEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getResultConstraint_Result() {
+		return (EAttribute)resultConstraintEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getResultConstraint_Render() {
+		return (EAttribute)resultConstraintEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMethodConstraint() {
 		return methodConstraintEClass;
 	}
@@ -3465,6 +3501,10 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		pageConstraintEClass = createEClass(PAGE_CONSTRAINT);
 
 		resultConstraintEClass = createEClass(RESULT_CONSTRAINT);
+		createEAttribute(resultConstraintEClass, RESULT_CONSTRAINT__EXECUTE);
+		createEAttribute(resultConstraintEClass, RESULT_CONSTRAINT__AJAX);
+		createEAttribute(resultConstraintEClass, RESULT_CONSTRAINT__RESULT);
+		createEAttribute(resultConstraintEClass, RESULT_CONSTRAINT__RENDER);
 
 		methodConstraintEClass = createEClass(METHOD_CONSTRAINT);
 
@@ -4001,6 +4041,10 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEClass(pageConstraintEClass, PageConstraint.class, "PageConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(resultConstraintEClass, ResultConstraint.class, "ResultConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getResultConstraint_Execute(), theEcorePackage.getEString(), "execute", "@this", 0, 1, ResultConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getResultConstraint_Ajax(), ecorePackage.getEBoolean(), "ajax", "false", 0, 1, ResultConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getResultConstraint_Result(), theTypesPackage.getString(), "result", null, 0, 1, ResultConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getResultConstraint_Render(), theEcorePackage.getEString(), "render", "@none", 0, 1, ResultConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(methodConstraintEClass, MethodConstraint.class, "MethodConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -4381,8 +4425,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		addEEnumLiteral(cascadeEEnum, Cascade.ALL);
 
 		initEEnum(fetchEEnum, Fetch.class, "Fetch");
-		addEEnumLiteral(fetchEEnum, Fetch.EAGER);
 		addEEnumLiteral(fetchEEnum, Fetch.LAZY);
+		addEEnumLiteral(fetchEEnum, Fetch.EAGER);
 
 		initEEnum(frameworkCategoryListEEnum, FrameworkCategoryList.class, "FrameworkCategoryList");
 		addEEnumLiteral(frameworkCategoryListEEnum, FrameworkCategoryList.FRONT_CONTROLLER);

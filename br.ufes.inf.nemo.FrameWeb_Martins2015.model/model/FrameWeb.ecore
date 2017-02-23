@@ -110,8 +110,8 @@
     <eLiterals name="all" value="5"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Fetch">
-    <eLiterals name="eager"/>
     <eLiterals name="lazy" value="1"/>
+    <eLiterals name="eager"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Page" eSuperTypes="#//NavigationClass">
     <eStructuralFeatures xsi:type="ecore:EReference" name="pageTagLib" upperBound="-1"
@@ -288,7 +288,15 @@
   <eClassifiers xsi:type="ecore:EClass" name="NavigationConstraint" abstract="true"
       eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Constraint"/>
   <eClassifiers xsi:type="ecore:EClass" name="PageConstraint" eSuperTypes="#//NavigationConstraint"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ResultConstraint" eSuperTypes="#//NavigationConstraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResultConstraint" eSuperTypes="#//NavigationConstraint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="execute" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
+        defaultValueLiteral="@this"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ajax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="result" eType="ecore:EDataType platform:/plugin/org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="render" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
+        defaultValueLiteral="@none"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MethodConstraint" eSuperTypes="#//NavigationConstraint"/>
   <eClassifiers xsi:type="ecore:EClass" name="ChainingConstraint" eSuperTypes="#//NavigationConstraint"/>
   <eClassifiers xsi:type="ecore:EClass" name="NavigationGeneralization" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>

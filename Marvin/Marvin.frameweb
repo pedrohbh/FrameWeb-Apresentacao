@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frameweb:FramewebProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <compose xsi:type="frameweb:EntityModel" name="Entity Model">
+    <packagedElement xsi:type="frameweb:DomainPackage" name="Domain Package">
+      <packagedElement xsi:type="frameweb:DomainClass" name="Publication">
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="title" visibility="protected">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="year" visibility="protected">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/int"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="pages" visibility="protected">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="doi" visibility="protected">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="publisher" visibility="protected">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainClass" name="Academic">
+        <generalization xsi:type="frameweb:DomainGeneralization" generalizationSet="//@compose.0/Domain%20Package/Person.1"/>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="shortName" visibility="private">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="email" visibility="private">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="password" visibility="private">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="lattesId" visibility="private">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/long"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="passwordCode" visibility="private">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="telephones" visibility="private"/>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="roles" visibility="private"/>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="creationDate" visibility="private">
+          <type xsi:type="uml:Class" href="JAVA.frameweb#//@compose.0/Calendar"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="lastUpdate" visibility="private">
+          <type xsi:type="uml:Class" href="JAVA.frameweb#//@compose.0/Calendar"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="lastLoginDate" visibility="private">
+          <type xsi:type="uml:Class" href="JAVA.frameweb#//@compose.0/Calendar"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainAssociation" name="" memberEnd="//@compose.0/Domain%20Package/@packagedElement.2/Source //@compose.0/Domain%20Package/@packagedElement.2/Target">
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/Domain%20Package/@packagedElement.2/Source"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/Domain%20Package/@packagedElement.2/Target"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/Domain%20Package/Publication" association="//@compose.0/Domain%20Package/@packagedElement.2">
+          <lowerValue xsi:type="uml:LiteralInteger"/>
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
+        </ownedEnd>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/Domain%20Package/Academic" association="//@compose.0/Domain%20Package/@packagedElement.2"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainClass" name="Person" powertypeExtent="//@compose.0/Domain%20Package/Person.1">
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="name" visibility="protected">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="birthDate" visibility="protected">
+          <type xsi:type="uml:Class" href="JAVA.frameweb#//@compose.0/Calendar"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="gender" visibility="protected">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/char"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainGeneralizationSet" name="Person" powertype="//@compose.0/Domain%20Package/Person" generalization="//@compose.0/Domain%20Package/Academic/@generalization.0"/>
+      <packagedElement xsi:type="frameweb:DomainClass" name="Telephone">
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="number" visibility="protected" size="25">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+          <defaultValue xsi:type="uml:LiteralString" value=""/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="type" visibility="protected">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainAssociation" name="" memberEnd="//@compose.0/Domain%20Package/@packagedElement.6/Source //@compose.0/Domain%20Package/@packagedElement.6/Target">
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/Domain%20Package/@packagedElement.6/Source"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/Domain%20Package/@packagedElement.6/Target" cascade="all"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/Domain%20Package/Academic" association="//@compose.0/Domain%20Package/@packagedElement.6"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/Domain%20Package/Telephone" association="//@compose.0/Domain%20Package/@packagedElement.6">
+          <lowerValue xsi:type="uml:LiteralInteger"/>
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainClass" name="ContactType">
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="type" visibility="protected">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainAssociation" name="" memberEnd="//@compose.0/Domain%20Package/@packagedElement.8/Source //@compose.0/Domain%20Package/@packagedElement.8/Target">
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/Domain%20Package/@packagedElement.8/Source"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/Domain%20Package/@packagedElement.8/Target"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/Domain%20Package/Telephone" association="//@compose.0/Domain%20Package/@packagedElement.8">
+          <lowerValue xsi:type="uml:LiteralInteger"/>
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
+        </ownedEnd>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/Domain%20Package/ContactType" association="//@compose.0/Domain%20Package/@packagedElement.8"/>
+      </packagedElement>
+    </packagedElement>
+  </compose>
+</frameweb:FramewebProject>

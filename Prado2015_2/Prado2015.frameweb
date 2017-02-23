@@ -47,10 +47,10 @@
     </packagedElement>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" name="" client="//@compose.0/View%20Cadastrar%20Afastamento/header" supplier="//@compose.0/Controller%20/AfastamentoController" method="//@compose.0/Controller%20/AfastamentoController/formulario"/>
     <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.0/Controller%20/AfastamentoController" supplier="//@compose.0/View%20Cadastrar%20Afastamento/index" resultMethod="//@compose.0/Controller%20/AfastamentoController/salvar" result="index">
-      <resultDependencyConstraint name="method=, result="/>
+      <resultDependencyConstraint name="" result="index"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.0/Controller%20/AfastamentoController" supplier="//@compose.0/View%20Cadastrar%20Afastamento/formulario" resultMethod="//@compose.0/Controller%20/AfastamentoController/formulario" result="formulario">
-      <resultDependencyConstraint/>
+      <resultDependencyConstraint result="formulario"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.0/View%20Cadastrar%20Afastamento/formularioCadastro" supplier="//@compose.0/Controller%20/AfastamentoController" method="//@compose.0/Controller%20/AfastamentoController/salvar"/>
     <packagedElement xsi:type="frameweb:ViewPackage" name="View Consultar Afastamento">
@@ -291,7 +291,7 @@
         </ownedEnd>
       </packagedElement>
       <packagedElement xsi:type="frameweb:DomainAssociation" name="Exerce" memberEnd="//@compose.3/Domain%20Package/Exerce/Source //@compose.3/Domain%20Package/Exerce/Target">
-        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.3/Domain%20Package/Exerce/Source"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.3/Domain%20Package/Exerce/Source" collection="map" order="columnNameAsc" cascade="merge"/>
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.3/Domain%20Package/Exerce/Target"/>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.3/Domain%20Package/Professor" association="//@compose.3/Domain%20Package/Exerce"/>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.3/Domain%20Package/Mandato" association="//@compose.3/Domain%20Package/Exerce">

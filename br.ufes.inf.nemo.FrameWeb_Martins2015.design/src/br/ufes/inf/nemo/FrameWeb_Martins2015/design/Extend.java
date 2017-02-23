@@ -5,6 +5,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreEList;
+import java.util.ArrayList;
 
 import br.ufes.inf.nemo.FrameWeb_Martins2015.*;
 
@@ -84,17 +85,66 @@ public class Extend {
 		if(upper_value==-1){
 			return lower_value + "..*";
 		}
-		
 		return lower_value + ".." + upper_value;
 	}
 	
-	public String printVisibility(EObject o){
-		
+public String printConstraint(EObject o){
+	
+	ArrayList<String> result = new ArrayList<>();
+	
+	//COLLECTION
+	EStructuralFeature collection = o.eClass().getEStructuralFeature("collection");
+	String collection_value = o.eGet(collection).toString();	
+	
+	if(!collection_value.equals("set")){
+		result.add("collection=" + collection_value);
+	}
+	//CASCADE
+	EStructuralFeature cascade = o.eClass().getEStructuralFeature("cascade");
+	String cascade_value = o.eGet(cascade).toString();	
+	
+	if(!cascade_value.equals("remove")){
+		result.add("cascade=" + cascade_value);
+	}
+	//ORDER
+	EStructuralFeature order = o.eClass().getEStructuralFeature("order");
+	String order_value = o.eGet(order).toString();	
+	
+	if(!order_value.equals("natural")){
+		result.add("order=" + order_value);
+	}
+	//FETCH
+	EStructuralFeature fetch = o.eClass().getEStructuralFeature("fetch");
+	String fetch_value = o.eGet(fetch).toString();	
+	
+	if(!fetch_value.equals("lazy")){
+		result.add("fetch=" + fetch_value);
+	}
+	
+		if(!result.isEmpty()){			
+			String retorno = " {";
+			
+			for(int i=0;i<result.size();i++){
+				retorno = retorno + result.get(i);
+				
+				if(i==(result.size()-1)){
+					retorno = retorno + "}";
+				}else{
+					retorno = retorno + ",\n";
+				}
+			}
+			
+			return retorno;
+		}else{
+			return "";
+		}
+	}
+	
+	
+	
+	public String printVisibility(EObject o){	
 		EStructuralFeature visibility_feature = o.eClass().getEAllAttributes().get(2);
 		String visibility_value = o.eGet(visibility_feature).toString();
-		
-		
-		
 		if(visibility_value=="public"){
 			return " + ";
 		}
@@ -107,9 +157,6 @@ public class Extend {
 		if(visibility_value=="protected"){
 			return " # ";
 		}
-		
-		
-		
 		return " ? ";
 	}
 	

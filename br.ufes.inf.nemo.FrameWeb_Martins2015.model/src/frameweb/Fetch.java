@@ -19,16 +19,6 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Fetch implements Enumerator {
 	/**
-	 * The '<em><b>Eager</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #EAGER_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	EAGER(0, "eager", "eager"),
-
-	/**
 	 * The '<em><b>Lazy</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -36,22 +26,15 @@ public enum Fetch implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	LAZY(1, "lazy", "lazy");
-
-	/**
-	 * The '<em><b>Eager</b></em>' literal value.
+	LAZY(1, "lazy", "lazy"), /**
+	 * The '<em><b>Eager</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Eager</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #EAGER
-	 * @model name="eager"
+	 * @see #EAGER_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int EAGER_VALUE = 0;
+	EAGER(0, "eager", "eager");
 
 	/**
 	 * The '<em><b>Lazy</b></em>' literal value.
@@ -69,6 +52,21 @@ public enum Fetch implements Enumerator {
 	public static final int LAZY_VALUE = 1;
 
 	/**
+	 * The '<em><b>Eager</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Eager</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #EAGER
+	 * @model name="eager"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EAGER_VALUE = 0;
+
+	/**
 	 * An array of all the '<em><b>Fetch</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,8 +74,8 @@ public enum Fetch implements Enumerator {
 	 */
 	private static final Fetch[] VALUES_ARRAY =
 		new Fetch[] {
-			EAGER,
 			LAZY,
+			EAGER,
 		};
 
 	/**
@@ -134,8 +132,8 @@ public enum Fetch implements Enumerator {
 	 */
 	public static Fetch get(int value) {
 		switch (value) {
-			case EAGER_VALUE: return EAGER;
 			case LAZY_VALUE: return LAZY;
+			case EAGER_VALUE: return EAGER;
 		}
 		return null;
 	}

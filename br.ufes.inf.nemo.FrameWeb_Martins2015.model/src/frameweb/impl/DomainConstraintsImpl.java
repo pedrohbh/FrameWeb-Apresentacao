@@ -58,7 +58,7 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Fetch FETCH_EDEFAULT = Fetch.EAGER;
+	protected static final Fetch FETCH_EDEFAULT = Fetch.LAZY;
 	/**
 	 * The cached value of the '{@link #getFetch() <em>Fetch</em>}' attribute.
 	 * <!-- begin-user-doc -->

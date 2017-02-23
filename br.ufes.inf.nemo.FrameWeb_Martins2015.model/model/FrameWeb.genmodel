@@ -47,8 +47,8 @@
       <genEnumLiterals ecoreEnumLiteral="FrameWeb.ecore#//Cascade/all"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="FrameWeb.ecore#//Fetch">
-      <genEnumLiterals ecoreEnumLiteral="FrameWeb.ecore#//Fetch/eager"/>
       <genEnumLiterals ecoreEnumLiteral="FrameWeb.ecore#//Fetch/lazy"/>
+      <genEnumLiterals ecoreEnumLiteral="FrameWeb.ecore#//Fetch/eager"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="FrameWeb.ecore#//FrameworkCategoryList">
       <genEnumLiterals ecoreEnumLiteral="FrameWeb.ecore#//FrameworkCategoryList/FrontController"/>
@@ -209,7 +209,12 @@
     <genClasses ecoreClass="FrameWeb.ecore#//ResultSet"/>
     <genClasses ecoreClass="FrameWeb.ecore#//NavigationConstraint"/>
     <genClasses ecoreClass="FrameWeb.ecore#//PageConstraint"/>
-    <genClasses ecoreClass="FrameWeb.ecore#//ResultConstraint"/>
+    <genClasses ecoreClass="FrameWeb.ecore#//ResultConstraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//ResultConstraint/execute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//ResultConstraint/ajax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//ResultConstraint/result"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//ResultConstraint/render"/>
+    </genClasses>
     <genClasses ecoreClass="FrameWeb.ecore#//MethodConstraint"/>
     <genClasses ecoreClass="FrameWeb.ecore#//ChainingConstraint"/>
     <genClasses ecoreClass="FrameWeb.ecore#//NavigationGeneralization"/>

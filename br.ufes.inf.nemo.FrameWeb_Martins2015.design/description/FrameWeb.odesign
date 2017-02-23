@@ -19,7 +19,7 @@
         <edgeMappings name="ResultDependency Line" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Result%20Constraint']" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Page%20Node']" targetFinderExpression="feature:supplier" sourceFinderExpression="feature:client" domainClass="ResultDependency" useDomainElement="true" reconnections="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Reconnect%20Result%20Dependency']">
           <style lineStyle="dash" sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
-            <centerLabelStyleDescription showIcon="false" labelExpression="aql:'{method='+self.resultMethod.name+', result='+self.result+'}'">
+            <centerLabelStyleDescription showIcon="false" labelExpression="aql:'{method='+self.resultMethod.name+', result='+self.resultDependencyConstraint.result+'}'">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
@@ -396,7 +396,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWebEntityModel" domainClass="EntityModel">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWebEntityModel" domainClass="EntityModel" enablePopupBars="true">
       <defaultLayer name="Default">
         <edgeMappings name="DomainGeneralizationSet" deletionDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Delete%20Generalization%20Set']" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']" targetFinderExpression="aql:self.powertype" sourceFinderExpression="aql:self.generalization.owner" domainClass="DomainGeneralizationSet" useDomainElement="true">
           <style targetArrow="InputClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
@@ -406,13 +406,13 @@
         <edgeMappings name="DomainAssociation" deletionDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Delete%20Association']" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Class']" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Association%20Click']" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']" targetFinderExpression="aql:self.memberEnd->at(2).type" sourceFinderExpression="aql:self.memberEnd->at(1).type" domainClass="DomainAssociation" useDomainElement="true" reconnections="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Reconnect%20Navigation%20Association']">
           <style targetArrow="InputFillClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
-            <beginLabelStyleDescription showIcon="false" labelExpression="aql:self.memberEnd->at(1).printCardinalidade()">
+            <beginLabelStyleDescription showIcon="false" labelExpression="aql:self.memberEnd->at(1).printCardinalidade() + self.ownedRule->at(1).printConstraint()">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </beginLabelStyleDescription>
             <centerLabelStyleDescription showIcon="false" labelExpression="aql:self.name">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
-            <endLabelStyleDescription showIcon="false" labelExpression="aql:self.memberEnd->at(2).printCardinalidade()">
+            <endLabelStyleDescription showIcon="false" labelExpression="aql:self.memberEnd->at(2).printCardinalidade() + self.ownedRule->at(2).printConstraint()">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </endLabelStyleDescription>
           </style>
@@ -686,7 +686,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWebPersistenceModel" domainClass="PersistenceModel">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWebPersistenceModel" domainClass="PersistenceModel" enablePopupBars="true">
       <defaultLayer name="Default">
         <edgeMappings name="Realization Line" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@containerMappings[name='PersistencePackage']/@subContainerMappings[name='DAOClass']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@containerMappings[name='PersistencePackage']/@subNodeMappings[name='DAOInterface']" targetFinderExpression="feature:supplier" sourceFinderExpression="feature:client" domainClass="DAORealization" useDomainElement="true" reconnections="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Reconnect%20Front%20Controller%20Dependency']">
           <style targetArrow="InputClosedArrow" sizeComputationExpression="2">
@@ -854,7 +854,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWebApplicationModel" domainClass="ApplicationModel">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWebApplicationModel" domainClass="ApplicationModel" enablePopupBars="true">
       <defaultLayer name="Default">
         <edgeMappings name="Service Realization Line" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subNodeMappings[name='ServiceInterface']" targetFinderExpression="feature:supplier" sourceFinderExpression="feature:client" domainClass="ServiceRealization" useDomainElement="true" reconnections="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Reconnect%20Front%20Controller%20Dependency']">
           <style targetArrow="InputClosedArrow" sizeComputationExpression="2">
@@ -1124,7 +1124,7 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWeb Project" domainClass="FramewebProject" enablePopupBars="true">
       <defaultLayer name="Default">
-        <containerMappings name="NavigationModel" navigationDescriptions="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='NavigationModel']" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='GoToDiagramNavigation']" domainClass="NavigationModel">
+        <containerMappings name="NavigationModel" navigationDescriptions="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='NavigationModel']" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='GoToDiagramNavigation']" domainClass="NavigationModel">
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1132,7 +1132,7 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
           </style>
         </containerMappings>
-        <containerMappings name="EntityModel" navigationDescriptions="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='EntityModel']" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='GoToDiagramEntity']" domainClass="EntityModel">
+        <containerMappings name="EntityModel" navigationDescriptions="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='EntityModel']" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='GoToDiagramEntity']" domainClass="EntityModel">
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1140,7 +1140,7 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
           </style>
         </containerMappings>
-        <containerMappings name="PersistenceModel" navigationDescriptions="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='PersistenceModel']" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='GoToDiagramPersistence']" domainClass="PersistenceModel">
+        <containerMappings name="PersistenceModel" navigationDescriptions="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='PersistenceModel']" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='GoToDiagramPersistence']" domainClass="PersistenceModel">
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1148,7 +1148,7 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
           </style>
         </containerMappings>
-        <containerMappings name="ApplicationModel" navigationDescriptions="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='ApplicationModel']" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='GoToDiagramApplication']" domainClass="ApplicationModel">
+        <containerMappings name="ApplicationModel" navigationDescriptions="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='ApplicationModel']" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='GoToDiagramApplication']" domainClass="ApplicationModel">
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1450,6 +1450,7 @@
     <pages identifier="ParameterMenuDAO" labelExpression="ParameterMenu" domainClass="frameweb.DAOMethod" groups="//@extensions.0/@groups.1"/>
     <pages identifier="ParameterMenuDomain" labelExpression="ParameterMenu" domainClass="frameweb.DomainMethod" groups="//@extensions.0/@groups.2"/>
     <pages identifier="DomainAssociation" labelExpression="Domain Association" domainClass="frameweb.DomainAssociation" groups="//@extensions.0/@groups.3"/>
+    <pages identifier="ResultDependency" labelExpression="ResultDependency" domainClass="frameweb.ResultDependency" groups="//@extensions.0/@groups.4"/>
     <groups identifier="FrontControllerParameters" labelExpression="Parameters" domainClass="FrontControllerMethod" semanticCandidateExpression="aql:self">
       <controls xsi:type="properties:LabelDescription" identifier="Double Click on Method to Edit Parameters" labelExpression="Double Click on Method to Edit Parameters"/>
     </groups>
@@ -1461,6 +1462,15 @@
     </groups>
     <groups identifier="DomainAssociation" labelExpression="Association" domainClass="DomainAssociation" semanticCandidateExpression="aql:self">
       <controls xsi:type="properties:LabelDescription" identifier="Double Click on Association to edit properties of his elements" labelExpression="Double Click on Association to edit properties of his elements"/>
+    </groups>
+    <groups identifier="ResultDependency" labelExpression="Group" domainClass="ResultDependency" semanticCandidateExpression="aql:self">
+      <controls xsi:type="properties:TextDescription" identifier="resulttext" labelExpression="Result:" valueExpression="aql:self.resultDependencyConstraint.result">
+        <initialOperation>
+          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.resultDependencyConstraint">
+            <subModelOperations xsi:type="tool_1:SetValue" featureName="result" valueExpression="var:newValue"/>
+          </firstModelOperations>
+        </initialOperation>
+      </controls>
     </groups>
   </extensions>
 </description:Group>
