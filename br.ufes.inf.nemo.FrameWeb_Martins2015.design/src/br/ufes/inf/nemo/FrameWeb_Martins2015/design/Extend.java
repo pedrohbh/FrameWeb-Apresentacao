@@ -140,8 +140,6 @@ public String printConstraint(EObject o){
 		}
 	}
 	
-	
-	
 	public String printVisibility(EObject o){	
 		EStructuralFeature visibility_feature = o.eClass().getEAllAttributes().get(2);
 		String visibility_value = o.eGet(visibility_feature).toString();
@@ -160,6 +158,24 @@ public String printConstraint(EObject o){
 		return " ? ";
 	}
 	
+	public String printSize(EObject o){
+		//return o.eClass().getEAllAttributes().toString();
+		EStructuralFeature visibility_feature = o.eClass().getEAllAttributes().get(16);
+		
+		String size = (o.eGet(visibility_feature).toString());
+		if(!size.equals("0")){
+			return " (size=" + size + ")";
+		}else{
+			return null;
+		}
+	}
+	//aql:self.printVisibility() + self.name + ' : ' + self.type.name + '(size=' + self.size + ')' 
+	
+	public boolean print_isAbstract(EObject o){
+		EStructuralFeature abstract_feature = o.eClass().getEAllAttributes().get(6); //OLHAR NO MODISCO O NUMERO - 1
+		
+		return (boolean) o.eGet(abstract_feature);
+	}
 	
 	
 }
