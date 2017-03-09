@@ -18,7 +18,9 @@
         <ownedAttribute xsi:type="frameweb:DomainAttribute" name="publisher" visibility="protected">
           <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
         </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="authors" visibility="private"/>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="authors" visibility="private">
+          <type xsi:type="uml:Class" href="JAVA.frameweb#//@compose.0/List"/>
+        </ownedAttribute>
         <ownedOperation xsi:type="frameweb:DomainMethod" name="toBibTex" isAbstract="true"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:DomainAssociation" name="" memberEnd="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/@packagedElement.1/Source //@compose.0/br.ufes.inf.nemo.marvin.research.domain/@packagedElement.1/Target">
@@ -338,7 +340,9 @@
     <packagedElement xsi:type="frameweb:ControllerPackage" name="br.ufes.inf.nemo.marvin.research.controller">
       <packagedElement xsi:type="frameweb:FrontControllerClass" name="GenerateBibliographyController ">
         <ownedAttribute xsi:type="frameweb:IOParameter" name="configuration" visibility="private" type="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/BibGenConfiguration"/>
-        <ownedAttribute xsi:type="frameweb:IOParameter" name="researchers" visibility="private" type="//@compose.0/package%20br.ufes.inf.nemo.marvin.core.domain/Academic"/>
+        <ownedAttribute xsi:type="frameweb:IOParameter" name="researchers" visibility="private">
+          <type xsi:type="uml:Class" href="JAVA.frameweb#//@compose.0/List"/>
+        </ownedAttribute>
         <ownedAttribute xsi:type="frameweb:IOParameter" name="selectedResearcher" visibility="private" type="//@compose.0/package%20br.ufes.inf.nemo.marvin.core.domain/Academic"/>
         <ownedAttribute xsi:type="frameweb:IOParameter" name="bibliography" visibility="private">
           <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>

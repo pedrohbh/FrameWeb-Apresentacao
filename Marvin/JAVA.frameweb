@@ -12,5 +12,7 @@
     <packagedElement xsi:type="uml:PrimitiveType" name="Object"/>
     <packagedElement xsi:type="uml:PrimitiveType" name="String"/>
     <packagedElement xsi:type="uml:Class" name="Calendar"/>
+    <packagedElement xsi:type="uml:Class" name="List"/>
+    <packagedElement xsi:type="uml:Class" name="Set"/>
   </compose>
 </frameweb:FramewebProject>
