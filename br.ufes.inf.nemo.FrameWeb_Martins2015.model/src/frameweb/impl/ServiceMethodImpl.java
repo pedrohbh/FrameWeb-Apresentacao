@@ -8,7 +8,9 @@ import frameweb.ServiceMethod;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.uml2.uml.Type;
 import org.eclipse.uml2.uml.internal.impl.OperationImpl;
 
 /**
@@ -26,23 +28,14 @@ import org.eclipse.uml2.uml.internal.impl.OperationImpl;
  */
 public class ServiceMethodImpl extends OperationImpl implements ServiceMethod {
 	/**
-	 * The default value of the '{@link #getMethodType() <em>Method Type</em>}' attribute.
+	 * The cached value of the '{@link #getMethodType() <em>Method Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getMethodType()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String METHOD_TYPE_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getMethodType() <em>Method Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMethodType()
-	 * @generated
-	 * @ordered
-	 */
-	protected String methodType = METHOD_TYPE_EDEFAULT;
+	protected Type methodType;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -68,7 +61,15 @@ public class ServiceMethodImpl extends OperationImpl implements ServiceMethod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getMethodType() {
+	public Type getMethodType() {
+		if (methodType != null && methodType.eIsProxy()) {
+			InternalEObject oldMethodType = (InternalEObject)methodType;
+			methodType = (Type)eResolveProxy(oldMethodType);
+			if (methodType != oldMethodType) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FramewebPackage.SERVICE_METHOD__METHOD_TYPE, oldMethodType, methodType));
+			}
+		}
 		return methodType;
 	}
 
@@ -77,8 +78,17 @@ public class ServiceMethodImpl extends OperationImpl implements ServiceMethod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMethodType(String newMethodType) {
-		String oldMethodType = methodType;
+	public Type basicGetMethodType() {
+		return methodType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMethodType(Type newMethodType) {
+		Type oldMethodType = methodType;
 		methodType = newMethodType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.SERVICE_METHOD__METHOD_TYPE, oldMethodType, methodType));
@@ -93,7 +103,8 @@ public class ServiceMethodImpl extends OperationImpl implements ServiceMethod {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case FramewebPackage.SERVICE_METHOD__METHOD_TYPE:
-				return getMethodType();
+				if (resolve) return getMethodType();
+				return basicGetMethodType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -107,7 +118,7 @@ public class ServiceMethodImpl extends OperationImpl implements ServiceMethod {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case FramewebPackage.SERVICE_METHOD__METHOD_TYPE:
-				setMethodType((String)newValue);
+				setMethodType((Type)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -122,7 +133,7 @@ public class ServiceMethodImpl extends OperationImpl implements ServiceMethod {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case FramewebPackage.SERVICE_METHOD__METHOD_TYPE:
-				setMethodType(METHOD_TYPE_EDEFAULT);
+				setMethodType((Type)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -137,25 +148,9 @@ public class ServiceMethodImpl extends OperationImpl implements ServiceMethod {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case FramewebPackage.SERVICE_METHOD__METHOD_TYPE:
-				return METHOD_TYPE_EDEFAULT == null ? methodType != null : !METHOD_TYPE_EDEFAULT.equals(methodType);
+				return methodType != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (methodType: ");
-		result.append(methodType);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ServiceMethodImpl

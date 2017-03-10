@@ -14,5 +14,6 @@
     <packagedElement xsi:type="uml:Class" name="Calendar"/>
     <packagedElement xsi:type="uml:Class" name="List"/>
     <packagedElement xsi:type="uml:Class" name="Set"/>
+    <packagedElement xsi:type="uml:Class" name="Date"/>
   </compose>
 </frameweb:FramewebProject>

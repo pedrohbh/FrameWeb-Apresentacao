@@ -1546,8 +1546,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFrontControllerMethod_MethodType() {
-		return (EAttribute)frontControllerMethodEClass.getEStructuralFeatures().get(1);
+	public EReference getFrontControllerMethod_MethodType() {
+		return (EReference)frontControllerMethodEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1726,6 +1726,15 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDomainMethod_MethodType() {
+		return (EReference)domainMethodEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDAOAttribute() {
 		return daoAttributeEClass;
 	}
@@ -1744,8 +1753,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getServiceMethod_MethodType() {
-		return (EAttribute)serviceMethodEClass.getEStructuralFeatures().get(0);
+	public EReference getServiceMethod_MethodType() {
+		return (EReference)serviceMethodEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1789,8 +1798,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDAOMethod_MethodType() {
-		return (EAttribute)daoMethodEClass.getEStructuralFeatures().get(0);
+	public EReference getDAOMethod_MethodType() {
+		return (EReference)daoMethodEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3414,7 +3423,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		frontControllerMethodEClass = createEClass(FRONT_CONTROLLER_METHOD);
 		createEAttribute(frontControllerMethodEClass, FRONT_CONTROLLER_METHOD__IS_DEFAULT);
-		createEAttribute(frontControllerMethodEClass, FRONT_CONTROLLER_METHOD__METHOD_TYPE);
+		createEReference(frontControllerMethodEClass, FRONT_CONTROLLER_METHOD__METHOD_TYPE);
 
 		serviceClassEClass = createEClass(SERVICE_CLASS);
 
@@ -3446,11 +3455,12 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		navigationClassEClass = createEClass(NAVIGATION_CLASS);
 
 		domainMethodEClass = createEClass(DOMAIN_METHOD);
+		createEReference(domainMethodEClass, DOMAIN_METHOD__METHOD_TYPE);
 
 		daoAttributeEClass = createEClass(DAO_ATTRIBUTE);
 
 		serviceMethodEClass = createEClass(SERVICE_METHOD);
-		createEAttribute(serviceMethodEClass, SERVICE_METHOD__METHOD_TYPE);
+		createEReference(serviceMethodEClass, SERVICE_METHOD__METHOD_TYPE);
 
 		serviceAttributeEClass = createEClass(SERVICE_ATTRIBUTE);
 
@@ -3459,7 +3469,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		navigationDependencyEClass = createEClass(NAVIGATION_DEPENDENCY);
 
 		daoMethodEClass = createEClass(DAO_METHOD);
-		createEAttribute(daoMethodEClass, DAO_METHOD__METHOD_TYPE);
+		createEReference(daoMethodEClass, DAO_METHOD__METHOD_TYPE);
 
 		domainPackageEClass = createEClass(DOMAIN_PACKAGE);
 
@@ -3954,7 +3964,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		initEClass(frontControllerMethodEClass, FrontControllerMethod.class, "FrontControllerMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFrontControllerMethod_IsDefault(), ecorePackage.getEBoolean(), "isDefault", null, 0, 1, FrontControllerMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFrontControllerMethod_MethodType(), theTypesPackage.getString(), "methodType", null, 0, 1, FrontControllerMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFrontControllerMethod_MethodType(), theUMLPackage.getType(), null, "methodType", null, 0, 1, FrontControllerMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(serviceClassEClass, ServiceClass.class, "ServiceClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3986,11 +3996,12 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEClass(navigationClassEClass, NavigationClass.class, "NavigationClass", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(domainMethodEClass, DomainMethod.class, "DomainMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDomainMethod_MethodType(), theUMLPackage.getType(), null, "methodType", null, 0, 1, DomainMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(daoAttributeEClass, DAOAttribute.class, "DAOAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(serviceMethodEClass, ServiceMethod.class, "ServiceMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getServiceMethod_MethodType(), theTypesPackage.getString(), "methodType", null, 0, 1, ServiceMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getServiceMethod_MethodType(), theUMLPackage.getType(), null, "methodType", null, 0, 1, ServiceMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(serviceAttributeEClass, ServiceAttribute.class, "ServiceAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3999,7 +4010,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEClass(navigationDependencyEClass, NavigationDependency.class, "NavigationDependency", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(daoMethodEClass, DAOMethod.class, "DAOMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDAOMethod_MethodType(), theTypesPackage.getString(), "methodType", null, 0, 1, DAOMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDAOMethod_MethodType(), theUMLPackage.getType(), null, "methodType", null, 0, 1, DAOMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(domainPackageEClass, DomainPackage.class, "DomainPackage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -4474,10 +4485,10 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createCommentsAnnotations();
 		// comments
 		createComments_1Annotations();
-		// http:///org/eclipse/emf/ecore/util/ExtendedMetaData
-		createExtendedMetaDataAnnotations();
 		// http://www.eclipse.org/emf/2002/GenModel
 		createGenModelAnnotations();
+		// http:///org/eclipse/emf/ecore/util/ExtendedMetaData
+		createExtendedMetaDataAnnotations();
 		// duplicates
 		createDuplicatesAnnotations();
 		// http://www.eclipse.org/uml2/2.0.0/UML
@@ -4743,6 +4754,30 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 */
 	protected void createGenModelAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/GenModel";	
+		addAnnotation
+		  (getFrontControllerMethod_MethodType(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The type of the TypedElement.\n<p>From package UML::CommonStructure.</p>"
+		   });	
+		addAnnotation
+		  (getDomainMethod_MethodType(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The type of the TypedElement.\n<p>From package UML::CommonStructure.</p>"
+		   });	
+		addAnnotation
+		  (getServiceMethod_MethodType(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The type of the TypedElement.\n<p>From package UML::CommonStructure.</p>"
+		   });	
+		addAnnotation
+		  (getDAOMethod_MethodType(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The type of the TypedElement.\n<p>From package UML::CommonStructure.</p>"
+		   });	
 		addAnnotation
 		  (propertyEClass, 
 		   source, 

@@ -2,10 +2,13 @@ package br.ufes.inf.nemo.FrameWeb_Martins2015.design;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreEList;
 import java.util.ArrayList;
+
+import javax.lang.model.type.PrimitiveType;
 
 import br.ufes.inf.nemo.FrameWeb_Martins2015.*;
 
@@ -58,10 +61,12 @@ public class Extend {
 		
 		result = result + ")";
 		
-		if(m.eClass().getEStructuralFeature("methodType") != null){
+		methodType = m.eClass().getEStructuralFeature("methodType"); 
+		EObject p = (EObject) m.eGet(methodType);
+		
+		if(p != null){
 			result = result + " : ";
-			methodType = m.eClass().getEStructuralFeature("methodType");
-			methodType_value = m.eGet(methodType).toString();
+			methodType_value = (String) p.eGet(p.eClass().getEStructuralFeature("name"));
 			result = result + methodType_value;
 			}else{
 				result = result + " : " + "void";

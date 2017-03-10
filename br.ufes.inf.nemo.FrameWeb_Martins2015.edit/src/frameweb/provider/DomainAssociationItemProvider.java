@@ -21,7 +21,6 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.uml2.uml.UMLPackage;
-
 import org.eclipse.uml2.uml.edit.providers.AssociationItemProvider;
 
 /**

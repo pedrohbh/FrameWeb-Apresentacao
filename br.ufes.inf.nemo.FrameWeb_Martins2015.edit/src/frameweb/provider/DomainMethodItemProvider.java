@@ -6,6 +6,7 @@ package frameweb.provider;
 import frameweb.DomainMethod;
 import frameweb.FramewebFactory;
 
+import frameweb.FramewebPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -14,6 +15,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import org.eclipse.uml2.uml.UMLPackage;
@@ -48,8 +50,31 @@ public class DomainMethodItemProvider extends OperationItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addMethodTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Method Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMethodTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DomainMethod_methodType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DomainMethod_methodType_feature", "_UI_DomainMethod_type"),
+				 FramewebPackage.Literals.DOMAIN_METHOD__METHOD_TYPE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
