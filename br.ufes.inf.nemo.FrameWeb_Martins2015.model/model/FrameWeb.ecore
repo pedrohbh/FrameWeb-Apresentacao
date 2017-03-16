@@ -140,7 +140,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="IOParameter" eSuperTypes="#//NavigationAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="display" upperBound="-1"
         eType="#//UIComponentField" derived="true" eOpposite="#//UIComponentField/inject"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameterType" eType="ecore:EDataType platform:/plugin/org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="FrameworkCategoryList">
     <eLiterals name="FrontController" literal="FrontController"/>
