@@ -355,6 +355,8 @@
     <packagedElement xsi:type="frameweb:ViewPackage" name="/research/generateBibliography">
       <packagedElement xsi:type="frameweb:Page" name="index.xhtml">
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:UIComponent" name="form">
         <ownedAttribute xsi:type="frameweb:UIComponentField" name="startYear">
@@ -364,16 +366,32 @@
           <type xsi:type="frameweb:Tag" href="Standard_HTML5.frameweb#//HTML5forms_imput/input/inputNumber"/>
         </ownedAttribute>
         <ownedAttribute xsi:type="frameweb:UIComponentField" name="researchers">
-          <type xsi:type="frameweb:Tag" href="Standard_HTML5.frameweb#//HTML5forms_imput/select"/>
+          <type xsi:type="frameweb:Tag" href="MVC_JSF.frameweb#//JSFhtml/selectOneMenu"/>
         </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:NavigationAssociation">
         <ownedEnd xsi:type="frameweb:NavigationCompositionPart"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:Page" name="bibliography.xhtml">
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:UIComponent" name="form"/>
+      <packagedElement xsi:type="frameweb:NavigationAssociation">
+        <ownedEnd xsi:type="frameweb:NavigationCompositionPart"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:UIComponent" name="form">
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="backButton">
+          <type xsi:type="frameweb:Tag" href="Standard_HTML5.frameweb#//HTML5forms_imput/button"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="downloadButton">
+          <type xsi:type="frameweb:Tag" href="Standard_HTML5.frameweb#//HTML5forms_imput/button"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:NavigationAssociation">
+        <ownedEnd xsi:type="frameweb:NavigationCompositionPart"/>
+      </packagedElement>
       <packagedElement xsi:type="frameweb:NavigationAssociation">
         <ownedEnd xsi:type="frameweb:NavigationCompositionPart"/>
       </packagedElement>
@@ -420,6 +438,20 @@
         <ownedEnd name="Source" type="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20" association="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/generateBibliographyService"/>
         <ownedEnd name="Target" type="//@compose.2/br.ufes.inf.nemo.marvin.research.application/GenerateBibliographyService%20" association="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/generateBibliographyService"/>
       </packagedElement>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20" resultMethod="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20/generate" result="">
+      <resultDependencyConstraint/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20" resultMethod="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20/back">
+      <resultDependencyConstraint/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20" resultMethod="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20/startOver">
+      <resultDependencyConstraint/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" name="" supplier="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20" method="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20/back"/>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" supplier="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20" method="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20/getBibliographyFile"/>
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20" supplier="//@compose.3/%2Fresearch%2FgenerateBibliography/bibliography.xhtml" resultMethod="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20/back">
+      <resultDependencyConstraint/>
     </packagedElement>
   </compose>
 </frameweb:FramewebProject>
