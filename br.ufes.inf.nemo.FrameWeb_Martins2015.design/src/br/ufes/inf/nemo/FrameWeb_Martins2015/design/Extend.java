@@ -182,5 +182,16 @@ public String printConstraint(EObject o){
 		return (boolean) o.eGet(abstract_feature);
 	}
 	
+	public String print_resultdependency(EObject o){
+		EStructuralFeature result_feature = o.eClass().getEAllAttributes().get(5); //OLHAR NO MODISCO O NUMERO - 1
+		String result = (String) o.eGet(result_feature);
+		
+		if(!result.isEmpty()){
+			return ", result=" + result + "}"; 
+		}else{
+			return "}";
+		}	
+	}
+	
 	
 }
