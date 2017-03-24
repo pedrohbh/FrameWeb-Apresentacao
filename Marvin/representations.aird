@@ -4616,7 +4616,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@edgeMappings[name='FrontControllerDependency%20Line']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_s4G94BCXEeegTvEC8pKvsQ" name="Invalid feature as name" sourceNode="_eWl_cAXGEeegmIxlnPIV-g" targetNode="_oulZMRCWEeegTvEC8pKvsQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_s4G94BCXEeegTvEC8pKvsQ" name="{method=generate}" sourceNode="_eWl_cAXGEeegmIxlnPIV-g" targetNode="_oulZMRCWEeegTvEC8pKvsQ">
       <target xmi:type="frameweb:ResultDependency" href="Marvin.frameweb#//@compose.3/@packagedElement.4"/>
       <semanticElements xmi:type="frameweb:ResultDependency" href="Marvin.frameweb#//@compose.3/@packagedElement.4"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_s4G94RCXEeegTvEC8pKvsQ" lineStyle="dash" size="2" routingStyle="manhattan" strokeColor="69,69,69">
