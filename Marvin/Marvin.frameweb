@@ -375,6 +375,8 @@
         <ownedAttribute xsi:type="frameweb:UIComponentField" name="generateButton">
           <type xsi:type="frameweb:Tag" href="Standard_HTML5.frameweb#//HTML5forms_imput/button"/>
         </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="New UIComponentField"/>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="New UIComponentField"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:Page" name="bibliography.xhtml">
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.3/research.generateBibliography/form.1" association="//@compose.3/research.generateBibliography/@packagedElement.4"/>
