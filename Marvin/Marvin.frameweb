@@ -355,6 +355,7 @@
     <packagedElement xsi:type="frameweb:ViewPackage" name="research.generateBibliography">
       <packagedElement xsi:type="frameweb:Page" name="index.xhtml">
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.3/research.generateBibliography/form" association="//@compose.3/research.generateBibliography/@packagedElement.5"/>
+        <pageTagLib href="MVC_JSF.frameweb#//JSFcore"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:UIComponent" name="form">
         <ownedAttribute xsi:type="frameweb:UIComponentField" name="startYear">
@@ -380,6 +381,7 @@
       </packagedElement>
       <packagedElement xsi:type="frameweb:Page" name="bibliography.xhtml">
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.3/research.generateBibliography/form.1" association="//@compose.3/research.generateBibliography/@packagedElement.4"/>
+        <pageTagLib href="MVC_JSF.frameweb#//JSFcore"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:UIComponent" name="form">
         <ownedAttribute xsi:type="frameweb:UIComponentField" name="backButton">

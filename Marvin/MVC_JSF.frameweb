@@ -2,7 +2,7 @@
 <frameweb:FrameworkProfile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" name="JSF" kind="FrameworkSpecification">
   <packagedElement xsi:type="frameweb:TagLib" name="JSFhtml" URI="http://java.sun.com/jsf/html" prefix="h">
     <packagedElement xsi:type="frameweb:Tag" name="body"/>
-    <packagedElement xsi:type="frameweb:Tag" name="button"/>
+    <packagedElement xsi:type="frameweb:Tag" name="button" codeGenerationTemplate="template/path"/>
     <packagedElement xsi:type="frameweb:Tag" name="column"/>
     <packagedElement xsi:type="frameweb:Tag" name="commandButton"/>
     <packagedElement xsi:type="frameweb:Tag" name="commandLink"/>

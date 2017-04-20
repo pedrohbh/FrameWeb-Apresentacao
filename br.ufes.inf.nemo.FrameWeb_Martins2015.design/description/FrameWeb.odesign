@@ -173,7 +173,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="UIComponentField" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']" iconPath="/org.eclipse.acceleo.model.edit/icons/full/obj16/Variable.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="UIComponentField" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/AddVariableValueAction.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -233,7 +233,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="IOParameter" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='IO%20Parameter%20Node']" iconPath="/org.eclipse.acceleo.model.edit/icons/full/obj16/Variable.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IOParameter" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='IO%20Parameter%20Node']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/AddVariableValueAction.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -242,7 +242,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Front Controller Method" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='Front%20Controller%20Method%20Node']" iconPath="/org.eclipse.acceleo.model.edit/icons/full/obj16/Variable.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Front Controller Method" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='Front%20Controller%20Method%20Node']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/AddVariableValueAction.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>

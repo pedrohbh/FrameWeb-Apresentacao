@@ -5,6 +5,7 @@
     <semanticResources>JAVA.frameweb</semanticResources>
     <semanticResources>Standard_HTML5.frameweb</semanticResources>
     <semanticResources>MVC_JSF.frameweb</semanticResources>
+    <semanticResources>environment:/viewpoint</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_smPVYOFxEea9HKzQP7vYGw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_KNpI4A71EeeP84lyy-bQCw" name="new FrameWeb Project" representation="_tqRlQOFxEea9HKzQP7vYGw">
@@ -398,7 +399,7 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_C8splgNqEeeTRP389TNjoQ"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_C8spkQNqEeeTRP389TNjoQ" fontName="Segoe UI" fontHeight="8" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C8spkgNqEeeTRP389TNjoQ" x="395" y="270"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C8spkgNqEeeTRP389TNjoQ" x="360" y="270"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_C8splwNqEeeTRP389TNjoQ" type="3009" element="_C8ZHkgNqEeeTRP389TNjoQ">
               <children xmi:type="notation:Node" xmi:id="_C8spmgNqEeeTRP389TNjoQ" type="5004"/>
@@ -419,7 +420,7 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_C8spnQNqEeeTRP389TNjoQ"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_C8spmANqEeeTRP389TNjoQ" fontName="Segoe UI" fontHeight="8" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C8spmQNqEeeTRP389TNjoQ" x="245" y="61"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C8spmQNqEeeTRP389TNjoQ" x="210" y="61"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_C8spngNqEeeTRP389TNjoQ" type="3009" element="_C8ZHlANqEeeTRP389TNjoQ">
               <children xmi:type="notation:Node" xmi:id="_C8spoQNqEeeTRP389TNjoQ" type="5004"/>
@@ -460,7 +461,7 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_C8sppANqEeeTRP389TNjoQ"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_C8spnwNqEeeTRP389TNjoQ" fontName="Segoe UI" fontHeight="8" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C8spoANqEeeTRP389TNjoQ" x="89" y="229"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C8spoANqEeeTRP389TNjoQ" x="54" y="229"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_C8sppQNqEeeTRP389TNjoQ" type="3009" element="_C8ZHlgNqEeeTRP389TNjoQ">
               <children xmi:type="notation:Node" xmi:id="_C8spqANqEeeTRP389TNjoQ" type="5004"/>
@@ -473,7 +474,7 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_C8spqwNqEeeTRP389TNjoQ"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_C8sppgNqEeeTRP389TNjoQ" fontName="Segoe UI" fontHeight="8" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C8sppwNqEeeTRP389TNjoQ" x="545" y="174"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C8sppwNqEeeTRP389TNjoQ" x="510" y="174"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_DntoIAP8Eeexlb1UawrwLw" type="3009" element="_DnkeMAP8Eeexlb1UawrwLw">
               <children xmi:type="notation:Node" xmi:id="_DnuPMAP8Eeexlb1UawrwLw" type="5004"/>
@@ -490,13 +491,13 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_DnuPMwP8Eeexlb1UawrwLw"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_DntoIQP8Eeexlb1UawrwLw" fontName="Segoe UI" fontHeight="8" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DntoIgP8Eeexlb1UawrwLw" x="94" y="494"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DntoIgP8Eeexlb1UawrwLw" x="59" y="494"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="___RroQNoEeeTRP389TNjoQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="___RrogNoEeeTRP389TNjoQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="__--wsQNoEeeTRP389TNjoQ" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="__--wsgNoEeeTRP389TNjoQ" x="725" y="230" width="663" height="583"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="__--wsgNoEeeTRP389TNjoQ" x="760" y="230" width="628" height="583"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_vodJMuFxEea9HKzQP7vYGw"/>
         <edges xmi:type="notation:Edge" xmi:id="_yk4N8ANmEeeTRP389TNjoQ" type="4001" element="_ykcJEANmEeeTRP389TNjoQ" source="_uQaIEANmEeeTRP389TNjoQ" target="_PayF8POHEeacTo_9Ksp0CQ">
@@ -3200,7 +3201,7 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_xlYVAQQEEeexlb1UawrwLw" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif" borderSize="1" borderSizeComputationExpression="1">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_xlYVAQQEEeexlb1UawrwLw" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@containerMappings[name='PersistencePackage']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@containerMappings[name='PersistencePackage']"/>
@@ -3268,7 +3269,7 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_8jyeIQQWEeexlb1UawrwLw" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif" borderSize="1" borderSizeComputationExpression="1">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_8jyeIQQWEeexlb1UawrwLw" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@containerMappings[name='PersistencePackage']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@containerMappings[name='PersistencePackage']"/>
@@ -3320,7 +3321,7 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_JEEu4QQXEeexlb1UawrwLw" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif" borderSize="1" borderSizeComputationExpression="1">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_JEEu4QQXEeexlb1UawrwLw" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@containerMappings[name='PersistencePackage']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@containerMappings[name='PersistencePackage']"/>

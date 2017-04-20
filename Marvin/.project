@@ -3,6 +3,7 @@
 	<name>Marvin_Frameweb</name>
 	<comment></comment>
 	<projects>
+		<project>br.ufes.inf.nemo.FrameWeb_Martins2015.design</project>
 	</projects>
 	<buildSpec>
 	</buildSpec>
