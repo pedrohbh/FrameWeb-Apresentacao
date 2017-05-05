@@ -248,7 +248,6 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.FrontControllerMethod" referenceName="ownedOperation">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Method"/>
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="methodType" valueExpression="void"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -1146,7 +1145,7 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
           </style>
         </containerMappings>
-        <containerMappings name="EntityModel" navigationDescriptions="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='EntityModel']" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='GoToDiagramEntity']" domainClass="EntityModel">
+        <containerMappings name="EntityModel" navigationDescriptions="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='EntityModel']" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='GoToDiagramEntity']" domainClass="EntityModel">
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
