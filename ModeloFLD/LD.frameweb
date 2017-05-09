@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<frameweb:FramewebProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015">
-  <compose xsi:type="frameweb:VocabularyModel" name="Vocabulary Model">
-    <packagedElement xsi:type="frameweb:Vocabulary" name="Vocabulary">
-      <packagedElement xsi:type="frameweb:Axiom" name="Axioma 1"/>
-      <annotations name="Annotation 1"/>
-    </packagedElement>
-  </compose>
-</frameweb:FramewebProject>

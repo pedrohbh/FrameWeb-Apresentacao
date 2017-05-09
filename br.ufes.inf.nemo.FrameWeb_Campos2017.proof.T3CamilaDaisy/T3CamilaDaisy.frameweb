@@ -21,18 +21,14 @@
     <packagedElement xsi:type="frameweb:ViewPackage" name="View Package">
       <packagedElement xsi:type="frameweb:Page" name="login">
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.1/View%20Package/frmLogin" association="//@compose.1/View%20Package/@packagedElement.2"/>
-        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.1/View%20Package/New%20UI%20Component"/>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:UIComponent" name="frmLogin">
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="New UIComponentField">
-          <type xsi:type="frameweb:Tag" href="MVC_JSF.frameweb#//@configures.0/JSFhtml/column"/>
-        </ownedAttribute>
       </packagedElement>
       <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.1/View%20Package/@packagedElement.2/@ownedEnd.0 //@compose.1/View%20Package/login/@ownedAttribute.0">
         <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.1/View%20Package/login" association="//@compose.1/View%20Package/@packagedElement.2"/>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:UIComponent" name="New UI Component"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:ControllerPackage" name="Controller Package">
       <packagedElement xsi:type="frameweb:FrontControllerClass" name="UsuarioController">
