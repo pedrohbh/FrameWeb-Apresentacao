@@ -23,10 +23,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link frameweb.impl.ResultDependencyImpl#getResultMethod <em>Result Method</em>}</li>
  *   <li>{@link frameweb.impl.ResultDependencyImpl#getResultDependencyConstraint <em>Result Dependency Constraint</em>}</li>
- *   <li>{@link frameweb.impl.ResultDependencyImpl#getRender <em>Render</em>}</li>
- *   <li>{@link frameweb.impl.ResultDependencyImpl#getExecute <em>Execute</em>}</li>
- *   <li>{@link frameweb.impl.ResultDependencyImpl#isAjax <em>Ajax</em>}</li>
- *   <li>{@link frameweb.impl.ResultDependencyImpl#getResult <em>Result</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,86 +47,6 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * @ordered
 	 */
 	protected ResultConstraint resultDependencyConstraint;
-
-	/**
-	 * The default value of the '{@link #getRender() <em>Render</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRender()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String RENDER_EDEFAULT = "@none";
-
-	/**
-	 * The cached value of the '{@link #getRender() <em>Render</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRender()
-	 * @generated
-	 * @ordered
-	 */
-	protected String render = RENDER_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getExecute() <em>Execute</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExecute()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String EXECUTE_EDEFAULT = "@this";
-
-	/**
-	 * The cached value of the '{@link #getExecute() <em>Execute</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExecute()
-	 * @generated
-	 * @ordered
-	 */
-	protected String execute = EXECUTE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isAjax() <em>Ajax</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isAjax()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean AJAX_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isAjax() <em>Ajax</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isAjax()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean ajax = AJAX_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getResult() <em>Result</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getResult()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String RESULT_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getResult() <em>Result</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getResult()
-	 * @generated
-	 * @ordered
-	 */
-	protected String result = RESULT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -237,90 +153,6 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRender() {
-		return render;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRender(String newRender) {
-		String oldRender = render;
-		render = newRender;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.RESULT_DEPENDENCY__RENDER, oldRender, render));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getExecute() {
-		return execute;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setExecute(String newExecute) {
-		String oldExecute = execute;
-		execute = newExecute;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.RESULT_DEPENDENCY__EXECUTE, oldExecute, execute));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isAjax() {
-		return ajax;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAjax(boolean newAjax) {
-		boolean oldAjax = ajax;
-		ajax = newAjax;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.RESULT_DEPENDENCY__AJAX, oldAjax, ajax));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getResult() {
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setResult(String newResult) {
-		String oldResult = result;
-		result = newResult;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.RESULT_DEPENDENCY__RESULT, oldResult, result));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -343,14 +175,6 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 				return basicGetResultMethod();
 			case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT:
 				return getResultDependencyConstraint();
-			case FramewebPackage.RESULT_DEPENDENCY__RENDER:
-				return getRender();
-			case FramewebPackage.RESULT_DEPENDENCY__EXECUTE:
-				return getExecute();
-			case FramewebPackage.RESULT_DEPENDENCY__AJAX:
-				return isAjax();
-			case FramewebPackage.RESULT_DEPENDENCY__RESULT:
-				return getResult();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -370,18 +194,6 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 			case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT:
 				setResultDependencyConstraint((ResultConstraint)newValue);
 				return;
-			case FramewebPackage.RESULT_DEPENDENCY__RENDER:
-				setRender((String)newValue);
-				return;
-			case FramewebPackage.RESULT_DEPENDENCY__EXECUTE:
-				setExecute((String)newValue);
-				return;
-			case FramewebPackage.RESULT_DEPENDENCY__AJAX:
-				setAjax((Boolean)newValue);
-				return;
-			case FramewebPackage.RESULT_DEPENDENCY__RESULT:
-				setResult((String)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -400,18 +212,6 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 			case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT:
 				setResultDependencyConstraint((ResultConstraint)null);
 				return;
-			case FramewebPackage.RESULT_DEPENDENCY__RENDER:
-				setRender(RENDER_EDEFAULT);
-				return;
-			case FramewebPackage.RESULT_DEPENDENCY__EXECUTE:
-				setExecute(EXECUTE_EDEFAULT);
-				return;
-			case FramewebPackage.RESULT_DEPENDENCY__AJAX:
-				setAjax(AJAX_EDEFAULT);
-				return;
-			case FramewebPackage.RESULT_DEPENDENCY__RESULT:
-				setResult(RESULT_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -428,38 +228,8 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 				return resultMethod != null;
 			case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT:
 				return resultDependencyConstraint != null;
-			case FramewebPackage.RESULT_DEPENDENCY__RENDER:
-				return RENDER_EDEFAULT == null ? render != null : !RENDER_EDEFAULT.equals(render);
-			case FramewebPackage.RESULT_DEPENDENCY__EXECUTE:
-				return EXECUTE_EDEFAULT == null ? execute != null : !EXECUTE_EDEFAULT.equals(execute);
-			case FramewebPackage.RESULT_DEPENDENCY__AJAX:
-				return ajax != AJAX_EDEFAULT;
-			case FramewebPackage.RESULT_DEPENDENCY__RESULT:
-				return RESULT_EDEFAULT == null ? result != null : !RESULT_EDEFAULT.equals(result);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (render: ");
-		result.append(render);
-		result.append(", execute: ");
-		result.append(execute);
-		result.append(", ajax: ");
-		result.append(ajax);
-		result.append(", result: ");
-		result.append(result);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ResultDependencyImpl

@@ -1447,15 +1447,6 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIOParameter_ParameterType() {
-		return (EAttribute)ioParameterEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getResultDependency() {
 		return resultDependencyEClass;
 	}
@@ -1476,42 +1467,6 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 */
 	public EReference getResultDependency_ResultDependencyConstraint() {
 		return (EReference)resultDependencyEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getResultDependency_Render() {
-		return (EAttribute)resultDependencyEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getResultDependency_Execute() {
-		return (EAttribute)resultDependencyEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getResultDependency_Ajax() {
-		return (EAttribute)resultDependencyEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getResultDependency_Result() {
-		return (EAttribute)resultDependencyEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -3409,15 +3364,10 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		ioParameterEClass = createEClass(IO_PARAMETER);
 		createEReference(ioParameterEClass, IO_PARAMETER__DISPLAY);
-		createEAttribute(ioParameterEClass, IO_PARAMETER__PARAMETER_TYPE);
 
 		resultDependencyEClass = createEClass(RESULT_DEPENDENCY);
 		createEReference(resultDependencyEClass, RESULT_DEPENDENCY__RESULT_METHOD);
 		createEReference(resultDependencyEClass, RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT);
-		createEAttribute(resultDependencyEClass, RESULT_DEPENDENCY__RENDER);
-		createEAttribute(resultDependencyEClass, RESULT_DEPENDENCY__EXECUTE);
-		createEAttribute(resultDependencyEClass, RESULT_DEPENDENCY__AJAX);
-		createEAttribute(resultDependencyEClass, RESULT_DEPENDENCY__RESULT);
 
 		navigationAssociationEClass = createEClass(NAVIGATION_ASSOCIATION);
 
@@ -3950,15 +3900,10 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		initEClass(ioParameterEClass, IOParameter.class, "IOParameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIOParameter_Display(), this.getUIComponentField(), this.getUIComponentField_Inject(), "display", null, 0, -1, IOParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getIOParameter_ParameterType(), theTypesPackage.getString(), "parameterType", null, 0, 1, IOParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resultDependencyEClass, ResultDependency.class, "ResultDependency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResultDependency_ResultMethod(), this.getFrontControllerMethod(), null, "resultMethod", null, 0, 1, ResultDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResultDependency_ResultDependencyConstraint(), this.getResultConstraint(), null, "resultDependencyConstraint", null, 1, 1, ResultDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getResultDependency_Render(), theEcorePackage.getEString(), "render", "@none", 0, 1, ResultDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getResultDependency_Execute(), theEcorePackage.getEString(), "execute", "@this", 0, 1, ResultDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getResultDependency_Ajax(), ecorePackage.getEBoolean(), "ajax", "false", 0, 1, ResultDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getResultDependency_Result(), theTypesPackage.getString(), "result", null, 0, 1, ResultDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(navigationAssociationEClass, NavigationAssociation.class, "NavigationAssociation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

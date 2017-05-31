@@ -14,7 +14,6 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link frameweb.IOParameter#getDisplay <em>Display</em>}</li>
- *   <li>{@link frameweb.IOParameter#getParameterType <em>Parameter Type</em>}</li>
  * </ul>
  *
  * @see frameweb.FramewebPackage#getIOParameter()
@@ -39,31 +38,5 @@ public interface IOParameter extends NavigationAttribute {
 	 * @generated
 	 */
 	EList<UIComponent> getDisplay();
-
-	/**
-	 * Returns the value of the '<em><b>Parameter Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Parameter Type</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Parameter Type</em>' attribute.
-	 * @see #setParameterType(String)
-	 * @see frameweb.FramewebPackage#getIOParameter_ParameterType()
-	 * @model dataType="org.eclipse.uml2.types.String"
-	 * @generated
-	 */
-	String getParameterType();
-
-	/**
-	 * Sets the value of the '{@link frameweb.IOParameter#getParameterType <em>Parameter Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Parameter Type</em>' attribute.
-	 * @see #getParameterType()
-	 * @generated
-	 */
-	void setParameterType(String value);
 
 } // IOParameter

@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreEList;
 import java.util.ArrayList;
+import java.util.Collection;
 
 import javax.lang.model.type.PrimitiveType;
 
@@ -183,13 +184,28 @@ public String printConstraint(EObject o){
 	}
 	
 	public String print_resultdependency(EObject o){
+		String response = "";
+		
 		EStructuralFeature result_feature = o.eClass().getEAllAttributes().get(5); //OLHAR NO MODISCO O NUMERO - 1
 		String result = (String) o.eGet(result_feature);
 		
-		if(!result.isEmpty()) return ", result=" + result + "}"; 
+		EStructuralFeature ajax_feature = o.eClass().getEAllAttributes().get(4); //OLHAR NO MODISCO O NUMERO - 1
+		boolean ajax = (boolean) o.eGet(ajax_feature);
 		
+		EStructuralFeature render_feature = o.eClass().getEAllAttributes().get(6); //OLHAR NO MODISCO O NUMERO - 1
+		String render = (String) o.eGet(render_feature);
 		
-		return "}";
+		EStructuralFeature execute_feature = o.eClass().getEAllAttributes().get(3); //OLHAR NO MODISCO O NUMERO - 1
+		String execute = (String) o.eGet(execute_feature);
+	
+		if(!result.isEmpty()) response = response + ", result=" + result; 
+		if(ajax) response = response + ", ajax=" + ajax; 
+		if(!render.equals("@none")) response = response + ", render=" + render; 
+		if(!execute.equals("@this")) response = response + ", execute=" + execute; 
+		
+		if(!response.isEmpty()){
+			return response + "}";
+		}else{return "}";}		
 	}
 	
 	

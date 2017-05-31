@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <frameweb:FramewebProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
   <compose xsi:type="frameweb:EntityModel" name="Entity Model">
-    <packagedElement xsi:type="uml:Package" name="Primitive Types">
-      <packagedElement xsi:type="uml:PrimitiveType" name="byte"/>
-      <packagedElement xsi:type="uml:PrimitiveType" name="short"/>
-      <packagedElement xsi:type="uml:PrimitiveType" name="int"/>
-      <packagedElement xsi:type="uml:PrimitiveType" name="long"/>
-      <packagedElement xsi:type="uml:PrimitiveType" name="float"/>
-      <packagedElement xsi:type="uml:PrimitiveType" name="double"/>
-      <packagedElement xsi:type="uml:PrimitiveType" name="boolean"/>
-      <packagedElement xsi:type="uml:PrimitiveType" name="char"/>
-      <packagedElement xsi:type="uml:PrimitiveType" name="Object"/>
-      <packagedElement xsi:type="uml:PrimitiveType" name="String"/>
-    </packagedElement>
     <packagedElement xsi:type="frameweb:DomainPackage" name="Domain Package">
       <packagedElement xsi:type="frameweb:DomainClass" name="Usuario"/>
     </packagedElement>
@@ -24,6 +12,7 @@
           <type xsi:type="frameweb:Tag" href="MVC_JSF_v1.1.frameweb#//@configures.0/JSFhtml/outputText"/>
         </ownedAttribute>
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.1/View%20Package/frmUsuario" association="//@compose.1/View%20Package/@packagedElement.2"/>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:UIComponent" name="frmUsuario">
         <ownedAttribute xsi:type="frameweb:UIComponentField" name="msgOK">
@@ -51,7 +40,7 @@
     </packagedElement>
     <packagedElement xsi:type="frameweb:ControllerPackage" name="Controller Package">
       <packagedElement xsi:type="frameweb:FrontControllerClass" name="UsuarioController">
-        <ownedAttribute xsi:type="frameweb:IOParameter" name="usuario" visibility="private" type="//@compose.0/Domain%20Package/Usuario" parameterType=""/>
+        <ownedAttribute xsi:type="frameweb:IOParameter" name="usuario" visibility="private" type="//@compose.0/Domain%20Package/Usuario"/>
         <ownedAttribute xsi:type="frameweb:IOParameter" name="usuarios" visibility="private">
           <type xsi:type="uml:Class" href="JAVA.frameweb#//@compose.0/List"/>
         </ownedAttribute>
@@ -103,8 +92,8 @@
     <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.1/Controller%20Package/UsuarioController" supplier="//@compose.1/View%20Package/formNovoUsuario" resultMethod="//@compose.1/Controller%20Package/UsuarioController/novo">
       <resultDependencyConstraint result="sucess"/>
     </packagedElement>
-    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.1/Controller%20Package/UsuarioController" supplier="//@compose.1/View%20Package/formNovoUsuario" resultMethod="//@compose.1/Controller%20Package/UsuarioController/salvar" render="msgOK" result="">
-      <resultDependencyConstraint result="error"/>
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.1/Controller%20Package/UsuarioController" supplier="//@compose.1/View%20Package/formNovoUsuario" resultMethod="//@compose.1/Controller%20Package/UsuarioController/salvar">
+      <resultDependencyConstraint result="error" render="msgOK"/>
     </packagedElement>
   </compose>
   <compose xsi:type="frameweb:PersistenceModel" name="Persistence Model">

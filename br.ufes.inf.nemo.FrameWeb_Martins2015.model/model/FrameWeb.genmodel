@@ -137,20 +137,15 @@
     <genClasses ecoreClass="FrameWeb.ecore#//FrontControllerClass"/>
     <genClasses ecoreClass="FrameWeb.ecore#//IOParameter">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FrameWeb.ecore#//IOParameter/display"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//IOParameter/parameterType"/>
     </genClasses>
     <genClasses ecoreClass="FrameWeb.ecore#//ResultDependency">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FrameWeb.ecore#//ResultDependency/resultMethod"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FrameWeb.ecore#//ResultDependency/resultDependencyConstraint"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//ResultDependency/render"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//ResultDependency/execute"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//ResultDependency/ajax"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//ResultDependency/result"/>
     </genClasses>
     <genClasses ecoreClass="FrameWeb.ecore#//NavigationAssociation"/>
     <genClasses ecoreClass="FrameWeb.ecore#//FrontControllerMethod">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//FrontControllerMethod/isDefault"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//FrontControllerMethod/methodType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference FrameWeb.ecore#//FrontControllerMethod/methodType"/>
     </genClasses>
     <genClasses ecoreClass="FrameWeb.ecore#//ServiceClass"/>
     <genClasses ecoreClass="FrameWeb.ecore#//ServiceInterface"/>
@@ -174,16 +169,18 @@
     <genClasses ecoreClass="FrameWeb.ecore#//DAOServiceAssociation"/>
     <genClasses image="false" ecoreClass="FrameWeb.ecore#//NavigationAttribute"/>
     <genClasses image="false" ecoreClass="FrameWeb.ecore#//NavigationClass"/>
-    <genClasses ecoreClass="FrameWeb.ecore#//DomainMethod"/>
+    <genClasses ecoreClass="FrameWeb.ecore#//DomainMethod">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FrameWeb.ecore#//DomainMethod/methodType"/>
+    </genClasses>
     <genClasses ecoreClass="FrameWeb.ecore#//DAOAttribute"/>
     <genClasses ecoreClass="FrameWeb.ecore#//ServiceMethod">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//ServiceMethod/methodType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference FrameWeb.ecore#//ServiceMethod/methodType"/>
     </genClasses>
     <genClasses ecoreClass="FrameWeb.ecore#//ServiceAttribute"/>
     <genClasses image="false" ecoreClass="FrameWeb.ecore#//ServiceAssociation"/>
     <genClasses image="false" ecoreClass="FrameWeb.ecore#//NavigationDependency"/>
     <genClasses ecoreClass="FrameWeb.ecore#//DAOMethod">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//DAOMethod/methodType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference FrameWeb.ecore#//DAOMethod/methodType"/>
     </genClasses>
     <genClasses ecoreClass="FrameWeb.ecore#//DomainPackage"/>
     <genClasses ecoreClass="FrameWeb.ecore#//ViewPackage"/>

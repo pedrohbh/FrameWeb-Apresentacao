@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -49,10 +48,6 @@ public class ResultDependencyItemProvider extends NavigationDependencyItemProvid
 			super.getPropertyDescriptors(object);
 
 			addResultMethodPropertyDescriptor(object);
-			addRenderPropertyDescriptor(object);
-			addExecutePropertyDescriptor(object);
-			addAjaxPropertyDescriptor(object);
-			addResultPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -75,94 +70,6 @@ public class ResultDependencyItemProvider extends NavigationDependencyItemProvid
 				 false,
 				 true,
 				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Render feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRenderPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ResultDependency_render_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ResultDependency_render_feature", "_UI_ResultDependency_type"),
-				 FramewebPackage.Literals.RESULT_DEPENDENCY__RENDER,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Execute feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addExecutePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ResultDependency_execute_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ResultDependency_execute_feature", "_UI_ResultDependency_type"),
-				 FramewebPackage.Literals.RESULT_DEPENDENCY__EXECUTE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Ajax feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAjaxPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ResultDependency_ajax_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ResultDependency_ajax_feature", "_UI_ResultDependency_type"),
-				 FramewebPackage.Literals.RESULT_DEPENDENCY__AJAX,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Result feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addResultPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ResultDependency_result_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ResultDependency_result_feature", "_UI_ResultDependency_type"),
-				 FramewebPackage.Literals.RESULT_DEPENDENCY__RESULT,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -235,12 +142,6 @@ public class ResultDependencyItemProvider extends NavigationDependencyItemProvid
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ResultDependency.class)) {
-			case FramewebPackage.RESULT_DEPENDENCY__RENDER:
-			case FramewebPackage.RESULT_DEPENDENCY__EXECUTE:
-			case FramewebPackage.RESULT_DEPENDENCY__AJAX:
-			case FramewebPackage.RESULT_DEPENDENCY__RESULT:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
 			case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
