@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:validation="http://www.eclipse.org/sirius/description/validation/1.1.0" name="FrameWeb" version="11.1.1.201610211630">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties_1.0.0="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:validation="http://www.eclipse.org/sirius/description/validation/1.1.0" name="FrameWeb" version="11.1.1.201610211630">
   <ownedViewpoints label="FrameWebViewPoint" modelFileExtension="frameweb">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWebNavigationModel" domainClass="NavigationModel">
       <validationSet>
@@ -1155,6 +1155,22 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
+        <toolSections name="Vocabulary Model">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Vocabulary" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebVocabularyModel']/@defaultLayer/@containerMappings[name='Vocabulary']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.Vocabulary" referenceName="packagedElement">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Vocabulary"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Axiom">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation/>
+          </ownedTools>
+        </toolSections>
       </defaultLayer>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWeb Project" domainClass="FramewebProject">
@@ -1509,47 +1525,47 @@
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="br.ufes.inf.nemo.FrameWeb_Martins2015.design.Extend"/>
   </ownedViewpoints>
-  <extensions xsi:type="properties:ViewExtensionDescription" identifier="properties">
+  <extensions xsi:type="properties_1.0.0:ViewExtensionDescription" identifier="properties">
     <pages identifier="ParameterMenuFrontController" labelExpression="Parameter Menu" domainClass="frameweb.FrontControllerMethod" groups="//@extensions.0/@groups.0"/>
     <pages identifier="ParameterMenuDAO" labelExpression="ParameterMenu" domainClass="frameweb.DAOMethod" groups="//@extensions.0/@groups.1"/>
     <pages identifier="ParameterMenuDomain" labelExpression="ParameterMenu" domainClass="frameweb.DomainMethod" groups="//@extensions.0/@groups.2"/>
     <pages identifier="DomainAssociation" labelExpression="Domain Association" domainClass="frameweb.DomainAssociation" groups="//@extensions.0/@groups.3"/>
     <pages identifier="ResultDependency" labelExpression="Result Constraints" domainClass="frameweb.ResultDependency" groups="//@extensions.0/@groups.4"/>
     <groups identifier="FrontControllerParameters" labelExpression="Parameters" domainClass="FrontControllerMethod" semanticCandidateExpression="aql:self">
-      <controls xsi:type="properties:LabelDescription" identifier="Double Click on Method to Edit Parameters" labelExpression="Double Click on Method to Edit Parameters"/>
+      <controls xsi:type="properties_1.0.0:LabelDescription" identifier="Double Click on Method to Edit Parameters" labelExpression="Double Click on Method to Edit Parameters"/>
     </groups>
     <groups identifier="DAOParameters" labelExpression="Parameters" domainClass="DAOMethod" semanticCandidateExpression="aql:self">
-      <controls xsi:type="properties:LabelDescription" identifier="Double Click on Method to Edit Parameters" labelExpression="Double Click on Method to Edit Parameters"/>
+      <controls xsi:type="properties_1.0.0:LabelDescription" identifier="Double Click on Method to Edit Parameters" labelExpression="Double Click on Method to Edit Parameters"/>
     </groups>
     <groups identifier="DomainParameters" labelExpression="Parameters" domainClass="DomainMethod" semanticCandidateExpression="aql:self">
-      <controls xsi:type="properties:LabelDescription" identifier="Double Click on Method to Edit Parameters" labelExpression="Double Click on Method to Edit Parameters"/>
+      <controls xsi:type="properties_1.0.0:LabelDescription" identifier="Double Click on Method to Edit Parameters" labelExpression="Double Click on Method to Edit Parameters"/>
     </groups>
     <groups identifier="DomainAssociation" labelExpression="Association" domainClass="DomainAssociation" semanticCandidateExpression="aql:self">
-      <controls xsi:type="properties:LabelDescription" identifier="Double Click on Association to edit properties of his elements" labelExpression="Double Click on Association to edit properties of his elements"/>
+      <controls xsi:type="properties_1.0.0:LabelDescription" identifier="Double Click on Association to edit properties of his elements" labelExpression="Double Click on Association to edit properties of his elements"/>
     </groups>
     <groups identifier="ResultDependency" labelExpression="Constraints" domainClass="ResultDependency" semanticCandidateExpression="aql:self">
-      <controls xsi:type="properties:TextDescription" identifier="resulttext" labelExpression="Result:" valueExpression="aql:self.resultDependencyConstraint.result">
+      <controls xsi:type="properties_1.0.0:TextDescription" identifier="resulttext" labelExpression="Result:" valueExpression="aql:self.resultDependencyConstraint.result">
         <initialOperation>
           <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.resultDependencyConstraint">
             <subModelOperations xsi:type="tool_1:SetValue" featureName="result" valueExpression="var:newValue"/>
           </firstModelOperations>
         </initialOperation>
       </controls>
-      <controls xsi:type="properties:SelectDescription" labelExpression="Ajax:" valueExpression="aql:self.resultDependencyConstraint.ajax.toString()" candidatesExpression="aql:Sequence{'true', 'false'}" candidateDisplayExpression="var:candidate">
+      <controls xsi:type="properties_1.0.0:SelectDescription" labelExpression="Ajax:" valueExpression="aql:self.resultDependencyConstraint.ajax.toString()" candidatesExpression="aql:Sequence{'true', 'false'}" candidateDisplayExpression="var:candidate">
         <initialOperation>
           <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.resultDependencyConstraint">
             <subModelOperations xsi:type="tool_1:SetValue" featureName="ajax" valueExpression="var:newValue"/>
           </firstModelOperations>
         </initialOperation>
       </controls>
-      <controls xsi:type="properties:TextDescription" labelExpression="Render:" valueExpression="aql:self.resultDependencyConstraint.render">
+      <controls xsi:type="properties_1.0.0:TextDescription" labelExpression="Render:" valueExpression="aql:self.resultDependencyConstraint.render">
         <initialOperation>
           <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.resultDependencyConstraint">
             <subModelOperations xsi:type="tool_1:SetValue" featureName="render" valueExpression="var:newValue"/>
           </firstModelOperations>
         </initialOperation>
       </controls>
-      <controls xsi:type="properties:TextDescription" labelExpression="Execute:" valueExpression="aql:self.resultDependencyConstraint.execute">
+      <controls xsi:type="properties_1.0.0:TextDescription" labelExpression="Execute:" valueExpression="aql:self.resultDependencyConstraint.execute">
         <initialOperation>
           <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.resultDependencyConstraint">
             <subModelOperations xsi:type="tool_1:SetValue" featureName="execute" valueExpression="var:newValue"/>
