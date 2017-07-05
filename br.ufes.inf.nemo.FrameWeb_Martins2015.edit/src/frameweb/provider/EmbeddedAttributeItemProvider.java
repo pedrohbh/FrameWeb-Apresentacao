@@ -21,7 +21,7 @@ import org.eclipse.uml2.uml.UMLPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EmbeddedAttributeItemProvider extends DomainAttributeItemProvider {
+public class EmbeddedAttributeItemProvider extends AttributeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

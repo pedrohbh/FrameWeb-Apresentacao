@@ -195,11 +195,6 @@ public class VocabularyDataTypeItemProvider extends VocabularyEntityItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(UMLPackage.Literals.DATA_TYPE__OWNED_ATTRIBUTE,
-				 FramewebFactory.eINSTANCE.createDomainAttribute()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UMLPackage.Literals.DATA_TYPE__OWNED_ATTRIBUTE,
 				 FramewebFactory.eINSTANCE.createVersionAttribute()));
 
 		newChildDescriptors.add
@@ -311,6 +306,16 @@ public class VocabularyDataTypeItemProvider extends VocabularyEntityItemProvider
 			(createChildParameter
 				(UMLPackage.Literals.DATA_TYPE__OWNED_ATTRIBUTE,
 				 FramewebFactory.eINSTANCE.createAttributeMappingProperty()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UMLPackage.Literals.DATA_TYPE__OWNED_ATTRIBUTE,
+				 FramewebFactory.eINSTANCE.createDomainVocabularyProperty()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UMLPackage.Literals.DATA_TYPE__OWNED_ATTRIBUTE,
+				 FramewebFactory.eINSTANCE.createDomainAttribute()));
 
 		newChildDescriptors.add
 			(createChildParameter

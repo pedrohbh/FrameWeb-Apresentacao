@@ -155,11 +155,6 @@ public class FrontControllerClassItemProvider extends ClassItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
-				 FramewebFactory.eINSTANCE.createDomainAttribute()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
 				 FramewebFactory.eINSTANCE.createVersionAttribute()));
 
 		newChildDescriptors.add
@@ -271,6 +266,16 @@ public class FrontControllerClassItemProvider extends ClassItemProvider {
 			(createChildParameter
 				(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
 				 FramewebFactory.eINSTANCE.createAttributeMappingProperty()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
+				 FramewebFactory.eINSTANCE.createDomainVocabularyProperty()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
+				 FramewebFactory.eINSTANCE.createDomainAttribute()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -466,6 +471,16 @@ public class FrontControllerClassItemProvider extends ClassItemProvider {
 			(createChildParameter
 				(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
 				 FramewebFactory.eINSTANCE.createVocabularyClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
+				 FramewebFactory.eINSTANCE.createDomainVocabularyClass()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
+				 FramewebFactory.eINSTANCE.createDomainVocabularyAssociation()));
 	}
 
 	/**

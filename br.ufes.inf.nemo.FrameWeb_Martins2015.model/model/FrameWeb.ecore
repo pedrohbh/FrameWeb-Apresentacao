@@ -60,17 +60,19 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fetch" eType="#//Fetch"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" eType="#//Order"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DomainAttribute" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property">
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute" abstract="true" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isNull" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isPersistent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="owlEquivalentProperty"
+        eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VersionAttribute" eSuperTypes="#//DomainAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="IdAttribute" eSuperTypes="#//DomainAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="VersionAttribute" eSuperTypes="#//Attribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IdAttribute" eSuperTypes="#//Attribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="generation" eType="#//Generation"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LOBAttribute" eSuperTypes="#//DomainAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="EmbeddedAttribute" eSuperTypes="#//DomainAttribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LOBAttribute" eSuperTypes="#//Attribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EmbeddedAttribute" eSuperTypes="#//Attribute"/>
   <eClassifiers xsi:type="ecore:EEnum" name="DateTimePrecision">
     <eLiterals name="timestamp"/>
     <eLiterals name="time" value="1"/>
@@ -83,11 +85,11 @@
     <eLiterals name="none" value="3"/>
     <eLiterals name="table" value="4"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DecimalAttribute" eSuperTypes="#//DomainAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="DecimalAttribute" eSuperTypes="#//Attribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="decimalPrecision" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="decimalScale" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DateTimeAttribute" eSuperTypes="#//DomainAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="DateTimeAttribute" eSuperTypes="#//Attribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateTimePrecision" eType="#//DateTimePrecision"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Collection">
@@ -320,7 +322,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" eType="#//Order"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cascade" eType="#//Cascade"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DomainProperty" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
   <eClassifiers xsi:type="ecore:EClass" name="DAOGeneralization" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>
   <eClassifiers xsi:type="ecore:EClass" name="MappingLib" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
   <eClassifiers xsi:type="ecore:EClass" name="ClassMapping" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Stereotype"/>
@@ -1040,8 +1041,15 @@
   <eClassifiers xsi:type="ecore:EClass" name="NamedIndividual" eSuperTypes="#//VocabularyEntity #//Individual"/>
   <eClassifiers xsi:type="ecore:EClass" name="VocabularyClassExpression" abstract="true"
       eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
-  <eClassifiers xsi:type="ecore:EClass" name="VocabularyClass" eSuperTypes="#//VocabularyEntity #//VocabularyClassExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VocabularyClass" eSuperTypes="#//VocabularyClassExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="AnonymousIndividual" eSuperTypes="#//Individual"/>
   <eClassifiers xsi:type="ecore:EClass" name="Individual" abstract="true" eSuperTypes="#//Property"/>
   <eClassifiers xsi:type="ecore:EClass" name="VocabularyLiteral" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//LiteralString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainVocabularyClass" eSuperTypes="#//VocabularyEntity">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Prefix" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
+        defaultValueLiteral="prefix"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainVocabularyAssociation" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Association"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainVocabularyProperty" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainAttribute" eSuperTypes="#//Attribute"/>
 </ecore:EPackage>

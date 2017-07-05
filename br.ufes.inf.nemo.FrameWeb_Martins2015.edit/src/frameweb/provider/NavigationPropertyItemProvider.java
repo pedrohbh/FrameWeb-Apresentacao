@@ -104,11 +104,6 @@ public class NavigationPropertyItemProvider extends PropertyItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(UMLPackage.Literals.PROPERTY__QUALIFIER,
-				 FramewebFactory.eINSTANCE.createDomainAttribute()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UMLPackage.Literals.PROPERTY__QUALIFIER,
 				 FramewebFactory.eINSTANCE.createVersionAttribute()));
 
 		newChildDescriptors.add
@@ -220,6 +215,16 @@ public class NavigationPropertyItemProvider extends PropertyItemProvider {
 			(createChildParameter
 				(UMLPackage.Literals.PROPERTY__QUALIFIER,
 				 FramewebFactory.eINSTANCE.createAttributeMappingProperty()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UMLPackage.Literals.PROPERTY__QUALIFIER,
+				 FramewebFactory.eINSTANCE.createDomainVocabularyProperty()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UMLPackage.Literals.PROPERTY__QUALIFIER,
+				 FramewebFactory.eINSTANCE.createDomainAttribute()));
 
 		newChildDescriptors.add
 			(createChildParameter

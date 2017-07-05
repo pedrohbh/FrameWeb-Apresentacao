@@ -20,7 +20,7 @@ package frameweb;
  * @model
  * @generated
  */
-public interface DecimalAttribute extends DomainAttribute {
+public interface DecimalAttribute extends Attribute {
 	/**
 	 * Returns the value of the '<em><b>Decimal Precision</b></em>' attribute.
 	 * <!-- begin-user-doc -->

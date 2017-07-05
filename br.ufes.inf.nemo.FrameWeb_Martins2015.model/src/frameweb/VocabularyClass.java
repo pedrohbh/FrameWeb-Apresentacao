@@ -13,5 +13,5 @@ package frameweb;
  * @model
  * @generated
  */
-public interface VocabularyClass extends VocabularyEntity, VocabularyClassExpression {
+public interface VocabularyClass extends VocabularyClassExpression {
 } // VocabularyClass

@@ -2,6 +2,140 @@
  */
 package frameweb.impl;
 
+import frameweb.Annotation;
+import frameweb.AnnotationProperty;
+import frameweb.AnonymousIndividual;
+import frameweb.ApplicationModel;
+import frameweb.ApplicationPackage;
+import frameweb.Association;
+import frameweb.Attribute;
+import frameweb.AttributeMapping;
+import frameweb.AttributeMappingExtension;
+import frameweb.AttributeMappingExtensionEnd;
+import frameweb.AttributeMappingProperty;
+import frameweb.Axiom;
+import frameweb.Cascade;
+import frameweb.ChainingConstraint;
+import frameweb.ChainingDependency;
+import frameweb.ClassMapping;
+import frameweb.ClassMappingExtension;
+import frameweb.ClassMappingExtensionEnd;
+import frameweb.ClassMappingPropery;
+import frameweb.Collection;
+import frameweb.ConstantNameList;
+import frameweb.Controller;
+import frameweb.ControllerExtension;
+import frameweb.ControllerExtensionEnd;
+import frameweb.ControllerPackage;
+import frameweb.ControllerProperty;
+import frameweb.ControllerSet;
+import frameweb.DAOAttribute;
+import frameweb.DAOClass;
+import frameweb.DAOGeneralization;
+import frameweb.DAOGeneralizationSet;
+import frameweb.DAOInterface;
+import frameweb.DAOMethod;
+import frameweb.DAORealization;
+import frameweb.DAOServiceAssociation;
+import frameweb.DataProperty;
+import frameweb.DateTimeAttribute;
+import frameweb.DateTimePrecision;
+import frameweb.DecimalAttribute;
+import frameweb.DomainAssociation;
+import frameweb.DomainAttribute;
+import frameweb.DomainClass;
+import frameweb.DomainConstraints;
+import frameweb.DomainExtension;
+import frameweb.DomainGeneralization;
+import frameweb.DomainGeneralizationSet;
+import frameweb.DomainMethod;
+import frameweb.DomainPackage;
+import frameweb.DomainProperty;
+import frameweb.DomainVocabularyAssociation;
+import frameweb.DomainVocabularyClass;
+import frameweb.DomainVocabularyProperty;
+import frameweb.EmbeddedAttribute;
+import frameweb.EntityModel;
+import frameweb.Fetch;
+import frameweb.FramewebFactory;
+import frameweb.FramewebModel;
+import frameweb.FramewebPackage;
+import frameweb.FramewebProject;
+import frameweb.FrameworkApplication;
+import frameweb.FrameworkCategoryList;
+import frameweb.FrameworkExtension;
+import frameweb.FrameworkKindList;
+import frameweb.FrameworkProfile;
+import frameweb.FrontControllerClass;
+import frameweb.FrontControllerDependency;
+import frameweb.FrontControllerMethod;
+import frameweb.Generation;
+import frameweb.IOParameter;
+import frameweb.IdAttribute;
+import frameweb.Individual;
+import frameweb.InheritanceMapping;
+import frameweb.LOBAttribute;
+import frameweb.MappingLib;
+import frameweb.MethodConstraint;
+import frameweb.NamedIndividual;
+import frameweb.NavigationAssociation;
+import frameweb.NavigationAttribute;
+import frameweb.NavigationClass;
+import frameweb.NavigationCompositionPart;
+import frameweb.NavigationCompositionWhole;
+import frameweb.NavigationConstraint;
+import frameweb.NavigationDependency;
+import frameweb.NavigationExtension;
+import frameweb.NavigationGeneralization;
+import frameweb.NavigationGeneralizationSet;
+import frameweb.NavigationModel;
+import frameweb.NavigationPackage;
+import frameweb.NavigationProperty;
+import frameweb.NewInterface115;
+import frameweb.ObjectProperty;
+import frameweb.Order;
+import frameweb.Page;
+import frameweb.PageConstraint;
+import frameweb.PageDependency;
+import frameweb.PersistenceModel;
+import frameweb.PersistencePackage;
+import frameweb.Property;
+import frameweb.ResultConstraint;
+import frameweb.ResultDependency;
+import frameweb.ResultExtension;
+import frameweb.ResultExtensionEnd;
+import frameweb.ResultProperty;
+import frameweb.ResultSet;
+import frameweb.ResultType;
+import frameweb.SemanticPackage;
+import frameweb.ServiceAssociation;
+import frameweb.ServiceAttribute;
+import frameweb.ServiceClass;
+import frameweb.ServiceControllerAssociation;
+import frameweb.ServiceGeneralization;
+import frameweb.ServiceGeneralizationSet;
+import frameweb.ServiceInterface;
+import frameweb.ServiceMethod;
+import frameweb.ServiceRealization;
+import frameweb.Tag;
+import frameweb.TagExtension;
+import frameweb.TagExtensionEnd;
+import frameweb.TagLib;
+import frameweb.TagProperty;
+import frameweb.Template;
+import frameweb.UIComponent;
+import frameweb.VersionAttribute;
+import frameweb.ViewPackage;
+import frameweb.Vocabulary;
+import frameweb.VocabularyAssociation;
+import frameweb.VocabularyClass;
+import frameweb.VocabularyClassExpression;
+import frameweb.VocabularyConstraints;
+import frameweb.VocabularyDataType;
+import frameweb.VocabularyEntity;
+import frameweb.VocabularyLiteral;
+import frameweb.VocabularyModel;
+import frameweb.VocabularyProperty;
 import frameweb.*;
 import frameweb.util.FramewebValidator;
 
@@ -86,6 +220,13 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	private EClass domainAssociationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass attributeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -876,6 +1017,27 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass domainVocabularyClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass domainVocabularyAssociationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass domainVocabularyPropertyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum dateTimePrecisionEEnum = null;
 
 	/**
@@ -1186,35 +1348,53 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getAttribute() {
+		return attributeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAttribute_Size() {
+		return (EAttribute)attributeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAttribute_IsNull() {
+		return (EAttribute)attributeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAttribute_IsPersistent() {
+		return (EAttribute)attributeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAttribute_OwlEquivalentProperty() {
+		return (EAttribute)attributeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDomainAttribute() {
 		return domainAttributeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDomainAttribute_Size() {
-		return (EAttribute)domainAttributeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDomainAttribute_IsNull() {
-		return (EAttribute)domainAttributeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDomainAttribute_IsPersistent() {
-		return (EAttribute)domainAttributeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -3166,6 +3346,42 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getDomainVocabularyClass() {
+		return domainVocabularyClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDomainVocabularyClass_Prefix() {
+		return (EAttribute)domainVocabularyClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDomainVocabularyAssociation() {
+		return domainVocabularyAssociationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDomainVocabularyProperty() {
+		return domainVocabularyPropertyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getDateTimePrecision() {
 		return dateTimePrecisionEEnum;
 	}
@@ -3322,10 +3538,11 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEAttribute(domainAssociationEClass, DOMAIN_ASSOCIATION__FETCH);
 		createEAttribute(domainAssociationEClass, DOMAIN_ASSOCIATION__ORDER);
 
-		domainAttributeEClass = createEClass(DOMAIN_ATTRIBUTE);
-		createEAttribute(domainAttributeEClass, DOMAIN_ATTRIBUTE__SIZE);
-		createEAttribute(domainAttributeEClass, DOMAIN_ATTRIBUTE__IS_NULL);
-		createEAttribute(domainAttributeEClass, DOMAIN_ATTRIBUTE__IS_PERSISTENT);
+		attributeEClass = createEClass(ATTRIBUTE);
+		createEAttribute(attributeEClass, ATTRIBUTE__SIZE);
+		createEAttribute(attributeEClass, ATTRIBUTE__IS_NULL);
+		createEAttribute(attributeEClass, ATTRIBUTE__IS_PERSISTENT);
+		createEAttribute(attributeEClass, ATTRIBUTE__OWL_EQUIVALENT_PROPERTY);
 
 		versionAttributeEClass = createEClass(VERSION_ATTRIBUTE);
 
@@ -3654,6 +3871,15 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		vocabularyLiteralEClass = createEClass(VOCABULARY_LITERAL);
 
+		domainVocabularyClassEClass = createEClass(DOMAIN_VOCABULARY_CLASS);
+		createEAttribute(domainVocabularyClassEClass, DOMAIN_VOCABULARY_CLASS__PREFIX);
+
+		domainVocabularyAssociationEClass = createEClass(DOMAIN_VOCABULARY_ASSOCIATION);
+
+		domainVocabularyPropertyEClass = createEClass(DOMAIN_VOCABULARY_PROPERTY);
+
+		domainAttributeEClass = createEClass(DOMAIN_ATTRIBUTE);
+
 		// Create enums
 		dateTimePrecisionEEnum = createEEnum(DATE_TIME_PRECISION);
 		generationEEnum = createEEnum(GENERATION);
@@ -3711,13 +3937,13 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		applicationModelEClass.getESuperTypes().add(this.getFramewebModel());
 		persistenceModelEClass.getESuperTypes().add(this.getFramewebModel());
 		domainAssociationEClass.getESuperTypes().add(theUMLPackage.getAssociation());
-		domainAttributeEClass.getESuperTypes().add(theUMLPackage.getProperty());
-		versionAttributeEClass.getESuperTypes().add(this.getDomainAttribute());
-		idAttributeEClass.getESuperTypes().add(this.getDomainAttribute());
-		lobAttributeEClass.getESuperTypes().add(this.getDomainAttribute());
-		embeddedAttributeEClass.getESuperTypes().add(this.getDomainAttribute());
-		decimalAttributeEClass.getESuperTypes().add(this.getDomainAttribute());
-		dateTimeAttributeEClass.getESuperTypes().add(this.getDomainAttribute());
+		attributeEClass.getESuperTypes().add(theUMLPackage.getProperty());
+		versionAttributeEClass.getESuperTypes().add(this.getAttribute());
+		idAttributeEClass.getESuperTypes().add(this.getAttribute());
+		lobAttributeEClass.getESuperTypes().add(this.getAttribute());
+		embeddedAttributeEClass.getESuperTypes().add(this.getAttribute());
+		decimalAttributeEClass.getESuperTypes().add(this.getAttribute());
+		dateTimeAttributeEClass.getESuperTypes().add(this.getAttribute());
 		pageEClass.getESuperTypes().add(this.getNavigationClass());
 		templateEClass.getESuperTypes().add(this.getNavigationClass());
 		daoInterfaceEClass.getESuperTypes().add(theUMLPackage.getInterface());
@@ -3826,11 +4052,14 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		namedIndividualEClass.getESuperTypes().add(this.getVocabularyEntity());
 		namedIndividualEClass.getESuperTypes().add(this.getIndividual());
 		vocabularyClassExpressionEClass.getESuperTypes().add(theUMLPackage.getClass_());
-		vocabularyClassEClass.getESuperTypes().add(this.getVocabularyEntity());
 		vocabularyClassEClass.getESuperTypes().add(this.getVocabularyClassExpression());
 		anonymousIndividualEClass.getESuperTypes().add(this.getIndividual());
 		individualEClass.getESuperTypes().add(this.getProperty());
 		vocabularyLiteralEClass.getESuperTypes().add(theUMLPackage.getLiteralString());
+		domainVocabularyClassEClass.getESuperTypes().add(theUMLPackage.getClass_());
+		domainVocabularyAssociationEClass.getESuperTypes().add(theUMLPackage.getAssociation());
+		domainVocabularyPropertyEClass.getESuperTypes().add(theUMLPackage.getProperty());
+		domainAttributeEClass.getESuperTypes().add(this.getAttribute());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(framewebProjectEClass, FramewebProject.class, "FramewebProject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3858,10 +4087,11 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getDomainAssociation_Fetch(), this.getFetch(), "fetch", null, 0, 1, DomainAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDomainAssociation_Order(), this.getOrder(), "order", null, 0, 1, DomainAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(domainAttributeEClass, DomainAttribute.class, "DomainAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDomainAttribute_Size(), ecorePackage.getELong(), "size", null, 0, 1, DomainAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDomainAttribute_IsNull(), ecorePackage.getEBoolean(), "isNull", null, 0, 1, DomainAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDomainAttribute_IsPersistent(), ecorePackage.getEBoolean(), "isPersistent", null, 0, 1, DomainAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(attributeEClass, Attribute.class, "Attribute", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAttribute_Size(), ecorePackage.getELong(), "size", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAttribute_IsNull(), ecorePackage.getEBoolean(), "isNull", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAttribute_IsPersistent(), ecorePackage.getEBoolean(), "isPersistent", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAttribute_OwlEquivalentProperty(), theEcorePackage.getEString(), "owlEquivalentProperty", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(versionAttributeEClass, VersionAttribute.class, "VersionAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -4347,6 +4577,15 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEClass(individualEClass, Individual.class, "Individual", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(vocabularyLiteralEClass, VocabularyLiteral.class, "VocabularyLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(domainVocabularyClassEClass, DomainVocabularyClass.class, "DomainVocabularyClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDomainVocabularyClass_Prefix(), theEcorePackage.getEString(), "Prefix", "prefix", 0, 1, DomainVocabularyClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(domainVocabularyAssociationEClass, DomainVocabularyAssociation.class, "DomainVocabularyAssociation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(domainVocabularyPropertyEClass, DomainVocabularyProperty.class, "DomainVocabularyProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(domainAttributeEClass, DomainAttribute.class, "DomainAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(dateTimePrecisionEEnum, DateTimePrecision.class, "DateTimePrecision");

@@ -115,11 +115,6 @@ public class ResultExtensionEndItemProvider extends ExtensionEndItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(UMLPackage.Literals.PROPERTY__QUALIFIER,
-				 FramewebFactory.eINSTANCE.createDomainAttribute()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UMLPackage.Literals.PROPERTY__QUALIFIER,
 				 FramewebFactory.eINSTANCE.createVersionAttribute()));
 
 		newChildDescriptors.add
@@ -231,6 +226,16 @@ public class ResultExtensionEndItemProvider extends ExtensionEndItemProvider {
 			(createChildParameter
 				(UMLPackage.Literals.PROPERTY__QUALIFIER,
 				 FramewebFactory.eINSTANCE.createAttributeMappingProperty()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UMLPackage.Literals.PROPERTY__QUALIFIER,
+				 FramewebFactory.eINSTANCE.createDomainVocabularyProperty()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UMLPackage.Literals.PROPERTY__QUALIFIER,
+				 FramewebFactory.eINSTANCE.createDomainAttribute()));
 
 		newChildDescriptors.add
 			(createChildParameter

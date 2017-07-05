@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frameweb:FramewebProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <compose xsi:type="frameweb:EntityModel" name="Entity Model">
+    <packagedElement xsi:type="frameweb:DomainPackage" name="Entity Package">
+      <packagedElement xsi:type="frameweb:DomainClass" name="Researcher">
+        <generalization xsi:type="frameweb:DomainGeneralization"/>
+        <generalization xsi:type="frameweb:DomainGeneralization"/>
+        <generalization xsi:type="frameweb:DomainGeneralization" generalizationSet="//@compose.0/Entity%20Package/foafPerson"/>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="name" visibility="private" owlEquivalentProperty="dblp:primaryFullPersonName">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="cvLink" visibility="private">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="Classification" visibility="private" type="//@compose.0/Classification"/>
+        <ownedAttribute xsi:type="frameweb:DateTimeAttribute" name="lastUpdateDate" visibility="private" owlEquivalentProperty="" dateTimePrecision="date">
+          <type xsi:type="uml:Class" href="JAVA.frameweb#//@compose.0/Date"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainVocabularyClass" name="Person" powertypeExtent="//@compose.0/Entity%20Package/foafPerson" Prefix="foaf"/>
+      <packagedElement xsi:type="frameweb:DomainGeneralizationSet" name="foafPerson" powertype="//@compose.0/Entity%20Package/Person" generalization="//@compose.0/Entity%20Package/Researcher/@generalization.2"/>
+      <packagedElement xsi:type="frameweb:DomainVocabularyClass" name="Person" Prefix="dblp"/>
+      <packagedElement xsi:type="frameweb:DomainVocabularyAssociation" name="Relationship" memberEnd="//@compose.0/Entity%20Package/Relationship/Source //@compose.0/Entity%20Package/Relationship/Target">
+        <ownedEnd xsi:type="frameweb:DomainVocabularyProperty" name="Source" type="//@compose.0/Entity%20Package/Researcher" association="//@compose.0/Entity%20Package/Relationship"/>
+        <ownedEnd xsi:type="frameweb:DomainVocabularyProperty" name="Target" type="//@compose.0/Entity%20Package/Person.1" association="//@compose.0/Entity%20Package/Relationship"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainClass" name="Publication">
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="name" visibility="private" owlEquivalentProperty="foaf:name">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="year" visibility="private">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/int"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="venueInCV" visibility="private">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainAssociation" name="is author of" memberEnd="//@compose.0/Entity%20Package/is%20author%20of/Source //@compose.0/Entity%20Package/is%20author%20of/Target">
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/Entity%20Package/is%20author%20of/Source" collection="list" fetch="eager"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/Entity%20Package/is%20author%20of/Target"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/Entity%20Package/Researcher" association="//@compose.0/Entity%20Package/is%20author%20of">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
+        </ownedEnd>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/Entity%20Package/Publication" association="//@compose.0/Entity%20Package/is%20author%20of">
+          <lowerValue xsi:type="uml:LiteralInteger"/>
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainVocabularyClass" name="Publication" Prefix="dblp"/>
+      <packagedElement xsi:type="frameweb:DomainVocabularyAssociation" name="Relationship" memberEnd="//@compose.0/Entity%20Package/Relationship.1/Source //@compose.0/Entity%20Package/Relationship.1/Target">
+        <ownedEnd xsi:type="frameweb:DomainVocabularyProperty" name="Source" type="//@compose.0/Entity%20Package/Publication" association="//@compose.0/Entity%20Package/Relationship.1"/>
+        <ownedEnd xsi:type="frameweb:DomainVocabularyProperty" name="Target" type="//@compose.0/Entity%20Package/Publication.1" association="//@compose.0/Entity%20Package/Relationship.1"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainClass" name="Venue">
+        <generalization xsi:type="frameweb:DomainGeneralization" generalizationSet="//@compose.0/Entity%20Package/Organization.1"/>
+        <generalization xsi:type="frameweb:DomainGeneralization" generalizationSet="//@compose.0/Entity%20Package/PublicationType.1"/>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="name" visibility="private" owlEquivalentProperty="foaf:name">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="Scope" visibility="private" type="//@compose.0/Scope"/>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="Category" visibility="private" type="//@compose.0/Category"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainAssociation" name="is published in" memberEnd="//@compose.0/Entity%20Package/is%20published%20in/Source //@compose.0/Entity%20Package/is%20published%20in/Target">
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/Entity%20Package/is%20published%20in/Source"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/Entity%20Package/is%20published%20in/Target"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/Entity%20Package/Publication" association="//@compose.0/Entity%20Package/is%20published%20in">
+          <lowerValue xsi:type="uml:LiteralInteger"/>
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
+        </ownedEnd>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/Entity%20Package/Venue" association="//@compose.0/Entity%20Package/is%20published%20in">
+          <lowerValue xsi:type="uml:LiteralInteger"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainVocabularyClass" name="PublicationType" powertypeExtent="//@compose.0/Entity%20Package/PublicationType.1" Prefix="dblp"/>
+      <packagedElement xsi:type="frameweb:DomainVocabularyClass" name="Organization" powertypeExtent="//@compose.0/Entity%20Package/Organization.1" Prefix="foaf"/>
+      <packagedElement xsi:type="frameweb:DomainGeneralizationSet" name="Organization" powertype="//@compose.0/Entity%20Package/Organization" generalization="//@compose.0/Entity%20Package/Venue/@generalization.0"/>
+      <packagedElement xsi:type="frameweb:DomainGeneralizationSet" name="PublicationType" powertype="//@compose.0/Entity%20Package/PublicationType" generalization="//@compose.0/Entity%20Package/Venue/@generalization.1"/>
+      <packagedElement xsi:type="frameweb:DomainClass" name="User">
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="email" visibility="private">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="password" visibility="private" size="15">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Enumeration" name="Classification">
+      <ownedLiteral name="Visitor" classifier="//@compose.0/Classification"/>
+      <ownedLiteral name="Permanent" classifier="//@compose.0/Classification"/>
+      <ownedLiteral name="Contributor" classifier="//@compose.0/Classification"/>
+      <ownedLiteral name="External" classifier="//@compose.0/Classification"/>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Enumeration" name="Scope">
+      <ownedLiteral name="National" classifier="//@compose.0/Scope"/>
+      <ownedLiteral name="International" classifier="//@compose.0/Scope"/>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Enumeration" name="Category">
+      <ownedLiteral name="Journal" classifier="//@compose.0/Category"/>
+      <ownedLiteral name="Conference" classifier="//@compose.0/Category"/>
+      <ownedLiteral name="Symposium" classifier="//@compose.0/Category"/>
+      <ownedLiteral name="Workshop" classifier="//@compose.0/Category"/>
+      <ownedLiteral name="Other" classifier="//@compose.0/Category"/>
+    </packagedElement>
+  </compose>
+</frameweb:FramewebProject>

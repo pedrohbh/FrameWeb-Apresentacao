@@ -2487,6 +2487,75 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link frameweb.DomainVocabularyClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DomainVocabularyClassItemProvider domainVocabularyClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link frameweb.DomainVocabularyClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDomainVocabularyClassAdapter() {
+		if (domainVocabularyClassItemProvider == null) {
+			domainVocabularyClassItemProvider = new DomainVocabularyClassItemProvider(this);
+		}
+
+		return domainVocabularyClassItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link frameweb.DomainVocabularyAssociation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DomainVocabularyAssociationItemProvider domainVocabularyAssociationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link frameweb.DomainVocabularyAssociation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDomainVocabularyAssociationAdapter() {
+		if (domainVocabularyAssociationItemProvider == null) {
+			domainVocabularyAssociationItemProvider = new DomainVocabularyAssociationItemProvider(this);
+		}
+
+		return domainVocabularyAssociationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link frameweb.DomainVocabularyProperty} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DomainVocabularyPropertyItemProvider domainVocabularyPropertyItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link frameweb.DomainVocabularyProperty}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDomainVocabularyPropertyAdapter() {
+		if (domainVocabularyPropertyItemProvider == null) {
+			domainVocabularyPropertyItemProvider = new DomainVocabularyPropertyItemProvider(this);
+		}
+
+		return domainVocabularyPropertyItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2592,7 +2661,6 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory i
 		if (applicationModelItemProvider != null) applicationModelItemProvider.dispose();
 		if (persistenceModelItemProvider != null) persistenceModelItemProvider.dispose();
 		if (domainAssociationItemProvider != null) domainAssociationItemProvider.dispose();
-		if (domainAttributeItemProvider != null) domainAttributeItemProvider.dispose();
 		if (versionAttributeItemProvider != null) versionAttributeItemProvider.dispose();
 		if (idAttributeItemProvider != null) idAttributeItemProvider.dispose();
 		if (lobAttributeItemProvider != null) lobAttributeItemProvider.dispose();
@@ -2690,6 +2758,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory i
 		if (vocabularyClassItemProvider != null) vocabularyClassItemProvider.dispose();
 		if (anonymousIndividualItemProvider != null) anonymousIndividualItemProvider.dispose();
 		if (vocabularyLiteralItemProvider != null) vocabularyLiteralItemProvider.dispose();
+		if (domainVocabularyClassItemProvider != null) domainVocabularyClassItemProvider.dispose();
+		if (domainVocabularyAssociationItemProvider != null) domainVocabularyAssociationItemProvider.dispose();
+		if (domainVocabularyPropertyItemProvider != null) domainVocabularyPropertyItemProvider.dispose();
+		if (domainAttributeItemProvider != null) domainAttributeItemProvider.dispose();
 	}
 
 }

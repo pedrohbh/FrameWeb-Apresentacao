@@ -100,10 +100,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//DomainAssociation/fetch"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//DomainAssociation/order"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="FrameWeb.ecore#//DomainAttribute">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//DomainAttribute/size"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//DomainAttribute/isNull"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//DomainAttribute/isPersistent"/>
+    <genClasses image="false" ecoreClass="FrameWeb.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//Attribute/size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//Attribute/isNull"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//Attribute/isPersistent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//Attribute/owlEquivalentProperty"/>
     </genClasses>
     <genClasses ecoreClass="FrameWeb.ecore#//VersionAttribute"/>
     <genClasses ecoreClass="FrameWeb.ecore#//IdAttribute">
@@ -221,7 +222,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//DomainConstraints/order"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//DomainConstraints/cascade"/>
     </genClasses>
-    <genClasses ecoreClass="FrameWeb.ecore#//DomainProperty"/>
     <genClasses ecoreClass="FrameWeb.ecore#//DAOGeneralization"/>
     <genClasses ecoreClass="FrameWeb.ecore#//MappingLib"/>
     <genClasses ecoreClass="FrameWeb.ecore#//ClassMapping"/>
@@ -415,5 +415,11 @@
     <genClasses ecoreClass="FrameWeb.ecore#//AnonymousIndividual"/>
     <genClasses ecoreClass="FrameWeb.ecore#//Individual"/>
     <genClasses ecoreClass="FrameWeb.ecore#//VocabularyLiteral"/>
+    <genClasses ecoreClass="FrameWeb.ecore#//DomainVocabularyClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//DomainVocabularyClass/Prefix"/>
+    </genClasses>
+    <genClasses ecoreClass="FrameWeb.ecore#//DomainVocabularyAssociation"/>
+    <genClasses ecoreClass="FrameWeb.ecore#//DomainVocabularyProperty"/>
+    <genClasses ecoreClass="FrameWeb.ecore#//DomainAttribute"/>
   </genPackages>
 </genmodel:GenModel>

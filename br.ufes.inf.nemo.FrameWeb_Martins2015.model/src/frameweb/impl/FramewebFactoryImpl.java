@@ -62,7 +62,6 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			case FramewebPackage.APPLICATION_MODEL: return createApplicationModel();
 			case FramewebPackage.PERSISTENCE_MODEL: return createPersistenceModel();
 			case FramewebPackage.DOMAIN_ASSOCIATION: return createDomainAssociation();
-			case FramewebPackage.DOMAIN_ATTRIBUTE: return createDomainAttribute();
 			case FramewebPackage.VERSION_ATTRIBUTE: return createVersionAttribute();
 			case FramewebPackage.ID_ATTRIBUTE: return createIdAttribute();
 			case FramewebPackage.LOB_ATTRIBUTE: return createLOBAttribute();
@@ -160,6 +159,10 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			case FramewebPackage.VOCABULARY_CLASS: return createVocabularyClass();
 			case FramewebPackage.ANONYMOUS_INDIVIDUAL: return createAnonymousIndividual();
 			case FramewebPackage.VOCABULARY_LITERAL: return createVocabularyLiteral();
+			case FramewebPackage.DOMAIN_VOCABULARY_CLASS: return createDomainVocabularyClass();
+			case FramewebPackage.DOMAIN_VOCABULARY_ASSOCIATION: return createDomainVocabularyAssociation();
+			case FramewebPackage.DOMAIN_VOCABULARY_PROPERTY: return createDomainVocabularyProperty();
+			case FramewebPackage.DOMAIN_ATTRIBUTE: return createDomainAttribute();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1287,6 +1290,36 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	public VocabularyLiteral createVocabularyLiteral() {
 		VocabularyLiteralImpl vocabularyLiteral = new VocabularyLiteralImpl();
 		return vocabularyLiteral;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DomainVocabularyClass createDomainVocabularyClass() {
+		DomainVocabularyClassImpl domainVocabularyClass = new DomainVocabularyClassImpl();
+		return domainVocabularyClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DomainVocabularyAssociation createDomainVocabularyAssociation() {
+		DomainVocabularyAssociationImpl domainVocabularyAssociation = new DomainVocabularyAssociationImpl();
+		return domainVocabularyAssociation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DomainVocabularyProperty createDomainVocabularyProperty() {
+		DomainVocabularyPropertyImpl domainVocabularyProperty = new DomainVocabularyPropertyImpl();
+		return domainVocabularyProperty;
 	}
 
 	/**

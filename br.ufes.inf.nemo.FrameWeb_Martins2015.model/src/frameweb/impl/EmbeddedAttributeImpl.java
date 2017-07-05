@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class EmbeddedAttributeImpl extends DomainAttributeImpl implements EmbeddedAttribute {
+public class EmbeddedAttributeImpl extends AttributeImpl implements EmbeddedAttribute {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

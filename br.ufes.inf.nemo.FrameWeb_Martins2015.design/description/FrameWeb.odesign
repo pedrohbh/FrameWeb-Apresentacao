@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties_1.0.0="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:validation="http://www.eclipse.org/sirius/description/validation/1.1.0" name="FrameWeb" version="11.1.1.201610211630">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="FrameWeb" version="11.1.1.201610211630">
   <ownedViewpoints label="FrameWebViewPoint" modelFileExtension="frameweb">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWebNavigationModel" domainClass="NavigationModel">
-      <validationSet>
-        <ownedRules xsi:type="validation:SemanticValidationRule" targetClass="frameweb.ResultDependency">
-          <audits auditExpression="(self.oclAsType(Dependency).client.oclIsTypeOf(FrontControllerClass)) and ((self.oclAsType(Dependency).supplier.oclIsTypeOf(NavigationClass)) or (self.oclAsType(Dependency).supplier.oclIsTypeOf(FormComponent)))"/>
-        </ownedRules>
-      </validationSet>
       <defaultLayer name="Default">
         <edgeMappings name="PageDependency Line" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Result%20Constraint']" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Page%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Page%20Node']" targetFinderExpression="feature:supplier" sourceFinderExpression="feature:client" domainClass="PageDependency" useDomainElement="true" reconnections="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Reconnect%20Result%20Dependency']">
           <style lineStyle="dash" sizeComputationExpression="2" routingStyle="manhattan">
@@ -95,7 +90,7 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationPackageIcon.png">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationPackage.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -134,7 +129,7 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationPackageIcon.png">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationPackage.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -142,7 +137,7 @@
           </style>
         </containerMappings>
         <toolSections name="Package">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="View Package" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationPackageIcon.png">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="View Package" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationPackage.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -151,7 +146,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Controller Package" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationPackageIcon.png">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Controller Package" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationPackage.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -168,7 +163,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="View">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Page" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Page%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationClassIcon.png">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Page" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Page%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationClass.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -177,7 +172,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="UI Component" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationClassIcon.png">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="UI Component" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationClass.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -186,7 +181,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Template" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Template%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationClassIcon.png">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Template" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Template%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationClass.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -195,7 +190,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="UIComponentField" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Template%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Page%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationAttributeIcon.png">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="UIComponentField" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Template%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Page%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -246,7 +241,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Controller">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Front Controller Class" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationClassIcon.png">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Front Controller Class" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationClass.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -255,7 +250,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="IOParameter" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='IO%20Parameter%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationAttributeIcon.png">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IOParameter" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='IO%20Parameter%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -264,7 +259,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Front Controller Method" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='Front%20Controller%20Method%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationAttributeIcon.png">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Front Controller Method" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='Front%20Controller%20Method%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -284,7 +279,11 @@
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="client" valueExpression="var:source"/>
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="supplier" valueExpression="var:target"/>
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.ResultConstraint" referenceName="resultDependencyConstraint"/>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.ResultConstraint" referenceName="resultDependencyConstraint" variableName="cons">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:cons">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="result" valueExpression="null"/>
+                      </subModelOperations>
+                    </subModelOperations>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
@@ -391,7 +390,7 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWebEntityModel" domainClass="EntityModel">
       <defaultLayer name="Default">
-        <edgeMappings name="DomainGeneralizationSet" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']" targetFinderExpression="aql:self.powertype" sourceFinderExpression="aql:self.generalization.owner" domainClass="DomainGeneralizationSet" useDomainElement="true">
+        <edgeMappings name="DomainGeneralizationSet" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainVocabularyClass%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainVocabularyClass%20Node']" targetFinderExpression="aql:self.powertype" sourceFinderExpression="aql:self.generalization.owner" domainClass="DomainGeneralizationSet" useDomainElement="true">
           <style targetArrow="InputClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
           </style>
@@ -410,21 +409,71 @@
             </endLabelStyleDescription>
           </style>
         </edgeMappings>
+        <edgeMappings name="DomainVocabularyAssociation" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Class']" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainVocabularyClass%20Node']" targetFinderExpression="aql:self.memberEnd->at(2).type" sourceFinderExpression="aql:self.memberEnd->at(1).type" domainClass="DomainVocabularyAssociation" useDomainElement="true" reconnections="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Reconnect%20Navigation%20Association']">
+          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
+            <beginLabelStyleDescription showIcon="false">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </beginLabelStyleDescription>
+            <centerLabelStyleDescription showIcon="false" labelExpression="{owl:equivalentClass}">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+            <endLabelStyleDescription showIcon="false">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </endLabelStyleDescription>
+          </style>
+        </edgeMappings>
         <containerMappings name="Domain Package" semanticCandidatesExpression="feature:eAllContents" domainClass="DomainPackage">
           <subContainerMappings name="DomainClass Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Class']" semanticCandidatesExpression="feature:eAllContents" domainClass="DomainClass" childrenPresentation="List">
             <subNodeMappings name="DomainAttribute" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Attributes%20Label']" semanticCandidatesExpression="feature:eAllContents" domainClass="DomainAttribute">
-              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printSize()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printProperties()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               </style>
             </subNodeMappings>
-            <subNodeMappings name="EmbeddedAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="EmbeddedAttribute"/>
-            <subNodeMappings name="IdAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="IdAttribute"/>
-            <subNodeMappings name="LOBAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="LOBAttribute"/>
-            <subNodeMappings name="VersionAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="VersionAttribute"/>
-            <subNodeMappings name="DecimalAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="DecimalAttribute"/>
-            <subNodeMappings name="DateTimeAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="DateTimeAttribute"/>
+            <subNodeMappings name="EmbeddedAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="EmbeddedAttribute">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printSize() + self.owlProperty()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="IdAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="IdAttribute">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printSize() + self.owlProperty()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="LOBAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="LOBAttribute">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printSize() + self.owlProperty()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="VersionAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="VersionAttribute">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printSize() + self.owlProperty()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="DecimalAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="DecimalAttribute">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printSize() + self.owlProperty()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="DateTimeAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="DateTimeAttribute">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printDateProperties()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
             <subNodeMappings name="DomainMethod" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Method%20Click']" domainClass="DomainMethod">
               <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.printParameters()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -448,7 +497,16 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+          <subContainerMappings name="DomainVocabularyClass Node" semanticCandidatesExpression="feature:eAllContents" domainClass="DomainVocabularyClass" childrenPresentation="List">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="aql:self.printPrefix() + '::' + self.name" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainPackage.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -472,18 +530,18 @@
           </style>
         </containerMappings>
         <toolSections name="Package">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Domain Package" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Domain Package" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainPackage.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.DomainPackage" referenceName="packagedElement">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Domain Package"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Entity Package"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
         </toolSections>
         <toolSections name="Domain">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="DomainClass" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Class.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="DomainClass" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainClass.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -564,7 +622,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Enumeration" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Enumeration']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Class.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Enumeration" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Enumeration']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainClass.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -573,7 +631,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Enumeration Literal" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Enumeration']/@subNodeMappings[name='EnumerationLiteral']" iconPath="/org.eclipse.acceleo.model.edit/icons/full/obj16/Variable.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Enumeration Literal" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Enumeration']/@subNodeMappings[name='EnumerationLiteral']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -597,16 +655,17 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Attributes e Methods">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Domain Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='DomainAttribute']" iconPath="/org.eclipse.acceleo.model.edit/icons/full/obj16/Variable.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Domain Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='DomainAttribute']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.DomainAttribute" referenceName="ownedAttribute">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Attribute"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="visibility" valueExpression="private"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Embedded Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='EmbeddedAttribute']" iconPath="/org.eclipse.acceleo.model.edit/icons/full/obj16/Variable.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Embedded Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='EmbeddedAttribute']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -615,7 +674,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Id Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='IdAttribute']" iconPath="/org.eclipse.acceleo.model.edit/icons/full/obj16/Variable.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Id Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='IdAttribute']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -624,7 +683,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Version Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='VersionAttribute']" iconPath="/org.eclipse.acceleo.model.edit/icons/full/obj16/Variable.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Version Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='VersionAttribute']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -633,7 +692,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Decimal Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='DecimalAttribute']" iconPath="/org.eclipse.acceleo.model.edit/icons/full/obj16/Variable.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Decimal Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='DecimalAttribute']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -642,7 +701,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="DateTime Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='DateTimeAttribute']" iconPath="/org.eclipse.acceleo.model.edit/icons/full/obj16/Variable.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="DateTime Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='DateTimeAttribute']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -651,7 +710,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="LOB Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='LOBAttribute']" iconPath="/org.eclipse.acceleo.model.edit/icons/full/obj16/Variable.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="LOB Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='LOBAttribute']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -660,7 +719,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Domain Method" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='DomainMethod']" iconPath="/org.eclipse.acceleo.model.edit/icons/full/obj16/Variable.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Domain Method" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='DomainMethod']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -681,6 +740,44 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
                 <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='Method%20Diagram']"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Vocabulary">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="DomainVocabularyClass" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainVocabularyClass%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/VocabularyClass.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.DomainVocabularyClass" referenceName="packagedElement" variableName="Pageinstance">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Vocabulary Class"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Vocabulary Association" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@edgeMappings[name='DomainVocabularyAssociation']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/Association.png">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer()">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.DomainVocabularyAssociation" referenceName="packagedElement" variableName="va">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:va">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Relationship"/>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.DomainVocabularyProperty" referenceName="ownedEnd" variableName="proper">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:proper">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:source"/>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Source"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.DomainVocabularyProperty" referenceName="ownedEnd" variableName="proper2">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:proper2">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:target"/>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Target"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -734,7 +831,7 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/PersistencePackage.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -742,7 +839,7 @@
           </style>
         </containerMappings>
         <toolSections name="Package">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Persistence Package" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@containerMappings[name='PersistencePackage']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Persistence Package" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@containerMappings[name='PersistencePackage']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/PersistencePackage.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -759,7 +856,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="DAO">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="DAO Class" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@containerMappings[name='PersistencePackage']/@subContainerMappings[name='DAOClass']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Class.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="DAO Class" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@containerMappings[name='PersistencePackage']/@subContainerMappings[name='DAOClass']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/PersistenceClass.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -768,7 +865,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="DAO Interface" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@containerMappings[name='PersistencePackage']/@subNodeMappings[name='DAOInterface']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Class.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="DAO Interface" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@containerMappings[name='PersistencePackage']/@subNodeMappings[name='DAOInterface']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/PersistenceInterface.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -783,7 +880,7 @@
               <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Realization" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@edgeMappings[name='Realization%20Line']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Association.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Realization" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@edgeMappings[name='Realization%20Line']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/Inheritance.png">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -797,7 +894,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Generalization" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@edgeMappings[name='DAOGeneralizationSet']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Association.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Generalization" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@edgeMappings[name='DAOGeneralizationSet']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/Inheritance.png">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -824,7 +921,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="DAO Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@containerMappings[name='PersistencePackage']/@subContainerMappings[name='DAOClass']/@subNodeMappings[name='DAO%20Attribute%20Node']" iconPath="/org.eclipse.acceleo.model.edit/icons/full/obj16/Variable.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="DAO Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@containerMappings[name='PersistencePackage']/@subContainerMappings[name='DAOClass']/@subNodeMappings[name='DAO%20Attribute%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/PersistenceAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -833,7 +930,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="DAO Method" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@containerMappings[name='PersistencePackage']/@subContainerMappings[name='DAOClass']/@subNodeMappings[name='DAO%20Method%20Node']" iconPath="/org.eclipse.acceleo.model.edit/icons/full/obj16/Variable.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="DAO Method" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@containerMappings[name='PersistencePackage']/@subContainerMappings[name='DAOClass']/@subNodeMappings[name='DAO%20Method%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/PersistenceAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -918,7 +1015,7 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/ApplicationPackage.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -933,7 +1030,7 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
             </style>
           </subNodeMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationPackage.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -949,7 +1046,7 @@
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
             </style>
           </subNodeMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/PersistencePackage.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -957,7 +1054,7 @@
           </style>
         </containerMappings>
         <toolSections name="Package">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Application Package" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Application Package" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/ApplicationPackage.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -968,7 +1065,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Service">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Service Class" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Class.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Service Class" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/ApplicationClass.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -977,7 +1074,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Service Interface" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subNodeMappings[name='ServiceInterface']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Class.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Service Interface" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subNodeMappings[name='ServiceInterface']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/ServiceInterface.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -986,7 +1083,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Realization" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@edgeMappings[name='Service%20Realization%20Line']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Association.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Realization" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@edgeMappings[name='Service%20Realization%20Line']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/Inheritance.png">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1000,7 +1097,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Generalization" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@edgeMappings[name='ServiceGeneralizationSet']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Association.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Generalization" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@edgeMappings[name='ServiceGeneralizationSet']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/Inheritance.png">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1019,7 +1116,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Service Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']/@subNodeMappings[name='Service%20Attribute%20Node']" iconPath="/org.eclipse.acceleo.model.edit/icons/full/obj16/Variable.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Service Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']/@subNodeMappings[name='Service%20Attribute%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/ApplicationAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1028,7 +1125,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Service Method" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']/@subNodeMappings[name='Service%20Method%20Node']" iconPath="/org.eclipse.acceleo.model.edit/icons/full/obj16/Variable.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Service Method" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']/@subNodeMappings[name='Service%20Method%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/ApplicationAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1038,7 +1135,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DAOServiceAssociation" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@edgeMappings[name='DAOServiceAssociation']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Association.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DAOServiceAssociation" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@edgeMappings[name='DAOServiceAssociation']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/Association.png">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1082,7 +1179,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ServiceControllerAssociation" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@edgeMappings[name='ServiceControllerAssociation']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Association.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ServiceControllerAssociation" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@edgeMappings[name='ServiceControllerAssociation']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/Association.png">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1129,50 +1226,6 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWebVocabularyModel" domainClass="VocabularyModel">
-      <defaultLayer name="Default">
-        <containerMappings name="Vocabulary" semanticCandidatesExpression="feature:eAllContents" domainClass="Vocabulary">
-          <subContainerMappings name="Axiom" semanticCandidatesExpression="feature:eAllContents" domainClass="Axiom">
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
-            </style>
-          </subContainerMappings>
-          <subContainerMappings name="Annotation" semanticCandidatesExpression="feature:eAllContents" domainClass="Annotation">
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
-            </style>
-          </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-          </style>
-        </containerMappings>
-        <toolSections name="Vocabulary Model">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Vocabulary" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebVocabularyModel']/@defaultLayer/@containerMappings[name='Vocabulary']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.Vocabulary" referenceName="packagedElement">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Vocabulary"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Axiom">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation/>
-          </ownedTools>
-        </toolSections>
-      </defaultLayer>
-    </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWeb Project" domainClass="FramewebProject">
       <defaultLayer name="Default">
         <containerMappings name="NavigationModel" navigationDescriptions="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='NavigationModel']" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='GoToDiagramNavigation']" domainClass="NavigationModel">
@@ -1215,73 +1268,26 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
           </style>
         </containerMappings>
-        <containerMappings name="VocabularyModel" navigationDescriptions="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='VocabularyModel']" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@toolSections.0/@ownedTools[name='GoToDiagramVocabulary']" domainClass="VocabularyModel">
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
-          </style>
-        </containerMappings>
         <toolSections name="Models">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Navigation Model" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@containerMappings[name='NavigationModel']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Navigation Model" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@containerMappings[name='NavigationModel']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationPackage.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.NavigationModel" referenceName="compose">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Navigation Model"/>
-                <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Entity Model" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@containerMappings[name='EntityModel']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Entity Model" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@containerMappings[name='EntityModel']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainPackage.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.EntityModel" referenceName="compose" variableName="model">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Entity Model"/>
-                <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']"/>
-                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:model">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.Package" referenceName="packagedElement" variableName="pack">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Primitive Types"/>
-                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:pack">
-                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.PrimitiveType" referenceName="packagedElement">
-                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="byte"/>
-                      </subModelOperations>
-                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.PrimitiveType" referenceName="packagedElement">
-                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="short"/>
-                      </subModelOperations>
-                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.PrimitiveType" referenceName="packagedElement">
-                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="int"/>
-                      </subModelOperations>
-                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.PrimitiveType" referenceName="packagedElement">
-                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="long"/>
-                      </subModelOperations>
-                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.PrimitiveType" referenceName="packagedElement">
-                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="float"/>
-                      </subModelOperations>
-                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.PrimitiveType" referenceName="packagedElement">
-                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="double"/>
-                      </subModelOperations>
-                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.PrimitiveType" referenceName="packagedElement">
-                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="boolean"/>
-                      </subModelOperations>
-                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.PrimitiveType" referenceName="packagedElement">
-                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="char"/>
-                      </subModelOperations>
-                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.PrimitiveType" referenceName="packagedElement">
-                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Object"/>
-                      </subModelOperations>
-                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.PrimitiveType" referenceName="packagedElement">
-                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="String"/>
-                      </subModelOperations>
-                    </subModelOperations>
-                  </subModelOperations>
-                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Persistence Model" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@containerMappings[name='PersistenceModel']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Persistence Model" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@containerMappings[name='PersistenceModel']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/PersistencePackage.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1290,7 +1296,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Application Model" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@containerMappings[name='ApplicationModel']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Application Model" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@containerMappings[name='ApplicationModel']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/ApplicationPackage.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1353,27 +1359,6 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWork']"/>
             </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Vocabulary Model" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@containerMappings[name='VocabularyModel']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.VocabularyModel" referenceName="compose">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Vocabulary Model"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="GoToDiagramVocabulary" mappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']/@defaultLayer/@containerMappings[name='VocabularyModel']">
-            <element name="element"/>
-            <elementView name="elementView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebVocabularyModel']"/>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:DiagramNavigationDescription" name="VocabularyModel" diagramDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebVocabularyModel']">
-            <containerViewVariable name="containerView"/>
-            <containerVariable name="container"/>
-            <representationNameVariable name="diagramName"/>
           </ownedTools>
         </toolSections>
       </defaultLayer>
@@ -1525,47 +1510,47 @@
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="br.ufes.inf.nemo.FrameWeb_Martins2015.design.Extend"/>
   </ownedViewpoints>
-  <extensions xsi:type="properties_1.0.0:ViewExtensionDescription" identifier="properties">
+  <extensions xsi:type="properties:ViewExtensionDescription" identifier="properties">
     <pages identifier="ParameterMenuFrontController" labelExpression="Parameter Menu" domainClass="frameweb.FrontControllerMethod" groups="//@extensions.0/@groups.0"/>
     <pages identifier="ParameterMenuDAO" labelExpression="ParameterMenu" domainClass="frameweb.DAOMethod" groups="//@extensions.0/@groups.1"/>
     <pages identifier="ParameterMenuDomain" labelExpression="ParameterMenu" domainClass="frameweb.DomainMethod" groups="//@extensions.0/@groups.2"/>
     <pages identifier="DomainAssociation" labelExpression="Domain Association" domainClass="frameweb.DomainAssociation" groups="//@extensions.0/@groups.3"/>
     <pages identifier="ResultDependency" labelExpression="Result Constraints" domainClass="frameweb.ResultDependency" groups="//@extensions.0/@groups.4"/>
     <groups identifier="FrontControllerParameters" labelExpression="Parameters" domainClass="FrontControllerMethod" semanticCandidateExpression="aql:self">
-      <controls xsi:type="properties_1.0.0:LabelDescription" identifier="Double Click on Method to Edit Parameters" labelExpression="Double Click on Method to Edit Parameters"/>
+      <controls xsi:type="properties:LabelDescription" identifier="Double Click on Method to Edit Parameters" labelExpression="Double Click on Method to Edit Parameters"/>
     </groups>
     <groups identifier="DAOParameters" labelExpression="Parameters" domainClass="DAOMethod" semanticCandidateExpression="aql:self">
-      <controls xsi:type="properties_1.0.0:LabelDescription" identifier="Double Click on Method to Edit Parameters" labelExpression="Double Click on Method to Edit Parameters"/>
+      <controls xsi:type="properties:LabelDescription" identifier="Double Click on Method to Edit Parameters" labelExpression="Double Click on Method to Edit Parameters"/>
     </groups>
     <groups identifier="DomainParameters" labelExpression="Parameters" domainClass="DomainMethod" semanticCandidateExpression="aql:self">
-      <controls xsi:type="properties_1.0.0:LabelDescription" identifier="Double Click on Method to Edit Parameters" labelExpression="Double Click on Method to Edit Parameters"/>
+      <controls xsi:type="properties:LabelDescription" identifier="Double Click on Method to Edit Parameters" labelExpression="Double Click on Method to Edit Parameters"/>
     </groups>
     <groups identifier="DomainAssociation" labelExpression="Association" domainClass="DomainAssociation" semanticCandidateExpression="aql:self">
-      <controls xsi:type="properties_1.0.0:LabelDescription" identifier="Double Click on Association to edit properties of his elements" labelExpression="Double Click on Association to edit properties of his elements"/>
+      <controls xsi:type="properties:LabelDescription" identifier="Double Click on Association to edit properties of his elements" labelExpression="Double Click on Association to edit properties of his elements"/>
     </groups>
     <groups identifier="ResultDependency" labelExpression="Constraints" domainClass="ResultDependency" semanticCandidateExpression="aql:self">
-      <controls xsi:type="properties_1.0.0:TextDescription" identifier="resulttext" labelExpression="Result:" valueExpression="aql:self.resultDependencyConstraint.result">
+      <controls xsi:type="properties:TextDescription" identifier="resulttext" labelExpression="Result:" valueExpression="aql:self.resultDependencyConstraint.result">
         <initialOperation>
           <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.resultDependencyConstraint">
             <subModelOperations xsi:type="tool_1:SetValue" featureName="result" valueExpression="var:newValue"/>
           </firstModelOperations>
         </initialOperation>
       </controls>
-      <controls xsi:type="properties_1.0.0:SelectDescription" labelExpression="Ajax:" valueExpression="aql:self.resultDependencyConstraint.ajax.toString()" candidatesExpression="aql:Sequence{'true', 'false'}" candidateDisplayExpression="var:candidate">
+      <controls xsi:type="properties:SelectDescription" labelExpression="Ajax:" valueExpression="aql:self.resultDependencyConstraint.ajax.toString()" candidatesExpression="aql:Sequence{'true', 'false'}" candidateDisplayExpression="var:candidate">
         <initialOperation>
           <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.resultDependencyConstraint">
             <subModelOperations xsi:type="tool_1:SetValue" featureName="ajax" valueExpression="var:newValue"/>
           </firstModelOperations>
         </initialOperation>
       </controls>
-      <controls xsi:type="properties_1.0.0:TextDescription" labelExpression="Render:" valueExpression="aql:self.resultDependencyConstraint.render">
+      <controls xsi:type="properties:TextDescription" labelExpression="Render:" valueExpression="aql:self.resultDependencyConstraint.render">
         <initialOperation>
           <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.resultDependencyConstraint">
             <subModelOperations xsi:type="tool_1:SetValue" featureName="render" valueExpression="var:newValue"/>
           </firstModelOperations>
         </initialOperation>
       </controls>
-      <controls xsi:type="properties_1.0.0:TextDescription" labelExpression="Execute:" valueExpression="aql:self.resultDependencyConstraint.execute">
+      <controls xsi:type="properties:TextDescription" labelExpression="Execute:" valueExpression="aql:self.resultDependencyConstraint.execute">
         <initialOperation>
           <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.resultDependencyConstraint">
             <subModelOperations xsi:type="tool_1:SetValue" featureName="execute" valueExpression="var:newValue"/>
