@@ -112,7 +112,6 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			case FramewebPackage.CHAINING_CONSTRAINT: return createChainingConstraint();
 			case FramewebPackage.NAVIGATION_GENERALIZATION: return createNavigationGeneralization();
 			case FramewebPackage.DOMAIN_CONSTRAINTS: return createDomainConstraints();
-			case FramewebPackage.DOMAIN_PROPERTY: return createDomainProperty();
 			case FramewebPackage.DAO_GENERALIZATION: return createDAOGeneralization();
 			case FramewebPackage.MAPPING_LIB: return createMappingLib();
 			case FramewebPackage.CLASS_MAPPING: return createClassMapping();
@@ -159,10 +158,10 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			case FramewebPackage.VOCABULARY_CLASS: return createVocabularyClass();
 			case FramewebPackage.ANONYMOUS_INDIVIDUAL: return createAnonymousIndividual();
 			case FramewebPackage.VOCABULARY_LITERAL: return createVocabularyLiteral();
-			case FramewebPackage.DOMAIN_VOCABULARY_CLASS: return createDomainVocabularyClass();
 			case FramewebPackage.DOMAIN_VOCABULARY_ASSOCIATION: return createDomainVocabularyAssociation();
 			case FramewebPackage.DOMAIN_VOCABULARY_PROPERTY: return createDomainVocabularyProperty();
 			case FramewebPackage.DOMAIN_ATTRIBUTE: return createDomainAttribute();
+			case FramewebPackage.DOMAIN_PROPERTY: return createDomainProperty();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1290,16 +1289,6 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	public VocabularyLiteral createVocabularyLiteral() {
 		VocabularyLiteralImpl vocabularyLiteral = new VocabularyLiteralImpl();
 		return vocabularyLiteral;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DomainVocabularyClass createDomainVocabularyClass() {
-		DomainVocabularyClassImpl domainVocabularyClass = new DomainVocabularyClassImpl();
-		return domainVocabularyClass;
 	}
 
 	/**

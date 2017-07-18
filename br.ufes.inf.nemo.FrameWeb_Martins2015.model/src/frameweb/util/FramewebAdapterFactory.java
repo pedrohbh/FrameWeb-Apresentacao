@@ -374,10 +374,6 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 				return createDomainConstraintsAdapter();
 			}
 			@Override
-			public Adapter caseDomainProperty(DomainProperty object) {
-				return createDomainPropertyAdapter();
-			}
-			@Override
 			public Adapter caseDAOGeneralization(DAOGeneralization object) {
 				return createDAOGeneralizationAdapter();
 			}
@@ -570,10 +566,6 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 				return createNamedIndividualAdapter();
 			}
 			@Override
-			public Adapter caseVocabularyClassExpression(VocabularyClassExpression object) {
-				return createVocabularyClassExpressionAdapter();
-			}
-			@Override
 			public Adapter caseVocabularyClass(VocabularyClass object) {
 				return createVocabularyClassAdapter();
 			}
@@ -590,10 +582,6 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 				return createVocabularyLiteralAdapter();
 			}
 			@Override
-			public Adapter caseDomainVocabularyClass(DomainVocabularyClass object) {
-				return createDomainVocabularyClassAdapter();
-			}
-			@Override
 			public Adapter caseDomainVocabularyAssociation(DomainVocabularyAssociation object) {
 				return createDomainVocabularyAssociationAdapter();
 			}
@@ -604,6 +592,10 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseDomainAttribute(DomainAttribute object) {
 				return createDomainAttributeAdapter();
+			}
+			@Override
+			public Adapter caseDomainProperty(DomainProperty object) {
+				return createDomainPropertyAdapter();
 			}
 			@Override
 			public Adapter caseEModelElement(EModelElement object) {
@@ -2430,20 +2422,6 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link frameweb.VocabularyClassExpression <em>Vocabulary Class Expression</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see frameweb.VocabularyClassExpression
-	 * @generated
-	 */
-	public Adapter createVocabularyClassExpressionAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link frameweb.VocabularyClass <em>Vocabulary Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -2496,20 +2474,6 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVocabularyLiteralAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link frameweb.DomainVocabularyClass <em>Domain Vocabulary Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see frameweb.DomainVocabularyClass
-	 * @generated
-	 */
-	public Adapter createDomainVocabularyClassAdapter() {
 		return null;
 	}
 

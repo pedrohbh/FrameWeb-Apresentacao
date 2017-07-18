@@ -1196,24 +1196,6 @@ public class FramewebSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case FramewebPackage.DOMAIN_PROPERTY: {
-				DomainProperty domainProperty = (DomainProperty)theEObject;
-				T result = caseDomainProperty(domainProperty);
-				if (result == null) result = caseUML_Property(domainProperty);
-				if (result == null) result = caseStructuralFeature(domainProperty);
-				if (result == null) result = caseConnectableElement(domainProperty);
-				if (result == null) result = caseDeploymentTarget(domainProperty);
-				if (result == null) result = caseFeature(domainProperty);
-				if (result == null) result = caseTypedElement(domainProperty);
-				if (result == null) result = caseMultiplicityElement(domainProperty);
-				if (result == null) result = caseParameterableElement(domainProperty);
-				if (result == null) result = caseRedefinableElement(domainProperty);
-				if (result == null) result = caseNamedElement(domainProperty);
-				if (result == null) result = caseElement(domainProperty);
-				if (result == null) result = caseEModelElement(domainProperty);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case FramewebPackage.DAO_GENERALIZATION: {
 				DAOGeneralization daoGeneralization = (DAOGeneralization)theEObject;
 				T result = caseDAOGeneralization(daoGeneralization);
@@ -2050,30 +2032,9 @@ public class FramewebSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case FramewebPackage.VOCABULARY_CLASS_EXPRESSION: {
-				VocabularyClassExpression vocabularyClassExpression = (VocabularyClassExpression)theEObject;
-				T result = caseVocabularyClassExpression(vocabularyClassExpression);
-				if (result == null) result = caseClass(vocabularyClassExpression);
-				if (result == null) result = caseEncapsulatedClassifier(vocabularyClassExpression);
-				if (result == null) result = caseBehavioredClassifier(vocabularyClassExpression);
-				if (result == null) result = caseStructuredClassifier(vocabularyClassExpression);
-				if (result == null) result = caseClassifier(vocabularyClassExpression);
-				if (result == null) result = caseNamespace(vocabularyClassExpression);
-				if (result == null) result = caseRedefinableElement(vocabularyClassExpression);
-				if (result == null) result = caseType(vocabularyClassExpression);
-				if (result == null) result = caseTemplateableElement(vocabularyClassExpression);
-				if (result == null) result = casePackageableElement(vocabularyClassExpression);
-				if (result == null) result = caseNamedElement(vocabularyClassExpression);
-				if (result == null) result = caseParameterableElement(vocabularyClassExpression);
-				if (result == null) result = caseElement(vocabularyClassExpression);
-				if (result == null) result = caseEModelElement(vocabularyClassExpression);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case FramewebPackage.VOCABULARY_CLASS: {
 				VocabularyClass vocabularyClass = (VocabularyClass)theEObject;
 				T result = caseVocabularyClass(vocabularyClass);
-				if (result == null) result = caseVocabularyClassExpression(vocabularyClass);
 				if (result == null) result = caseClass(vocabularyClass);
 				if (result == null) result = caseEncapsulatedClassifier(vocabularyClass);
 				if (result == null) result = caseBehavioredClassifier(vocabularyClass);
@@ -2143,26 +2104,6 @@ public class FramewebSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case FramewebPackage.DOMAIN_VOCABULARY_CLASS: {
-				DomainVocabularyClass domainVocabularyClass = (DomainVocabularyClass)theEObject;
-				T result = caseDomainVocabularyClass(domainVocabularyClass);
-				if (result == null) result = caseClass(domainVocabularyClass);
-				if (result == null) result = caseEncapsulatedClassifier(domainVocabularyClass);
-				if (result == null) result = caseBehavioredClassifier(domainVocabularyClass);
-				if (result == null) result = caseStructuredClassifier(domainVocabularyClass);
-				if (result == null) result = caseClassifier(domainVocabularyClass);
-				if (result == null) result = caseNamespace(domainVocabularyClass);
-				if (result == null) result = caseRedefinableElement(domainVocabularyClass);
-				if (result == null) result = caseType(domainVocabularyClass);
-				if (result == null) result = caseTemplateableElement(domainVocabularyClass);
-				if (result == null) result = casePackageableElement(domainVocabularyClass);
-				if (result == null) result = caseNamedElement(domainVocabularyClass);
-				if (result == null) result = caseParameterableElement(domainVocabularyClass);
-				if (result == null) result = caseElement(domainVocabularyClass);
-				if (result == null) result = caseEModelElement(domainVocabularyClass);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case FramewebPackage.DOMAIN_VOCABULARY_ASSOCIATION: {
 				DomainVocabularyAssociation domainVocabularyAssociation = (DomainVocabularyAssociation)theEObject;
 				T result = caseDomainVocabularyAssociation(domainVocabularyAssociation);
@@ -2215,6 +2156,24 @@ public class FramewebSwitch<T> extends Switch<T> {
 				if (result == null) result = caseNamedElement(domainAttribute);
 				if (result == null) result = caseElement(domainAttribute);
 				if (result == null) result = caseEModelElement(domainAttribute);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FramewebPackage.DOMAIN_PROPERTY: {
+				DomainProperty domainProperty = (DomainProperty)theEObject;
+				T result = caseDomainProperty(domainProperty);
+				if (result == null) result = caseUML_Property(domainProperty);
+				if (result == null) result = caseStructuralFeature(domainProperty);
+				if (result == null) result = caseConnectableElement(domainProperty);
+				if (result == null) result = caseDeploymentTarget(domainProperty);
+				if (result == null) result = caseFeature(domainProperty);
+				if (result == null) result = caseTypedElement(domainProperty);
+				if (result == null) result = caseMultiplicityElement(domainProperty);
+				if (result == null) result = caseParameterableElement(domainProperty);
+				if (result == null) result = caseRedefinableElement(domainProperty);
+				if (result == null) result = caseNamedElement(domainProperty);
+				if (result == null) result = caseElement(domainProperty);
+				if (result == null) result = caseEModelElement(domainProperty);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -3963,21 +3922,6 @@ public class FramewebSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Vocabulary Class Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Vocabulary Class Expression</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVocabularyClassExpression(VocabularyClassExpression object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Vocabulary Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -4034,21 +3978,6 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVocabularyLiteral(VocabularyLiteral object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Domain Vocabulary Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Domain Vocabulary Class</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDomainVocabularyClass(DomainVocabularyClass object) {
 		return null;
 	}
 

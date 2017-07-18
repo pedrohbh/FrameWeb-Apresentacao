@@ -2487,29 +2487,6 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link frameweb.DomainVocabularyClass} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DomainVocabularyClassItemProvider domainVocabularyClassItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link frameweb.DomainVocabularyClass}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDomainVocabularyClassAdapter() {
-		if (domainVocabularyClassItemProvider == null) {
-			domainVocabularyClassItemProvider = new DomainVocabularyClassItemProvider(this);
-		}
-
-		return domainVocabularyClassItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link frameweb.DomainVocabularyAssociation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2711,7 +2688,6 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory i
 		if (chainingConstraintItemProvider != null) chainingConstraintItemProvider.dispose();
 		if (navigationGeneralizationItemProvider != null) navigationGeneralizationItemProvider.dispose();
 		if (domainConstraintsItemProvider != null) domainConstraintsItemProvider.dispose();
-		if (domainPropertyItemProvider != null) domainPropertyItemProvider.dispose();
 		if (daoGeneralizationItemProvider != null) daoGeneralizationItemProvider.dispose();
 		if (mappingLibItemProvider != null) mappingLibItemProvider.dispose();
 		if (classMappingItemProvider != null) classMappingItemProvider.dispose();
@@ -2758,10 +2734,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory i
 		if (vocabularyClassItemProvider != null) vocabularyClassItemProvider.dispose();
 		if (anonymousIndividualItemProvider != null) anonymousIndividualItemProvider.dispose();
 		if (vocabularyLiteralItemProvider != null) vocabularyLiteralItemProvider.dispose();
-		if (domainVocabularyClassItemProvider != null) domainVocabularyClassItemProvider.dispose();
 		if (domainVocabularyAssociationItemProvider != null) domainVocabularyAssociationItemProvider.dispose();
 		if (domainVocabularyPropertyItemProvider != null) domainVocabularyPropertyItemProvider.dispose();
 		if (domainAttributeItemProvider != null) domainAttributeItemProvider.dispose();
+		if (domainPropertyItemProvider != null) domainPropertyItemProvider.dispose();
 	}
 
 }

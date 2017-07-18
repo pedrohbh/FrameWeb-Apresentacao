@@ -55,6 +55,7 @@ import org.eclipse.uml2.uml.UMLPackage;
  *   <li>{@link frameweb.impl.ObjectPropertyImpl#getMemberEnd <em>Member End</em>}</li>
  *   <li>{@link frameweb.impl.ObjectPropertyImpl#getOwnedEnd <em>Owned End</em>}</li>
  *   <li>{@link frameweb.impl.ObjectPropertyImpl#getNavigableOwnedEnd <em>Navigable Owned End</em>}</li>
+ *   <li>{@link frameweb.impl.ObjectPropertyImpl#getPrefix <em>Prefix</em>}</li>
  * </ul>
  *
  * @generated
@@ -109,6 +110,26 @@ public class ObjectPropertyImpl extends VocabularyEntityImpl implements ObjectPr
 	 * @ordered
 	 */
 	protected EList<Property> navigableOwnedEnd;
+
+	/**
+	 * The default value of the '{@link #getPrefix() <em>Prefix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrefix()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PREFIX_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPrefix() <em>Prefix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrefix()
+	 * @generated
+	 * @ordered
+	 */
+	protected String prefix = PREFIX_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -210,6 +231,27 @@ public class ObjectPropertyImpl extends VocabularyEntityImpl implements ObjectPr
 			navigableOwnedEnd = new EObjectResolvingEList<Property>(Property.class, this, FramewebPackage.OBJECT_PROPERTY__NAVIGABLE_OWNED_END);
 		}
 		return navigableOwnedEnd;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getPrefix() {
+		return prefix;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPrefix(String newPrefix) {
+		String oldPrefix = prefix;
+		prefix = newPrefix;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.OBJECT_PROPERTY__PREFIX, oldPrefix, prefix));
 	}
 
 	/**
@@ -412,6 +454,8 @@ public class ObjectPropertyImpl extends VocabularyEntityImpl implements ObjectPr
 				return getOwnedEnd();
 			case FramewebPackage.OBJECT_PROPERTY__NAVIGABLE_OWNED_END:
 				return getNavigableOwnedEnd();
+			case FramewebPackage.OBJECT_PROPERTY__PREFIX:
+				return getPrefix();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -440,6 +484,9 @@ public class ObjectPropertyImpl extends VocabularyEntityImpl implements ObjectPr
 				getNavigableOwnedEnd().clear();
 				getNavigableOwnedEnd().addAll((Collection<? extends Property>)newValue);
 				return;
+			case FramewebPackage.OBJECT_PROPERTY__PREFIX:
+				setPrefix((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -463,6 +510,9 @@ public class ObjectPropertyImpl extends VocabularyEntityImpl implements ObjectPr
 				return;
 			case FramewebPackage.OBJECT_PROPERTY__NAVIGABLE_OWNED_END:
 				getNavigableOwnedEnd().clear();
+				return;
+			case FramewebPackage.OBJECT_PROPERTY__PREFIX:
+				setPrefix(PREFIX_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -488,6 +538,8 @@ public class ObjectPropertyImpl extends VocabularyEntityImpl implements ObjectPr
 				return ownedEnd != null && !ownedEnd.isEmpty();
 			case FramewebPackage.OBJECT_PROPERTY__NAVIGABLE_OWNED_END:
 				return navigableOwnedEnd != null && !navigableOwnedEnd.isEmpty();
+			case FramewebPackage.OBJECT_PROPERTY__PREFIX:
+				return PREFIX_EDEFAULT == null ? prefix != null : !PREFIX_EDEFAULT.equals(prefix);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -517,6 +569,7 @@ public class ObjectPropertyImpl extends VocabularyEntityImpl implements ObjectPr
 		}
 		if (baseClass == VocabularyAssociation.class) {
 			switch (derivedFeatureID) {
+				case FramewebPackage.OBJECT_PROPERTY__PREFIX: return FramewebPackage.VOCABULARY_ASSOCIATION__PREFIX;
 				default: return -1;
 			}
 		}
@@ -548,6 +601,7 @@ public class ObjectPropertyImpl extends VocabularyEntityImpl implements ObjectPr
 		}
 		if (baseClass == VocabularyAssociation.class) {
 			switch (baseFeatureID) {
+				case FramewebPackage.VOCABULARY_ASSOCIATION__PREFIX: return FramewebPackage.OBJECT_PROPERTY__PREFIX;
 				default: return -1;
 			}
 		}
@@ -625,6 +679,8 @@ public class ObjectPropertyImpl extends VocabularyEntityImpl implements ObjectPr
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (isDerived: ");
 		result.append(isDerived);
+		result.append(", prefix: ");
+		result.append(prefix);
 		result.append(')');
 		return result.toString();
 	}

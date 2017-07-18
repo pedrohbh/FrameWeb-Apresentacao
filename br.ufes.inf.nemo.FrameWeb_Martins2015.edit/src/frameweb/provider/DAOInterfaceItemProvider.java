@@ -377,11 +377,6 @@ public class DAOInterfaceItemProvider extends InterfaceItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
-				 FramewebFactory.eINSTANCE.createDomainVocabularyClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
 				 FramewebFactory.eINSTANCE.createDomainVocabularyAssociation()));
 
 		newChildDescriptors.add
@@ -447,11 +442,6 @@ public class DAOInterfaceItemProvider extends InterfaceItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(UMLPackage.Literals.INTERFACE__OWNED_ATTRIBUTE,
-				 FramewebFactory.eINSTANCE.createDomainProperty()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UMLPackage.Literals.INTERFACE__OWNED_ATTRIBUTE,
 				 FramewebFactory.eINSTANCE.createControllerExtensionEnd()));
 
 		newChildDescriptors.add
@@ -508,6 +498,11 @@ public class DAOInterfaceItemProvider extends InterfaceItemProvider {
 			(createChildParameter
 				(UMLPackage.Literals.INTERFACE__OWNED_ATTRIBUTE,
 				 FramewebFactory.eINSTANCE.createDomainAttribute()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UMLPackage.Literals.INTERFACE__OWNED_ATTRIBUTE,
+				 FramewebFactory.eINSTANCE.createDomainProperty()));
 
 		newChildDescriptors.add
 			(createChildParameter

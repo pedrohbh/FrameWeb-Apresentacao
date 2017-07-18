@@ -215,11 +215,6 @@ public class FrameworkExtensionItemProvider extends ExtensionItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(UMLPackage.Literals.ASSOCIATION__OWNED_END,
-				 FramewebFactory.eINSTANCE.createDomainProperty()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UMLPackage.Literals.ASSOCIATION__OWNED_END,
 				 FramewebFactory.eINSTANCE.createControllerExtensionEnd()));
 
 		newChildDescriptors.add
@@ -276,6 +271,11 @@ public class FrameworkExtensionItemProvider extends ExtensionItemProvider {
 			(createChildParameter
 				(UMLPackage.Literals.ASSOCIATION__OWNED_END,
 				 FramewebFactory.eINSTANCE.createDomainAttribute()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UMLPackage.Literals.ASSOCIATION__OWNED_END,
+				 FramewebFactory.eINSTANCE.createDomainProperty()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -340,11 +340,6 @@ public class FrameworkExtensionItemProvider extends ExtensionItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
-				 FramewebFactory.eINSTANCE.createDomainProperty()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
 				 FramewebFactory.eINSTANCE.createControllerExtensionEnd()));
 
 		newChildDescriptors.add
@@ -401,6 +396,11 @@ public class FrameworkExtensionItemProvider extends ExtensionItemProvider {
 			(createChildParameter
 				(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
 				 FramewebFactory.eINSTANCE.createDomainAttribute()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
+				 FramewebFactory.eINSTANCE.createDomainProperty()));
 	}
 
 	/**

@@ -55,6 +55,7 @@ public class AnnotationPropertyItemProvider extends VocabularyEntityItemProvider
 			addIsDerivedPropertyDescriptor(object);
 			addMemberEndPropertyDescriptor(object);
 			addNavigableOwnedEndPropertyDescriptor(object);
+			addPrefixPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -172,6 +173,28 @@ public class AnnotationPropertyItemProvider extends VocabularyEntityItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Prefix feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPrefixPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_VocabularyAssociation_prefix_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_VocabularyAssociation_prefix_feature", "_UI_VocabularyAssociation_type"),
+				 FramewebPackage.Literals.VOCABULARY_ASSOCIATION__PREFIX,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -240,6 +263,7 @@ public class AnnotationPropertyItemProvider extends VocabularyEntityItemProvider
 
 		switch (notification.getFeatureID(AnnotationProperty.class)) {
 			case FramewebPackage.ANNOTATION_PROPERTY__IS_DERIVED:
+			case FramewebPackage.ANNOTATION_PROPERTY__PREFIX:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case FramewebPackage.ANNOTATION_PROPERTY__OWNED_END:

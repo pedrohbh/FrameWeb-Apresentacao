@@ -390,7 +390,7 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWebEntityModel" domainClass="EntityModel">
       <defaultLayer name="Default">
-        <edgeMappings name="DomainGeneralizationSet" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainVocabularyClass%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainVocabularyClass%20Node']" targetFinderExpression="aql:self.powertype" sourceFinderExpression="aql:self.generalization.owner" domainClass="DomainGeneralizationSet" useDomainElement="true">
+        <edgeMappings name="DomainGeneralizationSet" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subNodeMappings[name='Vocabulary%20Class'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']" targetFinderExpression="aql:self.powertype" sourceFinderExpression="aql:self.generalization.owner" domainClass="DomainGeneralizationSet" useDomainElement="true">
           <style targetArrow="InputClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
           </style>
@@ -409,7 +409,7 @@
             </endLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="DomainVocabularyAssociation" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Class']" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainVocabularyClass%20Node']" targetFinderExpression="aql:self.memberEnd->at(2).type" sourceFinderExpression="aql:self.memberEnd->at(1).type" domainClass="DomainVocabularyAssociation" useDomainElement="true" reconnections="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Reconnect%20Navigation%20Association']">
+        <edgeMappings name="DomainVocabularyAssociation" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Class']" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subNodeMappings[name='Vocabulary%20Class']" targetFinderExpression="aql:self.memberEnd->at(2).type" sourceFinderExpression="aql:self.memberEnd->at(1).type" domainClass="DomainVocabularyAssociation" useDomainElement="true" reconnections="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Reconnect%20Navigation%20Association']">
           <style targetArrow="InputFillClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
             <beginLabelStyleDescription showIcon="false">
@@ -424,6 +424,14 @@
           </style>
         </edgeMappings>
         <containerMappings name="Domain Package" semanticCandidatesExpression="feature:eAllContents" domainClass="DomainPackage">
+          <subNodeMappings name="Vocabulary Class" semanticCandidatesExpression="feature:eAllContents" domainClass="VocabularyClass">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:self.printPrefix() + self.name" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" width="10" height="3">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subNodeMappings>
           <subContainerMappings name="DomainClass Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Class']" semanticCandidatesExpression="feature:eAllContents" domainClass="DomainClass" childrenPresentation="List">
             <subNodeMappings name="DomainAttribute" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Attributes%20Label']" semanticCandidatesExpression="feature:eAllContents" domainClass="DomainAttribute">
               <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printProperties()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
@@ -609,6 +617,12 @@
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Target"/>
                       </subModelOperations>
                     </subModelOperations>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.VocabularyConstraints" referenceName="ownedRule" variableName="consv">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="consv">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="constrainedElement" valueExpression="var:gset"/>
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Vocabulary Constraint"/>
+                      </subModelOperations>
+                    </subModelOperations>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
@@ -745,11 +759,11 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Vocabulary">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="DomainVocabularyClass" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainVocabularyClass%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/VocabularyClass.png">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Vocabulary Class" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subNodeMappings[name='Vocabulary%20Class']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/VocabularyClass.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.DomainVocabularyClass" referenceName="packagedElement" variableName="Pageinstance">
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.VocabularyClass" referenceName="packagedElement" variableName="Pageinstance">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Vocabulary Class"/>
               </firstModelOperations>
             </initialOperation>
@@ -780,6 +794,12 @@
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:SelectionWizardDescription" name="Vocabulary Class Wizard" candidatesExpression="var:container">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation/>
           </ownedTools>
         </toolSections>
       </defaultLayer>
@@ -1451,6 +1471,13 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
           </style>
         </nodeMappings>
+        <nodeMappings name="VocabularyConstraint" semanticCandidatesExpression="aql:self.ownedRule" domainClass="VocabularyConstraints">
+          <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="NSEW" width="8" height="3">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </nodeMappings>
         <edgeMappings name="Properties" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='DomainAssociation']/@defaultLayer/@nodeMappings[name='DomainProperty']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='DomainAssociation']/@defaultLayer/@nodeMappings[name='DomainAssociation']" targetFinderExpression="aql:self.owner">
           <style targetArrow="NoDecoration" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -1459,7 +1486,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="Constraint Edge" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='DomainAssociation']/@defaultLayer/@nodeMappings[name='DomainConstraint']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='DomainAssociation']/@defaultLayer/@nodeMappings[name='DomainProperty']" targetFinderExpression="aql:self.constrainedElement">
+        <edgeMappings name="Constraint Edge" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='DomainAssociation']/@defaultLayer/@nodeMappings[name='DomainConstraint'] //@ownedViewpoints[name='']/@ownedRepresentations[name='DomainAssociation']/@defaultLayer/@nodeMappings[name='VocabularyConstraint']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='DomainAssociation']/@defaultLayer/@nodeMappings[name='DomainProperty'] //@ownedViewpoints[name='']/@ownedRepresentations[name='DomainAssociation']/@defaultLayer/@nodeMappings[name='DomainAssociation']" targetFinderExpression="aql:self.constrainedElement">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
@@ -1502,6 +1529,48 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.Tag" referenceName="packagedElement">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Tag"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Vocabulary" domainClass="VocabularyModel" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <containerMappings name="Vocabulary" semanticCandidatesExpression="feature:eAllContents" domainClass="Vocabulary">
+          <subContainerMappings name="VocabularyClass Node" semanticCandidatesExpression="feature:eAllContents" domainClass="VocabularyClass" childrenPresentation="List">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="aql:self.name" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/Package.gif">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Vocabulary">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Vocabulary Package" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='Vocabulary']/@defaultLayer/@containerMappings[name='Vocabulary']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.Vocabulary" referenceName="packagedElement">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Vocabulary Package"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Vocabulary Class" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='Vocabulary']/@defaultLayer/@containerMappings[name='Vocabulary']/@subContainerMappings[name='VocabularyClass%20Node']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.VocabularyClass" referenceName="packagedElement">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Vocabulary Class"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>

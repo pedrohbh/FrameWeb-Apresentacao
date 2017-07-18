@@ -170,7 +170,7 @@ public class Extend {
 		EStructuralFeature prefix_feature = o.eClass().getEAllAttributes().get(7);
 		String prefix = (o.eGet(prefix_feature).toString());
 		
-		return prefix;
+		return prefix + "::";
 		
 	}
 

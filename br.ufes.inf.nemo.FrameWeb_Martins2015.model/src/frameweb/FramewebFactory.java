@@ -967,15 +967,6 @@ public interface FramewebFactory extends EFactory {
 	VocabularyLiteral createVocabularyLiteral();
 
 	/**
-	 * Returns a new object of class '<em>Domain Vocabulary Class</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Domain Vocabulary Class</em>'.
-	 * @generated
-	 */
-	DomainVocabularyClass createDomainVocabularyClass();
-
-	/**
 	 * Returns a new object of class '<em>Domain Vocabulary Association</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

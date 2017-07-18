@@ -269,7 +269,9 @@
     </genClasses>
     <genClasses ecoreClass="FrameWeb.ecore#//Axiom"/>
     <genClasses ecoreClass="FrameWeb.ecore#//Annotation"/>
-    <genClasses ecoreClass="FrameWeb.ecore#//VocabularyConstraints"/>
+    <genClasses ecoreClass="FrameWeb.ecore#//VocabularyConstraints">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//VocabularyConstraints/subPropertyOf"/>
+    </genClasses>
     <genClasses ecoreClass="FrameWeb.ecore#//Property">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FrameWeb.ecore#//Property/datatype"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FrameWeb.ecore#//Property/interface"/>
@@ -400,7 +402,9 @@
       <genOperations ecoreOperation="FrameWeb.ecore#//Association/getEndTypes"/>
     </genClasses>
     <genClasses image="false" ecoreClass="FrameWeb.ecore#//NewInterface115"/>
-    <genClasses ecoreClass="FrameWeb.ecore#//VocabularyAssociation"/>
+    <genClasses ecoreClass="FrameWeb.ecore#//VocabularyAssociation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//VocabularyAssociation/prefix"/>
+    </genClasses>
     <genClasses ecoreClass="FrameWeb.ecore#//VocabularyProperty"/>
     <genClasses ecoreClass="FrameWeb.ecore#//VocabularyEntity">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FrameWeb.ecore#//VocabularyEntity/entityIRI"/>
@@ -410,16 +414,15 @@
     <genClasses ecoreClass="FrameWeb.ecore#//AnnotationProperty"/>
     <genClasses ecoreClass="FrameWeb.ecore#//VocabularyDataType"/>
     <genClasses ecoreClass="FrameWeb.ecore#//NamedIndividual"/>
-    <genClasses ecoreClass="FrameWeb.ecore#//VocabularyClassExpression"/>
-    <genClasses ecoreClass="FrameWeb.ecore#//VocabularyClass"/>
+    <genClasses ecoreClass="FrameWeb.ecore#//VocabularyClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//VocabularyClass/prefix"/>
+    </genClasses>
     <genClasses ecoreClass="FrameWeb.ecore#//AnonymousIndividual"/>
     <genClasses ecoreClass="FrameWeb.ecore#//Individual"/>
     <genClasses ecoreClass="FrameWeb.ecore#//VocabularyLiteral"/>
-    <genClasses ecoreClass="FrameWeb.ecore#//DomainVocabularyClass">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FrameWeb.ecore#//DomainVocabularyClass/Prefix"/>
-    </genClasses>
     <genClasses ecoreClass="FrameWeb.ecore#//DomainVocabularyAssociation"/>
     <genClasses ecoreClass="FrameWeb.ecore#//DomainVocabularyProperty"/>
     <genClasses ecoreClass="FrameWeb.ecore#//DomainAttribute"/>
+    <genClasses ecoreClass="FrameWeb.ecore#//DomainProperty"/>
   </genPackages>
 </genmodel:GenModel>

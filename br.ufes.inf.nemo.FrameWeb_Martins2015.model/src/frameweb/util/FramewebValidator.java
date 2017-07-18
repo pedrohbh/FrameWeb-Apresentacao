@@ -357,8 +357,6 @@ public class FramewebValidator extends EObjectValidator {
 				return validateNavigationGeneralization((NavigationGeneralization)value, diagnostics, context);
 			case FramewebPackage.DOMAIN_CONSTRAINTS:
 				return validateDomainConstraints((DomainConstraints)value, diagnostics, context);
-			case FramewebPackage.DOMAIN_PROPERTY:
-				return validateDomainProperty((DomainProperty)value, diagnostics, context);
 			case FramewebPackage.DAO_GENERALIZATION:
 				return validateDAOGeneralization((DAOGeneralization)value, diagnostics, context);
 			case FramewebPackage.MAPPING_LIB:
@@ -455,8 +453,6 @@ public class FramewebValidator extends EObjectValidator {
 				return validateVocabularyDataType((VocabularyDataType)value, diagnostics, context);
 			case FramewebPackage.NAMED_INDIVIDUAL:
 				return validateNamedIndividual((NamedIndividual)value, diagnostics, context);
-			case FramewebPackage.VOCABULARY_CLASS_EXPRESSION:
-				return validateVocabularyClassExpression((VocabularyClassExpression)value, diagnostics, context);
 			case FramewebPackage.VOCABULARY_CLASS:
 				return validateVocabularyClass((VocabularyClass)value, diagnostics, context);
 			case FramewebPackage.ANONYMOUS_INDIVIDUAL:
@@ -465,14 +461,14 @@ public class FramewebValidator extends EObjectValidator {
 				return validateIndividual((Individual)value, diagnostics, context);
 			case FramewebPackage.VOCABULARY_LITERAL:
 				return validateVocabularyLiteral((VocabularyLiteral)value, diagnostics, context);
-			case FramewebPackage.DOMAIN_VOCABULARY_CLASS:
-				return validateDomainVocabularyClass((DomainVocabularyClass)value, diagnostics, context);
 			case FramewebPackage.DOMAIN_VOCABULARY_ASSOCIATION:
 				return validateDomainVocabularyAssociation((DomainVocabularyAssociation)value, diagnostics, context);
 			case FramewebPackage.DOMAIN_VOCABULARY_PROPERTY:
 				return validateDomainVocabularyProperty((DomainVocabularyProperty)value, diagnostics, context);
 			case FramewebPackage.DOMAIN_ATTRIBUTE:
 				return validateDomainAttribute((DomainAttribute)value, diagnostics, context);
+			case FramewebPackage.DOMAIN_PROPERTY:
+				return validateDomainProperty((DomainProperty)value, diagnostics, context);
 			case FramewebPackage.DATE_TIME_PRECISION:
 				return validateDateTimePrecision((DateTimePrecision)value, diagnostics, context);
 			case FramewebPackage.GENERATION:
@@ -4777,42 +4773,6 @@ public class FramewebValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateVocabularyClassExpression(VocabularyClassExpression vocabularyClassExpression, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(vocabularyClassExpression, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateElement_validateHasOwner(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateElement_validateNotOwnSelf(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateNamedElement_validateVisibilityNeedsOwnership(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateNamedElement_validateHasQualifiedName(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateNamedElement_validateHasNoQualifiedName(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateNamespace_validateMembersDistinguishable(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateNamespace_validateCannotImportSelf(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateNamespace_validateCannotImportOwnedMembers(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateRedefinableElement_validateRedefinitionConsistent(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateRedefinableElement_validateNonLeafRedefinition(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateRedefinableElement_validateRedefinitionContextValid(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validatePackageableElement_validateNamespaceNeedsVisibility(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateClassifier_validateSpecializeType(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateClassifier_validateMapsToGeneralizationSet(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateClassifier_validateNonFinalParents(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateClassifier_validateNoCyclesInGeneralization(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateBehavioredClassifier_validateClassBehavior(vocabularyClassExpression, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateClass_validatePassiveClass(vocabularyClassExpression, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateVocabularyClass(VocabularyClass vocabularyClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		if (!validate_NoCircularContainment(vocabularyClass, diagnostics, context)) return false;
 		boolean result = validate_EveryMultiplicityConforms(vocabularyClass, diagnostics, context);
@@ -4951,42 +4911,6 @@ public class FramewebValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= umlValidator.validateNamedElement_validateHasQualifiedName(vocabularyLiteral, diagnostics, context);
 		if (result || diagnostics != null) result &= umlValidator.validateNamedElement_validateHasNoQualifiedName(vocabularyLiteral, diagnostics, context);
 		if (result || diagnostics != null) result &= umlValidator.validatePackageableElement_validateNamespaceNeedsVisibility(vocabularyLiteral, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateDomainVocabularyClass(DomainVocabularyClass domainVocabularyClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(domainVocabularyClass, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateElement_validateHasOwner(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateElement_validateNotOwnSelf(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateNamedElement_validateVisibilityNeedsOwnership(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateNamedElement_validateHasQualifiedName(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateNamedElement_validateHasNoQualifiedName(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateNamespace_validateMembersDistinguishable(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateNamespace_validateCannotImportSelf(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateNamespace_validateCannotImportOwnedMembers(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateRedefinableElement_validateRedefinitionConsistent(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateRedefinableElement_validateNonLeafRedefinition(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateRedefinableElement_validateRedefinitionContextValid(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validatePackageableElement_validateNamespaceNeedsVisibility(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateClassifier_validateSpecializeType(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateClassifier_validateMapsToGeneralizationSet(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateClassifier_validateNonFinalParents(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateClassifier_validateNoCyclesInGeneralization(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateBehavioredClassifier_validateClassBehavior(domainVocabularyClass, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateClass_validatePassiveClass(domainVocabularyClass, diagnostics, context);
 		return result;
 	}
 

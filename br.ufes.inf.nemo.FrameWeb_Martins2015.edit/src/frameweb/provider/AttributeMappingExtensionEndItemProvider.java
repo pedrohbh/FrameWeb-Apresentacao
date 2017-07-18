@@ -175,11 +175,6 @@ public class AttributeMappingExtensionEndItemProvider extends ExtensionEndItemPr
 		newChildDescriptors.add
 			(createChildParameter
 				(UMLPackage.Literals.PROPERTY__QUALIFIER,
-				 FramewebFactory.eINSTANCE.createDomainProperty()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UMLPackage.Literals.PROPERTY__QUALIFIER,
 				 FramewebFactory.eINSTANCE.createControllerExtensionEnd()));
 
 		newChildDescriptors.add
@@ -236,6 +231,11 @@ public class AttributeMappingExtensionEndItemProvider extends ExtensionEndItemPr
 			(createChildParameter
 				(UMLPackage.Literals.PROPERTY__QUALIFIER,
 				 FramewebFactory.eINSTANCE.createDomainAttribute()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UMLPackage.Literals.PROPERTY__QUALIFIER,
+				 FramewebFactory.eINSTANCE.createDomainProperty()));
 
 		newChildDescriptors.add
 			(createChildParameter

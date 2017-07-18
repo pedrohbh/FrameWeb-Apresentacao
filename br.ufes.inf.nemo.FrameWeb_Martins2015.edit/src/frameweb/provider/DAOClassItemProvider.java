@@ -296,11 +296,6 @@ public class DAOClassItemProvider extends ClassItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
-				 FramewebFactory.eINSTANCE.createDomainProperty()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
 				 FramewebFactory.eINSTANCE.createControllerExtensionEnd()));
 
 		newChildDescriptors.add
@@ -357,6 +352,11 @@ public class DAOClassItemProvider extends ClassItemProvider {
 			(createChildParameter
 				(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
 				 FramewebFactory.eINSTANCE.createDomainAttribute()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
+				 FramewebFactory.eINSTANCE.createDomainProperty()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -552,11 +552,6 @@ public class DAOClassItemProvider extends ClassItemProvider {
 			(createChildParameter
 				(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
 				 FramewebFactory.eINSTANCE.createVocabularyClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
-				 FramewebFactory.eINSTANCE.createDomainVocabularyClass()));
 
 		newChildDescriptors.add
 			(createChildParameter

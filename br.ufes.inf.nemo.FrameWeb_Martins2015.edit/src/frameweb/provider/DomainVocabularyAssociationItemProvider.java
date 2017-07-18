@@ -212,11 +212,6 @@ public class DomainVocabularyAssociationItemProvider extends AssociationItemProv
 		newChildDescriptors.add
 			(createChildParameter
 				(UMLPackage.Literals.ASSOCIATION__OWNED_END,
-				 FramewebFactory.eINSTANCE.createDomainProperty()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UMLPackage.Literals.ASSOCIATION__OWNED_END,
 				 FramewebFactory.eINSTANCE.createControllerExtensionEnd()));
 
 		newChildDescriptors.add
@@ -273,6 +268,11 @@ public class DomainVocabularyAssociationItemProvider extends AssociationItemProv
 			(createChildParameter
 				(UMLPackage.Literals.ASSOCIATION__OWNED_END,
 				 FramewebFactory.eINSTANCE.createDomainAttribute()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UMLPackage.Literals.ASSOCIATION__OWNED_END,
+				 FramewebFactory.eINSTANCE.createDomainProperty()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -337,11 +337,6 @@ public class DomainVocabularyAssociationItemProvider extends AssociationItemProv
 		newChildDescriptors.add
 			(createChildParameter
 				(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
-				 FramewebFactory.eINSTANCE.createDomainProperty()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
 				 FramewebFactory.eINSTANCE.createControllerExtensionEnd()));
 
 		newChildDescriptors.add
@@ -398,6 +393,11 @@ public class DomainVocabularyAssociationItemProvider extends AssociationItemProv
 			(createChildParameter
 				(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
 				 FramewebFactory.eINSTANCE.createDomainAttribute()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
+				 FramewebFactory.eINSTANCE.createDomainProperty()));
 	}
 
 	/**

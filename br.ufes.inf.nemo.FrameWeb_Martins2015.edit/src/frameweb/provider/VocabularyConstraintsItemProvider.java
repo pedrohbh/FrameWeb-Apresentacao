@@ -4,6 +4,7 @@ package frameweb.provider;
 
 
 import frameweb.FramewebFactory;
+import frameweb.FramewebPackage;
 import frameweb.VocabularyConstraints;
 
 import java.util.Collection;
@@ -14,8 +15,11 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.uml2.uml.UMLPackage;
 
 import org.eclipse.uml2.uml.edit.providers.ConstraintItemProvider;
@@ -48,8 +52,31 @@ public class VocabularyConstraintsItemProvider extends ConstraintItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addSubPropertyOfPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Sub Property Of feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSubPropertyOfPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_VocabularyConstraints_subPropertyOf_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_VocabularyConstraints_subPropertyOf_feature", "_UI_VocabularyConstraints_type"),
+				 FramewebPackage.Literals.VOCABULARY_CONSTRAINTS__SUB_PROPERTY_OF,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -88,6 +115,12 @@ public class VocabularyConstraintsItemProvider extends ConstraintItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(VocabularyConstraints.class)) {
+			case FramewebPackage.VOCABULARY_CONSTRAINTS__SUB_PROPERTY_OF:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

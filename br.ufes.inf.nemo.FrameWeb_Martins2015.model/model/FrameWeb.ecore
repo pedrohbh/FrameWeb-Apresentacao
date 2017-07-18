@@ -386,7 +386,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="Annotation" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
   <eClassifiers xsi:type="ecore:EDataType" name="Rational" instanceClassName="double"/>
   <eClassifiers xsi:type="ecore:EDataType" name="Decimal" instanceClassName="double"/>
-  <eClassifiers xsi:type="ecore:EClass" name="VocabularyConstraints" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Constraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VocabularyConstraints" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Constraint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subPropertyOf" eType="ecore:EDataType platform:/plugin/org.eclipse.uml2.types/model/Types.ecore#//String"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Property" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//StructuralFeature platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//ConnectableElement platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//DeploymentTarget">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="A Property is a StructuralFeature. A Property related by ownedAttribute to a Classifier (other than an association) represents an attribute and might also represent an association end. It relates an instance of the Classifier to a value or set of values of the type of the attribute. A Property related by memberEnd to an Association represents an end of the Association. The type of the Property is the type of the end of the Association. A Property has the capability of being a DeploymentTarget in a Deployment relationship. This enables modeling the deployment to hierarchical nodes that have Properties functioning as internal parts.  Property specializes ParameterableElement to specify that a Property can be exposed as a formal template parameter, and provided as an actual parameter in a binding of a template.&#xA;&lt;p>From package UML::Classification.&lt;/p>"/>
@@ -1028,7 +1030,9 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NewInterface115" abstract="true" interface="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="VocabularyAssociation" eSuperTypes="#//Association"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VocabularyAssociation" eSuperTypes="#//Association">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prefix" eType="ecore:EDataType platform:/plugin/org.eclipse.uml2.types/model/Types.ecore#//String"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VocabularyProperty" eSuperTypes="#//Property"/>
   <eClassifiers xsi:type="ecore:EClass" name="VocabularyEntity" abstract="true" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier">
     <eStructuralFeatures xsi:type="ecore:EReference" name="entityIRI" lowerBound="1"
@@ -1039,17 +1043,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="AnnotationProperty" eSuperTypes="#//VocabularyEntity #//VocabularyAssociation"/>
   <eClassifiers xsi:type="ecore:EClass" name="VocabularyDataType" eSuperTypes="#//VocabularyEntity platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//DataType"/>
   <eClassifiers xsi:type="ecore:EClass" name="NamedIndividual" eSuperTypes="#//VocabularyEntity #//Individual"/>
-  <eClassifiers xsi:type="ecore:EClass" name="VocabularyClassExpression" abstract="true"
-      eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
-  <eClassifiers xsi:type="ecore:EClass" name="VocabularyClass" eSuperTypes="#//VocabularyClassExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VocabularyClass" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prefix" eType="ecore:EDataType platform:/plugin/org.eclipse.uml2.types/model/Types.ecore#//String"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AnonymousIndividual" eSuperTypes="#//Individual"/>
   <eClassifiers xsi:type="ecore:EClass" name="Individual" abstract="true" eSuperTypes="#//Property"/>
   <eClassifiers xsi:type="ecore:EClass" name="VocabularyLiteral" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//LiteralString"/>
-  <eClassifiers xsi:type="ecore:EClass" name="DomainVocabularyClass" eSuperTypes="#//VocabularyEntity">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Prefix" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
-        defaultValueLiteral="prefix"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DomainVocabularyAssociation" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Association"/>
   <eClassifiers xsi:type="ecore:EClass" name="DomainVocabularyProperty" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
   <eClassifiers xsi:type="ecore:EClass" name="DomainAttribute" eSuperTypes="#//Attribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainProperty" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
 </ecore:EPackage>

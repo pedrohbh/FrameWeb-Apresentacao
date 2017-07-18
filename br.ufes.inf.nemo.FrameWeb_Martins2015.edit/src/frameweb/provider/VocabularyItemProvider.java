@@ -505,11 +505,6 @@ public class VocabularyItemProvider extends PackageItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(UMLPackage.Literals.PACKAGE__OWNED_TYPE,
-				 FramewebFactory.eINSTANCE.createDomainVocabularyClass()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UMLPackage.Literals.PACKAGE__OWNED_TYPE,
 				 FramewebFactory.eINSTANCE.createDomainVocabularyAssociation()));
 
 		newChildDescriptors.add
@@ -846,11 +841,6 @@ public class VocabularyItemProvider extends PackageItemProvider {
 			(createChildParameter
 				(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
 				 FramewebFactory.eINSTANCE.createVocabularyLiteral()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
-				 FramewebFactory.eINSTANCE.createDomainVocabularyClass()));
 
 		newChildDescriptors.add
 			(createChildParameter
