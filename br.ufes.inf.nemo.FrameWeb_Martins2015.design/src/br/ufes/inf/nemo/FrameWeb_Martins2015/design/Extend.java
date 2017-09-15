@@ -95,6 +95,26 @@ public class Extend {
 		return lower_value + ".." + upper_value;
 	}
 
+	public String printVocabularyConstraint(EObject o) {
+		
+		String result = "";
+				
+				try{
+				EStructuralFeature subPropertyOf = o.eClass().getEStructuralFeature("subPropertyOf");
+				String subPropertyOf_value = o.eGet(subPropertyOf).toString();
+		
+				if (!subPropertyOf_value.isEmpty()) {
+					result = "{rdf:subPropertyOf=" + subPropertyOf_value + "}";
+				}
+				}catch (Exception e) {
+					result = "";
+				}
+		
+		return result;
+	}
+	
+	
+	
 	public String printConstraint(EObject o) {
 
 		ArrayList<String> result = new ArrayList<>();

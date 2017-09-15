@@ -28,6 +28,7 @@
       <packagedElement xsi:type="frameweb:DomainAssociation" name="" memberEnd="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/@packagedElement.1/Source //@compose.0/br.ufes.inf.nemo.marvin.research.domain/@packagedElement.1/Target">
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/@packagedElement.1/Source"/>
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/@packagedElement.1/Target"/>
+        <ownedRule xsi:type="frameweb:VocabularyConstraints"/>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/Publication" association="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/@packagedElement.1">
           <lowerValue xsi:type="uml:LiteralInteger"/>
           <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
@@ -37,6 +38,8 @@
       <packagedElement xsi:type="frameweb:DomainGeneralizationSet" name="Person"/>
       <packagedElement xsi:type="frameweb:DomainAssociation" name="" memberEnd="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/@packagedElement.3/Source //@compose.0/br.ufes.inf.nemo.marvin.research.domain/@packagedElement.3/Target">
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/@packagedElement.3/Target" cascade="all"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints"/>
+        <ownedRule xsi:type="frameweb:VocabularyConstraints"/>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" association="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/@packagedElement.3"/>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" association="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/@packagedElement.3">
           <lowerValue xsi:type="uml:LiteralInteger"/>
@@ -46,6 +49,7 @@
       <packagedElement xsi:type="frameweb:DomainAssociation" name="" memberEnd="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/@packagedElement.4/Source //@compose.0/br.ufes.inf.nemo.marvin.research.domain/@packagedElement.4/Target">
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/@packagedElement.4/Source"/>
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/@packagedElement.4/Target"/>
+        <ownedRule xsi:type="frameweb:VocabularyConstraints"/>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" association="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/@packagedElement.4">
           <lowerValue xsi:type="uml:LiteralInteger"/>
           <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
@@ -84,6 +88,7 @@
       <packagedElement xsi:type="frameweb:DomainAssociation" name="owner" visibility="private" memberEnd="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/owner/Source //@compose.0/br.ufes.inf.nemo.marvin.research.domain/owner/Target">
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/owner/Source"/>
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/owner/Target"/>
+        <ownedRule xsi:type="frameweb:VocabularyConstraints"/>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/Publication" association="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/owner">
           <lowerValue xsi:type="uml:LiteralInteger"/>
           <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
@@ -124,6 +129,7 @@
       <packagedElement xsi:type="frameweb:DomainAssociation" name="researcher" memberEnd="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/researcher/Source //@compose.0/br.ufes.inf.nemo.marvin.research.domain/researcher/Target">
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/researcher/Source"/>
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/researcher/Target"/>
+        <ownedRule xsi:type="frameweb:VocabularyConstraints"/>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/BibGenResearcher%20" association="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/researcher">
           <lowerValue xsi:type="uml:LiteralInteger"/>
           <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
@@ -155,6 +161,7 @@
       <packagedElement xsi:type="frameweb:DomainAssociation" name="researchers " memberEnd="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/researchers%20/Source //@compose.0/br.ufes.inf.nemo.marvin.research.domain/researchers%20/Target">
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/researchers%20/Source"/>
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/researchers%20/Target" fetch="eager" cascade="all"/>
+        <ownedRule xsi:type="frameweb:VocabularyConstraints"/>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/BibGenConfiguration" association="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/researchers%20"/>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/BibGenResearcher%20" association="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/researchers%20">
           <lowerValue xsi:type="uml:LiteralInteger"/>
@@ -166,6 +173,7 @@
       <packagedElement xsi:type="frameweb:DomainAssociation" name="type" memberEnd="//@compose.0/package%20br.ufes.inf.nemo.marvin.core.domain/type/Source //@compose.0/package%20br.ufes.inf.nemo.marvin.core.domain/type/Target">
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/package%20br.ufes.inf.nemo.marvin.core.domain/type/Source"/>
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/package%20br.ufes.inf.nemo.marvin.core.domain/type/Target"/>
+        <ownedRule xsi:type="frameweb:VocabularyConstraints"/>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/package%20br.ufes.inf.nemo.marvin.core.domain/Telephone" association="//@compose.0/package%20br.ufes.inf.nemo.marvin.core.domain/type">
           <lowerValue xsi:type="uml:LiteralInteger"/>
           <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
@@ -176,6 +184,7 @@
       <packagedElement xsi:type="frameweb:DomainAssociation" name="telephones" memberEnd="//@compose.0/package%20br.ufes.inf.nemo.marvin.core.domain/telephones/Source //@compose.0/package%20br.ufes.inf.nemo.marvin.core.domain/telephones/Target">
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/package%20br.ufes.inf.nemo.marvin.core.domain/telephones/Source"/>
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/package%20br.ufes.inf.nemo.marvin.core.domain/telephones/Target" cascade="all"/>
+        <ownedRule xsi:type="frameweb:VocabularyConstraints"/>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/package%20br.ufes.inf.nemo.marvin.core.domain/Academic" association="//@compose.0/package%20br.ufes.inf.nemo.marvin.core.domain/telephones"/>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/package%20br.ufes.inf.nemo.marvin.core.domain/Telephone" association="//@compose.0/package%20br.ufes.inf.nemo.marvin.core.domain/telephones">
           <lowerValue xsi:type="uml:LiteralInteger"/>
@@ -245,6 +254,7 @@
       <packagedElement xsi:type="frameweb:DomainAssociation" name="roles" memberEnd="//@compose.0/package%20br.ufes.inf.nemo.marvin.core.domain/roles/Source //@compose.0/package%20br.ufes.inf.nemo.marvin.core.domain/roles/Target">
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/package%20br.ufes.inf.nemo.marvin.core.domain/roles/Source"/>
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/package%20br.ufes.inf.nemo.marvin.core.domain/roles/Target" fetch="eager"/>
+        <ownedRule xsi:type="frameweb:VocabularyConstraints"/>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/package%20br.ufes.inf.nemo.marvin.core.domain/Academic" association="//@compose.0/package%20br.ufes.inf.nemo.marvin.core.domain/roles">
           <lowerValue xsi:type="uml:LiteralInteger"/>
           <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
@@ -376,8 +386,6 @@
         <ownedAttribute xsi:type="frameweb:UIComponentField" name="generateButton">
           <type xsi:type="frameweb:Tag" href="Standard_HTML5.frameweb#//HTML5forms_imput/button"/>
         </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="New UIComponentField"/>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="New UIComponentField"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:Page" name="bibliography.xhtml">
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.3/research.generateBibliography/form.1" association="//@compose.3/research.generateBibliography/@packagedElement.4"/>
@@ -400,7 +408,7 @@
     </packagedElement>
     <packagedElement xsi:type="frameweb:ControllerPackage" name="br.ufes.inf.nemo.marvin.research.controller">
       <packagedElement xsi:type="frameweb:FrontControllerClass" name="GenerateBibliographyController ">
-        <ownedAttribute xsi:type="frameweb:IOParameter" name="configuration" visibility="private" type="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/BibGenConfiguration" parameterType=""/>
+        <ownedAttribute xsi:type="frameweb:IOParameter" name="configuration" visibility="private" type="//@compose.0/br.ufes.inf.nemo.marvin.research.domain/BibGenConfiguration"/>
         <ownedAttribute xsi:type="frameweb:IOParameter" name="researchers" visibility="private">
           <type xsi:type="uml:Class" href="JAVA.frameweb#//@compose.0/List"/>
         </ownedAttribute>
@@ -444,12 +452,12 @@
     <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.3/research.generateBibliography/form.1" supplier="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20" method="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20/back"/>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.3/research.generateBibliography/form.1" supplier="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20" method="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20/getBibliographyFile"/>
     <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20" supplier="//@compose.3/research.generateBibliography/bibliography.xhtml" resultMethod="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20/generate">
-      <resultDependencyConstraint result=""/>
+      <resultDependencyConstraint result=" success"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.3/research.generateBibliography/form" supplier="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20" method="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20/generate"/>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.3/research.generateBibliography/form" supplier="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20" method="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20/startOver"/>
-    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20" supplier="//@compose.3/research.generateBibliography/index.xhtml" resultMethod="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20/back" result="">
-      <resultDependencyConstraint result=""/>
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20" supplier="//@compose.3/research.generateBibliography/index.xhtml" resultMethod="//@compose.3/br.ufes.inf.nemo.marvin.research.controller/GenerateBibliographyController%20/back">
+      <resultDependencyConstraint result="success"/>
     </packagedElement>
   </compose>
 </frameweb:FramewebProject>

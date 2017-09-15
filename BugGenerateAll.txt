@@ -8,12 +8,7 @@
 				if (result == null) result = caseMultiplicityElement((MultiplicityElement) uiComponentField);
 
 
-		if (result || diagnostics != null) result &= umlValidator.validateMultiplicityElement_validateUpperGeLower((MultiplicityElement) uiComponentField, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateMultiplicityElement_validateLowerGe0((MultiplicityElement) uiComponentField, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateMultiplicityElement_validateValueSpecificationNoSideEffects((MultiplicityElement) uiComponentField, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateMultiplicityElement_validateValueSpecificationConstant((MultiplicityElement) uiComponentField, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateMultiplicityElement_validateLowerIsInteger((MultiplicityElement) uiComponentField, diagnostics, context);
-		if (result || diagnostics != null) result &= umlValidator.validateMultiplicityElement_validateUpperIsUnlimitedNatural((MultiplicityElement) uiComponentField, diagnostics, context);
+		
 		if (result || diagnostics != null) result &= umlValidator.validateProperty_validateSubsettingContextConforms((org.eclipse.uml2.uml.Property) uiComponentField, diagnostics, context);
 		if (result || diagnostics != null) result &= umlValidator.validateProperty_validateDerivedUnionIsReadOnly((org.eclipse.uml2.uml.Property) uiComponentField, diagnostics, context);
 		if (result || diagnostics != null) result &= umlValidator.validateProperty_validateMultiplicityOfComposite((org.eclipse.uml2.uml.Property) uiComponentField, diagnostics, context);
