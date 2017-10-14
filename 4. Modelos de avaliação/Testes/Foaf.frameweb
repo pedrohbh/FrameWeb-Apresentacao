@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frameweb:FramewebProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015">
+  <compose xsi:type="frameweb:VocabularyModel" name="FOAF">
+    <packagedElement xsi:type="frameweb:Vocabulary" name="Foaf">
+      <packagedElement xsi:type="frameweb:VocabularyClass" name="Person"/>
+      <packagedElement xsi:type="frameweb:VocabularyClass" name="Organization"/>
+    </packagedElement>
+  </compose>
+</frameweb:FramewebProject>
