@@ -177,7 +177,7 @@ public class FramewebModelWizard extends Wizard implements INewWizard {
 		this.workbench = workbench;
 		this.selection = selection;
 		setWindowTitle(FrameWebEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
-		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(FrameWebEditorPlugin.INSTANCE.getImage("full/wizban/NewFrameweb")));
+		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(FrameWebEditorPlugin.INSTANCE.getImage("full/wizban/NewFrameWeb")));
 	}
 
 	/**
