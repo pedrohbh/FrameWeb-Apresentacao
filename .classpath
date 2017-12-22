@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="0. Core/br.ufes.inf.nemo.FrameWeb_Martins2015.design/src"/>
+	<classpathentry kind="src" path="0. Core/br.ufes.inf.nemo.FrameWeb_Martins2015.edit/src"/>
+	<classpathentry kind="src" path="0. Core/br.ufes.inf.nemo.FrameWeb_Martins2015.editor/src"/>
+	<classpathentry kind="src" path="0. Core/br.ufes.inf.nemo.FrameWeb_Martins2015.model/src"/>
+	<classpathentry kind="src" path="5. ReMaT/br.ufes.inf.nemo.FrameWeb_Celino2017.ReMaT/xtend-gen"/>
+	<classpathentry kind="output" path="0. Core/br.ufes.inf.nemo.FrameWeb_Martins2015.design/bin"/>
+</classpath>
