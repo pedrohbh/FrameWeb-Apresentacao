@@ -832,6 +832,33 @@ public interface FramewebFactory extends EFactory {
 	DomainProperty createDomainProperty();
 
 	/**
+	 * Returns a new object of class '<em>Front Controller Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Front Controller Template</em>'.
+	 * @generated
+	 */
+	FrontControllerTemplate createFrontControllerTemplate();
+
+	/**
+	 * Returns a new object of class '<em>DI Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DI Template</em>'.
+	 * @generated
+	 */
+	DITemplate createDITemplate();
+
+	/**
+	 * Returns a new object of class '<em>ORM Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ORM Template</em>'.
+	 * @generated
+	 */
+	ORMTemplate createORMTemplate();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

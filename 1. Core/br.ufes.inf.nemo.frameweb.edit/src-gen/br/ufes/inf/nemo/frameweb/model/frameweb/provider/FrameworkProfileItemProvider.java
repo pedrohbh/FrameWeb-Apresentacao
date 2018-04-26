@@ -241,6 +241,15 @@ public class FrameworkProfileItemProvider extends ProfileItemProvider {
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__NESTED_PACKAGE,
 				FramewebFactory.eINSTANCE.createVocabulary()));
 
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__NESTED_PACKAGE,
+				FramewebFactory.eINSTANCE.createFrontControllerTemplate()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__NESTED_PACKAGE,
+				FramewebFactory.eINSTANCE.createDITemplate()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__NESTED_PACKAGE,
+				FramewebFactory.eINSTANCE.createORMTemplate()));
+
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__OWNED_STEREOTYPE,
 				FramewebFactory.eINSTANCE.createResultType()));
 
@@ -510,6 +519,15 @@ public class FrameworkProfileItemProvider extends ProfileItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
 				FramewebFactory.eINSTANCE.createDomainVocabularyAssociation()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
+				FramewebFactory.eINSTANCE.createFrontControllerTemplate()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
+				FramewebFactory.eINSTANCE.createDITemplate()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
+				FramewebFactory.eINSTANCE.createORMTemplate()));
 	}
 
 	/**

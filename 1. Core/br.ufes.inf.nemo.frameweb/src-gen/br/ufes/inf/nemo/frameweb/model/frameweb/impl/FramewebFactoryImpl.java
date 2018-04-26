@@ -237,6 +237,12 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createDomainAttribute();
 		case FramewebPackage.DOMAIN_PROPERTY:
 			return createDomainProperty();
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE:
+			return createFrontControllerTemplate();
+		case FramewebPackage.DI_TEMPLATE:
+			return createDITemplate();
+		case FramewebPackage.ORM_TEMPLATE:
+			return createORMTemplate();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1214,6 +1220,36 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	public DomainProperty createDomainProperty() {
 		DomainPropertyImpl domainProperty = new DomainPropertyImpl();
 		return domainProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FrontControllerTemplate createFrontControllerTemplate() {
+		FrontControllerTemplateImpl frontControllerTemplate = new FrontControllerTemplateImpl();
+		return frontControllerTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DITemplate createDITemplate() {
+		DITemplateImpl diTemplate = new DITemplateImpl();
+		return diTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ORMTemplate createORMTemplate() {
+		ORMTemplateImpl ormTemplate = new ORMTemplateImpl();
+		return ormTemplate;
 	}
 
 	/**

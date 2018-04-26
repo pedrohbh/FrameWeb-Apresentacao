@@ -26,6 +26,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.DAOInterface;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAORealization;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOServiceAssociation;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DataProperty;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DateTimeAttribute;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DateTimePrecision;
@@ -54,6 +55,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkProfile;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerDependency;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerMethod;
+import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Generation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.IOParameter;
 import br.ufes.inf.nemo.frameweb.model.frameweb.IdAttribute;
@@ -75,6 +77,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationGeneralizationSet;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationProperty;
+import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ObjectProperty;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Order;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
@@ -834,6 +837,27 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	private EClass domainPropertyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass frontControllerTemplateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass diTemplateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ormTemplateEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2414,6 +2438,177 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getFrontControllerTemplate() {
+		return frontControllerTemplateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFrontControllerTemplate_ClassTemplate() {
+		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFrontControllerTemplate_MethodTemplate() {
+		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFrontControllerTemplate_PageTemplate() {
+		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFrontControllerTemplate_FormTemplate() {
+		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFrontControllerTemplate_ClassExtension() {
+		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFrontControllerTemplate_PageExtension() {
+		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFrontControllerTemplate_AttributeTemplate() {
+		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDITemplate() {
+		return diTemplateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDITemplate_InterfaceTemplate() {
+		return (EAttribute) diTemplateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDITemplate_InterfaceExtension() {
+		return (EAttribute) diTemplateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDITemplate_ClassExtension() {
+		return (EAttribute) diTemplateEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDITemplate_ClassTemplate() {
+		return (EAttribute) diTemplateEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDITemplate_ServiceClassInjectionTemplate() {
+		return (EAttribute) diTemplateEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDITemplate_DaoClassInjectionTemplate() {
+		return (EAttribute) diTemplateEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getORMTemplate() {
+		return ormTemplateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getORMTemplate_ClassTemplate() {
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getORMTemplate_ClassExtension() {
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getORMTemplate_AttributeTemplate() {
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getFrameworkCategoryList() {
 		return frameworkCategoryListEEnum;
 	}
@@ -2804,6 +2999,28 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		domainPropertyEClass = createEClass(DOMAIN_PROPERTY);
 
+		frontControllerTemplateEClass = createEClass(FRONT_CONTROLLER_TEMPLATE);
+		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__CLASS_TEMPLATE);
+		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__METHOD_TEMPLATE);
+		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__PAGE_TEMPLATE);
+		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__FORM_TEMPLATE);
+		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__CLASS_EXTENSION);
+		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION);
+		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__ATTRIBUTE_TEMPLATE);
+
+		diTemplateEClass = createEClass(DI_TEMPLATE);
+		createEAttribute(diTemplateEClass, DI_TEMPLATE__INTERFACE_TEMPLATE);
+		createEAttribute(diTemplateEClass, DI_TEMPLATE__INTERFACE_EXTENSION);
+		createEAttribute(diTemplateEClass, DI_TEMPLATE__CLASS_EXTENSION);
+		createEAttribute(diTemplateEClass, DI_TEMPLATE__CLASS_TEMPLATE);
+		createEAttribute(diTemplateEClass, DI_TEMPLATE__SERVICE_CLASS_INJECTION_TEMPLATE);
+		createEAttribute(diTemplateEClass, DI_TEMPLATE__DAO_CLASS_INJECTION_TEMPLATE);
+
+		ormTemplateEClass = createEClass(ORM_TEMPLATE);
+		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__CLASS_TEMPLATE);
+		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__CLASS_EXTENSION);
+		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__ATTRIBUTE_TEMPLATE);
+
 		// Create enums
 		frameworkCategoryListEEnum = createEEnum(FRAMEWORK_CATEGORY_LIST);
 		frameworkKindListEEnum = createEEnum(FRAMEWORK_KIND_LIST);
@@ -2958,6 +3175,9 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		domainVocabularyPropertyEClass.getESuperTypes().add(theUMLPackage.getProperty());
 		domainAttributeEClass.getESuperTypes().add(this.getAttribute());
 		domainPropertyEClass.getESuperTypes().add(theUMLPackage.getProperty());
+		frontControllerTemplateEClass.getESuperTypes().add(this.getFrameworkProfile());
+		diTemplateEClass.getESuperTypes().add(this.getFrameworkProfile());
+		ormTemplateEClass.getESuperTypes().add(this.getFrameworkProfile());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(framewebProjectEClass, FramewebProject.class, "FramewebProject", !IS_ABSTRACT, !IS_INTERFACE,
@@ -3418,6 +3638,63 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		initEClass(domainPropertyEClass, DomainProperty.class, "DomainProperty", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(frontControllerTemplateEClass, FrontControllerTemplate.class, "FrontControllerTemplate",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFrontControllerTemplate_ClassTemplate(), theTypesPackage.getString(), "classTemplate", null,
+				0, 1, FrontControllerTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFrontControllerTemplate_MethodTemplate(), theTypesPackage.getString(), "methodTemplate", null,
+				0, 1, FrontControllerTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFrontControllerTemplate_PageTemplate(), theTypesPackage.getString(), "pageTemplate", null, 0,
+				1, FrontControllerTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFrontControllerTemplate_FormTemplate(), theTypesPackage.getString(), "formTemplate", null, 0,
+				1, FrontControllerTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFrontControllerTemplate_ClassExtension(), theTypesPackage.getString(), "classExtension", null,
+				0, 1, FrontControllerTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFrontControllerTemplate_PageExtension(), theTypesPackage.getString(), "pageExtension", null,
+				0, 1, FrontControllerTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFrontControllerTemplate_AttributeTemplate(), theTypesPackage.getString(), "attributeTemplate",
+				null, 0, 1, FrontControllerTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(diTemplateEClass, DITemplate.class, "DITemplate", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDITemplate_InterfaceTemplate(), theTypesPackage.getString(), "interfaceTemplate", null, 0, 1,
+				DITemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDITemplate_InterfaceExtension(), theTypesPackage.getString(), "interfaceExtension", null, 0,
+				1, DITemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDITemplate_ClassExtension(), theTypesPackage.getString(), "classExtension", null, 0, 1,
+				DITemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDITemplate_ClassTemplate(), theTypesPackage.getString(), "classTemplate", null, 0, 1,
+				DITemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDITemplate_ServiceClassInjectionTemplate(), theTypesPackage.getString(),
+				"serviceClassInjectionTemplate", null, 0, 1, DITemplate.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDITemplate_DaoClassInjectionTemplate(), theTypesPackage.getString(),
+				"daoClassInjectionTemplate", null, 0, 1, DITemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(ormTemplateEClass, ORMTemplate.class, "ORMTemplate", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getORMTemplate_ClassTemplate(), theTypesPackage.getString(), "classTemplate", null, 0, 1,
+				ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getORMTemplate_ClassExtension(), theTypesPackage.getString(), "classExtension", null, 0, 1,
+				ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getORMTemplate_AttributeTemplate(), theTypesPackage.getString(), "attributeTemplate", null, 0, 1,
+				ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(frameworkCategoryListEEnum, FrameworkCategoryList.class, "FrameworkCategoryList");

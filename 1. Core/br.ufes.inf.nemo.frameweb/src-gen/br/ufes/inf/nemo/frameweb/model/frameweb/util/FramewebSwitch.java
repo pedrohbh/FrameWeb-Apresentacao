@@ -2951,6 +2951,87 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE: {
+			FrontControllerTemplate frontControllerTemplate = (FrontControllerTemplate) theEObject;
+			T result = caseFrontControllerTemplate(frontControllerTemplate);
+			if (result == null)
+				result = caseFrameworkProfile(frontControllerTemplate);
+			if (result == null)
+				result = caseProfile(frontControllerTemplate);
+			if (result == null)
+				result = casePackage(frontControllerTemplate);
+			if (result == null)
+				result = caseNamespace(frontControllerTemplate);
+			if (result == null)
+				result = casePackageableElement(frontControllerTemplate);
+			if (result == null)
+				result = caseTemplateableElement(frontControllerTemplate);
+			if (result == null)
+				result = caseNamedElement(frontControllerTemplate);
+			if (result == null)
+				result = caseParameterableElement(frontControllerTemplate);
+			if (result == null)
+				result = caseElement(frontControllerTemplate);
+			if (result == null)
+				result = caseEModelElement(frontControllerTemplate);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FramewebPackage.DI_TEMPLATE: {
+			DITemplate diTemplate = (DITemplate) theEObject;
+			T result = caseDITemplate(diTemplate);
+			if (result == null)
+				result = caseFrameworkProfile(diTemplate);
+			if (result == null)
+				result = caseProfile(diTemplate);
+			if (result == null)
+				result = casePackage(diTemplate);
+			if (result == null)
+				result = caseNamespace(diTemplate);
+			if (result == null)
+				result = casePackageableElement(diTemplate);
+			if (result == null)
+				result = caseTemplateableElement(diTemplate);
+			if (result == null)
+				result = caseNamedElement(diTemplate);
+			if (result == null)
+				result = caseParameterableElement(diTemplate);
+			if (result == null)
+				result = caseElement(diTemplate);
+			if (result == null)
+				result = caseEModelElement(diTemplate);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FramewebPackage.ORM_TEMPLATE: {
+			ORMTemplate ormTemplate = (ORMTemplate) theEObject;
+			T result = caseORMTemplate(ormTemplate);
+			if (result == null)
+				result = caseFrameworkProfile(ormTemplate);
+			if (result == null)
+				result = caseProfile(ormTemplate);
+			if (result == null)
+				result = casePackage(ormTemplate);
+			if (result == null)
+				result = caseNamespace(ormTemplate);
+			if (result == null)
+				result = casePackageableElement(ormTemplate);
+			if (result == null)
+				result = caseTemplateableElement(ormTemplate);
+			if (result == null)
+				result = caseNamedElement(ormTemplate);
+			if (result == null)
+				result = caseParameterableElement(ormTemplate);
+			if (result == null)
+				result = caseElement(ormTemplate);
+			if (result == null)
+				result = caseEModelElement(ormTemplate);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -4453,6 +4534,51 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDomainProperty(DomainProperty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Front Controller Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Front Controller Template</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFrontControllerTemplate(FrontControllerTemplate object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DI Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DI Template</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDITemplate(DITemplate object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ORM Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ORM Template</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseORMTemplate(ORMTemplate object) {
 		return null;
 	}
 

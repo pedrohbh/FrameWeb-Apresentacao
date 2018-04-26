@@ -608,6 +608,21 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseFrontControllerTemplate(FrontControllerTemplate object) {
+			return createFrontControllerTemplateAdapter();
+		}
+
+		@Override
+		public Adapter caseDITemplate(DITemplate object) {
+			return createDITemplateAdapter();
+		}
+
+		@Override
+		public Adapter caseORMTemplate(ORMTemplate object) {
+			return createORMTemplateAdapter();
+		}
+
+		@Override
 		public Adapter caseEModelElement(EModelElement object) {
 			return createEModelElementAdapter();
 		}
@@ -2233,6 +2248,48 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDomainPropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate <em>Front Controller Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate
+	 * @generated
+	 */
+	public Adapter createFrontControllerTemplateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate <em>DI Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate
+	 * @generated
+	 */
+	public Adapter createDITemplateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate <em>ORM Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate
+	 * @generated
+	 */
+	public Adapter createORMTemplateAdapter() {
 		return null;
 	}
 

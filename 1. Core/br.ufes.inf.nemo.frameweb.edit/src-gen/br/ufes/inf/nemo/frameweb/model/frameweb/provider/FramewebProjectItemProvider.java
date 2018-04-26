@@ -205,6 +205,15 @@ public class FramewebProjectItemProvider extends ItemProviderAdapter implements 
 
 		newChildDescriptors.add(createChildParameter(FramewebPackage.Literals.FRAMEWEB_PROJECT__CONFIGURES,
 				FramewebFactory.eINSTANCE.createFrameworkProfile()));
+
+		newChildDescriptors.add(createChildParameter(FramewebPackage.Literals.FRAMEWEB_PROJECT__CONFIGURES,
+				FramewebFactory.eINSTANCE.createFrontControllerTemplate()));
+
+		newChildDescriptors.add(createChildParameter(FramewebPackage.Literals.FRAMEWEB_PROJECT__CONFIGURES,
+				FramewebFactory.eINSTANCE.createDITemplate()));
+
+		newChildDescriptors.add(createChildParameter(FramewebPackage.Literals.FRAMEWEB_PROJECT__CONFIGURES,
+				FramewebFactory.eINSTANCE.createORMTemplate()));
 	}
 
 	/**

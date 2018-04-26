@@ -1,111 +1,133 @@
 package plugin;
 
-import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.uml2.uml.AggregationKind;
+import org.eclipse.uml2.uml.Association;
+import org.eclipse.uml2.uml.Dependency;
+import org.eclipse.uml2.uml.NamedElement;
+import org.eclipse.uml2.uml.Property;
+import org.eclipse.uml2.uml.Type;
 import org.eclipse.uml2.uml.internal.impl.NamedElementImpl;
 
+import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerMethod;
+import br.ufes.inf.nemo.frameweb.model.frameweb.IOParameter;
+import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationDependency;
+import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationProperty;
+import br.ufes.inf.nemo.frameweb.model.frameweb.ResultDependency;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Tag;
-
 
 public class Componente {
 	
-	private String parameterType, methodType, type, name, client, supplier, resultMethod, association, xsiType, memberEnd, href, template;
-	List<Componente> componentes;
+	private Type parameterType;
+	private String name;
+	private Type methodType;
+	private EList<Property> memberEnds;
+	private NamedElement client;
+	private FrontControllerMethod resultMethod;
+	private NamedElement supplier;
+	private EObject xsiType;
+	private Type type;
+	private Association association;
+	private Tag tag = null;
+	private AggregationKind aggregation;
+	private List<Componente> componentes;
 	
 	public Componente() {
 		componentes = new ArrayList<>();
 	}
 	
-	public Componente(EObject model){
+	public Componente(EObject eObj, EStructuralFeature estFeat){
+		
+		Object o;
 		componentes = new ArrayList<>();
-		xsiType = model.eClass().getName();
-		if(model instanceof NamedElementImpl) {
-			name = ((NamedElementImpl)model).getName(); // tag
+		xsiType = eObj;
+		
+		if(eObj instanceof NamedElementImpl) {
+			name = ((NamedElementImpl)eObj).getName();
 		}
-		if(model instanceof Tag)
-			template = ((Tag)model).getCodeGenerationTemplate();
-//			String result = URLDecoder.decode(template, "UTF-8");
-		else
-			template = null;
-
-//		System.out.println("name: " + xsiType + "\t" + name);
-//		System.out.println(template);
-//		System.out.println(model);
-
-//		if(model instanceof ModelImpl) System.out.println(((ModelImpl)model).getViewpoint());
-//		if(model instanceof PackageImpl) System.out.println(((PackageImpl)model).getURI());
-//		if(model instanceof BasicEObjectImpl) System.out.println(((BasicEObjectImpl)model).eProxyURI());
-//		System.out.println(name);
-//		System.out.println(model);
+		if(estFeat != null) {
+			o = eObj.eGet(estFeat);
+			if(o instanceof Tag) {
+				tag = (Tag) o;
+			}
+		}
+		if(eObj instanceof NavigationProperty) {
+			association = ((NavigationProperty) eObj).getAssociation();
+			type = ((NavigationProperty) eObj).getType();
+			aggregation = ((NavigationProperty) eObj).getAggregation();
+		}
+		if(eObj instanceof Dependency) {
+			supplier = ((Dependency) eObj).getSuppliers().get(0);
+			client = ((Dependency)eObj).getClients().get(0);
+			if(eObj instanceof ResultDependency) {
+				resultMethod = ((ResultDependency) eObj).getResultMethod();
+			}
+		}
+		if(eObj instanceof Association) {
+			memberEnds = ((Association) eObj).getMemberEnds();
+		}
+		if(eObj instanceof FrontControllerMethod) {
+			methodType = ((FrontControllerMethod) eObj).getMethodType();
+		}
+		if(eObj instanceof IOParameter) {
+			parameterType = ((IOParameter) eObj).getType();
+		}
 	}
 
-	public String getTemplate() {
-		return template;
-	}
-
-	public void addComponente(Componente c) {
+	public Componente addComponente(Componente c) {
+		for(Componente comp : componentes) {
+			if(comp.xsiType.equals(c.xsiType))
+				return comp;
+		}
 		componentes.add(c);
+		return c;
 	}
-	
-	public String getParameterType() {
+	public Type getParameterType() {
 		return parameterType;
 	}
-	public String getMethodType() {
+	public Type getMethodType() {
 		return methodType;
 	}
-	String getType() {
-        String[] parametros = this.type.split("/");
-        return parametros[parametros.length - 1];        
+	Type getType() {
+        return type;      
     }
 	public String getName() {
 		return name;
 	}
-	String getClient() {
-        String[] parametros = this.client.split("/");
-        return parametros[parametros.length - 1];
+	NamedElement getClient() {
+        return client;
     }	
-	public String getSupplier() {
-        String[] parametros = this.supplier.split("/");
-        return parametros[parametros.length - 1];
+	public NamedElement getSupplier() {
+        return supplier;
     }
-	public String getResultMethod() {
+	public EList<Property> getMemberEnds() {
+		return memberEnds;
+	}
+	public Tag getTag() {
+		return tag;
+	}
+	public AggregationKind getAggregation() {
+		return aggregation;
+	}
+	public FrontControllerMethod getResultMethod() {
 		return resultMethod;
 	}
-	public String getAssociation() {
+	public Association getAssociation() {
 		return association;
 	}
-	public String getXsiType() {
+	public EObject getXsiType() {
 		return xsiType;
 	}
-	public String getMemberEnd() {
-		return memberEnd;
-	}
-	public String getHref() {
-		return href;
+	public EList<Property> getMemberEnd() {
+		return memberEnds;
 	}
 	public List<Componente> getComponentes() {
 		return componentes;
-	}
-
-//    public string getXsiTypeFile()
-//    {
-//        switch (xsi_type)
-//        {
-//            case "frameweb:UIComponentField":
-//                var tag_ui = this.Componentes.Where(x => x.tag == "type").FirstOrDefault();
-//                var parametros_ui = tag_ui.href.Split('/');
-//                return parametros_ui[parametros_ui.Length - 2] + "\\"+ parametros_ui[parametros_ui.Length - 1] + ".txt";
-//
-//            case "frameweb:Page":
-//                var tag_lib = this.Componentes.Where(x => x.tag == "pageTagLib").FirstOrDefault();
-//                var parametros = tag_lib.href.Split('/');
-//                return parametros[parametros.Length - 1] + ".txt";       
-//            default:
-//                return this.xsi_type.Split(':')[1] + ".txt";
-//        }
-//    }
-	
+	}	
 }

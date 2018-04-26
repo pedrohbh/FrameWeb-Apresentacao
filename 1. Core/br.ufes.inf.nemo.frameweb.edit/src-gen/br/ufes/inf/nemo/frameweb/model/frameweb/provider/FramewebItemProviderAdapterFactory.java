@@ -2143,6 +2143,75 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FrontControllerTemplateItemProvider frontControllerTemplateItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFrontControllerTemplateAdapter() {
+		if (frontControllerTemplateItemProvider == null) {
+			frontControllerTemplateItemProvider = new FrontControllerTemplateItemProvider(this);
+		}
+
+		return frontControllerTemplateItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DITemplateItemProvider diTemplateItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDITemplateAdapter() {
+		if (diTemplateItemProvider == null) {
+			diTemplateItemProvider = new DITemplateItemProvider(this);
+		}
+
+		return diTemplateItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ORMTemplateItemProvider ormTemplateItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createORMTemplateAdapter() {
+		if (ormTemplateItemProvider == null) {
+			ormTemplateItemProvider = new ORMTemplateItemProvider(this);
+		}
+
+		return ormTemplateItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2421,6 +2490,12 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 			domainAttributeItemProvider.dispose();
 		if (domainPropertyItemProvider != null)
 			domainPropertyItemProvider.dispose();
+		if (frontControllerTemplateItemProvider != null)
+			frontControllerTemplateItemProvider.dispose();
+		if (diTemplateItemProvider != null)
+			diTemplateItemProvider.dispose();
+		if (ormTemplateItemProvider != null)
+			ormTemplateItemProvider.dispose();
 	}
 
 }

@@ -120681,6 +120681,3960 @@ public interface FramewebPackage extends EPackage {
 	int DOMAIN_PROPERTY_OPERATION_COUNT = UMLPackage.PROPERTY_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl <em>Front Controller Template</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getFrontControllerTemplate()
+	 * @generated
+	 */
+	int FRONT_CONTROLLER_TEMPLATE = 100;
+
+	/**
+	 * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__EANNOTATIONS = FRAMEWORK_PROFILE__EANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__OWNED_COMMENT = FRAMEWORK_PROFILE__OWNED_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Owned Element</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__OWNED_ELEMENT = FRAMEWORK_PROFILE__OWNED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Owner</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__OWNER = FRAMEWORK_PROFILE__OWNER;
+
+	/**
+	 * The feature id for the '<em><b>Client Dependency</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__CLIENT_DEPENDENCY = FRAMEWORK_PROFILE__CLIENT_DEPENDENCY;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__NAME = FRAMEWORK_PROFILE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Name Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__NAME_EXPRESSION = FRAMEWORK_PROFILE__NAME_EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Namespace</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__NAMESPACE = FRAMEWORK_PROFILE__NAMESPACE;
+
+	/**
+	 * The feature id for the '<em><b>Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__QUALIFIED_NAME = FRAMEWORK_PROFILE__QUALIFIED_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Visibility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__VISIBILITY = FRAMEWORK_PROFILE__VISIBILITY;
+
+	/**
+	 * The feature id for the '<em><b>Owned Rule</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__OWNED_RULE = FRAMEWORK_PROFILE__OWNED_RULE;
+
+	/**
+	 * The feature id for the '<em><b>Element Import</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__ELEMENT_IMPORT = FRAMEWORK_PROFILE__ELEMENT_IMPORT;
+
+	/**
+	 * The feature id for the '<em><b>Package Import</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__PACKAGE_IMPORT = FRAMEWORK_PROFILE__PACKAGE_IMPORT;
+
+	/**
+	 * The feature id for the '<em><b>Owned Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__OWNED_MEMBER = FRAMEWORK_PROFILE__OWNED_MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Imported Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__IMPORTED_MEMBER = FRAMEWORK_PROFILE__IMPORTED_MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__MEMBER = FRAMEWORK_PROFILE__MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Owning Template Parameter</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__OWNING_TEMPLATE_PARAMETER = FRAMEWORK_PROFILE__OWNING_TEMPLATE_PARAMETER;
+
+	/**
+	 * The feature id for the '<em><b>Template Parameter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__TEMPLATE_PARAMETER = FRAMEWORK_PROFILE__TEMPLATE_PARAMETER;
+
+	/**
+	 * The feature id for the '<em><b>Template Binding</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__TEMPLATE_BINDING = FRAMEWORK_PROFILE__TEMPLATE_BINDING;
+
+	/**
+	 * The feature id for the '<em><b>Owned Template Signature</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__OWNED_TEMPLATE_SIGNATURE = FRAMEWORK_PROFILE__OWNED_TEMPLATE_SIGNATURE;
+
+	/**
+	 * The feature id for the '<em><b>URI</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__URI = FRAMEWORK_PROFILE__URI;
+
+	/**
+	 * The feature id for the '<em><b>Nested Package</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__NESTED_PACKAGE = FRAMEWORK_PROFILE__NESTED_PACKAGE;
+
+	/**
+	 * The feature id for the '<em><b>Nesting Package</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__NESTING_PACKAGE = FRAMEWORK_PROFILE__NESTING_PACKAGE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Stereotype</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__OWNED_STEREOTYPE = FRAMEWORK_PROFILE__OWNED_STEREOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Type</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__OWNED_TYPE = FRAMEWORK_PROFILE__OWNED_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Package Merge</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__PACKAGE_MERGE = FRAMEWORK_PROFILE__PACKAGE_MERGE;
+
+	/**
+	 * The feature id for the '<em><b>Packaged Element</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__PACKAGED_ELEMENT = FRAMEWORK_PROFILE__PACKAGED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Profile Application</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__PROFILE_APPLICATION = FRAMEWORK_PROFILE__PROFILE_APPLICATION;
+
+	/**
+	 * The feature id for the '<em><b>Metaclass Reference</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__METACLASS_REFERENCE = FRAMEWORK_PROFILE__METACLASS_REFERENCE;
+
+	/**
+	 * The feature id for the '<em><b>Metamodel Reference</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__METAMODEL_REFERENCE = FRAMEWORK_PROFILE__METAMODEL_REFERENCE;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__CATEGORY = FRAMEWORK_PROFILE__CATEGORY;
+
+	/**
+	 * The feature id for the '<em><b>Kind</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__KIND = FRAMEWORK_PROFILE__KIND;
+
+	/**
+	 * The feature id for the '<em><b>Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__VERSION = FRAMEWORK_PROFILE__VERSION;
+
+	/**
+	 * The feature id for the '<em><b>Class Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__CLASS_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Method Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__METHOD_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Page Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__PAGE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Form Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__FORM_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Class Extension</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__CLASS_EXTENSION = FRAMEWORK_PROFILE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Page Extension</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION = FRAMEWORK_PROFILE_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Attribute Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__ATTRIBUTE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 6;
+
+	/**
+	 * The number of structural features of the '<em>Front Controller Template</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE_FEATURE_COUNT = FRAMEWORK_PROFILE_FEATURE_COUNT + 7;
+
+	/**
+	 * The operation id for the '<em>Get EAnnotation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_EANNOTATION__STRING = FRAMEWORK_PROFILE___GET_EANNOTATION__STRING;
+
+	/**
+	 * The operation id for the '<em>Validate Has Owner</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___VALIDATE_HAS_OWNER__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_HAS_OWNER__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Not Own Self</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___VALIDATE_NOT_OWN_SELF__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_NOT_OWN_SELF__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Add Keyword</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___ADD_KEYWORD__STRING = FRAMEWORK_PROFILE___ADD_KEYWORD__STRING;
+
+	/**
+	 * The operation id for the '<em>Apply Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___APPLY_STEREOTYPE__STEREOTYPE = FRAMEWORK_PROFILE___APPLY_STEREOTYPE__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Create EAnnotation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___CREATE_EANNOTATION__STRING = FRAMEWORK_PROFILE___CREATE_EANNOTATION__STRING;
+
+	/**
+	 * The operation id for the '<em>Destroy</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___DESTROY = FRAMEWORK_PROFILE___DESTROY;
+
+	/**
+	 * The operation id for the '<em>Get Keywords</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_KEYWORDS = FRAMEWORK_PROFILE___GET_KEYWORDS;
+
+	/**
+	 * The operation id for the '<em>Get Applicable Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_APPLICABLE_STEREOTYPE__STRING = FRAMEWORK_PROFILE___GET_APPLICABLE_STEREOTYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Applicable Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_APPLICABLE_STEREOTYPES = FRAMEWORK_PROFILE___GET_APPLICABLE_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Get Applied Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_APPLIED_STEREOTYPE__STRING = FRAMEWORK_PROFILE___GET_APPLIED_STEREOTYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Applied Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_APPLIED_STEREOTYPES = FRAMEWORK_PROFILE___GET_APPLIED_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Get Applied Substereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_APPLIED_SUBSTEREOTYPE__STEREOTYPE_STRING = FRAMEWORK_PROFILE___GET_APPLIED_SUBSTEREOTYPE__STEREOTYPE_STRING;
+
+	/**
+	 * The operation id for the '<em>Get Applied Substereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_APPLIED_SUBSTEREOTYPES__STEREOTYPE = FRAMEWORK_PROFILE___GET_APPLIED_SUBSTEREOTYPES__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Get Model</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_MODEL = FRAMEWORK_PROFILE___GET_MODEL;
+
+	/**
+	 * The operation id for the '<em>Get Nearest Package</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_NEAREST_PACKAGE = FRAMEWORK_PROFILE___GET_NEAREST_PACKAGE;
+
+	/**
+	 * The operation id for the '<em>Get Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_RELATIONSHIPS = FRAMEWORK_PROFILE___GET_RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>Get Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_RELATIONSHIPS__ECLASS = FRAMEWORK_PROFILE___GET_RELATIONSHIPS__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Get Required Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_REQUIRED_STEREOTYPE__STRING = FRAMEWORK_PROFILE___GET_REQUIRED_STEREOTYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Required Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_REQUIRED_STEREOTYPES = FRAMEWORK_PROFILE___GET_REQUIRED_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Get Source Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_SOURCE_DIRECTED_RELATIONSHIPS = FRAMEWORK_PROFILE___GET_SOURCE_DIRECTED_RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>Get Source Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_SOURCE_DIRECTED_RELATIONSHIPS__ECLASS = FRAMEWORK_PROFILE___GET_SOURCE_DIRECTED_RELATIONSHIPS__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Get Stereotype Application</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_STEREOTYPE_APPLICATION__STEREOTYPE = FRAMEWORK_PROFILE___GET_STEREOTYPE_APPLICATION__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Get Stereotype Applications</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_STEREOTYPE_APPLICATIONS = FRAMEWORK_PROFILE___GET_STEREOTYPE_APPLICATIONS;
+
+	/**
+	 * The operation id for the '<em>Get Target Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_TARGET_DIRECTED_RELATIONSHIPS = FRAMEWORK_PROFILE___GET_TARGET_DIRECTED_RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>Get Target Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_TARGET_DIRECTED_RELATIONSHIPS__ECLASS = FRAMEWORK_PROFILE___GET_TARGET_DIRECTED_RELATIONSHIPS__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_VALUE__STEREOTYPE_STRING = FRAMEWORK_PROFILE___GET_VALUE__STEREOTYPE_STRING;
+
+	/**
+	 * The operation id for the '<em>Has Keyword</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___HAS_KEYWORD__STRING = FRAMEWORK_PROFILE___HAS_KEYWORD__STRING;
+
+	/**
+	 * The operation id for the '<em>Has Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___HAS_VALUE__STEREOTYPE_STRING = FRAMEWORK_PROFILE___HAS_VALUE__STEREOTYPE_STRING;
+
+	/**
+	 * The operation id for the '<em>Is Stereotype Applicable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___IS_STEREOTYPE_APPLICABLE__STEREOTYPE = FRAMEWORK_PROFILE___IS_STEREOTYPE_APPLICABLE__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Is Stereotype Applied</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___IS_STEREOTYPE_APPLIED__STEREOTYPE = FRAMEWORK_PROFILE___IS_STEREOTYPE_APPLIED__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Is Stereotype Required</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___IS_STEREOTYPE_REQUIRED__STEREOTYPE = FRAMEWORK_PROFILE___IS_STEREOTYPE_REQUIRED__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Remove Keyword</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___REMOVE_KEYWORD__STRING = FRAMEWORK_PROFILE___REMOVE_KEYWORD__STRING;
+
+	/**
+	 * The operation id for the '<em>Set Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___SET_VALUE__STEREOTYPE_STRING_OBJECT = FRAMEWORK_PROFILE___SET_VALUE__STEREOTYPE_STRING_OBJECT;
+
+	/**
+	 * The operation id for the '<em>Unapply Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___UNAPPLY_STEREOTYPE__STEREOTYPE = FRAMEWORK_PROFILE___UNAPPLY_STEREOTYPE__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>All Owned Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___ALL_OWNED_ELEMENTS = FRAMEWORK_PROFILE___ALL_OWNED_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Must Be Owned</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___MUST_BE_OWNED = FRAMEWORK_PROFILE___MUST_BE_OWNED;
+
+	/**
+	 * The operation id for the '<em>Validate Visibility Needs Ownership</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___VALIDATE_VISIBILITY_NEEDS_OWNERSHIP__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_VISIBILITY_NEEDS_OWNERSHIP__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Has Qualified Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___VALIDATE_HAS_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_HAS_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Has No Qualified Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___VALIDATE_HAS_NO_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_HAS_NO_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Create Dependency</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___CREATE_DEPENDENCY__NAMEDELEMENT = FRAMEWORK_PROFILE___CREATE_DEPENDENCY__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Create Usage</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___CREATE_USAGE__NAMEDELEMENT = FRAMEWORK_PROFILE___CREATE_USAGE__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Get Label</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_LABEL = FRAMEWORK_PROFILE___GET_LABEL;
+
+	/**
+	 * The operation id for the '<em>Get Label</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_LABEL__BOOLEAN = FRAMEWORK_PROFILE___GET_LABEL__BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Get Namespace</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_NAMESPACE = FRAMEWORK_PROFILE___GET_NAMESPACE;
+
+	/**
+	 * The operation id for the '<em>All Namespaces</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___ALL_NAMESPACES = FRAMEWORK_PROFILE___ALL_NAMESPACES;
+
+	/**
+	 * The operation id for the '<em>All Owning Packages</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___ALL_OWNING_PACKAGES = FRAMEWORK_PROFILE___ALL_OWNING_PACKAGES;
+
+	/**
+	 * The operation id for the '<em>Is Distinguishable From</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___IS_DISTINGUISHABLE_FROM__NAMEDELEMENT_NAMESPACE = FRAMEWORK_PROFILE___IS_DISTINGUISHABLE_FROM__NAMEDELEMENT_NAMESPACE;
+
+	/**
+	 * The operation id for the '<em>Get Qualified Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_QUALIFIED_NAME = FRAMEWORK_PROFILE___GET_QUALIFIED_NAME;
+
+	/**
+	 * The operation id for the '<em>Separator</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___SEPARATOR = FRAMEWORK_PROFILE___SEPARATOR;
+
+	/**
+	 * The operation id for the '<em>Get Client Dependencies</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_CLIENT_DEPENDENCIES = FRAMEWORK_PROFILE___GET_CLIENT_DEPENDENCIES;
+
+	/**
+	 * The operation id for the '<em>Validate Members Distinguishable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___VALIDATE_MEMBERS_DISTINGUISHABLE__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_MEMBERS_DISTINGUISHABLE__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Cannot Import Self</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___VALIDATE_CANNOT_IMPORT_SELF__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_CANNOT_IMPORT_SELF__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Cannot Import Owned Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___VALIDATE_CANNOT_IMPORT_OWNED_MEMBERS__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_CANNOT_IMPORT_OWNED_MEMBERS__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Create Element Import</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___CREATE_ELEMENT_IMPORT__PACKAGEABLEELEMENT_VISIBILITYKIND = FRAMEWORK_PROFILE___CREATE_ELEMENT_IMPORT__PACKAGEABLEELEMENT_VISIBILITYKIND;
+
+	/**
+	 * The operation id for the '<em>Create Package Import</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___CREATE_PACKAGE_IMPORT__PACKAGE_VISIBILITYKIND = FRAMEWORK_PROFILE___CREATE_PACKAGE_IMPORT__PACKAGE_VISIBILITYKIND;
+
+	/**
+	 * The operation id for the '<em>Get Imported Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_IMPORTED_ELEMENTS = FRAMEWORK_PROFILE___GET_IMPORTED_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Get Imported Packages</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_IMPORTED_PACKAGES = FRAMEWORK_PROFILE___GET_IMPORTED_PACKAGES;
+
+	/**
+	 * The operation id for the '<em>Get Owned Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_OWNED_MEMBERS = FRAMEWORK_PROFILE___GET_OWNED_MEMBERS;
+
+	/**
+	 * The operation id for the '<em>Exclude Collisions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___EXCLUDE_COLLISIONS__ELIST = FRAMEWORK_PROFILE___EXCLUDE_COLLISIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Names Of Member</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_NAMES_OF_MEMBER__NAMEDELEMENT = FRAMEWORK_PROFILE___GET_NAMES_OF_MEMBER__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Import Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___IMPORT_MEMBERS__ELIST = FRAMEWORK_PROFILE___IMPORT_MEMBERS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Imported Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_IMPORTED_MEMBERS = FRAMEWORK_PROFILE___GET_IMPORTED_MEMBERS;
+
+	/**
+	 * The operation id for the '<em>Members Are Distinguishable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___MEMBERS_ARE_DISTINGUISHABLE = FRAMEWORK_PROFILE___MEMBERS_ARE_DISTINGUISHABLE;
+
+	/**
+	 * The operation id for the '<em>Is Compatible With</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___IS_COMPATIBLE_WITH__PARAMETERABLEELEMENT = FRAMEWORK_PROFILE___IS_COMPATIBLE_WITH__PARAMETERABLEELEMENT;
+
+	/**
+	 * The operation id for the '<em>Is Template Parameter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___IS_TEMPLATE_PARAMETER = FRAMEWORK_PROFILE___IS_TEMPLATE_PARAMETER;
+
+	/**
+	 * The operation id for the '<em>Validate Namespace Needs Visibility</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___VALIDATE_NAMESPACE_NEEDS_VISIBILITY__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_NAMESPACE_NEEDS_VISIBILITY__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Is Template</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___IS_TEMPLATE = FRAMEWORK_PROFILE___IS_TEMPLATE;
+
+	/**
+	 * The operation id for the '<em>Parameterable Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___PARAMETERABLE_ELEMENTS = FRAMEWORK_PROFILE___PARAMETERABLE_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Validate Elements Public Or Private</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___VALIDATE_ELEMENTS_PUBLIC_OR_PRIVATE__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_ELEMENTS_PUBLIC_OR_PRIVATE__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Apply Profile</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___APPLY_PROFILE__PROFILE = FRAMEWORK_PROFILE___APPLY_PROFILE__PROFILE;
+
+	/**
+	 * The operation id for the '<em>Create Owned Class</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___CREATE_OWNED_CLASS__STRING_BOOLEAN = FRAMEWORK_PROFILE___CREATE_OWNED_CLASS__STRING_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Create Owned Enumeration</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___CREATE_OWNED_ENUMERATION__STRING = FRAMEWORK_PROFILE___CREATE_OWNED_ENUMERATION__STRING;
+
+	/**
+	 * The operation id for the '<em>Create Owned Interface</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___CREATE_OWNED_INTERFACE__STRING = FRAMEWORK_PROFILE___CREATE_OWNED_INTERFACE__STRING;
+
+	/**
+	 * The operation id for the '<em>Create Owned Primitive Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___CREATE_OWNED_PRIMITIVE_TYPE__STRING = FRAMEWORK_PROFILE___CREATE_OWNED_PRIMITIVE_TYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Create Owned Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___CREATE_OWNED_STEREOTYPE__STRING_BOOLEAN = FRAMEWORK_PROFILE___CREATE_OWNED_STEREOTYPE__STRING_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Get All Applied Profiles</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_ALL_APPLIED_PROFILES = FRAMEWORK_PROFILE___GET_ALL_APPLIED_PROFILES;
+
+	/**
+	 * The operation id for the '<em>Get All Profile Applications</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_ALL_PROFILE_APPLICATIONS = FRAMEWORK_PROFILE___GET_ALL_PROFILE_APPLICATIONS;
+
+	/**
+	 * The operation id for the '<em>Get Applied Profile</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_APPLIED_PROFILE__STRING = FRAMEWORK_PROFILE___GET_APPLIED_PROFILE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Applied Profile</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_APPLIED_PROFILE__STRING_BOOLEAN = FRAMEWORK_PROFILE___GET_APPLIED_PROFILE__STRING_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Get Applied Profiles</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_APPLIED_PROFILES = FRAMEWORK_PROFILE___GET_APPLIED_PROFILES;
+
+	/**
+	 * The operation id for the '<em>Get Profile Application</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_PROFILE_APPLICATION__PROFILE = FRAMEWORK_PROFILE___GET_PROFILE_APPLICATION__PROFILE;
+
+	/**
+	 * The operation id for the '<em>Get Profile Application</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_PROFILE_APPLICATION__PROFILE_BOOLEAN = FRAMEWORK_PROFILE___GET_PROFILE_APPLICATION__PROFILE_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Is Model Library</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___IS_MODEL_LIBRARY = FRAMEWORK_PROFILE___IS_MODEL_LIBRARY;
+
+	/**
+	 * The operation id for the '<em>Is Profile Applied</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___IS_PROFILE_APPLIED__PROFILE = FRAMEWORK_PROFILE___IS_PROFILE_APPLIED__PROFILE;
+
+	/**
+	 * The operation id for the '<em>Unapply Profile</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___UNAPPLY_PROFILE__PROFILE = FRAMEWORK_PROFILE___UNAPPLY_PROFILE__PROFILE;
+
+	/**
+	 * The operation id for the '<em>Apply Profiles</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___APPLY_PROFILES__ELIST = FRAMEWORK_PROFILE___APPLY_PROFILES__ELIST;
+
+	/**
+	 * The operation id for the '<em>All Applicable Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___ALL_APPLICABLE_STEREOTYPES = FRAMEWORK_PROFILE___ALL_APPLICABLE_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Containing Profile</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___CONTAINING_PROFILE = FRAMEWORK_PROFILE___CONTAINING_PROFILE;
+
+	/**
+	 * The operation id for the '<em>Makes Visible</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___MAKES_VISIBLE__NAMEDELEMENT = FRAMEWORK_PROFILE___MAKES_VISIBLE__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Get Nested Packages</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_NESTED_PACKAGES = FRAMEWORK_PROFILE___GET_NESTED_PACKAGES;
+
+	/**
+	 * The operation id for the '<em>Get Owned Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_OWNED_STEREOTYPES = FRAMEWORK_PROFILE___GET_OWNED_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Get Owned Types</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_OWNED_TYPES = FRAMEWORK_PROFILE___GET_OWNED_TYPES;
+
+	/**
+	 * The operation id for the '<em>Visible Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___VISIBLE_MEMBERS = FRAMEWORK_PROFILE___VISIBLE_MEMBERS;
+
+	/**
+	 * The operation id for the '<em>Validate Metaclass Reference Not Specialized</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___VALIDATE_METACLASS_REFERENCE_NOT_SPECIALIZED__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_METACLASS_REFERENCE_NOT_SPECIALIZED__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate References Same Metamodel</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___VALIDATE_REFERENCES_SAME_METAMODEL__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_REFERENCES_SAME_METAMODEL__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Create</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___CREATE__CLASSIFIER = FRAMEWORK_PROFILE___CREATE__CLASSIFIER;
+
+	/**
+	 * The operation id for the '<em>Define</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___DEFINE = FRAMEWORK_PROFILE___DEFINE;
+
+	/**
+	 * The operation id for the '<em>Define</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___DEFINE__MAP_DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___DEFINE__MAP_DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Get Definition</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_DEFINITION = FRAMEWORK_PROFILE___GET_DEFINITION;
+
+	/**
+	 * The operation id for the '<em>Get Definition</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_DEFINITION__NAMEDELEMENT = FRAMEWORK_PROFILE___GET_DEFINITION__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Get Owned Extensions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_OWNED_EXTENSIONS__BOOLEAN = FRAMEWORK_PROFILE___GET_OWNED_EXTENSIONS__BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Get Referenced Metaclasses</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_REFERENCED_METACLASSES = FRAMEWORK_PROFILE___GET_REFERENCED_METACLASSES;
+
+	/**
+	 * The operation id for the '<em>Get Referenced Metamodels</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___GET_REFERENCED_METAMODELS = FRAMEWORK_PROFILE___GET_REFERENCED_METAMODELS;
+
+	/**
+	 * The operation id for the '<em>Is Defined</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE___IS_DEFINED = FRAMEWORK_PROFILE___IS_DEFINED;
+
+	/**
+	 * The number of operations of the '<em>Front Controller Template</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE_OPERATION_COUNT = FRAMEWORK_PROFILE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.DITemplateImpl <em>DI Template</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.DITemplateImpl
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getDITemplate()
+	 * @generated
+	 */
+	int DI_TEMPLATE = 101;
+
+	/**
+	 * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__EANNOTATIONS = FRAMEWORK_PROFILE__EANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__OWNED_COMMENT = FRAMEWORK_PROFILE__OWNED_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Owned Element</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__OWNED_ELEMENT = FRAMEWORK_PROFILE__OWNED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Owner</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__OWNER = FRAMEWORK_PROFILE__OWNER;
+
+	/**
+	 * The feature id for the '<em><b>Client Dependency</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__CLIENT_DEPENDENCY = FRAMEWORK_PROFILE__CLIENT_DEPENDENCY;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__NAME = FRAMEWORK_PROFILE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Name Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__NAME_EXPRESSION = FRAMEWORK_PROFILE__NAME_EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Namespace</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__NAMESPACE = FRAMEWORK_PROFILE__NAMESPACE;
+
+	/**
+	 * The feature id for the '<em><b>Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__QUALIFIED_NAME = FRAMEWORK_PROFILE__QUALIFIED_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Visibility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__VISIBILITY = FRAMEWORK_PROFILE__VISIBILITY;
+
+	/**
+	 * The feature id for the '<em><b>Owned Rule</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__OWNED_RULE = FRAMEWORK_PROFILE__OWNED_RULE;
+
+	/**
+	 * The feature id for the '<em><b>Element Import</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__ELEMENT_IMPORT = FRAMEWORK_PROFILE__ELEMENT_IMPORT;
+
+	/**
+	 * The feature id for the '<em><b>Package Import</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__PACKAGE_IMPORT = FRAMEWORK_PROFILE__PACKAGE_IMPORT;
+
+	/**
+	 * The feature id for the '<em><b>Owned Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__OWNED_MEMBER = FRAMEWORK_PROFILE__OWNED_MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Imported Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__IMPORTED_MEMBER = FRAMEWORK_PROFILE__IMPORTED_MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__MEMBER = FRAMEWORK_PROFILE__MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Owning Template Parameter</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__OWNING_TEMPLATE_PARAMETER = FRAMEWORK_PROFILE__OWNING_TEMPLATE_PARAMETER;
+
+	/**
+	 * The feature id for the '<em><b>Template Parameter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__TEMPLATE_PARAMETER = FRAMEWORK_PROFILE__TEMPLATE_PARAMETER;
+
+	/**
+	 * The feature id for the '<em><b>Template Binding</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__TEMPLATE_BINDING = FRAMEWORK_PROFILE__TEMPLATE_BINDING;
+
+	/**
+	 * The feature id for the '<em><b>Owned Template Signature</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__OWNED_TEMPLATE_SIGNATURE = FRAMEWORK_PROFILE__OWNED_TEMPLATE_SIGNATURE;
+
+	/**
+	 * The feature id for the '<em><b>URI</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__URI = FRAMEWORK_PROFILE__URI;
+
+	/**
+	 * The feature id for the '<em><b>Nested Package</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__NESTED_PACKAGE = FRAMEWORK_PROFILE__NESTED_PACKAGE;
+
+	/**
+	 * The feature id for the '<em><b>Nesting Package</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__NESTING_PACKAGE = FRAMEWORK_PROFILE__NESTING_PACKAGE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Stereotype</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__OWNED_STEREOTYPE = FRAMEWORK_PROFILE__OWNED_STEREOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Type</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__OWNED_TYPE = FRAMEWORK_PROFILE__OWNED_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Package Merge</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__PACKAGE_MERGE = FRAMEWORK_PROFILE__PACKAGE_MERGE;
+
+	/**
+	 * The feature id for the '<em><b>Packaged Element</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__PACKAGED_ELEMENT = FRAMEWORK_PROFILE__PACKAGED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Profile Application</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__PROFILE_APPLICATION = FRAMEWORK_PROFILE__PROFILE_APPLICATION;
+
+	/**
+	 * The feature id for the '<em><b>Metaclass Reference</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__METACLASS_REFERENCE = FRAMEWORK_PROFILE__METACLASS_REFERENCE;
+
+	/**
+	 * The feature id for the '<em><b>Metamodel Reference</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__METAMODEL_REFERENCE = FRAMEWORK_PROFILE__METAMODEL_REFERENCE;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__CATEGORY = FRAMEWORK_PROFILE__CATEGORY;
+
+	/**
+	 * The feature id for the '<em><b>Kind</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__KIND = FRAMEWORK_PROFILE__KIND;
+
+	/**
+	 * The feature id for the '<em><b>Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__VERSION = FRAMEWORK_PROFILE__VERSION;
+
+	/**
+	 * The feature id for the '<em><b>Interface Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__INTERFACE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Interface Extension</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__INTERFACE_EXTENSION = FRAMEWORK_PROFILE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Class Extension</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__CLASS_EXTENSION = FRAMEWORK_PROFILE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Class Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__CLASS_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Service Class Injection Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__SERVICE_CLASS_INJECTION_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Dao Class Injection Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE__DAO_CLASS_INJECTION_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of structural features of the '<em>DI Template</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE_FEATURE_COUNT = FRAMEWORK_PROFILE_FEATURE_COUNT + 6;
+
+	/**
+	 * The operation id for the '<em>Get EAnnotation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_EANNOTATION__STRING = FRAMEWORK_PROFILE___GET_EANNOTATION__STRING;
+
+	/**
+	 * The operation id for the '<em>Validate Has Owner</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___VALIDATE_HAS_OWNER__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_HAS_OWNER__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Not Own Self</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___VALIDATE_NOT_OWN_SELF__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_NOT_OWN_SELF__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Add Keyword</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___ADD_KEYWORD__STRING = FRAMEWORK_PROFILE___ADD_KEYWORD__STRING;
+
+	/**
+	 * The operation id for the '<em>Apply Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___APPLY_STEREOTYPE__STEREOTYPE = FRAMEWORK_PROFILE___APPLY_STEREOTYPE__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Create EAnnotation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___CREATE_EANNOTATION__STRING = FRAMEWORK_PROFILE___CREATE_EANNOTATION__STRING;
+
+	/**
+	 * The operation id for the '<em>Destroy</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___DESTROY = FRAMEWORK_PROFILE___DESTROY;
+
+	/**
+	 * The operation id for the '<em>Get Keywords</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_KEYWORDS = FRAMEWORK_PROFILE___GET_KEYWORDS;
+
+	/**
+	 * The operation id for the '<em>Get Applicable Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_APPLICABLE_STEREOTYPE__STRING = FRAMEWORK_PROFILE___GET_APPLICABLE_STEREOTYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Applicable Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_APPLICABLE_STEREOTYPES = FRAMEWORK_PROFILE___GET_APPLICABLE_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Get Applied Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_APPLIED_STEREOTYPE__STRING = FRAMEWORK_PROFILE___GET_APPLIED_STEREOTYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Applied Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_APPLIED_STEREOTYPES = FRAMEWORK_PROFILE___GET_APPLIED_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Get Applied Substereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_APPLIED_SUBSTEREOTYPE__STEREOTYPE_STRING = FRAMEWORK_PROFILE___GET_APPLIED_SUBSTEREOTYPE__STEREOTYPE_STRING;
+
+	/**
+	 * The operation id for the '<em>Get Applied Substereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_APPLIED_SUBSTEREOTYPES__STEREOTYPE = FRAMEWORK_PROFILE___GET_APPLIED_SUBSTEREOTYPES__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Get Model</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_MODEL = FRAMEWORK_PROFILE___GET_MODEL;
+
+	/**
+	 * The operation id for the '<em>Get Nearest Package</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_NEAREST_PACKAGE = FRAMEWORK_PROFILE___GET_NEAREST_PACKAGE;
+
+	/**
+	 * The operation id for the '<em>Get Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_RELATIONSHIPS = FRAMEWORK_PROFILE___GET_RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>Get Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_RELATIONSHIPS__ECLASS = FRAMEWORK_PROFILE___GET_RELATIONSHIPS__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Get Required Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_REQUIRED_STEREOTYPE__STRING = FRAMEWORK_PROFILE___GET_REQUIRED_STEREOTYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Required Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_REQUIRED_STEREOTYPES = FRAMEWORK_PROFILE___GET_REQUIRED_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Get Source Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_SOURCE_DIRECTED_RELATIONSHIPS = FRAMEWORK_PROFILE___GET_SOURCE_DIRECTED_RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>Get Source Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_SOURCE_DIRECTED_RELATIONSHIPS__ECLASS = FRAMEWORK_PROFILE___GET_SOURCE_DIRECTED_RELATIONSHIPS__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Get Stereotype Application</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_STEREOTYPE_APPLICATION__STEREOTYPE = FRAMEWORK_PROFILE___GET_STEREOTYPE_APPLICATION__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Get Stereotype Applications</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_STEREOTYPE_APPLICATIONS = FRAMEWORK_PROFILE___GET_STEREOTYPE_APPLICATIONS;
+
+	/**
+	 * The operation id for the '<em>Get Target Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_TARGET_DIRECTED_RELATIONSHIPS = FRAMEWORK_PROFILE___GET_TARGET_DIRECTED_RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>Get Target Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_TARGET_DIRECTED_RELATIONSHIPS__ECLASS = FRAMEWORK_PROFILE___GET_TARGET_DIRECTED_RELATIONSHIPS__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_VALUE__STEREOTYPE_STRING = FRAMEWORK_PROFILE___GET_VALUE__STEREOTYPE_STRING;
+
+	/**
+	 * The operation id for the '<em>Has Keyword</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___HAS_KEYWORD__STRING = FRAMEWORK_PROFILE___HAS_KEYWORD__STRING;
+
+	/**
+	 * The operation id for the '<em>Has Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___HAS_VALUE__STEREOTYPE_STRING = FRAMEWORK_PROFILE___HAS_VALUE__STEREOTYPE_STRING;
+
+	/**
+	 * The operation id for the '<em>Is Stereotype Applicable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___IS_STEREOTYPE_APPLICABLE__STEREOTYPE = FRAMEWORK_PROFILE___IS_STEREOTYPE_APPLICABLE__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Is Stereotype Applied</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___IS_STEREOTYPE_APPLIED__STEREOTYPE = FRAMEWORK_PROFILE___IS_STEREOTYPE_APPLIED__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Is Stereotype Required</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___IS_STEREOTYPE_REQUIRED__STEREOTYPE = FRAMEWORK_PROFILE___IS_STEREOTYPE_REQUIRED__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Remove Keyword</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___REMOVE_KEYWORD__STRING = FRAMEWORK_PROFILE___REMOVE_KEYWORD__STRING;
+
+	/**
+	 * The operation id for the '<em>Set Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___SET_VALUE__STEREOTYPE_STRING_OBJECT = FRAMEWORK_PROFILE___SET_VALUE__STEREOTYPE_STRING_OBJECT;
+
+	/**
+	 * The operation id for the '<em>Unapply Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___UNAPPLY_STEREOTYPE__STEREOTYPE = FRAMEWORK_PROFILE___UNAPPLY_STEREOTYPE__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>All Owned Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___ALL_OWNED_ELEMENTS = FRAMEWORK_PROFILE___ALL_OWNED_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Must Be Owned</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___MUST_BE_OWNED = FRAMEWORK_PROFILE___MUST_BE_OWNED;
+
+	/**
+	 * The operation id for the '<em>Validate Visibility Needs Ownership</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___VALIDATE_VISIBILITY_NEEDS_OWNERSHIP__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_VISIBILITY_NEEDS_OWNERSHIP__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Has Qualified Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___VALIDATE_HAS_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_HAS_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Has No Qualified Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___VALIDATE_HAS_NO_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_HAS_NO_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Create Dependency</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___CREATE_DEPENDENCY__NAMEDELEMENT = FRAMEWORK_PROFILE___CREATE_DEPENDENCY__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Create Usage</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___CREATE_USAGE__NAMEDELEMENT = FRAMEWORK_PROFILE___CREATE_USAGE__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Get Label</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_LABEL = FRAMEWORK_PROFILE___GET_LABEL;
+
+	/**
+	 * The operation id for the '<em>Get Label</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_LABEL__BOOLEAN = FRAMEWORK_PROFILE___GET_LABEL__BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Get Namespace</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_NAMESPACE = FRAMEWORK_PROFILE___GET_NAMESPACE;
+
+	/**
+	 * The operation id for the '<em>All Namespaces</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___ALL_NAMESPACES = FRAMEWORK_PROFILE___ALL_NAMESPACES;
+
+	/**
+	 * The operation id for the '<em>All Owning Packages</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___ALL_OWNING_PACKAGES = FRAMEWORK_PROFILE___ALL_OWNING_PACKAGES;
+
+	/**
+	 * The operation id for the '<em>Is Distinguishable From</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___IS_DISTINGUISHABLE_FROM__NAMEDELEMENT_NAMESPACE = FRAMEWORK_PROFILE___IS_DISTINGUISHABLE_FROM__NAMEDELEMENT_NAMESPACE;
+
+	/**
+	 * The operation id for the '<em>Get Qualified Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_QUALIFIED_NAME = FRAMEWORK_PROFILE___GET_QUALIFIED_NAME;
+
+	/**
+	 * The operation id for the '<em>Separator</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___SEPARATOR = FRAMEWORK_PROFILE___SEPARATOR;
+
+	/**
+	 * The operation id for the '<em>Get Client Dependencies</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_CLIENT_DEPENDENCIES = FRAMEWORK_PROFILE___GET_CLIENT_DEPENDENCIES;
+
+	/**
+	 * The operation id for the '<em>Validate Members Distinguishable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___VALIDATE_MEMBERS_DISTINGUISHABLE__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_MEMBERS_DISTINGUISHABLE__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Cannot Import Self</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___VALIDATE_CANNOT_IMPORT_SELF__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_CANNOT_IMPORT_SELF__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Cannot Import Owned Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___VALIDATE_CANNOT_IMPORT_OWNED_MEMBERS__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_CANNOT_IMPORT_OWNED_MEMBERS__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Create Element Import</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___CREATE_ELEMENT_IMPORT__PACKAGEABLEELEMENT_VISIBILITYKIND = FRAMEWORK_PROFILE___CREATE_ELEMENT_IMPORT__PACKAGEABLEELEMENT_VISIBILITYKIND;
+
+	/**
+	 * The operation id for the '<em>Create Package Import</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___CREATE_PACKAGE_IMPORT__PACKAGE_VISIBILITYKIND = FRAMEWORK_PROFILE___CREATE_PACKAGE_IMPORT__PACKAGE_VISIBILITYKIND;
+
+	/**
+	 * The operation id for the '<em>Get Imported Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_IMPORTED_ELEMENTS = FRAMEWORK_PROFILE___GET_IMPORTED_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Get Imported Packages</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_IMPORTED_PACKAGES = FRAMEWORK_PROFILE___GET_IMPORTED_PACKAGES;
+
+	/**
+	 * The operation id for the '<em>Get Owned Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_OWNED_MEMBERS = FRAMEWORK_PROFILE___GET_OWNED_MEMBERS;
+
+	/**
+	 * The operation id for the '<em>Exclude Collisions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___EXCLUDE_COLLISIONS__ELIST = FRAMEWORK_PROFILE___EXCLUDE_COLLISIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Names Of Member</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_NAMES_OF_MEMBER__NAMEDELEMENT = FRAMEWORK_PROFILE___GET_NAMES_OF_MEMBER__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Import Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___IMPORT_MEMBERS__ELIST = FRAMEWORK_PROFILE___IMPORT_MEMBERS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Imported Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_IMPORTED_MEMBERS = FRAMEWORK_PROFILE___GET_IMPORTED_MEMBERS;
+
+	/**
+	 * The operation id for the '<em>Members Are Distinguishable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___MEMBERS_ARE_DISTINGUISHABLE = FRAMEWORK_PROFILE___MEMBERS_ARE_DISTINGUISHABLE;
+
+	/**
+	 * The operation id for the '<em>Is Compatible With</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___IS_COMPATIBLE_WITH__PARAMETERABLEELEMENT = FRAMEWORK_PROFILE___IS_COMPATIBLE_WITH__PARAMETERABLEELEMENT;
+
+	/**
+	 * The operation id for the '<em>Is Template Parameter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___IS_TEMPLATE_PARAMETER = FRAMEWORK_PROFILE___IS_TEMPLATE_PARAMETER;
+
+	/**
+	 * The operation id for the '<em>Validate Namespace Needs Visibility</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___VALIDATE_NAMESPACE_NEEDS_VISIBILITY__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_NAMESPACE_NEEDS_VISIBILITY__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Is Template</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___IS_TEMPLATE = FRAMEWORK_PROFILE___IS_TEMPLATE;
+
+	/**
+	 * The operation id for the '<em>Parameterable Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___PARAMETERABLE_ELEMENTS = FRAMEWORK_PROFILE___PARAMETERABLE_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Validate Elements Public Or Private</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___VALIDATE_ELEMENTS_PUBLIC_OR_PRIVATE__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_ELEMENTS_PUBLIC_OR_PRIVATE__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Apply Profile</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___APPLY_PROFILE__PROFILE = FRAMEWORK_PROFILE___APPLY_PROFILE__PROFILE;
+
+	/**
+	 * The operation id for the '<em>Create Owned Class</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___CREATE_OWNED_CLASS__STRING_BOOLEAN = FRAMEWORK_PROFILE___CREATE_OWNED_CLASS__STRING_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Create Owned Enumeration</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___CREATE_OWNED_ENUMERATION__STRING = FRAMEWORK_PROFILE___CREATE_OWNED_ENUMERATION__STRING;
+
+	/**
+	 * The operation id for the '<em>Create Owned Interface</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___CREATE_OWNED_INTERFACE__STRING = FRAMEWORK_PROFILE___CREATE_OWNED_INTERFACE__STRING;
+
+	/**
+	 * The operation id for the '<em>Create Owned Primitive Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___CREATE_OWNED_PRIMITIVE_TYPE__STRING = FRAMEWORK_PROFILE___CREATE_OWNED_PRIMITIVE_TYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Create Owned Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___CREATE_OWNED_STEREOTYPE__STRING_BOOLEAN = FRAMEWORK_PROFILE___CREATE_OWNED_STEREOTYPE__STRING_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Get All Applied Profiles</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_ALL_APPLIED_PROFILES = FRAMEWORK_PROFILE___GET_ALL_APPLIED_PROFILES;
+
+	/**
+	 * The operation id for the '<em>Get All Profile Applications</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_ALL_PROFILE_APPLICATIONS = FRAMEWORK_PROFILE___GET_ALL_PROFILE_APPLICATIONS;
+
+	/**
+	 * The operation id for the '<em>Get Applied Profile</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_APPLIED_PROFILE__STRING = FRAMEWORK_PROFILE___GET_APPLIED_PROFILE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Applied Profile</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_APPLIED_PROFILE__STRING_BOOLEAN = FRAMEWORK_PROFILE___GET_APPLIED_PROFILE__STRING_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Get Applied Profiles</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_APPLIED_PROFILES = FRAMEWORK_PROFILE___GET_APPLIED_PROFILES;
+
+	/**
+	 * The operation id for the '<em>Get Profile Application</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_PROFILE_APPLICATION__PROFILE = FRAMEWORK_PROFILE___GET_PROFILE_APPLICATION__PROFILE;
+
+	/**
+	 * The operation id for the '<em>Get Profile Application</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_PROFILE_APPLICATION__PROFILE_BOOLEAN = FRAMEWORK_PROFILE___GET_PROFILE_APPLICATION__PROFILE_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Is Model Library</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___IS_MODEL_LIBRARY = FRAMEWORK_PROFILE___IS_MODEL_LIBRARY;
+
+	/**
+	 * The operation id for the '<em>Is Profile Applied</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___IS_PROFILE_APPLIED__PROFILE = FRAMEWORK_PROFILE___IS_PROFILE_APPLIED__PROFILE;
+
+	/**
+	 * The operation id for the '<em>Unapply Profile</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___UNAPPLY_PROFILE__PROFILE = FRAMEWORK_PROFILE___UNAPPLY_PROFILE__PROFILE;
+
+	/**
+	 * The operation id for the '<em>Apply Profiles</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___APPLY_PROFILES__ELIST = FRAMEWORK_PROFILE___APPLY_PROFILES__ELIST;
+
+	/**
+	 * The operation id for the '<em>All Applicable Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___ALL_APPLICABLE_STEREOTYPES = FRAMEWORK_PROFILE___ALL_APPLICABLE_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Containing Profile</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___CONTAINING_PROFILE = FRAMEWORK_PROFILE___CONTAINING_PROFILE;
+
+	/**
+	 * The operation id for the '<em>Makes Visible</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___MAKES_VISIBLE__NAMEDELEMENT = FRAMEWORK_PROFILE___MAKES_VISIBLE__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Get Nested Packages</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_NESTED_PACKAGES = FRAMEWORK_PROFILE___GET_NESTED_PACKAGES;
+
+	/**
+	 * The operation id for the '<em>Get Owned Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_OWNED_STEREOTYPES = FRAMEWORK_PROFILE___GET_OWNED_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Get Owned Types</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_OWNED_TYPES = FRAMEWORK_PROFILE___GET_OWNED_TYPES;
+
+	/**
+	 * The operation id for the '<em>Visible Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___VISIBLE_MEMBERS = FRAMEWORK_PROFILE___VISIBLE_MEMBERS;
+
+	/**
+	 * The operation id for the '<em>Validate Metaclass Reference Not Specialized</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___VALIDATE_METACLASS_REFERENCE_NOT_SPECIALIZED__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_METACLASS_REFERENCE_NOT_SPECIALIZED__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate References Same Metamodel</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___VALIDATE_REFERENCES_SAME_METAMODEL__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_REFERENCES_SAME_METAMODEL__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Create</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___CREATE__CLASSIFIER = FRAMEWORK_PROFILE___CREATE__CLASSIFIER;
+
+	/**
+	 * The operation id for the '<em>Define</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___DEFINE = FRAMEWORK_PROFILE___DEFINE;
+
+	/**
+	 * The operation id for the '<em>Define</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___DEFINE__MAP_DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___DEFINE__MAP_DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Get Definition</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_DEFINITION = FRAMEWORK_PROFILE___GET_DEFINITION;
+
+	/**
+	 * The operation id for the '<em>Get Definition</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_DEFINITION__NAMEDELEMENT = FRAMEWORK_PROFILE___GET_DEFINITION__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Get Owned Extensions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_OWNED_EXTENSIONS__BOOLEAN = FRAMEWORK_PROFILE___GET_OWNED_EXTENSIONS__BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Get Referenced Metaclasses</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_REFERENCED_METACLASSES = FRAMEWORK_PROFILE___GET_REFERENCED_METACLASSES;
+
+	/**
+	 * The operation id for the '<em>Get Referenced Metamodels</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___GET_REFERENCED_METAMODELS = FRAMEWORK_PROFILE___GET_REFERENCED_METAMODELS;
+
+	/**
+	 * The operation id for the '<em>Is Defined</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE___IS_DEFINED = FRAMEWORK_PROFILE___IS_DEFINED;
+
+	/**
+	 * The number of operations of the '<em>DI Template</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DI_TEMPLATE_OPERATION_COUNT = FRAMEWORK_PROFILE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl <em>ORM Template</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getORMTemplate()
+	 * @generated
+	 */
+	int ORM_TEMPLATE = 102;
+
+	/**
+	 * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__EANNOTATIONS = FRAMEWORK_PROFILE__EANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__OWNED_COMMENT = FRAMEWORK_PROFILE__OWNED_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Owned Element</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__OWNED_ELEMENT = FRAMEWORK_PROFILE__OWNED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Owner</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__OWNER = FRAMEWORK_PROFILE__OWNER;
+
+	/**
+	 * The feature id for the '<em><b>Client Dependency</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__CLIENT_DEPENDENCY = FRAMEWORK_PROFILE__CLIENT_DEPENDENCY;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__NAME = FRAMEWORK_PROFILE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Name Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__NAME_EXPRESSION = FRAMEWORK_PROFILE__NAME_EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Namespace</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__NAMESPACE = FRAMEWORK_PROFILE__NAMESPACE;
+
+	/**
+	 * The feature id for the '<em><b>Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__QUALIFIED_NAME = FRAMEWORK_PROFILE__QUALIFIED_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Visibility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__VISIBILITY = FRAMEWORK_PROFILE__VISIBILITY;
+
+	/**
+	 * The feature id for the '<em><b>Owned Rule</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__OWNED_RULE = FRAMEWORK_PROFILE__OWNED_RULE;
+
+	/**
+	 * The feature id for the '<em><b>Element Import</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__ELEMENT_IMPORT = FRAMEWORK_PROFILE__ELEMENT_IMPORT;
+
+	/**
+	 * The feature id for the '<em><b>Package Import</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__PACKAGE_IMPORT = FRAMEWORK_PROFILE__PACKAGE_IMPORT;
+
+	/**
+	 * The feature id for the '<em><b>Owned Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__OWNED_MEMBER = FRAMEWORK_PROFILE__OWNED_MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Imported Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__IMPORTED_MEMBER = FRAMEWORK_PROFILE__IMPORTED_MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__MEMBER = FRAMEWORK_PROFILE__MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Owning Template Parameter</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__OWNING_TEMPLATE_PARAMETER = FRAMEWORK_PROFILE__OWNING_TEMPLATE_PARAMETER;
+
+	/**
+	 * The feature id for the '<em><b>Template Parameter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__TEMPLATE_PARAMETER = FRAMEWORK_PROFILE__TEMPLATE_PARAMETER;
+
+	/**
+	 * The feature id for the '<em><b>Template Binding</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__TEMPLATE_BINDING = FRAMEWORK_PROFILE__TEMPLATE_BINDING;
+
+	/**
+	 * The feature id for the '<em><b>Owned Template Signature</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__OWNED_TEMPLATE_SIGNATURE = FRAMEWORK_PROFILE__OWNED_TEMPLATE_SIGNATURE;
+
+	/**
+	 * The feature id for the '<em><b>URI</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__URI = FRAMEWORK_PROFILE__URI;
+
+	/**
+	 * The feature id for the '<em><b>Nested Package</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__NESTED_PACKAGE = FRAMEWORK_PROFILE__NESTED_PACKAGE;
+
+	/**
+	 * The feature id for the '<em><b>Nesting Package</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__NESTING_PACKAGE = FRAMEWORK_PROFILE__NESTING_PACKAGE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Stereotype</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__OWNED_STEREOTYPE = FRAMEWORK_PROFILE__OWNED_STEREOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Type</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__OWNED_TYPE = FRAMEWORK_PROFILE__OWNED_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Package Merge</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__PACKAGE_MERGE = FRAMEWORK_PROFILE__PACKAGE_MERGE;
+
+	/**
+	 * The feature id for the '<em><b>Packaged Element</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__PACKAGED_ELEMENT = FRAMEWORK_PROFILE__PACKAGED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Profile Application</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__PROFILE_APPLICATION = FRAMEWORK_PROFILE__PROFILE_APPLICATION;
+
+	/**
+	 * The feature id for the '<em><b>Metaclass Reference</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__METACLASS_REFERENCE = FRAMEWORK_PROFILE__METACLASS_REFERENCE;
+
+	/**
+	 * The feature id for the '<em><b>Metamodel Reference</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__METAMODEL_REFERENCE = FRAMEWORK_PROFILE__METAMODEL_REFERENCE;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__CATEGORY = FRAMEWORK_PROFILE__CATEGORY;
+
+	/**
+	 * The feature id for the '<em><b>Kind</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__KIND = FRAMEWORK_PROFILE__KIND;
+
+	/**
+	 * The feature id for the '<em><b>Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__VERSION = FRAMEWORK_PROFILE__VERSION;
+
+	/**
+	 * The feature id for the '<em><b>Class Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__CLASS_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Class Extension</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__CLASS_EXTENSION = FRAMEWORK_PROFILE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Attribute Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__ATTRIBUTE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>ORM Template</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE_FEATURE_COUNT = FRAMEWORK_PROFILE_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Get EAnnotation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_EANNOTATION__STRING = FRAMEWORK_PROFILE___GET_EANNOTATION__STRING;
+
+	/**
+	 * The operation id for the '<em>Validate Has Owner</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___VALIDATE_HAS_OWNER__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_HAS_OWNER__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Not Own Self</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___VALIDATE_NOT_OWN_SELF__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_NOT_OWN_SELF__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Add Keyword</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___ADD_KEYWORD__STRING = FRAMEWORK_PROFILE___ADD_KEYWORD__STRING;
+
+	/**
+	 * The operation id for the '<em>Apply Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___APPLY_STEREOTYPE__STEREOTYPE = FRAMEWORK_PROFILE___APPLY_STEREOTYPE__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Create EAnnotation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___CREATE_EANNOTATION__STRING = FRAMEWORK_PROFILE___CREATE_EANNOTATION__STRING;
+
+	/**
+	 * The operation id for the '<em>Destroy</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___DESTROY = FRAMEWORK_PROFILE___DESTROY;
+
+	/**
+	 * The operation id for the '<em>Get Keywords</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_KEYWORDS = FRAMEWORK_PROFILE___GET_KEYWORDS;
+
+	/**
+	 * The operation id for the '<em>Get Applicable Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_APPLICABLE_STEREOTYPE__STRING = FRAMEWORK_PROFILE___GET_APPLICABLE_STEREOTYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Applicable Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_APPLICABLE_STEREOTYPES = FRAMEWORK_PROFILE___GET_APPLICABLE_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Get Applied Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_APPLIED_STEREOTYPE__STRING = FRAMEWORK_PROFILE___GET_APPLIED_STEREOTYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Applied Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_APPLIED_STEREOTYPES = FRAMEWORK_PROFILE___GET_APPLIED_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Get Applied Substereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_APPLIED_SUBSTEREOTYPE__STEREOTYPE_STRING = FRAMEWORK_PROFILE___GET_APPLIED_SUBSTEREOTYPE__STEREOTYPE_STRING;
+
+	/**
+	 * The operation id for the '<em>Get Applied Substereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_APPLIED_SUBSTEREOTYPES__STEREOTYPE = FRAMEWORK_PROFILE___GET_APPLIED_SUBSTEREOTYPES__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Get Model</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_MODEL = FRAMEWORK_PROFILE___GET_MODEL;
+
+	/**
+	 * The operation id for the '<em>Get Nearest Package</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_NEAREST_PACKAGE = FRAMEWORK_PROFILE___GET_NEAREST_PACKAGE;
+
+	/**
+	 * The operation id for the '<em>Get Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_RELATIONSHIPS = FRAMEWORK_PROFILE___GET_RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>Get Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_RELATIONSHIPS__ECLASS = FRAMEWORK_PROFILE___GET_RELATIONSHIPS__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Get Required Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_REQUIRED_STEREOTYPE__STRING = FRAMEWORK_PROFILE___GET_REQUIRED_STEREOTYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Required Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_REQUIRED_STEREOTYPES = FRAMEWORK_PROFILE___GET_REQUIRED_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Get Source Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_SOURCE_DIRECTED_RELATIONSHIPS = FRAMEWORK_PROFILE___GET_SOURCE_DIRECTED_RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>Get Source Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_SOURCE_DIRECTED_RELATIONSHIPS__ECLASS = FRAMEWORK_PROFILE___GET_SOURCE_DIRECTED_RELATIONSHIPS__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Get Stereotype Application</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_STEREOTYPE_APPLICATION__STEREOTYPE = FRAMEWORK_PROFILE___GET_STEREOTYPE_APPLICATION__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Get Stereotype Applications</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_STEREOTYPE_APPLICATIONS = FRAMEWORK_PROFILE___GET_STEREOTYPE_APPLICATIONS;
+
+	/**
+	 * The operation id for the '<em>Get Target Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_TARGET_DIRECTED_RELATIONSHIPS = FRAMEWORK_PROFILE___GET_TARGET_DIRECTED_RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>Get Target Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_TARGET_DIRECTED_RELATIONSHIPS__ECLASS = FRAMEWORK_PROFILE___GET_TARGET_DIRECTED_RELATIONSHIPS__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_VALUE__STEREOTYPE_STRING = FRAMEWORK_PROFILE___GET_VALUE__STEREOTYPE_STRING;
+
+	/**
+	 * The operation id for the '<em>Has Keyword</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___HAS_KEYWORD__STRING = FRAMEWORK_PROFILE___HAS_KEYWORD__STRING;
+
+	/**
+	 * The operation id for the '<em>Has Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___HAS_VALUE__STEREOTYPE_STRING = FRAMEWORK_PROFILE___HAS_VALUE__STEREOTYPE_STRING;
+
+	/**
+	 * The operation id for the '<em>Is Stereotype Applicable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___IS_STEREOTYPE_APPLICABLE__STEREOTYPE = FRAMEWORK_PROFILE___IS_STEREOTYPE_APPLICABLE__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Is Stereotype Applied</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___IS_STEREOTYPE_APPLIED__STEREOTYPE = FRAMEWORK_PROFILE___IS_STEREOTYPE_APPLIED__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Is Stereotype Required</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___IS_STEREOTYPE_REQUIRED__STEREOTYPE = FRAMEWORK_PROFILE___IS_STEREOTYPE_REQUIRED__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Remove Keyword</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___REMOVE_KEYWORD__STRING = FRAMEWORK_PROFILE___REMOVE_KEYWORD__STRING;
+
+	/**
+	 * The operation id for the '<em>Set Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___SET_VALUE__STEREOTYPE_STRING_OBJECT = FRAMEWORK_PROFILE___SET_VALUE__STEREOTYPE_STRING_OBJECT;
+
+	/**
+	 * The operation id for the '<em>Unapply Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___UNAPPLY_STEREOTYPE__STEREOTYPE = FRAMEWORK_PROFILE___UNAPPLY_STEREOTYPE__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>All Owned Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___ALL_OWNED_ELEMENTS = FRAMEWORK_PROFILE___ALL_OWNED_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Must Be Owned</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___MUST_BE_OWNED = FRAMEWORK_PROFILE___MUST_BE_OWNED;
+
+	/**
+	 * The operation id for the '<em>Validate Visibility Needs Ownership</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___VALIDATE_VISIBILITY_NEEDS_OWNERSHIP__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_VISIBILITY_NEEDS_OWNERSHIP__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Has Qualified Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___VALIDATE_HAS_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_HAS_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Has No Qualified Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___VALIDATE_HAS_NO_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_HAS_NO_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Create Dependency</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___CREATE_DEPENDENCY__NAMEDELEMENT = FRAMEWORK_PROFILE___CREATE_DEPENDENCY__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Create Usage</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___CREATE_USAGE__NAMEDELEMENT = FRAMEWORK_PROFILE___CREATE_USAGE__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Get Label</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_LABEL = FRAMEWORK_PROFILE___GET_LABEL;
+
+	/**
+	 * The operation id for the '<em>Get Label</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_LABEL__BOOLEAN = FRAMEWORK_PROFILE___GET_LABEL__BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Get Namespace</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_NAMESPACE = FRAMEWORK_PROFILE___GET_NAMESPACE;
+
+	/**
+	 * The operation id for the '<em>All Namespaces</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___ALL_NAMESPACES = FRAMEWORK_PROFILE___ALL_NAMESPACES;
+
+	/**
+	 * The operation id for the '<em>All Owning Packages</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___ALL_OWNING_PACKAGES = FRAMEWORK_PROFILE___ALL_OWNING_PACKAGES;
+
+	/**
+	 * The operation id for the '<em>Is Distinguishable From</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___IS_DISTINGUISHABLE_FROM__NAMEDELEMENT_NAMESPACE = FRAMEWORK_PROFILE___IS_DISTINGUISHABLE_FROM__NAMEDELEMENT_NAMESPACE;
+
+	/**
+	 * The operation id for the '<em>Get Qualified Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_QUALIFIED_NAME = FRAMEWORK_PROFILE___GET_QUALIFIED_NAME;
+
+	/**
+	 * The operation id for the '<em>Separator</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___SEPARATOR = FRAMEWORK_PROFILE___SEPARATOR;
+
+	/**
+	 * The operation id for the '<em>Get Client Dependencies</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_CLIENT_DEPENDENCIES = FRAMEWORK_PROFILE___GET_CLIENT_DEPENDENCIES;
+
+	/**
+	 * The operation id for the '<em>Validate Members Distinguishable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___VALIDATE_MEMBERS_DISTINGUISHABLE__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_MEMBERS_DISTINGUISHABLE__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Cannot Import Self</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___VALIDATE_CANNOT_IMPORT_SELF__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_CANNOT_IMPORT_SELF__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Cannot Import Owned Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___VALIDATE_CANNOT_IMPORT_OWNED_MEMBERS__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_CANNOT_IMPORT_OWNED_MEMBERS__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Create Element Import</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___CREATE_ELEMENT_IMPORT__PACKAGEABLEELEMENT_VISIBILITYKIND = FRAMEWORK_PROFILE___CREATE_ELEMENT_IMPORT__PACKAGEABLEELEMENT_VISIBILITYKIND;
+
+	/**
+	 * The operation id for the '<em>Create Package Import</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___CREATE_PACKAGE_IMPORT__PACKAGE_VISIBILITYKIND = FRAMEWORK_PROFILE___CREATE_PACKAGE_IMPORT__PACKAGE_VISIBILITYKIND;
+
+	/**
+	 * The operation id for the '<em>Get Imported Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_IMPORTED_ELEMENTS = FRAMEWORK_PROFILE___GET_IMPORTED_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Get Imported Packages</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_IMPORTED_PACKAGES = FRAMEWORK_PROFILE___GET_IMPORTED_PACKAGES;
+
+	/**
+	 * The operation id for the '<em>Get Owned Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_OWNED_MEMBERS = FRAMEWORK_PROFILE___GET_OWNED_MEMBERS;
+
+	/**
+	 * The operation id for the '<em>Exclude Collisions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___EXCLUDE_COLLISIONS__ELIST = FRAMEWORK_PROFILE___EXCLUDE_COLLISIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Names Of Member</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_NAMES_OF_MEMBER__NAMEDELEMENT = FRAMEWORK_PROFILE___GET_NAMES_OF_MEMBER__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Import Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___IMPORT_MEMBERS__ELIST = FRAMEWORK_PROFILE___IMPORT_MEMBERS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Imported Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_IMPORTED_MEMBERS = FRAMEWORK_PROFILE___GET_IMPORTED_MEMBERS;
+
+	/**
+	 * The operation id for the '<em>Members Are Distinguishable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___MEMBERS_ARE_DISTINGUISHABLE = FRAMEWORK_PROFILE___MEMBERS_ARE_DISTINGUISHABLE;
+
+	/**
+	 * The operation id for the '<em>Is Compatible With</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___IS_COMPATIBLE_WITH__PARAMETERABLEELEMENT = FRAMEWORK_PROFILE___IS_COMPATIBLE_WITH__PARAMETERABLEELEMENT;
+
+	/**
+	 * The operation id for the '<em>Is Template Parameter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___IS_TEMPLATE_PARAMETER = FRAMEWORK_PROFILE___IS_TEMPLATE_PARAMETER;
+
+	/**
+	 * The operation id for the '<em>Validate Namespace Needs Visibility</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___VALIDATE_NAMESPACE_NEEDS_VISIBILITY__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_NAMESPACE_NEEDS_VISIBILITY__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Is Template</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___IS_TEMPLATE = FRAMEWORK_PROFILE___IS_TEMPLATE;
+
+	/**
+	 * The operation id for the '<em>Parameterable Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___PARAMETERABLE_ELEMENTS = FRAMEWORK_PROFILE___PARAMETERABLE_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Validate Elements Public Or Private</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___VALIDATE_ELEMENTS_PUBLIC_OR_PRIVATE__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_ELEMENTS_PUBLIC_OR_PRIVATE__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Apply Profile</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___APPLY_PROFILE__PROFILE = FRAMEWORK_PROFILE___APPLY_PROFILE__PROFILE;
+
+	/**
+	 * The operation id for the '<em>Create Owned Class</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___CREATE_OWNED_CLASS__STRING_BOOLEAN = FRAMEWORK_PROFILE___CREATE_OWNED_CLASS__STRING_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Create Owned Enumeration</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___CREATE_OWNED_ENUMERATION__STRING = FRAMEWORK_PROFILE___CREATE_OWNED_ENUMERATION__STRING;
+
+	/**
+	 * The operation id for the '<em>Create Owned Interface</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___CREATE_OWNED_INTERFACE__STRING = FRAMEWORK_PROFILE___CREATE_OWNED_INTERFACE__STRING;
+
+	/**
+	 * The operation id for the '<em>Create Owned Primitive Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___CREATE_OWNED_PRIMITIVE_TYPE__STRING = FRAMEWORK_PROFILE___CREATE_OWNED_PRIMITIVE_TYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Create Owned Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___CREATE_OWNED_STEREOTYPE__STRING_BOOLEAN = FRAMEWORK_PROFILE___CREATE_OWNED_STEREOTYPE__STRING_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Get All Applied Profiles</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_ALL_APPLIED_PROFILES = FRAMEWORK_PROFILE___GET_ALL_APPLIED_PROFILES;
+
+	/**
+	 * The operation id for the '<em>Get All Profile Applications</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_ALL_PROFILE_APPLICATIONS = FRAMEWORK_PROFILE___GET_ALL_PROFILE_APPLICATIONS;
+
+	/**
+	 * The operation id for the '<em>Get Applied Profile</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_APPLIED_PROFILE__STRING = FRAMEWORK_PROFILE___GET_APPLIED_PROFILE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Applied Profile</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_APPLIED_PROFILE__STRING_BOOLEAN = FRAMEWORK_PROFILE___GET_APPLIED_PROFILE__STRING_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Get Applied Profiles</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_APPLIED_PROFILES = FRAMEWORK_PROFILE___GET_APPLIED_PROFILES;
+
+	/**
+	 * The operation id for the '<em>Get Profile Application</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_PROFILE_APPLICATION__PROFILE = FRAMEWORK_PROFILE___GET_PROFILE_APPLICATION__PROFILE;
+
+	/**
+	 * The operation id for the '<em>Get Profile Application</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_PROFILE_APPLICATION__PROFILE_BOOLEAN = FRAMEWORK_PROFILE___GET_PROFILE_APPLICATION__PROFILE_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Is Model Library</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___IS_MODEL_LIBRARY = FRAMEWORK_PROFILE___IS_MODEL_LIBRARY;
+
+	/**
+	 * The operation id for the '<em>Is Profile Applied</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___IS_PROFILE_APPLIED__PROFILE = FRAMEWORK_PROFILE___IS_PROFILE_APPLIED__PROFILE;
+
+	/**
+	 * The operation id for the '<em>Unapply Profile</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___UNAPPLY_PROFILE__PROFILE = FRAMEWORK_PROFILE___UNAPPLY_PROFILE__PROFILE;
+
+	/**
+	 * The operation id for the '<em>Apply Profiles</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___APPLY_PROFILES__ELIST = FRAMEWORK_PROFILE___APPLY_PROFILES__ELIST;
+
+	/**
+	 * The operation id for the '<em>All Applicable Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___ALL_APPLICABLE_STEREOTYPES = FRAMEWORK_PROFILE___ALL_APPLICABLE_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Containing Profile</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___CONTAINING_PROFILE = FRAMEWORK_PROFILE___CONTAINING_PROFILE;
+
+	/**
+	 * The operation id for the '<em>Makes Visible</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___MAKES_VISIBLE__NAMEDELEMENT = FRAMEWORK_PROFILE___MAKES_VISIBLE__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Get Nested Packages</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_NESTED_PACKAGES = FRAMEWORK_PROFILE___GET_NESTED_PACKAGES;
+
+	/**
+	 * The operation id for the '<em>Get Owned Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_OWNED_STEREOTYPES = FRAMEWORK_PROFILE___GET_OWNED_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Get Owned Types</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_OWNED_TYPES = FRAMEWORK_PROFILE___GET_OWNED_TYPES;
+
+	/**
+	 * The operation id for the '<em>Visible Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___VISIBLE_MEMBERS = FRAMEWORK_PROFILE___VISIBLE_MEMBERS;
+
+	/**
+	 * The operation id for the '<em>Validate Metaclass Reference Not Specialized</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___VALIDATE_METACLASS_REFERENCE_NOT_SPECIALIZED__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_METACLASS_REFERENCE_NOT_SPECIALIZED__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate References Same Metamodel</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___VALIDATE_REFERENCES_SAME_METAMODEL__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_REFERENCES_SAME_METAMODEL__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Create</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___CREATE__CLASSIFIER = FRAMEWORK_PROFILE___CREATE__CLASSIFIER;
+
+	/**
+	 * The operation id for the '<em>Define</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___DEFINE = FRAMEWORK_PROFILE___DEFINE;
+
+	/**
+	 * The operation id for the '<em>Define</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___DEFINE__MAP_DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___DEFINE__MAP_DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Get Definition</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_DEFINITION = FRAMEWORK_PROFILE___GET_DEFINITION;
+
+	/**
+	 * The operation id for the '<em>Get Definition</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_DEFINITION__NAMEDELEMENT = FRAMEWORK_PROFILE___GET_DEFINITION__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Get Owned Extensions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_OWNED_EXTENSIONS__BOOLEAN = FRAMEWORK_PROFILE___GET_OWNED_EXTENSIONS__BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Get Referenced Metaclasses</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_REFERENCED_METACLASSES = FRAMEWORK_PROFILE___GET_REFERENCED_METACLASSES;
+
+	/**
+	 * The operation id for the '<em>Get Referenced Metamodels</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___GET_REFERENCED_METAMODELS = FRAMEWORK_PROFILE___GET_REFERENCED_METAMODELS;
+
+	/**
+	 * The operation id for the '<em>Is Defined</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE___IS_DEFINED = FRAMEWORK_PROFILE___IS_DEFINED;
+
+	/**
+	 * The number of operations of the '<em>ORM Template</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE_OPERATION_COUNT = FRAMEWORK_PROFILE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkCategoryList <em>Framework Category List</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -120688,7 +124642,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getFrameworkCategoryList()
 	 * @generated
 	 */
-	int FRAMEWORK_CATEGORY_LIST = 100;
+	int FRAMEWORK_CATEGORY_LIST = 103;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkKindList <em>Framework Kind List</em>}' enum.
@@ -120698,7 +124652,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getFrameworkKindList()
 	 * @generated
 	 */
-	int FRAMEWORK_KIND_LIST = 101;
+	int FRAMEWORK_KIND_LIST = 104;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DateTimePrecision <em>Date Time Precision</em>}' enum.
@@ -120708,7 +124662,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getDateTimePrecision()
 	 * @generated
 	 */
-	int DATE_TIME_PRECISION = 102;
+	int DATE_TIME_PRECISION = 105;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.Generation <em>Generation</em>}' enum.
@@ -120718,7 +124672,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getGeneration()
 	 * @generated
 	 */
-	int GENERATION = 103;
+	int GENERATION = 106;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.Collection <em>Collection</em>}' enum.
@@ -120728,7 +124682,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getCollection()
 	 * @generated
 	 */
-	int COLLECTION = 104;
+	int COLLECTION = 107;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.Order <em>Order</em>}' enum.
@@ -120738,7 +124692,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getOrder()
 	 * @generated
 	 */
-	int ORDER = 105;
+	int ORDER = 108;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.Cascade <em>Cascade</em>}' enum.
@@ -120748,7 +124702,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getCascade()
 	 * @generated
 	 */
-	int CASCADE = 106;
+	int CASCADE = 109;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.Fetch <em>Fetch</em>}' enum.
@@ -120758,7 +124712,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getFetch()
 	 * @generated
 	 */
-	int FETCH = 107;
+	int FETCH = 110;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ConstantNameList <em>Constant Name List</em>}' enum.
@@ -120768,7 +124722,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getConstantNameList()
 	 * @generated
 	 */
-	int CONSTANT_NAME_LIST = 108;
+	int CONSTANT_NAME_LIST = 111;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.InheritanceMapping <em>Inheritance Mapping</em>}' enum.
@@ -120778,7 +124732,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getInheritanceMapping()
 	 * @generated
 	 */
-	int INHERITANCE_MAPPING = 109;
+	int INHERITANCE_MAPPING = 112;
 
 	/**
 	 * The meta object id for the '<em>Rational</em>' data type.
@@ -120787,7 +124741,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getRational()
 	 * @generated
 	 */
-	int RATIONAL = 110;
+	int RATIONAL = 113;
 
 	/**
 	 * The meta object id for the '<em>Decimal</em>' data type.
@@ -120796,7 +124750,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getDecimal()
 	 * @generated
 	 */
-	int DECIMAL = 111;
+	int DECIMAL = 114;
 
 	/**
 	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FramewebProject <em>Project</em>}'.
@@ -122437,6 +126391,212 @@ public interface FramewebPackage extends EPackage {
 	EClass getDomainProperty();
 
 	/**
+	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate <em>Front Controller Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Front Controller Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate
+	 * @generated
+	 */
+	EClass getFrontControllerTemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getClassTemplate <em>Class Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Class Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getClassTemplate()
+	 * @see #getFrontControllerTemplate()
+	 * @generated
+	 */
+	EAttribute getFrontControllerTemplate_ClassTemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getMethodTemplate <em>Method Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Method Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getMethodTemplate()
+	 * @see #getFrontControllerTemplate()
+	 * @generated
+	 */
+	EAttribute getFrontControllerTemplate_MethodTemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getPageTemplate <em>Page Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Page Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getPageTemplate()
+	 * @see #getFrontControllerTemplate()
+	 * @generated
+	 */
+	EAttribute getFrontControllerTemplate_PageTemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getFormTemplate <em>Form Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Form Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getFormTemplate()
+	 * @see #getFrontControllerTemplate()
+	 * @generated
+	 */
+	EAttribute getFrontControllerTemplate_FormTemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getClassExtension <em>Class Extension</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Class Extension</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getClassExtension()
+	 * @see #getFrontControllerTemplate()
+	 * @generated
+	 */
+	EAttribute getFrontControllerTemplate_ClassExtension();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getPageExtension <em>Page Extension</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Page Extension</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getPageExtension()
+	 * @see #getFrontControllerTemplate()
+	 * @generated
+	 */
+	EAttribute getFrontControllerTemplate_PageExtension();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getAttributeTemplate <em>Attribute Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Attribute Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getAttributeTemplate()
+	 * @see #getFrontControllerTemplate()
+	 * @generated
+	 */
+	EAttribute getFrontControllerTemplate_AttributeTemplate();
+
+	/**
+	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate <em>DI Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>DI Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate
+	 * @generated
+	 */
+	EClass getDITemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getInterfaceTemplate <em>Interface Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Interface Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getInterfaceTemplate()
+	 * @see #getDITemplate()
+	 * @generated
+	 */
+	EAttribute getDITemplate_InterfaceTemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getInterfaceExtension <em>Interface Extension</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Interface Extension</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getInterfaceExtension()
+	 * @see #getDITemplate()
+	 * @generated
+	 */
+	EAttribute getDITemplate_InterfaceExtension();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getClassExtension <em>Class Extension</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Class Extension</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getClassExtension()
+	 * @see #getDITemplate()
+	 * @generated
+	 */
+	EAttribute getDITemplate_ClassExtension();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getClassTemplate <em>Class Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Class Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getClassTemplate()
+	 * @see #getDITemplate()
+	 * @generated
+	 */
+	EAttribute getDITemplate_ClassTemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getServiceClassInjectionTemplate <em>Service Class Injection Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Service Class Injection Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getServiceClassInjectionTemplate()
+	 * @see #getDITemplate()
+	 * @generated
+	 */
+	EAttribute getDITemplate_ServiceClassInjectionTemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getDaoClassInjectionTemplate <em>Dao Class Injection Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Dao Class Injection Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getDaoClassInjectionTemplate()
+	 * @see #getDITemplate()
+	 * @generated
+	 */
+	EAttribute getDITemplate_DaoClassInjectionTemplate();
+
+	/**
+	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate <em>ORM Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ORM Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate
+	 * @generated
+	 */
+	EClass getORMTemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getClassTemplate <em>Class Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Class Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getClassTemplate()
+	 * @see #getORMTemplate()
+	 * @generated
+	 */
+	EAttribute getORMTemplate_ClassTemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getClassExtension <em>Class Extension</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Class Extension</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getClassExtension()
+	 * @see #getORMTemplate()
+	 * @generated
+	 */
+	EAttribute getORMTemplate_ClassExtension();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getAttributeTemplate <em>Attribute Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Attribute Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getAttributeTemplate()
+	 * @see #getORMTemplate()
+	 * @generated
+	 */
+	EAttribute getORMTemplate_AttributeTemplate();
+
+	/**
 	 * Returns the meta object for enum '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkCategoryList <em>Framework Category List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -124044,6 +128204,166 @@ public interface FramewebPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DOMAIN_PROPERTY = eINSTANCE.getDomainProperty();
+
+		/**
+		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl <em>Front Controller Template</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl
+		 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getFrontControllerTemplate()
+		 * @generated
+		 */
+		EClass FRONT_CONTROLLER_TEMPLATE = eINSTANCE.getFrontControllerTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Class Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FRONT_CONTROLLER_TEMPLATE__CLASS_TEMPLATE = eINSTANCE.getFrontControllerTemplate_ClassTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Method Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FRONT_CONTROLLER_TEMPLATE__METHOD_TEMPLATE = eINSTANCE.getFrontControllerTemplate_MethodTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Page Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FRONT_CONTROLLER_TEMPLATE__PAGE_TEMPLATE = eINSTANCE.getFrontControllerTemplate_PageTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Form Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FRONT_CONTROLLER_TEMPLATE__FORM_TEMPLATE = eINSTANCE.getFrontControllerTemplate_FormTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Class Extension</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FRONT_CONTROLLER_TEMPLATE__CLASS_EXTENSION = eINSTANCE.getFrontControllerTemplate_ClassExtension();
+
+		/**
+		 * The meta object literal for the '<em><b>Page Extension</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION = eINSTANCE.getFrontControllerTemplate_PageExtension();
+
+		/**
+		 * The meta object literal for the '<em><b>Attribute Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FRONT_CONTROLLER_TEMPLATE__ATTRIBUTE_TEMPLATE = eINSTANCE
+				.getFrontControllerTemplate_AttributeTemplate();
+
+		/**
+		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.DITemplateImpl <em>DI Template</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.DITemplateImpl
+		 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getDITemplate()
+		 * @generated
+		 */
+		EClass DI_TEMPLATE = eINSTANCE.getDITemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Interface Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DI_TEMPLATE__INTERFACE_TEMPLATE = eINSTANCE.getDITemplate_InterfaceTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Interface Extension</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DI_TEMPLATE__INTERFACE_EXTENSION = eINSTANCE.getDITemplate_InterfaceExtension();
+
+		/**
+		 * The meta object literal for the '<em><b>Class Extension</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DI_TEMPLATE__CLASS_EXTENSION = eINSTANCE.getDITemplate_ClassExtension();
+
+		/**
+		 * The meta object literal for the '<em><b>Class Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DI_TEMPLATE__CLASS_TEMPLATE = eINSTANCE.getDITemplate_ClassTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Service Class Injection Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DI_TEMPLATE__SERVICE_CLASS_INJECTION_TEMPLATE = eINSTANCE
+				.getDITemplate_ServiceClassInjectionTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Dao Class Injection Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DI_TEMPLATE__DAO_CLASS_INJECTION_TEMPLATE = eINSTANCE.getDITemplate_DaoClassInjectionTemplate();
+
+		/**
+		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl <em>ORM Template</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl
+		 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getORMTemplate()
+		 * @generated
+		 */
+		EClass ORM_TEMPLATE = eINSTANCE.getORMTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Class Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ORM_TEMPLATE__CLASS_TEMPLATE = eINSTANCE.getORMTemplate_ClassTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Class Extension</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ORM_TEMPLATE__CLASS_EXTENSION = eINSTANCE.getORMTemplate_ClassExtension();
+
+		/**
+		 * The meta object literal for the '<em><b>Attribute Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ORM_TEMPLATE__ATTRIBUTE_TEMPLATE = eINSTANCE.getORMTemplate_AttributeTemplate();
 
 		/**
 		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkCategoryList <em>Framework Category List</em>}' enum.
