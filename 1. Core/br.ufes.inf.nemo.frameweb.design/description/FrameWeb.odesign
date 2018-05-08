@@ -594,7 +594,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Association" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/Association.png">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Association" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@edgeMappings[name='DomainAssociation']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/Association.png">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
