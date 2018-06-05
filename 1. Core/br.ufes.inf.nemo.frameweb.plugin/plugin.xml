@@ -5,7 +5,7 @@
          id="externalJavaID"
          point="org.eclipse.sirius.externalJavaAction">
       <javaActions
-            actionClass="plugin.Integrador"
+            actionClass="plugin.Gerador"
             id="JavaActionCallGerador">
       </javaActions>
    </extension>
