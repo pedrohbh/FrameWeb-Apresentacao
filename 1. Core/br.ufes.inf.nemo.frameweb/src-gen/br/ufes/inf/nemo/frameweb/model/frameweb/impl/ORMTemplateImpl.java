@@ -22,6 +22,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getClassTemplate <em>Class Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getClassExtension <em>Class Extension</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getAttributeTemplate <em>Attribute Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getMethodTemplate <em>Method Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getAbstractMethodTemplate <em>Abstract Method Template</em>}</li>
  * </ul>
  *
  * @generated
@@ -86,6 +88,46 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @ordered
 	 */
 	protected String attributeTemplate = ATTRIBUTE_TEMPLATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMethodTemplate() <em>Method Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMethodTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String METHOD_TEMPLATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getMethodTemplate() <em>Method Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMethodTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected String methodTemplate = METHOD_TEMPLATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAbstractMethodTemplate() <em>Abstract Method Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAbstractMethodTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ABSTRACT_METHOD_TEMPLATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAbstractMethodTemplate() <em>Abstract Method Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAbstractMethodTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected String abstractMethodTemplate = ABSTRACT_METHOD_TEMPLATE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -177,6 +219,51 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getMethodTemplate() {
+		return methodTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMethodTemplate(String newMethodTemplate) {
+		String oldMethodTemplate = methodTemplate;
+		methodTemplate = newMethodTemplate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.ORM_TEMPLATE__METHOD_TEMPLATE,
+					oldMethodTemplate, methodTemplate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getAbstractMethodTemplate() {
+		return abstractMethodTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAbstractMethodTemplate(String newAbstractMethodTemplate) {
+		String oldAbstractMethodTemplate = abstractMethodTemplate;
+		abstractMethodTemplate = newAbstractMethodTemplate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					FramewebPackage.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE, oldAbstractMethodTemplate,
+					abstractMethodTemplate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -186,6 +273,10 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 			return getClassExtension();
 		case FramewebPackage.ORM_TEMPLATE__ATTRIBUTE_TEMPLATE:
 			return getAttributeTemplate();
+		case FramewebPackage.ORM_TEMPLATE__METHOD_TEMPLATE:
+			return getMethodTemplate();
+		case FramewebPackage.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE:
+			return getAbstractMethodTemplate();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -206,6 +297,12 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 			return;
 		case FramewebPackage.ORM_TEMPLATE__ATTRIBUTE_TEMPLATE:
 			setAttributeTemplate((String) newValue);
+			return;
+		case FramewebPackage.ORM_TEMPLATE__METHOD_TEMPLATE:
+			setMethodTemplate((String) newValue);
+			return;
+		case FramewebPackage.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE:
+			setAbstractMethodTemplate((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -228,6 +325,12 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		case FramewebPackage.ORM_TEMPLATE__ATTRIBUTE_TEMPLATE:
 			setAttributeTemplate(ATTRIBUTE_TEMPLATE_EDEFAULT);
 			return;
+		case FramewebPackage.ORM_TEMPLATE__METHOD_TEMPLATE:
+			setMethodTemplate(METHOD_TEMPLATE_EDEFAULT);
+			return;
+		case FramewebPackage.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE:
+			setAbstractMethodTemplate(ABSTRACT_METHOD_TEMPLATE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -249,6 +352,12 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		case FramewebPackage.ORM_TEMPLATE__ATTRIBUTE_TEMPLATE:
 			return ATTRIBUTE_TEMPLATE_EDEFAULT == null ? attributeTemplate != null
 					: !ATTRIBUTE_TEMPLATE_EDEFAULT.equals(attributeTemplate);
+		case FramewebPackage.ORM_TEMPLATE__METHOD_TEMPLATE:
+			return METHOD_TEMPLATE_EDEFAULT == null ? methodTemplate != null
+					: !METHOD_TEMPLATE_EDEFAULT.equals(methodTemplate);
+		case FramewebPackage.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE:
+			return ABSTRACT_METHOD_TEMPLATE_EDEFAULT == null ? abstractMethodTemplate != null
+					: !ABSTRACT_METHOD_TEMPLATE_EDEFAULT.equals(abstractMethodTemplate);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -270,6 +379,10 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		result.append(classExtension);
 		result.append(", attributeTemplate: ");
 		result.append(attributeTemplate);
+		result.append(", methodTemplate: ");
+		result.append(methodTemplate);
+		result.append(", abstractMethodTemplate: ");
+		result.append(abstractMethodTemplate);
 		result.append(')');
 		return result.toString();
 	}

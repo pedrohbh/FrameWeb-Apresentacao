@@ -981,5 +981,13 @@
         xsi:type="ecore:EAttribute"
         name="attributeTemplate"
         eType="ecore:EDataType platform:/plugin/org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures
+        xsi:type="ecore:EAttribute"
+        name="methodTemplate"
+        eType="ecore:EDataType platform:/plugin/org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures
+        xsi:type="ecore:EAttribute"
+        name="abstractMethodTemplate"
+        eType="ecore:EDataType platform:/plugin/org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
 </ecore:EPackage>

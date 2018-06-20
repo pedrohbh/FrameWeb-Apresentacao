@@ -123672,13 +123672,31 @@ public interface FramewebPackage extends EPackage {
 	int ORM_TEMPLATE__ATTRIBUTE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Method Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__METHOD_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Abstract Method Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>ORM Template</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORM_TEMPLATE_FEATURE_COUNT = FRAMEWORK_PROFILE_FEATURE_COUNT + 3;
+	int ORM_TEMPLATE_FEATURE_COUNT = FRAMEWORK_PROFILE_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Get EAnnotation</em>' operation.
@@ -126597,6 +126615,28 @@ public interface FramewebPackage extends EPackage {
 	EAttribute getORMTemplate_AttributeTemplate();
 
 	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getMethodTemplate <em>Method Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Method Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getMethodTemplate()
+	 * @see #getORMTemplate()
+	 * @generated
+	 */
+	EAttribute getORMTemplate_MethodTemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getAbstractMethodTemplate <em>Abstract Method Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Abstract Method Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getAbstractMethodTemplate()
+	 * @see #getORMTemplate()
+	 * @generated
+	 */
+	EAttribute getORMTemplate_AbstractMethodTemplate();
+
+	/**
 	 * Returns the meta object for enum '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkCategoryList <em>Framework Category List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -128364,6 +128404,22 @@ public interface FramewebPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ORM_TEMPLATE__ATTRIBUTE_TEMPLATE = eINSTANCE.getORMTemplate_AttributeTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Method Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ORM_TEMPLATE__METHOD_TEMPLATE = eINSTANCE.getORMTemplate_MethodTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Abstract Method Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE = eINSTANCE.getORMTemplate_AbstractMethodTemplate();
 
 		/**
 		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkCategoryList <em>Framework Category List</em>}' enum.

@@ -14,6 +14,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getClassTemplate <em>Class Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getClassExtension <em>Class Extension</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getAttributeTemplate <em>Attribute Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getMethodTemplate <em>Method Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getAbstractMethodTemplate <em>Abstract Method Template</em>}</li>
  * </ul>
  *
  * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getORMTemplate()
@@ -98,5 +100,57 @@ public interface ORMTemplate extends FrameworkProfile {
 	 * @generated
 	 */
 	void setAttributeTemplate(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Method Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Method Template</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Method Template</em>' attribute.
+	 * @see #setMethodTemplate(String)
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getORMTemplate_MethodTemplate()
+	 * @model dataType="org.eclipse.uml2.types.String"
+	 * @generated
+	 */
+	String getMethodTemplate();
+
+	/**
+	 * Sets the value of the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getMethodTemplate <em>Method Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Method Template</em>' attribute.
+	 * @see #getMethodTemplate()
+	 * @generated
+	 */
+	void setMethodTemplate(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Abstract Method Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Abstract Method Template</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Abstract Method Template</em>' attribute.
+	 * @see #setAbstractMethodTemplate(String)
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getORMTemplate_AbstractMethodTemplate()
+	 * @model dataType="org.eclipse.uml2.types.String"
+	 * @generated
+	 */
+	String getAbstractMethodTemplate();
+
+	/**
+	 * Sets the value of the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getAbstractMethodTemplate <em>Abstract Method Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Abstract Method Template</em>' attribute.
+	 * @see #getAbstractMethodTemplate()
+	 * @generated
+	 */
+	void setAbstractMethodTemplate(String value);
 
 } // ORMTemplate

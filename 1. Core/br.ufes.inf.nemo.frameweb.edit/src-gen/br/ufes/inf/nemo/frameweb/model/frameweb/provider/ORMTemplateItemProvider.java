@@ -49,6 +49,8 @@ public class ORMTemplateItemProvider extends FrameworkProfileItemProvider {
 			addClassTemplatePropertyDescriptor(object);
 			addClassExtensionPropertyDescriptor(object);
 			addAttributeTemplatePropertyDescriptor(object);
+			addMethodTemplatePropertyDescriptor(object);
+			addAbstractMethodTemplatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -102,6 +104,38 @@ public class ORMTemplateItemProvider extends FrameworkProfileItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Method Template feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMethodTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ORMTemplate_methodTemplate_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ORMTemplate_methodTemplate_feature",
+								"_UI_ORMTemplate_type"),
+						FramewebPackage.Literals.ORM_TEMPLATE__METHOD_TEMPLATE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Abstract Method Template feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAbstractMethodTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ORMTemplate_abstractMethodTemplate_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ORMTemplate_abstractMethodTemplate_feature",
+						"_UI_ORMTemplate_type"),
+				FramewebPackage.Literals.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns ORMTemplate.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -150,6 +184,8 @@ public class ORMTemplateItemProvider extends FrameworkProfileItemProvider {
 		case FramewebPackage.ORM_TEMPLATE__CLASS_TEMPLATE:
 		case FramewebPackage.ORM_TEMPLATE__CLASS_EXTENSION:
 		case FramewebPackage.ORM_TEMPLATE__ATTRIBUTE_TEMPLATE:
+		case FramewebPackage.ORM_TEMPLATE__METHOD_TEMPLATE:
+		case FramewebPackage.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
