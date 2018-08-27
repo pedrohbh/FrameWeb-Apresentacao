@@ -168,7 +168,7 @@ public class Gerador implements IExternalJavaAction {
 								tags_controller.put("FW_BEAN_NAME", frontControllerDependency != null ? ((Dependency)frontControllerDependency).getClients().get(0).getName() : "");
 	
 				    			EObject generalization = controller.eContents().stream().filter(x -> x instanceof NavigationGeneralization).findFirst().orElse(null);
-								if(generalization != null) {
+								if(((NavigationGeneralization) generalization).getGeneralizationSets().size() > 0) {
 									tags_controller.put("FW_EXTENDS", "extends " + ((NavigationGeneralization) generalization).getGeneralizationSets().get(0).getName());
 								}else{
 									tags_controller.put("FW_EXTENDS", "");
