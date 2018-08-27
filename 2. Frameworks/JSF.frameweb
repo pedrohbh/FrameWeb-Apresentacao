@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <frameweb:FramewebProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015">
-  <configures name="JSF" kind="FrameworkSpecification">
+  <configures name="JSF">
     <packagedElement xsi:type="frameweb:TagLib" name="JSFhtml" URI="http://java.sun.com/jsf/html" prefix="h">
       <packagedElement xsi:type="frameweb:Tag" name="body"/>
       <packagedElement xsi:type="frameweb:Tag" name="button" codeGenerationTemplate="template/path"/>
@@ -74,14 +74,6 @@
       <packagedElement xsi:type="frameweb:Tag" name="verbatim"/>
       <packagedElement xsi:type="frameweb:Tag" name="view"/>
       <packagedElement xsi:type="frameweb:Tag" name="viewParam"/>
-    </packagedElement>
-    <packagedElement xsi:type="frameweb:ControllerSet" name="ControllerSet">
-      <packagedElement xsi:type="frameweb:Controller" name="Bean">
-        <ownedAttribute xsi:type="frameweb:ControllerProperty" name="base_FrontControllerClass" association="//@configures.0/ControllerSet/@packagedElement.1"/>
-      </packagedElement>
-      <packagedElement xsi:type="frameweb:ControllerExtension" memberEnd="//@configures.0/ControllerSet/Bean/base_FrontControllerClass //@configures.0/ControllerSet/@packagedElement.1/beanExtensionEnd">
-        <ownedEnd xsi:type="frameweb:ControllerExtensionEnd" name="beanExtensionEnd" association="//@configures.0/ControllerSet/@packagedElement.1"/>
-      </packagedElement>
     </packagedElement>
   </configures>
 </frameweb:FramewebProject>
