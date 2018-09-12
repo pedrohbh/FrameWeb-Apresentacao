@@ -60,7 +60,7 @@ public class Gerador implements IExternalJavaAction {
 	static String ext_page;
 	static String form_template;
 	static String page_template;
-	static String iOParameter_template;
+	static String iOAttribute_template;
 	static String frontControllerClass_template;
 	static String frontControllerMethod_template;
 	
@@ -85,7 +85,7 @@ public class Gerador implements IExternalJavaAction {
 
 						form_template = URLDecoder.decode(((FrontControllerTemplate) model).getFormTemplate(), "UTF-8");
 						page_template = URLDecoder.decode(((FrontControllerTemplate) model).getPageTemplate(), "UTF-8");
-						iOParameter_template = URLDecoder.decode(((FrontControllerTemplate) model).getAttributeTemplate(), "UTF-8");
+						iOAttribute_template = URLDecoder.decode(((FrontControllerTemplate) model).getAttributeTemplate(), "UTF-8");
 						frontControllerClass_template = URLDecoder.decode(((FrontControllerTemplate) model).getClassTemplate(), "UTF-8");
 						frontControllerMethod_template = URLDecoder.decode(((FrontControllerTemplate) model).getMethodTemplate(), "UTF-8");
 					} catch (UnsupportedEncodingException e) {
@@ -168,26 +168,26 @@ public class Gerador implements IExternalJavaAction {
 								tags_controller.put("FW_BEAN_NAME", frontControllerDependency != null ? ((Dependency)frontControllerDependency).getClients().get(0).getName() : "");
 	
 				    			EObject generalization = controller.eContents().stream().filter(x -> x instanceof NavigationGeneralization).findFirst().orElse(null);
-								if(((NavigationGeneralization) generalization).getGeneralizationSets().size() > 0) {
+								if(generalization != null && ((NavigationGeneralization) generalization).getGeneralizationSets().size() > 0) {
 									tags_controller.put("FW_EXTENDS", "extends " + ((NavigationGeneralization) generalization).getGeneralizationSets().get(0).getName());
 								}else{
 									tags_controller.put("FW_EXTENDS", "");
 								}
 				    			
-								List<EObject> controller_parameters = controller.eContents().stream().filter(x -> x instanceof IOParameter).collect(Collectors.toList());
-								StringBuilder parameters1 = new StringBuilder();
-								for(EObject parameter : controller_parameters) {
-									String text_parameter = iOParameter_template;
-									text_parameter = text_parameter.replaceAll("FW_PARAMETER_TYPE", ((IOParameter) parameter).getType().getName());
-									String parameter_name = ((NamedElementImpl)parameter).getName();
-									parameter_name = parameter_name.replace(" ", "");
-									text_parameter = text_parameter.replaceAll("FW_PARAMETER_FIRST_UPPER", Character.toUpperCase(parameter_name.charAt(0)) + parameter_name.substring(1));
-									text_parameter = text_parameter.replaceAll("FW_PARAMETER", parameter_name);
+								List<EObject> controller_attributes = controller.eContents().stream().filter(x -> x instanceof IOParameter).collect(Collectors.toList());
+								StringBuilder attributes1 = new StringBuilder();
+								for(EObject attribute : controller_attributes) {
+									String text_attribute = iOAttribute_template;
+									text_attribute = text_attribute.replaceAll("FW_ATTRIBUTE_TYPE", ((IOParameter) attribute).getType().getName());
+									String attribute_name = ((NamedElementImpl)attribute).getName();
+									attribute_name = attribute_name.replace(" ", "");
+									text_attribute = text_attribute.replaceAll("FW_ATTRIBUTE_FIRST_UPPER", Character.toUpperCase(attribute_name.charAt(0)) + attribute_name.substring(1));
+									text_attribute = text_attribute.replaceAll("FW_ATTRIBUTE", attribute_name);
 									
-									parameters1.append(text_parameter);
+									attributes1.append(text_attribute);
 								}
 	
-								tags_controller.put("FW_FRONT_CONTROLLER_PARAMETERS", parameters1.toString());
+								tags_controller.put("FW_FRONT_CONTROLLER_ATTRIBUTES", attributes1.toString());
 	
 								List<EObject> controller_methods = controller.eContents().stream().filter(x -> x instanceof FrontControllerMethod).collect(Collectors.toList());
 								StringBuilder methods = new StringBuilder();
@@ -302,24 +302,24 @@ public class Gerador implements IExternalJavaAction {
 				    			List<EObject> classProperties = _class.eContents().stream().filter(x -> x instanceof DomainAttribute).collect(Collectors.toList());
 				    			StringBuilder properties = new StringBuilder();
 				    			for(EObject propertie : classProperties) {
-				    				String textParameter = null;
+				    				String textAttribute = null;
 									try {
-										textParameter = URLDecoder.decode(entityAttribute_template, "UTF-8");
+										textAttribute = URLDecoder.decode(entityAttribute_template, "UTF-8");
 									} catch (UnsupportedEncodingException e) {
 										e.printStackTrace();
 									}
-				    				textParameter = textParameter.replaceAll("FW_PARAMETER_TYPE", ((TypedElement) propertie).getType().getName());
-				    				String parameter_name = ((NamedElementImpl)propertie).getName();
-									parameter_name = parameter_name.replace(" ", "");
-									textParameter = textParameter.replaceAll("FW_PARAMETER_FIRST_UPPER", Character.toUpperCase(parameter_name.charAt(0)) + parameter_name.substring(1));
-				    				textParameter = textParameter.replaceAll("FW_PARAMETER", parameter_name);
-				    				textParameter = textParameter.replaceAll("FW_VISIBILITY", ((NamedElement) propertie).getVisibility().toString());
+									textAttribute = textAttribute.replaceAll("FW_ATTRIBUTE_TYPE", ((TypedElement) propertie).getType().getName());
+				    				String attribute_name = ((NamedElementImpl)propertie).getName();
+				    				attribute_name = attribute_name.replace(" ", "");
+									textAttribute = textAttribute.replaceAll("FW_ATTRIBUTE_FIRST_UPPER", Character.toUpperCase(attribute_name.charAt(0)) + attribute_name.substring(1));
+									textAttribute = textAttribute.replaceAll("FW_ATTRIBUTE", attribute_name);
+									textAttribute = textAttribute.replaceAll("FW_VISIBILITY", ((NamedElement) propertie).getVisibility().toString());
 				    				
 				    				properties.append("\n");
-				    				properties.append(textParameter);
+				    				properties.append(textAttribute);
 				    				
 				    			}
-				    			tags_class.put("FW_CLASS_PARAMETERS", properties.toString());
+				    			tags_class.put("FW_CLASS_ATTRIBUTES", properties.toString());
 				    			
 				    			List<EObject> classMethods = _class.eContents().stream().filter(x -> x instanceof DomainMethod).collect(Collectors.toList());
 				    			StringBuilder methods = new StringBuilder();
@@ -348,7 +348,6 @@ public class Gerador implements IExternalJavaAction {
 								try {
 									text = URLDecoder.decode(entityClass_template, "UTF-8");
 								} catch (UnsupportedEncodingException e1) {
-									// TODO Auto-generated catch block
 									e1.printStackTrace();
 								}
 								
