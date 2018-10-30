@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<site>
-   <feature url="features/FrameWeb_Editor_1.0.0.jar" id="FrameWeb_Editor" version="1.0.0">
-      <category name="FrameWeb"/>
-   </feature>
-   <category-def name="FrameWeb" label="FrameWeb"/>
-</site>

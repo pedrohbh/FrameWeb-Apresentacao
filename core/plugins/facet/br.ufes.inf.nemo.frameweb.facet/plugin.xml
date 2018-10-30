@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="4.8"?>
+
+<plugin>
+   <extension
+         point="org.eclipse.wst.common.project.facet.core.facets">
+      <project-facet
+            id="frameweb.facet">
+         <label>
+            FrameWeb Editor
+         </label>
+         <description>
+            The FrameWeb Editor is a CASE (Computer-Aided Software Engineering) tool used for the FrameWeb method. It provides a graphical interface for the construction of the main models specified by the language. It also provides verifications at model level and other functionalities commonly used in modeling tools.</description>
+      </project-facet>
+      <project-facet-version
+            facet="frameweb.facet"
+            version="1.0.0">
+         <constraint>
+            <requires
+                  facet="jst.web"
+                  version="2.5,3.0,3.1,4.0">
+            </requires>
+         </constraint>
+      </project-facet-version>
+      <action
+            facet="frameweb.facet"
+            id="frameweb.facet.install"
+            type="INSTALL">
+         <delegate
+               class="br.ufes.inf.nemo.frameweb.facet.FrameWebFacetInstallDelegate">
+         </delegate>
+      </action>
+      <action
+            facet="frameweb.facet"
+            id="frameweb.facet.uninstall"
+            type="UNINSTALL">
+         <delegate
+               class="br.ufes.inf.nemo.frameweb.facet.FrameWebFacetUninstallDelegate">
+         </delegate>
+      </action>
+   </extension>
+
+</plugin>

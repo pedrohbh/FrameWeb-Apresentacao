@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/br.ufes.inf.nemo.frameweb.codegenerator.feature_1.0.0.201810301335.jar" id="br.ufes.inf.nemo.frameweb.codegenerator.feature" version="1.0.0.201810301335">
+      <category name="frameweb.category"/>
+   </feature>
+   <feature url="features/br.ufes.inf.nemo.frameweb.facet.feature_1.0.0.201810301335.jar" id="br.ufes.inf.nemo.frameweb.facet.feature" version="1.0.0.201810301335">
+      <category name="frameweb.category"/>
+   </feature>
+   <feature url="features/br.ufes.inf.nemo.frameweb.graphicaleditor.feature_1.0.0.201810301335.jar" id="br.ufes.inf.nemo.frameweb.graphicaleditor.feature" version="1.0.0.201810301335">
+      <category name="frameweb.category"/>
+   </feature>
+   <category-def name="frameweb.category" label="FrameWeb"/>
+</site>
