@@ -14,9 +14,12 @@ import org.osgi.framework.Bundle;
 import br.ufes.inf.nemo.frameweb.utils.ProjectUtils;
 
 public class FrameWebFacet {
-
+	private final static String FRAMEWEB_BASE_FILE_NAME = "model";
+	private final static String REPRESENTATIONS_FILE_NAME = "representations";
+	private final static String SIRIUS_MODELING_NATURE = "org.eclipse.sirius.nature.modelingproject";
+	
 	private IProject webProject;
-
+	
 	public FrameWebFacet(IProject project) {
 
 		this.webProject = project;
@@ -29,7 +32,7 @@ public class FrameWebFacet {
 	 * @throws CoreException
 	 */
 	public void addSiriusModelingNature() throws CoreException {
-		ProjectUtils.addNature(webProject, "org.eclipse.sirius.nature.modelingproject");
+		ProjectUtils.addNature(webProject, SIRIUS_MODELING_NATURE);
 	}
 
 	/**
@@ -38,7 +41,7 @@ public class FrameWebFacet {
 	 * @throws CoreException
 	 */
 	public void removeSiriusModelingNature() throws CoreException {
-		ProjectUtils.removeNature(webProject, "org.eclipse.sirius.nature.modelingproject");
+		ProjectUtils.removeNature(webProject, SIRIUS_MODELING_NATURE);
 	}
 
 	/**
@@ -47,7 +50,7 @@ public class FrameWebFacet {
 	 * @throws CoreException
 	 */
 	public void removeRepresentationsFile() throws CoreException {
-		IFile representations = webProject.getFile("representations.aird");
+		IFile representations = webProject.getFile(REPRESENTATIONS_FILE_NAME + ".aird");
 
 		if (representations.exists()) {
 			representations.delete(true, null);
@@ -60,10 +63,11 @@ public class FrameWebFacet {
 	 * @throws CoreException
 	 */
 	public void createFrameWebFile() throws CoreException {
-		IFile fileDiagramFrameWeb = webProject.getFile("diagram.frameweb");
+		//TODO permitir que o usuario escolha o nome do arquivo .frameweb nas configuracoes da faceta
+		IFile fileDiagramFrameWeb = webProject.getFile("model.frameweb");
 
 		if (!fileDiagramFrameWeb.exists()) {
-			Path pathDiagramPlugin = new Path("libs/diagram.xml");
+			Path pathDiagramPlugin = new Path("libs/" + FRAMEWEB_BASE_FILE_NAME + ".xml");
 			copyFromPlugin(pathDiagramPlugin, fileDiagramFrameWeb);
 		}
 	}
@@ -77,7 +81,7 @@ public class FrameWebFacet {
 		IFile fileRepresentationsFrameWeb = webProject.getFile("representations.aird");
 
 		if (!fileRepresentationsFrameWeb.exists()) {
-			Path pathRepresentationsPlugin = new Path("libs/representations.xml");
+			Path pathRepresentationsPlugin = new Path("libs/" + REPRESENTATIONS_FILE_NAME + ".xml");
 			copyFromPlugin(pathRepresentationsPlugin, fileRepresentationsFrameWeb);
 		}
 	}

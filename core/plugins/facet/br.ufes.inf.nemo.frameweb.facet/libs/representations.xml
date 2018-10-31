@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE XML>
 <viewpoint:DAnalysis xmi:version="2.0"
 	xmlns:xmi="http://www.omg.org/XMI"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:description="http://www.eclipse.org/sirius/description/1.1.0"
 	xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0"
 	xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description"
-	xmi:id="_L8714M20Eei_JNDV8Bo-wA"
-	selectedViews="_zfQwoM20Eei_JNDV8Bo-wA" version="13.0.0.201804031646">
-	<semanticResources>diagram.frameweb</semanticResources>
+	xmi:id="_3mkskN0QEeiRvOK37IgIzg"
+	selectedViews="_7i3jAN0QEeiRvOK37IgIzg" version="13.0.0.201804031646">
+	<semanticResources>model.frameweb</semanticResources>
 	<ownedViews xmi:type="viewpoint:DView"
-		xmi:id="_zfQwoM20Eei_JNDV8Bo-wA">
+		xmi:id="_7i3jAN0QEeiRvOK37IgIzg">
 		<viewpoint xmi:type="description:Viewpoint"
-			href="platform:/resource/br.ufes.inf.nemo.frameweb.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']" />
+			href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']" />
 	</ownedViews>
 </viewpoint:DAnalysis>
