@@ -101,7 +101,8 @@ public class FrameWebFacet {
 			destination.create(input, true, null);
 
 		} catch (IOException e) {
-			throw new CoreException(FrameWebFacetActivator.createErrorStatus(e.getMessage(), e));
+			String msg = e.getMessage();
+			throw new CoreException(FrameWebFacetActivator.createErrorStatus(msg, e));
 
 		} catch (NullPointerException e) {
 			e.printStackTrace();
