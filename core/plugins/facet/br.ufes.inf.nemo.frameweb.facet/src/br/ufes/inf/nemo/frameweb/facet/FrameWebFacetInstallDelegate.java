@@ -12,6 +12,10 @@ public class FrameWebFacetInstallDelegate implements IDelegate {
 	public void execute(IProject project, IProjectFacetVersion version, Object config, IProgressMonitor monitor)
 			throws CoreException {
 
+		/**
+		 * A barra de carregamento tera tres estagios, adicao da natureza do Sirius, criacao do .aird e
+		 * a criacao do arquivo principal .frameweb
+		 */
 		monitor.beginTask("", 3);
 
 		FrameWebFacet frameWebFacet = new FrameWebFacet(project);

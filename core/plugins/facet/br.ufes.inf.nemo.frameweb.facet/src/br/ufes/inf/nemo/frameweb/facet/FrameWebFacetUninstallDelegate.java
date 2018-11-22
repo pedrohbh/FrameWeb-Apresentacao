@@ -12,6 +12,11 @@ public class FrameWebFacetUninstallDelegate implements IDelegate {
 	public void execute(IProject project, IProjectFacetVersion version, Object config, IProgressMonitor monitor)
 			throws CoreException {
 		
+		/**
+		 * A barra de carregamento tera dois estagios, remocao da natureza do Sirius e remocao do arquivo .aird
+		 * 
+		 * Obs: a decidir sobre remover ou nao o arquivo .aird
+		 */
 		monitor.beginTask("", 2);
 		
 		FrameWebFacet webProject = new FrameWebFacet(project);

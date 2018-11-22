@@ -111,7 +111,7 @@ public class Gerador implements IExternalJavaAction {
 		String dir_output_class = "src" + File.separator + "com" + File.separator + "frameweb" + File.separator + "java" + File.separator;
 		
 		JFileChooser f = new JFileChooser();
-		f.setDialogTitle("Selecione um diretório para o projeto");
+		f.setDialogTitle("Selecione um diretÃ³rio para o projeto");
         f.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY); 
         f.showSaveDialog(null);
         
@@ -137,7 +137,9 @@ public class Gerador implements IExternalJavaAction {
         }
         file_diretorio_web.mkdirs();
 
+        int hellos = 1;
 		for(EObject obj : selections) {
+			System.out.println("hello: " + (hellos++));
 			readTemplates(obj);
 			
 			TreeIterator<EObject> eAllContents = obj.eAllContents();
@@ -215,7 +217,7 @@ public class Gerador implements IExternalJavaAction {
 						            bw.close();
 						            fw.close();
 								} catch (IOException e) {
-									System.out.println("Erro na criação dos arquivos.");
+									System.out.println("Erro na criaÃ§Ã£o dos arquivos.");
 									return;
 								}
 							}

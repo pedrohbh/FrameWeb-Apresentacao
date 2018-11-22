@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE XML>
+<?eclipse version="3.4"?>
+
+<plugin>
+   <extension
+         point="org.eclipse.sirius.externalJavaAction">
+      <javaActions
+            actionClass="br.ufes.inf.nemo.frameweb.codegenerator.CodeGenerator"
+            id="XtendActionCallCodeGenerator">
+      </javaActions>
+   </extension>
+</plugin>

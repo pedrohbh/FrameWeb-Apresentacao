@@ -1,0 +1,13 @@
+{
+  "language": "java",
+  "version": "8",
+  "build": "191",
+  "types": {
+    "primitives": [
+      "byte", "short", "int", "long", "float", "double", "boolean", "char", "Object", "String"
+    ],
+    "classes": [
+      "Calendar", "List", "Set", "Date"
+    ]
+  }
+}

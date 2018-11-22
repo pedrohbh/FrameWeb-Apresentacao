@@ -13,5 +13,10 @@ Export-Package: br.ufes.inf.nemo.frameweb.model.frameweb,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.uml2.types;visibility:=reexport,
- org.eclipse.uml2.uml;visibility:=reexport
+ org.eclipse.uml2.uml;visibility:=reexport,
+ com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtend.lib,
+ org.eclipse.xtend.lib.macro
 Bundle-ActivationPolicy: lazy
+

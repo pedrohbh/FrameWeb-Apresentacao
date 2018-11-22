@@ -9,6 +9,8 @@ import org.eclipse.core.runtime.CoreException;
 public class ProjectUtils {
 
 	/**
+	 * Adiciona uma dada natureza na descricao de um projeto (.project)
+	 * 
 	 * @param project
 	 * @param natureId
 	 * @throws CoreException
@@ -30,6 +32,8 @@ public class ProjectUtils {
 	}
 
 	/**
+	 * Remove uma dada natureza da descricao de um projeto (.project)
+	 * 
 	 * @param project
 	 * @param natureId
 	 * @throws CoreException
