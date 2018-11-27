@@ -26,6 +26,9 @@ public class FrameWebFacetUninstallDelegate implements IDelegate {
 			
 			monitor.worked(1);
 			
+			/**
+			 * Revisar se remover o representation.aird eh realmente necessario
+			 */
 			webProject.removeRepresentationsFile();
 			
 			monitor.worked(1);

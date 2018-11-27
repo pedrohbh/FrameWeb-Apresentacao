@@ -6,11 +6,6 @@ import org.eclipse.emf.ecore.EObject
 import java.util.Map
 import org.eclipse.sirius.diagram.DSemanticDiagram
 import java.net.URLDecoder
-import br.ufes.inf.nemo.frameweb.model.frameweb.EntityModel
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass
-import java.util.List
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainGeneralization
 
 class CodeGenerator implements IExternalJavaAction {
 
@@ -35,6 +30,7 @@ class CodeGenerator implements IExternalJavaAction {
 		val representation = new MainProjectRepresentation(selections)
 		
 		val entityModelClassGenerator = new EntityModelClassGenerator(representation.entityModel)
+		entityModelClassGenerator.generate()
 	}
 	
 	/**

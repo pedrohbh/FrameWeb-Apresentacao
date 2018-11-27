@@ -16,7 +16,7 @@ class EntityModelClassGenerator {
 	/**
 	 * Extrai o pacote de dominio do modelo de entidades
 	 */
-	def getDomainPackage(EntityModel entityModel) {
+	def private getDomainPackage(EntityModel entityModel) {
 		val domainPackage = entityModel
 			.eContents()
 			.findFirst[it instanceof DomainPackage]
@@ -27,7 +27,7 @@ class EntityModelClassGenerator {
 	/**
 	 * Extrai as classes do dominio do pacote de dominio do modelo de entidades
 	 */
-	def getDomainClasses(DomainPackage domainPackage) {
+	def private getDomainClasses(DomainPackage domainPackage) {
 		domainPackage
 			.eContents
 			.filter[it instanceof DomainClass]
@@ -37,8 +37,11 @@ class EntityModelClassGenerator {
 	
 	/**
 	 * Extrai a superclasse de uma classe de dominio
+	 * 
+	 * Obs: Isso ainda nao funciona no frameweb editor, logo acredite em forcas maiores de que
+	 * este metodo esta funcionando plenamente
 	 */
-	def getGeneralization(DomainClass domainClass) {
+	def private getGeneralization(DomainClass domainClass) {
 		var generalization = domainClass
 			.eContents()
 			.findFirst[it instanceof DomainGeneralization]
