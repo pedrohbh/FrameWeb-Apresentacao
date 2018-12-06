@@ -53,14 +53,14 @@ public class JsonToFramewebLanguageTranslator {
       _builder.append("    ");
       {
         boolean _hasElements_1 = false;
-        for(final JsonElement _class : classes) {
+        for(final JsonElement eclass : classes) {
           if (!_hasElements_1) {
             _hasElements_1 = true;
           } else {
             _builder.appendImmediate("\n", "    ");
           }
           _builder.append("<packagedElement xsi:type=\"uml:Class\" name=");
-          _builder.append(_class, "    ");
+          _builder.append(eclass, "    ");
           _builder.append("/>");
         }
       }

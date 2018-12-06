@@ -3,11 +3,13 @@ Bundle-ManifestVersion: 2
 Bundle-Name: XtendCodeGenerator
 Bundle-SymbolicName: br.ufes.inf.nemo.frameweb.codegenerator;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Export-Package: br.ufes.inf.nemo.frameweb.codegenerator
 Require-Bundle: org.eclipse.sirius,
  br.ufes.inf.nemo.frameweb,
  org.eclipse.sirius.diagram,
  org.eclipse.xtext,
- org.eclipse.xtext.xbase
+ org.eclipse.xtext.xbase,
+ org.apache.commons.lang3
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: br.ufes.inf.nemo.frameweb.codegenerator
+Import-Package: br.ufes.inf.nemo.frameweb.codegenerator
+Export-Package: br.ufes.inf.nemo.frameweb.codegenerator

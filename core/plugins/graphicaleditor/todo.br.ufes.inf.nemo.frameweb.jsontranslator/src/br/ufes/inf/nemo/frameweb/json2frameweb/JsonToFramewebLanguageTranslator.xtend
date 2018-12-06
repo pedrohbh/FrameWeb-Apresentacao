@@ -28,7 +28,7 @@ class JsonToFramewebLanguageTranslator {
 			<frameweb:FramewebProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
 			  <compose xsi:type="frameweb:EntityModel" name=«language»>
 			    «FOR primitive : primitives SEPARATOR "\n"»<packagedElement xsi:type="uml:PrimitiveType" name=«primitive»/>«ENDFOR»
-			    «FOR _class : classes SEPARATOR "\n"»<packagedElement xsi:type="uml:Class" name=«_class»/>«ENDFOR»
+			    «FOR eclass : classes SEPARATOR "\n"»<packagedElement xsi:type="uml:Class" name=«eclass»/>«ENDFOR»
 			  </compose>
 			</frameweb:FramewebProject>
 		'''

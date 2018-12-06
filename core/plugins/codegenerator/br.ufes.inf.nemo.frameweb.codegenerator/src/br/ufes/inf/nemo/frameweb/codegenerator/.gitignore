@@ -7,3 +7,6 @@
 /CodeGenerator.java
 /EntityModelClassGenerator.java
 /MainProjectRepresentation.java
+/.EntityModelCodeGenerator.java._trace
+/.ModelCodeGenerator.java._trace
+/.EntityClassCodeGenerator.java._trace

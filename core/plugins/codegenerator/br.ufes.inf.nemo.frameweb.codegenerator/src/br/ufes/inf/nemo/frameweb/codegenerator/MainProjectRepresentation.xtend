@@ -18,7 +18,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.ControllerPackage
 class MainProjectRepresentation {
 	
 	List<EObject> packages
-	
+
 	/**
 	 * Mantem uma lista contendo (genericamente) apenas os elementos visuais do modelo frameweb:
 	 * Navigation Model, Entity Model, Persistence Model, Application Model e Templates.
@@ -30,7 +30,7 @@ class MainProjectRepresentation {
 			.filter[it instanceof DNodeContainer]
 			.map[it as DRepresentationElement]
 			.map[it.target]
-			.toList
+			.toList()
 	}
 	
 	/**
@@ -40,7 +40,7 @@ class MainProjectRepresentation {
 		packages
 			.filter[it instanceof org.eclipse.uml2.uml.Package]
 			.map[it as org.eclipse.uml2.uml.Package]
-			.toList
+			.toList()
 	}
 	
 	/**
@@ -50,7 +50,7 @@ class MainProjectRepresentation {
 		packages
 			.filter[it instanceof FrameworkProfile]
 			.map[it as FrameworkProfile]
-			.toList
+			.toList()
 	}
 
 	/**
@@ -60,7 +60,7 @@ class MainProjectRepresentation {
 		packages
 			.filter[it instanceof FramewebModel]
 			.map[it as FramewebModel]
-			.toList
+			.toList()
 	}
 	
 	/**

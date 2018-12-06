@@ -5,7 +5,6 @@ import java.util.Collection
 import org.eclipse.emf.ecore.EObject
 import java.util.Map
 import org.eclipse.sirius.diagram.DSemanticDiagram
-import java.net.URLDecoder
 
 class CodeGenerator implements IExternalJavaAction {
 
@@ -29,15 +28,13 @@ class CodeGenerator implements IExternalJavaAction {
 	override execute(Collection<? extends EObject> selections, Map<String, Object> parameters) {
 		val representation = new MainProjectRepresentation(selections)
 		
-		val entityModelClassGenerator = new EntityModelClassGenerator(representation.entityModel)
-		entityModelClassGenerator.generate()
+		val entityModel = new EntityModelCodeGenerator(
+			representation.getEntityModel(),
+			representation.getORMTemplate()
+		)
+		
+		for (entityClass : entityModel.getEntityClasses()) {
+			println(entityClass.generate())
+		}
 	}
-	
-	/**
-	 * Decodifica os atributos dos templates do modelo frameweb a partir uma URI
-	 */
-	def decode(String str) {
-		URLDecoder.decode(str, "UTF-8")
-	}
-
 }
