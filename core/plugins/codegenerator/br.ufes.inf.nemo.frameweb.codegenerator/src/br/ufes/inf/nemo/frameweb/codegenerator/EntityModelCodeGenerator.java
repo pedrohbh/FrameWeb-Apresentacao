@@ -5,6 +5,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.EntityModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
+import java.util.Iterator;
 import java.util.List;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
@@ -12,12 +13,17 @@ import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.ListExtensions;
 
 @SuppressWarnings("all")
-public class EntityModelCodeGenerator {
+public class EntityModelCodeGenerator implements Iterator<String> {
+  private Iterator<EntityClassCodeGenerator> iterator;
+  
   private List<EntityClassCodeGenerator> domainClasses;
   
   /**
    * Armazenamos apenas aquilo que nos eh interessante quanto ao modelo de entidades,
    * sendo o pacote de dominio e suas classes
+   * 
+   * @param entityModel
+   * @param ormTemplate
    */
   public EntityModelCodeGenerator(final EntityModel entityModel, final ORMTemplate ormTemplate) {
     final DomainPackage domainPackage = this.getDomainPackage(entityModel);
@@ -26,10 +32,13 @@ public class EntityModelCodeGenerator {
       return new EntityClassCodeGenerator(it, _name, ormTemplate);
     };
     this.domainClasses = IterableExtensions.<EntityClassCodeGenerator>toList(ListExtensions.<DomainClass, EntityClassCodeGenerator>map(this.getDomainClasses(domainPackage), _function));
+    this.iterator = this.domainClasses.iterator();
   }
   
   /**
    * Extrai o pacote de dominio do modelo de entidades
+   * 
+   * @param entityModel
    */
   public DomainPackage getDomainPackage(final EntityModel entityModel) {
     DomainPackage _xblockexpression = null;
@@ -51,6 +60,8 @@ public class EntityModelCodeGenerator {
   
   /**
    * Extrai as classes do dominio do pacote de dominio do modelo de entidades
+   * 
+   * @param domainPackage
    */
   public List<DomainClass> getDomainClasses(final DomainPackage domainPackage) {
     final Function1<EObject, Boolean> _function = (EObject it) -> {
@@ -62,10 +73,13 @@ public class EntityModelCodeGenerator {
     return IterableExtensions.<DomainClass>toList(IterableExtensions.<EObject, DomainClass>map(IterableExtensions.<EObject>filter(domainPackage.eContents(), _function), _function_1));
   }
   
-  /**
-   * Retorna a lista de classes de entidade contidas no modelo
-   */
-  public List<EntityClassCodeGenerator> getEntityClasses() {
-    return this.domainClasses;
+  @Override
+  public boolean hasNext() {
+    return this.iterator.hasNext();
+  }
+  
+  @Override
+  public String next() {
+    return this.iterator.next().generate();
   }
 }

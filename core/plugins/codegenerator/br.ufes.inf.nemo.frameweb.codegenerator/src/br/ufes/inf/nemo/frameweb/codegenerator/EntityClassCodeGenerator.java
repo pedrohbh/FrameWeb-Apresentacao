@@ -22,6 +22,11 @@ public class EntityClassCodeGenerator {
   
   private ORMTemplate ormTemplate;
   
+  /**
+   * @param domainClass
+   * @param domainPackageName
+   * @param ormTemplate
+   */
   public EntityClassCodeGenerator(final DomainClass domainClass, final String domainPackageName, final ORMTemplate ormTemplate) {
     this.domainPackageName = domainPackageName;
     this.domainClass = domainClass;
@@ -30,6 +35,8 @@ public class EntityClassCodeGenerator {
   
   /**
    * Extrai a superclasse de uma classe de dominio
+   * 
+   * @param domainClass
    */
   public GeneralizationSet getGeneralization(final DomainClass domainClass) {
     GeneralizationSet _xblockexpression = null;
@@ -51,6 +58,8 @@ public class EntityClassCodeGenerator {
   
   /**
    * Extrai os atributos de uma classe de dominio
+   * 
+   * @param domainClass
    */
   public List<DomainAttribute> getDomainAttributes(final DomainClass domainClass) {
     final Function1<EObject, Boolean> _function = (EObject it) -> {
@@ -64,6 +73,8 @@ public class EntityClassCodeGenerator {
   
   /**
    * Extrai os metodos de uma classe de dominio
+   * 
+   * @param domainClass
    */
   public List<DomainMethod> getDomainMethods(final DomainClass domainClass) {
     final Function1<EObject, Boolean> _function = (EObject it) -> {
@@ -77,6 +88,8 @@ public class EntityClassCodeGenerator {
   
   /**
    * Decodifica os atributos dos templates do modelo frameweb a partir uma URI
+   * 
+   * @param str
    */
   public String decode(final String str) {
     try {
@@ -86,22 +99,49 @@ public class EntityClassCodeGenerator {
     }
   }
   
+  public String generateClass() {
+    String _xblockexpression = null;
+    {
+      String classTemplate = this.decode(this.ormTemplate.getClassTemplate());
+      classTemplate = classTemplate.replace("FW_PACKAGE", this.domainPackageName);
+      String _xifexpression = null;
+      boolean _isAbstract = this.domainClass.isAbstract();
+      if (_isAbstract) {
+        _xifexpression = classTemplate.replace("FW_CLASS_VISIBILITY", "public abstract");
+      } else {
+        _xifexpression = classTemplate.replace("FW_CLASS_VISIBILITY", "public");
+      }
+      classTemplate = _xifexpression;
+      classTemplate = classTemplate.replace("FW_CLASS_NAME", this.domainClass.getName());
+      String _xtrycatchfinallyexpression = null;
+      try {
+        String _name = this.getGeneralization(this.domainClass).getName();
+        String _plus = ("extends " + _name);
+        _xtrycatchfinallyexpression = classTemplate.replace("FW_EXTENDS", _plus);
+      } catch (final Throwable _t) {
+        if (_t instanceof NullPointerException) {
+          _xtrycatchfinallyexpression = classTemplate.replace("FW_EXTENDS", "");
+        } else {
+          throw Exceptions.sneakyThrow(_t);
+        }
+      }
+      _xblockexpression = classTemplate = _xtrycatchfinallyexpression;
+    }
+    return _xblockexpression;
+  }
+  
   /**
    * Gera os atributos com seus getters e setters
    */
   public String generateAttributes() {
     String _xblockexpression = null;
     {
-      final String template = this.decode(this.ormTemplate.getAttributeTemplate());
+      final String attributeTemplate = this.decode(this.ormTemplate.getAttributeTemplate());
       final List<DomainAttribute> attributes = this.getDomainAttributes(this.domainClass);
-      boolean _isEmpty = attributes.isEmpty();
-      if (_isEmpty) {
-        return "";
-      }
       final StringBuilder code = new StringBuilder();
       for (final DomainAttribute attribute : attributes) {
         {
-          String attributeCode = template;
+          String attributeCode = attributeTemplate;
           attributeCode = attributeCode.replace("FW_ATTRIBUTE_TYPE", attribute.getType().getName());
           attributeCode = attributeCode.replace("FW_ATTRIBUTE_FIRST_UPPER", StringUtils.capitalize(attribute.getName()));
           attributeCode = attributeCode.replace("FW_ATTRIBUTE", attribute.getName());
@@ -132,23 +172,19 @@ public class EntityClassCodeGenerator {
   public String generateMethods() {
     String _xblockexpression = null;
     {
-      final String template = this.decode(this.ormTemplate.getMethodTemplate());
-      final String abstractTemplate = this.ormTemplate.getAbstractMethodTemplate();
+      final String methodTemplate = this.decode(this.ormTemplate.getMethodTemplate());
+      final String abstractMethodTemplate = this.ormTemplate.getAbstractMethodTemplate();
       final List<DomainMethod> methods = this.getDomainMethods(this.domainClass);
-      boolean _isEmpty = methods.isEmpty();
-      if (_isEmpty) {
-        return "";
-      }
       final StringBuilder code = new StringBuilder();
       for (final DomainMethod method : methods) {
         {
           String methodCode = "";
           boolean _isAbstract = method.isAbstract();
           if (_isAbstract) {
-            methodCode = abstractTemplate;
+            methodCode = abstractMethodTemplate;
             methodCode = methodCode.replace("FW_METHOD_VISIBILITY", "public abstract");
           } else {
-            methodCode = template;
+            methodCode = methodTemplate;
             methodCode = methodCode.replace("FW_METHOD_VISIBILITY", "public");
           }
           try {
@@ -182,30 +218,7 @@ public class EntityClassCodeGenerator {
   public String generate() {
     String _xblockexpression = null;
     {
-      String template = this.decode(this.ormTemplate.getClassTemplate());
-      template = template.replace("FW_PACKAGE", this.domainPackageName);
-      String _xifexpression = null;
-      boolean _isAbstract = this.domainClass.isAbstract();
-      if (_isAbstract) {
-        _xifexpression = template.replace("FW_CLASS_VISIBILITY", "public abstract");
-      } else {
-        _xifexpression = template.replace("FW_CLASS_VISIBILITY", "public");
-      }
-      template = _xifexpression;
-      template = template.replace("FW_CLASS_NAME", this.domainClass.getName());
-      String _xtrycatchfinallyexpression = null;
-      try {
-        String _name = this.getGeneralization(this.domainClass).getName();
-        String _plus = ("extends " + _name);
-        _xtrycatchfinallyexpression = template.replace("FW_EXTENDS", _plus);
-      } catch (final Throwable _t) {
-        if (_t instanceof NullPointerException) {
-          _xtrycatchfinallyexpression = template.replace("FW_EXTENDS", "");
-        } else {
-          throw Exceptions.sneakyThrow(_t);
-        }
-      }
-      template = _xtrycatchfinallyexpression;
+      String template = this.generateClass();
       template = template.replace("FW_CLASS_ATTRIBUTES", this.generateAttributes());
       _xblockexpression = template = template.replace("FW_CLASS_METHOD", this.generateMethods());
     }

@@ -1,10 +1,10 @@
 package br.ufes.inf.nemo.frameweb.codegenerator
 
-import org.eclipse.sirius.tools.api.ui.IExternalJavaAction
 import java.util.Collection
-import org.eclipse.emf.ecore.EObject
 import java.util.Map
+import org.eclipse.emf.ecore.EObject
 import org.eclipse.sirius.diagram.DSemanticDiagram
+import org.eclipse.sirius.tools.api.ui.IExternalJavaAction
 
 class CodeGenerator implements IExternalJavaAction {
 
@@ -33,8 +33,8 @@ class CodeGenerator implements IExternalJavaAction {
 			representation.getORMTemplate()
 		)
 		
-		for (entityClass : entityModel.getEntityClasses()) {
-			println(entityClass.generate())
+		for (entityClass : entityModel.toIterable()) {
+			println(entityClass)
 		}
 	}
 }

@@ -8,7 +8,10 @@ Require-Bundle: org.eclipse.sirius,
  org.eclipse.sirius.diagram,
  org.eclipse.xtext,
  org.eclipse.xtext.xbase,
- org.apache.commons.lang3
+ org.apache.commons.lang3,
+ org.eclipse.core.resources,
+ org.eclipse.core.runtime,
+ org.eclipse.ui
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: br.ufes.inf.nemo.frameweb.codegenerator
 Import-Package: br.ufes.inf.nemo.frameweb.codegenerator

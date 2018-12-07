@@ -15,6 +15,11 @@ class EntityClassCodeGenerator {
 
 	ORMTemplate ormTemplate
 
+	/**
+	 * @param domainClass
+	 * @param domainPackageName
+	 * @param ormTemplate
+	 */
 	new(DomainClass domainClass, String domainPackageName, ORMTemplate ormTemplate) {
 		this.domainPackageName = domainPackageName
 		this.domainClass = domainClass
@@ -23,6 +28,8 @@ class EntityClassCodeGenerator {
 		
 	/**
 	 * Extrai a superclasse de uma classe de dominio
+	 * 
+	 * @param domainClass
 	 */
 	def getGeneralization(DomainClass domainClass) {
 		var generalization = domainClass
@@ -34,6 +41,8 @@ class EntityClassCodeGenerator {
 	
 	/**
 	 * Extrai os atributos de uma classe de dominio
+	 * 
+	 * @param domainClass
 	 */
 	def getDomainAttributes(DomainClass domainClass) {
 		domainClass
@@ -45,6 +54,8 @@ class EntityClassCodeGenerator {
 	
 	/**
 	 * Extrai os metodos de uma classe de dominio
+	 * 
+	 * @param domainClass
 	 */
 	def getDomainMethods(DomainClass domainClass) {
 		domainClass
@@ -56,26 +67,52 @@ class EntityClassCodeGenerator {
 	
 	/**
 	 * Decodifica os atributos dos templates do modelo frameweb a partir uma URI
+	 * 
+	 * @param str
 	 */
 	def decode(String str) {
 		URLDecoder.decode(str, "UTF-8")
+	}
+	
+	def generateClass() {
+		var classTemplate = ormTemplate.getClassTemplate().decode()
+		
+		classTemplate = classTemplate.replace("FW_PACKAGE", domainPackageName)
+		
+		/*
+		 * FW_CLASS_VISIBILITY tambem precisa de um template definido, senao nao sera possivel gerar
+		 * codigo para outras linguagens
+		 */
+		classTemplate = if (domainClass.isAbstract()) {
+			classTemplate.replace("FW_CLASS_VISIBILITY", "public abstract")
+		} else {
+			classTemplate.replace("FW_CLASS_VISIBILITY", "public")
+		}
+		
+		classTemplate = classTemplate.replace("FW_CLASS_NAME", domainClass.getName())
+
+		/*
+		 * FW_EXTENDS tambem precisa de um template definido, senao nao sera possivel gerar
+		 * codigo para outras linguagens
+		 */
+		classTemplate = try {
+			classTemplate.replace("FW_EXTENDS", "extends " + domainClass.getGeneralization().getName())
+		} catch (NullPointerException e) {
+			classTemplate.replace("FW_EXTENDS", "")
+		}
 	}
 	
 	/**
 	 * Gera os atributos com seus getters e setters
 	 */
 	def generateAttributes() {
-		val template = ormTemplate.getAttributeTemplate().decode()
+		val attributeTemplate = ormTemplate.getAttributeTemplate().decode()
 		val attributes = domainClass.getDomainAttributes();
-		
-		if (attributes.isEmpty()) {
-			return ""
-		}
 		
 		val code = new StringBuilder()
 		
 		for (attribute : attributes) {
-			var attributeCode = template
+			var attributeCode = attributeTemplate
 			
 			attributeCode = attributeCode.replace("FW_ATTRIBUTE_TYPE", attribute.getType().getName())
 			attributeCode = attributeCode.replace("FW_ATTRIBUTE_FIRST_UPPER", StringUtils.capitalize(attribute.getName()))
@@ -103,13 +140,9 @@ class EntityClassCodeGenerator {
 	}
 	
 	def generateMethods() {
-		val template = ormTemplate.getMethodTemplate().decode()
-		val abstractTemplate = ormTemplate.getAbstractMethodTemplate()
+		val methodTemplate = ormTemplate.getMethodTemplate().decode()
+		val abstractMethodTemplate = ormTemplate.getAbstractMethodTemplate()
 		val methods = domainClass.getDomainMethods()
-		
-		if (methods.isEmpty()) {
-			return ""
-		}
 		
 		val code = new StringBuilder()
 		
@@ -117,10 +150,10 @@ class EntityClassCodeGenerator {
 			var methodCode = ""
 			
 			if (method.isAbstract()) {
-				methodCode = abstractTemplate
+				methodCode = abstractMethodTemplate
 				methodCode = methodCode.replace("FW_METHOD_VISIBILITY", "public abstract");
 			} else {
-				methodCode = template
+				methodCode = methodTemplate
 				methodCode = methodCode.replace("FW_METHOD_VISIBILITY", "public");
 			}
 			
@@ -148,32 +181,7 @@ class EntityClassCodeGenerator {
 	 * The magic
 	 */
 	def generate() {
-		var template = ormTemplate.getClassTemplate().decode()
-		
-		template = template.replace("FW_PACKAGE", domainPackageName)
-		
-		/*
-		 * FW_CLASS_VISIBILITY tambem precisa de um template definido, senao nao sera possivel gerar
-		 * codigo para outras linguagens
-		 */
-		template = if (domainClass.isAbstract()) {
-			template.replace("FW_CLASS_VISIBILITY", "public abstract")
-		} else {
-			template.replace("FW_CLASS_VISIBILITY", "public")
-		}
-		
-		template = template.replace("FW_CLASS_NAME", domainClass.getName())
-
-		/*
-		 * FW_EXTENDS tambem precisa de um template definido, senao nao sera possivel gerar
-		 * codigo para outras linguagens
-		 */
-		template = try {
-			template.replace("FW_EXTENDS", "extends " + domainClass.getGeneralization().getName())
-		} catch (NullPointerException e) {
-			template.replace("FW_EXTENDS", "")
-		}
-
+		var template = generateClass()
 		template = template.replace("FW_CLASS_ATTRIBUTES", generateAttributes())
 		template = template.replace("FW_CLASS_METHOD", generateMethods())
 		
@@ -181,6 +189,8 @@ class EntityClassCodeGenerator {
 		 * TODO template.sanitize()
 		 * 
 		 * Remove multiplos espacos, exceto tabulacoes e quebras de linha maiores que 2, ou seja, maiores que \n\n
+		 * Dessa forma o codigo ficara "redondinho"
+		 * Boa sorte
 		 */		 
 	}
 }

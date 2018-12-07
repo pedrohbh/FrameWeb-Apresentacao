@@ -22,6 +22,8 @@ class MainProjectRepresentation {
 	/**
 	 * Mantem uma lista contendo (genericamente) apenas os elementos visuais do modelo frameweb:
 	 * Navigation Model, Entity Model, Persistence Model, Application Model e Templates.
+	 * 
+	 * @param selections
 	 */
 	new(Collection<? extends EObject> selections) {
 		packages = selections
