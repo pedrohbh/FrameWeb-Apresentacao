@@ -1,6 +1,6 @@
-package br.ufes.inf.nemo.frameweb.codegenerator;
+package br.ufes.inf.nemo.frameweb.codegenerator.entity;
 
-import br.ufes.inf.nemo.frameweb.codegenerator.EntityClassCodeGenerator;
+import br.ufes.inf.nemo.frameweb.codegenerator.entity.EntityClassCodeGenerator;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.EntityModel;

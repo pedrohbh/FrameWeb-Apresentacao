@@ -1,4 +1,4 @@
-package br.ufes.inf.nemo.frameweb.codegenerator;
+package br.ufes.inf.nemo.frameweb.codegenerator.entity;
 
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAttribute;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
@@ -169,6 +169,9 @@ public class EntityClassCodeGenerator {
     return null;
   }
   
+  /**
+   * Gera os metodos de classe
+   */
   public String generateMethods() {
     String _xblockexpression = null;
     {

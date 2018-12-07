@@ -1,4 +1,4 @@
-package br.ufes.inf.nemo.frameweb.codegenerator
+package br.ufes.inf.nemo.frameweb.codegenerator.entity
 
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate
@@ -139,6 +139,9 @@ class EntityClassCodeGenerator {
 		 //Tenha fe de que um dia havera algo aqui :)
 	}
 	
+	/**
+	 * Gera os metodos de classe
+	 */
 	def generateMethods() {
 		val methodTemplate = ormTemplate.getMethodTemplate().decode()
 		val abstractMethodTemplate = ormTemplate.getAbstractMethodTemplate()
