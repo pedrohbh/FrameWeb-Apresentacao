@@ -36,16 +36,6 @@ class MainProjectRepresentation {
 	}
 	
 	/**
-	 * Retorna todos os packages referentes a Models e Profiles (nao filtrados)
-	 */
-	def getPackages() {
-		packages
-			.filter[it instanceof org.eclipse.uml2.uml.Package]
-			.map[it as org.eclipse.uml2.uml.Package]
-			.toList()
-	}
-	
-	/**
 	 * Retorna apenas FrameworkProfiles (templates)
 	 */
 	def getFrameworkProfiles() {

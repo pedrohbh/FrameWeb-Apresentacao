@@ -2,9 +2,9 @@
  */
 package br.ufes.inf.nemo.frameweb.model.frameweb.impl;
 
+import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.EntityModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage;
-
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -32,6 +32,24 @@ public class EntityModelImpl extends FramewebModelImpl implements EntityModel {
 	@Override
 	protected EClass eStaticClass() {
 		return FramewebPackage.Literals.ENTITY_MODEL;
+	}
+
+	@Override
+	public DomainPackage getDomainPackage() {
+		try {
+			DomainPackage domainPackage = this.eContents()
+				.stream()
+				.filter(DomainPackage.class::isInstance)
+				.map(DomainPackage.class::cast)
+				.findFirst()
+				.get();
+			
+			return domainPackage;
+
+		} catch (NullPointerException e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 
 } //EntityModelImpl

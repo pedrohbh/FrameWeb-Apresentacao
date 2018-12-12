@@ -2,11 +2,8 @@ package br.ufes.inf.nemo.frameweb.codegenerator.entity
 
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainGeneralization
 import java.net.URLDecoder
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAttribute
 import org.apache.commons.lang3.StringUtils
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainMethod
 
 class EntityClassCodeGenerator {
 
@@ -25,46 +22,7 @@ class EntityClassCodeGenerator {
 		this.domainClass = domainClass
 		this.ormTemplate = ormTemplate
 	}
-		
-	/**
-	 * Extrai a superclasse de uma classe de dominio
-	 * 
-	 * @param domainClass
-	 */
-	def getGeneralization(DomainClass domainClass) {
-		var generalization = domainClass
-			.eContents()
-			.findFirst[it instanceof DomainGeneralization]
-		
-		if (generalization !== null) (generalization as DomainGeneralization).getGeneralizationSets().head else null
-	}
-	
-	/**
-	 * Extrai os atributos de uma classe de dominio
-	 * 
-	 * @param domainClass
-	 */
-	def getDomainAttributes(DomainClass domainClass) {
-		domainClass
-			.eContents()
-			.filter[it instanceof DomainAttribute]
-			.map[it as DomainAttribute]
-			.toList()
-	}
-	
-	/**
-	 * Extrai os metodos de uma classe de dominio
-	 * 
-	 * @param domainClass
-	 */
-	def getDomainMethods(DomainClass domainClass) {
-		domainClass
-			.eContents()
-			.filter[it instanceof DomainMethod]
-			.map[it as DomainMethod]
-			.toList()
-	}
-	
+
 	/**
 	 * Decodifica os atributos dos templates do modelo frameweb a partir uma URI
 	 * 
@@ -96,7 +54,7 @@ class EntityClassCodeGenerator {
 		 * codigo para outras linguagens
 		 */
 		classTemplate = try {
-			classTemplate.replace("FW_EXTENDS", "extends " + domainClass.getGeneralization().getName())
+			classTemplate.replace("FW_EXTENDS", "extends " + domainClass.getDomainGeneralization().getName())
 		} catch (NullPointerException e) {
 			classTemplate.replace("FW_EXTENDS", "")
 		}
@@ -194,6 +152,6 @@ class EntityClassCodeGenerator {
 		 * Remove multiplos espacos, exceto tabulacoes e quebras de linha maiores que 2, ou seja, maiores que \n\n
 		 * Dessa forma o codigo ficara "redondinho"
 		 * Boa sorte
-		 */		 
+		 */
 	}
 }

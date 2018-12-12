@@ -2,18 +2,13 @@ package br.ufes.inf.nemo.frameweb.codegenerator.entity;
 
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAttribute;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainGeneralization;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import java.net.URLDecoder;
 import java.util.List;
 import javax.annotation.Generated;
 import org.apache.commons.lang3.StringUtils;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.uml2.uml.GeneralizationSet;
 import org.eclipse.xtext.xbase.lib.Exceptions;
-import org.eclipse.xtext.xbase.lib.Functions.Function1;
-import org.eclipse.xtext.xbase.lib.IterableExtensions;
 
 @SuppressWarnings("all")
 @Generated("org.eclipse.xtend.core.compiler.XtendGenerator")
@@ -33,59 +28,6 @@ public class EntityClassCodeGenerator {
     this.domainPackageName = domainPackageName;
     this.domainClass = domainClass;
     this.ormTemplate = ormTemplate;
-  }
-  
-  /**
-   * Extrai a superclasse de uma classe de dominio
-   * 
-   * @param domainClass
-   */
-  public GeneralizationSet getGeneralization(final DomainClass domainClass) {
-    GeneralizationSet _xblockexpression = null;
-    {
-      final Function1<EObject, Boolean> _function = (EObject it) -> {
-        return Boolean.valueOf((it instanceof DomainGeneralization));
-      };
-      EObject generalization = IterableExtensions.<EObject>findFirst(domainClass.eContents(), _function);
-      GeneralizationSet _xifexpression = null;
-      if ((generalization != null)) {
-        _xifexpression = IterableExtensions.<GeneralizationSet>head(((DomainGeneralization) generalization).getGeneralizationSets());
-      } else {
-        _xifexpression = null;
-      }
-      _xblockexpression = _xifexpression;
-    }
-    return _xblockexpression;
-  }
-  
-  /**
-   * Extrai os atributos de uma classe de dominio
-   * 
-   * @param domainClass
-   */
-  public List<DomainAttribute> getDomainAttributes(final DomainClass domainClass) {
-    final Function1<EObject, Boolean> _function = (EObject it) -> {
-      return Boolean.valueOf((it instanceof DomainAttribute));
-    };
-    final Function1<EObject, DomainAttribute> _function_1 = (EObject it) -> {
-      return ((DomainAttribute) it);
-    };
-    return IterableExtensions.<DomainAttribute>toList(IterableExtensions.<EObject, DomainAttribute>map(IterableExtensions.<EObject>filter(domainClass.eContents(), _function), _function_1));
-  }
-  
-  /**
-   * Extrai os metodos de uma classe de dominio
-   * 
-   * @param domainClass
-   */
-  public List<DomainMethod> getDomainMethods(final DomainClass domainClass) {
-    final Function1<EObject, Boolean> _function = (EObject it) -> {
-      return Boolean.valueOf((it instanceof DomainMethod));
-    };
-    final Function1<EObject, DomainMethod> _function_1 = (EObject it) -> {
-      return ((DomainMethod) it);
-    };
-    return IterableExtensions.<DomainMethod>toList(IterableExtensions.<EObject, DomainMethod>map(IterableExtensions.<EObject>filter(domainClass.eContents(), _function), _function_1));
   }
   
   /**
@@ -117,7 +59,7 @@ public class EntityClassCodeGenerator {
       classTemplate = classTemplate.replace("FW_CLASS_NAME", this.domainClass.getName());
       String _xtrycatchfinallyexpression = null;
       try {
-        String _name = this.getGeneralization(this.domainClass).getName();
+        String _name = this.domainClass.getDomainGeneralization().getName();
         String _plus = ("extends " + _name);
         _xtrycatchfinallyexpression = classTemplate.replace("FW_EXTENDS", _plus);
       } catch (final Throwable _t) {
@@ -139,7 +81,7 @@ public class EntityClassCodeGenerator {
     String _xblockexpression = null;
     {
       final String attributeTemplate = this.decode(this.ormTemplate.getAttributeTemplate());
-      final List<DomainAttribute> attributes = this.getDomainAttributes(this.domainClass);
+      final List<DomainAttribute> attributes = this.domainClass.getDomainAttributes();
       final StringBuilder code = new StringBuilder();
       for (final DomainAttribute attribute : attributes) {
         {
@@ -179,7 +121,7 @@ public class EntityClassCodeGenerator {
     {
       final String methodTemplate = this.decode(this.ormTemplate.getMethodTemplate());
       final String abstractMethodTemplate = this.ormTemplate.getAbstractMethodTemplate();
-      final List<DomainMethod> methods = this.getDomainMethods(this.domainClass);
+      final List<DomainMethod> methods = this.domainClass.getDomainMethods();
       final StringBuilder code = new StringBuilder();
       for (final DomainMethod method : methods) {
         {
