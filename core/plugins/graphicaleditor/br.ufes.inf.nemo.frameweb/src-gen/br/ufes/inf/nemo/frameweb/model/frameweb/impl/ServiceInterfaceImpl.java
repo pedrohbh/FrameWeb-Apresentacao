@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.internal.impl.InterfaceImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class ServiceInterfaceImpl extends InterfaceImpl implements ServiceInterface {
 	/**
 	 * <!-- begin-user-doc -->

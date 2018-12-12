@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.internal.impl.GeneralizationSetImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class DAOGeneralizationSetImpl extends GeneralizationSetImpl implements DAOGeneralizationSet {
 	/**
 	 * <!-- begin-user-doc -->

@@ -95,6 +95,7 @@ import org.eclipse.uml2.uml.util.UMLValidator;
  *
  * @generated
  */
+@SuppressWarnings("all")
 public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIndividual {
 	/**
 	 * The default value of the '{@link #isStatic() <em>Is Static</em>}' attribute.

@@ -27,6 +27,7 @@ import org.eclipse.uml2.uml.internal.impl.InterfaceImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class DAOInterfaceImpl extends InterfaceImpl implements DAOInterface {
 	/**
 	 * The default value of the '{@link #getInfix() <em>Infix</em>}' attribute.

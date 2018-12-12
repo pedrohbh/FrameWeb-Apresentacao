@@ -285,7 +285,7 @@ public class Extend {
 	public String printProperties(EObject o) {
 		// return o.eClass().getEAllAttributes().toString();
 
-		ArrayList<String> retorno = new ArrayList();
+		ArrayList<String> retorno = new ArrayList<String>();
 
 		EStructuralFeature size_feature = o.eClass().getEAllAttributes().get(16);
 
@@ -332,7 +332,7 @@ public class Extend {
 
 	public String printDateProperties(EObject o) {
 		// return o.eClass().getEAllAttributes().toString();
-		ArrayList<String> retorno = new ArrayList();
+		ArrayList<String> retorno = new ArrayList<String>();
 
 		EStructuralFeature size_feature = o.eClass().getEAllAttributes().get(16);
 

@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.internal.impl.ClassImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class ServiceClassImpl extends ClassImpl implements ServiceClass {
 	/**
 	 * <!-- begin-user-doc -->

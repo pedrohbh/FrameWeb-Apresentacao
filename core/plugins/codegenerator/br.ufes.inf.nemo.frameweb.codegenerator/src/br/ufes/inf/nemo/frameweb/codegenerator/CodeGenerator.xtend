@@ -1,50 +1,20 @@
 package br.ufes.inf.nemo.frameweb.codegenerator
 
+import br.ufes.inf.nemo.frameweb.codegenerator.entity.EntityModelCodeGenerator
 import java.util.Collection
 import java.util.Map
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.sirius.diagram.DSemanticDiagram
 import org.eclipse.sirius.tools.api.ui.IExternalJavaAction
-import br.ufes.inf.nemo.frameweb.codegenerator.entity.EntityModelCodeGenerator
-import org.eclipse.core.resources.IProject
 import org.eclipse.ui.PlatformUI
+import org.eclipse.core.resources.IProject
+import org.eclipse.ui.IEditorInput
 import org.eclipse.core.resources.IResource
 import org.eclipse.ui.IWorkbenchWindow
-import org.eclipse.ui.IWorkbenchPage
 import org.eclipse.ui.IEditorPart
-import org.eclipse.ui.IEditorInput
+import org.eclipse.ui.IWorkbenchPage
 
 class CodeGenerator implements IExternalJavaAction {
-
-	IProject project = null
-	
-	new() {
-
-	}
-	
-	//Teste	
-	def getProject2() {
-		
-	}
-	
-	//Teste
-	def getProject1() {
-		val IWorkbenchWindow window = PlatformUI.getWorkbench().getActiveWorkbenchWindow()		
-		val IWorkbenchPage activePage = window.getActivePage();
-		val IEditorPart activeEditor = activePage.getActiveEditor();
-		
-		if (activeEditor !== null) {
-			val IEditorInput input = activeEditor.getEditorInput();	
-			var IProject iproject = input.getAdapter(IProject);
-
-			if (iproject !== null) {
-				val IResource resource = input.getAdapter(IResource);
-				if (resource !== null) {
-					iproject = resource.getProject();
-				}
-			}
-		}
-	}
 
 	/**
 	 * Verifica se existe um objeto do tipo DSemanticDiagram, fazendo com que seja impossivel
@@ -74,5 +44,32 @@ class CodeGenerator implements IExternalJavaAction {
 		entityModel
 			.toIterable()
 			.forEach[println(it)]
+			
+		println(getProject().getName())
 	}
+	
+	/**
+	 * Extrai o projeto atual que esta selecionado no Eclipse
+	 */
+	def getProject() {		
+	    val IWorkbenchWindow window = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
+	    val IWorkbenchPage activePage = window.getActivePage();
+		val IEditorPart activeEditor = activePage.getActiveEditor();
+
+		if (activeEditor !== null) {
+			val IEditorInput input = activeEditor.getEditorInput();
+			val IProject project = input.getAdapter(IProject);
+			
+			if (project === null) {
+				val IResource resource = input.getAdapter(IResource);
+				
+				if (resource !== null) {
+					return resource.getProject();
+				}
+			}
+		}
+		
+		return null;
+	}
+
 }

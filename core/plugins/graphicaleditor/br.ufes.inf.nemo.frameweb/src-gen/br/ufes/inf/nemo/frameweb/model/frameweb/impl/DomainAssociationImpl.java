@@ -33,6 +33,7 @@ import org.eclipse.uml2.uml.internal.impl.AssociationImpl;
  *
  * @generated
  */
+@SuppressWarnings("all")
 public class DomainAssociationImpl extends AssociationImpl implements DomainAssociation {
 	/**
 	 * The default value of the '{@link #getCollection() <em>Collection</em>}' attribute.

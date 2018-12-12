@@ -166,6 +166,8 @@ import org.eclipse.uml2.uml.edit.providers.UMLItemProviderAdapterFactory;
  * <!-- end-user-doc -->
  * @generated
  */
+
+@SuppressWarnings("all")
 public class FramewebEditor extends MultiPageEditorPart
 		implements IEditingDomainProvider, ISelectionProvider, IMenuListener, IViewerProvider, IGotoMarker {
 	/**

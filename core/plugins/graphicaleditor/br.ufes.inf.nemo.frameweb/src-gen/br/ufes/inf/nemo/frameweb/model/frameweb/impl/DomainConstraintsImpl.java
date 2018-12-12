@@ -33,6 +33,7 @@ import org.eclipse.uml2.uml.internal.impl.ConstraintImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class DomainConstraintsImpl extends ConstraintImpl implements DomainConstraints {
 	/**
 	 * The default value of the '{@link #getCollection() <em>Collection</em>}' attribute.

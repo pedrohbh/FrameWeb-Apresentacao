@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.internal.impl.ClassImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class AnnotationImpl extends ClassImpl implements Annotation {
 	/**
 	 * <!-- begin-user-doc -->

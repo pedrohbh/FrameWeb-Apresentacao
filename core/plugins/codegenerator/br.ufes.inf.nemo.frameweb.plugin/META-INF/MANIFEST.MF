@@ -9,3 +9,4 @@ Require-Bundle: org.eclipse.sirius;bundle-version="5.0.1",
  br.ufes.inf.nemo.frameweb
 Import-Package: org.eclipse.core.internal.resources,
  org.eclipse.uml2.uml.internal.impl
+Automatic-Module-Name: br.ufes.inf.nemo.frameweb.plugin

@@ -60,6 +60,7 @@ import org.eclipse.uml2.uml.util.UMLValidator;
  *
  * @generated
  */
+@SuppressWarnings("all")
 public class ObjectPropertyImpl extends VocabularyEntityImpl implements ObjectProperty {
 	/**
 	 * The default value of the '{@link #isDerived() <em>Is Derived</em>}' attribute.

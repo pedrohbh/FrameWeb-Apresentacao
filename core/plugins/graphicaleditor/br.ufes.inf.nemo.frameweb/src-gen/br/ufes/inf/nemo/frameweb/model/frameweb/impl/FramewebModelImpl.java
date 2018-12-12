@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.internal.impl.ModelImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class FramewebModelImpl extends ModelImpl implements FramewebModel {
 	/**
 	 * <!-- begin-user-doc -->

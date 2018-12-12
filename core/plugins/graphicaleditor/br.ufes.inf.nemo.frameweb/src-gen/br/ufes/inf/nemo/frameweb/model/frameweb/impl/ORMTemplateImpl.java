@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
+@SuppressWarnings("all")
 public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate {
 	/**
 	 * The default value of the '{@link #getClassTemplate() <em>Class Template</em>}' attribute.

@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.internal.impl.DependencyImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public abstract class NavigationDependencyImpl extends DependencyImpl implements NavigationDependency {
 	/**
 	 * <!-- begin-user-doc -->

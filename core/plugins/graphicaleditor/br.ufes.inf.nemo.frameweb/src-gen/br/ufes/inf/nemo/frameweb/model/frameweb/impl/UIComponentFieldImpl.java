@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
+@SuppressWarnings("all")
 public class UIComponentFieldImpl extends NavigationAttributeImpl implements UIComponentField {
 	/**
 	 * The cached value of the '{@link #getInject() <em>Inject</em>}' reference.

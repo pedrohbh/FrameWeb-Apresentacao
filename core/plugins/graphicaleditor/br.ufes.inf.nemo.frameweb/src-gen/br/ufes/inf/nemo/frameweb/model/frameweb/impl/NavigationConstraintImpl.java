@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.internal.impl.ConstraintImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public abstract class NavigationConstraintImpl extends ConstraintImpl implements NavigationConstraint {
 	/**
 	 * <!-- begin-user-doc -->

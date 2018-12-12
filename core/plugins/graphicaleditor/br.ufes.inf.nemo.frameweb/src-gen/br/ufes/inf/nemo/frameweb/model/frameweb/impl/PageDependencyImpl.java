@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
+@SuppressWarnings("all")
 public class PageDependencyImpl extends NavigationDependencyImpl implements PageDependency {
 	/**
 	 * The cached value of the '{@link #getPageDependencyConstraint() <em>Page Dependency Constraint</em>}' containment reference.

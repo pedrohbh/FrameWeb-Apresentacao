@@ -29,6 +29,7 @@ import org.eclipse.uml2.uml.internal.impl.OperationImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class DAOMethodImpl extends OperationImpl implements DAOMethod {
 	/**
 	 * The cached value of the '{@link #getMethodType() <em>Method Type</em>}' reference.

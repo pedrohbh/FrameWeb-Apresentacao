@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.internal.impl.StereotypeImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class AttributeMappingImpl extends StereotypeImpl implements AttributeMapping {
 	/**
 	 * <!-- begin-user-doc -->
