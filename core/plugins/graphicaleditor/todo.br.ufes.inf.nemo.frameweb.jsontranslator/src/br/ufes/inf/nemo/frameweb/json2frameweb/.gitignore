@@ -11,3 +11,9 @@
 /.JsonToFramewebLanguageTranslator.java._trace
 /.JsonToFramewebORMTranslator.java._trace
 /.JsonToFramewebFrontControllerTranslator.java._trace
+/.JsonToFramewebFrontControllerTranslator.xtendbin
+/.JsonToFramewebLanguageTranslator.xtendbin
+/.JsonToFramewebORMTranslator.xtendbin
+/JsonToFramewebFrontControllerTranslator.java
+/JsonToFramewebLanguageTranslator.java
+/JsonToFramewebORMTranslator.java

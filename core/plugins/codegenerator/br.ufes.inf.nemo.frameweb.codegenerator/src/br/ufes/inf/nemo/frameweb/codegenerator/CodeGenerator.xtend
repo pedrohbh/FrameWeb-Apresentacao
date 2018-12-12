@@ -8,11 +8,8 @@ import org.eclipse.sirius.diagram.DSemanticDiagram
 import org.eclipse.sirius.tools.api.ui.IExternalJavaAction
 import org.eclipse.ui.PlatformUI
 import org.eclipse.core.resources.IProject
-import org.eclipse.ui.IEditorInput
 import org.eclipse.core.resources.IResource
-import org.eclipse.ui.IWorkbenchWindow
-import org.eclipse.ui.IEditorPart
-import org.eclipse.ui.IWorkbenchPage
+import org.eclipse.core.runtime.Path
 
 class CodeGenerator implements IExternalJavaAction {
 
@@ -44,32 +41,35 @@ class CodeGenerator implements IExternalJavaAction {
 		entityModel
 			.toIterable()
 			.forEach[println(it)]
-			
-		println(getProject().getName())
+
+		val project = getProject()	
+		val srcFolder = project.getFolder(new Path("src"))
+		
+		println(srcFolder.getFullPath().toString())
 	}
 	
 	/**
 	 * Extrai o projeto atual que esta selecionado no Eclipse
 	 */
 	def getProject() {		
-	    val IWorkbenchWindow window = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
-	    val IWorkbenchPage activePage = window.getActivePage();
-		val IEditorPart activeEditor = activePage.getActiveEditor();
+	    val activeEditor = PlatformUI
+		    .getWorkbench()
+		    .getActiveWorkbenchWindow()
+		    .getActivePage()
+		    .getActiveEditor()
 
 		if (activeEditor !== null) {
-			val IEditorInput input = activeEditor.getEditorInput();
-			val IProject project = input.getAdapter(IProject);
+			val input = activeEditor.getEditorInput()
+			val project = input.getAdapter(IProject)
 			
 			if (project === null) {
-				val IResource resource = input.getAdapter(IResource);
+				val resource = input.getAdapter(IResource)
 				
 				if (resource !== null) {
-					return resource.getProject();
+					return resource.getProject()
 				}
 			}
 		}
-		
-		return null;
 	}
 
 }

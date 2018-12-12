@@ -17,6 +17,10 @@ class JsonToFramewebLanguageTranslator {
 		this.json = json
 	}
 
+	/**
+	 * A forma de traducao para as demais classes (ORM e FrontController) segue o mesmo formato
+	 * dessa traducao, porem com seus respectivos dados.
+	 */
 	def translate() {
 		val language = json.get("language")
 		val types = json.get("types").getAsJsonObject()

@@ -7,12 +7,14 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.EntityModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import java.util.Iterator;
 import java.util.List;
+import javax.annotation.Generated;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.ListExtensions;
 
 @SuppressWarnings("all")
+@Generated("org.eclipse.xtend.core.compiler.XtendGenerator")
 public class EntityModelCodeGenerator implements Iterator<String> {
   private Iterator<EntityClassCodeGenerator> iterator;
   

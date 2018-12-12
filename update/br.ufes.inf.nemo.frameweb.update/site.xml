@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE XML>
 <site>
-   <feature url="features/br.ufes.inf.nemo.frameweb.graphicaleditor.feature_1.0.0.201812121343.jar" id="br.ufes.inf.nemo.frameweb.graphicaleditor.feature" version="1.0.0.201812121343">
+   <feature url="features/br.ufes.inf.nemo.frameweb.codegenerator.feature_1.0.0.201812121509.jar" id="br.ufes.inf.nemo.frameweb.codegenerator.feature" version="1.0.0.201812121509">
       <category name="frameweb.category"/>
    </feature>
-   <feature url="features/br.ufes.inf.nemo.frameweb.codegenerator.feature_1.0.0.201812121343.jar" id="br.ufes.inf.nemo.frameweb.codegenerator.feature" version="1.0.0.201812121343">
+   <feature url="features/br.ufes.inf.nemo.frameweb.graphicaleditor.feature_1.0.0.201812121509.jar" id="br.ufes.inf.nemo.frameweb.graphicaleditor.feature" version="1.0.0.201812121509" os="linux,macosx,win32" nl="en" arch="x86,x86_64">
       <category name="frameweb.category"/>
    </feature>
    <category-def name="frameweb.category" label="Frameweb Editor"/>

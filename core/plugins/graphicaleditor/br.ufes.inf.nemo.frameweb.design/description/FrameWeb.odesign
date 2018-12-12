@@ -1405,7 +1405,7 @@
               <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWork']"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:ExternalJavaAction" name="xtend.codegenerator" label="Generate Source Code" forceRefresh="true" inverseSelectionOrder="true" id="XtendActionCallCodeGenerator">
+          <ownedTools xsi:type="tool_1:ExternalJavaAction" name="xtend.codegenerator" label="Generate Source Code" forceRefresh="true" elementsToSelect="aql:self" id="XtendActionCallCodeGenerator">
             <parameters name="semantic" value="aql:self.getSemanticElements()"/>
           </ownedTools>
           <ownedTools xsi:type="tool_1:ExternalJavaAction" name="Gerar código" id="JavaActionCallGerador">

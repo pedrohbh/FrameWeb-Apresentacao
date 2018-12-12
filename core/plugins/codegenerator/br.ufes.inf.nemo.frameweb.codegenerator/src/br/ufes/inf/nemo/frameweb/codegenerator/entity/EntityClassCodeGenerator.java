@@ -7,6 +7,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.DomainMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import java.net.URLDecoder;
 import java.util.List;
+import javax.annotation.Generated;
 import org.apache.commons.lang3.StringUtils;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.uml2.uml.GeneralizationSet;
@@ -15,6 +16,7 @@ import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 
 @SuppressWarnings("all")
+@Generated("org.eclipse.xtend.core.compiler.XtendGenerator")
 public class EntityClassCodeGenerator {
   private String domainPackageName;
   
