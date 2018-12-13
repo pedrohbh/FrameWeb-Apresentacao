@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
 <site>
    <feature url="features/br.ufes.inf.nemo.frameweb.codegenerator.feature_1.0.0.201812121509.jar" id="br.ufes.inf.nemo.frameweb.codegenerator.feature" version="1.0.0.201812121509">
       <category name="frameweb.category"/>

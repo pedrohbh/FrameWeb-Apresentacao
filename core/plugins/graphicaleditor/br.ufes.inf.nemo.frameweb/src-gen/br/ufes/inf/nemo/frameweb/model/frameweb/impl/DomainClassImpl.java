@@ -173,10 +173,10 @@ public class DomainClassImpl extends ClassImpl implements DomainClass {
 	@Override
 	public List<DomainAttribute> getDomainAttributes() {
 		List<DomainAttribute> domainAttributes = this.eContents()
-				.stream()
-				.filter(DomainAttribute.class::isInstance)
-				.map(DomainAttribute.class::cast)
-				.collect(Collectors.toList());
+			.stream()
+			.filter(DomainAttribute.class::isInstance)
+			.map(DomainAttribute.class::cast)
+			.collect(Collectors.toList());
 		
 		return domainAttributes;
 	}
@@ -184,10 +184,10 @@ public class DomainClassImpl extends ClassImpl implements DomainClass {
 	@Override
 	public List<DomainMethod> getDomainMethods() {
 		List<DomainMethod> domainMethods = this.eContents()
-				.stream()
-				.filter(DomainMethod.class::isInstance)
-				.map(DomainMethod.class::cast)
-				.collect(Collectors.toList());
+			.stream()
+			.filter(DomainMethod.class::isInstance)
+			.map(DomainMethod.class::cast)
+			.collect(Collectors.toList());
 		
 		return domainMethods;
 	}

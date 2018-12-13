@@ -15,6 +15,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.uml2.uml.GeneralizationSet;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 
 @SuppressWarnings("all")
@@ -27,6 +28,8 @@ public class DomainClassCodeGenerator {
   private ORMTemplate ormTemplate;
   
   /**
+   * Responsavel por gerar codigo da classe em questao
+   * 
    * @param domainClass
    * @param domainPackage
    * @param ormTemplate
@@ -55,28 +58,23 @@ public class DomainClassCodeGenerator {
     {
       String classTemplate = this.decode(this.ormTemplate.getClassTemplate());
       classTemplate = classTemplate.replace("FW_PACKAGE", this.domainPackage.getName());
-      String _xifexpression = null;
       boolean _isAbstract = this.domainClass.isAbstract();
       if (_isAbstract) {
-        _xifexpression = classTemplate.replace("FW_CLASS_VISIBILITY", "public abstract");
+        classTemplate = classTemplate.replace("FW_CLASS_VISIBILITY", "public abstract");
       } else {
-        _xifexpression = classTemplate.replace("FW_CLASS_VISIBILITY", "public");
+        classTemplate = classTemplate.replace("FW_CLASS_VISIBILITY", "public");
       }
-      classTemplate = _xifexpression;
       classTemplate = classTemplate.replace("FW_CLASS_NAME", this.domainClass.getName());
-      String _xtrycatchfinallyexpression = null;
-      try {
-        String _name = this.domainClass.getDomainGeneralization().getName();
+      final GeneralizationSet generazalitionSet = this.domainClass.getDomainGeneralization();
+      String _xifexpression = null;
+      if ((generazalitionSet == null)) {
+        _xifexpression = classTemplate = classTemplate.replace("FW_EXTENDS", "");
+      } else {
+        String _name = generazalitionSet.getName();
         String _plus = ("extends " + _name);
-        _xtrycatchfinallyexpression = classTemplate.replace("FW_EXTENDS", _plus);
-      } catch (final Throwable _t) {
-        if (_t instanceof NullPointerException) {
-          _xtrycatchfinallyexpression = classTemplate.replace("FW_EXTENDS", "");
-        } else {
-          throw Exceptions.sneakyThrow(_t);
-        }
+        _xifexpression = classTemplate = classTemplate.replace("FW_EXTENDS", _plus);
       }
-      _xblockexpression = classTemplate = _xtrycatchfinallyexpression;
+      _xblockexpression = _xifexpression;
     }
     return _xblockexpression;
   }
@@ -169,6 +167,8 @@ public class DomainClassCodeGenerator {
   
   /**
    * The magic
+   * 
+   * @param packageFolder
    */
   public void generate(final IFolder packageFolder) {
     String template = this.generateClass();

@@ -14,10 +14,11 @@ class DomainClassCodeGenerator {
 
 	DomainPackage domainPackage
 	DomainClass domainClass
-
 	ORMTemplate ormTemplate
 
 	/**
+	 * Responsavel por gerar codigo da classe em questao
+	 * 
 	 * @param domainClass
 	 * @param domainPackage
 	 * @param ormTemplate
@@ -38,7 +39,7 @@ class DomainClassCodeGenerator {
 	}
 	
 	def generateClass() {
-		var classTemplate = ormTemplate.getClassTemplate().decode()
+		var String classTemplate = ormTemplate.getClassTemplate().decode()
 		
 		classTemplate = classTemplate.replace("FW_PACKAGE", domainPackage.getName())
 		
@@ -46,10 +47,10 @@ class DomainClassCodeGenerator {
 		 * FW_CLASS_VISIBILITY tambem precisa de um template definido, senao nao sera possivel gerar
 		 * codigo para outras linguagens
 		 */
-		classTemplate = if (domainClass.isAbstract()) {
-			classTemplate.replace("FW_CLASS_VISIBILITY", "public abstract")
+		if (domainClass.isAbstract()) {
+			classTemplate = classTemplate.replace("FW_CLASS_VISIBILITY", "public abstract")
 		} else {
-			classTemplate.replace("FW_CLASS_VISIBILITY", "public")
+			classTemplate = classTemplate.replace("FW_CLASS_VISIBILITY", "public")
 		}
 		
 		classTemplate = classTemplate.replace("FW_CLASS_NAME", domainClass.getName())
@@ -58,10 +59,12 @@ class DomainClassCodeGenerator {
 		 * FW_EXTENDS tambem precisa de um template definido, senao nao sera possivel gerar
 		 * codigo para outras linguagens
 		 */
-		classTemplate = try {
-			classTemplate.replace("FW_EXTENDS", "extends " + domainClass.getDomainGeneralization().getName())
-		} catch (NullPointerException e) {
-			classTemplate.replace("FW_EXTENDS", "")
+		val generazalitionSet = domainClass.getDomainGeneralization()
+		
+		if (generazalitionSet === null) {
+			classTemplate = classTemplate.replace("FW_EXTENDS", "")
+		} else {
+			classTemplate = classTemplate.replace("FW_EXTENDS", "extends " + generazalitionSet.getName())
 		}
 	}
 	
@@ -123,6 +126,7 @@ class DomainClassCodeGenerator {
 				methodCode = methodCode.replace("FW_METHOD_VISIBILITY", "public");
 			}
 			
+			//Mudar esse try catch para um if statement
 			try {
 				methodCode = methodCode.replace("FW_METHOD_RETURN_TYPE", method.getMethodType().getName())
 			} catch (NullPointerException e) {
@@ -146,6 +150,8 @@ class DomainClassCodeGenerator {
 	
 	/**
 	 * The magic
+	 * 
+	 * @param packageFolder
 	 */
 	def generate(IFolder packageFolder) {
 		var template = generateClass()
