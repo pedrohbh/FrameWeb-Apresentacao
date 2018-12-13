@@ -4,21 +4,26 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate
 import java.net.URLDecoder
 import org.apache.commons.lang3.StringUtils
+import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage
+import org.eclipse.core.resources.IFolder
+import org.apache.commons.io.IOUtils
+import org.eclipse.core.runtime.CoreException
+import java.io.IOException
 
-class EntityClassCodeGenerator {
+class DomainClassCodeGenerator {
 
-	String domainPackageName
+	DomainPackage domainPackage
 	DomainClass domainClass
 
 	ORMTemplate ormTemplate
 
 	/**
 	 * @param domainClass
-	 * @param domainPackageName
+	 * @param domainPackage
 	 * @param ormTemplate
 	 */
-	new(DomainClass domainClass, String domainPackageName, ORMTemplate ormTemplate) {
-		this.domainPackageName = domainPackageName
+	new(DomainClass domainClass, DomainPackage domainPackage, ORMTemplate ormTemplate) {
+		this.domainPackage = domainPackage
 		this.domainClass = domainClass
 		this.ormTemplate = ormTemplate
 	}
@@ -35,7 +40,7 @@ class EntityClassCodeGenerator {
 	def generateClass() {
 		var classTemplate = ormTemplate.getClassTemplate().decode()
 		
-		classTemplate = classTemplate.replace("FW_PACKAGE", domainPackageName)
+		classTemplate = classTemplate.replace("FW_PACKAGE", domainPackage.getName())
 		
 		/*
 		 * FW_CLASS_VISIBILITY tambem precisa de um template definido, senao nao sera possivel gerar
@@ -122,6 +127,7 @@ class EntityClassCodeGenerator {
 				methodCode = methodCode.replace("FW_METHOD_RETURN_TYPE", method.getMethodType().getName())
 			} catch (NullPointerException e) {
 				methodCode = methodCode.replace("FW_METHOD_RETURN_TYPE", "void")
+				methodCode = methodCode.replace("null", "")
 			}
 
 			methodCode = methodCode.replace("FW_METHOD_NAME", method.getName())
@@ -141,10 +147,21 @@ class EntityClassCodeGenerator {
 	/**
 	 * The magic
 	 */
-	def generate() {
+	def generate(IFolder packageFolder) {
 		var template = generateClass()
 		template = template.replace("FW_CLASS_ATTRIBUTES", generateAttributes())
 		template = template.replace("FW_CLASS_METHOD", generateMethods())
+
+		val fileName = domainClass.getName() + ormTemplate.getClassExtension()
+		val classFile = packageFolder.getFile(fileName)
+		
+		try {
+			val inputStream = IOUtils.toInputStream(template, "UTF-8");
+			classFile.create(inputStream, true, null)
+			
+		} catch (CoreException | IOException e) {
+			e.printStackTrace()
+		}
 		
 		/**
 		 * TODO template.sanitize()

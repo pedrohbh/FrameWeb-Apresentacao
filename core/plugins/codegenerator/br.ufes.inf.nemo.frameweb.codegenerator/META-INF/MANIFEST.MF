@@ -14,7 +14,10 @@ Require-Bundle: org.eclipse.sirius,
  org.eclipse.ui,
  org.eclipse.ui.editors,
  org.eclipse.ui.ide,
- org.eclipse.wst.common.project.facet.core
+ org.eclipse.wst.common.project.facet.core,
+ org.eclipse.ui.workbench,
+ br.ufes.inf.nemo.frameweb.facet,
+ org.apache.commons.io
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: br.ufes.inf.nemo.frameweb.codegenerator
 Import-Package: br.ufes.inf.nemo.frameweb.codegenerator

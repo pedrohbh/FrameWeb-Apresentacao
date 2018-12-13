@@ -2,9 +2,17 @@ package br.ufes.inf.nemo.frameweb.utils;
 
 import java.util.Arrays;
 
+import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectDescription;
+import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.ui.IEditorInput;
+import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.IWorkbench;
+import org.eclipse.ui.IWorkbenchPage;
+import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 
 public class ProjectUtils {
 
@@ -58,5 +66,56 @@ public class ProjectUtils {
 
 		projectDescription.setNatureIds(natureIds);
 		project.setDescription(projectDescription, null);
+	}
+	
+	/**
+	 * Retorna uma referencia ao projeto selecionado no eclipse baseado no editor aberto
+	 * no momento da chamada da funcao.
+	 * 
+	 * @return IProject or null
+	 */
+	public static IProject getProject() {
+		IWorkbench workbench = PlatformUI.getWorkbench();
+		IWorkbenchWindow window = workbench.getActiveWorkbenchWindow();
+		IWorkbenchPage page = window.getActivePage();
+		IEditorPart activeEditor = page.getActiveEditor();
+		
+		if (activeEditor != null) {
+			IEditorInput input = activeEditor.getEditorInput();
+			IProject project = input.getAdapter(IProject.class);
+			
+			if (project == null) {
+				IResource resource = input.getAdapter(IResource.class);
+				
+				if (resource != null) {
+					return resource.getProject();
+				}
+			}
+		}
+		
+		return null;
+	}
+	
+	/**
+	 * Cria IFolder's em cascata dentro de um dado IFolder, ou seja, um pacote
+	 * 
+	 * @param srcFolder
+	 * @param foldersName
+	 */
+	public static void createPackage(IFolder srcFolder, String packagePath) {
+		try {
+			IFolder currentFolder = srcFolder;
+			
+			for (String p : packagePath.split("/")) {
+				currentFolder = currentFolder.getFolder(p);
+				
+				if (!currentFolder.exists()) {
+					currentFolder.create(true, true, null);
+				}
+			}
+			
+		} catch (CoreException e) {
+			e.printStackTrace();
+		}
 	}
 }

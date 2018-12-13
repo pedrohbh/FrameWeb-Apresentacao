@@ -3,17 +3,24 @@ package br.ufes.inf.nemo.frameweb.codegenerator.entity;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAttribute;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainMethod;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.URLDecoder;
 import java.util.List;
 import javax.annotation.Generated;
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IFolder;
+import org.eclipse.core.runtime.CoreException;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 
 @SuppressWarnings("all")
 @Generated("org.eclipse.xtend.core.compiler.XtendGenerator")
-public class EntityClassCodeGenerator {
-  private String domainPackageName;
+public class DomainClassCodeGenerator {
+  private DomainPackage domainPackage;
   
   private DomainClass domainClass;
   
@@ -21,11 +28,11 @@ public class EntityClassCodeGenerator {
   
   /**
    * @param domainClass
-   * @param domainPackageName
+   * @param domainPackage
    * @param ormTemplate
    */
-  public EntityClassCodeGenerator(final DomainClass domainClass, final String domainPackageName, final ORMTemplate ormTemplate) {
-    this.domainPackageName = domainPackageName;
+  public DomainClassCodeGenerator(final DomainClass domainClass, final DomainPackage domainPackage, final ORMTemplate ormTemplate) {
+    this.domainPackage = domainPackage;
     this.domainClass = domainClass;
     this.ormTemplate = ormTemplate;
   }
@@ -47,7 +54,7 @@ public class EntityClassCodeGenerator {
     String _xblockexpression = null;
     {
       String classTemplate = this.decode(this.ormTemplate.getClassTemplate());
-      classTemplate = classTemplate.replace("FW_PACKAGE", this.domainPackageName);
+      classTemplate = classTemplate.replace("FW_PACKAGE", this.domainPackage.getName());
       String _xifexpression = null;
       boolean _isAbstract = this.domainClass.isAbstract();
       if (_isAbstract) {
@@ -139,6 +146,7 @@ public class EntityClassCodeGenerator {
           } catch (final Throwable _t) {
             if (_t instanceof NullPointerException) {
               methodCode = methodCode.replace("FW_METHOD_RETURN_TYPE", "void");
+              methodCode = methodCode.replace("null", "");
             } else {
               throw Exceptions.sneakyThrow(_t);
             }
@@ -162,13 +170,24 @@ public class EntityClassCodeGenerator {
   /**
    * The magic
    */
-  public String generate() {
-    String _xblockexpression = null;
-    {
-      String template = this.generateClass();
-      template = template.replace("FW_CLASS_ATTRIBUTES", this.generateAttributes());
-      _xblockexpression = template = template.replace("FW_CLASS_METHOD", this.generateMethods());
+  public void generate(final IFolder packageFolder) {
+    String template = this.generateClass();
+    template = template.replace("FW_CLASS_ATTRIBUTES", this.generateAttributes());
+    template = template.replace("FW_CLASS_METHOD", this.generateMethods());
+    String _name = this.domainClass.getName();
+    String _classExtension = this.ormTemplate.getClassExtension();
+    final String fileName = (_name + _classExtension);
+    final IFile classFile = packageFolder.getFile(fileName);
+    try {
+      final InputStream inputStream = IOUtils.toInputStream(template, "UTF-8");
+      classFile.create(inputStream, true, null);
+    } catch (final Throwable _t) {
+      if (_t instanceof CoreException || _t instanceof IOException) {
+        final Exception e = (Exception)_t;
+        e.printStackTrace();
+      } else {
+        throw Exceptions.sneakyThrow(_t);
+      }
     }
-    return _xblockexpression;
   }
 }
