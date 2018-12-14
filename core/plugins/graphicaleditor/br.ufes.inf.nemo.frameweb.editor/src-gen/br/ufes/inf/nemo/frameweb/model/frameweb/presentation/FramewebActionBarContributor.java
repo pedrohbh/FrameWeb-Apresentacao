@@ -161,6 +161,7 @@ public class FramewebActionBarContributor extends EditingDomainActionBarContribu
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("frameweb-settings"));
 		toolBarManager.add(new Separator("frameweb-additions"));
 	}

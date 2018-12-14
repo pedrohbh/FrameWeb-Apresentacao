@@ -1,9 +1,7 @@
 package br.ufes.inf.nemo.frameweb.codegenerator.entity;
 
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAttribute;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainMethod;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,14 +13,14 @@ import org.apache.commons.lang3.StringUtils;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.uml2.uml.GeneralizationSet;
+import org.eclipse.uml2.uml.Property;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 
 @SuppressWarnings("all")
 @Generated("org.eclipse.xtend.core.compiler.XtendGenerator")
 public class DomainClassCodeGenerator {
-  private DomainPackage domainPackage;
-  
   private DomainClass domainClass;
   
   private ORMTemplate ormTemplate;
@@ -34,8 +32,7 @@ public class DomainClassCodeGenerator {
    * @param domainPackage
    * @param ormTemplate
    */
-  public DomainClassCodeGenerator(final DomainPackage domainPackage, final DomainClass domainClass, final ORMTemplate ormTemplate) {
-    this.domainPackage = domainPackage;
+  public DomainClassCodeGenerator(final DomainClass domainClass, final ORMTemplate ormTemplate) {
     this.domainClass = domainClass;
     this.ormTemplate = ormTemplate;
   }
@@ -57,7 +54,7 @@ public class DomainClassCodeGenerator {
     String _xblockexpression = null;
     {
       String classTemplate = this.decode(this.ormTemplate.getClassTemplate());
-      classTemplate = classTemplate.replace("FW_PACKAGE", this.domainPackage.getName());
+      classTemplate = classTemplate.replace("FW_PACKAGE", this.domainClass.getPackage().getName());
       boolean _isAbstract = this.domainClass.isAbstract();
       if (_isAbstract) {
         classTemplate = classTemplate.replace("FW_CLASS_VISIBILITY", "public abstract");
@@ -86,9 +83,9 @@ public class DomainClassCodeGenerator {
     String _xblockexpression = null;
     {
       final String attributeTemplate = this.decode(this.ormTemplate.getAttributeTemplate());
-      final List<DomainAttribute> attributes = this.domainClass.getDomainAttributes();
+      final EList<Property> attributes = this.domainClass.getAttributes();
       final StringBuilder code = new StringBuilder();
-      for (final DomainAttribute attribute : attributes) {
+      for (final Property attribute : attributes) {
         {
           String attributeCode = attributeTemplate;
           attributeCode = attributeCode.replace("FW_ATTRIBUTE_TYPE", attribute.getType().getName());
@@ -98,7 +95,7 @@ public class DomainClassCodeGenerator {
           code.append(attributeCode);
           int _size = attributes.size();
           int _minus = (_size - 1);
-          DomainAttribute _get = attributes.get(_minus);
+          Property _get = attributes.get(_minus);
           boolean _tripleNotEquals = (attribute != _get);
           if (_tripleNotEquals) {
             code.append("\n\n");
@@ -177,10 +174,14 @@ public class DomainClassCodeGenerator {
     String _name = this.domainClass.getName();
     String _classExtension = this.ormTemplate.getClassExtension();
     final String fileName = (_name + _classExtension);
-    final IFile classFile = packageFolder.getFile(fileName);
+    final IFile file = packageFolder.getFile(fileName);
     try {
       final InputStream inputStream = IOUtils.toInputStream(template, "UTF-8");
-      classFile.create(inputStream, true, null);
+      boolean _exists = file.exists();
+      if (_exists) {
+        file.delete(true, null);
+      }
+      file.create(inputStream, true, null);
     } catch (final Throwable _t) {
       if (_t instanceof CoreException || _t instanceof IOException) {
         final Exception e = (Exception)_t;

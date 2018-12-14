@@ -316,7 +316,7 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 		if (eIsProxy())
 			return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (size: ");
 		result.append(size);
 		result.append(", isNull: ");

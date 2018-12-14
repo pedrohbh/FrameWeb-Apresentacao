@@ -4,7 +4,6 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate
 import java.net.URLDecoder
 import org.apache.commons.lang3.StringUtils
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage
 import org.eclipse.core.resources.IFolder
 import org.apache.commons.io.IOUtils
 import org.eclipse.core.runtime.CoreException
@@ -12,7 +11,6 @@ import java.io.IOException
 
 class DomainClassCodeGenerator {
 
-	DomainPackage domainPackage
 	DomainClass domainClass
 	ORMTemplate ormTemplate
 
@@ -23,8 +21,7 @@ class DomainClassCodeGenerator {
 	 * @param domainPackage
 	 * @param ormTemplate
 	 */
-	new(DomainPackage domainPackage, DomainClass domainClass, ORMTemplate ormTemplate) {
-		this.domainPackage = domainPackage
+	new(DomainClass domainClass, ORMTemplate ormTemplate) {
 		this.domainClass = domainClass
 		this.ormTemplate = ormTemplate
 	}
@@ -41,7 +38,7 @@ class DomainClassCodeGenerator {
 	def generateClass() {
 		var String classTemplate = ormTemplate.getClassTemplate().decode()
 		
-		classTemplate = classTemplate.replace("FW_PACKAGE", domainPackage.getName())
+		classTemplate = classTemplate.replace("FW_PACKAGE", domainClass.getPackage().getName())
 		
 		/*
 		 * FW_CLASS_VISIBILITY tambem precisa de um template definido, senao nao sera possivel gerar
@@ -73,7 +70,7 @@ class DomainClassCodeGenerator {
 	 */
 	def generateAttributes() {
 		val attributeTemplate = ormTemplate.getAttributeTemplate().decode()
-		val attributes = domainClass.getDomainAttributes();
+		val attributes = domainClass.getAttributes();
 		
 		val code = new StringBuilder()
 		
@@ -159,11 +156,17 @@ class DomainClassCodeGenerator {
 		template = template.replace("FW_CLASS_METHOD", generateMethods())
 
 		val fileName = domainClass.getName() + ormTemplate.getClassExtension()
-		val classFile = packageFolder.getFile(fileName)
+		val file = packageFolder.getFile(fileName)
 		
 		try {
 			val inputStream = IOUtils.toInputStream(template, "UTF-8");
-			classFile.create(inputStream, true, null)
+			
+			//TODO atualizar o conteudo do arquivo ao inves de sobrescrever o codigo
+			if (file.exists()) {
+				file.delete(true, null);
+			}
+			
+			file.create(inputStream, true, null)
 			
 		} catch (CoreException | IOException e) {
 			e.printStackTrace()

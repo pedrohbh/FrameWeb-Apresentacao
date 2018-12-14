@@ -178,7 +178,7 @@ public class DAOClassImpl extends ClassImpl implements DAOClass {
 		if (eIsProxy())
 			return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (sufix: ");
 		result.append(sufix);
 		result.append(", infix: ");

@@ -2962,7 +2962,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 		if (eIsProxy())
 			return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (isStatic: ");
 		result.append(isStatic);
 		result.append(", isOrdered: ");

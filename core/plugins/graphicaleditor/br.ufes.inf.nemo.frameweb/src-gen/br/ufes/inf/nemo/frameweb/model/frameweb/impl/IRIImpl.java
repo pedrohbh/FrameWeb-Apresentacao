@@ -209,7 +209,7 @@ public class IRIImpl extends PropertyImpl implements IRI {
 		if (eIsProxy())
 			return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (iri: ");
 		result.append(iri);
 		result.append(", iriVersion: ");

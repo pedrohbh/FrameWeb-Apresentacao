@@ -48,26 +48,19 @@ public interface DomainClass extends org.eclipse.uml2.uml.Class {
 	 * @generated
 	 */
 	void setTable(String value);
-	
-	/**
-	 * Extrai os atributos de uma classe de dominio
-	 * 
-	 * @return List<DomainAttribute>
-	 */
-	public List<DomainAttribute> getDomainAttributes();
-	
+
 	/**
 	 * Extrai os metodos de uma classe de dominio
 	 * 
 	 * @return List<DomainMethod>
 	 */
 	public List<DomainMethod> getDomainMethods();
-	
+
 	/**
 	 * Extrai a superclasse de uma classe de dominio
 	 * 
 	 * @param domainClass
 	 */
 	public GeneralizationSet getDomainGeneralization();
-	
+
 } // DomainClass

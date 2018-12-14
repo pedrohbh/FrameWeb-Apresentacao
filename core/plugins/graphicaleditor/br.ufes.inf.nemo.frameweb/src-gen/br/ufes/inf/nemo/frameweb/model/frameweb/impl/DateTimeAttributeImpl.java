@@ -156,7 +156,7 @@ public class DateTimeAttributeImpl extends AttributeImpl implements DateTimeAttr
 		if (eIsProxy())
 			return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (dateTimePrecision: ");
 		result.append(dateTimePrecision);
 		result.append(')');

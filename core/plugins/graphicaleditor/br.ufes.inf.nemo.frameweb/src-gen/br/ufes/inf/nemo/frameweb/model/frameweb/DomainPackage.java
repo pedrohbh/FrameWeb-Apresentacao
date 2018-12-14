@@ -15,10 +15,10 @@ import java.util.List;
  * @generated
  */
 public interface DomainPackage extends org.eclipse.uml2.uml.Package {
-	
+
 	/**
 	 * Extrai as classes do dominio do pacote de dominio do modelo de entidades
 	 * @return List<DomainClass>
-	 */	
+	 */
 	public List<DomainClass> getDomainClasses();
 } // DomainPackage

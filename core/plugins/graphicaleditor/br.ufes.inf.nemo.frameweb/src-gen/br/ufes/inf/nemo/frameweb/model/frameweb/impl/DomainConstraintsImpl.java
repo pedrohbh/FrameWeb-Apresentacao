@@ -320,7 +320,7 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 		if (eIsProxy())
 			return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (collection: ");
 		result.append(collection);
 		result.append(", fetch: ");

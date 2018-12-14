@@ -49,8 +49,11 @@ public class ORMTemplateItemProvider extends FrameworkProfileItemProvider {
 			addClassTemplatePropertyDescriptor(object);
 			addClassExtensionPropertyDescriptor(object);
 			addAttributeTemplatePropertyDescriptor(object);
+			addGetterAndSetterTemplatePropertyDescriptor(object);
 			addMethodTemplatePropertyDescriptor(object);
+			addMethodReturnTemplatePropertyDescriptor(object);
 			addAbstractMethodTemplatePropertyDescriptor(object);
+			addGeneralizationTemplatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -104,6 +107,22 @@ public class ORMTemplateItemProvider extends FrameworkProfileItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Getter And Setter Template feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGetterAndSetterTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ORMTemplate_getterAndSetterTemplate_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ORMTemplate_getterAndSetterTemplate_feature",
+						"_UI_ORMTemplate_type"),
+				FramewebPackage.Literals.ORM_TEMPLATE__GETTER_AND_SETTER_TEMPLATE, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Method Template feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -120,6 +139,22 @@ public class ORMTemplateItemProvider extends FrameworkProfileItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Method Return Template feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMethodReturnTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ORMTemplate_methodReturnTemplate_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ORMTemplate_methodReturnTemplate_feature",
+								"_UI_ORMTemplate_type"),
+						FramewebPackage.Literals.ORM_TEMPLATE__METHOD_RETURN_TEMPLATE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Abstract Method Template feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -132,6 +167,22 @@ public class ORMTemplateItemProvider extends FrameworkProfileItemProvider {
 				getString("_UI_PropertyDescriptor_description", "_UI_ORMTemplate_abstractMethodTemplate_feature",
 						"_UI_ORMTemplate_type"),
 				FramewebPackage.Literals.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Generalization Template feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGeneralizationTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ORMTemplate_generalizationTemplate_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ORMTemplate_generalizationTemplate_feature",
+						"_UI_ORMTemplate_type"),
+				FramewebPackage.Literals.ORM_TEMPLATE__GENERALIZATION_TEMPLATE, true, false, false,
 				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -184,8 +235,11 @@ public class ORMTemplateItemProvider extends FrameworkProfileItemProvider {
 		case FramewebPackage.ORM_TEMPLATE__CLASS_TEMPLATE:
 		case FramewebPackage.ORM_TEMPLATE__CLASS_EXTENSION:
 		case FramewebPackage.ORM_TEMPLATE__ATTRIBUTE_TEMPLATE:
+		case FramewebPackage.ORM_TEMPLATE__GETTER_AND_SETTER_TEMPLATE:
 		case FramewebPackage.ORM_TEMPLATE__METHOD_TEMPLATE:
+		case FramewebPackage.ORM_TEMPLATE__METHOD_RETURN_TEMPLATE:
 		case FramewebPackage.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE:
+		case FramewebPackage.ORM_TEMPLATE__GENERALIZATION_TEMPLATE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

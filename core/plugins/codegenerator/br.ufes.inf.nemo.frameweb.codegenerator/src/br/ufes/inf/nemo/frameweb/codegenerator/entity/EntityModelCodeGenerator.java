@@ -27,7 +27,7 @@ public class EntityModelCodeGenerator {
 
 		domainClasses = domainPackage.getDomainClasses()
 			.stream()
-			.map(domainClass -> new DomainClassCodeGenerator(domainPackage, domainClass, ormTemplate))
+			.map(domainClass -> new DomainClassCodeGenerator(domainClass, ormTemplate))
 			.collect(Collectors.toList());
 	}
 
@@ -37,9 +37,11 @@ public class EntityModelCodeGenerator {
 
 	public void generate(IFolder srcFolder) {
 		String packagePath = domainPackage.getName().replaceAll("[^A-Za-z0-9]", "/");
+		
 		ProjectUtils.createPackage(srcFolder, packagePath);
-
+		
 		IFolder packageFolder = srcFolder.getFolder(packagePath);
+		
 		domainClasses.forEach(it -> it.generate(packageFolder));
 	}
 

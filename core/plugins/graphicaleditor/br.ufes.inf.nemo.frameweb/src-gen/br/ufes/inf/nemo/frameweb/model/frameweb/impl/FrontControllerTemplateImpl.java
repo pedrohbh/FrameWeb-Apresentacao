@@ -479,7 +479,7 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 		if (eIsProxy())
 			return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (classTemplate: ");
 		result.append(classTemplate);
 		result.append(", methodTemplate: ");

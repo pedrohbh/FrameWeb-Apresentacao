@@ -22,8 +22,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getClassTemplate <em>Class Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getClassExtension <em>Class Extension</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getAttributeTemplate <em>Attribute Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getGetterAndSetterTemplate <em>Getter And Setter Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getMethodTemplate <em>Method Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getMethodReturnTemplate <em>Method Return Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getAbstractMethodTemplate <em>Abstract Method Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getGeneralizationTemplate <em>Generalization Template</em>}</li>
  * </ul>
  *
  * @generated
@@ -91,6 +94,26 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	protected String attributeTemplate = ATTRIBUTE_TEMPLATE_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getGetterAndSetterTemplate() <em>Getter And Setter Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGetterAndSetterTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String GETTER_AND_SETTER_TEMPLATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getGetterAndSetterTemplate() <em>Getter And Setter Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGetterAndSetterTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected String getterAndSetterTemplate = GETTER_AND_SETTER_TEMPLATE_EDEFAULT;
+
+	/**
 	 * The default value of the '{@link #getMethodTemplate() <em>Method Template</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -111,6 +134,26 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	protected String methodTemplate = METHOD_TEMPLATE_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getMethodReturnTemplate() <em>Method Return Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMethodReturnTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String METHOD_RETURN_TEMPLATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getMethodReturnTemplate() <em>Method Return Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMethodReturnTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected String methodReturnTemplate = METHOD_RETURN_TEMPLATE_EDEFAULT;
+
+	/**
 	 * The default value of the '{@link #getAbstractMethodTemplate() <em>Abstract Method Template</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -129,6 +172,26 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @ordered
 	 */
 	protected String abstractMethodTemplate = ABSTRACT_METHOD_TEMPLATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getGeneralizationTemplate() <em>Generalization Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGeneralizationTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String GENERALIZATION_TEMPLATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getGeneralizationTemplate() <em>Generalization Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGeneralizationTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected String generalizationTemplate = GENERALIZATION_TEMPLATE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -220,6 +283,29 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getGetterAndSetterTemplate() {
+		return getterAndSetterTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGetterAndSetterTemplate(String newGetterAndSetterTemplate) {
+		String oldGetterAndSetterTemplate = getterAndSetterTemplate;
+		getterAndSetterTemplate = newGetterAndSetterTemplate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					FramewebPackage.ORM_TEMPLATE__GETTER_AND_SETTER_TEMPLATE, oldGetterAndSetterTemplate,
+					getterAndSetterTemplate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getMethodTemplate() {
 		return methodTemplate;
 	}
@@ -235,6 +321,28 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.ORM_TEMPLATE__METHOD_TEMPLATE,
 					oldMethodTemplate, methodTemplate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getMethodReturnTemplate() {
+		return methodReturnTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMethodReturnTemplate(String newMethodReturnTemplate) {
+		String oldMethodReturnTemplate = methodReturnTemplate;
+		methodReturnTemplate = newMethodReturnTemplate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.ORM_TEMPLATE__METHOD_RETURN_TEMPLATE,
+					oldMethodReturnTemplate, methodReturnTemplate));
 	}
 
 	/**
@@ -265,6 +373,28 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getGeneralizationTemplate() {
+		return generalizationTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGeneralizationTemplate(String newGeneralizationTemplate) {
+		String oldGeneralizationTemplate = generalizationTemplate;
+		generalizationTemplate = newGeneralizationTemplate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.ORM_TEMPLATE__GENERALIZATION_TEMPLATE,
+					oldGeneralizationTemplate, generalizationTemplate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -274,10 +404,16 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 			return getClassExtension();
 		case FramewebPackage.ORM_TEMPLATE__ATTRIBUTE_TEMPLATE:
 			return getAttributeTemplate();
+		case FramewebPackage.ORM_TEMPLATE__GETTER_AND_SETTER_TEMPLATE:
+			return getGetterAndSetterTemplate();
 		case FramewebPackage.ORM_TEMPLATE__METHOD_TEMPLATE:
 			return getMethodTemplate();
+		case FramewebPackage.ORM_TEMPLATE__METHOD_RETURN_TEMPLATE:
+			return getMethodReturnTemplate();
 		case FramewebPackage.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE:
 			return getAbstractMethodTemplate();
+		case FramewebPackage.ORM_TEMPLATE__GENERALIZATION_TEMPLATE:
+			return getGeneralizationTemplate();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -299,11 +435,20 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		case FramewebPackage.ORM_TEMPLATE__ATTRIBUTE_TEMPLATE:
 			setAttributeTemplate((String) newValue);
 			return;
+		case FramewebPackage.ORM_TEMPLATE__GETTER_AND_SETTER_TEMPLATE:
+			setGetterAndSetterTemplate((String) newValue);
+			return;
 		case FramewebPackage.ORM_TEMPLATE__METHOD_TEMPLATE:
 			setMethodTemplate((String) newValue);
 			return;
+		case FramewebPackage.ORM_TEMPLATE__METHOD_RETURN_TEMPLATE:
+			setMethodReturnTemplate((String) newValue);
+			return;
 		case FramewebPackage.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE:
 			setAbstractMethodTemplate((String) newValue);
+			return;
+		case FramewebPackage.ORM_TEMPLATE__GENERALIZATION_TEMPLATE:
+			setGeneralizationTemplate((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -326,11 +471,20 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		case FramewebPackage.ORM_TEMPLATE__ATTRIBUTE_TEMPLATE:
 			setAttributeTemplate(ATTRIBUTE_TEMPLATE_EDEFAULT);
 			return;
+		case FramewebPackage.ORM_TEMPLATE__GETTER_AND_SETTER_TEMPLATE:
+			setGetterAndSetterTemplate(GETTER_AND_SETTER_TEMPLATE_EDEFAULT);
+			return;
 		case FramewebPackage.ORM_TEMPLATE__METHOD_TEMPLATE:
 			setMethodTemplate(METHOD_TEMPLATE_EDEFAULT);
 			return;
+		case FramewebPackage.ORM_TEMPLATE__METHOD_RETURN_TEMPLATE:
+			setMethodReturnTemplate(METHOD_RETURN_TEMPLATE_EDEFAULT);
+			return;
 		case FramewebPackage.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE:
 			setAbstractMethodTemplate(ABSTRACT_METHOD_TEMPLATE_EDEFAULT);
+			return;
+		case FramewebPackage.ORM_TEMPLATE__GENERALIZATION_TEMPLATE:
+			setGeneralizationTemplate(GENERALIZATION_TEMPLATE_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -353,12 +507,21 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		case FramewebPackage.ORM_TEMPLATE__ATTRIBUTE_TEMPLATE:
 			return ATTRIBUTE_TEMPLATE_EDEFAULT == null ? attributeTemplate != null
 					: !ATTRIBUTE_TEMPLATE_EDEFAULT.equals(attributeTemplate);
+		case FramewebPackage.ORM_TEMPLATE__GETTER_AND_SETTER_TEMPLATE:
+			return GETTER_AND_SETTER_TEMPLATE_EDEFAULT == null ? getterAndSetterTemplate != null
+					: !GETTER_AND_SETTER_TEMPLATE_EDEFAULT.equals(getterAndSetterTemplate);
 		case FramewebPackage.ORM_TEMPLATE__METHOD_TEMPLATE:
 			return METHOD_TEMPLATE_EDEFAULT == null ? methodTemplate != null
 					: !METHOD_TEMPLATE_EDEFAULT.equals(methodTemplate);
+		case FramewebPackage.ORM_TEMPLATE__METHOD_RETURN_TEMPLATE:
+			return METHOD_RETURN_TEMPLATE_EDEFAULT == null ? methodReturnTemplate != null
+					: !METHOD_RETURN_TEMPLATE_EDEFAULT.equals(methodReturnTemplate);
 		case FramewebPackage.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE:
 			return ABSTRACT_METHOD_TEMPLATE_EDEFAULT == null ? abstractMethodTemplate != null
 					: !ABSTRACT_METHOD_TEMPLATE_EDEFAULT.equals(abstractMethodTemplate);
+		case FramewebPackage.ORM_TEMPLATE__GENERALIZATION_TEMPLATE:
+			return GENERALIZATION_TEMPLATE_EDEFAULT == null ? generalizationTemplate != null
+					: !GENERALIZATION_TEMPLATE_EDEFAULT.equals(generalizationTemplate);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -373,17 +536,23 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		if (eIsProxy())
 			return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (classTemplate: ");
 		result.append(classTemplate);
 		result.append(", classExtension: ");
 		result.append(classExtension);
 		result.append(", attributeTemplate: ");
 		result.append(attributeTemplate);
+		result.append(", getterAndSetterTemplate: ");
+		result.append(getterAndSetterTemplate);
 		result.append(", methodTemplate: ");
 		result.append(methodTemplate);
+		result.append(", methodReturnTemplate: ");
+		result.append(methodReturnTemplate);
 		result.append(", abstractMethodTemplate: ");
 		result.append(abstractMethodTemplate);
+		result.append(", generalizationTemplate: ");
+		result.append(generalizationTemplate);
 		result.append(')');
 		return result.toString();
 	}

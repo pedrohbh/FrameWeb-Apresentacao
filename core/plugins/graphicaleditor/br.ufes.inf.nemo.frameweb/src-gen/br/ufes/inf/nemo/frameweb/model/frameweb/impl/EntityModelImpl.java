@@ -37,13 +37,9 @@ public class EntityModelImpl extends FramewebModelImpl implements EntityModel {
 	@Override
 	public DomainPackage getDomainPackage() {
 		try {
-			DomainPackage domainPackage = this.eContents()
-				.stream()
-				.filter(DomainPackage.class::isInstance)
-				.map(DomainPackage.class::cast)
-				.findFirst()
-				.get();
-			
+			DomainPackage domainPackage = this.eContents().stream().filter(DomainPackage.class::isInstance)
+					.map(DomainPackage.class::cast).findFirst().get();
+
 			return domainPackage;
 
 		} catch (NullPointerException e) {

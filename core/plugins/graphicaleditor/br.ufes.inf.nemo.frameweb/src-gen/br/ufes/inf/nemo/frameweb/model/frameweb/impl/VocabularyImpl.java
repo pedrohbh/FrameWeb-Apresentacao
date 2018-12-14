@@ -356,7 +356,7 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 		if (eIsProxy())
 			return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (vocabularyDocument: ");
 		result.append(vocabularyDocument);
 		result.append(')');

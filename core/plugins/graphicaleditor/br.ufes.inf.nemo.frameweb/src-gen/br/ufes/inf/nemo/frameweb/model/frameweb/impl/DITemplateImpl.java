@@ -428,7 +428,7 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 		if (eIsProxy())
 			return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (interfaceTemplate: ");
 		result.append(interfaceTemplate);
 		result.append(", interfaceExtension: ");

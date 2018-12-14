@@ -2,7 +2,6 @@
  */
 package br.ufes.inf.nemo.frameweb.model.frameweb.impl;
 
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAttribute;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainGeneralization;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainMethod;
@@ -163,7 +162,7 @@ public class DomainClassImpl extends ClassImpl implements DomainClass {
 		if (eIsProxy())
 			return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (table: ");
 		result.append(table);
 		result.append(')');
@@ -171,43 +170,24 @@ public class DomainClassImpl extends ClassImpl implements DomainClass {
 	}
 
 	@Override
-	public List<DomainAttribute> getDomainAttributes() {
-		List<DomainAttribute> domainAttributes = this.eContents()
-			.stream()
-			.filter(DomainAttribute.class::isInstance)
-			.map(DomainAttribute.class::cast)
-			.collect(Collectors.toList());
-		
-		return domainAttributes;
+	public List<DomainMethod> getDomainMethods() {
+		List<DomainMethod> domainMethods = this.eContents().stream().filter(DomainMethod.class::isInstance)
+				.map(DomainMethod.class::cast).collect(Collectors.toList());
+
+		return domainMethods;
 	}
 
 	@Override
-	public List<DomainMethod> getDomainMethods() {
-		List<DomainMethod> domainMethods = this.eContents()
-			.stream()
-			.filter(DomainMethod.class::isInstance)
-			.map(DomainMethod.class::cast)
-			.collect(Collectors.toList());
-		
-		return domainMethods;
-	}
-	
-	@Override
 	public GeneralizationSet getDomainGeneralization() {
 		try {
-			DomainGeneralization domainGeneralization = this.eContents()
-				.stream()
-				.filter(DomainGeneralization.class::isInstance)
-				.map(DomainGeneralization.class::cast)
-				.findFirst()
-				.get();
-			
-			GeneralizationSet generalizationSet = domainGeneralization
-				.getGeneralizationSets()
-				.get(0);
-			
+			DomainGeneralization domainGeneralization = this.eContents().stream()
+					.filter(DomainGeneralization.class::isInstance).map(DomainGeneralization.class::cast).findFirst()
+					.get();
+
+			GeneralizationSet generalizationSet = domainGeneralization.getGeneralizationSets().get(0);
+
 			return generalizationSet;
-			
+
 		} catch (NullPointerException | NoSuchElementException e2) {
 			return null;
 		}

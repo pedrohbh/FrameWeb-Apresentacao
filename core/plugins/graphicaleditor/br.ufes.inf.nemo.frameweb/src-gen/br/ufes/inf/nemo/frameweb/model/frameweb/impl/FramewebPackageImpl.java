@@ -857,7 +857,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link FramewebPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -872,9 +872,10 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 			return (FramewebPackage) EPackage.Registry.INSTANCE.getEPackage(FramewebPackage.eNS_URI);
 
 		// Obtain or create and register package
-		FramewebPackageImpl theFramewebPackage = (FramewebPackageImpl) (EPackage.Registry.INSTANCE
-				.get(eNS_URI) instanceof FramewebPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI)
-						: new FramewebPackageImpl());
+		Object registeredFramewebPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		FramewebPackageImpl theFramewebPackage = registeredFramewebPackage instanceof FramewebPackageImpl
+				? (FramewebPackageImpl) registeredFramewebPackage
+				: new FramewebPackageImpl();
 
 		isInited = true;
 
@@ -2495,7 +2496,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getORMTemplate_MethodTemplate() {
+	public EAttribute getORMTemplate_GetterAndSetterTemplate() {
 		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -2504,8 +2505,35 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getORMTemplate_AbstractMethodTemplate() {
+	public EAttribute getORMTemplate_MethodTemplate() {
 		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getORMTemplate_MethodReturnTemplate() {
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getORMTemplate_AbstractMethodTemplate() {
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getORMTemplate_GeneralizationTemplate() {
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -2924,8 +2952,11 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__CLASS_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__CLASS_EXTENSION);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__ATTRIBUTE_TEMPLATE);
+		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__GETTER_AND_SETTER_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__METHOD_TEMPLATE);
+		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__METHOD_RETURN_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE);
+		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__GENERALIZATION_TEMPLATE);
 
 		// Create enums
 		frameworkCategoryListEEnum = createEEnum(FRAMEWORK_CATEGORY_LIST);
@@ -3601,10 +3632,19 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getORMTemplate_AttributeTemplate(), theTypesPackage.getString(), "attributeTemplate", null, 0, 1,
 				ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getORMTemplate_GetterAndSetterTemplate(), theTypesPackage.getString(), "getterAndSetterTemplate",
+				null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getORMTemplate_MethodTemplate(), theTypesPackage.getString(), "methodTemplate", null, 0, 1,
 				ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getORMTemplate_MethodReturnTemplate(), theTypesPackage.getString(), "methodReturnTemplate", null,
+				0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getORMTemplate_AbstractMethodTemplate(), theTypesPackage.getString(), "abstractMethodTemplate",
+				null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getORMTemplate_GeneralizationTemplate(), theTypesPackage.getString(), "generalizationTemplate",
 				null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
