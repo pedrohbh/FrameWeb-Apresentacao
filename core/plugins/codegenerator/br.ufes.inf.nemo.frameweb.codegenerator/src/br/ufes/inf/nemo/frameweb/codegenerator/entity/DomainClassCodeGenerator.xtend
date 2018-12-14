@@ -23,7 +23,7 @@ class DomainClassCodeGenerator {
 	 * @param domainPackage
 	 * @param ormTemplate
 	 */
-	new(DomainClass domainClass, DomainPackage domainPackage, ORMTemplate ormTemplate) {
+	new(DomainPackage domainPackage, DomainClass domainClass, ORMTemplate ormTemplate) {
 		this.domainPackage = domainPackage
 		this.domainClass = domainClass
 		this.ormTemplate = ormTemplate

@@ -34,7 +34,7 @@ public class DomainClassCodeGenerator {
    * @param domainPackage
    * @param ormTemplate
    */
-  public DomainClassCodeGenerator(final DomainClass domainClass, final DomainPackage domainPackage, final ORMTemplate ormTemplate) {
+  public DomainClassCodeGenerator(final DomainPackage domainPackage, final DomainClass domainClass, final ORMTemplate ormTemplate) {
     this.domainPackage = domainPackage;
     this.domainClass = domainClass;
     this.ormTemplate = ormTemplate;
