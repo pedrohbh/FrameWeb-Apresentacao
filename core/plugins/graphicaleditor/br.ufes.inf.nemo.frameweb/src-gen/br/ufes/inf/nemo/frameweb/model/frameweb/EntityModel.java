@@ -13,11 +13,4 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @generated
  */
 public interface EntityModel extends FramewebModel {
-
-	/**
-	 * Extrai o pacote de dominio do modelo de entidades
-	 * 
-	 * @return DomainPackage or null
-	 */
-	public DomainPackage getDomainPackage();
 } // EntityModel

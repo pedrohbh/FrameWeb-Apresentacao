@@ -3,19 +3,13 @@
 package br.ufes.inf.nemo.frameweb.model.frameweb.impl;
 
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainGeneralization;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage;
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.uml2.uml.GeneralizationSet;
 import org.eclipse.uml2.uml.internal.impl.ClassImpl;
 
 /**
@@ -169,27 +163,4 @@ public class DomainClassImpl extends ClassImpl implements DomainClass {
 		return result.toString();
 	}
 
-	@Override
-	public List<DomainMethod> getDomainMethods() {
-		List<DomainMethod> domainMethods = this.eContents().stream().filter(DomainMethod.class::isInstance)
-				.map(DomainMethod.class::cast).collect(Collectors.toList());
-
-		return domainMethods;
-	}
-
-	@Override
-	public GeneralizationSet getDomainGeneralization() {
-		try {
-			DomainGeneralization domainGeneralization = this.eContents().stream()
-					.filter(DomainGeneralization.class::isInstance).map(DomainGeneralization.class::cast).findFirst()
-					.get();
-
-			GeneralizationSet generalizationSet = domainGeneralization.getGeneralizationSets().get(0);
-
-			return generalizationSet;
-
-		} catch (NullPointerException | NoSuchElementException e2) {
-			return null;
-		}
-	}
 } //DomainClassImpl

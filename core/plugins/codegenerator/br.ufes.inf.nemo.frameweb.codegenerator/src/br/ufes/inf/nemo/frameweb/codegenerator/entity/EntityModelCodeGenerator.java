@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 
 import org.eclipse.core.resources.IFolder;
 
+import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.EntityModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
@@ -12,7 +13,7 @@ import br.ufes.inf.nemo.frameweb.utils.ProjectUtils;
 
 public class EntityModelCodeGenerator {
 
-	private DomainPackage domainPackage;
+	private DomainPackage domainPackage = null;
 	private List<DomainClassCodeGenerator> domainClasses;
 
 	/**
@@ -23,26 +24,29 @@ public class EntityModelCodeGenerator {
 	 * @param ormTemplate
 	 */
 	public EntityModelCodeGenerator(EntityModel entityModel, ORMTemplate ormTemplate) {
-		domainPackage = entityModel.getDomainPackage();
-
-		domainClasses = domainPackage.getDomainClasses()
+		domainPackage = entityModel.getOwnedElements()
 			.stream()
+			.filter(DomainPackage.class::isInstance)
+			.map(DomainPackage.class::cast)
+			.findFirst()
+			.get();
+		
+		domainClasses = domainPackage.getOwnedTypes()
+			.stream()
+			.filter(DomainClass.class::isInstance)
+			.map(DomainClass.class::cast)
 			.map(domainClass -> new DomainClassCodeGenerator(domainClass, ormTemplate))
-			.collect(Collectors.toList());
-	}
-
-	public DomainPackage getDomainPackage() {
-		return domainPackage;
+			.collect(Collectors.toList());		
 	}
 
 	public void generate(IFolder srcFolder) {
 		String packagePath = domainPackage.getName().replaceAll("[^A-Za-z0-9]", "/");
 		
-		ProjectUtils.createPackage(srcFolder, packagePath);
+		ProjectUtils.makeDirectory(srcFolder, packagePath);
 		
-		IFolder packageFolder = srcFolder.getFolder(packagePath);
+		IFolder package_ = srcFolder.getFolder(packagePath);
 		
-		domainClasses.forEach(it -> it.generate(packageFolder));
+		domainClasses.forEach(it -> it.generate(package_));
 	}
-
+	
 }

@@ -1,12 +1,15 @@
 package br.ufes.inf.nemo.frameweb.codegenerator.entity;
 
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DomainGeneralization;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URLDecoder;
 import java.util.List;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import javax.annotation.Generated;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -14,9 +17,13 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.uml2.uml.Generalization;
 import org.eclipse.uml2.uml.GeneralizationSet;
+import org.eclipse.uml2.uml.Operation;
 import org.eclipse.uml2.uml.Property;
 import org.eclipse.xtext.xbase.lib.Exceptions;
+import org.eclipse.xtext.xbase.lib.Functions.Function1;
+import org.eclipse.xtext.xbase.lib.IterableExtensions;
 
 @SuppressWarnings("all")
 @Generated("org.eclipse.xtend.core.compiler.XtendGenerator")
@@ -62,16 +69,30 @@ public class DomainClassCodeGenerator {
         classTemplate = classTemplate.replace("FW_CLASS_VISIBILITY", "public");
       }
       classTemplate = classTemplate.replace("FW_CLASS_NAME", this.domainClass.getName());
-      final GeneralizationSet generazalitionSet = this.domainClass.getDomainGeneralization();
-      String _xifexpression = null;
-      if ((generazalitionSet == null)) {
-        _xifexpression = classTemplate = classTemplate.replace("FW_EXTENDS", "");
-      } else {
-        String _name = generazalitionSet.getName();
-        String _plus = ("extends " + _name);
-        _xifexpression = classTemplate = classTemplate.replace("FW_EXTENDS", _plus);
+      String _xtrycatchfinallyexpression = null;
+      try {
+        String _xblockexpression_1 = null;
+        {
+          final Predicate<Generalization> _function = (Generalization it) -> {
+            return (it instanceof DomainGeneralization);
+          };
+          final Function<Generalization, DomainGeneralization> _function_1 = (Generalization it) -> {
+            return ((DomainGeneralization) it);
+          };
+          GeneralizationSet generazalition = IterableExtensions.<GeneralizationSet>head(this.domainClass.getGeneralizations().stream().filter(_function).<DomainGeneralization>map(_function_1).findFirst().get().getGeneralizationSets());
+          String _name = generazalition.getName();
+          String _plus = ("extends " + _name);
+          _xblockexpression_1 = classTemplate = classTemplate.replace("FW_EXTENDS", _plus);
+        }
+        _xtrycatchfinallyexpression = _xblockexpression_1;
+      } catch (final Throwable _t) {
+        if (_t instanceof Exception) {
+          _xtrycatchfinallyexpression = classTemplate = classTemplate.replace("FW_EXTENDS", "");
+        } else {
+          throw Exceptions.sneakyThrow(_t);
+        }
       }
-      _xblockexpression = _xifexpression;
+      _xblockexpression = _xtrycatchfinallyexpression;
     }
     return _xblockexpression;
   }
@@ -123,7 +144,13 @@ public class DomainClassCodeGenerator {
     {
       final String methodTemplate = this.decode(this.ormTemplate.getMethodTemplate());
       final String abstractMethodTemplate = this.ormTemplate.getAbstractMethodTemplate();
-      final List<DomainMethod> methods = this.domainClass.getDomainMethods();
+      final Function1<Operation, Boolean> _function = (Operation it) -> {
+        return Boolean.valueOf((it instanceof DomainMethod));
+      };
+      final Function1<Operation, DomainMethod> _function_1 = (Operation it) -> {
+        return ((DomainMethod) it);
+      };
+      final List<DomainMethod> methods = IterableExtensions.<DomainMethod>toList(IterableExtensions.<Operation, DomainMethod>map(IterableExtensions.<Operation>filter(this.domainClass.getAllOperations(), _function), _function_1));
       final StringBuilder code = new StringBuilder();
       for (final DomainMethod method : methods) {
         {

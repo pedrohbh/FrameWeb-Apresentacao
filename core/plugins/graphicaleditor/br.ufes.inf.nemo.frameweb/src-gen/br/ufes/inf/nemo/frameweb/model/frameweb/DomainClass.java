@@ -2,10 +2,6 @@
  */
 package br.ufes.inf.nemo.frameweb.model.frameweb;
 
-import java.util.List;
-
-import org.eclipse.uml2.uml.GeneralizationSet;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Domain Class</b></em>'.
@@ -48,19 +44,5 @@ public interface DomainClass extends org.eclipse.uml2.uml.Class {
 	 * @generated
 	 */
 	void setTable(String value);
-
-	/**
-	 * Extrai os metodos de uma classe de dominio
-	 * 
-	 * @return List<DomainMethod>
-	 */
-	public List<DomainMethod> getDomainMethods();
-
-	/**
-	 * Extrai a superclasse de uma classe de dominio
-	 * 
-	 * @param domainClass
-	 */
-	public GeneralizationSet getDomainGeneralization();
-
+	
 } // DomainClass

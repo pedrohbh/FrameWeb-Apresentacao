@@ -8,6 +8,8 @@ import org.eclipse.core.resources.IFolder
 import org.apache.commons.io.IOUtils
 import org.eclipse.core.runtime.CoreException
 import java.io.IOException
+import br.ufes.inf.nemo.frameweb.model.frameweb.DomainGeneralization
+import br.ufes.inf.nemo.frameweb.model.frameweb.DomainMethod
 
 class DomainClassCodeGenerator {
 
@@ -56,13 +58,23 @@ class DomainClassCodeGenerator {
 		 * FW_EXTENDS tambem precisa de um template definido, senao nao sera possivel gerar
 		 * codigo para outras linguagens
 		 */
-		val generazalitionSet = domainClass.getDomainGeneralization()
-		
-		if (generazalitionSet === null) {
+		try {
+			var generazalition = domainClass
+				.getGeneralizations()
+				.stream()
+				.filter[it instanceof DomainGeneralization]
+				.map[it as DomainGeneralization]
+				.findFirst()
+				.get()
+				.getGeneralizationSets()
+				.head()
+			
+			classTemplate = classTemplate.replace("FW_EXTENDS", "extends " + generazalition.getName())
+			
+		} catch(Exception e) {
 			classTemplate = classTemplate.replace("FW_EXTENDS", "")
-		} else {
-			classTemplate = classTemplate.replace("FW_EXTENDS", "extends " + generazalitionSet.getName())
 		}
+		
 	}
 	
 	/**
@@ -108,7 +120,10 @@ class DomainClassCodeGenerator {
 	def generateMethods() {
 		val methodTemplate = ormTemplate.getMethodTemplate().decode()
 		val abstractMethodTemplate = ormTemplate.getAbstractMethodTemplate()
-		val methods = domainClass.getDomainMethods()
+		val methods = domainClass.allOperations
+			.filter[it instanceof DomainMethod]
+			.map[it as DomainMethod]
+			.toList()
 		
 		val code = new StringBuilder()
 		
@@ -168,6 +183,7 @@ class DomainClassCodeGenerator {
 			
 			file.create(inputStream, true, null)
 			
+//		Tratar melhor os Exceptions
 		} catch (CoreException | IOException e) {
 			e.printStackTrace()
 		}

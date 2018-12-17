@@ -74,7 +74,7 @@ public class ProjectUtils {
 	 * 
 	 * @return IProject or null
 	 */
-	public static IProject getProject() {
+	public static IProject getSelectedProject() {
 		IWorkbench workbench = PlatformUI.getWorkbench();
 		IWorkbenchWindow window = workbench.getActiveWorkbenchWindow();
 		IWorkbenchPage page = window.getActivePage();
@@ -102,12 +102,12 @@ public class ProjectUtils {
 	 * @param srcFolder
 	 * @param foldersName
 	 */
-	public static void createPackage(IFolder srcFolder, String packagePath) {
+	public static void makeDirectory(IFolder srcFolder, String packagePath) {
 		try {
 			IFolder currentFolder = srcFolder;
 			
-			for (String p : packagePath.split("/")) {
-				currentFolder = currentFolder.getFolder(p);
+			for (String folder : packagePath.split("/")) {
+				currentFolder = currentFolder.getFolder(folder);
 				
 				if (!currentFolder.exists()) {
 					currentFolder.create(true, true, null);

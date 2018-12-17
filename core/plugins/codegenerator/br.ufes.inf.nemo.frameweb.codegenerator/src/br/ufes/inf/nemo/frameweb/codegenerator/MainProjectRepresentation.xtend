@@ -89,6 +89,10 @@ class MainProjectRepresentation {
 		if (entityModel !== null) (entityModel as EntityModel) else null
 	}
 	
+	def hasEntityModel() {
+		return getEntityModel() !== null;
+	}
+	
 	/**
 	 * Retorna o modelo de navegacao do modelo frameweb
 	 */
