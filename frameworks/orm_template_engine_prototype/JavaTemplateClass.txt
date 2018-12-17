@@ -8,7 +8,7 @@ public <%ABSTRACT%> class <%CLASS_NAME%> <%GENERALIZATION%> {
 		
 	}
 
-	<%GETTERS_AND_SETTER%>
+	<%GETTERS_AND_SETTERS%>
 
 	<%METHODS%>
 	
