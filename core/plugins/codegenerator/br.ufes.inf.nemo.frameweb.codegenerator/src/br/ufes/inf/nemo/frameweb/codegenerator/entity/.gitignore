@@ -5,3 +5,5 @@
 /EntityClassCodeGenerator.java
 /EntityModelCodeGenerator.java
 /.DomainClassCodeGenerator.java._trace
+/.DomainClassCodeGenerator.xtendbin
+/DomainClassCodeGenerator.java

@@ -10,7 +10,6 @@ import java.net.URLDecoder;
 import java.util.List;
 import java.util.function.Function;
 import java.util.function.Predicate;
-import javax.annotation.Generated;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.eclipse.core.resources.IFile;
@@ -26,7 +25,6 @@ import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 
 @SuppressWarnings("all")
-@Generated("org.eclipse.xtend.core.compiler.XtendGenerator")
 public class DomainClassCodeGenerator {
   private DomainClass domainClass;
   

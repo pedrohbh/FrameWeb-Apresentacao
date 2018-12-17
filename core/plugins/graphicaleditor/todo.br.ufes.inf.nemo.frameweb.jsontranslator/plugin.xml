@@ -5,5 +5,4 @@
    <extension
          point="org.eclipse.jdt.ui.cleanUps">
    </extension>
-
 </plugin>
