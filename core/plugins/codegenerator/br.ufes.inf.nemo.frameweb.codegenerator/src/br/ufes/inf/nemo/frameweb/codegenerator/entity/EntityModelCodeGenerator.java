@@ -13,8 +13,8 @@ import br.ufes.inf.nemo.frameweb.utils.ProjectUtils;
 
 public class EntityModelCodeGenerator {
 
-	private DomainPackage domainPackage = null;
-	private List<DomainClassCodeGenerator> domainClasses;
+	private DomainPackage domainPackage;
+	private List<EntityClassCodeGenerator> domainClasses;
 
 	/**
 	 * Responsavel por armazenar todas as classes referentes ao modelo de entidades
@@ -25,18 +25,18 @@ public class EntityModelCodeGenerator {
 	 */
 	public EntityModelCodeGenerator(EntityModel entityModel, ORMTemplate ormTemplate) {
 		domainPackage = entityModel.getOwnedElements()
-			.stream()
-			.filter(DomainPackage.class::isInstance)
-			.map(DomainPackage.class::cast)
-			.findFirst()
-			.get();
+				.stream()
+				.filter(DomainPackage.class::isInstance)
+				.map(DomainPackage.class::cast)
+				.findFirst()
+				.get();
 		
 		domainClasses = domainPackage.getOwnedTypes()
-			.stream()
-			.filter(DomainClass.class::isInstance)
-			.map(DomainClass.class::cast)
-			.map(domainClass -> new DomainClassCodeGenerator(domainClass, ormTemplate))
-			.collect(Collectors.toList());		
+				.stream()
+				.filter(DomainClass.class::isInstance)
+				.map(DomainClass.class::cast)
+				.map(domainClass -> new EntityClassCodeGenerator(domainClass, ormTemplate))
+				.collect(Collectors.toList());
 	}
 
 	/**
