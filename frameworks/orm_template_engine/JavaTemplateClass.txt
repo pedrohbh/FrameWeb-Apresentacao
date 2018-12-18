@@ -1,0 +1,15 @@
+package #{PACKAGE};
+
+public #{ABSTRACT=abstract} class #{CLASS_NAME} #{GENERALIZATION=extends} {
+
+#{ATTRIBUTES}
+
+	public #{CLASS_NAME}() {
+		
+	}
+
+#{GETTERS_AND_SETTERS}
+
+#{METHODS}
+	
+}

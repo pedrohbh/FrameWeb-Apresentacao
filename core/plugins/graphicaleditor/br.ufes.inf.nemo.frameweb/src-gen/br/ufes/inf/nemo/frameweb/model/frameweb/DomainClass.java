@@ -44,5 +44,5 @@ public interface DomainClass extends org.eclipse.uml2.uml.Class {
 	 * @generated
 	 */
 	void setTable(String value);
-	
+
 } // DomainClass

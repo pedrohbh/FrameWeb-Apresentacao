@@ -288,9 +288,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/attributeTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/getterAndSetterTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/methodTemplate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/methodReturnTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/abstractMethodTemplate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/generalizationTemplate"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

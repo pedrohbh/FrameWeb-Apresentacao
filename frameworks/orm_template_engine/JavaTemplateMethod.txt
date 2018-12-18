@@ -1,0 +1,3 @@
+	#{METHOD_VISIBILITY=public|private} #{METHOD_RETURN_TYPE} #{METHOD_NAME}() {
+		return #{METHOD_RETURN=null};
+	}

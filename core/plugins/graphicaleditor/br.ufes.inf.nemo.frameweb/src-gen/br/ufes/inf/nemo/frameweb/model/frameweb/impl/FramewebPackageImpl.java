@@ -2514,26 +2514,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getORMTemplate_MethodReturnTemplate() {
-		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getORMTemplate_AbstractMethodTemplate() {
-		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getORMTemplate_GeneralizationTemplate() {
-		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(7);
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -2954,9 +2936,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__ATTRIBUTE_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__GETTER_AND_SETTER_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__METHOD_TEMPLATE);
-		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__METHOD_RETURN_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE);
-		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__GENERALIZATION_TEMPLATE);
 
 		// Create enums
 		frameworkCategoryListEEnum = createEEnum(FRAMEWORK_CATEGORY_LIST);
@@ -3638,13 +3618,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getORMTemplate_MethodTemplate(), theTypesPackage.getString(), "methodTemplate", null, 0, 1,
 				ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getORMTemplate_MethodReturnTemplate(), theTypesPackage.getString(), "methodReturnTemplate", null,
-				0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getORMTemplate_AbstractMethodTemplate(), theTypesPackage.getString(), "abstractMethodTemplate",
-				null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getORMTemplate_GeneralizationTemplate(), theTypesPackage.getString(), "generalizationTemplate",
 				null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

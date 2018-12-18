@@ -16,9 +16,7 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getAttributeTemplate <em>Attribute Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getGetterAndSetterTemplate <em>Getter And Setter Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getMethodTemplate <em>Method Template</em>}</li>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getMethodReturnTemplate <em>Method Return Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getAbstractMethodTemplate <em>Abstract Method Template</em>}</li>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getGeneralizationTemplate <em>Generalization Template</em>}</li>
  * </ul>
  *
  * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getORMTemplate()
@@ -157,32 +155,6 @@ public interface ORMTemplate extends FrameworkProfile {
 	void setMethodTemplate(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Method Return Template</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Method Return Template</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Method Return Template</em>' attribute.
-	 * @see #setMethodReturnTemplate(String)
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getORMTemplate_MethodReturnTemplate()
-	 * @model dataType="org.eclipse.uml2.types.String"
-	 * @generated
-	 */
-	String getMethodReturnTemplate();
-
-	/**
-	 * Sets the value of the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getMethodReturnTemplate <em>Method Return Template</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Method Return Template</em>' attribute.
-	 * @see #getMethodReturnTemplate()
-	 * @generated
-	 */
-	void setMethodReturnTemplate(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Abstract Method Template</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -207,31 +179,5 @@ public interface ORMTemplate extends FrameworkProfile {
 	 * @generated
 	 */
 	void setAbstractMethodTemplate(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Generalization Template</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Generalization Template</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Generalization Template</em>' attribute.
-	 * @see #setGeneralizationTemplate(String)
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getORMTemplate_GeneralizationTemplate()
-	 * @model dataType="org.eclipse.uml2.types.String"
-	 * @generated
-	 */
-	String getGeneralizationTemplate();
-
-	/**
-	 * Sets the value of the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getGeneralizationTemplate <em>Generalization Template</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Generalization Template</em>' attribute.
-	 * @see #getGeneralizationTemplate()
-	 * @generated
-	 */
-	void setGeneralizationTemplate(String value);
 
 } // ORMTemplate
