@@ -39,6 +39,11 @@ public class EntityModelCodeGenerator {
 			.collect(Collectors.toList());		
 	}
 
+	/**
+	 * Gera as classes do modelo de entidades dentro de um dado diretorio (pacote)
+	 * 
+	 * @param srcFolder
+	 */
 	public void generate(IFolder srcFolder) {
 		String packagePath = domainPackage.getName().replaceAll("[^A-Za-z0-9]", "/");
 		

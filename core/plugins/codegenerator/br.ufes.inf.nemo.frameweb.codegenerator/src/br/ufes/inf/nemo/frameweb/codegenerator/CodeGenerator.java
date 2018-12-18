@@ -24,11 +24,11 @@ public class CodeGenerator implements IExternalJavaAction {
 	}
 
 	@Override
-	public void execute(Collection<? extends EObject> selections, Map<String, Object> arg1) {
+	public void execute(Collection<? extends EObject> selections, Map<String, Object> parameters) {
 		IProject project = ProjectUtils.getSelectedProject();
 		IFolder srcFolder = project.getFolder("src");
 		
-		MainProjectRepresentation representation = new MainProjectRepresentation(selections);
+		ProjectRepresentation representation = new ProjectRepresentation(selections);
 		
 		if (representation.hasEntityModel()) {
 			EntityModelCodeGenerator entityModelCodeGenerator = new EntityModelCodeGenerator(
