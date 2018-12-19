@@ -13,7 +13,7 @@ public class EngineUtils {
 		try {
 			decodedString = URLDecoder.decode(str, "UTF-8");
 
-		// TODO lancar uma excecao adequada aqui, pois se trata de um erro de input
+		// TODO lancar uma excecao para error de codificacao URL no template
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
@@ -24,7 +24,7 @@ public class EngineUtils {
 	public static String getStringBetweenTags(String regex, String str) {
 		Pattern pattern = Pattern.compile(regex, Pattern.DOTALL);
 		Matcher matcher = pattern.matcher(str);
-		matcher.find();
-		return matcher.group(1);
+		String stringBetweenTags = matcher.find() ? matcher.group(1) : null;
+		return stringBetweenTags;
 	}
 }

@@ -1,15 +1,15 @@
-package #{PACKAGE};
+package @Package;
 
-public #{ABSTRACT=abstract} class #{CLASS_NAME} #{GENERALIZATION=extends} {
+public @Abstract{abstract} class @ClassName @Generalization{extends @SuperclassName} {
 
-#{ATTRIBUTES}
+@Attributes
 
-	public #{CLASS_NAME}() {
+	public @ClassName() {
 		
 	}
 
-#{GETTERS_AND_SETTERS}
+@GettersAndSetters
 
-#{METHODS}
+@Methods
 	
 }
