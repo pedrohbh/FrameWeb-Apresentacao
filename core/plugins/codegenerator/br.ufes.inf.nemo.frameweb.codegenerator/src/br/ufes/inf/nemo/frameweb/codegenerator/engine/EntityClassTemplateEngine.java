@@ -70,7 +70,9 @@ public class EntityClassTemplateEngine {
 			template = insertMethods(template);
 		}
 
-		return template;
+		String entityClassCode = EngineUtils.sanitize(template);
+
+		return entityClassCode;
 	}
 
 	public String insertPackage(String template) {
@@ -83,8 +85,7 @@ public class EntityClassTemplateEngine {
 		String inserted = null;
 
 		if (domainClass.isAbstract()) {
-			inserted = template.replaceAll(ABSTRACT, EngineUtils.getStringBetweenTags(ABSTRACT, template));
-
+			inserted = template.replaceAll(ABSTRACT, EngineUtils.getParameter(ABSTRACT, template));
 		} else {
 			inserted = template.replaceAll(ABSTRACT, "");
 		}
@@ -112,12 +113,13 @@ public class EntityClassTemplateEngine {
 		if (generalizationSets.size() <= 0) {
 //			String noGeneralization = template.replace(GENERALIZATION, "");
 //			return noGeneralization;
+			System.out.println("Exception::GeneralizationException");
 			System.exit(1);
 		}
 
 		String superclassName = generalizationSets.get(0).getName();
 
-		String generalizationLabel = EngineUtils.getStringBetweenTags(GENERALIZATION, template);
+		String generalizationLabel = EngineUtils.getParameter(GENERALIZATION, template);
 		String inserted = template
 				.replaceAll(GENERALIZATION, generalizationLabel)
 				.replace(SUPERCLASS_NAME, superclassName);
@@ -167,6 +169,8 @@ public class EntityClassTemplateEngine {
 //	TODO verificacao adequada para o tipo void
 	public String insertMethods(String template) {
 		String methodTemplate = EngineUtils.decode(ormTemplate.getMethodTemplate());
+//		TODO verificar se existe um template de metodo para que @MethodReturn seja extraido
+		String methodReturn = EngineUtils.getParameter(METHOD_RETURN, methodTemplate);
 		String abstractMethodTemplate = EngineUtils.decode(ormTemplate.getAbstractMethodTemplate());
 		
 		String methods = domainClass.getOperations()
@@ -176,16 +180,16 @@ public class EntityClassTemplateEngine {
 				.map(operation -> {
 						Type methodType = operation.getMethodType();
 						String methodCode = operation.isAbstract() ? abstractMethodTemplate : methodTemplate;
-						String methodReturn = EngineUtils.getStringBetweenTags(METHOD_RETURN, methodCode);
 
-						// Se a classe nao for abstrata e acontecer alguma falha no matcher, a
-						// configuracao do template esta com problemas
+//						TODO Lancar um excecao adequada para problemas no template.
+//						Se a classe nao for abstrata e acontecer alguma falha no matcher, a
+//						configuracao de @MethodReturn nao foi definida no template
 						if (!operation.isAbstract() && methodReturn == null) {
-							//TODO Lancar um excecao adequada para problemas no template
 							System.out.println("Exception::TemplateException");
 							System.exit(1);
 						}
 						
+//						TODO lancar uma excecao caso methodType nao seja void e methodReturn = null (NULL, nao String)
 						methodCode = methodCode
 								.replace(METHOD_VISIBILITY, operation.getVisibility().getName())
 								.replace(METHOD_RETURN_TYPE, methodType != null ? methodType.getName() : "void")
