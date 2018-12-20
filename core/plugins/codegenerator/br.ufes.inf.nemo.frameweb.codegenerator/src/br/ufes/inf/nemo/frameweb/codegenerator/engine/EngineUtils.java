@@ -39,8 +39,9 @@ public class EngineUtils {
 		
 		//Remove espacos duplos entre palavras
 		String lineSeparator = System.getProperty("line.separator");
-		sanitizedString = Arrays.asList(sanitizedString.split(lineSeparator))
-				.stream()
+		String[] sanitizedStringLines = sanitizedString.split(lineSeparator);
+		
+		sanitizedString = Arrays.stream(sanitizedStringLines)
 				.map(line -> line.replaceAll(" {2,}+", " "))
 				.collect(Collectors.joining("\n"));
 		

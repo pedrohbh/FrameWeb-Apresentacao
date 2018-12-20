@@ -42,7 +42,7 @@ public class EntityClassTemplateEngine {
 	public String render() {
 		String template = EngineUtils.decode(ormTemplate.getClassTemplate());
 
-		if (template.contains(PACKAGE)) {
+		if (template.contains("@Package")) {
 			template = insertPackage(template);
 		}
 
@@ -50,7 +50,7 @@ public class EntityClassTemplateEngine {
 			template = insertAbstract(template);
 		}
 
-		if (template.contains(CLASS_NAME)) {
+		if (template.contains("@ClassName")) {
 			template = insertClassName(template);
 		}
 
@@ -58,15 +58,15 @@ public class EntityClassTemplateEngine {
 			template = insertGeneralization(template);
 		}
 
-		if (template.contains(ATTRIBUTES)) {
+		if (template.contains("@Attributes")) {
 			template = insertAttributes(template);
 		}
 
-		if (template.contains(GETTERS_AND_SETTERS)) {
+		if (template.contains("@GettersAndSetters")) {
 			template = insertGettersAndSetters(template);
 		}
 
-		if (template.contains(METHODS)) {
+		if (template.contains("@Methods")) {
 			template = insertMethods(template);
 		}
 
@@ -189,7 +189,7 @@ public class EntityClassTemplateEngine {
 							System.exit(1);
 						}
 						
-//						TODO lancar uma excecao caso methodType nao seja void e methodReturn = null (NULL, nao String)
+//						TODO lancar uma excecao caso methodType nao seja void e methodReturn == null (NULL, nao String)
 						methodCode = methodCode
 								.replace(METHOD_VISIBILITY, operation.getVisibility().getName())
 								.replace(METHOD_RETURN_TYPE, methodType != null ? methodType.getName() : "void")
