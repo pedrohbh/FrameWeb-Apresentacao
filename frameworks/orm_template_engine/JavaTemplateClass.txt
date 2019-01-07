@@ -1,15 +1,15 @@
-package @Package;
+package $Package;
 
-public @Abstract{abstract} class @ClassName @Generalization{extends @SuperclassName} {
+public $Abstract{abstract} class $ClassName $Generalization{extends $SuperclassName} {
 
-@Attributes
+$Attributes
 
-	public @ClassName() {
+	public $ClassName() {
 
 	}
 
-@GettersAndSetters
+$GettersAndSetters
 
-@Methods
+$Methods
 	
 }

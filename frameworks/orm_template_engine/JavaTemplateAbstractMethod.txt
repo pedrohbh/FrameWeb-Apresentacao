@@ -1,1 +1,1 @@
-	@MethodVisibility abstract @MethodReturnType @MethodName();
+	$MethodVisibility abstract $MethodReturnType $MethodName();

@@ -1,6 +1,7 @@
 package br.ufes.inf.nemo.frameweb.codegenerator.engine;
 
 import java.util.List;
+import java.util.regex.Matcher;
 import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.StringUtils;
@@ -14,22 +15,22 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 
 public class EntityClassTemplateEngine {
 	
-	private final static String PACKAGE = "@Package";
-	private final static String ABSTRACT = "@Abstract\\{(.*?)\\}";
-	private final static String CLASS_NAME = "@ClassName";
-	private final static String GENERALIZATION = "@Generalization\\{(.*?)\\}";
-	private final static String ATTRIBUTES = "@Attributes";
-	private final static String GETTERS_AND_SETTERS = "@GettersAndSetters";
-	private final static String METHODS = "@Methods";
-	private final static String SUPERCLASS_NAME = "@SuperclassName";
-	private final static String ATTRIBUTE_VISIBILITY = "@AttributeVisibility";
-	private final static String ATTRIBUTE_TYPE = "@AttributeType";
-	private final static String ATTRIBUTE_NAME = "@AttributeName";
-	private final static String ATTRIBUTE_NAME_CAPITALIZED = "@AttributeNameCapitalized";
-	private final static String METHOD_VISIBILITY = "@MethodVisibility";
-	private final static String METHOD_RETURN_TYPE = "@MethodReturnType";
-	private final static String METHOD_NAME = "@MethodName";
-	private final static String METHOD_RETURN = "@MethodReturn\\{(.*?)\\}";
+	private final static String PACKAGE = "$Package";
+	private final static String ABSTRACT = "\\$Abstract\\{(.*?)\\}";
+	private final static String CLASS_NAME = "$ClassName";
+	private final static String GENERALIZATION = "\\$Generalization\\{(.*?)\\}";
+	private final static String ATTRIBUTES = "$Attributes";
+	private final static String GETTERS_AND_SETTERS = "$GettersAndSetters";
+	private final static String METHODS = "$Methods";
+	private final static String SUPERCLASS_NAME = "$SuperclassName";
+	private final static String ATTRIBUTE_VISIBILITY = "$AttributeVisibility";
+	private final static String ATTRIBUTE_TYPE = "$AttributeType";
+	private final static String ATTRIBUTE_NAME = "$AttributeName";
+	private final static String ATTRIBUTE_NAME_CAPITALIZED = "$AttributeNameCapitalized";
+	private final static String METHOD_VISIBILITY = "$MethodVisibility";
+	private final static String METHOD_RETURN_TYPE = "$MethodReturnType";
+	private final static String METHOD_NAME = "$MethodName";
+	private final static String METHOD_RETURN = "\\$MethodReturn\\{(.*?)\\}";
 	
 	private DomainClass domainClass;
 	private ORMTemplate ormTemplate;
@@ -42,31 +43,31 @@ public class EntityClassTemplateEngine {
 	public String render() {
 		String template = EngineUtils.decode(ormTemplate.getClassTemplate());
 
-		if (template.contains("@Package")) {
+		if (template.contains("$Package")) {
 			template = insertPackage(template);
 		}
 
-		if (template.contains("@Abstract")) {
+		if (template.contains("$Abstract")) {
 			template = insertAbstract(template);
 		}
 
-		if (template.contains("@ClassName")) {
+		if (template.contains("$ClassName")) {
 			template = insertClassName(template);
 		}
 
-		if (template.contains("@Generalization")) {
+		if (template.contains("$Generalization")) {
 			template = insertGeneralization(template);
 		}
 
-		if (template.contains("@Attributes")) {
+		if (template.contains("$Attributes")) {
 			template = insertAttributes(template);
 		}
 
-		if (template.contains("@GettersAndSetters")) {
+		if (template.contains("$GettersAndSetters")) {
 			template = insertGettersAndSetters(template);
 		}
 
-		if (template.contains("@Methods")) {
+		if (template.contains("$Methods")) {
 			template = insertMethods(template);
 		}
 
@@ -120,8 +121,9 @@ public class EntityClassTemplateEngine {
 		String superclassName = generalizationSets.get(0).getName();
 
 		String generalizationLabel = EngineUtils.getParameter(GENERALIZATION, template);
+		
 		String inserted = template
-				.replaceAll(GENERALIZATION, generalizationLabel)
+				.replaceAll(GENERALIZATION, Matcher.quoteReplacement(generalizationLabel))
 				.replace(SUPERCLASS_NAME, superclassName);
 
 		return inserted;
@@ -169,7 +171,7 @@ public class EntityClassTemplateEngine {
 //	TODO verificacao adequada para o tipo void
 	public String insertMethods(String template) {
 		String methodTemplate = EngineUtils.decode(ormTemplate.getMethodTemplate());
-//		TODO verificar se existe um template de metodo para que @MethodReturn seja extraido
+//		TODO verificar se existe um template de metodo para que $MethodReturn seja extraido
 		String methodReturn = EngineUtils.getParameter(METHOD_RETURN, methodTemplate);
 		String abstractMethodTemplate = EngineUtils.decode(ormTemplate.getAbstractMethodTemplate());
 		
@@ -183,10 +185,10 @@ public class EntityClassTemplateEngine {
 
 //						TODO Lancar um excecao adequada para problemas no template.
 //						Se a classe nao for abstrata e acontecer alguma falha no matcher, a
-//						configuracao de @MethodReturn nao foi definida no template
+//						configuracao de $MethodReturn nao foi definida no template
 						if (!operation.isAbstract() && methodReturn == null) {
 							System.out.println("Exception::TemplateException");
-							System.exit(1);
+//							System.exit(1);
 						}
 						
 //						TODO lancar uma excecao caso methodType nao seja void e methodReturn == null (NULL, nao String)

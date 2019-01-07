@@ -1,7 +1,7 @@
-	public @AttributeType get@AttributeNameCapitalized() {
-		return @AttributeName;
+	public $AttributeType get$AttributeNameCapitalized() {
+		return $AttributeName;
 	}
 
-	public void set@AttributeNameCapitalized(@AttributeType @AttributeName) {
-		this.@AttributeName = @AttributeName;
+	public void set$AttributeNameCapitalized($AttributeType $AttributeName) {
+		this.$AttributeName = $AttributeName;
 	}

@@ -1,1 +1,1 @@
-	@AttributeVisibility @AttributeType @AttributeName;
+	$AttributeVisibility $AttributeType $AttributeName;
