@@ -1,5 +1,5 @@
 package br.ufes.inf.nemo.frameweb.codegenerator.navigation;
 
-public class ControllerClassCodeGenerator {
+public class FrontControllerClassCodeGenerator {
 
 }

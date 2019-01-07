@@ -4,9 +4,11 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import javax.annotation.Generated;
 import org.eclipse.xtend2.lib.StringConcatenation;
 
 @SuppressWarnings("all")
+@Generated("org.eclipse.xtend.core.compiler.XtendGenerator")
 public class JsonToFramewebLanguageTranslator {
   private JsonObject json;
   
