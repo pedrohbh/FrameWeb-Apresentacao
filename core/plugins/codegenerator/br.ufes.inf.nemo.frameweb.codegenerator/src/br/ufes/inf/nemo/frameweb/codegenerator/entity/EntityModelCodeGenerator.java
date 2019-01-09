@@ -4,7 +4,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.eclipse.core.resources.IFolder;
+import org.eclipse.uml2.uml.Enumeration;
 
+import br.ufes.inf.nemo.frameweb.codegenerator.enumeration.EnumerationClassCodeGenerator;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.EntityModel;
@@ -14,7 +16,7 @@ import br.ufes.inf.nemo.frameweb.utils.ProjectUtils;
 public class EntityModelCodeGenerator {
 
 	private DomainPackage domainPackage;
-//	private List<EnumerationClassCodeGenerator> enumerationClasses;
+	private List<EnumerationClassCodeGenerator> enumerationClasses;
 	private List<EntityClassCodeGenerator> domainClasses;
 	
 	/**
@@ -32,12 +34,12 @@ public class EntityModelCodeGenerator {
 				.findFirst()
 				.get();
 		
-//		enumerationClasses = entityModel.getOwnedElements()
-//				.stream()
-//				.filter(Enumeration.class::isInstance)
-//				.map(Enumeration.class::cast)
-//				.map(enumerationClass -> new EnumerationClassCodeGenerator(enumerationClass, ormTemplate))
-//				.collect(Collectors.toList());
+		enumerationClasses = entityModel.getOwnedElements()
+				.stream()
+				.filter(Enumeration.class::isInstance)
+				.map(Enumeration.class::cast)
+				.map(enumerationClass -> new EnumerationClassCodeGenerator(enumerationClass, ormTemplate))
+				.collect(Collectors.toList());
 		
 		domainClasses = domainPackage.getOwnedTypes()
 				.stream()
@@ -60,7 +62,8 @@ public class EntityModelCodeGenerator {
 		
 		IFolder package_ = srcFolder.getFolder(packagePath);
 		
-//		enumerationClasses.forEach(it -> it.generate(package_));
+//		TODO ainda e necessario definir um template para as classes de enumeracao
+		enumerationClasses.forEach(it -> it.generate(package_));
 		
 		domainClasses.forEach(it -> it.generate(package_));
 	}

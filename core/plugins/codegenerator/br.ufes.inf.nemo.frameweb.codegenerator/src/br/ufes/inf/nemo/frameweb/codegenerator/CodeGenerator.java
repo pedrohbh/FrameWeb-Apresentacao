@@ -10,6 +10,7 @@ import org.eclipse.sirius.diagram.DSemanticDiagram;
 import org.eclipse.sirius.tools.api.ui.IExternalJavaAction;
 
 import br.ufes.inf.nemo.frameweb.codegenerator.entity.EntityModelCodeGenerator;
+import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import br.ufes.inf.nemo.frameweb.utils.ProjectUtils;
 
 public class CodeGenerator implements IExternalJavaAction {
@@ -30,14 +31,12 @@ public class CodeGenerator implements IExternalJavaAction {
 		
 		ProjectRepresentation representation = new ProjectRepresentation(selections);
 		
-		if (representation.hasEntityModel()) {
-			EntityModelCodeGenerator entityModelCodeGenerator = new EntityModelCodeGenerator(
-					representation.getEntityModel(),
-					representation.getORMTemplate()
-			);
-			
-			entityModelCodeGenerator.generate(srcFolder);
-		}
+		ORMTemplate ormTemplate = representation.getORMTemplate();
+		
+		representation.getEntityModels()
+				.stream()
+				.map(entityModel -> new EntityModelCodeGenerator(entityModel, ormTemplate))
+				.forEach(entityModelCodeGenerator -> entityModelCodeGenerator.generate(srcFolder));
 	}
 
 }

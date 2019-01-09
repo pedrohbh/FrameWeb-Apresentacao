@@ -94,61 +94,42 @@ public class ProjectRepresentation {
 		}
 	}
 	
-	public EntityModel getEntityModel() {
+	public List<EntityModel> getEntityModels() {
 		List<FramewebModel> framewebModels = getFramewebModels();
 		
-		try {
-			EntityModel entityModel = framewebModels
-					.stream()
-					.filter(EntityModel.class::isInstance)
-					.filter(model -> {
-						boolean hasDomainPackage = model.eContents()
-								.stream()
-								.anyMatch(DomainPackage.class::isInstance);
-						
-						return hasDomainPackage;
-					})
-					.map(EntityModel.class::cast)
-					.findFirst()
-					.get();
+		List<EntityModel> entityModels = framewebModels
+				.stream()
+				.filter(EntityModel.class::isInstance)
+				.filter(model -> {
+					boolean hasDomainPackage = model.eContents()
+							.stream()
+							.anyMatch(DomainPackage.class::isInstance);
 					
-			return entityModel;
-			
-		} catch(NullPointerException e) {
-			return null;
-		}
+					return hasDomainPackage;
+				})
+				.map(EntityModel.class::cast)
+				.collect(Collectors.toList());
+				
+		return entityModels;
 	}
 	
-	public boolean hasEntityModel() {
-		return getEntityModel() != null;
-	}
-	
-	public NavigationModel getNavigationModel() {
+	public List<NavigationModel> getNavigationModels() {
 		List<FramewebModel> framewebModels = getFramewebModels();
 		
-		try {
-			NavigationModel navigationModel = framewebModels
-					.stream()
-					.filter(NavigationModel.class::isInstance)
-					.filter(model -> {
-						boolean hasControllerPackage = model.eContents()
-								.stream()
-								.anyMatch(ControllerPackage.class::isInstance);
-						
-						return hasControllerPackage;
-					})
-					.map(NavigationModel.class::cast)
-					.findFirst()
-					.get();
-			
-			return navigationModel;
-			
-		} catch (NullPointerException e) {
-			return null;
-		}
+		List<NavigationModel> navigationModel = framewebModels
+				.stream()
+				.filter(NavigationModel.class::isInstance)
+				.filter(model -> {
+					boolean hasControllerPackage = model.eContents()
+							.stream()
+							.anyMatch(ControllerPackage.class::isInstance);
+					
+					return hasControllerPackage;
+				})
+				.map(NavigationModel.class::cast)
+				.collect(Collectors.toList());
+		
+		return navigationModel;
 	}
-	
-	public boolean hasNavigationModel() {
-		return getNavigationModel() != null;
-	}
+
 }

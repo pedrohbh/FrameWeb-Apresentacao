@@ -206,5 +206,5 @@ public class EntityClassTemplateEngine {
 		String inserted = template.replace(METHODS, methods);
 		return inserted;
 	}
-	
+
 }
