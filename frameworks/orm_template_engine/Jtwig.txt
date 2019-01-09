@@ -1,0 +1,29 @@
+package {{package.name}};
+
+public {%if (class.isAbstract)%} abstract {%endif%} class {{class.name}} {%if (class.hasGeneralization)%} extends {{class.superclass.name}} {%endif%} {
+
+{%for attribute in attributes%}
+	{{attribute.visibility}} {{attribute.type}} {{attribute.name}};
+{%endfor%}
+
+	public {{class.name}}() {
+
+	}
+
+{%for attribute in attributes%}
+	public {{attribute.type}} get{{attribute.name.capitalize}}() {
+		return {{attribute.name}};
+	}
+
+	public void set{{attribute.name.capitalize}}({{attribute.type}} {{attribute.name}}) {
+		this.{{attribute.name}} = {{attribute.name}};
+	}
+{%endfor%}
+
+{%for method in methods%}
+	{{method.visibility}} {{method.returnType}} {{method.name}}() {
+		return {{method.return(null)}};
+	}
+{%endfor%}
+
+}

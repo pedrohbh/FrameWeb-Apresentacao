@@ -188,7 +188,7 @@ public class EntityClassTemplateEngine {
 //						configuracao de $MethodReturn nao foi definida no template
 						if (!operation.isAbstract() && methodReturn == null) {
 							System.out.println("Exception::TemplateException");
-//							System.exit(1);
+							System.exit(1);
 						}
 						
 //						TODO lancar uma excecao caso methodType nao seja void e methodReturn == null (NULL, nao String)
