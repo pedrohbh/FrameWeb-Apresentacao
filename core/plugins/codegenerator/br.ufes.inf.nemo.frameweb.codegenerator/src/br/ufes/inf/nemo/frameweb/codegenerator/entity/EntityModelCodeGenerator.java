@@ -14,8 +14,9 @@ import br.ufes.inf.nemo.frameweb.utils.ProjectUtils;
 public class EntityModelCodeGenerator {
 
 	private DomainPackage domainPackage;
+//	private List<EnumerationClassCodeGenerator> enumerationClasses;
 	private List<EntityClassCodeGenerator> domainClasses;
-
+	
 	/**
 	 * Responsavel por armazenar todas as classes referentes ao modelo de entidades
 	 * e tambem pela geracao de codigo das mesmas.
@@ -31,12 +32,20 @@ public class EntityModelCodeGenerator {
 				.findFirst()
 				.get();
 		
+//		enumerationClasses = entityModel.getOwnedElements()
+//				.stream()
+//				.filter(Enumeration.class::isInstance)
+//				.map(Enumeration.class::cast)
+//				.map(enumerationClass -> new EnumerationClassCodeGenerator(enumerationClass, ormTemplate))
+//				.collect(Collectors.toList());
+		
 		domainClasses = domainPackage.getOwnedTypes()
 				.stream()
 				.filter(DomainClass.class::isInstance)
 				.map(DomainClass.class::cast)
 				.map(domainClass -> new EntityClassCodeGenerator(domainClass, ormTemplate))
 				.collect(Collectors.toList());
+		
 	}
 
 	/**
@@ -50,6 +59,8 @@ public class EntityModelCodeGenerator {
 		ProjectUtils.makeDirectory(srcFolder, packagePath);
 		
 		IFolder package_ = srcFolder.getFolder(packagePath);
+		
+//		enumerationClasses.forEach(it -> it.generate(package_));
 		
 		domainClasses.forEach(it -> it.generate(package_));
 	}

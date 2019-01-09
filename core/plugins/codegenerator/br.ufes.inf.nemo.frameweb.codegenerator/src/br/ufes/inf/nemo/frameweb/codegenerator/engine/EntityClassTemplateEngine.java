@@ -137,6 +137,7 @@ public class EntityClassTemplateEngine {
 				.map(attribute -> {
 					String attributeCode = attributeTemplate
 							.replace(ATTRIBUTE_VISIBILITY, attribute.getVisibility().getName())
+//							Nao esta sendo tratado o tipo vazio propositalmente. Faz direito esse modelo, meu aliado
 							.replace(ATTRIBUTE_TYPE, attribute.getType().getName())
 							.replace(ATTRIBUTE_NAME, attribute.getName());
 					
