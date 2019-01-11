@@ -1,4 +1,4 @@
-package br.ufes.inf.nemo.frameweb.codegenerator.enumeration;
+package br.ufes.inf.nemo.frameweb.codegenerator.entity;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -9,7 +9,6 @@ import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.uml2.uml.Enumeration;
 
-import br.ufes.inf.nemo.frameweb.codegenerator.engine.EnumerationClassTemplateEngine;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 
 @SuppressWarnings("all")

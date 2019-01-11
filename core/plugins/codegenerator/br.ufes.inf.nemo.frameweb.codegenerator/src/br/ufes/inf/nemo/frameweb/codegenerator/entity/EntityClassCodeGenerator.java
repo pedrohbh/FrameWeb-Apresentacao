@@ -24,7 +24,7 @@ public class EntityClassCodeGenerator {
 	public void generate(IFolder packageFolder) {
 		EntityClassTemplateEngine templateEngine = new EntityClassTemplateEngine(entityClass, ormTemplate);
 		
-		String classCode = templateEngine.render();
+		String classCode = templateEngine.newRender();
 		
 		String fileName = entityClass.getName() + ormTemplate.getClassExtension();
 		IFile file = packageFolder.getFile(fileName);

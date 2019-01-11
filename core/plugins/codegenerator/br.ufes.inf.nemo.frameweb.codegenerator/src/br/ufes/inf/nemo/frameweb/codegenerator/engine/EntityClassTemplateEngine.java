@@ -1,10 +1,18 @@
 package br.ufes.inf.nemo.frameweb.codegenerator.engine;
 
+import java.io.StringReader;
+import java.io.StringWriter;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.velocity.Template;
+import org.apache.velocity.VelocityContext;
+import org.apache.velocity.runtime.RuntimeServices;
+import org.apache.velocity.runtime.RuntimeSingleton;
+import org.apache.velocity.runtime.parser.ParseException;
+import org.apache.velocity.runtime.parser.node.SimpleNode;
 import org.eclipse.uml2.uml.Generalization;
 import org.eclipse.uml2.uml.GeneralizationSet;
 import org.eclipse.uml2.uml.Type;
@@ -40,6 +48,7 @@ public class EntityClassTemplateEngine {
 		this.ormTemplate = ormTemplate;
 	}
 
+	@Deprecated
 	public String render() {
 		String template = EngineUtils.decode(ormTemplate.getClassTemplate());
 
@@ -76,12 +85,14 @@ public class EntityClassTemplateEngine {
 		return entityClassCode;
 	}
 
+	@Deprecated
 	public String insertPackage(String template) {
 		String inserted = template.replace(PACKAGE, domainClass.getPackage().getName());
 		return inserted;
 	}
 
 //	TODO criar um template para classes abstratas
+	@Deprecated
 	public String insertAbstract(String template) {
 		String inserted = null;
 
@@ -94,12 +105,14 @@ public class EntityClassTemplateEngine {
 		return inserted;
 	}
 
+	@Deprecated
 	public String insertClassName(String template) {
 		String inserted = template.replace(CLASS_NAME, domainClass.getName());
 		return inserted;
 	}
 
 //	TODO retirar duvidas com o Vitor sobre como funcionam as generalizacoes do frameweb
+	@Deprecated
 	public String insertGeneralization(String template) {
 		List<Generalization> generalizations = domainClass.getGeneralizations();
 
@@ -129,6 +142,7 @@ public class EntityClassTemplateEngine {
 		return inserted;
 	}
 
+	@Deprecated
 	public String insertAttributes(String template) {
 		String attributeTemplate = EngineUtils.decode(ormTemplate.getAttributeTemplate());
 
@@ -150,6 +164,7 @@ public class EntityClassTemplateEngine {
 		return inserted;
 	}
 	
+	@Deprecated
 	public String insertGettersAndSetters(String template) {
 		String getterAndSetterTemplate = EngineUtils.decode(ormTemplate.getGetterAndSetterTemplate());
 		
@@ -170,6 +185,7 @@ public class EntityClassTemplateEngine {
 	}
 	
 //	TODO verificacao adequada para o tipo void
+	@Deprecated
 	public String insertMethods(String template) {
 		String methodTemplate = EngineUtils.decode(ormTemplate.getMethodTemplate());
 //		TODO verificar se existe um template de metodo para que $MethodReturn seja extraido
@@ -207,4 +223,41 @@ public class EntityClassTemplateEngine {
 		return inserted;
 	}
 
+	public String newRender() {
+		String template = EngineUtils.decode(ormTemplate.getClassTemplate());
+
+		RuntimeServices runtimeServices = RuntimeSingleton.getRuntimeServices();
+		StringReader stringReader = new StringReader(template);		
+		Template velocityTemplate = new Template();
+		
+		try {
+			SimpleNode simpleNode = runtimeServices.parse(stringReader, "Generated Class");
+			velocityTemplate.setData(simpleNode);
+			
+		//TODO aplicar um exception adequado para erros de parser no template
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		velocityTemplate.setRuntimeServices(runtimeServices);
+		velocityTemplate.initDocument();
+
+		VelocityContext velocityContext = new VelocityContext();
+		velocityContext.put("package", domainClass.getPackage());
+		velocityContext.put("class", domainClass);
+		velocityContext.put("attributes", domainClass.getAttributes());
+		velocityContext.put("StringUtils", new StringUtils());
+		velocityContext.put("methods", domainClass
+				.getOperations()
+				.stream()
+				.filter(DomainMethod.class::isInstance)
+				.map(DomainMethod.class::cast).collect(Collectors.toList())
+		);
+		
+		StringWriter stringWriter = new StringWriter();
+		velocityTemplate.merge(velocityContext, stringWriter);
+
+		return stringWriter.toString();
+	}
+	 
 }

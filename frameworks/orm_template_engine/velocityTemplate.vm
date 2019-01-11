@@ -1,0 +1,31 @@
+package ${package.name};
+
+public#if(${class.isAbstract}) abstract#end class ${class.name} {
+
+#foreach(${attribute} in ${attributes})
+	${attribute.visibility.name} ${attribute.type.name} ${attribute.name};
+#end
+
+	public ${class.name}() {
+		super();
+	}
+
+#foreach(${attribute} in ${attributes})
+	public ${attribute.type.name} get${StringUtils.capitalize($attribute.name)}() {
+		return ${attribute.name};
+	}
+
+	public void set${StringUtils.capitalize($attribute.name)}(${attribute.type.name} ${attribute.name}) {
+		this.${attribute.name}= ${attribute.name};
+	}
+#end
+
+#foreach(${method} in ${methods})
+#if($method.isAbstract)
+	${method.visibility.name} abstract ${method.methodType.name} ${method.name}();
+#else
+	${method.visibility.name} ${method.methodType.name} ${method.name}() {
+		return#if(!$method.methodType.name.equals("void")) null#end;
+	}
+#end #end
+}

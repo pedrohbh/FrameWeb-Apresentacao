@@ -6,7 +6,6 @@ import java.util.stream.Collectors;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.uml2.uml.Enumeration;
 
-import br.ufes.inf.nemo.frameweb.codegenerator.enumeration.EnumerationClassCodeGenerator;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.EntityModel;
