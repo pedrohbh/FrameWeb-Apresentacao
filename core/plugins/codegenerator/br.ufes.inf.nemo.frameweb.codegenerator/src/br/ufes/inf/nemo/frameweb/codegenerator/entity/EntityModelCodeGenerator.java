@@ -14,37 +14,33 @@ import br.ufes.inf.nemo.frameweb.utils.ProjectUtils;
 
 public class EntityModelCodeGenerator {
 
-	private DomainPackage domainPackage;
+	private List<DomainPackage> domainPackages;
 	private List<EnumerationClassCodeGenerator> enumerationClasses;
-	private List<EntityClassCodeGenerator> domainClasses;
+	private ORMTemplate ormTemplate;
 	
 	/**
-	 * Responsavel por armazenar todas as classes referentes ao modelo de entidades
-	 * e tambem pela geracao de codigo das mesmas.
+	 * Responsavel por armazenar o conteudo do modelo de entidades
+	 * e tambem pela geracao de codigo do mesmo.
 	 * 
 	 * @param entityModel
 	 * @param ormTemplate
 	 */
 	public EntityModelCodeGenerator(EntityModel entityModel, ORMTemplate ormTemplate) {
-		domainPackage = entityModel.getOwnedElements()
+
+		domainPackages = entityModel.getOwnedElements()
 				.stream()
 				.filter(DomainPackage.class::isInstance)
 				.map(DomainPackage.class::cast)
-				.findFirst()
-				.get();
+				.collect(Collectors.toList());
 		
+		this.ormTemplate = ormTemplate;
+		
+//		TODO trazer as classes de enumeracao para dentro do pacote de dominio (sirius)
 		enumerationClasses = entityModel.getOwnedElements()
 				.stream()
 				.filter(Enumeration.class::isInstance)
 				.map(Enumeration.class::cast)
 				.map(enumerationClass -> new EnumerationClassCodeGenerator(enumerationClass, ormTemplate))
-				.collect(Collectors.toList());
-		
-		domainClasses = domainPackage.getOwnedTypes()
-				.stream()
-				.filter(DomainClass.class::isInstance)
-				.map(DomainClass.class::cast)
-				.map(domainClass -> new EntityClassCodeGenerator(domainClass, ormTemplate))
 				.collect(Collectors.toList());
 		
 	}
@@ -55,16 +51,24 @@ public class EntityModelCodeGenerator {
 	 * @param srcFolder
 	 */
 	public void generate(IFolder srcFolder) {
-		String packagePath = domainPackage.getName().replaceAll("[^A-Za-z0-9]", "/");
-		
-		ProjectUtils.makeDirectory(srcFolder, packagePath);
-		
-		IFolder package_ = srcFolder.getFolder(packagePath);
-		
-//		TODO ainda e necessario definir um template para as classes de enumeracao
-		enumerationClasses.forEach(it -> it.generate(package_));
-		
-		domainClasses.forEach(it -> it.generate(package_));
+		domainPackages.forEach(domainPackage -> {
+			String packagePath = domainPackage.getName().replaceAll("[^A-Za-z0-9]", "/");
+
+			ProjectUtils.makeDirectory(srcFolder, packagePath);
+
+			IFolder package_ = srcFolder.getFolder(packagePath);
+
+//			TODO ainda e necessario definir um template para as classes de enumeracao
+			enumerationClasses.forEach(it -> it.generate(package_));
+
+			domainPackage.getOwnedTypes()
+					.stream()
+					.filter(DomainClass.class::isInstance)
+					.map(DomainClass.class::cast)
+					.map(domainClass -> new EntityClassCodeGenerator(domainClass, ormTemplate))
+					.collect(Collectors.toList())
+					.forEach(it -> it.generate(package_));
+		});
 	}
 	
 }

@@ -17,23 +17,6 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.DomainMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 
 public class EntityClassTemplateEngine {
-	
-//	private final static String PACKAGE = "$Package";
-//	private final static String ABSTRACT = "\\$Abstract\\{(.*?)\\}";
-//	private final static String CLASS_NAME = "$ClassName";
-//	private final static String GENERALIZATION = "\\$Generalization\\{(.*?)\\}";
-//	private final static String ATTRIBUTES = "$Attributes";
-//	private final static String GETTERS_AND_SETTERS = "$GettersAndSetters";
-//	private final static String METHODS = "$Methods";
-//	private final static String SUPERCLASS_NAME = "$SuperclassName";
-//	private final static String ATTRIBUTE_VISIBILITY = "$AttributeVisibility";
-//	private final static String ATTRIBUTE_TYPE = "$AttributeType";
-//	private final static String ATTRIBUTE_NAME = "$AttributeName";
-//	private final static String ATTRIBUTE_NAME_CAPITALIZED = "$AttributeNameCapitalized";
-//	private final static String METHOD_VISIBILITY = "$MethodVisibility";
-//	private final static String METHOD_RETURN_TYPE = "$MethodReturnType";
-//	private final static String METHOD_NAME = "$MethodName";
-//	private final static String METHOD_RETURN = "\\$MethodReturn\\{(.*?)\\}";
 
 	private DomainClass domainClass;
 	private ORMTemplate ormTemplate;
@@ -66,19 +49,39 @@ public class EntityClassTemplateEngine {
 		velocityContext.put("package", domainClass.getPackage());
 		velocityContext.put("class", domainClass);
 		velocityContext.put("attributes", domainClass.getAttributes());
-		velocityContext.put("StringUtils", new StringUtils());
 		velocityContext.put("methods", domainClass
 				.getOperations()
 				.stream()
 				.filter(DomainMethod.class::isInstance)
 				.map(DomainMethod.class::cast).collect(Collectors.toList())
 		);
+		velocityContext.put("StringUtils", new StringUtils());
+		velocityContext.put("newLine", "\n");
 		
 		StringWriter stringWriter = new StringWriter();
 		velocityTemplate.merge(velocityContext, stringWriter);
 
-		return stringWriter.toString();
+		return EngineUtils.sanitize(stringWriter.toString());
 	}
+
+}
+
+//private final static String PACKAGE = "$Package";
+//private final static String ABSTRACT = "\\$Abstract\\{(.*?)\\}";
+//private final static String CLASS_NAME = "$ClassName";
+//private final static String GENERALIZATION = "\\$Generalization\\{(.*?)\\}";
+//private final static String ATTRIBUTES = "$Attributes";
+//private final static String GETTERS_AND_SETTERS = "$GettersAndSetters";
+//private final static String METHODS = "$Methods";
+//private final static String SUPERCLASS_NAME = "$SuperclassName";
+//private final static String ATTRIBUTE_VISIBILITY = "$AttributeVisibility";
+//private final static String ATTRIBUTE_TYPE = "$AttributeType";
+//private final static String ATTRIBUTE_NAME = "$AttributeName";
+//private final static String ATTRIBUTE_NAME_CAPITALIZED = "$AttributeNameCapitalized";
+//private final static String METHOD_VISIBILITY = "$MethodVisibility";
+//private final static String METHOD_RETURN_TYPE = "$MethodReturnType";
+//private final static String METHOD_NAME = "$MethodName";
+//private final static String METHOD_RETURN = "\\$MethodReturn\\{(.*?)\\}";
 
 //	@Deprecated
 //	public String render() {
@@ -254,5 +257,3 @@ public class EntityClassTemplateEngine {
 //		String inserted = template.replace(METHODS, methods);
 //		return inserted;
 //	}
-
-}
