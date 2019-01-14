@@ -47,11 +47,18 @@ public class ORMTemplateItemProvider extends FrameworkProfileItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addClassTemplatePropertyDescriptor(object);
+			addEnumerationClassTemplatePropertyDescriptor(object);
 			addClassExtensionPropertyDescriptor(object);
 			addAttributeTemplatePropertyDescriptor(object);
 			addGetterAndSetterTemplatePropertyDescriptor(object);
 			addMethodTemplatePropertyDescriptor(object);
 			addAbstractMethodTemplatePropertyDescriptor(object);
+			addEmbeddedAttributeTemplatePropertyDescriptor(object);
+			addIdAttributeTemplatePropertyDescriptor(object);
+			addVersionAttributeTemplatePropertyDescriptor(object);
+			addDecimalAttributeTemplatePropertyDescriptor(object);
+			addDateTimeAttributeTemplatePropertyDescriptor(object);
+			addLobAttributeTemplatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -153,6 +160,118 @@ public class ORMTemplateItemProvider extends FrameworkProfileItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Embedded Attribute Template feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEmbeddedAttributeTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ORMTemplate_embeddedAttributeTemplate_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ORMTemplate_embeddedAttributeTemplate_feature",
+						"_UI_ORMTemplate_type"),
+				FramewebPackage.Literals.ORM_TEMPLATE__EMBEDDED_ATTRIBUTE_TEMPLATE, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Id Attribute Template feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdAttributeTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ORMTemplate_idAttributeTemplate_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ORMTemplate_idAttributeTemplate_feature",
+								"_UI_ORMTemplate_type"),
+						FramewebPackage.Literals.ORM_TEMPLATE__ID_ATTRIBUTE_TEMPLATE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Version Attribute Template feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addVersionAttributeTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ORMTemplate_versionAttributeTemplate_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ORMTemplate_versionAttributeTemplate_feature",
+						"_UI_ORMTemplate_type"),
+				FramewebPackage.Literals.ORM_TEMPLATE__VERSION_ATTRIBUTE_TEMPLATE, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Decimal Attribute Template feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDecimalAttributeTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ORMTemplate_decimalAttributeTemplate_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ORMTemplate_decimalAttributeTemplate_feature",
+						"_UI_ORMTemplate_type"),
+				FramewebPackage.Literals.ORM_TEMPLATE__DECIMAL_ATTRIBUTE_TEMPLATE, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Date Time Attribute Template feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDateTimeAttributeTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ORMTemplate_dateTimeAttributeTemplate_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ORMTemplate_dateTimeAttributeTemplate_feature",
+						"_UI_ORMTemplate_type"),
+				FramewebPackage.Literals.ORM_TEMPLATE__DATE_TIME_ATTRIBUTE_TEMPLATE, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Lob Attribute Template feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLobAttributeTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ORMTemplate_lobAttributeTemplate_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ORMTemplate_lobAttributeTemplate_feature",
+								"_UI_ORMTemplate_type"),
+						FramewebPackage.Literals.ORM_TEMPLATE__LOB_ATTRIBUTE_TEMPLATE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Enumeration Class Template feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEnumerationClassTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ORMTemplate_enumerationClassTemplate_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ORMTemplate_enumerationClassTemplate_feature",
+						"_UI_ORMTemplate_type"),
+				FramewebPackage.Literals.ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns ORMTemplate.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -199,11 +318,18 @@ public class ORMTemplateItemProvider extends FrameworkProfileItemProvider {
 
 		switch (notification.getFeatureID(ORMTemplate.class)) {
 		case FramewebPackage.ORM_TEMPLATE__CLASS_TEMPLATE:
+		case FramewebPackage.ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE:
 		case FramewebPackage.ORM_TEMPLATE__CLASS_EXTENSION:
 		case FramewebPackage.ORM_TEMPLATE__ATTRIBUTE_TEMPLATE:
 		case FramewebPackage.ORM_TEMPLATE__GETTER_AND_SETTER_TEMPLATE:
 		case FramewebPackage.ORM_TEMPLATE__METHOD_TEMPLATE:
 		case FramewebPackage.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE:
+		case FramewebPackage.ORM_TEMPLATE__EMBEDDED_ATTRIBUTE_TEMPLATE:
+		case FramewebPackage.ORM_TEMPLATE__ID_ATTRIBUTE_TEMPLATE:
+		case FramewebPackage.ORM_TEMPLATE__VERSION_ATTRIBUTE_TEMPLATE:
+		case FramewebPackage.ORM_TEMPLATE__DECIMAL_ATTRIBUTE_TEMPLATE:
+		case FramewebPackage.ORM_TEMPLATE__DATE_TIME_ATTRIBUTE_TEMPLATE:
+		case FramewebPackage.ORM_TEMPLATE__LOB_ATTRIBUTE_TEMPLATE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

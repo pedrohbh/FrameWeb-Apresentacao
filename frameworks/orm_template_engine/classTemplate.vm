@@ -26,7 +26,11 @@ public#* *##if(${class.isAbstract}) abstract#end class ${class.name} {
 	${method.visibility.name} abstract ${method.methodType.name} ${method.name}();
 #* *##else
 	${method.visibility.name} ${method.methodType.name} ${method.name}() {
-		return #if(!${method.methodType.name.equals('void')})null#end;
+#*      *##if(${method.methodType.name.equals('void')})
+		return;
+#*		*##else
+		return null;
+#*		*##end
 	}
 #* *##end
 

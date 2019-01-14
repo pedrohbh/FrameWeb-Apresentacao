@@ -9,6 +9,7 @@ import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.uml2.uml.Enumeration;
 
+import br.ufes.inf.nemo.frameweb.codegenerator.engine.EnumerationClassTemplateEngine;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 
 @SuppressWarnings("all")
@@ -23,28 +24,28 @@ public class EnumerationClassCodeGenerator {
 	}
 	
 	public void generate(IFolder packageFolder) {
-//		EnumerationClassTemplateEngine templateEngine = new EnumerationClassTemplateEngine(enumerationClass, ormTemplate);
-//		
-//		String classCode = templateEngine.render();
-//		
-//		//TODO tratar o tipo de arquivo
-//		String fileName = enumerationClass.getName() + ormTemplate.getClassExtension();
-//		IFile file = packageFolder.getFile(fileName);
-//		
-//		try {
-//			InputStream inputStream = IOUtils.toInputStream(classCode, "UTF-8");
-//			
-//			// TODO atualizar o conteudo do arquivo ao inves de sobrescrever o codigo
-//			if (file.exists()) {
-//				file.delete(true, null);
-//			}
-//			
-//			file.create(inputStream, true, null);
-//			
-//		// TODO decidir uma forma de tratamento para os Exceptions de EntityClassCodeGenerator::generate
-//		} catch (CoreException | IOException e) {
-//			e.printStackTrace();
-//		}
+		EnumerationClassTemplateEngine templateEngine = new EnumerationClassTemplateEngine(enumerationClass, ormTemplate);
+		
+		String classCode = templateEngine.render();
+		
+		//TODO tratar o tipo de arquivo
+		String fileName = enumerationClass.getName() + ormTemplate.getClassExtension();
+		IFile file = packageFolder.getFile(fileName);
+		
+		try {
+			InputStream inputStream = IOUtils.toInputStream(classCode, "UTF-8");
+			
+			// TODO atualizar o conteudo do arquivo ao inves de sobrescrever o codigo
+			if (file.exists()) {
+				file.delete(true, null);
+			}
+			
+			file.create(inputStream, true, null);
+			
+		// TODO decidir uma forma de tratamento para os Exceptions de EntityClassCodeGenerator::generate
+		} catch (CoreException | IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

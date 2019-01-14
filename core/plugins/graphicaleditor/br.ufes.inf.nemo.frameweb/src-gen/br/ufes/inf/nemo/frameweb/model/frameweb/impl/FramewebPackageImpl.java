@@ -2479,15 +2479,6 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	public EAttribute getORMTemplate_ClassExtension() {
-		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getORMTemplate_AttributeTemplate() {
 		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2496,7 +2487,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getORMTemplate_GetterAndSetterTemplate() {
+	public EAttribute getORMTemplate_AttributeTemplate() {
 		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -2505,7 +2496,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getORMTemplate_MethodTemplate() {
+	public EAttribute getORMTemplate_GetterAndSetterTemplate() {
 		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -2514,8 +2505,80 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getORMTemplate_AbstractMethodTemplate() {
+	public EAttribute getORMTemplate_MethodTemplate() {
 		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getORMTemplate_AbstractMethodTemplate() {
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getORMTemplate_EmbeddedAttributeTemplate() {
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getORMTemplate_IdAttributeTemplate() {
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getORMTemplate_VersionAttributeTemplate() {
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getORMTemplate_DecimalAttributeTemplate() {
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getORMTemplate_DateTimeAttributeTemplate() {
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getORMTemplate_LobAttributeTemplate() {
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getORMTemplate_EnumerationClassTemplate() {
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2932,11 +2995,18 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		ormTemplateEClass = createEClass(ORM_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__CLASS_TEMPLATE);
+		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__CLASS_EXTENSION);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__ATTRIBUTE_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__GETTER_AND_SETTER_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__METHOD_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE);
+		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__EMBEDDED_ATTRIBUTE_TEMPLATE);
+		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__ID_ATTRIBUTE_TEMPLATE);
+		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__VERSION_ATTRIBUTE_TEMPLATE);
+		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__DECIMAL_ATTRIBUTE_TEMPLATE);
+		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__DATE_TIME_ATTRIBUTE_TEMPLATE);
+		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__LOB_ATTRIBUTE_TEMPLATE);
 
 		// Create enums
 		frameworkCategoryListEEnum = createEEnum(FRAMEWORK_CATEGORY_LIST);
@@ -3606,6 +3676,9 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getORMTemplate_ClassTemplate(), theTypesPackage.getString(), "classTemplate", null, 0, 1,
 				ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getORMTemplate_EnumerationClassTemplate(), theTypesPackage.getString(),
+				"enumerationClassTemplate", null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getORMTemplate_ClassExtension(), theTypesPackage.getString(), "classExtension", null, 0, 1,
 				ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
@@ -3621,6 +3694,24 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getORMTemplate_AbstractMethodTemplate(), theTypesPackage.getString(), "abstractMethodTemplate",
 				null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getORMTemplate_EmbeddedAttributeTemplate(), theTypesPackage.getString(),
+				"embeddedAttributeTemplate", null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getORMTemplate_IdAttributeTemplate(), theTypesPackage.getString(), "idAttributeTemplate", null,
+				0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getORMTemplate_VersionAttributeTemplate(), theTypesPackage.getString(),
+				"versionAttributeTemplate", null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getORMTemplate_DecimalAttributeTemplate(), theTypesPackage.getString(),
+				"decimalAttributeTemplate", null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getORMTemplate_DateTimeAttributeTemplate(), theTypesPackage.getString(),
+				"dateTimeAttributeTemplate", null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getORMTemplate_LobAttributeTemplate(), theTypesPackage.getString(), "lobAttributeTemplate", null,
+				0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(frameworkCategoryListEEnum, FrameworkCategoryList.class, "FrameworkCategoryList");

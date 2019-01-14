@@ -15,6 +15,7 @@ import br.ufes.inf.nemo.frameweb.utils.ProjectUtils;
 public class EntityModelCodeGenerator {
 
 	private List<DomainPackage> domainPackages;
+	@SuppressWarnings("unused")
 	private List<EnumerationClassCodeGenerator> enumerationClasses;
 	private ORMTemplate ormTemplate;
 	
@@ -58,8 +59,8 @@ public class EntityModelCodeGenerator {
 
 			IFolder package_ = srcFolder.getFolder(packagePath);
 
-//			TODO ainda e necessario definir um template para as classes de enumeracao
-			enumerationClasses.forEach(it -> it.generate(package_));
+//			TODO separar as classes de enumeracao em seus devidos pacotes (adaptacao no sirius)
+//			enumerationClasses.forEach(it -> it.generate(package_));
 
 			domainPackage.getOwnedTypes()
 					.stream()

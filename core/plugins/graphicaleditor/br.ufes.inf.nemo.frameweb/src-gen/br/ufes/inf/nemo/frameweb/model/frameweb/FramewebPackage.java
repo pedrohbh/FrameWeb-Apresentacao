@@ -123654,13 +123654,22 @@ public interface FramewebPackage extends EPackage {
 	int ORM_TEMPLATE__CLASS_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Enumeration Class Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Class Extension</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORM_TEMPLATE__CLASS_EXTENSION = FRAMEWORK_PROFILE_FEATURE_COUNT + 1;
+	int ORM_TEMPLATE__CLASS_EXTENSION = FRAMEWORK_PROFILE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Attribute Template</b></em>' attribute.
@@ -123669,7 +123678,7 @@ public interface FramewebPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORM_TEMPLATE__ATTRIBUTE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 2;
+	int ORM_TEMPLATE__ATTRIBUTE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Getter And Setter Template</b></em>' attribute.
@@ -123678,7 +123687,7 @@ public interface FramewebPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORM_TEMPLATE__GETTER_AND_SETTER_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 3;
+	int ORM_TEMPLATE__GETTER_AND_SETTER_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Method Template</b></em>' attribute.
@@ -123687,7 +123696,7 @@ public interface FramewebPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORM_TEMPLATE__METHOD_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 4;
+	int ORM_TEMPLATE__METHOD_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Abstract Method Template</b></em>' attribute.
@@ -123696,7 +123705,61 @@ public interface FramewebPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 5;
+	int ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Embedded Attribute Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__EMBEDDED_ATTRIBUTE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Id Attribute Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__ID_ATTRIBUTE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Version Attribute Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__VERSION_ATTRIBUTE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Decimal Attribute Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__DECIMAL_ATTRIBUTE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Date Time Attribute Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__DATE_TIME_ATTRIBUTE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Lob Attribute Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__LOB_ATTRIBUTE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of structural features of the '<em>ORM Template</em>' class.
@@ -123705,7 +123768,7 @@ public interface FramewebPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORM_TEMPLATE_FEATURE_COUNT = FRAMEWORK_PROFILE_FEATURE_COUNT + 6;
+	int ORM_TEMPLATE_FEATURE_COUNT = FRAMEWORK_PROFILE_FEATURE_COUNT + 13;
 
 	/**
 	 * The operation id for the '<em>Get EAnnotation</em>' operation.
@@ -126657,6 +126720,83 @@ public interface FramewebPackage extends EPackage {
 	EAttribute getORMTemplate_AbstractMethodTemplate();
 
 	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getEmbeddedAttributeTemplate <em>Embedded Attribute Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Embedded Attribute Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getEmbeddedAttributeTemplate()
+	 * @see #getORMTemplate()
+	 * @generated
+	 */
+	EAttribute getORMTemplate_EmbeddedAttributeTemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getIdAttributeTemplate <em>Id Attribute Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id Attribute Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getIdAttributeTemplate()
+	 * @see #getORMTemplate()
+	 * @generated
+	 */
+	EAttribute getORMTemplate_IdAttributeTemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getVersionAttributeTemplate <em>Version Attribute Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Version Attribute Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getVersionAttributeTemplate()
+	 * @see #getORMTemplate()
+	 * @generated
+	 */
+	EAttribute getORMTemplate_VersionAttributeTemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getDecimalAttributeTemplate <em>Decimal Attribute Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Decimal Attribute Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getDecimalAttributeTemplate()
+	 * @see #getORMTemplate()
+	 * @generated
+	 */
+	EAttribute getORMTemplate_DecimalAttributeTemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getDateTimeAttributeTemplate <em>Date Time Attribute Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Date Time Attribute Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getDateTimeAttributeTemplate()
+	 * @see #getORMTemplate()
+	 * @generated
+	 */
+	EAttribute getORMTemplate_DateTimeAttributeTemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getLobAttributeTemplate <em>Lob Attribute Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Lob Attribute Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getLobAttributeTemplate()
+	 * @see #getORMTemplate()
+	 * @generated
+	 */
+	EAttribute getORMTemplate_LobAttributeTemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getEnumerationClassTemplate <em>Enumeration Class Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Enumeration Class Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getEnumerationClassTemplate()
+	 * @see #getORMTemplate()
+	 * @generated
+	 */
+	EAttribute getORMTemplate_EnumerationClassTemplate();
+
+	/**
 	 * Returns the meta object for enum '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkCategoryList <em>Framework Category List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -128448,6 +128588,62 @@ public interface FramewebPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE = eINSTANCE.getORMTemplate_AbstractMethodTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Embedded Attribute Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ORM_TEMPLATE__EMBEDDED_ATTRIBUTE_TEMPLATE = eINSTANCE.getORMTemplate_EmbeddedAttributeTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Id Attribute Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ORM_TEMPLATE__ID_ATTRIBUTE_TEMPLATE = eINSTANCE.getORMTemplate_IdAttributeTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Version Attribute Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ORM_TEMPLATE__VERSION_ATTRIBUTE_TEMPLATE = eINSTANCE.getORMTemplate_VersionAttributeTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Decimal Attribute Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ORM_TEMPLATE__DECIMAL_ATTRIBUTE_TEMPLATE = eINSTANCE.getORMTemplate_DecimalAttributeTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Date Time Attribute Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ORM_TEMPLATE__DATE_TIME_ATTRIBUTE_TEMPLATE = eINSTANCE.getORMTemplate_DateTimeAttributeTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Lob Attribute Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ORM_TEMPLATE__LOB_ATTRIBUTE_TEMPLATE = eINSTANCE.getORMTemplate_LobAttributeTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Enumeration Class Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE = eINSTANCE.getORMTemplate_EnumerationClassTemplate();
 
 		/**
 		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkCategoryList <em>Framework Category List</em>}' enum.
