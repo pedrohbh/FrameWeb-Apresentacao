@@ -8,7 +8,7 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.runtime.CoreException;
 
-import br.ufes.inf.nemo.frameweb.codegenerator.engine.EntityClassTemplateEngine;
+import br.ufes.inf.nemo.frameweb.codegenerator.engine.FramewebTemplateEngine;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 
@@ -22,9 +22,7 @@ public class EntityClassCodeGenerator {
 	}
 
 	public void generate(IFolder packageFolder) {
-		EntityClassTemplateEngine templateEngine = new EntityClassTemplateEngine(entityClass, ormTemplate);
-		
-		String classCode = templateEngine.render();
+		String classCode = FramewebTemplateEngine.render(entityClass, ormTemplate);
 		
 		String fileName = entityClass.getName() + ormTemplate.getClassExtension();
 		IFile file = packageFolder.getFile(fileName);

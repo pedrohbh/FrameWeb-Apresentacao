@@ -10,6 +10,10 @@ import java.util.stream.Collectors;
 public class EngineUtils {
 
 	public static String decode(String str) {
+		if (str == null) {
+			return "";
+		}
+		
 		String decodedString = null;
 
 		try {

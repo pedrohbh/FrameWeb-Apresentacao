@@ -2,6 +2,7 @@ package br.ufes.inf.nemo.frameweb.codegenerator.engine;
 
 import java.io.StringReader;
 import java.io.StringWriter;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.StringUtils;
@@ -11,59 +12,106 @@ import org.apache.velocity.runtime.RuntimeServices;
 import org.apache.velocity.runtime.RuntimeSingleton;
 import org.apache.velocity.runtime.parser.ParseException;
 import org.apache.velocity.runtime.parser.node.SimpleNode;
+import org.eclipse.uml2.uml.Class;
+import org.eclipse.uml2.uml.Generalization;
+import org.eclipse.uml2.uml.GeneralizationSet;
 
+import br.ufes.inf.nemo.frameweb.model.frameweb.DAOClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainMethod;
+import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkProfile;
+import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 
-public class EntityClassTemplateEngine {
+public class FramewebTemplateEngine {
 
-	private DomainClass domainClass;
-	private ORMTemplate ormTemplate;
-	
-	public EntityClassTemplateEngine(DomainClass domainClass, ORMTemplate ormTemplate) {
-		this.domainClass = domainClass;
-		this.ormTemplate = ormTemplate;
-	}
-
-	public String render() {
-		String template = EngineUtils.decode(ormTemplate.getClassTemplate());
-
-		RuntimeServices runtimeServices = RuntimeSingleton.getRuntimeServices();
-		StringReader stringReader = new StringReader(template);		
-		Template velocityTemplate = new Template();
+	public static String render(Class class_, FrameworkProfile frameworkTemplate) {
 		
-		try {
-			SimpleNode simpleNode = runtimeServices.parse(stringReader, "Generated Class");
-			velocityTemplate.setData(simpleNode);
+		if (class_ instanceof DomainClass) {
+			String generatedCode = renderDomainClass(
+					(DomainClass) class_,
+					(ORMTemplate) frameworkTemplate
+			);
 			
-		//TODO aplicar um exception adequado para erros de parser no template
-		} catch (ParseException e) {
-			e.printStackTrace();
+			return generatedCode;
+			
+		} else if (class_ instanceof NavigationClass) {
+			return null;
+			
+		} else if (class_ instanceof DAOClass) {
+			return null;
+			
+		} else /*(class_ instanceof ServiceClass)*/ {
+			return null;
 		}
 		
-		velocityTemplate.setRuntimeServices(runtimeServices);
-		velocityTemplate.initDocument();
+	}
+
+	public static String renderDomainClass(DomainClass domainClass, ORMTemplate ormTemplate) {
+		
+		String template = EngineUtils.decode(ormTemplate.getClassTemplate());
+		
+		Template velocityTemplate = prepareVelocityTemplate(template);
 
 		VelocityContext velocityContext = new VelocityContext();
-		velocityContext.put("package", domainClass.getPackage());
 		velocityContext.put("class", domainClass);
+		velocityContext.put("package", domainClass.getPackage());
 		velocityContext.put("attributes", domainClass.getAttributes());
-		velocityContext.put("methods", domainClass
-				.getOperations()
+		velocityContext.put("methods", domainClass.getOperations()
 				.stream()
 				.filter(DomainMethod.class::isInstance)
-				.map(DomainMethod.class::cast).collect(Collectors.toList())
+				.map(DomainMethod.class::cast)
+				.collect(Collectors.toList())
 		);
-		velocityContext.put("StringUtils", new StringUtils());
-		velocityContext.put("newLine", "\n");
 		
+		try {
+			List<Generalization> generalizations = domainClass.getGeneralizations();
+			List<GeneralizationSet> generalizationSets = generalizations.get(0).getGeneralizationSets();
+			GeneralizationSet generalizationSet = generalizationSets.get(0);
+			
+			velocityContext.put("generalization", generalizationSet);
+			
+		} catch (NullPointerException | IndexOutOfBoundsException e) {
+			velocityContext.put("generalization", null);
+		}
+		
+		velocityContext.put("StringUtils", new StringUtils());
+		velocityContext.put("NEWLINE", "\n");
+		velocityContext.put("ID", EngineUtils.decode(ormTemplate.getIdAttributeTemplate()));
+//		velocityContext.put("EMBEDDED", EngineUtils.decode(ormTemplate.getEmbeddedAttributeTemplate()));
+//		velocityContext.put("VERSION", EngineUtils.decode(ormTemplate.getVersionAttributeTemplate()));
+//		velocityContext.put("FRAMEWORK_VERSION", EngineUtils.decode(ormTemplate.getVersion()));
+//		velocityContext.put("DECIMAL", EngineUtils.decode(ormTemplate.getDecimalAttributeTemplate()));
+//		velocityContext.put("DATE_TIME", EngineUtils.decode(ormTemplate.getDateTimeAttributeTemplate()));
+//		velocityContext.put("LOB", EngineUtils.decode(ormTemplate.getLobAttributeTemplate()));
+
 		StringWriter stringWriter = new StringWriter();
 		velocityTemplate.merge(velocityContext, stringWriter);
 
-		return EngineUtils.sanitize(stringWriter.toString());
+		return stringWriter.toString();
 	}
 
+	private static Template prepareVelocityTemplate(String template) {
+
+		RuntimeServices runtimeServices = RuntimeSingleton.getRuntimeServices();
+		StringReader stringReader = new StringReader(template);
+		Template velocityTemplate = new Template();
+
+		try {
+			SimpleNode simpleNode = runtimeServices.parse(stringReader, "Generated Class");
+			velocityTemplate.setData(simpleNode);
+
+//		TODO aplicar um exception adequado para erros de parser no template
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+
+		velocityTemplate.setRuntimeServices(runtimeServices);
+		velocityTemplate.initDocument();
+
+		return velocityTemplate;
+	}
+	
 }
 
 //private final static String PACKAGE = "$Package";

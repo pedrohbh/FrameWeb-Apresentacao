@@ -45,7 +45,7 @@ public class EnumerationClassTemplateEngine {
 
 		VelocityContext velocityContext = new VelocityContext();
 //		TODO ainda e necessario permitir que classes de enumeracao fiquem dentro do pacote de dominio (sirius)
-//		Por enquanto ela usa "Entity Model" como pacote
+//		Por enquanto ela usa "Entity Model" como pacote, logo nao funcionam
 		velocityContext.put("package", enumerationClass.getPackage());
 		velocityContext.put("class", enumerationClass);
 		velocityContext.put("literals", enumerationClass.getOwnedLiterals());

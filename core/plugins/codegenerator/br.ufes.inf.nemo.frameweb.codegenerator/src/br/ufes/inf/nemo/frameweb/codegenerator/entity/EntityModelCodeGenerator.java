@@ -67,7 +67,6 @@ public class EntityModelCodeGenerator {
 					.filter(DomainClass.class::isInstance)
 					.map(DomainClass.class::cast)
 					.map(domainClass -> new EntityClassCodeGenerator(domainClass, ormTemplate))
-					.collect(Collectors.toList())
 					.forEach(it -> it.generate(package_));
 		});
 	}

@@ -1,5 +1,5 @@
 package br.ufes.inf.nemo.frameweb.codegenerator.application;
 
-public class ApplicationClassCodeGenerator {
+public class ServiceClassCodeGenerator {
 
 }

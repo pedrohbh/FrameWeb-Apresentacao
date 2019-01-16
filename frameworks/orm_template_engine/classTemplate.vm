@@ -1,8 +1,9 @@
 package ${package.name};
 
-public#* *##if(${class.isAbstract}) abstract#end class ${class.name} {
+public#* *##if(${class.isAbstract()}) abstract#end class ${class.name} #if($!{null.isNull($generalization)})extends ${generalization.name} #end{
 
 #foreach(${attribute} in ${attributes})
+#*	*##if(${attribute.isID()})	${ID}${NEWLINE}#end
 	${attribute.visibility.name} ${attribute.type.name} ${attribute.name};
 #end
 
@@ -18,11 +19,11 @@ public#* *##if(${class.isAbstract}) abstract#end class ${class.name} {
 	public void set${StringUtils.capitalize($attribute.name)}(${attribute.type.name} ${attribute.name}) {
 		this.${attribute.name} = ${attribute.name};
 	}
-#*	*##if(!$foreach.hasNext)${newLine}#end
+#*	*##if(!$foreach.hasNext)${NEWLINE}#end
 #end
 
 #foreach(${method} in ${methods})
-#* *##if(${method.isAbstract})
+#* *##if(${method.isAbstract()})
 	${method.visibility.name} abstract ${method.methodType.name} ${method.name}();
 #* *##else
 	${method.visibility.name} ${method.methodType.name} ${method.name}() {
