@@ -1,9 +1,11 @@
 package ${package.name};
 
+#if(!${class.isAbstract()})@Entity${NEWLINE}#end
 public#* *##if(${class.isAbstract()}) abstract#end class ${class.name} #if($!{null.isNull($generalization)})extends ${generalization.name} #end{
 
 #foreach(${attribute} in ${attributes})
-#*	*##if(${attribute.isID()})	${ID}${NEWLINE}#end
+#*  ID  *##if(${attribute.isID()})	@Id${NEWLINE}	@GeneratedValue${NEWLINE}#end
+#* SIZE *##if(${attribute.size} > 0)	@Column(length=${attribute.size})${NEWLINE}#end
 	${attribute.visibility.name} ${attribute.type.name} ${attribute.name};
 #end
 
@@ -12,11 +14,11 @@ public#* *##if(${class.isAbstract()}) abstract#end class ${class.name} #if($!{nu
 	}
 
 #foreach(${attribute} in ${attributes})
-	public ${attribute.type.name} get${StringUtils.capitalize($attribute.name)}() {
+	public ${attribute.type.name} get${STRING.capitalize($attribute.name)}() {
 		return ${attribute.name};
 	}
 
-	public void set${StringUtils.capitalize($attribute.name)}(${attribute.type.name} ${attribute.name}) {
+	public void set${STRING.capitalize($attribute.name)}(${attribute.type.name} ${attribute.name}) {
 		this.${attribute.name} = ${attribute.name};
 	}
 #*	*##if(!$foreach.hasNext)${NEWLINE}#end

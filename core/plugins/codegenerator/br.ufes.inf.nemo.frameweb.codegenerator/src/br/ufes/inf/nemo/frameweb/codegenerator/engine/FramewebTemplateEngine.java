@@ -22,10 +22,16 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.DomainMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkProfile;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
+import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
 
 public class FramewebTemplateEngine {
 
 	public static String render(Class class_, FrameworkProfile frameworkTemplate) {
+		
+//		Caso nao haja um template definido para a classe em questao
+		if (frameworkTemplate == null) {
+			return null;
+		}
 		
 		if (class_ instanceof DomainClass) {
 			String generatedCode = renderDomainClass(
@@ -36,17 +42,29 @@ public class FramewebTemplateEngine {
 			return generatedCode;
 			
 		} else if (class_ instanceof NavigationClass) {
+			/* code */
 			return null;
 			
 		} else if (class_ instanceof DAOClass) {
+			/* code */
 			return null;
 			
-		} else /*(class_ instanceof ServiceClass)*/ {
+		} else if (class_ instanceof ServiceClass) {
+			/* code */
 			return null;
+			
+		} else {
+//			Classe de entrada invalida
+			throw new IllegalArgumentException();
 		}
 		
 	}
 
+/* WARNING!!
+ * 
+ * UGLY CODE BELOW
+ * 
+ */
 	public static String renderDomainClass(DomainClass domainClass, ORMTemplate ormTemplate) {
 		
 		String template = EngineUtils.decode(ormTemplate.getClassTemplate());
@@ -55,6 +73,11 @@ public class FramewebTemplateEngine {
 
 		VelocityContext velocityContext = new VelocityContext();
 		velocityContext.put("class", domainClass);
+		
+		/* O objeto 'class' fornece todos os atributos e metodos necessarios para
+		 * a criacao do template, mas alguns 'alias' sao permitidos com a intencao de
+		 * facilitar a vida do dev
+		 */
 		velocityContext.put("package", domainClass.getPackage());
 		velocityContext.put("attributes", domainClass.getAttributes());
 		velocityContext.put("methods", domainClass.getOperations()
@@ -64,6 +87,7 @@ public class FramewebTemplateEngine {
 				.collect(Collectors.toList())
 		);
 		
+		/* Refazer uma analise sobre as generalizacoes com o Vitor */
 		try {
 			List<Generalization> generalizations = domainClass.getGeneralizations();
 			List<GeneralizationSet> generalizationSets = generalizations.get(0).getGeneralizationSets();
@@ -75,7 +99,7 @@ public class FramewebTemplateEngine {
 			velocityContext.put("generalization", null);
 		}
 		
-		velocityContext.put("StringUtils", new StringUtils());
+		velocityContext.put("STRING", new StringUtils());
 		velocityContext.put("NEWLINE", "\n");
 		velocityContext.put("ID", EngineUtils.decode(ormTemplate.getIdAttributeTemplate()));
 //		velocityContext.put("EMBEDDED", EngineUtils.decode(ormTemplate.getEmbeddedAttributeTemplate()));
@@ -88,9 +112,16 @@ public class FramewebTemplateEngine {
 		StringWriter stringWriter = new StringWriter();
 		velocityTemplate.merge(velocityContext, stringWriter);
 
-		return stringWriter.toString();
+		return EngineUtils.sanitize(stringWriter.toString());
 	}
 
+/**
+ * Prepara o Velocity para renderizar o template 
+ * 
+ * @param template
+ * 
+ * @return Template
+ */
 	private static Template prepareVelocityTemplate(String template) {
 
 		RuntimeServices runtimeServices = RuntimeSingleton.getRuntimeServices();
