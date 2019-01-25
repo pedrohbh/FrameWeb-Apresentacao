@@ -73,7 +73,7 @@ public class FramewebTemplateEngine {
 
 		VelocityContext velocityContext = new VelocityContext();
 		velocityContext.put("class", domainClass);
-		
+
 		/* O objeto 'class' fornece todos os atributos e metodos necessarios para
 		 * a criacao do template, mas alguns 'alias' sao permitidos com a intencao de
 		 * facilitar a vida do dev
@@ -87,21 +87,22 @@ public class FramewebTemplateEngine {
 				.collect(Collectors.toList())
 		);
 		
-		/* Refazer uma analise sobre as generalizacoes com o Vitor */
+		/* Refazer uma analise sobre as generalizacoes com o Vitor, o negocio nao e bonito, meu cavaleiro*/
 		try {
 			List<Generalization> generalizations = domainClass.getGeneralizations();
 			List<GeneralizationSet> generalizationSets = generalizations.get(0).getGeneralizationSets();
 			GeneralizationSet generalizationSet = generalizationSets.get(0);
-			
+
 			velocityContext.put("generalization", generalizationSet);
-			
+
 		} catch (NullPointerException | IndexOutOfBoundsException e) {
 			velocityContext.put("generalization", null);
 		}
-		
+
 		velocityContext.put("STRING", new StringUtils());
+		velocityContext.put("NULL", new NullUtils());
 		velocityContext.put("NEWLINE", "\n");
-		velocityContext.put("ID", EngineUtils.decode(ormTemplate.getIdAttributeTemplate()));
+//		velocityContext.put("ID", EngineUtils.decode(ormTemplate.getIdAttributeTemplate()));
 //		velocityContext.put("EMBEDDED", EngineUtils.decode(ormTemplate.getEmbeddedAttributeTemplate()));
 //		velocityContext.put("VERSION", EngineUtils.decode(ormTemplate.getVersionAttributeTemplate()));
 //		velocityContext.put("FRAMEWORK_VERSION", EngineUtils.decode(ormTemplate.getVersion()));

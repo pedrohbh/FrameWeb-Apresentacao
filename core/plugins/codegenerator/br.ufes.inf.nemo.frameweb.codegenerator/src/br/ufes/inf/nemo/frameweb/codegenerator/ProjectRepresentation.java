@@ -94,42 +94,64 @@ public class ProjectRepresentation {
 		}
 	}
 	
-	public List<EntityModel> getEntityModels() {
+	public EntityModel getEntityModel() {
 		List<FramewebModel> framewebModels = getFramewebModels();
-		
-		List<EntityModel> entityModels = framewebModels
-				.stream()
-				.filter(EntityModel.class::isInstance)
-				.filter(model -> {
-					boolean hasDomainPackage = model.eContents()
-							.stream()
-							.anyMatch(DomainPackage.class::isInstance);
-					
-					return hasDomainPackage;
-				})
-				.map(EntityModel.class::cast)
-				.collect(Collectors.toList());
-				
-		return entityModels;
+
+		try {
+			EntityModel entityModel = framewebModels
+					.stream()
+					.filter(EntityModel.class::isInstance)
+					.filter(model -> {
+							boolean hasDomainPackage = model.eContents()
+									.stream()
+									.anyMatch(DomainPackage.class::isInstance);
+			
+							return hasDomainPackage;
+					})
+					.map(EntityModel.class::cast)
+					.findFirst()
+					.get();
+			
+			return entityModel;
+			
+		} catch (NullPointerException | IndexOutOfBoundsException e) {
+			return null;
+		}
+
 	}
 	
-	public List<NavigationModel> getNavigationModels() {
+	public boolean hasEntityModel() {
+		return getEntityModel() != null;
+	}
+	
+	public NavigationModel getNavigationModel() {
 		List<FramewebModel> framewebModels = getFramewebModels();
 		
-		List<NavigationModel> navigationModel = framewebModels
-				.stream()
-				.filter(NavigationModel.class::isInstance)
-				.filter(model -> {
-					boolean hasControllerPackage = model.eContents()
-							.stream()
-							.anyMatch(ControllerPackage.class::isInstance);
-					
-					return hasControllerPackage;
-				})
-				.map(NavigationModel.class::cast)
-				.collect(Collectors.toList());
+		try {
+			NavigationModel navigationModel = framewebModels
+					.stream()
+					.filter(NavigationModel.class::isInstance)
+					.filter(model -> {
+						boolean hasControllerPackage = model.eContents()
+								.stream()
+								.anyMatch(ControllerPackage.class::isInstance);
+						
+						return hasControllerPackage;
+					})
+					.map(NavigationModel.class::cast)
+					.findFirst()
+					.get();
+			
+			return navigationModel;
+			
+		} catch (NullPointerException | IndexOutOfBoundsException e) {
+			return null;
+		}
 		
-		return navigationModel;
+	}
+
+	public boolean hasNavigationModel() {
+		return getNavigationModel() != null;
 	}
 
 }
