@@ -20,7 +20,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.DAOClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkProfile;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationClass;
+import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
 
@@ -41,7 +41,7 @@ public class FramewebTemplateEngine {
 			
 			return generatedCode;
 			
-		} else if (class_ instanceof NavigationClass) {
+		} else if (class_ instanceof FrontControllerClass) {
 			/* code */
 			return null;
 			
@@ -99,6 +99,7 @@ public class FramewebTemplateEngine {
 			velocityContext.put("generalization", null);
 		}
 
+		//Utilitario fornecido pela apache
 		velocityContext.put("STRING", new StringUtils());
 		velocityContext.put("NULL", new NullUtils());
 		velocityContext.put("NEWLINE", "\n");

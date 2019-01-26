@@ -24,6 +24,11 @@ public class EntityClassCodeGenerator {
 	public void generate(IFolder packageFolder) {
 		String classCode = FramewebTemplateEngine.render(entityClass, ormTemplate);
 		
+//		Caso nao haja template definido, nada e feito
+		if (classCode == null) {
+			return;
+		}
+		
 		String fileName = entityClass.getName() + ormTemplate.getClassExtension();
 		IFile file = packageFolder.getFile(fileName);
 		
