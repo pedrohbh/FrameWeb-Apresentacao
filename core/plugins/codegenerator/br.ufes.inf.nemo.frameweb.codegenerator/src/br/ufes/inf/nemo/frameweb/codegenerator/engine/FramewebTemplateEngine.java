@@ -7,7 +7,9 @@ import java.util.stream.Collectors;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
-import org.eclipse.uml2.uml.Class;
+//import org.eclipse.uml2.uml.Class;
+import org.eclipse.uml2.uml.Element;
+import org.eclipse.uml2.uml.Enumeration;
 import org.eclipse.uml2.uml.Generalization;
 import org.eclipse.uml2.uml.GeneralizationSet;
 
@@ -27,7 +29,11 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
  */
 public class FramewebTemplateEngine {
 
-	public static String render(Class class_, FrameworkProfile frameworkTemplate) {
+	/*
+	 * Ver com o Vitor se e melhor utilizar Class (nao permite que Enumeration seja processado aqui)
+	 * ou Element (o que nao faz muito sentido, mas resolve o problema das classes de enumeracao)
+	 */
+	public static String render(Element class_, FrameworkProfile frameworkTemplate) {
 		
 //		Caso nao haja um template definido para a classe em questao (deve ser removido futuramente)
 		if (frameworkTemplate == null) {
@@ -41,6 +47,10 @@ public class FramewebTemplateEngine {
 			);
 			
 			return generatedCode;
+		
+		} else if (class_ instanceof Enumeration) {
+			/* code */
+			return null;
 			
 		} else if (class_ instanceof FrontControllerClass) {
 			/* code */
@@ -120,6 +130,26 @@ public class FramewebTemplateEngine {
 		velocityTemplate.merge(velocityContext, stringWriter);
 
 		return EngineUtils.sanitize(stringWriter.toString());
+	}
+	
+	public static String renderEnumerationClass(Enumeration enumerationClass, ORMTemplate ormTemplate) {
+		String template = EngineUtils.decode(ormTemplate.getEnumerationClassTemplate());
+
+		Template velocityTemplate = EngineUtils.prepareVelocityTemplate(template);
+
+		VelocityContext velocityContext = new VelocityContext();
+//		TODO ainda e necessario permitir que classes de enumeracao fiquem dentro do pacote de dominio (sirius)
+//		Por enquanto ela usa "Entity Model" como pacote, logo nao funcionam
+		velocityContext.put("package", enumerationClass.getPackage());
+		velocityContext.put("class", enumerationClass);
+		velocityContext.put("literals", enumerationClass.getOwnedLiterals());
+		velocityContext.put("StringUtils", new StringUtils());
+		velocityContext.put("newLine", "\n");
+		
+		StringWriter stringWriter = new StringWriter();
+		velocityTemplate.merge(velocityContext, stringWriter);
+
+		return stringWriter.toString();
 	}
 	
 }
