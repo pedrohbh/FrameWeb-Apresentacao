@@ -1,11 +1,18 @@
 package br.ufes.inf.nemo.frameweb.codegenerator.engine;
 
+import java.io.StringReader;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+
+import org.apache.velocity.Template;
+import org.apache.velocity.runtime.RuntimeServices;
+import org.apache.velocity.runtime.RuntimeSingleton;
+import org.apache.velocity.runtime.parser.ParseException;
+import org.apache.velocity.runtime.parser.node.SimpleNode;
 
 public class EngineUtils {
 
@@ -50,5 +57,33 @@ public class EngineUtils {
 				.collect(Collectors.joining("\n"));
 		
 		return sanitizedString;
+	}
+	
+	/**
+	 * Prepara o Velocity para renderizar o template 
+	 * 
+	 * @param template
+	 * 
+	 * @return Template
+	 */
+	public static Template prepareVelocityTemplate(String template) {
+
+		RuntimeServices runtimeServices = RuntimeSingleton.getRuntimeServices();
+		StringReader stringReader = new StringReader(template);
+		Template velocityTemplate = new Template();
+
+		try {
+			SimpleNode simpleNode = runtimeServices.parse(stringReader, "Generated Class");
+			velocityTemplate.setData(simpleNode);
+
+//			TODO aplicar um exception adequado para erros de parser no template
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+
+		velocityTemplate.setRuntimeServices(runtimeServices);
+		velocityTemplate.initDocument();
+
+		return velocityTemplate;
 	}
 }

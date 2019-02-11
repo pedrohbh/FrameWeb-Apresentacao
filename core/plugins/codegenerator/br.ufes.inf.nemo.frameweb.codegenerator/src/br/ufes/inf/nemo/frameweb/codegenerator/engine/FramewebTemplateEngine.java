@@ -1,6 +1,5 @@
 package br.ufes.inf.nemo.frameweb.codegenerator.engine;
 
-import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -8,10 +7,6 @@ import java.util.stream.Collectors;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
-import org.apache.velocity.runtime.RuntimeServices;
-import org.apache.velocity.runtime.RuntimeSingleton;
-import org.apache.velocity.runtime.parser.ParseException;
-import org.apache.velocity.runtime.parser.node.SimpleNode;
 import org.eclipse.uml2.uml.Class;
 import org.eclipse.uml2.uml.Generalization;
 import org.eclipse.uml2.uml.GeneralizationSet;
@@ -24,11 +19,17 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
 
+
+/** WARNING!!
+ * 
+ * UGLY CODE BELOW
+ * 
+ */
 public class FramewebTemplateEngine {
 
 	public static String render(Class class_, FrameworkProfile frameworkTemplate) {
 		
-//		Caso nao haja um template definido para a classe em questao
+//		Caso nao haja um template definido para a classe em questao (deve ser removido futuramente)
 		if (frameworkTemplate == null) {
 			return null;
 		}
@@ -60,16 +61,11 @@ public class FramewebTemplateEngine {
 		
 	}
 
-/* WARNING!!
- * 
- * UGLY CODE BELOW
- * 
- */
 	public static String renderDomainClass(DomainClass domainClass, ORMTemplate ormTemplate) {
 		
 		String template = EngineUtils.decode(ormTemplate.getClassTemplate());
 		
-		Template velocityTemplate = prepareVelocityTemplate(template);
+		Template velocityTemplate = EngineUtils.prepareVelocityTemplate(template);
 
 		VelocityContext velocityContext = new VelocityContext();
 		velocityContext.put("class", domainClass);
@@ -87,7 +83,7 @@ public class FramewebTemplateEngine {
 				.collect(Collectors.toList())
 		);
 		
-		/* Refazer uma analise sobre as generalizacoes com o Vitor, o negocio nao e bonito, meu cavaleiro*/
+		/* Refazer uma analise sobre as generalizacoes com o Vitor, o negocio nao e bonito*/
 		try {
 			List<Generalization> generalizations = domainClass.getGeneralizations();
 			List<GeneralizationSet> generalizationSets = generalizations.get(0).getGeneralizationSets();
@@ -99,10 +95,19 @@ public class FramewebTemplateEngine {
 			velocityContext.put("generalization", null);
 		}
 
-		//Utilitario fornecido pela apache
 		velocityContext.put("STRING", new StringUtils());
 		velocityContext.put("NULL", new NullUtils());
-		velocityContext.put("NEWLINE", "\n");
+		velocityContext.put("NEWLINE", System.getProperty("line.separator"));
+		velocityContext.put("WHITESPACE", " ");
+		velocityContext.put("TAB", "	");
+		
+		/*
+		 * Definir um template para cada label em ORMTemplate talvez nao seja uma boa idea,
+		 * ja que cada de ORMTemplate se refere a um Framework ORM em especifico, qual o sentido
+		 * de definir templates para as labels?
+		 * Se a intencao for reaproevitar o template da linguagem em si, seria melhor separarmos
+		 * linguagem e ORM
+		 */
 //		velocityContext.put("ID", EngineUtils.decode(ormTemplate.getIdAttributeTemplate()));
 //		velocityContext.put("EMBEDDED", EngineUtils.decode(ormTemplate.getEmbeddedAttributeTemplate()));
 //		velocityContext.put("VERSION", EngineUtils.decode(ormTemplate.getVersionAttributeTemplate()));
@@ -115,34 +120,6 @@ public class FramewebTemplateEngine {
 		velocityTemplate.merge(velocityContext, stringWriter);
 
 		return EngineUtils.sanitize(stringWriter.toString());
-	}
-
-/**
- * Prepara o Velocity para renderizar o template 
- * 
- * @param template
- * 
- * @return Template
- */
-	private static Template prepareVelocityTemplate(String template) {
-
-		RuntimeServices runtimeServices = RuntimeSingleton.getRuntimeServices();
-		StringReader stringReader = new StringReader(template);
-		Template velocityTemplate = new Template();
-
-		try {
-			SimpleNode simpleNode = runtimeServices.parse(stringReader, "Generated Class");
-			velocityTemplate.setData(simpleNode);
-
-//		TODO aplicar um exception adequado para erros de parser no template
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
-
-		velocityTemplate.setRuntimeServices(runtimeServices);
-		velocityTemplate.initDocument();
-
-		return velocityTemplate;
 	}
 	
 }

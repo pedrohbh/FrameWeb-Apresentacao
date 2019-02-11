@@ -2,6 +2,7 @@ package br.ufes.inf.nemo.frameweb.codegenerator;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 import org.eclipse.emf.ecore.EObject;
@@ -114,7 +115,7 @@ public class ProjectRepresentation {
 			
 			return entityModel;
 			
-		} catch (NullPointerException | IndexOutOfBoundsException e) {
+		} catch (NullPointerException | IndexOutOfBoundsException | NoSuchElementException e) {
 			return null;
 		}
 
@@ -144,7 +145,7 @@ public class ProjectRepresentation {
 			
 			return navigationModel;
 			
-		} catch (NullPointerException | IndexOutOfBoundsException e) {
+		} catch (NullPointerException | IndexOutOfBoundsException | NoSuchElementException e) {
 			return null;
 		}
 		
