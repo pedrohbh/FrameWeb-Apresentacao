@@ -79,13 +79,20 @@ public class FramewebTemplateEngine {
 
 		VelocityContext velocityContext = new VelocityContext();
 		velocityContext.put("class", domainClass);
-
+		
+//		domainClass.getAssociations().forEach(association -> {
+//			association.getMemberEnds().forEach(end -> {
+//				System.out.println(end.getType().getName());
+//			});
+//		});
+		
 		/* O objeto 'class' fornece todos os atributos e metodos necessarios para
 		 * a criacao do template, mas alguns 'alias' sao permitidos com a intencao de
 		 * facilitar a vida do dev
 		 */
 		velocityContext.put("package", domainClass.getPackage());
 		velocityContext.put("attributes", domainClass.getAttributes());
+		velocityContext.put("associations", domainClass.getAssociations());
 		velocityContext.put("methods", domainClass.getOperations()
 				.stream()
 				.filter(DomainMethod.class::isInstance)
@@ -143,13 +150,16 @@ public class FramewebTemplateEngine {
 		velocityContext.put("package", enumerationClass.getPackage());
 		velocityContext.put("class", enumerationClass);
 		velocityContext.put("literals", enumerationClass.getOwnedLiterals());
-		velocityContext.put("StringUtils", new StringUtils());
-		velocityContext.put("newLine", "\n");
+		velocityContext.put("STRING", new StringUtils());
+		velocityContext.put("NULL", new NullUtils());
+		velocityContext.put("NEWLINE", System.getProperty("line.separator"));
+		velocityContext.put("WHITESPACE", " ");
+		velocityContext.put("TAB", "	");
 		
 		StringWriter stringWriter = new StringWriter();
 		velocityTemplate.merge(velocityContext, stringWriter);
 
-		return stringWriter.toString();
+		return EngineUtils.sanitize(stringWriter.toString());
 	}
 	
 }
