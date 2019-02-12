@@ -276,6 +276,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createConstantNameListFromString(eDataType, initialValue);
 		case FramewebPackage.INHERITANCE_MAPPING:
 			return createInheritanceMappingFromString(eDataType, initialValue);
+		case FramewebPackage.ASSOCIATION_CARDINALITY:
+			return createAssociationCardinalityFromString(eDataType, initialValue);
 		case FramewebPackage.RATIONAL:
 			return createRationalFromString(eDataType, initialValue);
 		case FramewebPackage.DECIMAL:
@@ -313,6 +315,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return convertConstantNameListToString(eDataType, instanceValue);
 		case FramewebPackage.INHERITANCE_MAPPING:
 			return convertInheritanceMappingToString(eDataType, instanceValue);
+		case FramewebPackage.ASSOCIATION_CARDINALITY:
+			return convertAssociationCardinalityToString(eDataType, instanceValue);
 		case FramewebPackage.RATIONAL:
 			return convertRationalToString(eDataType, instanceValue);
 		case FramewebPackage.DECIMAL:
@@ -1469,6 +1473,28 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	public String convertInheritanceMappingToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AssociationCardinality createAssociationCardinalityFromString(EDataType eDataType, String initialValue) {
+		AssociationCardinality result = AssociationCardinality.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertAssociationCardinalityToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

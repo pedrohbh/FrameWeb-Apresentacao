@@ -820,6 +820,13 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EEnum associationCardinalityEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EDataType rationalEDataType = null;
 
 	/**
@@ -2676,6 +2683,15 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getAssociationCardinality() {
+		return associationCardinalityEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EDataType getRational() {
 		return rationalEDataType;
 	}
@@ -3019,6 +3035,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		fetchEEnum = createEEnum(FETCH);
 		constantNameListEEnum = createEEnum(CONSTANT_NAME_LIST);
 		inheritanceMappingEEnum = createEEnum(INHERITANCE_MAPPING);
+		associationCardinalityEEnum = createEEnum(ASSOCIATION_CARDINALITY);
 
 		// Create data types
 		rationalEDataType = createEDataType(RATIONAL);
@@ -3776,6 +3793,12 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		addEEnumLiteral(inheritanceMappingEEnum, InheritanceMapping.SINGLETABLE);
 		addEEnumLiteral(inheritanceMappingEEnum, InheritanceMapping.UNION);
 		addEEnumLiteral(inheritanceMappingEEnum, InheritanceMapping.JOIN);
+
+		initEEnum(associationCardinalityEEnum, AssociationCardinality.class, "AssociationCardinality");
+		addEEnumLiteral(associationCardinalityEEnum, AssociationCardinality.ONE_TO_ONE);
+		addEEnumLiteral(associationCardinalityEEnum, AssociationCardinality.ONE_TO_MANY);
+		addEEnumLiteral(associationCardinalityEEnum, AssociationCardinality.MANY_TO_ONE);
+		addEEnumLiteral(associationCardinalityEEnum, AssociationCardinality.MANY_TO_MANY);
 
 		// Initialize data types
 		initEDataType(rationalEDataType, double.class, "Rational", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

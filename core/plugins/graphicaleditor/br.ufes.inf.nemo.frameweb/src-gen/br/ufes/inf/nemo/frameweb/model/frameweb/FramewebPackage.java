@@ -124825,13 +124825,23 @@ public interface FramewebPackage extends EPackage {
 	int INHERITANCE_MAPPING = 112;
 
 	/**
+	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.AssociationCardinality <em>Association Cardinality</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AssociationCardinality
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getAssociationCardinality()
+	 * @generated
+	 */
+	int ASSOCIATION_CARDINALITY = 113;
+
+	/**
 	 * The meta object id for the '<em>Rational</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getRational()
 	 * @generated
 	 */
-	int RATIONAL = 113;
+	int RATIONAL = 114;
 
 	/**
 	 * The meta object id for the '<em>Decimal</em>' data type.
@@ -124840,7 +124850,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getDecimal()
 	 * @generated
 	 */
-	int DECIMAL = 114;
+	int DECIMAL = 115;
 
 	/**
 	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FramewebProject <em>Project</em>}'.
@@ -126897,6 +126907,16 @@ public interface FramewebPackage extends EPackage {
 	EEnum getInheritanceMapping();
 
 	/**
+	 * Returns the meta object for enum '{@link br.ufes.inf.nemo.frameweb.model.frameweb.AssociationCardinality <em>Association Cardinality</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Association Cardinality</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AssociationCardinality
+	 * @generated
+	 */
+	EEnum getAssociationCardinality();
+
+	/**
 	 * Returns the meta object for data type '<em>Rational</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -128744,6 +128764,16 @@ public interface FramewebPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum INHERITANCE_MAPPING = eINSTANCE.getInheritanceMapping();
+
+		/**
+		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.AssociationCardinality <em>Association Cardinality</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AssociationCardinality
+		 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getAssociationCardinality()
+		 * @generated
+		 */
+		EEnum ASSOCIATION_CARDINALITY = eINSTANCE.getAssociationCardinality();
 
 		/**
 		 * The meta object literal for the '<em>Rational</em>' data type.

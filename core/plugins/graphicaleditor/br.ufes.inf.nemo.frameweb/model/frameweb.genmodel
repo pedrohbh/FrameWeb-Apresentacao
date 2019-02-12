@@ -74,6 +74,12 @@
       <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//InheritanceMapping/union"/>
       <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//InheritanceMapping/join"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="frameweb.ecore#//AssociationCardinality">
+      <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//AssociationCardinality/OneToOne"/>
+      <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//AssociationCardinality/OneToMany"/>
+      <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//AssociationCardinality/ManyToOne"/>
+      <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//AssociationCardinality/ManyToMany"/>
+    </genEnums>
     <genDataTypes ecoreDataType="frameweb.ecore#//Rational"/>
     <genDataTypes ecoreDataType="frameweb.ecore#//Decimal"/>
     <genClasses ecoreClass="frameweb.ecore#//FramewebProject">
