@@ -18,6 +18,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkProfile;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
+import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
 
@@ -49,12 +50,18 @@ public class FramewebTemplateEngine {
 			return generatedCode;
 		
 		} else if (class_ instanceof Enumeration) {
-			/* code */
-			return null;
+			String generatedCode = renderEnumerationClass(
+					(Enumeration) class_,
+					(ORMTemplate) frameworkTemplate);
+			
+			return generatedCode;
 			
 		} else if (class_ instanceof FrontControllerClass) {
-			/* code */
-			return null;
+			String generatedCode = renderFrontControllerClass(
+					(FrontControllerClass) class_,
+					(FrontControllerTemplate) frameworkTemplate);
+
+			return generatedCode;
 			
 		} else if (class_ instanceof DAOClass) {
 			/* code */
@@ -160,6 +167,13 @@ public class FramewebTemplateEngine {
 		velocityTemplate.merge(velocityContext, stringWriter);
 
 		return EngineUtils.sanitize(stringWriter.toString());
+	}
+	
+//	TODO Implementar a renderização do controlador frontal
+	public static String renderFrontControllerClass(FrontControllerClass frontControllerClass,
+			FrontControllerTemplate frontControllerTemplate) {
+		
+		return null;
 	}
 	
 }
