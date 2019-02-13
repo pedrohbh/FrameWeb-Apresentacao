@@ -20,21 +20,19 @@ public class EntityModelCodeGenerator {
 	private ORMTemplate ormTemplate;
 	
 	/**
-	 * Responsavel por armazenar o conteudo do modelo de entidades
-	 * e tambem pela geracao de codigo do mesmo.
-	 * 
 	 * @param entityModel
 	 * @param ormTemplate
 	 */
 	public EntityModelCodeGenerator(EntityModel entityModel, ORMTemplate ormTemplate) {
-
+		
+		this.ormTemplate = ormTemplate;
+		
 		domainPackages = entityModel.getOwnedElements()
 				.stream()
 				.filter(DomainPackage.class::isInstance)
 				.map(DomainPackage.class::cast)
 				.collect(Collectors.toList());
 		
-		this.ormTemplate = ormTemplate;
 		
 //		TODO trazer as classes de enumeracao para dentro do pacote de dominio (sirius)
 		enumerationClasses = entityModel.getOwnedElements()
@@ -59,7 +57,6 @@ public class EntityModelCodeGenerator {
 
 			IFolder package_ = srcFolder.getFolder(packagePath);
 
-//			TODO separar as classes de enumeracao em seus devidos pacotes (adaptacao no sirius)
 //			enumerationClasses.forEach(it -> it.generate(package_));
 
 			domainPackage.getOwnedTypes()

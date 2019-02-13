@@ -15,15 +15,14 @@ public class NavigationModelCodeGenerator {
 
 	private List<ControllerPackage> controllerPackages;
 	private FrontControllerTemplate frontControllerTemplate;
-	
+
 	/**
-	 * Responsavel por armazenar o conteudo do modelo de navegaca
-	 * e tambem pela geracao de codigo do mesmo.
-	 * 
 	 * @param navigationModel
 	 * @param frontControllerTemplate
 	 */
-	public NavigationModelCodeGenerator(NavigationModel navigationModel, FrontControllerTemplate frontControllerTemplate) {
+	public NavigationModelCodeGenerator(NavigationModel navigationModel,
+			FrontControllerTemplate frontControllerTemplate) {
+		
 		controllerPackages = navigationModel.getOwnedElements()
 				.stream()
 				.filter(ControllerPackage.class::isInstance)
@@ -39,6 +38,7 @@ public class NavigationModelCodeGenerator {
 	 * @param srcFolder
 	 */
 	public void generate(IFolder srcFolder) {
+		
 		controllerPackages.forEach(controllerPackage -> {
 			String packagePath = controllerPackage.getName().replaceAll("[^A-Za-z0-9]", "/");
 
@@ -50,7 +50,8 @@ public class NavigationModelCodeGenerator {
 					.stream()
 					.filter(FrontControllerClass.class::isInstance)
 					.map(FrontControllerClass.class::cast)
-					.map(frontControllerClass -> new FrontControllerClassCodeGenerator(frontControllerClass, frontControllerTemplate))
+					.map(frontControllerClass -> new FrontControllerClassCodeGenerator(
+							frontControllerClass, frontControllerTemplate))
 					.forEach(it -> it.generate(package_));
 		});
 	}

@@ -8,7 +8,7 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.runtime.CoreException;
 
-import br.ufes.inf.nemo.frameweb.codegenerator.engine.FramewebTemplateEngine;
+import br.ufes.inf.nemo.frameweb.codegenerator.engine.TemplateEngine;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 
@@ -22,9 +22,9 @@ public class EntityClassCodeGenerator {
 	}
 
 	public void generate(IFolder packageFolder) {
-		String classCode = FramewebTemplateEngine.render(entityClass, ormTemplate);
+		String classCode = TemplateEngine.render(entityClass, ormTemplate);
 		
-//		Caso nao haja template definido, nada e feito
+//		Se nao houver um template definido, nada eh feito
 		if (classCode == null) {
 			return;
 		}
@@ -35,14 +35,13 @@ public class EntityClassCodeGenerator {
 		try {
 			InputStream inputStream = IOUtils.toInputStream(classCode, "UTF-8");
 			
-			// TODO atualizar o conteudo do arquivo ao inves de sobrescrever o codigo
+//			TODO atualizar o conteudo do arquivo ao inves de sobrescrever o codigo
 			if (file.exists()) {
 				file.delete(true, null);
 			}
 			
 			file.create(inputStream, true, null);
 			
-		// TODO decidir uma forma de tratamento para os Exceptions de EntityClassCodeGenerator::generate
 		} catch (CoreException | IOException e) {
 			e.printStackTrace();
 		}

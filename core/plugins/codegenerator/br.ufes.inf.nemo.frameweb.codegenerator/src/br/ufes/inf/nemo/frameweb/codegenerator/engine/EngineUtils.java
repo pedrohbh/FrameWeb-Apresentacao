@@ -1,22 +1,20 @@
 package br.ufes.inf.nemo.frameweb.codegenerator.engine;
 
-import java.io.StringReader;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.Arrays;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-
-import org.apache.velocity.Template;
-import org.apache.velocity.runtime.RuntimeServices;
-import org.apache.velocity.runtime.RuntimeSingleton;
-import org.apache.velocity.runtime.parser.ParseException;
-import org.apache.velocity.runtime.parser.node.SimpleNode;
 
 public class EngineUtils {
 
-	public static String decode(String str) {
+	/**
+	 * Decodificar uma dada URL
+	 * 
+	 * @param str
+	 * @return String
+	 */
+	public static String decodeUrl(String str) {
+		
 		if (str == null) {
 			return "";
 		}
@@ -26,29 +24,26 @@ public class EngineUtils {
 		try {
 			decodedString = URLDecoder.decode(str, "UTF-8");
 
-		// TODO lancar uma excecao para error de codificacao URL no template
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
 
 		return decodedString;
 	}
-
-	public static String getParameter(String regex, String str) {
-		Pattern pattern = Pattern.compile(regex, Pattern.DOTALL);
-		Matcher matcher = pattern.matcher(str);
-		String stringBetweenTags = matcher.find() ? matcher.group(1) : null;
-		return stringBetweenTags;
-	}
 	
-	//TODO alguma alma que seja boa em expressoes regulares poderia melhorar isso daqui...
+	/**
+	 * Organiza o codigo dada uma String
+	 * 
+	 * @param str
+	 * @return String
+	 */
 	public static String sanitize(String str) {
 		String sanitizedString = str
-				.replaceAll("\\s+\\{", " {") //remove espacos entre texto e chave
-				.replaceAll("\\s+;", ";") //remove espacos entre texto e ponto e virgula
-				.replaceAll("(?:\\h*\n){2,}", "\n\n"); //remove mais do que uma linha e branco
+				.replaceAll("\\s+\\{", " {") // remove espacos entre texto e chave
+				.replaceAll("\\s+;", ";") // remove espacos entre texto e ponto e virgula
+				.replaceAll("(?:\\h*\n){2,}", "\n\n"); // remove mais do que uma linha e branco
 		
-		//Remove espacos duplos entre palavras
+//		Remove espacos duplos entre palavras
 		String lineSeparator = System.getProperty("line.separator");
 		String[] sanitizedStringLines = sanitizedString.split(lineSeparator);
 		
@@ -58,32 +53,5 @@ public class EngineUtils {
 		
 		return sanitizedString;
 	}
-	
-	/**
-	 * Prepara o Velocity para renderizar o template 
-	 * 
-	 * @param template
-	 * 
-	 * @return Template
-	 */
-	public static Template prepareVelocityTemplate(String template) {
 
-		RuntimeServices runtimeServices = RuntimeSingleton.getRuntimeServices();
-		StringReader stringReader = new StringReader(template);
-		Template velocityTemplate = new Template();
-
-		try {
-			SimpleNode simpleNode = runtimeServices.parse(stringReader, "Generated Class");
-			velocityTemplate.setData(simpleNode);
-
-//			TODO aplicar um exception adequado para erros de parser no template
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
-
-		velocityTemplate.setRuntimeServices(runtimeServices);
-		velocityTemplate.initDocument();
-
-		return velocityTemplate;
-	}
 }
