@@ -88,6 +88,17 @@ public class TemplateEngine {
 					.collect(Collectors.toList())
 			);
 		
+		
+/* TEST FIELD */		
+		domainClass.getAssociations().forEach(association -> {
+			System.out.println("Association Name: " + association.getName());
+			association.getMemberEnds().forEach(endMember -> {
+				System.out.println(endMember.getType().getName() + " : " + endMember.getVisibility().getName());
+			});
+		});
+/* END TEST FIELD */
+		
+		
 //		Consultar o orientador para melhor entendimento e aplicacao das generalizacoes
 		try {
 			List<Generalization> generalizations = domainClass.getGeneralizations();
@@ -116,7 +127,6 @@ public class TemplateEngine {
 		return EngineUtils.sanitize(templateEngineContext.getCode());
 	}
 	
-//	TODO Implementar a renderização do controlador frontal
 	public static String renderFrontControllerClass(FrontControllerClass frontControllerClass,
 			FrontControllerTemplate frontControllerTemplate) {
 		

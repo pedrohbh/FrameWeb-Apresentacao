@@ -8,6 +8,14 @@ public#* *##if(${class.isAbstract()}) abstract#end class ${class.name} #if(${NUL
 #* SIZE *##if(${attribute.size} > 0)	@Column(length=${attribute.size})${NEWLINE}#end
 	${attribute.visibility.name} ${attribute.type.name} ${attribute.name};
 #end
+##
+#foreach(${association} in ${associations})
+#* *##foreach(${member} in ${association.memberEnds})
+#*      *##if(${member.name} == "Target" && ${member.type.name} != ${class.name})
+#*           *#${TAB}private ${member.type.name} ${STRING.uncapitalize($member.type.name)};${NEWLINE}
+#*      *##end
+#* *##end
+#end
 
 	public ${class.name}() {
 		super();
