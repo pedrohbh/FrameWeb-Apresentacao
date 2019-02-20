@@ -13,6 +13,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkProfile;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
+import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
@@ -118,6 +119,20 @@ public class TemplateEngine {
 	
 	public static String renderFrontControllerClass(FrontControllerClass frontControllerClass,
 			FrontControllerTemplate frontControllerTemplate) {
+		
+		String template = EngineUtils.decodeUrl(frontControllerTemplate.getClassTemplate());
+		
+		TemplateEngineContext templateEngineContext = new TemplateEngineContext(template);
+		
+		templateEngineContext
+			.addParameter("package", frontControllerClass.getPackage())
+			.addParameter("class", frontControllerClass)
+			.addParameter("attributes", frontControllerClass.getAttributes())
+			.addParameter("methods", frontControllerClass.getOperations()
+				.stream()
+				.filter(FrontControllerMethod.class::isInstance)
+				.map(FrontControllerMethod.class::cast)
+				.collect(Collectors.toList()));
 		
 		return null;
 	}
