@@ -9,11 +9,13 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.ControllerPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationModel;
+import br.ufes.inf.nemo.frameweb.model.frameweb.ViewPackage;
 import br.ufes.inf.nemo.frameweb.utils.ProjectUtils;
 
 public class NavigationModelCodeGenerator {
 
 	private List<ControllerPackage> controllerPackages;
+	private List<ViewPackage> viewPackages;
 	private FrontControllerTemplate frontControllerTemplate;
 
 	/**
@@ -29,6 +31,12 @@ public class NavigationModelCodeGenerator {
 				.map(ControllerPackage.class::cast)
 				.collect(Collectors.toList());
 		
+		viewPackages = navigationModel.getOwnedElements()
+				.stream()
+				.filter(ViewPackage.class::isInstance)
+				.map(ViewPackage.class::cast)
+				.collect(Collectors.toList());
+		
 		this.frontControllerTemplate = frontControllerTemplate;
 	}
 
@@ -37,9 +45,11 @@ public class NavigationModelCodeGenerator {
 	 * 
 	 * @param srcFolder
 	 */
-	public void generate(IFolder srcFolder) {
+	public void generate(IFolder srcFolder, IFolder viewFolder) {
 		
 		controllerPackages.forEach(controllerPackage -> {
+			System.out.println(controllerPackage.getName());
+			
 			String packagePath = controllerPackage.getName().replaceAll("[^A-Za-z0-9]", "/");
 
 			ProjectUtils.makeDirectory(srcFolder, packagePath);
@@ -51,8 +61,13 @@ public class NavigationModelCodeGenerator {
 					.filter(FrontControllerClass.class::isInstance)
 					.map(FrontControllerClass.class::cast)
 					.map(frontControllerClass -> new FrontControllerClassCodeGenerator(
-							frontControllerClass, frontControllerTemplate))
+							frontControllerClass,
+							frontControllerTemplate))
 					.forEach(it -> it.generate(package_));
+		});
+		
+		viewPackages.forEach(viewPackage -> {
+			System.out.println(viewPackage.getName());
 		});
 	}
 

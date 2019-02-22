@@ -17,7 +17,8 @@ public class FrontControllerClassCodeGenerator {
 	private FrontControllerClass frontControllerClass;
 	private FrontControllerTemplate frontControllerTemplate;
 	
-	public FrontControllerClassCodeGenerator(FrontControllerClass frontControllerClass, FrontControllerTemplate frontControllerTemplate) {
+	public FrontControllerClassCodeGenerator(FrontControllerClass frontControllerClass,
+			FrontControllerTemplate frontControllerTemplate) {
 		this.frontControllerClass = frontControllerClass;
 		this.frontControllerTemplate = frontControllerTemplate;
 	}
@@ -29,7 +30,7 @@ public class FrontControllerClassCodeGenerator {
 		if (classCode == null) {
 			return;
 		}
-		
+
 		String fileName = frontControllerClass.getName() + frontControllerTemplate.getClassExtension();
 		IFile file = packageFolder.getFile(fileName);
 		
