@@ -9,7 +9,7 @@ import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.uml2.uml.Enumeration;
 
-import br.ufes.inf.nemo.frameweb.codegenerator.engine.TemplateEngine;
+import br.ufes.inf.nemo.frameweb.codegenerator.engine.ClassTemplateEngine;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 
 @SuppressWarnings("all")
@@ -25,7 +25,7 @@ public class EnumerationClassCodeGenerator {
 	
 	public void generate(IFolder packageFolder) {
 		
-		String classCode = TemplateEngine.render(enumerationClass, ormTemplate);
+		String classCode = ClassTemplateEngine.render(enumerationClass, ormTemplate);
 		
 		String fileName = enumerationClass.getName() + ormTemplate.getClassExtension();
 		IFile file = packageFolder.getFile(fileName);

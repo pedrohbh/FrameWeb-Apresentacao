@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.uml2.uml.Enumeration;
 
+import br.ufes.inf.nemo.frameweb.codegenerator.engine.EngineUtils;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.EntityModel;
@@ -51,12 +52,13 @@ public class EntityModelCodeGenerator {
 	 */
 	public void generate(IFolder srcFolder) {
 		domainPackages.forEach(domainPackage -> {
-			String packagePath = domainPackage.getName().replaceAll("[^A-Za-z0-9]", "/");
+			String packagePath = EngineUtils.pathToPackageFormat(domainPackage.getName());
 
 			ProjectUtils.makeDirectory(srcFolder, packagePath);
 
 			IFolder package_ = srcFolder.getFolder(packagePath);
 
+//			TODO Permitir que as classes de enumeracao sejam criadas dentro do pacote de dominio no editor (sirius)
 //			enumerationClasses.forEach(it -> it.generate(package_));
 
 			domainPackage.getOwnedTypes()

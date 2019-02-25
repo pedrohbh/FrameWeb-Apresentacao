@@ -27,10 +27,13 @@ public class CodeGenerator implements IExternalJavaAction {
 	@Override
 	public void execute(Collection<? extends EObject> selections, Map<String, Object> parameters) {
 		IProject project = ProjectUtils.getSelectedProject();
+
+//		TODO verificar se os diretorios existem
 //		TODO permitir que o usuario selecione o diretorio de codigo fonte (textualmente ou por interface grafica)
 		IFolder srcFolder = project.getFolder("src");
+		
 //		TODO permitir que o usuario selecione o diretorio da view (textualmente ou por interface grafica)
-//		IFolder viewFolder = project.getFolder("view")
+		IFolder viewFolder = project.getFolder("view");
 		
 		ProjectRepresentation representation = new ProjectRepresentation(selections);
 		
@@ -49,7 +52,7 @@ public class CodeGenerator implements IExternalJavaAction {
 					representation.getFrontControllerTemplate()
 			);
 			
-			navigationModelCodeGenerator.generate(srcFolder, null);
+			navigationModelCodeGenerator.generate(srcFolder, viewFolder);
 		}
 	}
 

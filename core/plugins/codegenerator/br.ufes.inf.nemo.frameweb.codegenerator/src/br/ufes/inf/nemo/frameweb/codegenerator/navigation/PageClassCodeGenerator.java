@@ -9,30 +9,29 @@ import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.runtime.CoreException;
 
 import br.ufes.inf.nemo.frameweb.codegenerator.engine.ClassTemplateEngine;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
+import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
 
-public class FrontControllerClassCodeGenerator {
+public class PageClassCodeGenerator {
 
-	private FrontControllerClass frontControllerClass;
+	private Page page;
 	private FrontControllerTemplate frontControllerTemplate;
 	
-	public FrontControllerClassCodeGenerator(FrontControllerClass frontControllerClass,
-			FrontControllerTemplate frontControllerTemplate) {
-		this.frontControllerClass = frontControllerClass;
+	public PageClassCodeGenerator(Page page, FrontControllerTemplate frontControllerTemplate) {
+		this.page = page;
 		this.frontControllerTemplate = frontControllerTemplate;
 	}
 
-	public void generate(IFolder packageFolder) {
-		String classCode = ClassTemplateEngine.render(frontControllerClass, frontControllerTemplate);
+	public void generate(IFolder viewFolder) {
+		String classCode = ClassTemplateEngine.render(page, frontControllerTemplate);
 
 //		TODO Se nao houver um template definido, nada eh feito
 		if (classCode == null) {
 			return;
 		}
 
-		String fileName = frontControllerClass.getName() + frontControllerTemplate.getClassExtension();
-		IFile file = packageFolder.getFile(fileName);
+		String fileName = page.getName() + frontControllerTemplate.getClassExtension();
+		IFile file = viewFolder.getFile(fileName);
 		
 //		TODO tratar condicao de corrida no if statement
 		try {

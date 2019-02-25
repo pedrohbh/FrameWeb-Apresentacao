@@ -5,10 +5,12 @@ import java.util.stream.Collectors;
 
 import org.eclipse.core.resources.IFolder;
 
+import br.ufes.inf.nemo.frameweb.codegenerator.engine.EngineUtils;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ControllerPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationModel;
+import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ViewPackage;
 import br.ufes.inf.nemo.frameweb.utils.ProjectUtils;
 
@@ -46,14 +48,11 @@ public class NavigationModelCodeGenerator {
 	 * @param srcFolder
 	 */
 	public void generate(IFolder srcFolder, IFolder viewFolder) {
-		
 		controllerPackages.forEach(controllerPackage -> {
-			System.out.println(controllerPackage.getName());
-			
-			String packagePath = controllerPackage.getName().replaceAll("[^A-Za-z0-9]", "/");
+			String packagePath = EngineUtils.pathToPackageFormat(controllerPackage.getName());
 
 			ProjectUtils.makeDirectory(srcFolder, packagePath);
-
+			
 			IFolder package_ = srcFolder.getFolder(packagePath);
 
 			controllerPackage.getOwnedTypes()
@@ -67,7 +66,14 @@ public class NavigationModelCodeGenerator {
 		});
 		
 		viewPackages.forEach(viewPackage -> {
-			System.out.println(viewPackage.getName());
+			viewPackage.getOwnedTypes()
+					.stream()
+					.filter(Page.class::isInstance)
+					.map(Page.class::cast)
+					.map(page -> new PageClassCodeGenerator(
+							page,
+							frontControllerTemplate))
+					.forEach(it -> it.generate(viewFolder));
 		});
 	}
 

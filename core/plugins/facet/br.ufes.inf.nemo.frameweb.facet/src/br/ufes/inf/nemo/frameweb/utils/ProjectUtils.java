@@ -1,5 +1,6 @@
 package br.ufes.inf.nemo.frameweb.utils;
 
+import java.nio.file.NotDirectoryException;
 import java.util.Arrays;
 
 import org.eclipse.core.resources.IFolder;
@@ -38,7 +39,7 @@ public class ProjectUtils {
 		projectDescription.setNatureIds(natureIds);
 		
 		try {
-			Thread.sleep(500);
+			Thread.sleep(1000);
 			
 		} catch (InterruptedException e) {
 			e.printStackTrace();
@@ -109,6 +110,7 @@ public class ProjectUtils {
 	 * 
 	 * @param srcFolder
 	 * @param foldersName
+	 * @throws NotDirectoryException 
 	 */
 	public static void makeDirectory(IFolder srcFolder, String packagePath) {
 		try {

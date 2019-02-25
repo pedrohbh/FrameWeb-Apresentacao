@@ -53,5 +53,15 @@ public class EngineUtils {
 		
 		return sanitizedString;
 	}
+	
+	/**
+	 * Transforma um caminho "exEMpLo/FrameWeb" em "exemplo.frameweb"
+	 * 
+	 * @param str
+	 * @return String
+	 */
+	public static String pathToPackageFormat(String str) {
+		return str.replaceAll("[^A-Za-z0-9]", "/").toLowerCase();
+	}
 
 }
