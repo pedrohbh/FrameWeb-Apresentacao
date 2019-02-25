@@ -52,7 +52,8 @@ public class CodeGenerator implements IExternalJavaAction {
 					representation.getFrontControllerTemplate()
 			);
 			
-			navigationModelCodeGenerator.generate(srcFolder, viewFolder);
+			navigationModelCodeGenerator.generate(srcFolder);
+			navigationModelCodeGenerator.generateViews(viewFolder);
 		}
 	}
 

@@ -47,7 +47,7 @@ public class NavigationModelCodeGenerator {
 	 * 
 	 * @param srcFolder
 	 */
-	public void generate(IFolder srcFolder, IFolder viewFolder) {
+	public void generate(IFolder srcFolder) {
 		controllerPackages.forEach(controllerPackage -> {
 			String packagePath = EngineUtils.pathToPackageFormat(controllerPackage.getName());
 
@@ -64,7 +64,14 @@ public class NavigationModelCodeGenerator {
 							frontControllerTemplate))
 					.forEach(it -> it.generate(package_));
 		});
-		
+	}
+	
+	/**
+	 * Gera os arquivos da view dentro de um dado diretorio
+	 * 
+	 * @param viewFolder
+	 */
+	public void generateViews(IFolder viewFolder) {
 		viewPackages.forEach(viewPackage -> {
 			viewPackage.getOwnedTypes()
 					.stream()

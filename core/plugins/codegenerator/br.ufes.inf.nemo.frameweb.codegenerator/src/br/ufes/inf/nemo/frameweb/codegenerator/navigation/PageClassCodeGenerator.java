@@ -8,7 +8,7 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.runtime.CoreException;
 
-import br.ufes.inf.nemo.frameweb.codegenerator.engine.ClassTemplateEngine;
+import br.ufes.inf.nemo.frameweb.codegenerator.engine.TemplateEngine;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
 
@@ -23,10 +23,10 @@ public class PageClassCodeGenerator {
 	}
 
 	public void generate(IFolder viewFolder) {
-		String classCode = ClassTemplateEngine.render(page, frontControllerTemplate);
+		String code = TemplateEngine.render(page, frontControllerTemplate);
 
-//		TODO Se nao houver um template definido, nada eh feito
-		if (classCode == null) {
+//		Se nao houver um template definido, nada eh feito
+		if (code == null) {
 			return;
 		}
 
@@ -35,7 +35,7 @@ public class PageClassCodeGenerator {
 		
 //		TODO tratar condicao de corrida no if statement
 		try {
-			InputStream inputStream = IOUtils.toInputStream(classCode, "UTF-8");
+			InputStream inputStream = IOUtils.toInputStream(code, "UTF-8");
 
 //			TODO atualizar o conteudo do arquivo ao inves de sobrescrever o codigo
 			if (file.exists()) {
