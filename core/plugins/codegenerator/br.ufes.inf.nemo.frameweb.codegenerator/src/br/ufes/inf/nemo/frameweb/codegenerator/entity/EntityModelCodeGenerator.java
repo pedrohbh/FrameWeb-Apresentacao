@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.uml2.uml.Enumeration;
 
+import br.ufes.inf.nemo.frameweb.codegenerator.engine.ClassCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.engine.EngineUtils;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage;
@@ -16,8 +17,7 @@ import br.ufes.inf.nemo.frameweb.utils.ProjectUtils;
 public class EntityModelCodeGenerator {
 
 	private List<DomainPackage> domainPackages;
-	@SuppressWarnings("unused")
-	private List<EnumerationClassCodeGenerator> enumerationClasses;
+	private List<Enumeration> enumerationClasses;
 	private ORMTemplate ormTemplate;
 	
 	/**
@@ -25,7 +25,6 @@ public class EntityModelCodeGenerator {
 	 * @param ormTemplate
 	 */
 	public EntityModelCodeGenerator(EntityModel entityModel, ORMTemplate ormTemplate) {
-		
 		this.ormTemplate = ormTemplate;
 		
 		domainPackages = entityModel.getOwnedElements()
@@ -40,9 +39,7 @@ public class EntityModelCodeGenerator {
 				.stream()
 				.filter(Enumeration.class::isInstance)
 				.map(Enumeration.class::cast)
-				.map(enumerationClass -> new EnumerationClassCodeGenerator(enumerationClass, ormTemplate))
 				.collect(Collectors.toList());
-		
 	}
 
 	/**
@@ -52,20 +49,23 @@ public class EntityModelCodeGenerator {
 	 */
 	public void generate(IFolder srcFolder) {
 		domainPackages.forEach(domainPackage -> {
-			String packagePath = EngineUtils.pathToPackageFormat(domainPackage.getName());
+			String packagePath = EngineUtils.nameToPath(domainPackage.getName());
 
 			ProjectUtils.makeDirectory(srcFolder, packagePath);
 
 			IFolder package_ = srcFolder.getFolder(packagePath);
 
 //			TODO Permitir que as classes de enumeracao sejam criadas dentro do pacote de dominio no editor (sirius)
-//			enumerationClasses.forEach(it -> it.generate(package_));
-
+			enumerationClasses
+					.stream()
+					.map(enumerationClass -> new ClassCodeGenerator(enumerationClass, ormTemplate))
+					.forEach(it -> it.generate(package_));
+				
 			domainPackage.getOwnedTypes()
 					.stream()
 					.filter(DomainClass.class::isInstance)
 					.map(DomainClass.class::cast)
-					.map(domainClass -> new EntityClassCodeGenerator(domainClass, ormTemplate))
+					.map(domainClass -> new ClassCodeGenerator(domainClass, ormTemplate))
 					.forEach(it -> it.generate(package_));
 		});
 	}

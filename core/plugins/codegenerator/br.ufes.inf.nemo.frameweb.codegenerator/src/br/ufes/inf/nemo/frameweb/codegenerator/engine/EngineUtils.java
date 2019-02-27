@@ -60,7 +60,7 @@ public class EngineUtils {
 	 * @param str
 	 * @return String
 	 */
-	public static String pathToPackageFormat(String str) {
+	public static String nameToPath(String str) {
 		return str.replaceAll("[^A-Za-z0-9]", "/").toLowerCase();
 	}
 

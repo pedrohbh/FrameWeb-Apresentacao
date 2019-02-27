@@ -161,7 +161,7 @@ public class TemplateEngine {
 	}
 	
 	public static String renderPage(Page page, FrontControllerTemplate frontControllerTemplate) {
-		return null;
+		return EngineUtils.decodeUrl(frontControllerTemplate.getPageTemplate());
 	}
 	
 }

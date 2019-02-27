@@ -33,7 +33,7 @@ public class CodeGenerator implements IExternalJavaAction {
 		IFolder srcFolder = project.getFolder("src");
 		
 //		TODO permitir que o usuario selecione o diretorio da view (textualmente ou por interface grafica)
-		IFolder viewFolder = project.getFolder("view");
+		IFolder viewFolder = project.getFolder("WebContent/WEB-INF");
 		
 		ProjectRepresentation representation = new ProjectRepresentation(selections);
 		
