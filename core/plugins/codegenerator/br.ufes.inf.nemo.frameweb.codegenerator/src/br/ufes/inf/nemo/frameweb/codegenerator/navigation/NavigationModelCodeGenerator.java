@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 import org.eclipse.core.resources.IFolder;
 
-import br.ufes.inf.nemo.frameweb.codegenerator.engine.ClassCodeGenerator;
+import br.ufes.inf.nemo.frameweb.codegenerator.ClassCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.engine.EngineUtils;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ControllerPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;

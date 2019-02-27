@@ -1,4 +1,4 @@
-package br.ufes.inf.nemo.frameweb.codegenerator.engine;
+package br.ufes.inf.nemo.frameweb.codegenerator;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,6 +12,7 @@ import org.eclipse.uml2.uml.Class;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.Enumeration;
 
+import br.ufes.inf.nemo.frameweb.codegenerator.engine.TemplateEngine;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkProfile;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
