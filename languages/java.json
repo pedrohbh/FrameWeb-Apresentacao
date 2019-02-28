@@ -4,7 +4,7 @@
   "build": "191",
   "types": {
     "primitives": [
-      "byte", "short", "int", "long", "float", "double", "boolean", "char", "Object", "String"
+      "byte", "short", "int", "long", "float", "double", "boolean", "char", "Object", "String", "void"
     ],
     "classes": [
       "Calendar", "List", "Set", "Date"
