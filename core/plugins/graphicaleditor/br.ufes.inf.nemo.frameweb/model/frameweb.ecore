@@ -321,10 +321,4 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="abstractMethodTemplate"
         eType="ecore:EDataType platform:/plugin/org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="AssociationCardinality">
-    <eLiterals name="OneToOne"/>
-    <eLiterals name="OneToMany" value="1"/>
-    <eLiterals name="ManyToOne" value="3"/>
-    <eLiterals name="ManyToMany" value="3"/>
-  </eClassifiers>
 </ecore:EPackage>
