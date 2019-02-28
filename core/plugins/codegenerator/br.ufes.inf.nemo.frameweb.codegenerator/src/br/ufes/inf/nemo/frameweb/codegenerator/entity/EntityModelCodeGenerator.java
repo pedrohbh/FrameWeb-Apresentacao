@@ -17,7 +17,6 @@ import br.ufes.inf.nemo.frameweb.utils.ProjectUtils;
 public class EntityModelCodeGenerator {
 
 	private List<DomainPackage> domainPackages;
-	private List<Enumeration> enumerationClasses;
 	private ORMTemplate ormTemplate;
 	
 	/**
@@ -31,14 +30,6 @@ public class EntityModelCodeGenerator {
 				.stream()
 				.filter(DomainPackage.class::isInstance)
 				.map(DomainPackage.class::cast)
-				.collect(Collectors.toList());
-		
-		
-//		TODO trazer as classes de enumeracao para dentro do pacote de dominio (sirius)
-		enumerationClasses = entityModel.getOwnedElements()
-				.stream()
-				.filter(Enumeration.class::isInstance)
-				.map(Enumeration.class::cast)
 				.collect(Collectors.toList());
 	}
 
@@ -54,18 +45,19 @@ public class EntityModelCodeGenerator {
 			ProjectUtils.makeDirectory(srcFolder, packagePath);
 
 			IFolder package_ = srcFolder.getFolder(packagePath);
-
-//			TODO Permitir que as classes de enumeracao sejam criadas dentro do pacote de dominio no editor (sirius)
-			enumerationClasses
-					.stream()
-					.map(enumerationClass -> new ClassCodeGenerator(enumerationClass, ormTemplate))
-					.forEach(it -> it.generate(package_));
 				
 			domainPackage.getOwnedTypes()
 					.stream()
 					.filter(DomainClass.class::isInstance)
 					.map(DomainClass.class::cast)
 					.map(domainClass -> new ClassCodeGenerator(domainClass, ormTemplate))
+					.forEach(it -> it.generate(package_));
+			
+			domainPackage.getOwnedTypes()
+					.stream()
+					.filter(Enumeration.class::isInstance)
+					.map(Enumeration.class::cast)
+					.map(enumeration -> new ClassCodeGenerator(enumeration, ormTemplate))
 					.forEach(it -> it.generate(package_));
 		});
 	}
