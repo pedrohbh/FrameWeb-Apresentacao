@@ -29,6 +29,7 @@ import org.eclipse.uml2.uml.internal.impl.OperationImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class DomainMethodImpl extends OperationImpl implements DomainMethod {
 	/**
 	 * The cached value of the '{@link #getMethodType() <em>Method Type</em>}' reference.

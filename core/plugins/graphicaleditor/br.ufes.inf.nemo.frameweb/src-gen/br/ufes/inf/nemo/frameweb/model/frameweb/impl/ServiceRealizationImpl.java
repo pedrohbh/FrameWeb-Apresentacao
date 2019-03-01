@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.internal.impl.InterfaceRealizationImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class ServiceRealizationImpl extends InterfaceRealizationImpl implements ServiceRealization {
 	/**
 	 * <!-- begin-user-doc -->

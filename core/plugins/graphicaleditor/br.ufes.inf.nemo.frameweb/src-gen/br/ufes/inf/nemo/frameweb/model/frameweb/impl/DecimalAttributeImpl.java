@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
+@SuppressWarnings("all")
 public class DecimalAttributeImpl extends AttributeImpl implements DecimalAttribute {
 	/**
 	 * The default value of the '{@link #getDecimalPrecision() <em>Decimal Precision</em>}' attribute.

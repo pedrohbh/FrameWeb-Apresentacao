@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class DAOAttributeImpl extends PropertyImpl implements DAOAttribute {
 	/**
 	 * <!-- begin-user-doc -->

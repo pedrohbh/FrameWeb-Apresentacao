@@ -28,6 +28,7 @@ import org.eclipse.uml2.uml.internal.impl.ClassifierImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public abstract class VocabularyEntityImpl extends ClassifierImpl implements VocabularyEntity {
 	/**
 	 * The cached value of the '{@link #getEntityIRI() <em>Entity IRI</em>}' reference.

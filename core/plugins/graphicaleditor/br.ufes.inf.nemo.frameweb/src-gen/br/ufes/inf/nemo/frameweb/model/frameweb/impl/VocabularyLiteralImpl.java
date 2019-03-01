@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.internal.impl.LiteralStringImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class VocabularyLiteralImpl extends LiteralStringImpl implements VocabularyLiteral {
 	/**
 	 * <!-- begin-user-doc -->

@@ -39,6 +39,7 @@ import org.eclipse.uml2.uml.UMLPackage;
  *
  * @generated
  */
+@SuppressWarnings("all")
 public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements VocabularyDataType {
 	/**
 	 * The cached value of the '{@link #getOwnedAttributes() <em>Owned Attribute</em>}' containment reference list.
@@ -316,47 +317,43 @@ public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements Voca
 	}
 
 	@Override
-	public Property createOwnedAttribute(String name, Type type, EClass eClass) {
+	public Property createOwnedAttribute(String arg0, Type arg1) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property createOwnedAttribute(String name, Type type) {
+	public Property createOwnedAttribute(String arg0, Type arg1, EClass arg2) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getOwnedAttribute(String name, Type type) {
+	public Operation createOwnedOperation(String arg0, EList<String> arg1, EList<Type> arg2) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getOwnedAttribute(String name, Type type, boolean ignoreCase, EClass eClass,
-			boolean createOnDemand) {
+	public Property getOwnedAttribute(String arg0, Type arg1) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Operation createOwnedOperation(String name, EList<String> ownedParameterNames,
-			EList<Type> ownedParameterTypes) {
+	public Property getOwnedAttribute(String arg0, Type arg1, boolean arg2, EClass arg3, boolean arg4) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Operation getOwnedOperation(String name, EList<String> ownedParameterNames,
-			EList<Type> ownedParameterTypes) {
+	public Operation getOwnedOperation(String arg0, EList<String> arg1, EList<Type> arg2) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Operation getOwnedOperation(String name, EList<String> ownedParameterNames, EList<Type> ownedParameterTypes,
-			boolean ignoreCase, boolean createOnDemand) {
+	public Operation getOwnedOperation(String arg0, EList<String> arg1, EList<Type> arg2, boolean arg3, boolean arg4) {
 		// TODO Auto-generated method stub
 		return null;
 	}

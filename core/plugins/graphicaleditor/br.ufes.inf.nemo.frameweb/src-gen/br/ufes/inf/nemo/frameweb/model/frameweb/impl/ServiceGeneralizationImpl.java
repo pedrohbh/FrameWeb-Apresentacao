@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.internal.impl.GeneralizationImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class ServiceGeneralizationImpl extends GeneralizationImpl implements ServiceGeneralization {
 	/**
 	 * <!-- begin-user-doc -->

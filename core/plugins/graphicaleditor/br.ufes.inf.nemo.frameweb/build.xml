@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
 <project name="br.ufes.inf.nemo.frameweb" default="build.jars" basedir=".">
 
 	<property name="p2.build.repo" value="file:${buildDirectory}/buildRepo"/>

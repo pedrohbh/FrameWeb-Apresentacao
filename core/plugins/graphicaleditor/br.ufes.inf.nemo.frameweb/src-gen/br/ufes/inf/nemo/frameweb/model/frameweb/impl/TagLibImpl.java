@@ -26,6 +26,7 @@ import org.eclipse.uml2.uml.internal.impl.PackageImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class TagLibImpl extends PackageImpl implements TagLib {
 	/**
 	 * The default value of the '{@link #getPrefix() <em>Prefix</em>}' attribute.

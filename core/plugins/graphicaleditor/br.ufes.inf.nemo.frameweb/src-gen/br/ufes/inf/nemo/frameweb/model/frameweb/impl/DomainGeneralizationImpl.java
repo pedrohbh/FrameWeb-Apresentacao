@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.internal.impl.GeneralizationImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class DomainGeneralizationImpl extends GeneralizationImpl implements DomainGeneralization {
 	/**
 	 * <!-- begin-user-doc -->

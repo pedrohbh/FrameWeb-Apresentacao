@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.internal.impl.PackageImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class PersistencePackageImpl extends PackageImpl implements PersistencePackage {
 	/**
 	 * <!-- begin-user-doc -->

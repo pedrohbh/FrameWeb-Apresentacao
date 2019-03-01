@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class ServiceAttributeImpl extends PropertyImpl implements ServiceAttribute {
 	/**
 	 * <!-- begin-user-doc -->

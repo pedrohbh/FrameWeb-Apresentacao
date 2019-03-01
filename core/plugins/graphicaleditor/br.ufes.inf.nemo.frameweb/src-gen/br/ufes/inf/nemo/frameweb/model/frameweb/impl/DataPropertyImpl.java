@@ -60,6 +60,7 @@ import org.eclipse.uml2.uml.util.UMLValidator;
  *
  * @generated
  */
+@SuppressWarnings("all")
 public class DataPropertyImpl extends VocabularyEntityImpl implements DataProperty {
 	/**
 	 * The default value of the '{@link #isDerived() <em>Is Derived</em>}' attribute.
@@ -727,74 +728,73 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	}
 
 	@Override
-	public Type getEndType(String name) {
+	public Property createNavigableOwnedEnd(String arg0, Type arg1) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Type getEndType(String name, boolean ignoreCase, EClass eClass) {
+	public Property createNavigableOwnedEnd(String arg0, Type arg1, EClass arg2) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getMemberEnd(String name, Type type) {
+	public Property createOwnedEnd(String arg0, Type arg1) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getMemberEnd(String name, Type type, boolean ignoreCase, EClass eClass) {
+	public Property createOwnedEnd(String arg0, Type arg1, EClass arg2) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property createNavigableOwnedEnd(String name, Type type, EClass eClass) {
+	public Type getEndType(String arg0) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property createNavigableOwnedEnd(String name, Type type) {
+	public Type getEndType(String arg0, boolean arg1, EClass arg2) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getNavigableOwnedEnd(String name, Type type) {
+	public Property getMemberEnd(String arg0, Type arg1) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getNavigableOwnedEnd(String name, Type type, boolean ignoreCase, EClass eClass,
-			boolean createOnDemand) {
+	public Property getMemberEnd(String arg0, Type arg1, boolean arg2, EClass arg3) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property createOwnedEnd(String name, Type type, EClass eClass) {
+	public Property getNavigableOwnedEnd(String arg0, Type arg1) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property createOwnedEnd(String name, Type type) {
+	public Property getNavigableOwnedEnd(String arg0, Type arg1, boolean arg2, EClass arg3, boolean arg4) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getOwnedEnd(String name, Type type) {
+	public Property getOwnedEnd(String arg0, Type arg1) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getOwnedEnd(String name, Type type, boolean ignoreCase, EClass eClass, boolean createOnDemand) {
+	public Property getOwnedEnd(String arg0, Type arg1, boolean arg2, EClass arg3, boolean arg4) {
 		// TODO Auto-generated method stub
 		return null;
 	}

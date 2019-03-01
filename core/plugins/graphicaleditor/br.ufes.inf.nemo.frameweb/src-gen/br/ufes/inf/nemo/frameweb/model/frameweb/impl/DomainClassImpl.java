@@ -26,6 +26,7 @@ import org.eclipse.uml2.uml.internal.impl.ClassImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class DomainClassImpl extends ClassImpl implements DomainClass {
 	/**
 	 * The default value of the '{@link #getTable() <em>Table</em>}' attribute.

@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.internal.impl.StereotypeImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class ResultTypeImpl extends StereotypeImpl implements ResultType {
 	/**
 	 * <!-- begin-user-doc -->

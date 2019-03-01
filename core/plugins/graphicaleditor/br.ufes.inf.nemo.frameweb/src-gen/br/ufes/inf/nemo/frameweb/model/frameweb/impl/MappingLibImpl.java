@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.internal.impl.PackageImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class MappingLibImpl extends PackageImpl implements MappingLib {
 	/**
 	 * <!-- begin-user-doc -->

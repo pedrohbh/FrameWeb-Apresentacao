@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frameweb:FramewebProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <compose xsi:type="frameweb:EntityModel" name="Entity Model">
+    <packagedElement xsi:type="frameweb:DomainPackage" name="base.web.project.model">
+      <packagedElement xsi:type="frameweb:DomainClass" name="Pessoa" powertypeExtent="//@compose.0/base.web.project.model/Pessoa.1">
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="nome" visibility="private">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainClass" name="Aluno">
+        <generalization xsi:type="frameweb:DomainGeneralization" generalizationSet="//@compose.0/base.web.project.model/Pessoa.1"/>
+        <ownedOperation xsi:type="frameweb:DomainMethod" name="umMetodoAluno">
+          <methodType xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/void"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainClass" name="Matricula">
+        <ownedAttribute xsi:type="frameweb:IdAttribute" name="numero" isID="true">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainGeneralizationSet" name="Pessoa" powertype="//@compose.0/base.web.project.model/Pessoa" generalization="//@compose.0/base.web.project.model/Aluno/@generalization.0"/>
+      <packagedElement xsi:type="frameweb:DomainAssociation" name="tem" memberEnd="//@compose.0/base.web.project.model/tem/Source //@compose.0/base.web.project.model/tem/Target">
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/base.web.project.model/tem/Source"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/base.web.project.model/tem/Target"/>
+        <ownedRule xsi:type="frameweb:VocabularyConstraints" name="Vocabulary Constraint" constrainedElement="//@compose.0/base.web.project.model/tem"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/base.web.project.model/Aluno" association="//@compose.0/base.web.project.model/tem"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/base.web.project.model/Matricula" association="//@compose.0/base.web.project.model/tem">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xsi:type="uml:Enumeration" name="SituacaoTurma">
+        <ownedLiteral name="MATRICULADO" classifier="//@compose.0/base.web.project.model/SituacaoTurma"/>
+        <ownedLiteral name="APROVADO" classifier="//@compose.0/base.web.project.model/SituacaoTurma"/>
+        <ownedLiteral name="REPROVADO" classifier="//@compose.0/base.web.project.model/SituacaoTurma"/>
+        <ownedLiteral name="SOLICITADO" classifier="//@compose.0/base.web.project.model/SituacaoTurma"/>
+      </packagedElement>
+    </packagedElement>
+  </compose>
+</frameweb:FramewebProject>

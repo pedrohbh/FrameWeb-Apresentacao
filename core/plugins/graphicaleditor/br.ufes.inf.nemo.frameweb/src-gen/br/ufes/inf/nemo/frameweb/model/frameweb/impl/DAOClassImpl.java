@@ -24,6 +24,7 @@ import org.eclipse.uml2.uml.internal.impl.ClassImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class DAOClassImpl extends ClassImpl implements DAOClass {
 	/**
 	 * The default value of the '{@link #getSufix() <em>Sufix</em>}' attribute.

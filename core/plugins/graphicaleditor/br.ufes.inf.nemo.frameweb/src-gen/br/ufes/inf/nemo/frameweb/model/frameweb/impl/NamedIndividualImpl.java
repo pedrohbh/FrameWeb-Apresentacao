@@ -95,6 +95,7 @@ import org.eclipse.uml2.uml.util.UMLValidator;
  *
  * @generated
  */
+@SuppressWarnings("all")
 public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIndividual {
 	/**
 	 * The default value of the '{@link #isStatic() <em>Is Static</em>}' attribute.
@@ -3067,109 +3068,109 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	}
 
 	@Override
-	public Property getRedefinedProperty(String name, Type type) {
+	public ValueSpecification createDefaultValue(String arg0, Type arg1, EClass arg2) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getRedefinedProperty(String name, Type type, boolean ignoreCase, EClass eClass) {
+	public Property createQualifier(String arg0, Type arg1) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public ValueSpecification createDefaultValue(String name, Type type, EClass eClass) {
+	public Property createQualifier(String arg0, Type arg1, EClass arg2) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getSubsettedProperty(String name, Type type) {
+	public Property getQualifier(String arg0, Type arg1) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getSubsettedProperty(String name, Type type, boolean ignoreCase, EClass eClass) {
+	public Property getQualifier(String arg0, Type arg1, boolean arg2, EClass arg3, boolean arg4) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property createQualifier(String name, Type type, EClass eClass) {
+	public Property getRedefinedProperty(String arg0, Type arg1) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property createQualifier(String name, Type type) {
+	public Property getRedefinedProperty(String arg0, Type arg1, boolean arg2, EClass arg3) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getQualifier(String name, Type type) {
+	public Property getSubsettedProperty(String arg0, Type arg1) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getQualifier(String name, Type type, boolean ignoreCase, EClass eClass, boolean createOnDemand) {
+	public Property getSubsettedProperty(String arg0, Type arg1, boolean arg2, EClass arg3) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Classifier getFeaturingClassifier(String name) {
+	public Classifier getFeaturingClassifier(String arg0) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Classifier getFeaturingClassifier(String name, boolean ignoreCase, EClass eClass) {
+	public Classifier getFeaturingClassifier(String arg0, boolean arg1, EClass arg2) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public ValueSpecification createUpperValue(String name, Type type, EClass eClass) {
+	public ValueSpecification createLowerValue(String arg0, Type arg1, EClass arg2) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public ValueSpecification createLowerValue(String name, Type type, EClass eClass) {
+	public ValueSpecification createUpperValue(String arg0, Type arg1, EClass arg2) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Deployment createDeployment(String name) {
+	public Deployment createDeployment(String arg0) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Deployment getDeployment(String name) {
+	public PackageableElement getDeployedElement(String arg0) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Deployment getDeployment(String name, boolean ignoreCase, boolean createOnDemand) {
+	public PackageableElement getDeployedElement(String arg0, boolean arg1, EClass arg2) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public PackageableElement getDeployedElement(String name) {
+	public Deployment getDeployment(String arg0) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public PackageableElement getDeployedElement(String name, boolean ignoreCase, EClass eClass) {
+	public Deployment getDeployment(String arg0, boolean arg1, boolean arg2) {
 		// TODO Auto-generated method stub
 		return null;
 	}

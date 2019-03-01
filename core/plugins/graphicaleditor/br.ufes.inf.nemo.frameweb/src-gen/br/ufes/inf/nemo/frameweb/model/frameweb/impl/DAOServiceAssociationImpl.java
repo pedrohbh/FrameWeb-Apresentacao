@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.internal.impl.AssociationImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class DAOServiceAssociationImpl extends AssociationImpl implements DAOServiceAssociation {
 	/**
 	 * <!-- begin-user-doc -->

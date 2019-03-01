@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
  *
  * @generated
  */
+@SuppressWarnings("restriction")
 public class AttributeMappingPropertyImpl extends PropertyImpl implements AttributeMappingProperty {
 	/**
 	 * <!-- begin-user-doc -->
