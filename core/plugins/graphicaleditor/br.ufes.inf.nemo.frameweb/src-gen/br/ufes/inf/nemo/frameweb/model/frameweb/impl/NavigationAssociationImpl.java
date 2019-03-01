@@ -16,7 +16,6 @@ import org.eclipse.uml2.uml.internal.impl.AssociationImpl;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public class NavigationAssociationImpl extends AssociationImpl implements NavigationAssociation {
 	/**
 	 * <!-- begin-user-doc -->

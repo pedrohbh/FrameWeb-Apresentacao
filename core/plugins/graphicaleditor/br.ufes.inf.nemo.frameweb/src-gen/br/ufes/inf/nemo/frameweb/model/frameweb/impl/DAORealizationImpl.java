@@ -16,7 +16,6 @@ import org.eclipse.uml2.uml.internal.impl.InterfaceRealizationImpl;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public class DAORealizationImpl extends InterfaceRealizationImpl implements DAORealization {
 	/**
 	 * <!-- begin-user-doc -->

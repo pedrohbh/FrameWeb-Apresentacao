@@ -26,7 +26,6 @@ import org.eclipse.uml2.uml.internal.impl.ClassImpl;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public class VocabularyClassImpl extends ClassImpl implements VocabularyClass {
 	/**
 	 * The default value of the '{@link #getPrefix() <em>Prefix</em>}' attribute.

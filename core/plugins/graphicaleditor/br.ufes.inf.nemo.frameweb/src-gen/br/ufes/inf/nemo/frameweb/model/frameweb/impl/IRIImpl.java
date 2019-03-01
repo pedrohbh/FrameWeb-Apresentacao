@@ -27,7 +27,6 @@ import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public class IRIImpl extends PropertyImpl implements IRI {
 	/**
 	 * The default value of the '{@link #getIri() <em>Iri</em>}' attribute.

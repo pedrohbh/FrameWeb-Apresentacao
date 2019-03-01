@@ -20,16 +20,15 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getClassTemplate <em>Class Template</em>}</li>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getEnumerationClassTemplate <em>Enumeration Class Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getClassExtension <em>Class Extension</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getAttributeTemplate <em>Attribute Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getMethodTemplate <em>Method Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getAbstractMethodTemplate <em>Abstract Method Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getEnumerationClassTemplate <em>Enumeration Class Template</em>}</li>
  * </ul>
  *
  * @generated
  */
-@SuppressWarnings("all")
 public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate {
 	/**
 	 * The default value of the '{@link #getClassTemplate() <em>Class Template</em>}' attribute.
@@ -50,26 +49,6 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @ordered
 	 */
 	protected String classTemplate = CLASS_TEMPLATE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getEnumerationClassTemplate() <em>Enumeration Class Template</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEnumerationClassTemplate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ENUMERATION_CLASS_TEMPLATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getEnumerationClassTemplate() <em>Enumeration Class Template</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEnumerationClassTemplate()
-	 * @generated
-	 * @ordered
-	 */
-	protected String enumerationClassTemplate = ENUMERATION_CLASS_TEMPLATE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getClassExtension() <em>Class Extension</em>}' attribute.
@@ -150,6 +129,26 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @ordered
 	 */
 	protected String abstractMethodTemplate = ABSTRACT_METHOD_TEMPLATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getEnumerationClassTemplate() <em>Enumeration Class Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEnumerationClassTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ENUMERATION_CLASS_TEMPLATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getEnumerationClassTemplate() <em>Enumeration Class Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEnumerationClassTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected String enumerationClassTemplate = ENUMERATION_CLASS_TEMPLATE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -326,8 +325,6 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		switch (featureID) {
 		case FramewebPackage.ORM_TEMPLATE__CLASS_TEMPLATE:
 			return getClassTemplate();
-		case FramewebPackage.ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE:
-			return getEnumerationClassTemplate();
 		case FramewebPackage.ORM_TEMPLATE__CLASS_EXTENSION:
 			return getClassExtension();
 		case FramewebPackage.ORM_TEMPLATE__ATTRIBUTE_TEMPLATE:
@@ -336,6 +333,8 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 			return getMethodTemplate();
 		case FramewebPackage.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE:
 			return getAbstractMethodTemplate();
+		case FramewebPackage.ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE:
+			return getEnumerationClassTemplate();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -351,9 +350,6 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		case FramewebPackage.ORM_TEMPLATE__CLASS_TEMPLATE:
 			setClassTemplate((String) newValue);
 			return;
-		case FramewebPackage.ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE:
-			setEnumerationClassTemplate((String) newValue);
-			return;
 		case FramewebPackage.ORM_TEMPLATE__CLASS_EXTENSION:
 			setClassExtension((String) newValue);
 			return;
@@ -365,6 +361,9 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 			return;
 		case FramewebPackage.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE:
 			setAbstractMethodTemplate((String) newValue);
+			return;
+		case FramewebPackage.ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE:
+			setEnumerationClassTemplate((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -381,9 +380,6 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		case FramewebPackage.ORM_TEMPLATE__CLASS_TEMPLATE:
 			setClassTemplate(CLASS_TEMPLATE_EDEFAULT);
 			return;
-		case FramewebPackage.ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE:
-			setEnumerationClassTemplate(ENUMERATION_CLASS_TEMPLATE_EDEFAULT);
-			return;
 		case FramewebPackage.ORM_TEMPLATE__CLASS_EXTENSION:
 			setClassExtension(CLASS_EXTENSION_EDEFAULT);
 			return;
@@ -395,6 +391,9 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 			return;
 		case FramewebPackage.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE:
 			setAbstractMethodTemplate(ABSTRACT_METHOD_TEMPLATE_EDEFAULT);
+			return;
+		case FramewebPackage.ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE:
+			setEnumerationClassTemplate(ENUMERATION_CLASS_TEMPLATE_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -411,9 +410,6 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		case FramewebPackage.ORM_TEMPLATE__CLASS_TEMPLATE:
 			return CLASS_TEMPLATE_EDEFAULT == null ? classTemplate != null
 					: !CLASS_TEMPLATE_EDEFAULT.equals(classTemplate);
-		case FramewebPackage.ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE:
-			return ENUMERATION_CLASS_TEMPLATE_EDEFAULT == null ? enumerationClassTemplate != null
-					: !ENUMERATION_CLASS_TEMPLATE_EDEFAULT.equals(enumerationClassTemplate);
 		case FramewebPackage.ORM_TEMPLATE__CLASS_EXTENSION:
 			return CLASS_EXTENSION_EDEFAULT == null ? classExtension != null
 					: !CLASS_EXTENSION_EDEFAULT.equals(classExtension);
@@ -426,6 +422,9 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		case FramewebPackage.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE:
 			return ABSTRACT_METHOD_TEMPLATE_EDEFAULT == null ? abstractMethodTemplate != null
 					: !ABSTRACT_METHOD_TEMPLATE_EDEFAULT.equals(abstractMethodTemplate);
+		case FramewebPackage.ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE:
+			return ENUMERATION_CLASS_TEMPLATE_EDEFAULT == null ? enumerationClassTemplate != null
+					: !ENUMERATION_CLASS_TEMPLATE_EDEFAULT.equals(enumerationClassTemplate);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -443,8 +442,6 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (classTemplate: ");
 		result.append(classTemplate);
-		result.append(", enumerationClassTemplate: ");
-		result.append(enumerationClassTemplate);
 		result.append(", classExtension: ");
 		result.append(classExtension);
 		result.append(", attributeTemplate: ");
@@ -453,6 +450,8 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		result.append(methodTemplate);
 		result.append(", abstractMethodTemplate: ");
 		result.append(abstractMethodTemplate);
+		result.append(", enumerationClassTemplate: ");
+		result.append(enumerationClassTemplate);
 		result.append(')');
 		return result.toString();
 	}

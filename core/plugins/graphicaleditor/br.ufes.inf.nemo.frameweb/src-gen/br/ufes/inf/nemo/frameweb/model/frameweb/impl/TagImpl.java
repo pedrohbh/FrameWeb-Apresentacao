@@ -26,7 +26,6 @@ import org.eclipse.uml2.uml.internal.impl.StereotypeImpl;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public class TagImpl extends StereotypeImpl implements Tag {
 	/**
 	 * The default value of the '{@link #getCodeGenerationTemplate() <em>Code Generation Template</em>}' attribute.

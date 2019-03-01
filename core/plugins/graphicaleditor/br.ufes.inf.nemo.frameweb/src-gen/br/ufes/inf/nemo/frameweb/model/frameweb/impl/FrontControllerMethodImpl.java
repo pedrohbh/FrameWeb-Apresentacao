@@ -30,7 +30,6 @@ import org.eclipse.uml2.uml.internal.impl.OperationImpl;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public class FrontControllerMethodImpl extends OperationImpl implements FrontControllerMethod {
 	/**
 	 * The default value of the '{@link #isIsDefault() <em>Is Default</em>}' attribute.

@@ -16,7 +16,6 @@ import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public class TagPropertyImpl extends PropertyImpl implements TagProperty {
 	/**
 	 * <!-- begin-user-doc -->

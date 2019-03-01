@@ -39,7 +39,6 @@ import org.eclipse.uml2.uml.UMLPackage;
  *
  * @generated
  */
-@SuppressWarnings("all")
 public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements VocabularyDataType {
 	/**
 	 * The cached value of the '{@link #getOwnedAttributes() <em>Owned Attribute</em>}' containment reference list.

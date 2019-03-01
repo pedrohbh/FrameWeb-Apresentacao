@@ -29,7 +29,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-@SuppressWarnings("all")
 public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	/**
 	 * The default value of the '{@link #getInterfaceTemplate() <em>Interface Template</em>}' attribute.

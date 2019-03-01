@@ -42,7 +42,6 @@ import org.eclipse.uml2.uml.internal.impl.PackageImpl;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	/**
 	 * The cached value of the '{@link #getDirectlyImportsDocuments() <em>Directly Imports Documents</em>}' containment reference list.

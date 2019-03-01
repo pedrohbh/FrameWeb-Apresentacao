@@ -29,7 +29,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-@SuppressWarnings("all")
 public class ResultDependencyImpl extends NavigationDependencyImpl implements ResultDependency {
 	/**
 	 * The cached value of the '{@link #getResultMethod() <em>Result Method</em>}' reference.

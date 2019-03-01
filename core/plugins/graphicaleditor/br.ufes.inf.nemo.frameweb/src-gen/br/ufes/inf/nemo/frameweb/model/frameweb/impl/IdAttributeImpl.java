@@ -25,7 +25,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-@SuppressWarnings("all")
 public class IdAttributeImpl extends AttributeImpl implements IdAttribute {
 	/**
 	 * The default value of the '{@link #getGeneration() <em>Generation</em>}' attribute.

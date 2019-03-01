@@ -123654,22 +123654,13 @@ public interface FramewebPackage extends EPackage {
 	int ORM_TEMPLATE__CLASS_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Enumeration Class Template</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Class Extension</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORM_TEMPLATE__CLASS_EXTENSION = FRAMEWORK_PROFILE_FEATURE_COUNT + 2;
+	int ORM_TEMPLATE__CLASS_EXTENSION = FRAMEWORK_PROFILE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Attribute Template</b></em>' attribute.
@@ -123678,7 +123669,7 @@ public interface FramewebPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORM_TEMPLATE__ATTRIBUTE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 3;
+	int ORM_TEMPLATE__ATTRIBUTE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Method Template</b></em>' attribute.
@@ -123687,7 +123678,7 @@ public interface FramewebPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORM_TEMPLATE__METHOD_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 4;
+	int ORM_TEMPLATE__METHOD_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Abstract Method Template</b></em>' attribute.
@@ -123696,7 +123687,16 @@ public interface FramewebPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 5;
+	int ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Enumeration Class Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>ORM Template</em>' class.

@@ -2,6 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: br.ufes.inf.nemo.frameweb;singleton:=true
+Automatic-Module-Name: br.ufes.inf.nemo.frameweb
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -13,11 +14,5 @@ Export-Package: br.ufes.inf.nemo.frameweb.model.frameweb,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.uml2.types;visibility:=reexport,
- org.eclipse.uml2.uml;visibility:=reexport,
- com.google.guava,
- org.eclipse.xtext.xbase.lib,
- org.eclipse.xtend.lib,
- org.eclipse.xtend.lib.macro
+ org.eclipse.uml2.uml;visibility:=reexport
 Bundle-ActivationPolicy: lazy
-Automatic-Module-Name: br.ufes.inf.nemo.frameweb
-

@@ -27,7 +27,6 @@ import org.eclipse.uml2.uml.internal.impl.GeneralizationSetImpl;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public class DomainGeneralizationSetImpl extends GeneralizationSetImpl implements DomainGeneralizationSet {
 	/**
 	 * The default value of the '{@link #getMapping() <em>Mapping</em>}' attribute.

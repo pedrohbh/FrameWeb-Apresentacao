@@ -2655,7 +2655,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 */
 	@Override
 	public EAttribute getORMTemplate_ClassExtension() {
-		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(2);
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2665,7 +2665,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 */
 	@Override
 	public EAttribute getORMTemplate_AttributeTemplate() {
-		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(3);
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2675,7 +2675,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 */
 	@Override
 	public EAttribute getORMTemplate_MethodTemplate() {
-		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(4);
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2685,7 +2685,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 */
 	@Override
 	public EAttribute getORMTemplate_AbstractMethodTemplate() {
-		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(5);
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -2695,7 +2695,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 */
 	@Override
 	public EAttribute getORMTemplate_EnumerationClassTemplate() {
-		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(1);
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -3125,11 +3125,11 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		ormTemplateEClass = createEClass(ORM_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__CLASS_TEMPLATE);
-		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__CLASS_EXTENSION);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__ATTRIBUTE_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__METHOD_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE);
+		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE);
 
 		// Create enums
 		frameworkCategoryListEEnum = createEEnum(FRAMEWORK_CATEGORY_LIST);
@@ -3799,9 +3799,6 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getORMTemplate_ClassTemplate(), theTypesPackage.getString(), "classTemplate", null, 0, 1,
 				ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getORMTemplate_EnumerationClassTemplate(), theTypesPackage.getString(),
-				"enumerationClassTemplate", null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getORMTemplate_ClassExtension(), theTypesPackage.getString(), "classExtension", null, 0, 1,
 				ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
@@ -3814,6 +3811,9 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getORMTemplate_AbstractMethodTemplate(), theTypesPackage.getString(), "abstractMethodTemplate",
 				null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getORMTemplate_EnumerationClassTemplate(), theTypesPackage.getString(),
+				"enumerationClassTemplate", null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(frameworkCategoryListEEnum, FrameworkCategoryList.class, "FrameworkCategoryList");

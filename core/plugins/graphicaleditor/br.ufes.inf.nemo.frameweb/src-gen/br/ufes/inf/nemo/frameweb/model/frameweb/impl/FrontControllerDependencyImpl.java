@@ -29,7 +29,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-@SuppressWarnings("all")
 public class FrontControllerDependencyImpl extends NavigationDependencyImpl implements FrontControllerDependency {
 	/**
 	 * The cached value of the '{@link #getMethod() <em>Method</em>}' reference.

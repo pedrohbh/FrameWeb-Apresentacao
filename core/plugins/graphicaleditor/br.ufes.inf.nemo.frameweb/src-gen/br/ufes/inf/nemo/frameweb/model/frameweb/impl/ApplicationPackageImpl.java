@@ -16,7 +16,6 @@ import org.eclipse.uml2.uml.internal.impl.PackageImpl;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public class ApplicationPackageImpl extends PackageImpl implements ApplicationPackage {
 	/**
 	 * <!-- begin-user-doc -->

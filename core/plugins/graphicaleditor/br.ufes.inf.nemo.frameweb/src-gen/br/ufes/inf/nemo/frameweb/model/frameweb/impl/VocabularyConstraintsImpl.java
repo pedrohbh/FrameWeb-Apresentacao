@@ -26,7 +26,6 @@ import org.eclipse.uml2.uml.internal.impl.ConstraintImpl;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public class VocabularyConstraintsImpl extends ConstraintImpl implements VocabularyConstraints {
 	/**
 	 * The default value of the '{@link #getSubPropertyOf() <em>Sub Property Of</em>}' attribute.

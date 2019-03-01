@@ -16,7 +16,6 @@ import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public abstract class IndividualImpl extends PropertyImpl implements Individual {
 	/**
 	 * <!-- begin-user-doc -->

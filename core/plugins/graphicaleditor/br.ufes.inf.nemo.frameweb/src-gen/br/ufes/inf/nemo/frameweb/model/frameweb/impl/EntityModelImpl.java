@@ -4,6 +4,7 @@ package br.ufes.inf.nemo.frameweb.model.frameweb.impl;
 
 import br.ufes.inf.nemo.frameweb.model.frameweb.EntityModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

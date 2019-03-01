@@ -30,7 +30,6 @@ import org.eclipse.uml2.uml.internal.impl.ProfileImpl;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfile {
 	/**
 	 * The default value of the '{@link #getCategory() <em>Category</em>}' attribute.

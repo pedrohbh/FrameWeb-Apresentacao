@@ -29,7 +29,6 @@ import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	/**
 	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.

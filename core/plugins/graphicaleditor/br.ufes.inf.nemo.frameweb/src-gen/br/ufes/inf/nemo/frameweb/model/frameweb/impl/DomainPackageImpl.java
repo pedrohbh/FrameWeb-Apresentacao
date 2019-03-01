@@ -4,6 +4,7 @@ package br.ufes.inf.nemo.frameweb.model.frameweb.impl;
 
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage;
+
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.uml2.uml.internal.impl.PackageImpl;
@@ -15,7 +16,6 @@ import org.eclipse.uml2.uml.internal.impl.PackageImpl;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public class DomainPackageImpl extends PackageImpl implements DomainPackage {
 	/**
 	 * <!-- begin-user-doc -->

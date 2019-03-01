@@ -16,7 +16,6 @@ import org.eclipse.uml2.uml.internal.impl.AssociationImpl;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public class ServiceControllerAssociationImpl extends AssociationImpl implements ServiceControllerAssociation {
 	/**
 	 * <!-- begin-user-doc -->

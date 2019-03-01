@@ -16,7 +16,6 @@ import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public abstract class NavigationAttributeImpl extends PropertyImpl implements NavigationAttribute {
 	/**
 	 * <!-- begin-user-doc -->

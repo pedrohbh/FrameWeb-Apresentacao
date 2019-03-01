@@ -16,7 +16,6 @@ import org.eclipse.uml2.uml.internal.impl.ClassImpl;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public class AxiomImpl extends ClassImpl implements Axiom {
 	/**
 	 * <!-- begin-user-doc -->

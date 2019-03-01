@@ -26,7 +26,6 @@ import org.eclipse.uml2.uml.internal.impl.AssociationImpl;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public class VocabularyAssociationImpl extends AssociationImpl implements VocabularyAssociation {
 	/**
 	 * The default value of the '{@link #getPrefix() <em>Prefix</em>}' attribute.

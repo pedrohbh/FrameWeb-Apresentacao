@@ -27,7 +27,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-@SuppressWarnings("all")
 public class ResultConstraintImpl extends NavigationConstraintImpl implements ResultConstraint {
 	/**
 	 * The default value of the '{@link #getExecute() <em>Execute</em>}' attribute.

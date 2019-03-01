@@ -16,7 +16,6 @@ import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public class ResultPropertyImpl extends PropertyImpl implements ResultProperty {
 	/**
 	 * <!-- begin-user-doc -->

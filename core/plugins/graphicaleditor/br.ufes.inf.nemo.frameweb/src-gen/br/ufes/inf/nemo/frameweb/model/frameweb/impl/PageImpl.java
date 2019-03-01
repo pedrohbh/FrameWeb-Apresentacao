@@ -27,7 +27,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-@SuppressWarnings("all")
 public class PageImpl extends NavigationClassImpl implements Page {
 	/**
 	 * The cached value of the '{@link #getPageTagLib() <em>Page Tag Lib</em>}' reference list.

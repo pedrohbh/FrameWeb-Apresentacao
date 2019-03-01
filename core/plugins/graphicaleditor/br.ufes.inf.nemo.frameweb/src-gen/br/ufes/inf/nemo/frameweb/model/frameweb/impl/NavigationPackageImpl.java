@@ -16,7 +16,6 @@ import org.eclipse.uml2.uml.internal.impl.PackageImpl;
  *
  * @generated
  */
-@SuppressWarnings("restriction")
 public abstract class NavigationPackageImpl extends PackageImpl implements NavigationPackage {
 	/**
 	 * <!-- begin-user-doc -->

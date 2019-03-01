@@ -31,7 +31,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-@SuppressWarnings("all")
 public class IOParameterImpl extends NavigationAttributeImpl implements IOParameter {
 	/**
 	 * The cached value of the '{@link #getDisplay() <em>Display</em>}' reference list.

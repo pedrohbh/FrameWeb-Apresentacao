@@ -47,11 +47,11 @@ public class ORMTemplateItemProvider extends FrameworkProfileItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addClassTemplatePropertyDescriptor(object);
-			addEnumerationClassTemplatePropertyDescriptor(object);
 			addClassExtensionPropertyDescriptor(object);
 			addAttributeTemplatePropertyDescriptor(object);
 			addMethodTemplatePropertyDescriptor(object);
 			addAbstractMethodTemplatePropertyDescriptor(object);
+			addEnumerationClassTemplatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -199,11 +199,11 @@ public class ORMTemplateItemProvider extends FrameworkProfileItemProvider {
 
 		switch (notification.getFeatureID(ORMTemplate.class)) {
 		case FramewebPackage.ORM_TEMPLATE__CLASS_TEMPLATE:
-		case FramewebPackage.ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE:
 		case FramewebPackage.ORM_TEMPLATE__CLASS_EXTENSION:
 		case FramewebPackage.ORM_TEMPLATE__ATTRIBUTE_TEMPLATE:
 		case FramewebPackage.ORM_TEMPLATE__METHOD_TEMPLATE:
 		case FramewebPackage.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE:
+		case FramewebPackage.ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
