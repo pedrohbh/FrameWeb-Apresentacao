@@ -1,11 +1,10 @@
-package br.ufes.inf.nemo.frameweb.codegenerator.navigation;
+package br.ufes.inf.nemo.frameweb.codegenerator.models;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 import org.eclipse.core.resources.IFolder;
 
-import br.ufes.inf.nemo.frameweb.codegenerator.ClassCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.engine.EngineUtils;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ControllerPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
@@ -50,7 +49,7 @@ public class NavigationModelCodeGenerator {
 	 */
 	public void generate(IFolder srcFolder) {
 		controllerPackages.forEach(controllerPackage -> {
-			String packagePath = EngineUtils.nameToPath(controllerPackage.getName());
+			String packagePath = EngineUtils.packageNameToPath(controllerPackage.getName());
 
 			ProjectUtils.makeDirectory(srcFolder, packagePath);
 			
@@ -60,7 +59,7 @@ public class NavigationModelCodeGenerator {
 					.stream()
 					.filter(FrontControllerClass.class::isInstance)
 					.map(FrontControllerClass.class::cast)
-					.map(frontControllerClass -> new ClassCodeGenerator(
+					.map(frontControllerClass -> new ModelClassCodeGenerator(
 							frontControllerClass,
 							frontControllerTemplate))
 					.forEach(it -> it.generate(package_));
@@ -78,7 +77,7 @@ public class NavigationModelCodeGenerator {
 					.stream()
 					.filter(Page.class::isInstance)
 					.map(Page.class::cast)
-					.map(page -> new ClassCodeGenerator(
+					.map(page -> new ModelClassCodeGenerator(
 							page,
 							frontControllerTemplate))
 					.forEach(it -> it.generate(viewFolder));

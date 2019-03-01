@@ -1,4 +1,4 @@
-package br.ufes.inf.nemo.frameweb.codegenerator;
+package br.ufes.inf.nemo.frameweb.codegenerator.models;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,17 +20,17 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
 
-public class ClassCodeGenerator {
+public class ModelClassCodeGenerator {
 
 	private Element element;
 	private FrameworkProfile frameworkProfile;
-	
+
 	/**
 	 * 
 	 * @param element
 	 * @param frameworkProfile
 	 */
-	public ClassCodeGenerator(Element element, FrameworkProfile frameworkProfile) {
+	public ModelClassCodeGenerator(Element element, FrameworkProfile frameworkProfile) {
 		this.element = element;
 		this.frameworkProfile = frameworkProfile;
 	}

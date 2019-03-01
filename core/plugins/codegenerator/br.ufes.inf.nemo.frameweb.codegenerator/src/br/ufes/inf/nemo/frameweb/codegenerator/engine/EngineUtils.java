@@ -14,21 +14,18 @@ public class EngineUtils {
 	 * @return String
 	 */
 	public static String decodeUrl(String str) {
-		
-		if (str == null) {
-			return "";
+		if (str == null || str.isEmpty()) {
+			return new String();
 		}
 		
-		String decodedString = null;
-
 		try {
-			decodedString = URLDecoder.decode(str, "UTF-8");
-
+			String decodedString = URLDecoder.decode(str, "UTF-8");
+			return decodedString;
+			
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
+			return e.getMessage();
 		}
-
-		return decodedString;
 	}
 	
 	/**
@@ -60,7 +57,7 @@ public class EngineUtils {
 	 * @param str
 	 * @return String
 	 */
-	public static String nameToPath(String str) {
+	public static String packageNameToPath(String str) {
 		return str.replaceAll("[^A-Za-z0-9]", "/").toLowerCase();
 	}
 

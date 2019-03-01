@@ -9,8 +9,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.sirius.diagram.DSemanticDiagram;
 import org.eclipse.sirius.tools.api.ui.IExternalJavaAction;
 
-import br.ufes.inf.nemo.frameweb.codegenerator.entity.EntityModelCodeGenerator;
-import br.ufes.inf.nemo.frameweb.codegenerator.navigation.NavigationModelCodeGenerator;
+import br.ufes.inf.nemo.frameweb.codegenerator.models.EntityModelCodeGenerator;
+import br.ufes.inf.nemo.frameweb.codegenerator.models.NavigationModelCodeGenerator;
 import br.ufes.inf.nemo.frameweb.utils.ProjectUtils;
 
 public class CodeGenerator implements IExternalJavaAction {
