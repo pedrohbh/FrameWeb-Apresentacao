@@ -123681,22 +123681,13 @@ public interface FramewebPackage extends EPackage {
 	int ORM_TEMPLATE__ATTRIBUTE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Getter And Setter Template</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORM_TEMPLATE__GETTER_AND_SETTER_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 4;
-
-	/**
 	 * The feature id for the '<em><b>Method Template</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORM_TEMPLATE__METHOD_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 5;
+	int ORM_TEMPLATE__METHOD_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Abstract Method Template</b></em>' attribute.
@@ -123705,61 +123696,7 @@ public interface FramewebPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Embedded Attribute Template</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORM_TEMPLATE__EMBEDDED_ATTRIBUTE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Id Attribute Template</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORM_TEMPLATE__ID_ATTRIBUTE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Version Attribute Template</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORM_TEMPLATE__VERSION_ATTRIBUTE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 9;
-
-	/**
-	 * The feature id for the '<em><b>Decimal Attribute Template</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORM_TEMPLATE__DECIMAL_ATTRIBUTE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 10;
-
-	/**
-	 * The feature id for the '<em><b>Date Time Attribute Template</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORM_TEMPLATE__DATE_TIME_ATTRIBUTE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 11;
-
-	/**
-	 * The feature id for the '<em><b>Lob Attribute Template</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORM_TEMPLATE__LOB_ATTRIBUTE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 12;
+	int ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>ORM Template</em>' class.
@@ -123768,7 +123705,7 @@ public interface FramewebPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORM_TEMPLATE_FEATURE_COUNT = FRAMEWORK_PROFILE_FEATURE_COUNT + 13;
+	int ORM_TEMPLATE_FEATURE_COUNT = FRAMEWORK_PROFILE_FEATURE_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Get EAnnotation</em>' operation.
@@ -124825,23 +124762,13 @@ public interface FramewebPackage extends EPackage {
 	int INHERITANCE_MAPPING = 112;
 
 	/**
-	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.AssociationCardinality <em>Association Cardinality</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AssociationCardinality
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getAssociationCardinality()
-	 * @generated
-	 */
-	int ASSOCIATION_CARDINALITY = 113;
-
-	/**
 	 * The meta object id for the '<em>Rational</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getRational()
 	 * @generated
 	 */
-	int RATIONAL = 114;
+	int RATIONAL = 113;
 
 	/**
 	 * The meta object id for the '<em>Decimal</em>' data type.
@@ -124850,7 +124777,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getDecimal()
 	 * @generated
 	 */
-	int DECIMAL = 115;
+	int DECIMAL = 114;
 
 	/**
 	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FramewebProject <em>Project</em>}'.
@@ -126697,17 +126624,6 @@ public interface FramewebPackage extends EPackage {
 	EAttribute getORMTemplate_AttributeTemplate();
 
 	/**
-	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getGetterAndSetterTemplate <em>Getter And Setter Template</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Getter And Setter Template</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getGetterAndSetterTemplate()
-	 * @see #getORMTemplate()
-	 * @generated
-	 */
-	EAttribute getORMTemplate_GetterAndSetterTemplate();
-
-	/**
 	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getMethodTemplate <em>Method Template</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -126728,72 +126644,6 @@ public interface FramewebPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getORMTemplate_AbstractMethodTemplate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getEmbeddedAttributeTemplate <em>Embedded Attribute Template</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Embedded Attribute Template</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getEmbeddedAttributeTemplate()
-	 * @see #getORMTemplate()
-	 * @generated
-	 */
-	EAttribute getORMTemplate_EmbeddedAttributeTemplate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getIdAttributeTemplate <em>Id Attribute Template</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id Attribute Template</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getIdAttributeTemplate()
-	 * @see #getORMTemplate()
-	 * @generated
-	 */
-	EAttribute getORMTemplate_IdAttributeTemplate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getVersionAttributeTemplate <em>Version Attribute Template</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Version Attribute Template</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getVersionAttributeTemplate()
-	 * @see #getORMTemplate()
-	 * @generated
-	 */
-	EAttribute getORMTemplate_VersionAttributeTemplate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getDecimalAttributeTemplate <em>Decimal Attribute Template</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Decimal Attribute Template</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getDecimalAttributeTemplate()
-	 * @see #getORMTemplate()
-	 * @generated
-	 */
-	EAttribute getORMTemplate_DecimalAttributeTemplate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getDateTimeAttributeTemplate <em>Date Time Attribute Template</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Date Time Attribute Template</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getDateTimeAttributeTemplate()
-	 * @see #getORMTemplate()
-	 * @generated
-	 */
-	EAttribute getORMTemplate_DateTimeAttributeTemplate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getLobAttributeTemplate <em>Lob Attribute Template</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Lob Attribute Template</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getLobAttributeTemplate()
-	 * @see #getORMTemplate()
-	 * @generated
-	 */
-	EAttribute getORMTemplate_LobAttributeTemplate();
 
 	/**
 	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getEnumerationClassTemplate <em>Enumeration Class Template</em>}'.
@@ -126905,16 +126755,6 @@ public interface FramewebPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getInheritanceMapping();
-
-	/**
-	 * Returns the meta object for enum '{@link br.ufes.inf.nemo.frameweb.model.frameweb.AssociationCardinality <em>Association Cardinality</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Association Cardinality</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AssociationCardinality
-	 * @generated
-	 */
-	EEnum getAssociationCardinality();
 
 	/**
 	 * Returns the meta object for data type '<em>Rational</em>'.
@@ -128586,14 +128426,6 @@ public interface FramewebPackage extends EPackage {
 		EAttribute ORM_TEMPLATE__ATTRIBUTE_TEMPLATE = eINSTANCE.getORMTemplate_AttributeTemplate();
 
 		/**
-		 * The meta object literal for the '<em><b>Getter And Setter Template</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ORM_TEMPLATE__GETTER_AND_SETTER_TEMPLATE = eINSTANCE.getORMTemplate_GetterAndSetterTemplate();
-
-		/**
 		 * The meta object literal for the '<em><b>Method Template</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -128608,54 +128440,6 @@ public interface FramewebPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE = eINSTANCE.getORMTemplate_AbstractMethodTemplate();
-
-		/**
-		 * The meta object literal for the '<em><b>Embedded Attribute Template</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ORM_TEMPLATE__EMBEDDED_ATTRIBUTE_TEMPLATE = eINSTANCE.getORMTemplate_EmbeddedAttributeTemplate();
-
-		/**
-		 * The meta object literal for the '<em><b>Id Attribute Template</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ORM_TEMPLATE__ID_ATTRIBUTE_TEMPLATE = eINSTANCE.getORMTemplate_IdAttributeTemplate();
-
-		/**
-		 * The meta object literal for the '<em><b>Version Attribute Template</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ORM_TEMPLATE__VERSION_ATTRIBUTE_TEMPLATE = eINSTANCE.getORMTemplate_VersionAttributeTemplate();
-
-		/**
-		 * The meta object literal for the '<em><b>Decimal Attribute Template</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ORM_TEMPLATE__DECIMAL_ATTRIBUTE_TEMPLATE = eINSTANCE.getORMTemplate_DecimalAttributeTemplate();
-
-		/**
-		 * The meta object literal for the '<em><b>Date Time Attribute Template</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ORM_TEMPLATE__DATE_TIME_ATTRIBUTE_TEMPLATE = eINSTANCE.getORMTemplate_DateTimeAttributeTemplate();
-
-		/**
-		 * The meta object literal for the '<em><b>Lob Attribute Template</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ORM_TEMPLATE__LOB_ATTRIBUTE_TEMPLATE = eINSTANCE.getORMTemplate_LobAttributeTemplate();
 
 		/**
 		 * The meta object literal for the '<em><b>Enumeration Class Template</b></em>' attribute feature.
@@ -128764,16 +128548,6 @@ public interface FramewebPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum INHERITANCE_MAPPING = eINSTANCE.getInheritanceMapping();
-
-		/**
-		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.AssociationCardinality <em>Association Cardinality</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AssociationCardinality
-		 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getAssociationCardinality()
-		 * @generated
-		 */
-		EEnum ASSOCIATION_CARDINALITY = eINSTANCE.getAssociationCardinality();
 
 		/**
 		 * The meta object literal for the '<em>Rational</em>' data type.

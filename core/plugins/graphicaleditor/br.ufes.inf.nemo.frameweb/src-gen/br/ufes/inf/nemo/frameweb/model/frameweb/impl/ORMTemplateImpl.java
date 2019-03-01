@@ -23,15 +23,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getEnumerationClassTemplate <em>Enumeration Class Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getClassExtension <em>Class Extension</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getAttributeTemplate <em>Attribute Template</em>}</li>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getGetterAndSetterTemplate <em>Getter And Setter Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getMethodTemplate <em>Method Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getAbstractMethodTemplate <em>Abstract Method Template</em>}</li>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getEmbeddedAttributeTemplate <em>Embedded Attribute Template</em>}</li>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getIdAttributeTemplate <em>Id Attribute Template</em>}</li>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getVersionAttributeTemplate <em>Version Attribute Template</em>}</li>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getDecimalAttributeTemplate <em>Decimal Attribute Template</em>}</li>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getDateTimeAttributeTemplate <em>Date Time Attribute Template</em>}</li>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getLobAttributeTemplate <em>Lob Attribute Template</em>}</li>
  * </ul>
  *
  * @generated
@@ -119,26 +112,6 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	protected String attributeTemplate = ATTRIBUTE_TEMPLATE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getGetterAndSetterTemplate() <em>Getter And Setter Template</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGetterAndSetterTemplate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String GETTER_AND_SETTER_TEMPLATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getGetterAndSetterTemplate() <em>Getter And Setter Template</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGetterAndSetterTemplate()
-	 * @generated
-	 * @ordered
-	 */
-	protected String getterAndSetterTemplate = GETTER_AND_SETTER_TEMPLATE_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getMethodTemplate() <em>Method Template</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -177,126 +150,6 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @ordered
 	 */
 	protected String abstractMethodTemplate = ABSTRACT_METHOD_TEMPLATE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getEmbeddedAttributeTemplate() <em>Embedded Attribute Template</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEmbeddedAttributeTemplate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String EMBEDDED_ATTRIBUTE_TEMPLATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getEmbeddedAttributeTemplate() <em>Embedded Attribute Template</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEmbeddedAttributeTemplate()
-	 * @generated
-	 * @ordered
-	 */
-	protected String embeddedAttributeTemplate = EMBEDDED_ATTRIBUTE_TEMPLATE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getIdAttributeTemplate() <em>Id Attribute Template</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdAttributeTemplate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_ATTRIBUTE_TEMPLATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getIdAttributeTemplate() <em>Id Attribute Template</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdAttributeTemplate()
-	 * @generated
-	 * @ordered
-	 */
-	protected String idAttributeTemplate = ID_ATTRIBUTE_TEMPLATE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getVersionAttributeTemplate() <em>Version Attribute Template</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getVersionAttributeTemplate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String VERSION_ATTRIBUTE_TEMPLATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getVersionAttributeTemplate() <em>Version Attribute Template</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getVersionAttributeTemplate()
-	 * @generated
-	 * @ordered
-	 */
-	protected String versionAttributeTemplate = VERSION_ATTRIBUTE_TEMPLATE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getDecimalAttributeTemplate() <em>Decimal Attribute Template</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDecimalAttributeTemplate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DECIMAL_ATTRIBUTE_TEMPLATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getDecimalAttributeTemplate() <em>Decimal Attribute Template</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDecimalAttributeTemplate()
-	 * @generated
-	 * @ordered
-	 */
-	protected String decimalAttributeTemplate = DECIMAL_ATTRIBUTE_TEMPLATE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getDateTimeAttributeTemplate() <em>Date Time Attribute Template</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDateTimeAttributeTemplate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DATE_TIME_ATTRIBUTE_TEMPLATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getDateTimeAttributeTemplate() <em>Date Time Attribute Template</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDateTimeAttributeTemplate()
-	 * @generated
-	 * @ordered
-	 */
-	protected String dateTimeAttributeTemplate = DATE_TIME_ATTRIBUTE_TEMPLATE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getLobAttributeTemplate() <em>Lob Attribute Template</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLobAttributeTemplate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String LOB_ATTRIBUTE_TEMPLATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getLobAttributeTemplate() <em>Lob Attribute Template</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLobAttributeTemplate()
-	 * @generated
-	 * @ordered
-	 */
-	protected String lobAttributeTemplate = LOB_ATTRIBUTE_TEMPLATE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -388,29 +241,6 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getGetterAndSetterTemplate() {
-		return getterAndSetterTemplate;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setGetterAndSetterTemplate(String newGetterAndSetterTemplate) {
-		String oldGetterAndSetterTemplate = getterAndSetterTemplate;
-		getterAndSetterTemplate = newGetterAndSetterTemplate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					FramewebPackage.ORM_TEMPLATE__GETTER_AND_SETTER_TEMPLATE, oldGetterAndSetterTemplate,
-					getterAndSetterTemplate));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getMethodTemplate() {
 		return methodTemplate;
 	}
@@ -456,142 +286,6 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getEmbeddedAttributeTemplate() {
-		return embeddedAttributeTemplate;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEmbeddedAttributeTemplate(String newEmbeddedAttributeTemplate) {
-		String oldEmbeddedAttributeTemplate = embeddedAttributeTemplate;
-		embeddedAttributeTemplate = newEmbeddedAttributeTemplate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					FramewebPackage.ORM_TEMPLATE__EMBEDDED_ATTRIBUTE_TEMPLATE, oldEmbeddedAttributeTemplate,
-					embeddedAttributeTemplate));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getIdAttributeTemplate() {
-		return idAttributeTemplate;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIdAttributeTemplate(String newIdAttributeTemplate) {
-		String oldIdAttributeTemplate = idAttributeTemplate;
-		idAttributeTemplate = newIdAttributeTemplate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.ORM_TEMPLATE__ID_ATTRIBUTE_TEMPLATE,
-					oldIdAttributeTemplate, idAttributeTemplate));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getVersionAttributeTemplate() {
-		return versionAttributeTemplate;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setVersionAttributeTemplate(String newVersionAttributeTemplate) {
-		String oldVersionAttributeTemplate = versionAttributeTemplate;
-		versionAttributeTemplate = newVersionAttributeTemplate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					FramewebPackage.ORM_TEMPLATE__VERSION_ATTRIBUTE_TEMPLATE, oldVersionAttributeTemplate,
-					versionAttributeTemplate));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getDecimalAttributeTemplate() {
-		return decimalAttributeTemplate;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDecimalAttributeTemplate(String newDecimalAttributeTemplate) {
-		String oldDecimalAttributeTemplate = decimalAttributeTemplate;
-		decimalAttributeTemplate = newDecimalAttributeTemplate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					FramewebPackage.ORM_TEMPLATE__DECIMAL_ATTRIBUTE_TEMPLATE, oldDecimalAttributeTemplate,
-					decimalAttributeTemplate));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getDateTimeAttributeTemplate() {
-		return dateTimeAttributeTemplate;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDateTimeAttributeTemplate(String newDateTimeAttributeTemplate) {
-		String oldDateTimeAttributeTemplate = dateTimeAttributeTemplate;
-		dateTimeAttributeTemplate = newDateTimeAttributeTemplate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					FramewebPackage.ORM_TEMPLATE__DATE_TIME_ATTRIBUTE_TEMPLATE, oldDateTimeAttributeTemplate,
-					dateTimeAttributeTemplate));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getLobAttributeTemplate() {
-		return lobAttributeTemplate;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLobAttributeTemplate(String newLobAttributeTemplate) {
-		String oldLobAttributeTemplate = lobAttributeTemplate;
-		lobAttributeTemplate = newLobAttributeTemplate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.ORM_TEMPLATE__LOB_ATTRIBUTE_TEMPLATE,
-					oldLobAttributeTemplate, lobAttributeTemplate));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getEnumerationClassTemplate() {
 		return enumerationClassTemplate;
 	}
@@ -626,24 +320,10 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 			return getClassExtension();
 		case FramewebPackage.ORM_TEMPLATE__ATTRIBUTE_TEMPLATE:
 			return getAttributeTemplate();
-		case FramewebPackage.ORM_TEMPLATE__GETTER_AND_SETTER_TEMPLATE:
-			return getGetterAndSetterTemplate();
 		case FramewebPackage.ORM_TEMPLATE__METHOD_TEMPLATE:
 			return getMethodTemplate();
 		case FramewebPackage.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE:
 			return getAbstractMethodTemplate();
-		case FramewebPackage.ORM_TEMPLATE__EMBEDDED_ATTRIBUTE_TEMPLATE:
-			return getEmbeddedAttributeTemplate();
-		case FramewebPackage.ORM_TEMPLATE__ID_ATTRIBUTE_TEMPLATE:
-			return getIdAttributeTemplate();
-		case FramewebPackage.ORM_TEMPLATE__VERSION_ATTRIBUTE_TEMPLATE:
-			return getVersionAttributeTemplate();
-		case FramewebPackage.ORM_TEMPLATE__DECIMAL_ATTRIBUTE_TEMPLATE:
-			return getDecimalAttributeTemplate();
-		case FramewebPackage.ORM_TEMPLATE__DATE_TIME_ATTRIBUTE_TEMPLATE:
-			return getDateTimeAttributeTemplate();
-		case FramewebPackage.ORM_TEMPLATE__LOB_ATTRIBUTE_TEMPLATE:
-			return getLobAttributeTemplate();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -668,32 +348,11 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		case FramewebPackage.ORM_TEMPLATE__ATTRIBUTE_TEMPLATE:
 			setAttributeTemplate((String) newValue);
 			return;
-		case FramewebPackage.ORM_TEMPLATE__GETTER_AND_SETTER_TEMPLATE:
-			setGetterAndSetterTemplate((String) newValue);
-			return;
 		case FramewebPackage.ORM_TEMPLATE__METHOD_TEMPLATE:
 			setMethodTemplate((String) newValue);
 			return;
 		case FramewebPackage.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE:
 			setAbstractMethodTemplate((String) newValue);
-			return;
-		case FramewebPackage.ORM_TEMPLATE__EMBEDDED_ATTRIBUTE_TEMPLATE:
-			setEmbeddedAttributeTemplate((String) newValue);
-			return;
-		case FramewebPackage.ORM_TEMPLATE__ID_ATTRIBUTE_TEMPLATE:
-			setIdAttributeTemplate((String) newValue);
-			return;
-		case FramewebPackage.ORM_TEMPLATE__VERSION_ATTRIBUTE_TEMPLATE:
-			setVersionAttributeTemplate((String) newValue);
-			return;
-		case FramewebPackage.ORM_TEMPLATE__DECIMAL_ATTRIBUTE_TEMPLATE:
-			setDecimalAttributeTemplate((String) newValue);
-			return;
-		case FramewebPackage.ORM_TEMPLATE__DATE_TIME_ATTRIBUTE_TEMPLATE:
-			setDateTimeAttributeTemplate((String) newValue);
-			return;
-		case FramewebPackage.ORM_TEMPLATE__LOB_ATTRIBUTE_TEMPLATE:
-			setLobAttributeTemplate((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -719,32 +378,11 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		case FramewebPackage.ORM_TEMPLATE__ATTRIBUTE_TEMPLATE:
 			setAttributeTemplate(ATTRIBUTE_TEMPLATE_EDEFAULT);
 			return;
-		case FramewebPackage.ORM_TEMPLATE__GETTER_AND_SETTER_TEMPLATE:
-			setGetterAndSetterTemplate(GETTER_AND_SETTER_TEMPLATE_EDEFAULT);
-			return;
 		case FramewebPackage.ORM_TEMPLATE__METHOD_TEMPLATE:
 			setMethodTemplate(METHOD_TEMPLATE_EDEFAULT);
 			return;
 		case FramewebPackage.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE:
 			setAbstractMethodTemplate(ABSTRACT_METHOD_TEMPLATE_EDEFAULT);
-			return;
-		case FramewebPackage.ORM_TEMPLATE__EMBEDDED_ATTRIBUTE_TEMPLATE:
-			setEmbeddedAttributeTemplate(EMBEDDED_ATTRIBUTE_TEMPLATE_EDEFAULT);
-			return;
-		case FramewebPackage.ORM_TEMPLATE__ID_ATTRIBUTE_TEMPLATE:
-			setIdAttributeTemplate(ID_ATTRIBUTE_TEMPLATE_EDEFAULT);
-			return;
-		case FramewebPackage.ORM_TEMPLATE__VERSION_ATTRIBUTE_TEMPLATE:
-			setVersionAttributeTemplate(VERSION_ATTRIBUTE_TEMPLATE_EDEFAULT);
-			return;
-		case FramewebPackage.ORM_TEMPLATE__DECIMAL_ATTRIBUTE_TEMPLATE:
-			setDecimalAttributeTemplate(DECIMAL_ATTRIBUTE_TEMPLATE_EDEFAULT);
-			return;
-		case FramewebPackage.ORM_TEMPLATE__DATE_TIME_ATTRIBUTE_TEMPLATE:
-			setDateTimeAttributeTemplate(DATE_TIME_ATTRIBUTE_TEMPLATE_EDEFAULT);
-			return;
-		case FramewebPackage.ORM_TEMPLATE__LOB_ATTRIBUTE_TEMPLATE:
-			setLobAttributeTemplate(LOB_ATTRIBUTE_TEMPLATE_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -770,33 +408,12 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		case FramewebPackage.ORM_TEMPLATE__ATTRIBUTE_TEMPLATE:
 			return ATTRIBUTE_TEMPLATE_EDEFAULT == null ? attributeTemplate != null
 					: !ATTRIBUTE_TEMPLATE_EDEFAULT.equals(attributeTemplate);
-		case FramewebPackage.ORM_TEMPLATE__GETTER_AND_SETTER_TEMPLATE:
-			return GETTER_AND_SETTER_TEMPLATE_EDEFAULT == null ? getterAndSetterTemplate != null
-					: !GETTER_AND_SETTER_TEMPLATE_EDEFAULT.equals(getterAndSetterTemplate);
 		case FramewebPackage.ORM_TEMPLATE__METHOD_TEMPLATE:
 			return METHOD_TEMPLATE_EDEFAULT == null ? methodTemplate != null
 					: !METHOD_TEMPLATE_EDEFAULT.equals(methodTemplate);
 		case FramewebPackage.ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE:
 			return ABSTRACT_METHOD_TEMPLATE_EDEFAULT == null ? abstractMethodTemplate != null
 					: !ABSTRACT_METHOD_TEMPLATE_EDEFAULT.equals(abstractMethodTemplate);
-		case FramewebPackage.ORM_TEMPLATE__EMBEDDED_ATTRIBUTE_TEMPLATE:
-			return EMBEDDED_ATTRIBUTE_TEMPLATE_EDEFAULT == null ? embeddedAttributeTemplate != null
-					: !EMBEDDED_ATTRIBUTE_TEMPLATE_EDEFAULT.equals(embeddedAttributeTemplate);
-		case FramewebPackage.ORM_TEMPLATE__ID_ATTRIBUTE_TEMPLATE:
-			return ID_ATTRIBUTE_TEMPLATE_EDEFAULT == null ? idAttributeTemplate != null
-					: !ID_ATTRIBUTE_TEMPLATE_EDEFAULT.equals(idAttributeTemplate);
-		case FramewebPackage.ORM_TEMPLATE__VERSION_ATTRIBUTE_TEMPLATE:
-			return VERSION_ATTRIBUTE_TEMPLATE_EDEFAULT == null ? versionAttributeTemplate != null
-					: !VERSION_ATTRIBUTE_TEMPLATE_EDEFAULT.equals(versionAttributeTemplate);
-		case FramewebPackage.ORM_TEMPLATE__DECIMAL_ATTRIBUTE_TEMPLATE:
-			return DECIMAL_ATTRIBUTE_TEMPLATE_EDEFAULT == null ? decimalAttributeTemplate != null
-					: !DECIMAL_ATTRIBUTE_TEMPLATE_EDEFAULT.equals(decimalAttributeTemplate);
-		case FramewebPackage.ORM_TEMPLATE__DATE_TIME_ATTRIBUTE_TEMPLATE:
-			return DATE_TIME_ATTRIBUTE_TEMPLATE_EDEFAULT == null ? dateTimeAttributeTemplate != null
-					: !DATE_TIME_ATTRIBUTE_TEMPLATE_EDEFAULT.equals(dateTimeAttributeTemplate);
-		case FramewebPackage.ORM_TEMPLATE__LOB_ATTRIBUTE_TEMPLATE:
-			return LOB_ATTRIBUTE_TEMPLATE_EDEFAULT == null ? lobAttributeTemplate != null
-					: !LOB_ATTRIBUTE_TEMPLATE_EDEFAULT.equals(lobAttributeTemplate);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -820,24 +437,10 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		result.append(classExtension);
 		result.append(", attributeTemplate: ");
 		result.append(attributeTemplate);
-		result.append(", getterAndSetterTemplate: ");
-		result.append(getterAndSetterTemplate);
 		result.append(", methodTemplate: ");
 		result.append(methodTemplate);
 		result.append(", abstractMethodTemplate: ");
 		result.append(abstractMethodTemplate);
-		result.append(", embeddedAttributeTemplate: ");
-		result.append(embeddedAttributeTemplate);
-		result.append(", idAttributeTemplate: ");
-		result.append(idAttributeTemplate);
-		result.append(", versionAttributeTemplate: ");
-		result.append(versionAttributeTemplate);
-		result.append(", decimalAttributeTemplate: ");
-		result.append(decimalAttributeTemplate);
-		result.append(", dateTimeAttributeTemplate: ");
-		result.append(dateTimeAttributeTemplate);
-		result.append(", lobAttributeTemplate: ");
-		result.append(lobAttributeTemplate);
 		result.append(')');
 		return result.toString();
 	}
