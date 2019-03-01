@@ -116,6 +116,7 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FrameworkCategoryList getCategory() {
 		return category;
 	}
@@ -125,6 +126,7 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCategory(FrameworkCategoryList newCategory) {
 		FrameworkCategoryList oldCategory = category;
 		category = newCategory == null ? CATEGORY_EDEFAULT : newCategory;
@@ -138,6 +140,7 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FrameworkKindList getKind() {
 		return kind;
 	}
@@ -147,6 +150,7 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setKind(FrameworkKindList newKind) {
 		FrameworkKindList oldKind = kind;
 		kind = newKind == null ? KIND_EDEFAULT : newKind;
@@ -160,6 +164,7 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getVersion() {
 		return version;
 	}
@@ -169,6 +174,7 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVersion(String newVersion) {
 		String oldVersion = version;
 		version = newVersion;

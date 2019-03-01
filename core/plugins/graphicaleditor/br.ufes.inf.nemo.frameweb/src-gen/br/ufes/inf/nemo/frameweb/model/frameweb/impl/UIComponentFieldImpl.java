@@ -63,6 +63,7 @@ public class UIComponentFieldImpl extends NavigationAttributeImpl implements UIC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IOParameter getInject() {
 		if (inject != null && inject.eIsProxy()) {
 			InternalEObject oldInject = (InternalEObject) inject;
@@ -109,6 +110,7 @@ public class UIComponentFieldImpl extends NavigationAttributeImpl implements UIC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInject(IOParameter newInject) {
 		if (newInject != inject) {
 			NotificationChain msgs = null;

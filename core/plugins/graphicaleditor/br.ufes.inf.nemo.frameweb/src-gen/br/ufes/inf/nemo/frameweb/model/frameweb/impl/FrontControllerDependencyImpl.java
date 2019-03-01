@@ -75,6 +75,7 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FrontControllerMethod getMethod() {
 		if (method != null && method.eIsProxy()) {
 			InternalEObject oldMethod = (InternalEObject) method;
@@ -102,6 +103,7 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethod(FrontControllerMethod newMethod) {
 		FrontControllerMethod oldMethod = method;
 		method = newMethod;
@@ -115,6 +117,7 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MethodConstraint getMethodDependendencyConstraint() {
 		return methodDependendencyConstraint;
 	}
@@ -145,6 +148,7 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethodDependendencyConstraint(MethodConstraint newMethodDependendencyConstraint) {
 		if (newMethodDependendencyConstraint != methodDependendencyConstraint) {
 			NotificationChain msgs = null;

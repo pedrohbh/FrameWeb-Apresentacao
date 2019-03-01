@@ -54,6 +54,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Tag;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ViewPackage;
 
+@SuppressWarnings("all")
 public class Gerador implements IExternalJavaAction {
 	static String lang;
 	static String ext_class;

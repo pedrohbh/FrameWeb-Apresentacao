@@ -80,6 +80,7 @@ public class FramewebProjectImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<FramewebModel> getCompose() {
 		if (compose == null) {
 			compose = new EObjectContainmentEList<FramewebModel>(FramewebModel.class, this,
@@ -93,6 +94,7 @@ public class FramewebProjectImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<FrameworkProfile> getConfigures() {
 		if (configures == null) {
 			configures = new EObjectContainmentEList<FrameworkProfile>(FrameworkProfile.class, this,

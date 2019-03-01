@@ -73,6 +73,7 @@ public class DomainGeneralizationSetImpl extends GeneralizationSetImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InheritanceMapping getMapping() {
 		return mapping;
 	}
@@ -82,6 +83,7 @@ public class DomainGeneralizationSetImpl extends GeneralizationSetImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMapping(InheritanceMapping newMapping) {
 		InheritanceMapping oldMapping = mapping;
 		mapping = newMapping == null ? MAPPING_EDEFAULT : newMapping;

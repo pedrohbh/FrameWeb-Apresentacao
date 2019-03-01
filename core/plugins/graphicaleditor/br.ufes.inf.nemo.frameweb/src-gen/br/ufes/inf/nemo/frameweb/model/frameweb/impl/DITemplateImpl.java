@@ -175,6 +175,7 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getInterfaceTemplate() {
 		return interfaceTemplate;
 	}
@@ -184,6 +185,7 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInterfaceTemplate(String newInterfaceTemplate) {
 		String oldInterfaceTemplate = interfaceTemplate;
 		interfaceTemplate = newInterfaceTemplate;
@@ -197,6 +199,7 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getInterfaceExtension() {
 		return interfaceExtension;
 	}
@@ -206,6 +209,7 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInterfaceExtension(String newInterfaceExtension) {
 		String oldInterfaceExtension = interfaceExtension;
 		interfaceExtension = newInterfaceExtension;
@@ -219,6 +223,7 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getClassExtension() {
 		return classExtension;
 	}
@@ -228,6 +233,7 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClassExtension(String newClassExtension) {
 		String oldClassExtension = classExtension;
 		classExtension = newClassExtension;
@@ -241,6 +247,7 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getClassTemplate() {
 		return classTemplate;
 	}
@@ -250,6 +257,7 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClassTemplate(String newClassTemplate) {
 		String oldClassTemplate = classTemplate;
 		classTemplate = newClassTemplate;
@@ -263,6 +271,7 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getServiceClassInjectionTemplate() {
 		return serviceClassInjectionTemplate;
 	}
@@ -272,6 +281,7 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setServiceClassInjectionTemplate(String newServiceClassInjectionTemplate) {
 		String oldServiceClassInjectionTemplate = serviceClassInjectionTemplate;
 		serviceClassInjectionTemplate = newServiceClassInjectionTemplate;
@@ -286,6 +296,7 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDaoClassInjectionTemplate() {
 		return daoClassInjectionTemplate;
 	}
@@ -295,6 +306,7 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDaoClassInjectionTemplate(String newDaoClassInjectionTemplate) {
 		String oldDaoClassInjectionTemplate = daoClassInjectionTemplate;
 		daoClassInjectionTemplate = newDaoClassInjectionTemplate;

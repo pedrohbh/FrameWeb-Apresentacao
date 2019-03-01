@@ -64,6 +64,7 @@ public abstract class VocabularyEntityImpl extends ClassifierImpl implements Voc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IRI getEntityIRI() {
 		if (entityIRI != null && entityIRI.eIsProxy()) {
 			InternalEObject oldEntityIRI = (InternalEObject) entityIRI;
@@ -91,6 +92,7 @@ public abstract class VocabularyEntityImpl extends ClassifierImpl implements Voc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEntityIRI(IRI newEntityIRI) {
 		IRI oldEntityIRI = entityIRI;
 		entityIRI = newEntityIRI;

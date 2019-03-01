@@ -63,6 +63,7 @@ public class PageImpl extends NavigationClassImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TagLib> getPageTagLib() {
 		if (pageTagLib == null) {
 			pageTagLib = new EObjectResolvingEList<TagLib>(TagLib.class, this, FramewebPackage.PAGE__PAGE_TAG_LIB);

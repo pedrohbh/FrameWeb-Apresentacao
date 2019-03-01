@@ -200,6 +200,7 @@ public class FramewebActionBarContributor extends EditingDomainActionBarContribu
 		// Force an update because Eclipse hides empty menus now.
 		//
 		submenuManager.addMenuListener(new IMenuListener() {
+			@Override
 			public void menuAboutToShow(IMenuManager menuManager) {
 				menuManager.updateAll(true);
 			}
@@ -246,6 +247,7 @@ public class FramewebActionBarContributor extends EditingDomainActionBarContribu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void selectionChanged(SelectionChangedEvent event) {
 		// Remove any menu items for old selection.
 		//

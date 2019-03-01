@@ -128,6 +128,7 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<IRI> getDirectlyImportsDocuments() {
 		if (directlyImportsDocuments == null) {
 			directlyImportsDocuments = new EObjectContainmentEList<IRI>(IRI.class, this,
@@ -141,6 +142,7 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IRI getVocabularyIRI() {
 		if (vocabularyIRI != null && vocabularyIRI.eIsProxy()) {
 			InternalEObject oldVocabularyIRI = (InternalEObject) vocabularyIRI;
@@ -168,6 +170,7 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVocabularyIRI(IRI newVocabularyIRI) {
 		IRI oldVocabularyIRI = vocabularyIRI;
 		vocabularyIRI = newVocabularyIRI;
@@ -181,6 +184,7 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Axiom> getAxioms() {
 		if (axioms == null) {
 			axioms = new EObjectContainmentEList<Axiom>(Axiom.class, this, FramewebPackage.VOCABULARY__AXIOMS);
@@ -193,6 +197,7 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Annotation> getAnnotations() {
 		if (annotations == null) {
 			annotations = new EObjectContainmentEList<Annotation>(Annotation.class, this,
@@ -206,6 +211,7 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getVocabularyDocument() {
 		return vocabularyDocument;
 	}
@@ -215,6 +221,7 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVocabularyDocument(String newVocabularyDocument) {
 		String oldVocabularyDocument = vocabularyDocument;
 		vocabularyDocument = newVocabularyDocument;

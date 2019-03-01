@@ -411,6 +411,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Classifier> getFeaturingClassifiers() {
 		// TODO: implement this method to return the 'Featuring Classifier' reference list
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -424,6 +425,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isStatic() {
 		return isStatic;
 	}
@@ -433,6 +435,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsStatic(boolean newIsStatic) {
 		boolean oldIsStatic = isStatic;
 		isStatic = newIsStatic;
@@ -446,6 +449,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject) type;
@@ -473,6 +477,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(Type newType) {
 		Type oldType = type;
 		type = newType;
@@ -486,6 +491,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isOrdered() {
 		return isOrdered;
 	}
@@ -495,6 +501,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsOrdered(boolean newIsOrdered) {
 		boolean oldIsOrdered = isOrdered;
 		isOrdered = newIsOrdered;
@@ -508,6 +515,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isUnique() {
 		return isUnique;
 	}
@@ -517,6 +525,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsUnique(boolean newIsUnique) {
 		boolean oldIsUnique = isUnique;
 		isUnique = newIsUnique;
@@ -530,6 +539,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getLower() {
 		// TODO: implement this method to return the 'Lower' attribute
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -541,6 +551,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLower(int newLower) {
 		// TODO: implement this method to set the 'Lower' attribute
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -552,6 +563,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getLowerValue() {
 		if (lowerValue != null && lowerValue.eIsProxy()) {
 			InternalEObject oldLowerValue = (InternalEObject) lowerValue;
@@ -607,6 +619,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLowerValue(ValueSpecification newLowerValue) {
 		if (newLowerValue != lowerValue) {
 			NotificationChain msgs = null;
@@ -629,6 +642,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getUpper() {
 		// TODO: implement this method to return the 'Upper' attribute
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -640,6 +654,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUpper(int newUpper) {
 		// TODO: implement this method to set the 'Upper' attribute
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -651,6 +666,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getUpperValue() {
 		if (upperValue != null && upperValue.eIsProxy()) {
 			InternalEObject oldUpperValue = (InternalEObject) upperValue;
@@ -706,6 +722,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUpperValue(ValueSpecification newUpperValue) {
 		if (newUpperValue != upperValue) {
 			NotificationChain msgs = null;
@@ -728,6 +745,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isReadOnly() {
 		return isReadOnly;
 	}
@@ -737,6 +755,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsReadOnly(boolean newIsReadOnly) {
 		boolean oldIsReadOnly = isReadOnly;
 		isReadOnly = newIsReadOnly;
@@ -750,6 +769,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ConnectorEnd> getEnds() {
 		// TODO: implement this method to return the 'End' reference list
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -763,6 +783,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackageableElement> getDeployedElements() {
 		// TODO: implement this method to return the 'Deployed Element' reference list
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -776,6 +797,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Deployment> getDeployments() {
 		if (deployments == null) {
 			deployments = new EObjectContainmentWithInverseEList.Resolving<Deployment>(Deployment.class, this,
@@ -789,6 +811,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataType getDatatype() {
 		if (eContainerFeatureID() != FramewebPackage.NAMED_INDIVIDUAL__DATATYPE)
 			return null;
@@ -821,6 +844,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDatatype(DataType newDatatype) {
 		if (newDatatype != eInternalContainer()
 				|| (eContainerFeatureID() != FramewebPackage.NAMED_INDIVIDUAL__DATATYPE && newDatatype != null)) {
@@ -845,6 +869,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interface getInterface() {
 		if (eContainerFeatureID() != FramewebPackage.NAMED_INDIVIDUAL__INTERFACE)
 			return null;
@@ -877,6 +902,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInterface(Interface newInterface) {
 		if (newInterface != eInternalContainer()
 				|| (eContainerFeatureID() != FramewebPackage.NAMED_INDIVIDUAL__INTERFACE && newInterface != null)) {
@@ -945,6 +971,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AggregationKind getAggregation() {
 		return aggregation;
 	}
@@ -954,6 +981,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAggregation(AggregationKind newAggregation) {
 		AggregationKind oldAggregation = aggregation;
 		aggregation = newAggregation == null ? AGGREGATION_EDEFAULT : newAggregation;
@@ -967,6 +995,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getAssociationEnd() {
 		if (eContainerFeatureID() != FramewebPackage.NAMED_INDIVIDUAL__ASSOCIATION_END)
 			return null;
@@ -1000,6 +1029,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAssociationEnd(Property newAssociationEnd) {
 		if (newAssociationEnd != eInternalContainer()
 				|| (eContainerFeatureID() != FramewebPackage.NAMED_INDIVIDUAL__ASSOCIATION_END
@@ -1025,6 +1055,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> getQualifiers() {
 		if (qualifiers == null) {
 			qualifiers = new EObjectContainmentWithInverseEList.Resolving<Property>(Property.class, this,
@@ -1038,6 +1069,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.uml2.uml.Class getClass_() {
 		org.eclipse.uml2.uml.Class class_ = basicGetClass_();
 		return class_ != null && class_.eIsProxy()
@@ -1062,6 +1094,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getDefaultValue() {
 		if (defaultValue != null && defaultValue.eIsProxy()) {
 			InternalEObject oldDefaultValue = (InternalEObject) defaultValue;
@@ -1117,6 +1150,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValue(ValueSpecification newDefaultValue) {
 		if (newDefaultValue != defaultValue) {
 			NotificationChain msgs = null;
@@ -1139,6 +1173,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isComposite() {
 		// TODO: implement this method to return the 'Is Composite' attribute
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -1150,6 +1185,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsComposite(boolean newIsComposite) {
 		// TODO: implement this method to set the 'Is Composite' attribute
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -1161,6 +1197,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDerived() {
 		return isDerived;
 	}
@@ -1170,6 +1207,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsDerived(boolean newIsDerived) {
 		boolean oldIsDerived = isDerived;
 		isDerived = newIsDerived;
@@ -1183,6 +1221,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDerivedUnion() {
 		return isDerivedUnion;
 	}
@@ -1192,6 +1231,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsDerivedUnion(boolean newIsDerivedUnion) {
 		boolean oldIsDerivedUnion = isDerivedUnion;
 		isDerivedUnion = newIsDerivedUnion;
@@ -1205,6 +1245,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isID() {
 		return isID;
 	}
@@ -1214,6 +1255,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsID(boolean newIsID) {
 		boolean oldIsID = isID;
 		isID = newIsID;
@@ -1227,6 +1269,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getOpposite() {
 		Property opposite = basicGetOpposite();
 		return opposite != null && opposite.eIsProxy() ? (Property) eResolveProxy((InternalEObject) opposite)
@@ -1250,6 +1293,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOpposite(Property newOpposite) {
 		// TODO: implement this method to set the 'Opposite' reference
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -1261,6 +1305,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Association getOwningAssociation() {
 		if (eContainerFeatureID() != FramewebPackage.NAMED_INDIVIDUAL__OWNING_ASSOCIATION)
 			return null;
@@ -1294,6 +1339,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwningAssociation(Association newOwningAssociation) {
 		if (newOwningAssociation != eInternalContainer()
 				|| (eContainerFeatureID() != FramewebPackage.NAMED_INDIVIDUAL__OWNING_ASSOCIATION
@@ -1319,6 +1365,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> getRedefinedProperties() {
 		if (redefinedProperties == null) {
 			redefinedProperties = new EObjectResolvingEList<Property>(Property.class, this,
@@ -1332,6 +1379,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> getSubsettedProperties() {
 		if (subsettedProperties == null) {
 			subsettedProperties = new EObjectResolvingEList<Property>(Property.class, this,
@@ -1345,6 +1393,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Association getAssociation() {
 		if (association != null && association.eIsProxy()) {
 			InternalEObject oldAssociation = (InternalEObject) association;
@@ -1391,6 +1440,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAssociation(Association newAssociation) {
 		if (newAssociation != association) {
 			NotificationChain msgs = null;
@@ -1413,6 +1463,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSubsettingContextConforms(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -1438,6 +1489,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateDerivedUnionIsReadOnly(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -1463,6 +1515,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicityOfComposite(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -1488,6 +1541,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateRedefinedPropertyInherited(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -1513,6 +1567,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSubsettingRules(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -1538,6 +1593,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateBindingToAttribute(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -1563,6 +1619,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateDerivedUnionIsDerived(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -1588,6 +1645,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateDeploymentTarget(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -1613,6 +1671,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSubsettedPropertyNames(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -1638,6 +1697,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTypeOfOppositeEnd(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -1663,6 +1723,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateQualifiedIsAssociationEnd(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -1688,6 +1749,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getOtherEnd() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -1699,6 +1761,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBooleanDefaultValue(boolean value) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -1710,6 +1773,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIntegerDefaultValue(int value) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -1721,6 +1785,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsNavigable(boolean isNavigable) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -1732,6 +1797,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNullDefaultValue() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -1743,6 +1809,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRealDefaultValue(double value) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -1754,6 +1821,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStringDefaultValue(String value) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -1765,6 +1833,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUnlimitedNaturalDefaultValue(int value) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -1776,6 +1845,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isAttribute() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -1787,6 +1857,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isNavigable() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -1798,6 +1869,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Type> subsettingContext() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -1809,6 +1881,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateUpperGeLower(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -1834,6 +1907,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateLowerGe0(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -1857,6 +1931,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateValueSpecificationNoSideEffects(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -1882,6 +1957,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateValueSpecificationConstant(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -1907,6 +1983,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateLowerIsInteger(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -1932,6 +2009,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateUpperIsUnlimitedNatural(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -1957,6 +2035,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean compatibleWith(MultiplicityElement other) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -1968,6 +2047,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean includesMultiplicity(MultiplicityElement M) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -1979,6 +2059,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean is(int lowerbound, int upperbound) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -1990,6 +2071,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isMultivalued() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -2001,6 +2083,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int lowerBound() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -2012,6 +2095,7 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int upperBound() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT

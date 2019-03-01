@@ -196,6 +196,7 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getClassTemplate() {
 		return classTemplate;
 	}
@@ -205,6 +206,7 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClassTemplate(String newClassTemplate) {
 		String oldClassTemplate = classTemplate;
 		classTemplate = newClassTemplate;
@@ -218,6 +220,7 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getMethodTemplate() {
 		return methodTemplate;
 	}
@@ -227,6 +230,7 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethodTemplate(String newMethodTemplate) {
 		String oldMethodTemplate = methodTemplate;
 		methodTemplate = newMethodTemplate;
@@ -240,6 +244,7 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPageTemplate() {
 		return pageTemplate;
 	}
@@ -249,6 +254,7 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPageTemplate(String newPageTemplate) {
 		String oldPageTemplate = pageTemplate;
 		pageTemplate = newPageTemplate;
@@ -262,6 +268,7 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFormTemplate() {
 		return formTemplate;
 	}
@@ -271,6 +278,7 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFormTemplate(String newFormTemplate) {
 		String oldFormTemplate = formTemplate;
 		formTemplate = newFormTemplate;
@@ -284,6 +292,7 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getClassExtension() {
 		return classExtension;
 	}
@@ -293,6 +302,7 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClassExtension(String newClassExtension) {
 		String oldClassExtension = classExtension;
 		classExtension = newClassExtension;
@@ -306,6 +316,7 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPageExtension() {
 		return pageExtension;
 	}
@@ -315,6 +326,7 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPageExtension(String newPageExtension) {
 		String oldPageExtension = pageExtension;
 		pageExtension = newPageExtension;
@@ -328,6 +340,7 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getAttributeTemplate() {
 		return attributeTemplate;
 	}
@@ -337,6 +350,7 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAttributeTemplate(String newAttributeTemplate) {
 		String oldAttributeTemplate = attributeTemplate;
 		attributeTemplate = newAttributeTemplate;

@@ -175,6 +175,7 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getClassTemplate() {
 		return classTemplate;
 	}
@@ -184,6 +185,7 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClassTemplate(String newClassTemplate) {
 		String oldClassTemplate = classTemplate;
 		classTemplate = newClassTemplate;
@@ -197,6 +199,7 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getClassExtension() {
 		return classExtension;
 	}
@@ -206,6 +209,7 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClassExtension(String newClassExtension) {
 		String oldClassExtension = classExtension;
 		classExtension = newClassExtension;
@@ -219,6 +223,7 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getAttributeTemplate() {
 		return attributeTemplate;
 	}
@@ -228,6 +233,7 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAttributeTemplate(String newAttributeTemplate) {
 		String oldAttributeTemplate = attributeTemplate;
 		attributeTemplate = newAttributeTemplate;
@@ -241,6 +247,7 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getMethodTemplate() {
 		return methodTemplate;
 	}
@@ -250,6 +257,7 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethodTemplate(String newMethodTemplate) {
 		String oldMethodTemplate = methodTemplate;
 		methodTemplate = newMethodTemplate;
@@ -263,6 +271,7 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getAbstractMethodTemplate() {
 		return abstractMethodTemplate;
 	}
@@ -272,6 +281,7 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAbstractMethodTemplate(String newAbstractMethodTemplate) {
 		String oldAbstractMethodTemplate = abstractMethodTemplate;
 		abstractMethodTemplate = newAbstractMethodTemplate;
@@ -286,6 +296,7 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getEnumerationClassTemplate() {
 		return enumerationClassTemplate;
 	}
@@ -295,6 +306,7 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnumerationClassTemplate(String newEnumerationClassTemplate) {
 		String oldEnumerationClassTemplate = enumerationClassTemplate;
 		enumerationClassTemplate = newEnumerationClassTemplate;

@@ -85,6 +85,7 @@ public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements Voca
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> getOwnedAttributes() {
 		if (ownedAttributes == null) {
 			ownedAttributes = new EObjectContainmentWithInverseEList.Resolving<Property>(Property.class, this,
@@ -98,6 +99,7 @@ public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements Voca
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Operation> getOwnedOperations() {
 		if (ownedOperations == null) {
 			ownedOperations = new EObjectContainmentWithInverseEList.Resolving<Operation>(Operation.class, this,
@@ -111,6 +113,7 @@ public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements Voca
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createOwnedAttribute(String name, Type type, int lower, int upper) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -122,6 +125,7 @@ public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements Voca
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation createOwnedOperation(String name, EList<String> parameterNames, EList<Type> parameterTypes,
 			Type returnType) {
 		// TODO: implement this method

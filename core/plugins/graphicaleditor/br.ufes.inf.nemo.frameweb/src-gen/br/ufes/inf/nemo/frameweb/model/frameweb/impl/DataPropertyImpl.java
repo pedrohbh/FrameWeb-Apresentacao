@@ -157,6 +157,7 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Element> getRelatedElements() {
 		// TODO: implement this method to return the 'Related Element' reference list
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -170,6 +171,7 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Type> getEndTypes() {
 		// TODO: implement this method to return the 'End Type' reference list
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -183,6 +185,7 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDerived() {
 		return isDerived;
 	}
@@ -192,6 +195,7 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsDerived(boolean newIsDerived) {
 		boolean oldIsDerived = isDerived;
 		isDerived = newIsDerived;
@@ -205,6 +209,7 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> getMemberEnds() {
 		if (memberEnds == null) {
 			memberEnds = new EObjectWithInverseResolvingEList<Property>(Property.class, this,
@@ -218,6 +223,7 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> getOwnedEnds() {
 		if (ownedEnds == null) {
 			ownedEnds = new EObjectContainmentWithInverseEList.Resolving<Property>(Property.class, this,
@@ -231,6 +237,7 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> getNavigableOwnedEnds() {
 		if (navigableOwnedEnds == null) {
 			navigableOwnedEnds = new EObjectResolvingEList<Property>(Property.class, this,
@@ -244,6 +251,7 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPrefix() {
 		return prefix;
 	}
@@ -253,6 +261,7 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPrefix(String newPrefix) {
 		String oldPrefix = prefix;
 		prefix = newPrefix;
@@ -266,6 +275,7 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSpecializedEndNumber(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -291,6 +301,7 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSpecializedEndTypes(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -316,6 +327,7 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateBinaryAssociations(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -341,6 +353,7 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateAssociationEnds(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -366,6 +379,7 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateEndsMustBeTyped(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -391,6 +405,7 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isBinary() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT

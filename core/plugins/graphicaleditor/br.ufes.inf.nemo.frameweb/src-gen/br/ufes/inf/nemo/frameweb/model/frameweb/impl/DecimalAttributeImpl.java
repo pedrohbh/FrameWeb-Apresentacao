@@ -91,6 +91,7 @@ public class DecimalAttributeImpl extends AttributeImpl implements DecimalAttrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public long getDecimalPrecision() {
 		return decimalPrecision;
 	}
@@ -100,6 +101,7 @@ public class DecimalAttributeImpl extends AttributeImpl implements DecimalAttrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDecimalPrecision(long newDecimalPrecision) {
 		long oldDecimalPrecision = decimalPrecision;
 		decimalPrecision = newDecimalPrecision;
@@ -113,6 +115,7 @@ public class DecimalAttributeImpl extends AttributeImpl implements DecimalAttrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public long getDecimalScale() {
 		return decimalScale;
 	}
@@ -122,6 +125,7 @@ public class DecimalAttributeImpl extends AttributeImpl implements DecimalAttrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDecimalScale(long newDecimalScale) {
 		long oldDecimalScale = decimalScale;
 		decimalScale = newDecimalScale;

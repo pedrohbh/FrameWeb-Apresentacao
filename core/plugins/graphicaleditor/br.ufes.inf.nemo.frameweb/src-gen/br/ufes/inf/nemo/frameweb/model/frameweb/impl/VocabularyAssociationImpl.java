@@ -72,6 +72,7 @@ public class VocabularyAssociationImpl extends AssociationImpl implements Vocabu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPrefix() {
 		return prefix;
 	}
@@ -81,6 +82,7 @@ public class VocabularyAssociationImpl extends AssociationImpl implements Vocabu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPrefix(String newPrefix) {
 		String oldPrefix = prefix;
 		prefix = newPrefix;

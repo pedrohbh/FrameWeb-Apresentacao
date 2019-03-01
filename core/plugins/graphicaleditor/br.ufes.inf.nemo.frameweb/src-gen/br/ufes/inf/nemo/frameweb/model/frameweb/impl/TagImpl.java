@@ -72,6 +72,7 @@ public class TagImpl extends StereotypeImpl implements Tag {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCodeGenerationTemplate() {
 		return codeGenerationTemplate;
 	}
@@ -81,6 +82,7 @@ public class TagImpl extends StereotypeImpl implements Tag {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCodeGenerationTemplate(String newCodeGenerationTemplate) {
 		String oldCodeGenerationTemplate = codeGenerationTemplate;
 		codeGenerationTemplate = newCodeGenerationTemplate;

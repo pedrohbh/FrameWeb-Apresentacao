@@ -144,6 +144,7 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Collection getCollection() {
 		return collection;
 	}
@@ -153,6 +154,7 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCollection(Collection newCollection) {
 		Collection oldCollection = collection;
 		collection = newCollection == null ? COLLECTION_EDEFAULT : newCollection;
@@ -166,6 +168,7 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Cascade getCascade() {
 		return cascade;
 	}
@@ -175,6 +178,7 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCascade(Cascade newCascade) {
 		Cascade oldCascade = cascade;
 		cascade = newCascade == null ? CASCADE_EDEFAULT : newCascade;
@@ -188,6 +192,7 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Fetch getFetch() {
 		return fetch;
 	}
@@ -197,6 +202,7 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFetch(Fetch newFetch) {
 		Fetch oldFetch = fetch;
 		fetch = newFetch == null ? FETCH_EDEFAULT : newFetch;
@@ -210,6 +216,7 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Order getOrder() {
 		return order;
 	}
@@ -219,6 +226,7 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrder(Order newOrder) {
 		Order oldOrder = order;
 		order = newOrder == null ? ORDER_EDEFAULT : newOrder;

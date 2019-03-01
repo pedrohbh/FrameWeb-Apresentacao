@@ -110,6 +110,7 @@ public class DAOClassImpl extends ClassImpl implements DAOClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getSufix() {
 		return sufix;
 	}
@@ -119,6 +120,7 @@ public class DAOClassImpl extends ClassImpl implements DAOClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getInfix() {
 		return infix;
 	}
@@ -128,6 +130,7 @@ public class DAOClassImpl extends ClassImpl implements DAOClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPrefix() {
 		return prefix;
 	}

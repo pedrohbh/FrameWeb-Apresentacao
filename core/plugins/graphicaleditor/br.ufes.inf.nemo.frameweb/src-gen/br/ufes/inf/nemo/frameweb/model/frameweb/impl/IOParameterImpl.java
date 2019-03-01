@@ -67,6 +67,7 @@ public class IOParameterImpl extends NavigationAttributeImpl implements IOParame
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UIComponentField> getDisplay() {
 		if (display == null) {
 			display = new EObjectWithInverseResolvingEList<UIComponentField>(UIComponentField.class, this,

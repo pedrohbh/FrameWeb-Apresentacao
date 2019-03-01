@@ -71,6 +71,7 @@ public class IdAttributeImpl extends AttributeImpl implements IdAttribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Generation getGeneration() {
 		return generation;
 	}
@@ -80,6 +81,7 @@ public class IdAttributeImpl extends AttributeImpl implements IdAttribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGeneration(Generation newGeneration) {
 		Generation oldGeneration = generation;
 		generation = newGeneration == null ? GENERATION_EDEFAULT : newGeneration;

@@ -74,12 +74,6 @@
       <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//InheritanceMapping/union"/>
       <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//InheritanceMapping/join"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="frameweb.ecore#//AssociationCardinality">
-      <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//AssociationCardinality/OneToOne"/>
-      <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//AssociationCardinality/OneToMany"/>
-      <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//AssociationCardinality/ManyToOne"/>
-      <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//AssociationCardinality/ManyToMany"/>
-    </genEnums>
     <genDataTypes ecoreDataType="frameweb.ecore#//Rational"/>
     <genDataTypes ecoreDataType="frameweb.ecore#//Decimal"/>
     <genClasses ecoreClass="frameweb.ecore#//FramewebProject">
@@ -293,15 +287,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/enumerationClassTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/classExtension"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/attributeTemplate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/getterAndSetterTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/methodTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/abstractMethodTemplate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/embeddedAttributeTemplate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/idAttributeTemplate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/versionAttributeTemplate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/decimalAttributeTemplate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/dateTimeAttributeTemplate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/lobAttributeTemplate"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

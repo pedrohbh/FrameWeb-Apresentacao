@@ -71,6 +71,7 @@ public class DomainClassImpl extends ClassImpl implements DomainClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTable() {
 		return table;
 	}
@@ -80,6 +81,7 @@ public class DomainClassImpl extends ClassImpl implements DomainClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTable(String newTable) {
 		String oldTable = table;
 		table = newTable;

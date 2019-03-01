@@ -75,6 +75,7 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FrontControllerMethod getResultMethod() {
 		if (resultMethod != null && resultMethod.eIsProxy()) {
 			InternalEObject oldResultMethod = (InternalEObject) resultMethod;
@@ -102,6 +103,7 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResultMethod(FrontControllerMethod newResultMethod) {
 		FrontControllerMethod oldResultMethod = resultMethod;
 		resultMethod = newResultMethod;
@@ -115,6 +117,7 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ResultConstraint getResultDependencyConstraint() {
 		return resultDependencyConstraint;
 	}
@@ -145,6 +148,7 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResultDependencyConstraint(ResultConstraint newResultDependencyConstraint) {
 		if (newResultDependencyConstraint != resultDependencyConstraint) {
 			NotificationChain msgs = null;

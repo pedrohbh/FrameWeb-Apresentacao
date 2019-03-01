@@ -86,6 +86,7 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isIsDefault() {
 		return isDefault;
 	}
@@ -95,6 +96,7 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsDefault(boolean newIsDefault) {
 		boolean oldIsDefault = isDefault;
 		isDefault = newIsDefault;
@@ -108,6 +110,7 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type getMethodType() {
 		if (methodType != null && methodType.eIsProxy()) {
 			InternalEObject oldMethodType = (InternalEObject) methodType;
@@ -135,6 +138,7 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethodType(Type newMethodType) {
 		Type oldMethodType = methodType;
 		methodType = newMethodType;

@@ -63,6 +63,7 @@ public class PageDependencyImpl extends NavigationDependencyImpl implements Page
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PageConstraint getPageDependencyConstraint() {
 		return pageDependencyConstraint;
 	}
@@ -93,6 +94,7 @@ public class PageDependencyImpl extends NavigationDependencyImpl implements Page
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPageDependencyConstraint(PageConstraint newPageDependencyConstraint) {
 		if (newPageDependencyConstraint != pageDependencyConstraint) {
 			NotificationChain msgs = null;

@@ -72,6 +72,7 @@ public class VocabularyConstraintsImpl extends ConstraintImpl implements Vocabul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getSubPropertyOf() {
 		return subPropertyOf;
 	}
@@ -81,6 +82,7 @@ public class VocabularyConstraintsImpl extends ConstraintImpl implements Vocabul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubPropertyOf(String newSubPropertyOf) {
 		String oldSubPropertyOf = subPropertyOf;
 		subPropertyOf = newSubPropertyOf;

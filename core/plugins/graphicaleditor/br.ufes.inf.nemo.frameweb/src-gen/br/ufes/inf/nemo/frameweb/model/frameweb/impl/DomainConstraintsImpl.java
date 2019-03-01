@@ -139,6 +139,7 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Collection getCollection() {
 		return collection;
 	}
@@ -148,6 +149,7 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCollection(Collection newCollection) {
 		Collection oldCollection = collection;
 		collection = newCollection == null ? COLLECTION_EDEFAULT : newCollection;
@@ -161,6 +163,7 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Fetch getFetch() {
 		return fetch;
 	}
@@ -170,6 +173,7 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFetch(Fetch newFetch) {
 		Fetch oldFetch = fetch;
 		fetch = newFetch == null ? FETCH_EDEFAULT : newFetch;
@@ -183,6 +187,7 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Order getOrder() {
 		return order;
 	}
@@ -192,6 +197,7 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrder(Order newOrder) {
 		Order oldOrder = order;
 		order = newOrder == null ? ORDER_EDEFAULT : newOrder;
@@ -205,6 +211,7 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Cascade getCascade() {
 		return cascade;
 	}
@@ -214,6 +221,7 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCascade(Cascade newCascade) {
 		Cascade oldCascade = cascade;
 		cascade = newCascade == null ? CASCADE_EDEFAULT : newCascade;

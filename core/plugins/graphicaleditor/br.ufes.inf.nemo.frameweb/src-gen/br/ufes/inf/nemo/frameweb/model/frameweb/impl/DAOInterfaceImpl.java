@@ -93,6 +93,7 @@ public class DAOInterfaceImpl extends InterfaceImpl implements DAOInterface {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getInfix() {
 		return infix;
 	}
@@ -102,6 +103,7 @@ public class DAOInterfaceImpl extends InterfaceImpl implements DAOInterface {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInfix(String newInfix) {
 		String oldInfix = infix;
 		infix = newInfix;
@@ -115,6 +117,7 @@ public class DAOInterfaceImpl extends InterfaceImpl implements DAOInterface {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getSufix() {
 		return sufix;
 	}

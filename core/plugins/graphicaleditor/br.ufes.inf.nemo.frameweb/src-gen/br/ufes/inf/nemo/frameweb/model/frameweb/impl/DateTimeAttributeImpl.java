@@ -71,6 +71,7 @@ public class DateTimeAttributeImpl extends AttributeImpl implements DateTimeAttr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DateTimePrecision getDateTimePrecision() {
 		return dateTimePrecision;
 	}
@@ -80,6 +81,7 @@ public class DateTimeAttributeImpl extends AttributeImpl implements DateTimeAttr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDateTimePrecision(DateTimePrecision newDateTimePrecision) {
 		DateTimePrecision oldDateTimePrecision = dateTimePrecision;
 		dateTimePrecision = newDateTimePrecision == null ? DATE_TIME_PRECISION_EDEFAULT : newDateTimePrecision;

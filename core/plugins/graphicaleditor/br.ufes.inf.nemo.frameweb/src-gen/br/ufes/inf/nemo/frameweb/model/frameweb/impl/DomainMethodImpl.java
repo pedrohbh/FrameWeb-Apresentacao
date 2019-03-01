@@ -65,6 +65,7 @@ public class DomainMethodImpl extends OperationImpl implements DomainMethod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type getMethodType() {
 		if (methodType != null && methodType.eIsProxy()) {
 			InternalEObject oldMethodType = (InternalEObject) methodType;
@@ -92,6 +93,7 @@ public class DomainMethodImpl extends OperationImpl implements DomainMethod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethodType(Type newMethodType) {
 		Type oldMethodType = methodType;
 		methodType = newMethodType;

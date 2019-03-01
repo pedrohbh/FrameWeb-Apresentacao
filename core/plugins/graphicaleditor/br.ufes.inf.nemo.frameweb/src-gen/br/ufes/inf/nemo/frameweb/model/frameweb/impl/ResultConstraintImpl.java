@@ -133,6 +133,7 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getExecute() {
 		return execute;
 	}
@@ -142,6 +143,7 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExecute(String newExecute) {
 		String oldExecute = execute;
 		execute = newExecute;
@@ -155,6 +157,7 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isAjax() {
 		return ajax;
 	}
@@ -164,6 +167,7 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAjax(boolean newAjax) {
 		boolean oldAjax = ajax;
 		ajax = newAjax;
@@ -177,6 +181,7 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getResult() {
 		return result;
 	}
@@ -186,6 +191,7 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResult(String newResult) {
 		String oldResult = result;
 		result = newResult;
@@ -199,6 +205,7 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRender() {
 		return render;
 	}
@@ -208,6 +215,7 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRender(String newRender) {
 		String oldRender = render;
 		render = newRender;

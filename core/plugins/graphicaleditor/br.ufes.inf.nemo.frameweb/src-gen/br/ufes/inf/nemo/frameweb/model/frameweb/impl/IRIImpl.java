@@ -93,6 +93,7 @@ public class IRIImpl extends PropertyImpl implements IRI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getIri() {
 		return iri;
 	}
@@ -102,6 +103,7 @@ public class IRIImpl extends PropertyImpl implements IRI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIri(String newIri) {
 		String oldIri = iri;
 		iri = newIri;
@@ -114,6 +116,7 @@ public class IRIImpl extends PropertyImpl implements IRI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getIriVersion() {
 		return iriVersion;
 	}
@@ -123,6 +126,7 @@ public class IRIImpl extends PropertyImpl implements IRI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIriVersion(String newIriVersion) {
 		String oldIriVersion = iriVersion;
 		iriVersion = newIriVersion;

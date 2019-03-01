@@ -135,6 +135,7 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public long getSize() {
 		return size;
 	}
@@ -144,6 +145,7 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSize(long newSize) {
 		long oldSize = size;
 		size = newSize;
@@ -156,6 +158,7 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isIsNull() {
 		return isNull;
 	}
@@ -165,6 +168,7 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsNull(boolean newIsNull) {
 		boolean oldIsNull = isNull;
 		isNull = newIsNull;
@@ -178,6 +182,7 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isIsPersistent() {
 		return isPersistent;
 	}
@@ -187,6 +192,7 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsPersistent(boolean newIsPersistent) {
 		boolean oldIsPersistent = isPersistent;
 		isPersistent = newIsPersistent;
@@ -200,6 +206,7 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getOwlEquivalentProperty() {
 		return owlEquivalentProperty;
 	}
@@ -209,6 +216,7 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwlEquivalentProperty(String newOwlEquivalentProperty) {
 		String oldOwlEquivalentProperty = owlEquivalentProperty;
 		owlEquivalentProperty = newOwlEquivalentProperty;

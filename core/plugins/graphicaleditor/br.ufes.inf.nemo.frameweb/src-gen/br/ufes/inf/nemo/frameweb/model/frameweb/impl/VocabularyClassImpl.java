@@ -72,6 +72,7 @@ public class VocabularyClassImpl extends ClassImpl implements VocabularyClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPrefix() {
 		return prefix;
 	}
@@ -81,6 +82,7 @@ public class VocabularyClassImpl extends ClassImpl implements VocabularyClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPrefix(String newPrefix) {
 		String oldPrefix = prefix;
 		prefix = newPrefix;
