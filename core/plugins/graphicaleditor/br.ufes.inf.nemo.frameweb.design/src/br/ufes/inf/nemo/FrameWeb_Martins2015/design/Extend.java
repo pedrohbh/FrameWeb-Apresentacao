@@ -18,6 +18,7 @@ import javax.lang.model.type.PrimitiveType;
 
 import br.ufes.inf.nemo.FrameWeb_Martins2015.*;
 
+@SuppressWarnings("all")
 public class Extend {
 
 	public Extend() {
