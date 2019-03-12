@@ -17,6 +17,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkProfile;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
+import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
@@ -103,16 +104,6 @@ public class TemplateEngine {
 					.map(DomainMethod.class::cast)
 					.collect(Collectors.toList()));
 		
-		/* TEST FIELD */
-		domainClass.getAssociations().stream()
-				.map(DomainAssociation.class::cast)
-				.forEach(association -> {
-						if (association.getSourceMember().getClass_() == null) {
-							System.out.println("Class::null");
-						}
-				});
-		/* END OF TEST FIELD */
-		
 //		Consultar o orientador para melhor entendimento e aplicacao das generalizacoes
 		try {
 			List<Generalization> generalizations = domainClass.getGeneralizations();
@@ -155,12 +146,15 @@ public class TemplateEngine {
 			.addParameter("package", frontControllerClass.getPackage())
 			.addParameter("class", frontControllerClass)
 			.addParameter("attributes", frontControllerClass.getAttributes())
-			.addParameter("associations", frontControllerClass.getAssociations())
+			.addParameter("associations", frontControllerClass.getAssociations()
+					.stream()
+					.map(NavigationAssociation.class::cast)
+					.collect(Collectors.toList()))
 			.addParameter("methods", frontControllerClass.getOperations()
-				.stream()
-				.filter(FrontControllerMethod.class::isInstance)
-				.map(FrontControllerMethod.class::cast)
-				.collect(Collectors.toList()));
+					.stream()
+					.filter(FrontControllerMethod.class::isInstance)
+					.map(FrontControllerMethod.class::cast)
+					.collect(Collectors.toList()));
 		
 //		Consultar o orientador para melhor entendimento e aplicacao das generalizacoes
 		try {
