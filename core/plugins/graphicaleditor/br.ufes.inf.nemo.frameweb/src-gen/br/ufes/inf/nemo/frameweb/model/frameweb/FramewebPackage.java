@@ -6,6 +6,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -8547,13 +8548,31 @@ public interface FramewebPackage extends EPackage {
 	int DOMAIN_ASSOCIATION___GET_END_TYPES = UMLPackage.ASSOCIATION___GET_END_TYPES;
 
 	/**
+	 * The operation id for the '<em>Get Source Member</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_ASSOCIATION___GET_SOURCE_MEMBER = UMLPackage.ASSOCIATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Target Member</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_ASSOCIATION___GET_TARGET_MEMBER = UMLPackage.ASSOCIATION_OPERATION_COUNT + 1;
+
+	/**
 	 * The number of operations of the '<em>Domain Association</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_ASSOCIATION_OPERATION_COUNT = UMLPackage.ASSOCIATION_OPERATION_COUNT + 0;
+	int DOMAIN_ASSOCIATION_OPERATION_COUNT = UMLPackage.ASSOCIATION_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.AttributeImpl <em>Attribute</em>}' class.
@@ -124959,6 +124978,26 @@ public interface FramewebPackage extends EPackage {
 	EAttribute getDomainAssociation_Order();
 
 	/**
+	 * Returns the meta object for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DomainAssociation#getSourceMember() <em>Get Source Member</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Source Member</em>' operation.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DomainAssociation#getSourceMember()
+	 * @generated
+	 */
+	EOperation getDomainAssociation__GetSourceMember();
+
+	/**
+	 * Returns the meta object for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DomainAssociation#getTargetMember() <em>Get Target Member</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Target Member</em>' operation.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DomainAssociation#getTargetMember()
+	 * @generated
+	 */
+	EOperation getDomainAssociation__GetTargetMember();
+
+	/**
 	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.Attribute <em>Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -126950,6 +126989,22 @@ public interface FramewebPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DOMAIN_ASSOCIATION__ORDER = eINSTANCE.getDomainAssociation_Order();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Source Member</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation DOMAIN_ASSOCIATION___GET_SOURCE_MEMBER = eINSTANCE.getDomainAssociation__GetSourceMember();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Target Member</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation DOMAIN_ASSOCIATION___GET_TARGET_MEMBER = eINSTANCE.getDomainAssociation__GetTargetMember();
 
 		/**
 		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.AttributeImpl <em>Attribute</em>}' class.

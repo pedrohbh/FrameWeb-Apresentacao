@@ -30,6 +30,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="ApplicationModel" eSuperTypes="#//FramewebModel"/>
   <eClassifiers xsi:type="ecore:EClass" name="PersistenceModel" eSuperTypes="#//FramewebModel"/>
   <eClassifiers xsi:type="ecore:EClass" name="DomainAssociation" eSuperTypes="../../org.eclipse.uml2.uml/model/UML.ecore#//Association">
+    <eOperations name="getSourceMember" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    <eOperations name="getTargetMember" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="collection" eType="#//Collection"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cascade" eType="#//Cascade"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fetch" eType="#//Fetch"/>

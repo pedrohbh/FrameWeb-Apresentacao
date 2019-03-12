@@ -5,11 +5,12 @@ import java.util.stream.Collectors;
 
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.Enumeration;
+import org.eclipse.uml2.uml.EnumerationLiteral;
 import org.eclipse.uml2.uml.Generalization;
 import org.eclipse.uml2.uml.GeneralizationSet;
-//import org.eclipse.uml2.uml.Class;
 
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOClass;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkProfile;
@@ -92,12 +93,25 @@ public class TemplateEngine {
 			.addParameter("package", domainClass.getPackage())
 			.addParameter("class", domainClass)
 			.addParameter("attributes", domainClass.getAttributes())
-			.addParameter("associations", domainClass.getAssociations())
+			.addParameter("associations", domainClass.getAssociations()
+					.stream()
+					.map(DomainAssociation.class::cast)
+					.collect(Collectors.toList()))
 			.addParameter("methods", domainClass.getOperations()
 					.stream()
 					.filter(DomainMethod.class::isInstance)
 					.map(DomainMethod.class::cast)
 					.collect(Collectors.toList()));
+		
+		/* TEST FIELD */
+		domainClass.getAssociations().stream()
+				.map(DomainAssociation.class::cast)
+				.forEach(association -> {
+						if (association.getSourceMember().getClass_() == null) {
+							System.out.println("Class::null");
+						}
+				});
+		/* END OF TEST FIELD */
 		
 //		Consultar o orientador para melhor entendimento e aplicacao das generalizacoes
 		try {
@@ -122,7 +136,10 @@ public class TemplateEngine {
 		templateEngineContext
 			.addParameter("package", enumerationClass.getPackage())
 			.addParameter("class", enumerationClass)
-			.addParameter("literals", enumerationClass.getOwnedLiterals());
+			.addParameter("literals", enumerationClass.getOwnedLiterals()
+					.stream()
+					.map(EnumerationLiteral::getName)
+					.collect(Collectors.toList()));
 
 		return EngineUtils.sanitize(templateEngineContext.getCode());
 	}
@@ -133,7 +150,7 @@ public class TemplateEngine {
 		String template = EngineUtils.decodeUrl(frontControllerTemplate.getClassTemplate());
 		
 		TemplateEngineContext templateEngineContext = new TemplateEngineContext(template);
-		
+
 		templateEngineContext
 			.addParameter("package", frontControllerClass.getPackage())
 			.addParameter("class", frontControllerClass)

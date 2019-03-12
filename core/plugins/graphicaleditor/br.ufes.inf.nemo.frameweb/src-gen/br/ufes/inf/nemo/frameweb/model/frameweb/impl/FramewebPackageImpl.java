@@ -121,6 +121,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
@@ -1180,6 +1181,26 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	@Override
 	public EAttribute getDomainAssociation_Order() {
 		return (EAttribute) domainAssociationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getDomainAssociation__GetSourceMember() {
+		return domainAssociationEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getDomainAssociation__GetTargetMember() {
+		return domainAssociationEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -2986,6 +3007,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEAttribute(domainAssociationEClass, DOMAIN_ASSOCIATION__CASCADE);
 		createEAttribute(domainAssociationEClass, DOMAIN_ASSOCIATION__FETCH);
 		createEAttribute(domainAssociationEClass, DOMAIN_ASSOCIATION__ORDER);
+		createEOperation(domainAssociationEClass, DOMAIN_ASSOCIATION___GET_SOURCE_MEMBER);
+		createEOperation(domainAssociationEClass, DOMAIN_ASSOCIATION___GET_TARGET_MEMBER);
 
 		attributeEClass = createEClass(ATTRIBUTE);
 		createEAttribute(attributeEClass, ATTRIBUTE__SIZE);
@@ -3452,6 +3475,12 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDomainAssociation_Order(), this.getOrder(), "order", null, 0, 1, DomainAssociation.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getDomainAssociation__GetSourceMember(), theUMLPackage.getProperty(), "getSourceMember", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getDomainAssociation__GetTargetMember(), theUMLPackage.getProperty(), "getTargetMember", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
 
 		initEClass(attributeEClass, Attribute.class, "Attribute", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

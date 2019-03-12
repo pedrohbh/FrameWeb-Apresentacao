@@ -95,6 +95,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DomainAssociation/cascade"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DomainAssociation/fetch"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DomainAssociation/order"/>
+      <genOperations ecoreOperation="frameweb.ecore#//DomainAssociation/getSourceMember"/>
+      <genOperations ecoreOperation="frameweb.ecore#//DomainAssociation/getTargetMember"/>
     </genClasses>
     <genClasses image="false" ecoreClass="frameweb.ecore#//Attribute">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//Attribute/size"/>

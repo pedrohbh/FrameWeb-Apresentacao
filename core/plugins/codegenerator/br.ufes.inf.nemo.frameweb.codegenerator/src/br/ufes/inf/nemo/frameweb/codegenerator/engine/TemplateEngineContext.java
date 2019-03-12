@@ -31,7 +31,7 @@ public class TemplateEngineContext {
 
 		velocityTemplate.setRuntimeServices(runtimeServices);
 		velocityTemplate.initDocument();
-		
+
 		this.velocityContext = new VelocityContext();
 		velocityContext.put("STRING", new StringUtils());
 		velocityContext.put("NULL", new NullUtils());

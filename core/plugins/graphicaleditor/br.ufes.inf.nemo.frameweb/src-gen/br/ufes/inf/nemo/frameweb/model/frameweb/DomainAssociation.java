@@ -3,6 +3,7 @@
 package br.ufes.inf.nemo.frameweb.model.frameweb;
 
 import org.eclipse.uml2.uml.Association;
+import org.eclipse.uml2.uml.Property;
 
 /**
  * <!-- begin-user-doc -->
@@ -139,5 +140,21 @@ public interface DomainAssociation extends Association {
 	 * @generated
 	 */
 	void setOrder(Order value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	Property getSourceMember();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	Property getTargetMember();
 
 } // DomainAssociation

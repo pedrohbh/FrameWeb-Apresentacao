@@ -1,3 +1,0 @@
-> Acréscimo de um atributo referente ao template de uma classe de enumeração em ORMTemplate
-> Ideia de remoção de todos os templates referentes às anotações Java
-> Ideia de acréscimos de métodos e 'alias' para facilitar a vida do desenvolvedor de templates

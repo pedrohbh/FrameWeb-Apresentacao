@@ -1,7 +1,5 @@
 package ${package.name};
 
 public enum ${class.name} {
-#foreach(${literal} in ${literals})
-	${literal.name}#if(${foreach.hasNext}), #end
-#end;
+	${STRING.join($literals, ", ")};
 }
