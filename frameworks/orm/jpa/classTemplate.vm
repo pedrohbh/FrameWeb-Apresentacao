@@ -1,7 +1,7 @@
 package ${package.name};
 
 #if(!${class.isAbstract()})@Entity${NEWLINE}#end
-public#* *##if(${class.isAbstract()}) abstract#end class ${class.name} #if(${NULL.isNotNull($generalization)})extends ${generalization.name} #end{
+public#* *##if(${class.isAbstract()}) abstract#end class ${class.name} #if(!${generalizations.isEmpty()})extends ${generalizations.get(0).name} #end{
 
 #foreach(${attribute} in ${attributes})
 #*  ID  *##if(${attribute.isID()})	@Id${NEWLINE}	@GeneratedValue${NEWLINE}#end

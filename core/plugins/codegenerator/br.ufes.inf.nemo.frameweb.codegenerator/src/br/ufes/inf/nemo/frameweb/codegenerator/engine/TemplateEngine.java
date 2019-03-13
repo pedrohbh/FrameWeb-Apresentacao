@@ -1,5 +1,6 @@
 package br.ufes.inf.nemo.frameweb.codegenerator.engine;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -104,16 +105,28 @@ public class TemplateEngine {
 					.map(DomainMethod.class::cast)
 					.collect(Collectors.toList()));
 		
-//		Consultar o orientador para melhor entendimento e aplicacao das generalizacoes
-		try {
-			List<Generalization> generalizations = domainClass.getGeneralizations();
-			List<GeneralizationSet> generalizationSets = generalizations.get(0).getGeneralizationSets();
-			GeneralizationSet generalizationSet = generalizationSets.get(0);
-
-			templateEngineContext.addParameter("generalization", generalizationSet);
-
-		} catch (NullPointerException | IndexOutOfBoundsException e) {
-			templateEngineContext.addParameter("generalization", null);
+		/*TEST FIELD*/
+		domainClass.getAssociations()
+			.stream()
+			.map(DomainAssociation.class::cast)
+			.forEach(association -> {
+				System.out.println(association.getRelatedElements());
+			});
+		
+		List<Generalization> generalizations = domainClass.getGeneralizations();
+		/*END OF TEST FIELD*/
+		
+		if (!generalizations.isEmpty()) {
+			List<GeneralizationSet> generalizationSets = new ArrayList<GeneralizationSet>();
+			
+			generalizations.forEach(generalization -> {
+				generalizationSets.addAll(generalization.getGeneralizationSets());
+			});
+			
+			templateEngineContext.addParameter("generalizations", generalizationSets);
+			
+		} else {
+			templateEngineContext.addParameter("generalizations", new ArrayList<>());
 		}
 
 		return EngineUtils.sanitize(templateEngineContext.getCode());
@@ -156,16 +169,19 @@ public class TemplateEngine {
 					.map(FrontControllerMethod.class::cast)
 					.collect(Collectors.toList()));
 		
-//		Consultar o orientador para melhor entendimento e aplicacao das generalizacoes
-		try {
-			List<Generalization> generalizations = frontControllerClass.getGeneralizations();
-			List<GeneralizationSet> generalizationSets = generalizations.get(0).getGeneralizationSets();
-			GeneralizationSet generalizationSet = generalizationSets.get(0);
-
-			templateEngineContext.addParameter("generalization", generalizationSet);
-
-		} catch (NullPointerException | IndexOutOfBoundsException e) {
-			templateEngineContext.addParameter("generalization", null);
+		List<Generalization> generalizations = frontControllerClass.getGeneralizations();
+		
+		if (!generalizations.isEmpty()) {
+			List<GeneralizationSet> generalizationSets = new ArrayList<GeneralizationSet>();
+			
+			generalizations.forEach(generalization -> {
+				generalizationSets.addAll(generalization.getGeneralizationSets());
+			});
+			
+			templateEngineContext.addParameter("generalizations", generalizationSets);
+			
+		} else {
+			templateEngineContext.addParameter("generalizations", new ArrayList<>());
 		}
 		
 		return EngineUtils.sanitize(templateEngineContext.getCode());
