@@ -49,14 +49,14 @@ public class EntityModelCodeGenerator {
 					.stream()
 					.filter(DomainClass.class::isInstance)
 					.map(DomainClass.class::cast)
-					.map(domainClass -> new ModelClassCodeGenerator(domainClass, ormTemplate))
+					.map(domainClass -> new ClassCodeGenerator(domainClass, ormTemplate))
 					.forEach(it -> it.generate(package_));
 			
 			domainPackage.getOwnedTypes()
 					.stream()
 					.filter(Enumeration.class::isInstance)
 					.map(Enumeration.class::cast)
-					.map(enumeration -> new ModelClassCodeGenerator(enumeration, ormTemplate))
+					.map(enumeration -> new ClassCodeGenerator(enumeration, ormTemplate))
 					.forEach(it -> it.generate(package_));
 		});
 	}

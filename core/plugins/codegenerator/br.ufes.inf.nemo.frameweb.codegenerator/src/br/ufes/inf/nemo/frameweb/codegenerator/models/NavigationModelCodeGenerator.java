@@ -59,7 +59,7 @@ public class NavigationModelCodeGenerator {
 					.stream()
 					.filter(FrontControllerClass.class::isInstance)
 					.map(FrontControllerClass.class::cast)
-					.map(frontControllerClass -> new ModelClassCodeGenerator(
+					.map(frontControllerClass -> new ClassCodeGenerator(
 							frontControllerClass,
 							frontControllerTemplate))
 					.forEach(it -> it.generate(package_));
@@ -77,7 +77,7 @@ public class NavigationModelCodeGenerator {
 					.stream()
 					.filter(Page.class::isInstance)
 					.map(Page.class::cast)
-					.map(page -> new ModelClassCodeGenerator(
+					.map(page -> new ClassCodeGenerator(
 							page,
 							frontControllerTemplate))
 					.forEach(it -> it.generate(viewFolder));

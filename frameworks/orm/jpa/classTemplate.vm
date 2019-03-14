@@ -1,17 +1,21 @@
-package ${package.name};
+package $package.name;
 
-#if(!${class.isAbstract()})@Entity${NEWLINE}#end
-public#* *##if(${class.isAbstract()}) abstract#end class ${class.name} #if(!${generalizations.isEmpty()})extends ${generalizations.get(0).name} #end{
+#if($class.isAbstract())
+@MappedSuperclass${NEWLINE}
+#else
+@Entity${NEWLINE}
+#end
+public#* *##if($class.isAbstract()) abstract#end class ${class.name} #if(!$generalizations.isEmpty())extends ${generalizations.get(0).name} #end{
 
-#foreach(${attribute} in ${attributes})
-#*  ID  *##if(${attribute.isID()})	@Id${NEWLINE}	@GeneratedValue${NEWLINE}#end
-#* SIZE *##if(${attribute.size} > 0)	@Column(length=${attribute.size})${NEWLINE}#end
+#foreach($attribute in $attributes)
+#*  ID  *##if($attribute.isID())${TAB}@Id${NEWLINE}${TAB}@GeneratedValue${NEWLINE}#end
+#* SIZE *##if($attribute.size > 0)${TAB}@Column(length=${attribute.size})${NEWLINE}#end
 	${attribute.visibility.name} ${attribute.type.name} ${attribute.name};
 #end
 ##
-#foreach(${association} in ${associations})
-#* *##foreach(${member} in ${association.memberEnds})
-#*      *##if(${member.name} == "Target" && ${member.type.name} != ${class.name})
+#foreach($association in $associations)
+#* *##foreach($member in $association.memberEnds)
+#*      *##if($member.name == "Target" && $member.type.name != $class.name)
 #*           *#${TAB}private ${member.type.name} ${STRING.uncapitalize($member.type.name)};${NEWLINE}
 #*      *##end
 #* *##end
@@ -21,7 +25,7 @@ public#* *##if(${class.isAbstract()}) abstract#end class ${class.name} #if(!${ge
 		super();
 	}
 
-#foreach(${attribute} in ${attributes})
+#foreach($attribute in $attributes)
 	public ${attribute.type.name} get${STRING.capitalize($attribute.name)}() {
 		return ${attribute.name};
 	}
@@ -32,12 +36,12 @@ public#* *##if(${class.isAbstract()}) abstract#end class ${class.name} #if(!${ge
 #*	*##if(!$foreach.hasNext)${NEWLINE}#end
 #end
 
-#foreach(${method} in ${methods})
-#* *##if(${method.isAbstract()})
+#foreach($method in $methods)
+#* *##if($method.isAbstract())
 	${method.visibility.name} abstract ${method.methodType.name} ${method.name}();
 #* *##else
 	${method.visibility.name} ${method.methodType.name} ${method.name}() {
-#*      *##if(${method.methodType.name.equals('void')})
+#*      *##if($method.methodType.name.equals("void"))
 		return;
 #*		*##else
 		return null;

@@ -17,9 +17,7 @@
             facet="frameweb.facet"
             version="1.0.0">
          <constraint>
-            <requires
-                  facet="jst.web"
-                  version="2.5,3.0,3.1,4.0">
+            <requires>
             </requires>
          </constraint>
       </project-facet-version>

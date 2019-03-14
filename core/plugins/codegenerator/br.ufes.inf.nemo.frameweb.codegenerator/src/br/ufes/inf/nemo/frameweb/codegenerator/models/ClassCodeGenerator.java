@@ -20,7 +20,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
 
-public class ModelClassCodeGenerator {
+public class ClassCodeGenerator {
 
 	private Element element;
 	private FrameworkProfile frameworkProfile;
@@ -30,7 +30,7 @@ public class ModelClassCodeGenerator {
 	 * @param element
 	 * @param frameworkProfile
 	 */
-	public ModelClassCodeGenerator(Element element, FrameworkProfile frameworkProfile) {
+	public ClassCodeGenerator(Element element, FrameworkProfile frameworkProfile) {
 		this.element = element;
 		this.frameworkProfile = frameworkProfile;
 	}
