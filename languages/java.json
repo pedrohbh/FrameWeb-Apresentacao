@@ -7,7 +7,7 @@
       "byte", "short", "int", "long", "float", "double", "boolean", "char", "Object", "String", "void"
     ],
     "classes": [
-      "Calendar", "List", "Set", "Date"
+      "Calendar", "List", "Set", "Date", "DateTime", "ArrayList", "LinkedList", "Map", "HashMap"
     ]
   }
 }

@@ -178,6 +178,7 @@ public class TemplateEngine {
 		return EngineUtils.sanitize(templateEngineContext.getCode());
 	}
 	
+//	TODO implementar um renderizador de paginas
 	public static String renderPage(Page page, FrontControllerTemplate frontControllerTemplate) {
 		return EngineUtils.decodeUrl(frontControllerTemplate.getPageTemplate());
 	}

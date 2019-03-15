@@ -25,7 +25,7 @@ public class Extend {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	public void getSemanticElements(EObject obj) {
 //		TreeIterator<EObject> eAllContents = obj.eAllContents();
 //
@@ -170,40 +170,38 @@ public class Extend {
 		}
 		return lower_value + ".." + upper_value;
 	}
-	
-	public EObject[] getMembers(EObject o){
-		
+
+	public EObject[] getMembers(EObject o) {
+
 		EStructuralFeature memberendfeature = o.eClass().getEStructuralFeature("memberEnd");
-		EStructuralFeature ownedrulefeature =  o.eClass().getEStructuralFeature("ownedRule");
-		
+		EStructuralFeature ownedrulefeature = o.eClass().getEStructuralFeature("ownedRule");
+
 		List<EObject> members = (List<EObject>) o.eGet(memberendfeature);
 		List<EObject> rules = (List<EObject>) o.eGet(ownedrulefeature);
-		
-		EObject[] result = {o, members.get(0), members.get(1), rules.get(0), rules.get(1), rules.get(2)};
-		
+
+		EObject[] result = { o, members.get(0), members.get(1), rules.get(0), rules.get(1), rules.get(2) };
+
 		return result;
 	}
 
 	public String printVocabularyConstraint(EObject o) {
-		
+
 		String result = "";
-				
-				try{
-				EStructuralFeature subPropertyOf = o.eClass().getEStructuralFeature("subPropertyOf");
-				String subPropertyOf_value = o.eGet(subPropertyOf).toString();
-		
-				if (!subPropertyOf_value.isEmpty()) {
-					result = "{rdf:subPropertyOf=" + subPropertyOf_value + "}";
-				}
-				}catch (Exception e) {
-					result = "";
-				}
-		
+
+		try {
+			EStructuralFeature subPropertyOf = o.eClass().getEStructuralFeature("subPropertyOf");
+			String subPropertyOf_value = o.eGet(subPropertyOf).toString();
+
+			if (!subPropertyOf_value.isEmpty()) {
+				result = "{rdf:subPropertyOf=" + subPropertyOf_value + "}";
+			}
+		} catch (Exception e) {
+			result = "";
+		}
+
 		return result;
 	}
-	
-	
-	
+
 	public String printConstraint(EObject o) {
 
 		ArrayList<String> result = new ArrayList<>();
@@ -273,14 +271,14 @@ public class Extend {
 		}
 		return " ? ";
 	}
-	
-	public String printPrefix(EObject o){
-		
+
+	public String printPrefix(EObject o) {
+
 		EStructuralFeature prefix_feature = o.eClass().getEAllAttributes().get(7);
 		String prefix = (o.eGet(prefix_feature).toString());
-		
+
 		return prefix + "::";
-		
+
 	}
 
 	public String printProperties(EObject o) {

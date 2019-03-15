@@ -1,5 +1,5 @@
 package ${package.name};
 
 public enum ${class.name} {
-	${STRING.join($literals, ", ")};
+	${STRING.join(${literals}, ", ")};
 }
