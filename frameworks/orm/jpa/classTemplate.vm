@@ -1,53 +1,52 @@
-package $package.name;
+package $package.getName();
 
 #if($class.isAbstract())
-@MappedSuperclass${NEWLINE}
+@MappedSuperclass
 #else
-@Entity${NEWLINE}
+@Entity
 #end
-public#* *##if($class.isAbstract()) abstract#end class ${class.name} #if(!$generalizations.isEmpty())extends ${generalizations.get(0).name} #end{
+public#if($class.isAbstract()) abstract#end class $class.getName() #if(!$generalizations.isEmpty())extends $generalizations.get(0).name #end{
 
 #foreach($attribute in $attributes)
-#*  ID  *##if($attribute.isID())${TAB}@Id${NEWLINE}${TAB}@GeneratedValue${NEWLINE}#end
-#* SIZE *##if($attribute.size > 0)${TAB}@Column(length=${attribute.size})${NEWLINE}#end
-	${attribute.visibility.name} ${attribute.type.name} ${attribute.name};
+#*    *##if($attribute.isID())${TAB}@Id${NEWLINE}${TAB}@GeneratedValue${NEWLINE}#end
+#*    *##if($attribute.size > 0)${TAB}@Column(length=${attribute.size})${NEWLINE}#end
+	$attribute.getVisibility().getName() $attribute.getType().getName() $attribute.getName();
 #end
 ##
 #foreach($association in $associations)
-#* *##foreach($member in $association.memberEnds)
-#*      *##if($member.name == "Target" && $member.type.name != $class.name)
-#*           *#${TAB}private ${member.type.name} ${STRING.uncapitalize($member.type.name)};${NEWLINE}
-#*      *##end
-#* *##end
+#*    *##foreach($member in $association.getMemberEnds())
+#*            *##if($member.getName() == "Target" && $member.getType().getName() != $class.getName())
+	private $member.getType().getName() ${STRING.uncapitalize($member.getType().getName())};${NEWLINE}
+#*            *##end
+#*    *##end
 #end
 
-	public ${class.name}() {
+	public $class.getName()() {
 		super();
 	}
 
 #foreach($attribute in $attributes)
-	public ${attribute.type.name} get${STRING.capitalize($attribute.name)}() {
-		return ${attribute.name};
+	public $attribute.getType().getName() get${STRING.capitalize($attribute.name)}() {
+		return $attribute.getName();
 	}
 
-	public void set${STRING.capitalize($attribute.name)}(${attribute.type.name} ${attribute.name}) {
-		this.${attribute.name} = ${attribute.name};
+	public void set${STRING.capitalize($attribute.getName())}($attribute.getType().getName() $attribute.getName()) {
+		this.$attribute.getName() = $attribute.getName();
 	}
-#*	*##if(!$foreach.hasNext)${NEWLINE}#end
+#*    *##if(!$foreach.hasNext)${NEWLINE}#end
 #end
 
 #foreach($method in $methods)
-#* *##if($method.isAbstract())
-	${method.visibility.name} abstract ${method.methodType.name} ${method.name}();
-#* *##else
-	${method.visibility.name} ${method.methodType.name} ${method.name}() {
-#*      *##if($method.methodType.name.equals("void"))
+#*    *##if($method.isAbstract())
+	$method.getVisibility().getName() abstract $method.getMethodType().getName()} $method.getName();
+#*    *##else
+	$method.getVisibility().getName() $method.getMethodType().getName() $method.getName()() {
+#*           *##if($method.getMethodType().getName().equals("void"))
 		return;
-#*		*##else
+#*		     *##else
 		return null;
-#*		*##end
+#*		     *##end
 	}
-#* *##end
-
+#*    *##end${NEWLINE}
 #end
 }

@@ -105,16 +105,7 @@ public class TemplateEngine {
 					.map(DomainMethod.class::cast)
 					.collect(Collectors.toList()));
 		
-		/*TEST FIELD*/
-		domainClass.getAssociations()
-			.stream()
-			.map(DomainAssociation.class::cast)
-			.forEach(association -> {
-				System.out.println(association.getRelatedElements());
-			});
-		
 		List<Generalization> generalizations = domainClass.getGeneralizations();
-		/*END OF TEST FIELD*/
 		
 		if (!generalizations.isEmpty()) {
 			List<GeneralizationSet> generalizationSets = new ArrayList<GeneralizationSet>();
