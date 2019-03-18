@@ -28,11 +28,7 @@ public class CodeGenerator implements IExternalJavaAction {
 	public void execute(Collection<? extends EObject> selections, Map<String, Object> parameters) {
 		IProject project = ProjectUtils.getSelectedProject();
 
-//		TODO verificar se os diretorios existem
-//		TODO permitir que o usuario selecione o diretorio de codigo fonte (textualmente ou por interface grafica)
 		IFolder srcFolder = project.getFolder("src");
-		
-//		TODO permitir que o usuario selecione o diretorio da view (textualmente ou por interface grafica)
 		IFolder viewFolder = project.getFolder("WebContent/WEB-INF");
 		
 		ProjectRepresentation representation = new ProjectRepresentation(selections);

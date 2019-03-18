@@ -46,7 +46,6 @@ public class ClassCodeGenerator {
 		String fileName = getFileNameWithExtension(element, frameworkProfile);
 		IFile file = packageFolder.getFile(fileName);
 		
-//		TODO tratar condicao de corrida no if statement
 		try {
 			InputStream inputStream = IOUtils.toInputStream(code, "UTF-8");
 			
@@ -55,9 +54,11 @@ public class ClassCodeGenerator {
 				file.delete(true, null);
 			}
 			
+			Thread.sleep(50);
+			
 			file.create(inputStream, true, null);
 			
-		} catch (CoreException | IOException e) {
+		} catch (CoreException | IOException | InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
