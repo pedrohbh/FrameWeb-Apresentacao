@@ -122,7 +122,7 @@ public class FrameWebRenderer {
 		
 		templateEngineContext.addBasicLibs();
 
-		return EngineUtils.sanitize(templateEngineContext.getCode());
+		return templateEngineContext.getCode();
 	}
 	
 	public static String renderEnumerationClass(Enumeration enumerationClass, ORMTemplate ormTemplate) {
@@ -139,7 +139,7 @@ public class FrameWebRenderer {
 					.collect(Collectors.toList()))
 			.addBasicLibs();
 		
-		return EngineUtils.sanitize(templateEngineContext.getCode());
+		return templateEngineContext.getCode();
 	}
 	
 	public static String renderFrontControllerClass(FrontControllerClass frontControllerClass,
@@ -180,7 +180,7 @@ public class FrameWebRenderer {
 		
 		templateEngineContext.addBasicLibs();
 		
-		return EngineUtils.sanitize(templateEngineContext.getCode());
+		return templateEngineContext.getCode();
 	}
 	
 //	TODO implementar um renderizador de paginas

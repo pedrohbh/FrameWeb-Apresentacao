@@ -1,5 +1,5 @@
-package ${package.name};
+package ${package.Name};
 
-public enum ${class.name} {
+public enum ${class.Name} {
 	${STRING.join($literals, ", ")};
 }
