@@ -21,6 +21,16 @@ public class FrameWebFacetInstallDelegate implements IDelegate {
 		FrameWebFacet frameWebFacet = new FrameWebFacet(project);
 
 		try {
+			/*
+			 * TODO acrescentar um menu de configuracoes, permitindo ao usuario escolher a o diretorio
+			 * de codigo fonte e o diretorio das views. 
+			 */
+			
+			/*
+			 * TODO acrescentar um menu de configuracoes, permitindo ao usuario escolher os frameworks
+			 * que de fator serao utilizados no projeto web criado. [Inspiracao: Spring Boot]
+			 */
+			
 			frameWebFacet.addSiriusModelingNature();
 
 			monitor.worked(1);

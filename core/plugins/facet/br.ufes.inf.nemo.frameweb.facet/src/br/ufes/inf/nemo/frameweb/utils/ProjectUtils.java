@@ -40,7 +40,7 @@ public class ProjectUtils {
 		
 		try {
 			Thread.sleep(1000);
-			
+
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -106,7 +106,7 @@ public class ProjectUtils {
 	}
 	
 	/**
-	 * Cria IFolder's em cascata dentro de um dado IFolder, ou seja, um pacote
+	 * Cria IFolder's em cascata dentro de um dado IFolder
 	 * 
 	 * @param srcFolder
 	 * @param foldersName
