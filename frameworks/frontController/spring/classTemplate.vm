@@ -1,0 +1,27 @@
+package ${package.name};
+
+@Controller
+public class ${class.name} #if(!$generalizations.isEmpty())extends $generalizations.get(0).name #end{
+
+#foreach($attribute in $attributes)
+	${attribute.visibility.name} ${attribute.type.name} ${attribute.name};
+#end
+
+	public ${class.name}(){
+
+	}
+
+#foreach($method in $methods)
+#*    *##if($method.isAbstract())
+	${method.visibility.name} abstract ${method.methodType.name}} ${method.name};
+#*    *##else
+	${method.visibility.name} ${method.methodType.name} ${method.name}() {
+#*           *##if($method.methodType.name.equals("void"))
+		return;
+#*		     *##else
+		return null;
+#*		     *##end
+	}
+#*    *##end${NEWLINE}
+#end
+}

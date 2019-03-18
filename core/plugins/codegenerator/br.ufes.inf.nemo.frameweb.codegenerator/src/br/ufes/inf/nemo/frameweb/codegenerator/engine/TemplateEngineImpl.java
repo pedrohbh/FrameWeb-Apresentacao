@@ -11,12 +11,12 @@ import org.apache.velocity.runtime.RuntimeSingleton;
 import org.apache.velocity.runtime.parser.ParseException;
 import org.apache.velocity.runtime.parser.node.SimpleNode;
 
-public class TemplateEngineContext {
+public class TemplateEngineImpl implements TemplateEngine{
 	
 	private Template velocityTemplate;
 	private VelocityContext velocityContext;
 	
-	public TemplateEngineContext(String template) {
+	public TemplateEngineImpl(String template) {
 		RuntimeServices runtimeServices = RuntimeSingleton.getRuntimeServices();
 		StringReader stringReader = new StringReader(template);
 		velocityTemplate = new Template();
@@ -33,14 +33,9 @@ public class TemplateEngineContext {
 		velocityTemplate.initDocument();
 
 		this.velocityContext = new VelocityContext();
-		velocityContext.put("STRING", new StringUtils());
-		velocityContext.put("NULL", new NullUtils());
-		velocityContext.put("NEWLINE", System.getProperty("line.separator"));
-		velocityContext.put("WHITESPACE", " ");
-		velocityContext.put("TAB", "	");
 	}
 	
-	public TemplateEngineContext addParameter(String key, Object value) {
+	public TemplateEngineImpl addParameter(String key, Object value) {
 		velocityContext.put(key, value);
 		return this;
 	}
@@ -49,6 +44,16 @@ public class TemplateEngineContext {
 		StringWriter stringWriter = new StringWriter();
 		velocityTemplate.merge(velocityContext, stringWriter);
 		return stringWriter.toString();
+	}
+
+	public VelocityContext addBasicLibs() {
+		velocityContext.put("STRING", new StringUtils());
+		velocityContext.put("NULL", new NullUtils());
+		velocityContext.put("NEWLINE", System.getProperty("line.separator"));
+		velocityContext.put("WHITESPACE", " ");
+		velocityContext.put("TAB", "	");
+		
+		return velocityContext;
 	}
 	
 }
