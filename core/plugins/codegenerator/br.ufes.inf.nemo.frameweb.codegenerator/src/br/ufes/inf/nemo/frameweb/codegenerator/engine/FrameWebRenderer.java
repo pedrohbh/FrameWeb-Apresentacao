@@ -89,7 +89,7 @@ public class FrameWebRenderer {
 	public static String renderDomainClass(DomainClass domainClass, ORMTemplate ormTemplate) {
 		String template = EngineUtils.decodeUrl(ormTemplate.getClassTemplate());
 
-		TemplateEngineImpl templateEngineContext = new TemplateEngineImpl(template);
+		TemplateEngine templateEngineContext = new TemplateEngineImpl(template);
 		
 		templateEngineContext
 			.addParameter("package", domainClass.getPackage())

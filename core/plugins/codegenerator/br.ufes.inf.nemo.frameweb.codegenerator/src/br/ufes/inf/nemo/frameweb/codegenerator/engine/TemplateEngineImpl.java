@@ -20,23 +20,24 @@ public class TemplateEngineImpl implements TemplateEngine{
 		RuntimeServices runtimeServices = RuntimeSingleton.getRuntimeServices();
 		StringReader stringReader = new StringReader(template);
 		velocityTemplate = new Template();
-
+		velocityTemplate.setRuntimeServices(runtimeServices);
+		
 		try {
-			SimpleNode simpleNode = runtimeServices.parse(stringReader, "Generated Class");
+			SimpleNode simpleNode = runtimeServices.parse(stringReader, "Generated Code");
 			velocityTemplate.setData(simpleNode);
 
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
 
-		velocityTemplate.setRuntimeServices(runtimeServices);
 		velocityTemplate.initDocument();
 
 		this.velocityContext = new VelocityContext();
 	}
 	
-	public TemplateEngineImpl addParameter(String key, Object value) {
+	public TemplateEngine addParameter(String key, Object value) {
 		velocityContext.put(key, value);
+		
 		return this;
 	}
 	
@@ -46,14 +47,14 @@ public class TemplateEngineImpl implements TemplateEngine{
 		return stringWriter.toString();
 	}
 
-	public VelocityContext addBasicLibs() {
+	public TemplateEngine addBasicLibs() {
 		velocityContext.put("STRING", new StringUtils());
 		velocityContext.put("NULL", new NullUtils());
 		velocityContext.put("NEWLINE", System.getProperty("line.separator"));
 		velocityContext.put("WHITESPACE", " ");
 		velocityContext.put("TAB", "	");
 		
-		return velocityContext;
+		return this;
 	}
 	
 }
