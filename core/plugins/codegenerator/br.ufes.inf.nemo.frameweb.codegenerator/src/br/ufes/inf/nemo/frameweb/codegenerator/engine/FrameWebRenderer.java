@@ -89,7 +89,8 @@ public class FrameWebRenderer {
 	public static String renderDomainClass(DomainClass domainClass, ORMTemplate ormTemplate) {
 		String template = EngineUtils.decodeUrl(ormTemplate.getClassTemplate());
 
-		TemplateEngine templateEngineContext = new TemplateEngineImpl(template);
+		TemplateEngine templateEngineContext = new TemplateEngineImpl();
+		templateEngineContext.setTemplate(template);
 		
 		templateEngineContext
 			.addParameter("package", domainClass.getPackage())
@@ -128,7 +129,8 @@ public class FrameWebRenderer {
 	public static String renderEnumerationClass(Enumeration enumerationClass, ORMTemplate ormTemplate) {
 		String template = EngineUtils.decodeUrl(ormTemplate.getEnumerationClassTemplate());
 
-		TemplateEngineImpl templateEngineContext = new TemplateEngineImpl(template);
+		TemplateEngine templateEngineContext = new TemplateEngineImpl();
+		templateEngineContext.setTemplate(template);
 
 		templateEngineContext
 			.addParameter("package", enumerationClass.getPackage())
@@ -147,7 +149,8 @@ public class FrameWebRenderer {
 		
 		String template = EngineUtils.decodeUrl(frontControllerTemplate.getClassTemplate());
 		
-		TemplateEngineImpl templateEngineContext = new TemplateEngineImpl(template);
+		TemplateEngine templateEngineContext = new TemplateEngineImpl();
+		templateEngineContext.setTemplate(template);
 
 		templateEngineContext
 			.addParameter("package", frontControllerClass.getPackage())
