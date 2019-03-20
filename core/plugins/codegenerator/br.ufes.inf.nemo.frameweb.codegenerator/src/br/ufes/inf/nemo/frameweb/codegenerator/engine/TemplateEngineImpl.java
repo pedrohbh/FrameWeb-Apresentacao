@@ -12,18 +12,22 @@ public class TemplateEngineImpl implements TemplateEngine{
 	private StringReader stringReaderTemplate;
 	private VelocityContext velocityContext;
 	
+	public TemplateEngineImpl() {
+		this.velocityContext = new VelocityContext();
+	}
+	
 	public void setTemplate(String template) {
 		this.stringReaderTemplate = new StringReader(template);
 	}
 	
-	public TemplateEngine addParameter(String key, Object value) {
+	public TemplateEngine addParameter(String key, Object value) {		
 		velocityContext.put(key, value);
 		return this;
 	}
 	
 	public String getCode() {
 		StringWriter stringWriter = new StringWriter();
-		Velocity.evaluate(velocityContext, stringWriter, Velocity.getLog().toString(), stringReaderTemplate);
+		Velocity.evaluate(velocityContext, stringWriter, ""/*Velocity.getLog().toString()*/, stringReaderTemplate);
 
 		return stringWriter.toString();
 	}
