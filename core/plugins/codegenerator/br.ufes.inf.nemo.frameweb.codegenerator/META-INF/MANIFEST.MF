@@ -16,16 +16,9 @@ Require-Bundle: org.eclipse.sirius,
  org.eclipse.ui.workbench,
  br.ufes.inf.nemo.frameweb.facet,
  org.apache.commons.io,
- org.apache.velocity,
- org.apache.commons.lang,
- org.slf4j.api,
- org.eclipse.jdt.junit,
- org.eclipse.datatools.enablement.hsqldb,
- org.eclipse.m2e.maven.runtime.slf4j.simple
+ org.apache.velocity
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: br.ufes.inf.nemo.frameweb.codegenerator
 Import-Package: br.ufes.inf.nemo.frameweb.codegenerator
-Export-Package: br.ufes.inf.nemo.frameweb.codegenerator,
- br.ufes.inf.nemo.frameweb.codegenerator.engine,
- br.ufes.inf.nemo.frameweb.codegenerator.models
+Export-Package: br.ufes.inf.nemo.frameweb.codegenerator
 Bundle-ClassPath: .
