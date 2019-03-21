@@ -11,7 +11,6 @@
     <packagedElement xsi:type="uml:PrimitiveType" name="char"/>
     <packagedElement xsi:type="uml:PrimitiveType" name="Object"/>
     <packagedElement xsi:type="uml:PrimitiveType" name="String"/>
-    <packagedElement xsi:type="uml:PrimitiveType" name="void" />
     <packagedElement xsi:type="uml:Class" name="Calendar"/>
     <packagedElement xsi:type="uml:Class" name="List"/>
     <packagedElement xsi:type="uml:Class" name="Set"/>
