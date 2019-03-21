@@ -12,7 +12,7 @@ import org.eclipse.uml2.uml.Class;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.Enumeration;
 
-import br.ufes.inf.nemo.frameweb.codegenerator.engine.FrameWebRenderer;
+import br.ufes.inf.nemo.frameweb.codegenerator.engine.ClassRenderer;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkProfile;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
@@ -41,7 +41,8 @@ public class ClassCodeGenerator {
 	 * @param packageFolder
 	 */
 	public void generate(IFolder packageFolder) {
-		String code = FrameWebRenderer.render(element, frameworkProfile);
+		ClassRenderer framewebRenderer = new ClassRenderer(element, frameworkProfile);
+		String code = framewebRenderer.render();
 		
 		String fileName = getFileNameWithExtension(element, frameworkProfile);
 		IFile file = packageFolder.getFile(fileName);

@@ -3,7 +3,6 @@ package br.ufes.inf.nemo.frameweb.codegenerator.engine;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.Enumeration;
 import org.eclipse.uml2.uml.EnumerationLiteral;
@@ -29,9 +28,17 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
  * UGLY CODE BELOW
  * 
  */
-public class FrameWebRenderer {
+public class ClassRenderer {
 	
-	public static String render(Element class_, FrameworkProfile frameworkTemplate) {
+	private Element class_;
+	private FrameworkProfile frameworkTemplate;
+	
+	public ClassRenderer(Element class_, FrameworkProfile frameworkTemplate) {
+		this.class_ = class_;
+		this.frameworkTemplate = frameworkTemplate;
+	}
+	
+	public String render() {
 
 //		Nao havendo template definido, nada deve ser feito (talvez alertar alertar o
 //		usuario com uma mensagem no console seja interessante).
@@ -86,7 +93,7 @@ public class FrameWebRenderer {
 		
 	}
 
-	public static String renderDomainClass(DomainClass domainClass, ORMTemplate ormTemplate) {
+	public String renderDomainClass(DomainClass domainClass, ORMTemplate ormTemplate) {
 		String template = EngineUtils.decodeUrl(ormTemplate.getClassTemplate());
 
 		TemplateEngine templateEngineContext = new TemplateEngineImpl();
@@ -126,7 +133,7 @@ public class FrameWebRenderer {
 		return templateEngineContext.getCode();
 	}
 	
-	public static String renderEnumerationClass(Enumeration enumerationClass, ORMTemplate ormTemplate) {
+	public String renderEnumerationClass(Enumeration enumerationClass, ORMTemplate ormTemplate) {
 		String template = EngineUtils.decodeUrl(ormTemplate.getEnumerationClassTemplate());
 
 		TemplateEngine templateEngineContext = new TemplateEngineImpl();
@@ -144,7 +151,7 @@ public class FrameWebRenderer {
 		return templateEngineContext.getCode();
 	}
 	
-	public static String renderFrontControllerClass(FrontControllerClass frontControllerClass,
+	public String renderFrontControllerClass(FrontControllerClass frontControllerClass,
 			FrontControllerTemplate frontControllerTemplate) {
 		
 		String template = EngineUtils.decodeUrl(frontControllerTemplate.getClassTemplate());
@@ -187,7 +194,7 @@ public class FrameWebRenderer {
 	}
 	
 //	TODO implementar um renderizador de paginas
-	public static String renderPage(Page page, FrontControllerTemplate frontControllerTemplate) {
+	public String renderPage(Page page, FrontControllerTemplate frontControllerTemplate) {
 		return EngineUtils.decodeUrl(frontControllerTemplate.getPageTemplate());
 	}
 	

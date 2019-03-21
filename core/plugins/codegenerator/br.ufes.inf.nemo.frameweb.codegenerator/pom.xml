@@ -37,10 +37,8 @@
 			<artifactId>commons-io</artifactId>
 			<version>2.4</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/org.apache.velocity/velocity -->
-		
-		<!-- velocity 2.0 (em teste) -->
 		<dependency>
 			<groupId>org.apache.velocity</groupId>
 			<artifactId>velocity-engine-core</artifactId>
@@ -61,9 +59,19 @@
 			<artifactId>velocity-tools-view-jsp</artifactId>
 			<version>3.0</version>
 		</dependency>
-		
-		<!-- freemarker (em teste) -->
-		
-		<!-- jtwig (em teste) -->
+
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.26</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-core -->
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-core</artifactId>
+			<version>8.0.0</version>
+		</dependency>
 	</dependencies>
 </project>

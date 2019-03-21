@@ -23,6 +23,10 @@ public class ProjectRepresentation {
 	
 	private List<EObject> packages;
 	
+	/**
+	 * 
+	 * @param selections
+	 */
 	public ProjectRepresentation(Collection<? extends EObject> selections) {
 		DSemanticDiagram dSemanticDiagram = selections
 				.stream()
@@ -39,6 +43,10 @@ public class ProjectRepresentation {
 				.collect(Collectors.toList());
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public List<FrameworkProfile> getFrameworkProfiles() {
 		List<FrameworkProfile> frameworkProfile = packages
 				.stream()
@@ -49,6 +57,10 @@ public class ProjectRepresentation {
 		return frameworkProfile;
 	}
 	
+	/**
+	 * 
+	 * @return
+	 */
 	public List<FramewebModel> getFramewebModels() {
 		List<FramewebModel> framewebModel = packages
 				.stream()
@@ -59,6 +71,10 @@ public class ProjectRepresentation {
 		return framewebModel;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public FrontControllerTemplate getFrontControllerTemplate() {
 		List<FrameworkProfile> frameworkProfiles = getFrameworkProfiles();
 		
@@ -77,6 +93,10 @@ public class ProjectRepresentation {
 		}
 	}
 	
+	/**
+	 * 
+	 * @return
+	 */
 	public ORMTemplate getORMTemplate() {
 		List<FrameworkProfile> frameworkProfiles = getFrameworkProfiles();
 	
@@ -95,6 +115,10 @@ public class ProjectRepresentation {
 		}
 	}
 	
+	/**
+	 * 
+	 * @return
+	 */
 	public EntityModel getEntityModel() {
 		List<FramewebModel> framewebModels = getFramewebModels();
 
@@ -121,10 +145,18 @@ public class ProjectRepresentation {
 
 	}
 	
+	/**
+	 * 
+	 * @return
+	 */
 	public boolean hasEntityModel() {
 		return getEntityModel() != null;
 	}
 	
+	/**
+	 * 
+	 * @return
+	 */
 	public NavigationModel getNavigationModel() {
 		List<FramewebModel> framewebModels = getFramewebModels();
 		
@@ -151,6 +183,10 @@ public class ProjectRepresentation {
 		
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public boolean hasNavigationModel() {
 		return getNavigationModel() != null;
 	}
