@@ -27,6 +27,7 @@ public class TemplateEngineImpl implements TemplateEngine{
 	
 	public String getCode() {
 		StringWriter stringWriter = new StringWriter();
+//		TODO resolver o Logger do Velocity
 		Velocity.evaluate(velocityContext, stringWriter, ""/*Velocity.getLog().toString()*/, stringReaderTemplate);
 
 		return stringWriter.toString();

@@ -1,0 +1,61 @@
+package ${package.Name};
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+
+@Entity
+public class ${class.Name} implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
+#foreach($attribute in $attributes)
+#* *##if($attribute.isID())
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+#* *##end
+#* *##if(!$attribute.isNull())
+	@NotNull
+#* *##end
+#* *##if($attribute.Size > 0)
+	@Column(length = ${attribute.Size})
+#* *##end
+	${attribute.Visibility.Name} ${attribute.Type.Name} ${attribute.Name};
+#end
+
+##TODO ASSOCIATIONS
+
+	public ${class.Name}() {
+		super();
+	}
+
+#foreach($attribute in $attributes)
+	public ${attribute.Type.Name} get${STRING.capitalize($attribute.Name)}() {
+		return ${attribute.Name};
+	}
+
+	public void set${STRING.capitalize($attribute.Name)}(${attribute.Type.Name} ${attribute.Name}) {
+		this.${attribute.Name} = ${attribute.Name};
+	}
+#end
+
+#foreach($method in $methods)
+#* *##if($method.isAbstract())
+	${method.Visibility.Name} abstract ${method.MethodType.Name}} ${method.Name};
+#* *##else
+	${method.Visibility.Name} ${method.MethodType.Name} ${method.Name}() {
+#* 	    *##if($method.MethodType.Name.equals("void"))
+		return;
+#*      *##else
+		return null;
+#*      *##end
+	}
+#* *##end
+#end
+
+}
