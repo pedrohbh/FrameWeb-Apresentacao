@@ -3,6 +3,7 @@ package br.ufes.inf.nemo.frameweb.codegenerator.engine;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.Enumeration;
 import org.eclipse.uml2.uml.EnumerationLiteral;
@@ -96,6 +97,7 @@ public class ClassRenderer {
 	public String renderDomainClass(DomainClass domainClass, ORMTemplate ormTemplate) {
 		String template = EngineUtils.decodeUrl(ormTemplate.getClassTemplate());
 
+//		TODO injetar uma implementacao de template por parte do usuario, permitindo que outras engines sejam utilizadas
 		TemplateEngine templateEngineContext = new TemplateEngineImpl();
 		templateEngineContext.setTemplate(template);
 		

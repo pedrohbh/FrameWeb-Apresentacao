@@ -19,7 +19,7 @@ public class ${class.Name} implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 #* *##end
-#* *##if(!$attribute.isNull())
+#* *##if(!$attribute.isIsNull())
 	@NotNull
 #* *##end
 #* *##if($attribute.Size > 0)
@@ -28,7 +28,18 @@ public class ${class.Name} implements Serializable {
 	${attribute.Visibility.Name} ${attribute.Type.Name} ${attribute.Name};
 #end
 
-##TODO ASSOCIATIONS
+#foreach($association in $associations)
+#* *##set($sourceMember = $association.SourceMember)
+#* *##set($targetMember = $association.TargetMember)
+#* *#
+#* *##if($sourceMember.Type.Name == $class.Name && $targetMember.Type.Name == $class.Name)
+	[Referenciando a si proprio]
+#* *##elseif($sourceMember.Type.Name == $class.Name)
+	[Referenciando outra classe]
+#* *##else
+	[Sendo referenciado]
+#* *##end
+#end
 
 	public ${class.Name}() {
 		super();
@@ -49,7 +60,7 @@ public class ${class.Name} implements Serializable {
 	${method.Visibility.Name} abstract ${method.MethodType.Name}} ${method.Name};
 #* *##else
 	${method.Visibility.Name} ${method.MethodType.Name} ${method.Name}() {
-#* 	    *##if($method.MethodType.Name.equals("void"))
+#* 	    *##if($method.MethodType.Name.equals('void'))
 		return;
 #*      *##else
 		return null;
@@ -57,5 +68,4 @@ public class ${class.Name} implements Serializable {
 	}
 #* *##end
 #end
-
 }
