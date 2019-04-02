@@ -13,6 +13,7 @@ import org.eclipse.sirius.viewpoint.DRepresentationElement;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ControllerPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.EntityModel;
+import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebConfiguration;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkProfile;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
@@ -189,6 +190,14 @@ public class ProjectRepresentation {
 	 */
 	public boolean hasNavigationModel() {
 		return getNavigationModel() != null;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public FramewebConfiguration getFramewebConfiguration() {
+		return null;
 	}
 
 }

@@ -4,12 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IFolder;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.Enumeration;
 import org.eclipse.uml2.uml.EnumerationLiteral;
 import org.eclipse.uml2.uml.Generalization;
 import org.eclipse.uml2.uml.GeneralizationSet;
 
+import br.ufes.inf.nemo.frameweb.codegenerator.utils.IFileUtils;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
@@ -33,10 +36,12 @@ public class ClassRenderer {
 	
 	private Element class_;
 	private FrameworkProfile frameworkTemplate;
+	private IFolder templateFolder;
 	
-	public ClassRenderer(Element class_, FrameworkProfile frameworkTemplate) {
+	public ClassRenderer(Element class_, FrameworkProfile frameworkTemplate, IFolder templateFolder) {
 		this.class_ = class_;
 		this.frameworkTemplate = frameworkTemplate;
+		this.templateFolder = templateFolder;
 	}
 	
 	public String render() {
@@ -49,36 +54,16 @@ public class ClassRenderer {
 		}
 		
 		if (class_ instanceof DomainClass) {
-			String generatedCode = renderDomainClass(
-					(DomainClass) class_,
-					(ORMTemplate) frameworkTemplate
-			);
-			
-			return generatedCode;
+			return renderDomainClass();
 		
 		} else if (class_ instanceof Enumeration) {
-			String generatedCode = renderEnumerationClass(
-					(Enumeration) class_,
-					(ORMTemplate) frameworkTemplate
-			);
-			
-			return generatedCode;
+			return renderEnumerationClass();
 			
 		} else if (class_ instanceof FrontControllerClass) {
-			String generatedCode = renderFrontControllerClass(
-					(FrontControllerClass) class_,
-					(FrontControllerTemplate) frameworkTemplate
-			);
+			return renderFrontControllerClass();
 
-			return generatedCode;
-		
 		} else if (class_ instanceof Page) {
-			String generatedCode = renderPage(
-					(Page) class_,
-					(FrontControllerTemplate) frameworkTemplate
-			);
-			
-			return generatedCode;
+			return renderPage();
 			
 		} else if (class_ instanceof DAOClass) {
 //			code
@@ -94,13 +79,17 @@ public class ClassRenderer {
 		
 	}
 
-	public String renderDomainClass(DomainClass domainClass, ORMTemplate ormTemplate) {
-		String template = EngineUtils.decodeUrl(ormTemplate.getClassTemplate());
+	public String renderDomainClass() {
+		DomainClass domainClass = (DomainClass) class_;
+		ORMTemplate ormTemplate = (ORMTemplate) frameworkTemplate;
+
+		IFile classTemplateFile = templateFolder.getFile(ormTemplate.getClassTemplate());
+		String classTemplate = IFileUtils.getText(classTemplateFile);
 
 //		TODO injetar uma implementacao de template por parte do usuario, permitindo que outras engines sejam utilizadas
-		TemplateEngine templateEngineContext = new TemplateEngineImpl();
-		templateEngineContext.setTemplate(template);
-		
+		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
+		templateEngineContext.setTemplate(classTemplate);
+
 		templateEngineContext
 			.addParameter("package", domainClass.getPackage())
 			.addParameter("class", domainClass)
@@ -130,36 +119,41 @@ public class ClassRenderer {
 			templateEngineContext.addParameter("generalizations", new ArrayList<>());
 		}
 		
-		templateEngineContext.addBasicLibs();
-
 		return templateEngineContext.getCode();
 	}
 	
-	public String renderEnumerationClass(Enumeration enumerationClass, ORMTemplate ormTemplate) {
-		String template = EngineUtils.decodeUrl(ormTemplate.getEnumerationClassTemplate());
+	public String renderEnumerationClass() {
+		Enumeration enumerationClass = (Enumeration) class_;
+		ORMTemplate ormTemplate = (ORMTemplate) frameworkTemplate;
+				
+		IFile enumerationClassTemplateFile = templateFolder.getFile(ormTemplate.getEnumerationClassTemplate());
+		String enumerationClassTemplate = IFileUtils.getText(enumerationClassTemplateFile);
 
-		TemplateEngine templateEngineContext = new TemplateEngineImpl();
-		templateEngineContext.setTemplate(template);
-
+//		TODO injetar uma implementacao de template por parte do usuario, permitindo que outras engines sejam utilizadas
+		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
+		templateEngineContext.setTemplate(enumerationClassTemplate);
+		
 		templateEngineContext
 			.addParameter("package", enumerationClass.getPackage())
 			.addParameter("class", enumerationClass)
 			.addParameter("literals", enumerationClass.getOwnedLiterals()
 					.stream()
 					.map(EnumerationLiteral::getName)
-					.collect(Collectors.toList()))
-			.addBasicLibs();
+					.collect(Collectors.toList()));
 		
 		return templateEngineContext.getCode();
 	}
 	
-	public String renderFrontControllerClass(FrontControllerClass frontControllerClass,
-			FrontControllerTemplate frontControllerTemplate) {
+	public String renderFrontControllerClass() {
+		FrontControllerClass frontControllerClass = (FrontControllerClass) class_;
+		FrontControllerTemplate frontControllerTemplate = (FrontControllerTemplate) frameworkTemplate;
 		
-		String template = EngineUtils.decodeUrl(frontControllerTemplate.getClassTemplate());
+		IFile frontControllerClassTemplateFile = templateFolder.getFile(frontControllerTemplate.getClassTemplate());
+		String frontControllerClassTemplate = IFileUtils.getText(frontControllerClassTemplateFile);
 		
-		TemplateEngine templateEngineContext = new TemplateEngineImpl();
-		templateEngineContext.setTemplate(template);
+//		TODO injetar uma implementacao de template por parte do usuario, permitindo que outras engines sejam utilizadas
+		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
+		templateEngineContext.setTemplate(frontControllerClassTemplate);
 
 		templateEngineContext
 			.addParameter("package", frontControllerClass.getPackage())
@@ -190,14 +184,19 @@ public class ClassRenderer {
 			templateEngineContext.addParameter("generalizations", new ArrayList<>());
 		}
 		
-		templateEngineContext.addBasicLibs();
-		
 		return templateEngineContext.getCode();
 	}
 	
 //	TODO implementar um renderizador de paginas
-	public String renderPage(Page page, FrontControllerTemplate frontControllerTemplate) {
-		return EngineUtils.decodeUrl(frontControllerTemplate.getPageTemplate());
+	@SuppressWarnings("unused")
+	public String renderPage() {
+		Page page = (Page) class_;
+		FrontControllerTemplate frontControllerTemplate = (FrontControllerTemplate) frameworkTemplate;
+		
+		IFile pageTemplateFile = templateFolder.getFile(frontControllerTemplate.getPageTemplate());
+		String pageTemplate = IFileUtils.getText(pageTemplateFile);
+		
+		return pageTemplate;
 	}
 	
 }

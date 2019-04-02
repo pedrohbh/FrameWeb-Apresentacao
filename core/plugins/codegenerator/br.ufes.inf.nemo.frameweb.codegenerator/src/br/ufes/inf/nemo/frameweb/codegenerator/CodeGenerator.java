@@ -11,7 +11,7 @@ import org.eclipse.sirius.tools.api.ui.IExternalJavaAction;
 
 import br.ufes.inf.nemo.frameweb.codegenerator.models.EntityModelCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.models.NavigationModelCodeGenerator;
-import br.ufes.inf.nemo.frameweb.utils.ProjectUtils;
+import br.ufes.inf.nemo.frameweb.utils.IProjectUtils;
 
 public class CodeGenerator implements IExternalJavaAction {
 
@@ -26,30 +26,35 @@ public class CodeGenerator implements IExternalJavaAction {
 
 	@Override
 	public void execute(Collection<? extends EObject> selections, Map<String, Object> parameters) {
-		IProject project = ProjectUtils.getSelectedProject();
-
-		IFolder srcFolder = project.getFolder("src");
-		IFolder viewFolder = project.getFolder("WebContent/WEB-INF");
 		
 		ProjectRepresentation representation = new ProjectRepresentation(selections);
+
+		IProject project = IProjectUtils.getSelectedProject();
+		
+		IFolder srcFolder = project.getFolder("/src");
+		IFolder templatesFolder = project.getFolder("/templates");
+		IFolder viewsFolder = project.getFolder("/WebContent/WEB-INF");
 		
 		if (representation.hasEntityModel()) {
 			EntityModelCodeGenerator entityModelCodeGenerator = new EntityModelCodeGenerator(
 					representation.getEntityModel(),
 					representation.getORMTemplate()
 			);
-			
-			entityModelCodeGenerator.generate(srcFolder);
+
+			IFolder ormTemplateFolder = templatesFolder.getFolder("/orm");
+			entityModelCodeGenerator.generate(srcFolder, ormTemplateFolder);
 		}
-	
+
 		if (representation.hasNavigationModel()) {
 			NavigationModelCodeGenerator navigationModelCodeGenerator = new NavigationModelCodeGenerator(
 					representation.getNavigationModel(),
 					representation.getFrontControllerTemplate()
 			);
+
+			IFolder frontControllerTemplateFolder = templatesFolder.getFolder("/frontController");
+			navigationModelCodeGenerator.generate(srcFolder, frontControllerTemplateFolder);
 			
-			navigationModelCodeGenerator.generate(srcFolder);
-			navigationModelCodeGenerator.generateViews(viewFolder);
+			navigationModelCodeGenerator.generateViews(viewsFolder, frontControllerTemplateFolder);
 		}
 	}
 

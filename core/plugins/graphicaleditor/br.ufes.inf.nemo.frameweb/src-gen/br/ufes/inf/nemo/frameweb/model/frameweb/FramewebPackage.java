@@ -124681,6 +124681,61 @@ public interface FramewebPackage extends EPackage {
 	int ORM_TEMPLATE_OPERATION_COUNT = FRAMEWORK_PROFILE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebConfigurationImpl <em>Configuration</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebConfigurationImpl
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getFramewebConfiguration()
+	 * @generated
+	 */
+	int FRAMEWEB_CONFIGURATION = 103;
+
+	/**
+	 * The feature id for the '<em><b>Source Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRAMEWEB_CONFIGURATION__SOURCE_PATH = 0;
+
+	/**
+	 * The feature id for the '<em><b>Templates Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRAMEWEB_CONFIGURATION__TEMPLATES_PATH = 1;
+
+	/**
+	 * The feature id for the '<em><b>Views Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRAMEWEB_CONFIGURATION__VIEWS_PATH = 2;
+
+	/**
+	 * The number of structural features of the '<em>Configuration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRAMEWEB_CONFIGURATION_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Configuration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRAMEWEB_CONFIGURATION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkCategoryList <em>Framework Category List</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -124688,7 +124743,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getFrameworkCategoryList()
 	 * @generated
 	 */
-	int FRAMEWORK_CATEGORY_LIST = 103;
+	int FRAMEWORK_CATEGORY_LIST = 104;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkKindList <em>Framework Kind List</em>}' enum.
@@ -124698,7 +124753,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getFrameworkKindList()
 	 * @generated
 	 */
-	int FRAMEWORK_KIND_LIST = 104;
+	int FRAMEWORK_KIND_LIST = 105;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DateTimePrecision <em>Date Time Precision</em>}' enum.
@@ -124708,7 +124763,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getDateTimePrecision()
 	 * @generated
 	 */
-	int DATE_TIME_PRECISION = 105;
+	int DATE_TIME_PRECISION = 106;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.Generation <em>Generation</em>}' enum.
@@ -124718,7 +124773,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getGeneration()
 	 * @generated
 	 */
-	int GENERATION = 106;
+	int GENERATION = 107;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.Collection <em>Collection</em>}' enum.
@@ -124728,7 +124783,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getCollection()
 	 * @generated
 	 */
-	int COLLECTION = 107;
+	int COLLECTION = 108;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.Order <em>Order</em>}' enum.
@@ -124738,7 +124793,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getOrder()
 	 * @generated
 	 */
-	int ORDER = 108;
+	int ORDER = 109;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.Cascade <em>Cascade</em>}' enum.
@@ -124748,7 +124803,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getCascade()
 	 * @generated
 	 */
-	int CASCADE = 109;
+	int CASCADE = 110;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.Fetch <em>Fetch</em>}' enum.
@@ -124758,7 +124813,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getFetch()
 	 * @generated
 	 */
-	int FETCH = 110;
+	int FETCH = 111;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ConstantNameList <em>Constant Name List</em>}' enum.
@@ -124768,7 +124823,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getConstantNameList()
 	 * @generated
 	 */
-	int CONSTANT_NAME_LIST = 111;
+	int CONSTANT_NAME_LIST = 112;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.InheritanceMapping <em>Inheritance Mapping</em>}' enum.
@@ -124778,7 +124833,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getInheritanceMapping()
 	 * @generated
 	 */
-	int INHERITANCE_MAPPING = 112;
+	int INHERITANCE_MAPPING = 113;
 
 	/**
 	 * The meta object id for the '<em>Rational</em>' data type.
@@ -124787,7 +124842,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getRational()
 	 * @generated
 	 */
-	int RATIONAL = 113;
+	int RATIONAL = 114;
 
 	/**
 	 * The meta object id for the '<em>Decimal</em>' data type.
@@ -124796,7 +124851,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getDecimal()
 	 * @generated
 	 */
-	int DECIMAL = 114;
+	int DECIMAL = 115;
 
 	/**
 	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FramewebProject <em>Project</em>}'.
@@ -126696,6 +126751,49 @@ public interface FramewebPackage extends EPackage {
 	EAttribute getORMTemplate_EnumerationClassTemplate();
 
 	/**
+	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FramewebConfiguration <em>Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Configuration</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebConfiguration
+	 * @generated
+	 */
+	EClass getFramewebConfiguration();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FramewebConfiguration#getSourcePath <em>Source Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Source Path</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebConfiguration#getSourcePath()
+	 * @see #getFramewebConfiguration()
+	 * @generated
+	 */
+	EAttribute getFramewebConfiguration_SourcePath();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FramewebConfiguration#getTemplatesPath <em>Templates Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Templates Path</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebConfiguration#getTemplatesPath()
+	 * @see #getFramewebConfiguration()
+	 * @generated
+	 */
+	EAttribute getFramewebConfiguration_TemplatesPath();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FramewebConfiguration#getViewsPath <em>Views Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Views Path</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebConfiguration#getViewsPath()
+	 * @see #getFramewebConfiguration()
+	 * @generated
+	 */
+	EAttribute getFramewebConfiguration_ViewsPath();
+
+	/**
 	 * Returns the meta object for enum '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkCategoryList <em>Framework Category List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -128503,6 +128601,40 @@ public interface FramewebPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE = eINSTANCE.getORMTemplate_EnumerationClassTemplate();
+
+		/**
+		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebConfigurationImpl <em>Configuration</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebConfigurationImpl
+		 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getFramewebConfiguration()
+		 * @generated
+		 */
+		EClass FRAMEWEB_CONFIGURATION = eINSTANCE.getFramewebConfiguration();
+
+		/**
+		 * The meta object literal for the '<em><b>Source Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FRAMEWEB_CONFIGURATION__SOURCE_PATH = eINSTANCE.getFramewebConfiguration_SourcePath();
+
+		/**
+		 * The meta object literal for the '<em><b>Templates Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FRAMEWEB_CONFIGURATION__TEMPLATES_PATH = eINSTANCE.getFramewebConfiguration_TemplatesPath();
+
+		/**
+		 * The meta object literal for the '<em><b>Views Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FRAMEWEB_CONFIGURATION__VIEWS_PATH = eINSTANCE.getFramewebConfiguration_ViewsPath();
 
 		/**
 		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkCategoryList <em>Framework Category List</em>}' enum.

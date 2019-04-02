@@ -45,6 +45,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.DomainVocabularyProperty;
 import br.ufes.inf.nemo.frameweb.model.frameweb.EmbeddedAttribute;
 import br.ufes.inf.nemo.frameweb.model.frameweb.EntityModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Fetch;
+import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebConfiguration;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebFactory;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage;
@@ -859,6 +860,13 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	private EClass ormTemplateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass framewebConfigurationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2839,6 +2847,46 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EClass getFramewebConfiguration() {
+		return framewebConfigurationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFramewebConfiguration_SourcePath() {
+		return (EAttribute) framewebConfigurationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFramewebConfiguration_TemplatesPath() {
+		return (EAttribute) framewebConfigurationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFramewebConfiguration_ViewsPath() {
+		return (EAttribute) framewebConfigurationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getFrameworkCategoryList() {
 		return frameworkCategoryListEEnum;
 	}
@@ -3267,6 +3315,11 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__METHOD_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE);
+
+		framewebConfigurationEClass = createEClass(FRAMEWEB_CONFIGURATION);
+		createEAttribute(framewebConfigurationEClass, FRAMEWEB_CONFIGURATION__SOURCE_PATH);
+		createEAttribute(framewebConfigurationEClass, FRAMEWEB_CONFIGURATION__TEMPLATES_PATH);
+		createEAttribute(framewebConfigurationEClass, FRAMEWEB_CONFIGURATION__VIEWS_PATH);
 
 		// Create enums
 		frameworkCategoryListEEnum = createEEnum(FRAMEWORK_CATEGORY_LIST);
@@ -3957,6 +4010,18 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getORMTemplate_EnumerationClassTemplate(), theTypesPackage.getString(),
 				"enumerationClassTemplate", null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(framewebConfigurationEClass, FramewebConfiguration.class, "FramewebConfiguration", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFramewebConfiguration_SourcePath(), theTypesPackage.getString(), "sourcePath", null, 0, 1,
+				FramewebConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFramewebConfiguration_TemplatesPath(), theTypesPackage.getString(), "templatesPath", null, 0,
+				1, FramewebConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFramewebConfiguration_ViewsPath(), theTypesPackage.getString(), "viewsPath", null, 0, 1,
+				FramewebConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(frameworkCategoryListEEnum, FrameworkCategoryList.class, "FrameworkCategoryList");

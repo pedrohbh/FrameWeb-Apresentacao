@@ -2212,6 +2212,29 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.FramewebConfiguration} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FramewebConfigurationItemProvider framewebConfigurationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.FramewebConfiguration}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFramewebConfigurationAdapter() {
+		if (framewebConfigurationItemProvider == null) {
+			framewebConfigurationItemProvider = new FramewebConfigurationItemProvider(this);
+		}
+
+		return framewebConfigurationItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2502,6 +2525,8 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 			diTemplateItemProvider.dispose();
 		if (ormTemplateItemProvider != null)
 			ormTemplateItemProvider.dispose();
+		if (framewebConfigurationItemProvider != null)
+			framewebConfigurationItemProvider.dispose();
 	}
 
 }

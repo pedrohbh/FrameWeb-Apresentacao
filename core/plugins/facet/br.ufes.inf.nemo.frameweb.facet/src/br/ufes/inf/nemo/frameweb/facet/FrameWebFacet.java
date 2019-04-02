@@ -11,10 +11,10 @@ import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
 import org.osgi.framework.Bundle;
 
-import br.ufes.inf.nemo.frameweb.utils.ProjectUtils;
+import br.ufes.inf.nemo.frameweb.utils.IProjectUtils;
 
 public class FrameWebFacet {
-	private final static String FRAMEWEB_BASE_FILE_NAME = "model";
+	private final static String FRAMEWEB_BASE_FILE_NAME = "Model";
 	private final static String REPRESENTATIONS_FILE_NAME = "representations";
 	private final static String SIRIUS_MODELING_NATURE = "org.eclipse.sirius.nature.modelingproject";
 	
@@ -32,7 +32,7 @@ public class FrameWebFacet {
 	 * @throws CoreException
 	 */
 	public void addSiriusModelingNature() throws CoreException {
-		ProjectUtils.addNature(webProject, SIRIUS_MODELING_NATURE);
+		IProjectUtils.addNature(webProject, SIRIUS_MODELING_NATURE);
 	}
 
 	/**
@@ -41,7 +41,7 @@ public class FrameWebFacet {
 	 * @throws CoreException
 	 */
 	public void removeSiriusModelingNature() throws CoreException {
-		ProjectUtils.removeNature(webProject, SIRIUS_MODELING_NATURE);
+		IProjectUtils.removeNature(webProject, SIRIUS_MODELING_NATURE);
 	}
 
 	/**

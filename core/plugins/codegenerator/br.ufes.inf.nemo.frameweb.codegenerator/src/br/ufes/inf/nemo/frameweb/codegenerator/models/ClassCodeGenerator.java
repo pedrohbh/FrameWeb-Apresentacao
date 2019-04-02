@@ -29,6 +29,7 @@ public class ClassCodeGenerator {
 	 * 
 	 * @param element
 	 * @param frameworkProfile
+	 * @param templateFolder 
 	 */
 	public ClassCodeGenerator(Element element, FrameworkProfile frameworkProfile) {
 		this.element = element;
@@ -39,9 +40,10 @@ public class ClassCodeGenerator {
 	 * Gera um arquivo de codigo no diretorio especificado
 	 * 
 	 * @param packageFolder
+	 * @param templateFolder 
 	 */
-	public void generate(IFolder packageFolder) {
-		ClassRenderer framewebRenderer = new ClassRenderer(element, frameworkProfile);
+	public void generate(IFolder packageFolder, IFolder templateFolder) {
+		ClassRenderer framewebRenderer = new ClassRenderer(element, frameworkProfile, templateFolder);
 		String code = framewebRenderer.render();
 		
 		String fileName = getFileNameWithExtension(element, frameworkProfile);

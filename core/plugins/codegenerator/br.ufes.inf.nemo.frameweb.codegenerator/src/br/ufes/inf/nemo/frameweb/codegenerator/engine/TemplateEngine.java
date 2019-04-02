@@ -6,7 +6,7 @@ public interface TemplateEngine {
 	 * 
 	 * @param template
 	 */
-	public void setTemplate(String template);
+	public void setTemplate(String templatePath);
 	
 	/**
 	 * 
@@ -15,17 +15,11 @@ public interface TemplateEngine {
 	 * @return
 	 */
 	public TemplateEngine addParameter(String key, Object value);
-	
-	/**
-	 * 
-	 * @return
-	 */
-	public TemplateEngine addBasicLibs();
 
 	/**
 	 * 
 	 * @return
 	 */
 	public String getCode();
-	
+
 }

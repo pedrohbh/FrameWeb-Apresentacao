@@ -243,6 +243,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createDITemplate();
 		case FramewebPackage.ORM_TEMPLATE:
 			return createORMTemplate();
+		case FramewebPackage.FRAMEWEB_CONFIGURATION:
+			return createFramewebConfiguration();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1343,6 +1345,17 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	public ORMTemplate createORMTemplate() {
 		ORMTemplateImpl ormTemplate = new ORMTemplateImpl();
 		return ormTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FramewebConfiguration createFramewebConfiguration() {
+		FramewebConfigurationImpl framewebConfiguration = new FramewebConfigurationImpl();
+		return framewebConfiguration;
 	}
 
 	/**

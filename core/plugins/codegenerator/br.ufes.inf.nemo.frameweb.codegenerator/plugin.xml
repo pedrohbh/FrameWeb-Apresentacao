@@ -7,7 +7,7 @@
          point="org.eclipse.sirius.externalJavaAction">
       <javaActions
             actionClass="br.ufes.inf.nemo.frameweb.codegenerator.CodeGenerator"
-            id="XtendActionCallCodeGenerator">
+            id="FwActionCallCodeGenerator">
       </javaActions>
    </extension>
 </plugin>

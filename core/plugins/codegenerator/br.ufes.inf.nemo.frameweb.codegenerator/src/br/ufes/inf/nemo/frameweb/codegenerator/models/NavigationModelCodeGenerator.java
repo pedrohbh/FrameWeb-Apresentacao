@@ -5,14 +5,13 @@ import java.util.stream.Collectors;
 
 import org.eclipse.core.resources.IFolder;
 
-import br.ufes.inf.nemo.frameweb.codegenerator.engine.EngineUtils;
+import br.ufes.inf.nemo.frameweb.codegenerator.utils.IFolderUtils;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ControllerPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ViewPackage;
-import br.ufes.inf.nemo.frameweb.utils.ProjectUtils;
 
 public class NavigationModelCodeGenerator {
 
@@ -24,9 +23,7 @@ public class NavigationModelCodeGenerator {
 	 * @param navigationModel
 	 * @param frontControllerTemplate
 	 */
-	public NavigationModelCodeGenerator(NavigationModel navigationModel,
-			FrontControllerTemplate frontControllerTemplate) {
-		
+	public NavigationModelCodeGenerator(NavigationModel navigationModel, FrontControllerTemplate frontControllerTemplate) {
 		controllerPackages = navigationModel.getOwnedElements()
 				.stream()
 				.filter(ControllerPackage.class::isInstance)
@@ -47,11 +44,11 @@ public class NavigationModelCodeGenerator {
 	 * 
 	 * @param srcFolder
 	 */
-	public void generate(IFolder srcFolder) {
+	public void generate(IFolder srcFolder, IFolder frontControllerTemplateFolder) {
 		controllerPackages.forEach(controllerPackage -> {
-			String packagePath = EngineUtils.packageNameToPath(controllerPackage.getName());
+			String packagePath = IFolderUtils.packageNameToPath(controllerPackage.getName());
 
-			ProjectUtils.makeDirectory(srcFolder, packagePath);
+			IFolderUtils.makeDirectory(srcFolder, packagePath);
 			
 			IFolder package_ = srcFolder.getFolder(packagePath);
 
@@ -62,7 +59,7 @@ public class NavigationModelCodeGenerator {
 					.map(frontControllerClass -> new ClassCodeGenerator(
 							frontControllerClass,
 							frontControllerTemplate))
-					.forEach(it -> it.generate(package_));
+					.forEach(it -> it.generate(package_, frontControllerTemplateFolder));
 		});
 	}
 	
@@ -70,8 +67,9 @@ public class NavigationModelCodeGenerator {
 	 * Gera os arquivos da view dentro de um dado diretorio
 	 * 
 	 * @param viewFolder
+	 * @param templateFolder 
 	 */
-	public void generateViews(IFolder viewFolder) {
+	public void generateViews(IFolder viewFolder, IFolder frontControllerFolder) {
 		viewPackages.forEach(viewPackage -> {
 			viewPackage.getOwnedTypes()
 					.stream()
@@ -80,7 +78,7 @@ public class NavigationModelCodeGenerator {
 					.map(page -> new ClassCodeGenerator(
 							page,
 							frontControllerTemplate))
-					.forEach(it -> it.generate(viewFolder));
+					.forEach(it -> it.generate(viewFolder, frontControllerFolder));
 		});
 	}
 

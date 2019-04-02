@@ -235,21 +235,17 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 
 	@Override
 	public Property getSourceMember() {
-		Property sourceMember = getMemberEnds().stream()
-				.filter(member -> member.getName().equals("Source"))
-				.findFirst()
+		Property sourceMember = getMemberEnds().stream().filter(member -> member.getName().equals("Source")).findFirst()
 				.get();
-		
+
 		return sourceMember;
 	}
 
 	@Override
 	public Property getTargetMember() {
-		Property targetMember = getMemberEnds().stream()
-				.filter(member -> member.getName().equals("Target"))
-				.findFirst() 
+		Property targetMember = getMemberEnds().stream().filter(member -> member.getName().equals("Target")).findFirst()
 				.get();
-		
+
 		return targetMember;
 	}
 
