@@ -14,21 +14,22 @@ Require-Bundle: org.eclipse.sirius,
  org.eclipse.wst.common.project.facet.core,
  org.eclipse.ui.workbench,
  br.ufes.inf.nemo.frameweb.facet,
- org.apache.commons.io
+ org.apache.commons.io,
+ br.ufes.inf.nemo.frameweb.utils
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: br.ufes.inf.nemo.frameweb.codegenerator
 Import-Package: br.ufes.inf.nemo.frameweb.codegenerator
 Export-Package: br.ufes.inf.nemo.frameweb.codegenerator
 Bundle-ClassPath: .,
- lib/asm-5.0.3.jar,
- lib/asm-analysis-5.0.3.jar,
- lib/asm-tree-5.0.3.jar,
- lib/asm-util-5.0.3.jar,
- lib/commons-lang3-3.6.jar,
- lib/concurrentlinkedhashmap-lru-1.4.2.jar,
- lib/guava-18.0.jar,
- lib/jtwig-core-5.87.0.RELEASE.jar,
- lib/jtwig-reflection-5.87.0.RELEASE.jar,
- lib/parboiled-core-1.1.7.jar,
- lib/parboiled-java-1.1.7.jar,
- lib/slf4j-api-1.7.12.jar
+ lib/jtwig/asm-5.0.3.jar,
+ lib/jtwig/asm-analysis-5.0.3.jar,
+ lib/jtwig/asm-tree-5.0.3.jar,
+ lib/jtwig/asm-util-5.0.3.jar,
+ lib/jtwig/commons-lang3-3.6.jar,
+ lib/jtwig/concurrentlinkedhashmap-lru-1.4.2.jar,
+ lib/jtwig/guava-18.0.jar,
+ lib/jtwig/jtwig-core-5.87.0.RELEASE.jar,
+ lib/jtwig/jtwig-reflection-5.87.0.RELEASE.jar,
+ lib/jtwig/parboiled-core-1.1.7.jar,
+ lib/jtwig/parboiled-java-1.1.7.jar,
+ lib/jtwig/slf4j-api-1.7.12.jar

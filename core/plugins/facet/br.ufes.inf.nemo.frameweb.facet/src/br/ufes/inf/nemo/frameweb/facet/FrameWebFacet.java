@@ -1,5 +1,6 @@
 package br.ufes.inf.nemo.frameweb.facet;
 
+import br.ufes.inf.nemo.frameweb.utils.IProjectUtils;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -10,8 +11,6 @@ import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
 import org.osgi.framework.Bundle;
-
-import br.ufes.inf.nemo.frameweb.utils.IProjectUtils;
 
 public class FrameWebFacet {
 	private final static String FRAMEWEB_BASE_FILE_NAME = "Model";

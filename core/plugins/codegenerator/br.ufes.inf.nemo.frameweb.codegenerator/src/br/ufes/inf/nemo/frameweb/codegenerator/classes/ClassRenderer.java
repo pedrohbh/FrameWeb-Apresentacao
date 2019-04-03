@@ -1,4 +1,4 @@
-package br.ufes.inf.nemo.frameweb.codegenerator.engine;
+package br.ufes.inf.nemo.frameweb.codegenerator.classes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,8 @@ import org.eclipse.uml2.uml.EnumerationLiteral;
 import org.eclipse.uml2.uml.Generalization;
 import org.eclipse.uml2.uml.GeneralizationSet;
 
-import br.ufes.inf.nemo.frameweb.codegenerator.utils.IFileUtils;
+import br.ufes.inf.nemo.frameweb.codegenerator.engine.JtwigTemplateEngineImpl;
+import br.ufes.inf.nemo.frameweb.codegenerator.engine.TemplateEngine;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
@@ -25,6 +26,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
+import br.ufes.inf.nemo.frameweb.utils.IFileUtils;
 
 
 /** WARNING!!

@@ -5,13 +5,14 @@ import java.util.stream.Collectors;
 
 import org.eclipse.core.resources.IFolder;
 
-import br.ufes.inf.nemo.frameweb.codegenerator.utils.IFolderUtils;
+import br.ufes.inf.nemo.frameweb.codegenerator.classes.ClassCodeGenerator;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ControllerPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ViewPackage;
+import br.ufes.inf.nemo.frameweb.utils.IFolderUtils;
 
 public class NavigationModelCodeGenerator {
 
