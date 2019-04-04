@@ -1,6 +1,7 @@
 package br.ufes.inf.nemo.frameweb.codegenerator;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 
 import org.eclipse.core.resources.IFolder;
@@ -15,6 +16,8 @@ import br.ufes.inf.nemo.frameweb.utils.IProjectUtils;
 
 public class CodeGenerator implements IExternalJavaAction {
 
+	public List<String> teste;
+	
 	@Override
 	public boolean canExecute(Collection<? extends EObject> selections) {
 		boolean canExecute = selections
