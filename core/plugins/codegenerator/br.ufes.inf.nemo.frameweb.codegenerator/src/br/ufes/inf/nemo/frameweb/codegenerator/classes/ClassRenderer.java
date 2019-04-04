@@ -30,12 +30,6 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
 import br.ufes.inf.nemo.frameweb.utils.IFileUtils;
 
-
-/** WARNING!!
- * 
- * UGLY CODE BELOW
- * 
- */
 public class ClassRenderer {
 	
 	private Element class_;
@@ -52,9 +46,8 @@ public class ClassRenderer {
 
 		if (frameworkTemplate == null) {
 			throw new UndefinedFrameworkProfileRuntimeException();
-		}
 		
-		if (class_ instanceof DomainClass) {
+		} else if (class_ instanceof DomainClass) {
 			return renderDomainClass();
 		
 		} else if (class_ instanceof Enumeration) {

@@ -14,8 +14,8 @@ import br.ufes.inf.nemo.frameweb.utils.IFolderUtils;
 
 public class ApplicationModelCodeGenerator {
 	
-	public List<ApplicationPackage> applicationPackages;
-	public DITemplate diTemplate;
+	private List<ApplicationPackage> applicationPackages;
+	private DITemplate diTemplate;
 	
 	/**
 	 * 
