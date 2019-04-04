@@ -14,6 +14,8 @@ import org.eclipse.uml2.uml.GeneralizationSet;
 
 import br.ufes.inf.nemo.frameweb.codegenerator.engine.JtwigTemplateEngineImpl;
 import br.ufes.inf.nemo.frameweb.codegenerator.engine.TemplateEngine;
+import br.ufes.inf.nemo.frameweb.codegenerator.exceptions.UndefinedClassRuntimeException;
+import br.ufes.inf.nemo.frameweb.codegenerator.exceptions.UndefinedFrameworkProfileRuntimeException;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
@@ -48,11 +50,8 @@ public class ClassRenderer {
 	
 	public String render() {
 
-//		Nao havendo template definido, nada deve ser feito (talvez alertar alertar o
-//		usuario com uma mensagem no console seja interessante).
-//		Esse tratamento nao se aplica a camada de aplicacao, esta deve ser tratada futuramente.
 		if (frameworkTemplate == null) {
-			return null;
+			throw new UndefinedFrameworkProfileRuntimeException();
 		}
 		
 		if (class_ instanceof DomainClass) {
@@ -68,15 +67,13 @@ public class ClassRenderer {
 			return renderPage();
 			
 		} else if (class_ instanceof DAOClass) {
-//			code
-			return null;
+			return renderDAOClass();
 			
 		} else if (class_ instanceof ServiceClass) {
-//			code
-			return null;
+			return renderServiceClass();
 			
 		} else {
-			throw new IllegalArgumentException();
+			throw new UndefinedClassRuntimeException();
 		}
 		
 	}
@@ -88,7 +85,6 @@ public class ClassRenderer {
 		IFile classTemplateFile = templateFolder.getFile(ormTemplate.getClassTemplate());
 		String classTemplate = IFileUtils.getText(classTemplateFile);
 
-//		TODO injetar uma implementacao de template por parte do usuario, permitindo que outras engines sejam utilizadas
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
 		templateEngineContext.setTemplate(classTemplate);
 
@@ -131,7 +127,6 @@ public class ClassRenderer {
 		IFile enumerationClassTemplateFile = templateFolder.getFile(ormTemplate.getEnumerationClassTemplate());
 		String enumerationClassTemplate = IFileUtils.getText(enumerationClassTemplateFile);
 
-//		TODO injetar uma implementacao de template por parte do usuario, permitindo que outras engines sejam utilizadas
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
 		templateEngineContext.setTemplate(enumerationClassTemplate);
 		
@@ -153,7 +148,6 @@ public class ClassRenderer {
 		IFile frontControllerClassTemplateFile = templateFolder.getFile(frontControllerTemplate.getClassTemplate());
 		String frontControllerClassTemplate = IFileUtils.getText(frontControllerClassTemplateFile);
 		
-//		TODO injetar uma implementacao de template por parte do usuario, permitindo que outras engines sejam utilizadas
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
 		templateEngineContext.setTemplate(frontControllerClassTemplate);
 
@@ -189,16 +183,22 @@ public class ClassRenderer {
 		return templateEngineContext.getCode();
 	}
 	
-//	TODO implementar um renderizador de paginas
-	@SuppressWarnings("unused")
 	public String renderPage() {
-		Page page = (Page) class_;
+		@SuppressWarnings("unused") Page page = (Page) class_;
 		FrontControllerTemplate frontControllerTemplate = (FrontControllerTemplate) frameworkTemplate;
 		
 		IFile pageTemplateFile = templateFolder.getFile(frontControllerTemplate.getPageTemplate());
 		String pageTemplate = IFileUtils.getText(pageTemplateFile);
 		
 		return pageTemplate;
+	}
+	
+	private String renderDAOClass() {
+		return new String();
+	}
+
+	private String renderServiceClass() {
+		return new String();
 	}
 	
 }

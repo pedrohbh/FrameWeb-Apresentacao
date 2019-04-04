@@ -12,12 +12,15 @@ import org.eclipse.uml2.uml.Class;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.Enumeration;
 
+import br.ufes.inf.nemo.frameweb.model.frameweb.DAOClass;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkProfile;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
+import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
 
 public class ClassCodeGenerator {
 
@@ -36,7 +39,6 @@ public class ClassCodeGenerator {
 	}
 	
 	/**
-	 * Gera um arquivo de codigo no diretorio especificado
 	 * 
 	 * @param packageFolder
 	 * @param templateFolder 
@@ -50,13 +52,13 @@ public class ClassCodeGenerator {
 		
 		try {
 			InputStream inputStream = IOUtils.toInputStream(code, "UTF-8");
-			
+
 //			TODO atualizar o conteudo do arquivo ao inves de sobrescrever o codigo
 			if (file.exists()) {
 				file.delete(true, null);
 			}
 			
-			Thread.sleep(50);
+			Thread.sleep(100);
 			
 			file.create(inputStream, true, null);
 			
@@ -66,7 +68,6 @@ public class ClassCodeGenerator {
 	}
 	
 	/**
-	 * Shrek
 	 * 
 	 * @param element
 	 * @param framework
@@ -85,9 +86,6 @@ public class ClassCodeGenerator {
 			} else if (element instanceof Enumeration) {
 				Enumeration enumeration = (Enumeration) element;
 				fileName = enumeration.getName() + ormTemplate.getClassExtension();
-			
-			} else {
-				throw new IllegalArgumentException();
 			}
 			
 		} else if (frameworkProfile instanceof FrontControllerTemplate) {
@@ -100,14 +98,16 @@ public class ClassCodeGenerator {
 			} else if (element instanceof Page) {
 				Page page = (Page) element;
 				fileName = page.getName() + frontControllerTemplate.getPageExtension();
-				
-			} else {
-				throw new IllegalArgumentException();
 			}
 			
-//		TODO filtrar o restante dos FrameworkProfiles
-		} else {
-			throw new IllegalArgumentException();
+		} else if (frameworkProfile instanceof DITemplate) {
+			DITemplate diTemplate = (DITemplate) frameworkProfile;
+			
+			if (element instanceof ServiceClass || element instanceof DAOClass) {
+				Class class_ = (Class) element;
+				fileName = class_.getName() + diTemplate.getClassExtension();
+			}
+			
 		}
 		
 		return fileName;

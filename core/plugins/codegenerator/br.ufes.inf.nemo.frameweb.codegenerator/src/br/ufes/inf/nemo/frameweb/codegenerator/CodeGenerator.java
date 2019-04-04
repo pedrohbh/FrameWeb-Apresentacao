@@ -44,7 +44,7 @@ public class CodeGenerator implements IExternalJavaAction {
 					representation.getORMTemplate()
 			);
 
-			IFolder ormTemplateFolder = templatesFolder.getFolder("/orm");
+			IFolder ormTemplateFolder = templatesFolder.getFolder("/model");
 			entityModelCodeGenerator.generate(srcFolder, ormTemplateFolder);
 		}
 
