@@ -1,16 +1,11 @@
 package br.ufes.inf.nemo.frameweb.codegenerator.classes;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.stream.Collectors;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.Enumeration;
-import org.eclipse.uml2.uml.EnumerationLiteral;
-import org.eclipse.uml2.uml.Generalization;
-import org.eclipse.uml2.uml.GeneralizationSet;
 
 import br.ufes.inf.nemo.frameweb.codegenerator.engine.JtwigTemplateEngineImpl;
 import br.ufes.inf.nemo.frameweb.codegenerator.engine.TemplateEngine;
@@ -43,7 +38,6 @@ public class ClassRenderer {
 	}
 	
 	public String render() {
-
 		if (frameworkTemplate == null) {
 			throw new UndefinedFrameworkProfileRuntimeException();
 		
@@ -68,9 +62,8 @@ public class ClassRenderer {
 		} else {
 			throw new UndefinedClassRuntimeException();
 		}
-		
 	}
-
+	
 	public String renderDomainClass() {
 		DomainClass domainClass = (DomainClass) class_;
 		ORMTemplate ormTemplate = (ORMTemplate) frameworkTemplate;
@@ -93,22 +86,8 @@ public class ClassRenderer {
 					.stream()
 					.filter(DomainMethod.class::isInstance)
 					.map(DomainMethod.class::cast)
-					.collect(Collectors.toList()));
-		
-		List<Generalization> generalizations = domainClass.getGeneralizations();
-		
-		if (!generalizations.isEmpty()) {
-			List<GeneralizationSet> generalizationSets = new ArrayList<GeneralizationSet>();
-			
-			generalizations.forEach(generalization -> {
-				generalizationSets.addAll(generalization.getGeneralizationSets());
-			});
-			
-			templateEngineContext.addParameter("generalizations", generalizationSets);
-			
-		} else {
-			templateEngineContext.addParameter("generalizations", new ArrayList<>());
-		}
+					.collect(Collectors.toList()))
+			.addParameter("generalizations", domainClass.getGeneralizations());
 		
 		return templateEngineContext.getCode();
 	}
@@ -126,10 +105,7 @@ public class ClassRenderer {
 		templateEngineContext
 			.addParameter("package", enumerationClass.getPackage())
 			.addParameter("class", enumerationClass)
-			.addParameter("literals", enumerationClass.getOwnedLiterals()
-					.stream()
-					.map(EnumerationLiteral::getName)
-					.collect(Collectors.toList()));
+			.addParameter("literals", enumerationClass.getOwnedLiterals());
 		
 		return templateEngineContext.getCode();
 	}
@@ -156,22 +132,8 @@ public class ClassRenderer {
 					.stream()
 					.filter(FrontControllerMethod.class::isInstance)
 					.map(FrontControllerMethod.class::cast)
-					.collect(Collectors.toList()));
-		
-		List<Generalization> generalizations = frontControllerClass.getGeneralizations();
-		
-		if (!generalizations.isEmpty()) {
-			List<GeneralizationSet> generalizationSets = new ArrayList<GeneralizationSet>();
-			
-			generalizations.forEach(generalization -> {
-				generalizationSets.addAll(generalization.getGeneralizationSets());
-			});
-			
-			templateEngineContext.addParameter("generalizations", generalizationSets);
-			
-		} else {
-			templateEngineContext.addParameter("generalizations", new ArrayList<>());
-		}
+					.collect(Collectors.toList()))
+			.addParameter("generalizations", frontControllerClass.getGeneralizations());
 		
 		return templateEngineContext.getCode();
 	}
