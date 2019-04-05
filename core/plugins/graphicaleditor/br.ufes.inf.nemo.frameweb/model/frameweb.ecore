@@ -130,7 +130,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="ServiceClass" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceInterface" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceGeneralization" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ServiceControllerAssociation" eSuperTypes="#//ServiceAssociation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceControllerAssociation" eSuperTypes="#//ServiceAssociation">
+    <eOperations name="getSourceMember" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    <eOperations name="getTargetMember" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DomainClass" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="table" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>

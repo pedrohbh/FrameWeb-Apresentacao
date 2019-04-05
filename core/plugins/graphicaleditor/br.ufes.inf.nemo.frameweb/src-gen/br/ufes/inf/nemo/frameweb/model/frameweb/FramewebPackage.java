@@ -39910,13 +39910,31 @@ public interface FramewebPackage extends EPackage {
 	int SERVICE_CONTROLLER_ASSOCIATION___GET_END_TYPES = SERVICE_ASSOCIATION___GET_END_TYPES;
 
 	/**
+	 * The operation id for the '<em>Get Source Member</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_CONTROLLER_ASSOCIATION___GET_SOURCE_MEMBER = SERVICE_ASSOCIATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Target Member</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_CONTROLLER_ASSOCIATION___GET_TARGET_MEMBER = SERVICE_ASSOCIATION_OPERATION_COUNT + 1;
+
+	/**
 	 * The number of operations of the '<em>Service Controller Association</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_CONTROLLER_ASSOCIATION_OPERATION_COUNT = SERVICE_ASSOCIATION_OPERATION_COUNT + 0;
+	int SERVICE_CONTROLLER_ASSOCIATION_OPERATION_COUNT = SERVICE_ASSOCIATION_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.DomainClassImpl <em>Domain Class</em>}' class.
@@ -125462,6 +125480,26 @@ public interface FramewebPackage extends EPackage {
 	EClass getServiceControllerAssociation();
 
 	/**
+	 * Returns the meta object for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ServiceControllerAssociation#getSourceMember() <em>Get Source Member</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Source Member</em>' operation.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ServiceControllerAssociation#getSourceMember()
+	 * @generated
+	 */
+	EOperation getServiceControllerAssociation__GetSourceMember();
+
+	/**
+	 * Returns the meta object for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ServiceControllerAssociation#getTargetMember() <em>Get Target Member</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Target Member</em>' operation.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ServiceControllerAssociation#getTargetMember()
+	 * @generated
+	 */
+	EOperation getServiceControllerAssociation__GetTargetMember();
+
+	/**
 	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass <em>Domain Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -127456,6 +127494,24 @@ public interface FramewebPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SERVICE_CONTROLLER_ASSOCIATION = eINSTANCE.getServiceControllerAssociation();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Source Member</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SERVICE_CONTROLLER_ASSOCIATION___GET_SOURCE_MEMBER = eINSTANCE
+				.getServiceControllerAssociation__GetSourceMember();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Target Member</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SERVICE_CONTROLLER_ASSOCIATION___GET_TARGET_MEMBER = eINSTANCE
+				.getServiceControllerAssociation__GetTargetMember();
 
 		/**
 		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.DomainClassImpl <em>Domain Class</em>}' class.

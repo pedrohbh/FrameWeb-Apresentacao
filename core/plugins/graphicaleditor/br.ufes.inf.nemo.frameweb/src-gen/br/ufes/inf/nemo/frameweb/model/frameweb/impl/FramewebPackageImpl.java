@@ -1607,6 +1607,26 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EOperation getServiceControllerAssociation__GetSourceMember() {
+		return serviceControllerAssociationEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getServiceControllerAssociation__GetTargetMember() {
+		return serviceControllerAssociationEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getDomainClass() {
 		return domainClassEClass;
 	}
@@ -3116,6 +3136,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		serviceGeneralizationEClass = createEClass(SERVICE_GENERALIZATION);
 
 		serviceControllerAssociationEClass = createEClass(SERVICE_CONTROLLER_ASSOCIATION);
+		createEOperation(serviceControllerAssociationEClass, SERVICE_CONTROLLER_ASSOCIATION___GET_SOURCE_MEMBER);
+		createEOperation(serviceControllerAssociationEClass, SERVICE_CONTROLLER_ASSOCIATION___GET_TARGET_MEMBER);
 
 		domainClassEClass = createEClass(DOMAIN_CLASS);
 		createEAttribute(domainClassEClass, DOMAIN_CLASS__TABLE);
@@ -3644,6 +3666,12 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		initEClass(serviceControllerAssociationEClass, ServiceControllerAssociation.class,
 				"ServiceControllerAssociation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEOperation(getServiceControllerAssociation__GetSourceMember(), theUMLPackage.getProperty(),
+				"getSourceMember", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getServiceControllerAssociation__GetTargetMember(), theUMLPackage.getProperty(),
+				"getTargetMember", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(domainClassEClass, DomainClass.class, "DomainClass", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

@@ -1,0 +1,18 @@
+package {{ package.Name }};
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class {{ class.Name }} {
+	
+	{% for attribute in attributes %}
+	{{ attribute.Visibility.Name }} {{ attribute.Type.Name }} {{ attribute.Name }};
+	{% endfor %}
+	
+	{% for method in methods %}
+	{{ method.Visibility.Name }} {{ method.MethodType.Name }} {{ method.Name }}() {
+		return {%- if method.Visibility.Name != 'void' %} null {-% endfor %};
+	}
+	{% endfor %}
+}

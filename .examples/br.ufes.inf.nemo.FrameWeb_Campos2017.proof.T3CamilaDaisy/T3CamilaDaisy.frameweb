@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frameweb:FramewebProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <compose xsi:type="frameweb:EntityModel" name="Entity Model">
+    <packagedElement xsi:type="frameweb:DomainPackage" name="Domain Package">
+      <packagedElement xsi:type="frameweb:DomainClass" name="Usuario"/>
+    </packagedElement>
+  </compose>
+  <compose xsi:type="frameweb:NavigationModel" name="Navigation Model">
+    <packagedElement xsi:type="frameweb:ViewPackage" name="View Package">
+      <packagedElement xsi:type="frameweb:Page" name="formNovoUsuario">
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="title" visibility="private">
+          <type xsi:type="frameweb:Tag" href="MVC_JSF_v1.1.frameweb#//@configures.0/JSFhtml/outputText"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.1/View%20Package/frmUsuario" association="//@compose.1/View%20Package/@packagedElement.2"/>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:UIComponent" name="frmUsuario">
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="msgOK">
+          <type xsi:type="frameweb:Tag" href="JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces%20TagLib/p:growl"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="tabPessoal">
+          <type xsi:type="frameweb:Tag" href="JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces%20TagLib/p:fieldset"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="tabSenha">
+          <type xsi:type="frameweb:Tag" href="JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces%20TagLib/p:fieldset"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="tabEndereco">
+          <type xsi:type="frameweb:Tag" href="JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces%20TagLib/p:fieldset"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="salvar">
+          <type xsi:type="frameweb:Tag" href="JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces%20TagLib/p:commandButton"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="cancelar">
+          <type xsi:type="frameweb:Tag" href="JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces%20TagLib/p:commandButton"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.1/View%20Package/@packagedElement.2/@ownedEnd.0 //@compose.1/View%20Package/formNovoUsuario/@ownedAttribute.1">
+        <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.1/View%20Package/formNovoUsuario" association="//@compose.1/View%20Package/@packagedElement.2"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:ControllerPackage" name="Controller Package">
+      <packagedElement xsi:type="frameweb:FrontControllerClass" name="UsuarioController">
+        <ownedAttribute xsi:type="frameweb:IOParameter" name="usuario" visibility="private" type="//@compose.0/Domain%20Package/Usuario"/>
+        <ownedAttribute xsi:type="frameweb:IOParameter" name="usuarios" visibility="private">
+          <type xsi:type="uml:Class" href="JAVA.frameweb#//@compose.0/List"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:IOParameter" name="cidades" visibility="private">
+          <type xsi:type="uml:Class" href="JAVA.frameweb#//@compose.0/List"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:IOParameter" name="logado" visibility="private">
+          <type xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="getUsuario" methodType="//@compose.0/Domain%20Package/Usuario"/>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="setUsuario">
+          <ownedParameter name="usuario" type="//@compose.0/Domain%20Package/Usuario"/>
+        </ownedOperation>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="getUsuarios">
+          <methodType xsi:type="uml:Class" href="JAVA.frameweb#//@compose.0/List"/>
+        </ownedOperation>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="getCidades">
+          <methodType xsi:type="uml:Class" href="JAVA.frameweb#//@compose.0/List"/>
+        </ownedOperation>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="getLogado">
+          <methodType xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedOperation>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="getUsuarioLogado" methodType="//@compose.0/Domain%20Package/Usuario"/>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="salvar">
+          <methodType xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedOperation>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="novo">
+          <methodType xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedOperation>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="cancelar">
+          <methodType xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedOperation>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="refreshEstado"/>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="login">
+          <methodType xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedOperation>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="includeUsuarioLogado" visibility="private">
+          <ownedParameter name="usuario" type="//@compose.0/Domain%20Package/Usuario"/>
+        </ownedOperation>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="removeUsuarioLogado" visibility="private"/>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="logout">
+          <methodType xsi:type="uml:PrimitiveType" href="JAVA.frameweb#//@compose.0/String"/>
+        </ownedOperation>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="carregaMapa"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.1/View%20Package/frmUsuario" supplier="//@compose.1/Controller%20Package/UsuarioController" method="//@compose.1/Controller%20Package/UsuarioController/salvar"/>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.1/View%20Package/frmUsuario" supplier="//@compose.1/Controller%20Package/UsuarioController" method="//@compose.1/Controller%20Package/UsuarioController/cancelar"/>
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.1/Controller%20Package/UsuarioController" supplier="//@compose.1/View%20Package/formNovoUsuario" resultMethod="//@compose.1/Controller%20Package/UsuarioController/novo">
+      <resultDependencyConstraint result="sucess"/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.1/Controller%20Package/UsuarioController" supplier="//@compose.1/View%20Package/formNovoUsuario" resultMethod="//@compose.1/Controller%20Package/UsuarioController/salvar">
+      <resultDependencyConstraint result="error" render="msgOK"/>
+    </packagedElement>
+  </compose>
+  <compose xsi:type="frameweb:PersistenceModel" name="Persistence Model">
+    <packagedElement xsi:type="frameweb:PersistencePackage" name="Persistence Package">
+      <packagedElement xsi:type="frameweb:DAOClass" name="Class DAOJPA"/>
+    </packagedElement>
+  </compose>
+  <compose xsi:type="frameweb:ApplicationModel" name="Application Model"/>
+</frameweb:FramewebProject>

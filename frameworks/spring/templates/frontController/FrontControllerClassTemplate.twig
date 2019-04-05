@@ -1,0 +1,26 @@
+package {{ package.Name }};
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class {{ class.Name }} {
+
+	{% for association in associations %}
+	@Autowired
+	private {{ association.TargetMember.Type.Name }} {{ association.TargetMember.Type.Name | title }};
+	{% endfor %}
+
+	{% for attribute in attributes %}
+	private {{ attribute.Type.Name }} {{ attribute.Name }};
+	{% endfor %}
+
+	{% for method in methods %}
+	@RequestMapping
+	public{{ method.Type.Name }} {{ method.MethodType.Name }} {{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}) {
+		return {%- if method.MethodType.Name != 'void' %} null {% endif %};
+	}
+	{% endfor %}
+
+}

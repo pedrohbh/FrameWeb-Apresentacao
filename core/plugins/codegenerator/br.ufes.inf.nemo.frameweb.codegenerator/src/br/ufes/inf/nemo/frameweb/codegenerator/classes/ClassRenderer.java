@@ -19,10 +19,10 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkProfile;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
+import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceControllerAssociation;
 import br.ufes.inf.nemo.frameweb.utils.IFileUtils;
 
 public class ClassRenderer {
@@ -64,7 +64,7 @@ public class ClassRenderer {
 		}
 	}
 	
-	public String renderDomainClass() {
+	private String renderDomainClass() {
 		DomainClass domainClass = (DomainClass) class_;
 		ORMTemplate ormTemplate = (ORMTemplate) frameworkTemplate;
 
@@ -92,7 +92,7 @@ public class ClassRenderer {
 		return templateEngineContext.getCode();
 	}
 	
-	public String renderEnumerationClass() {
+	private String renderEnumerationClass() {
 		Enumeration enumerationClass = (Enumeration) class_;
 		ORMTemplate ormTemplate = (ORMTemplate) frameworkTemplate;
 				
@@ -110,7 +110,7 @@ public class ClassRenderer {
 		return templateEngineContext.getCode();
 	}
 	
-	public String renderFrontControllerClass() {
+	private String renderFrontControllerClass() {
 		FrontControllerClass frontControllerClass = (FrontControllerClass) class_;
 		FrontControllerTemplate frontControllerTemplate = (FrontControllerTemplate) frameworkTemplate;
 		
@@ -126,7 +126,7 @@ public class ClassRenderer {
 			.addParameter("attributes", frontControllerClass.getAttributes())
 			.addParameter("associations", frontControllerClass.getAssociations()
 					.stream()
-					.map(NavigationAssociation.class::cast)
+					.map(ServiceControllerAssociation.class::cast)
 					.collect(Collectors.toList()))
 			.addParameter("methods", frontControllerClass.getOperations()
 					.stream()
@@ -138,7 +138,7 @@ public class ClassRenderer {
 		return templateEngineContext.getCode();
 	}
 	
-	public String renderPage() {
+	private String renderPage() {
 		@SuppressWarnings("unused") Page page = (Page) class_;
 		FrontControllerTemplate frontControllerTemplate = (FrontControllerTemplate) frameworkTemplate;
 		

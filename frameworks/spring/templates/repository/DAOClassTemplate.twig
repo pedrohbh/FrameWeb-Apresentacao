@@ -1,0 +1,7 @@
+package {{ package.Name }};
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface {{ class.Name }} extends JpaRepository<{{ class.Name | replace({'Repository', ''}) }}, Long> {
+
+}

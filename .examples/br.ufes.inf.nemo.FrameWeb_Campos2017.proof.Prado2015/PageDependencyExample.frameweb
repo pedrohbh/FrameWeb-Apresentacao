@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frameweb:FramewebProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015">
+  <compose xsi:type="frameweb:NavigationModel" name="Navigation Model">
+    <packagedElement xsi:type="frameweb:ViewPackage" name="View Package">
+      <packagedElement xsi:type="frameweb:Page" name="Page 1"/>
+      <packagedElement xsi:type="frameweb:Page" name="Page 2"/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:PageDependency" client="//@compose.0/View%20Package/Page%201" supplier="//@compose.0/View%20Package/Page%202">
+      <pageDependencyConstraint/>
+    </packagedElement>
+  </compose>
+</frameweb:FramewebProject>

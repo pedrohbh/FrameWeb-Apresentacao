@@ -107,7 +107,6 @@ public class ClassCodeGenerator {
 				Class class_ = (Class) element;
 				fileName = class_.getName() + diTemplate.getClassExtension();
 			}
-			
 		}
 		
 		return fileName;

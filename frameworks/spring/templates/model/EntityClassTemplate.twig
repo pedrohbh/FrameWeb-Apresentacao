@@ -1,0 +1,57 @@
+package {{ package.Name }};
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+
+@Entity
+public class {{ class.Name }} implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+{% for attribute in attributes %}
+	{% if attribute.isID() -%} @Id {%- endif %}
+	{% if attribute.isID() -%} @GeneratedValue {%- endif %}
+	{% if attribute.isIsNull() == false -%} @NotNull {%- endif %}
+	@Column{% if attribute.Size > 0 -%} (length = {{ attribute.Size }}) {%- endif %}
+	{{ attribute.Visibility.Name }} {{ attribute.Type.Name }} {{ attribute.Name }};
+{% endfor %}
+
+{% for association in associations %}
+	{% if association.SourceMember.Type.Name == class.Name and association.TargetMember.Type.Name == class.Name %}
+	//Referenciando a si proprio
+	{% elseif association.SourceMember.Type.Name == class.Name %}
+	//Referenciando ({{ targetMember.Type.Name }})
+	{% elseif association.TargetMember.Type.Name == class.Name %}
+	//Referenciado por ({{ sourceMember.Type.Name }})
+	{% endif %}
+{% endfor %}
+
+	public {{ class.Name }}() {
+		super();
+	}
+
+{% for attribute in attributes %}
+	public {{ attribute.Type.Name }} get{{ attribute.Name | capitalize }}() {
+		return {{ attribute.Name }};
+	}
+
+	public void set{{ attribute.Name | capitalize }}({{ attribute.Type.Name }} {{ attribute.Name }}) {
+		this.{{ attribute.Name }} = {{ attribute.Name }};
+	}
+{% endfor %}
+
+{% for method in methods %}
+	{% if method.isAbstract() %}
+	{{ method.Visibility.Name }} abstract {{ method.MethodType.Name }} {{ method.Name }};
+	{% else %}
+	{{ method.Visibility.Name }} {{ method.MethodType.Name }} {{ method.Name }}() {
+		return {%- if method.MethodType.Name != 'void' %} null {% endif %};
+	}
+	{% endif %}
+{% endfor %}
+}
