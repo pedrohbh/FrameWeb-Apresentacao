@@ -12,6 +12,8 @@ import br.ufes.inf.nemo.frameweb.codegenerator.engine.TemplateEngine;
 import br.ufes.inf.nemo.frameweb.codegenerator.exceptions.UndefinedClassRuntimeException;
 import br.ufes.inf.nemo.frameweb.codegenerator.exceptions.UndefinedFrameworkProfileRuntimeException;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOClass;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DAOInterface;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainMethod;
@@ -23,9 +25,20 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceControllerAssociation;
+import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceInterface;
+import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceMethod;
 import br.ufes.inf.nemo.frameweb.utils.IFileUtils;
 
 public class ClassRenderer {
+	
+	public final static String PACKAGE = "package";
+	public final static String CLASS = "class";
+	public final static String ATTRIBUTES = "attributes";
+	public final static String METHODS = "methods";
+	public final static String ASSOCIATIONS = "associations";
+	public final static String GENERALIZATIONS = "generalizations";
+	public final static String REALIZATIONS = "realizations";
+	public final static String LITERALS = "literals";
 	
 	private Element class_;
 	private FrameworkProfile frameworkTemplate;
@@ -53,9 +66,15 @@ public class ClassRenderer {
 		} else if (class_ instanceof Page) {
 			return renderPage();
 			
+		} else if (class_ instanceof DAOInterface) {
+			return renderDAOInterface();
+		
 		} else if (class_ instanceof DAOClass) {
 			return renderDAOClass();
 			
+		} else if (class_ instanceof ServiceInterface) {
+			return renderServiceInterface();
+		
 		} else if (class_ instanceof ServiceClass) {
 			return renderServiceClass();
 			
@@ -63,7 +82,7 @@ public class ClassRenderer {
 			throw new UndefinedClassRuntimeException();
 		}
 	}
-	
+
 	private String renderDomainClass() {
 		DomainClass domainClass = (DomainClass) class_;
 		ORMTemplate ormTemplate = (ORMTemplate) frameworkTemplate;
@@ -75,19 +94,20 @@ public class ClassRenderer {
 		templateEngineContext.setTemplate(classTemplate);
 
 		templateEngineContext
-			.addParameter("package", domainClass.getPackage())
-			.addParameter("class", domainClass)
-			.addParameter("attributes", domainClass.getAttributes())
-			.addParameter("associations", domainClass.getAssociations()
+			.addParameter(PACKAGE, domainClass.getPackage())
+			.addParameter(CLASS, domainClass)
+			.addParameter(ATTRIBUTES, domainClass.getAttributes())
+			.addParameter(ASSOCIATIONS, domainClass.getAssociations()
 					.stream()
+					.filter(DomainAssociation.class::isInstance)
 					.map(DomainAssociation.class::cast)
 					.collect(Collectors.toList()))
-			.addParameter("methods", domainClass.getOperations()
+			.addParameter(METHODS, domainClass.getOperations()
 					.stream()
 					.filter(DomainMethod.class::isInstance)
 					.map(DomainMethod.class::cast)
 					.collect(Collectors.toList()))
-			.addParameter("generalizations", domainClass.getGeneralizations());
+			.addParameter(GENERALIZATIONS, domainClass.getGeneralizations());
 		
 		return templateEngineContext.getCode();
 	}
@@ -103,9 +123,9 @@ public class ClassRenderer {
 		templateEngineContext.setTemplate(enumerationClassTemplate);
 		
 		templateEngineContext
-			.addParameter("package", enumerationClass.getPackage())
-			.addParameter("class", enumerationClass)
-			.addParameter("literals", enumerationClass.getOwnedLiterals());
+			.addParameter(PACKAGE, enumerationClass.getPackage())
+			.addParameter(CLASS, enumerationClass)
+			.addParameter(LITERALS, enumerationClass.getOwnedLiterals());
 		
 		return templateEngineContext.getCode();
 	}
@@ -121,19 +141,20 @@ public class ClassRenderer {
 		templateEngineContext.setTemplate(frontControllerClassTemplate);
 
 		templateEngineContext
-			.addParameter("package", frontControllerClass.getPackage())
-			.addParameter("class", frontControllerClass)
-			.addParameter("attributes", frontControllerClass.getAttributes())
-			.addParameter("associations", frontControllerClass.getAssociations()
+			.addParameter(PACKAGE, frontControllerClass.getPackage())
+			.addParameter(CLASS, frontControllerClass)
+			.addParameter(ATTRIBUTES, frontControllerClass.getAttributes())
+			.addParameter(ASSOCIATIONS, frontControllerClass.getAssociations()
 					.stream()
+					.filter(ServiceControllerAssociation.class::isInstance)
 					.map(ServiceControllerAssociation.class::cast)
 					.collect(Collectors.toList()))
-			.addParameter("methods", frontControllerClass.getOperations()
+			.addParameter(METHODS, frontControllerClass.getOperations()
 					.stream()
 					.filter(FrontControllerMethod.class::isInstance)
 					.map(FrontControllerMethod.class::cast)
 					.collect(Collectors.toList()))
-			.addParameter("generalizations", frontControllerClass.getGeneralizations());
+			.addParameter(GENERALIZATIONS, frontControllerClass.getGeneralizations());
 		
 		return templateEngineContext.getCode();
 	}
@@ -148,12 +169,51 @@ public class ClassRenderer {
 		return pageTemplate;
 	}
 	
+	private String renderDAOInterface() {
+		return new String();
+	}
+	
 	private String renderDAOClass() {
 		return new String();
 	}
 
+	private String renderServiceInterface() {
+		@SuppressWarnings("unused") ServiceInterface serviceInterface = (ServiceInterface) class_;
+		DITemplate diTemplate = (DITemplate) frameworkTemplate;
+		
+		IFile serviceInterfaceTemplateFile = templateFolder.getFile(diTemplate.getInterfaceTemplate());
+		String serviceInterfaceTemplate = IFileUtils.getText(serviceInterfaceTemplateFile);
+		
+		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
+		templateEngineContext.setTemplate(serviceInterfaceTemplate);
+		
+		return templateEngineContext.getCode();
+	}
+	
 	private String renderServiceClass() {
-		return new String();
+		ServiceClass serviceClass = (ServiceClass) class_;
+		DITemplate diTemplate = (DITemplate) frameworkTemplate;
+		
+		IFile serviceClassTemplateFile = templateFolder.getFile(diTemplate.getClassTemplate());
+		String serviceClassTemplate = IFileUtils.getText(serviceClassTemplateFile);
+		
+		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
+		templateEngineContext.setTemplate(serviceClassTemplate);
+		
+		templateEngineContext
+			.addParameter(PACKAGE, serviceClass.getPackage())
+			.addParameter(CLASS, serviceClass)
+			.addParameter(ATTRIBUTES, serviceClass.getAttributes())
+			.addParameter(ASSOCIATIONS, serviceClass.getAssociations())
+			.addParameter(METHODS, serviceClass.getOperations()
+					.stream()
+					.filter(ServiceMethod.class::isInstance)
+					.map(ServiceMethod.class::cast)
+					.collect(Collectors.toList()))
+			.addParameter(REALIZATIONS, serviceClass.getInterfaceRealizations())
+			.addParameter(GENERALIZATIONS, serviceClass.getGeneralizations());
+		
+		return templateEngineContext.getCode();
 	}
 	
 }

@@ -25,9 +25,9 @@ public class {{ class.Name }} implements Serializable {
 	{% if association.SourceMember.Type.Name == class.Name and association.TargetMember.Type.Name == class.Name %}
 	//Referenciando a si proprio
 	{% elseif association.SourceMember.Type.Name == class.Name %}
-	//Referenciando ({{ targetMember.Type.Name }})
+	//Referenciando ({{ association.TargetMember.Type.Name }})
 	{% elseif association.TargetMember.Type.Name == class.Name %}
-	//Referenciado por ({{ sourceMember.Type.Name }})
+	//Referenciado por ({{ association.SourceMember.Type.Name }})
 	{% endif %}
 {% endfor %}
 
@@ -47,9 +47,9 @@ public class {{ class.Name }} implements Serializable {
 
 {% for method in methods %}
 	{% if method.isAbstract() %}
-	{{ method.Visibility.Name }} abstract {{ method.MethodType.Name }} {{ method.Name }};
+	{{ method.Visibility.Name }} abstract {{ method.MethodType.Name }} {{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %});
 	{% else %}
-	{{ method.Visibility.Name }} {{ method.MethodType.Name }} {{ method.Name }}() {
+	{{ method.Visibility.Name }} {{ method.MethodType.Name }} {{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}) {
 		return {%- if method.MethodType.Name != 'void' %} null {% endif %};
 	}
 	{% endif %}

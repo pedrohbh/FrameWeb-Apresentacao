@@ -11,8 +11,8 @@ public class {{ class.Name }} {
 	{% endfor %}
 	
 	{% for method in methods %}
-	{{ method.Visibility.Name }} {{ method.MethodType.Name }} {{ method.Name }}() {
-		return {%- if method.Visibility.Name != 'void' %} null {-% endfor %};
+	{{ method.Visibility.Name }} {{ method.MethodType.Name }} {{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}) {
+		return {%- if method.Visibility.Name != 'void' %} null {%- endif %};
 	}
 	{% endfor %}
 }

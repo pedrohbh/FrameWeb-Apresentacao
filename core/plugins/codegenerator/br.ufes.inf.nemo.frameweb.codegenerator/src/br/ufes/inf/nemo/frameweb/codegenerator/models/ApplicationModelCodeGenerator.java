@@ -55,4 +55,5 @@ public class ApplicationModelCodeGenerator {
 					.forEach(it -> it.generate(package_, diTemplateFolder));
 		});
 	}
+	
 }

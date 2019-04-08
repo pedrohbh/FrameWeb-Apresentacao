@@ -99,6 +99,10 @@ public class ProjectRepresentation {
 		}
 	}
 	
+	public boolean hasFrontControllerTemplate() {
+		return getFrontControllerTemplate() != null;
+	}
+	
 	/**
 	 * 
 	 * @return
@@ -123,6 +127,14 @@ public class ProjectRepresentation {
 	 * 
 	 * @return
 	 */
+	public boolean hasORMTemplate() {
+		return getORMTemplate() != null;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
 	public DITemplate getDITemplate() {
 		try {
 			DITemplate diTemplate = frameworkProfiles
@@ -134,9 +146,17 @@ public class ProjectRepresentation {
 			
 			return diTemplate;
 			
-		} catch (NullPointerException e) {
+		} catch (NullPointerException | NoSuchElementException e) {
 			return null;
 		}
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public boolean hasDITemplate() {
+		return getDITemplate() != null;
 	}
 	
 	/**

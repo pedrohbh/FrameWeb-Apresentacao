@@ -31,7 +31,7 @@ public class PersistenceModelCodeGenerator {
 		
 		this.diTemplate = diTemplate;
 	}
-	
+
 	/**
 	 * 
 	 * @param srcFolder

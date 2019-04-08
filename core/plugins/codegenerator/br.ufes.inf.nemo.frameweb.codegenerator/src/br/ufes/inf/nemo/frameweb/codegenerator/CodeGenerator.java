@@ -10,8 +10,10 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.sirius.diagram.DSemanticDiagram;
 import org.eclipse.sirius.tools.api.ui.IExternalJavaAction;
 
+import br.ufes.inf.nemo.frameweb.codegenerator.models.ApplicationModelCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.models.EntityModelCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.models.NavigationModelCodeGenerator;
+import br.ufes.inf.nemo.frameweb.codegenerator.models.PersistenceModelCodeGenerator;
 import br.ufes.inf.nemo.frameweb.utils.IProjectUtils;
 
 public class CodeGenerator implements IExternalJavaAction {
@@ -29,35 +31,51 @@ public class CodeGenerator implements IExternalJavaAction {
 
 	@Override
 	public void execute(Collection<? extends EObject> selections, Map<String, Object> parameters) {
-		
 		ProjectRepresentation representation = new ProjectRepresentation(selections);
 
 		IProject project = IProjectUtils.getSelectedProject();
+		
+//		FramewebConfiguration fwConfig = representation.getFramewebConfiguration();
 		
 		IFolder srcFolder = project.getFolder("/src");
 		IFolder templatesFolder = project.getFolder("/templates");
 		IFolder viewsFolder = project.getFolder("/WebContent/WEB-INF");
 		
-		if (representation.hasEntityModel()) {
+		if (representation.hasEntityModel() && representation.hasORMTemplate()) {
 			EntityModelCodeGenerator entityModelCodeGenerator = new EntityModelCodeGenerator(
 					representation.getEntityModel(),
 					representation.getORMTemplate()
 			);
 
-			IFolder ormTemplateFolder = templatesFolder.getFolder("/model");
-			entityModelCodeGenerator.generate(srcFolder, ormTemplateFolder);
+			entityModelCodeGenerator.generate(srcFolder, templatesFolder);
 		}
 
-		if (representation.hasNavigationModel()) {
+		if (representation.hasNavigationModel() && representation.hasFrontControllerTemplate()) {
 			NavigationModelCodeGenerator navigationModelCodeGenerator = new NavigationModelCodeGenerator(
 					representation.getNavigationModel(),
 					representation.getFrontControllerTemplate()
 			);
 
-			IFolder frontControllerTemplateFolder = templatesFolder.getFolder("/frontController");
-			navigationModelCodeGenerator.generate(srcFolder, frontControllerTemplateFolder);
+			navigationModelCodeGenerator.generate(srcFolder, templatesFolder);
+			navigationModelCodeGenerator.generateViews(viewsFolder, templatesFolder);
+		}
+		
+		if (representation.hasApplicationModel() && representation.hasDITemplate()) {
+			ApplicationModelCodeGenerator applicationModelCodeGenerator = new ApplicationModelCodeGenerator(
+					representation.getApplicationModel(),
+					representation.getDITemplate()
+			);
 			
-			navigationModelCodeGenerator.generateViews(viewsFolder, frontControllerTemplateFolder);
+			applicationModelCodeGenerator.generate(srcFolder, templatesFolder);
+		}
+		
+		if (representation.hasPersistenceModel() && representation.hasDITemplate()) {
+			PersistenceModelCodeGenerator persistenceModelCodeGenerator = new PersistenceModelCodeGenerator(
+					representation.getPersistenceModel(),
+					representation.getDITemplate()
+			);
+		
+			persistenceModelCodeGenerator.generate(srcFolder, templatesFolder);
 		}
 	}
 
