@@ -10,7 +10,10 @@ import org.eclipse.sirius.diagram.DNodeContainer;
 import org.eclipse.sirius.diagram.DSemanticDiagram;
 import org.eclipse.sirius.viewpoint.DRepresentationElement;
 
+import br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationModel;
+import br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ControllerPackage;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.EntityModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebConfiguration;
@@ -19,10 +22,14 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkProfile;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
+import br.ufes.inf.nemo.frameweb.model.frameweb.PersistenceModel;
+import br.ufes.inf.nemo.frameweb.model.frameweb.PersistencePackage;
 
 public class ProjectRepresentation {
 	
-	private List<EObject> packages;
+	private List<EObject> siriusPackages;
+	private List<FramewebModel> framewebModels;
+	private List<FrameworkProfile> frameworkProfiles;
 	
 	/**
 	 * 
@@ -36,12 +43,24 @@ public class ProjectRepresentation {
 				.findFirst()
 				.get();
 		
-		packages = dSemanticDiagram.eContents()
+		siriusPackages = dSemanticDiagram.eContents()
 				.stream()
 				.filter(DNodeContainer.class::isInstance)
 				.map(DRepresentationElement.class::cast)
 				.map(DRepresentationElement::getTarget)
 				.collect(Collectors.toList());
+		
+		framewebModels = siriusPackages
+				.stream()
+				.filter(FramewebModel.class::isInstance)
+				.map(FramewebModel.class::cast)
+				.collect(Collectors.toList());
+		
+		frameworkProfiles = siriusPackages
+				.stream()
+				.filter(FrameworkProfile.class::isInstance)
+				.map(FrameworkProfile.class::cast)
+				.collect(Collectors.toList());;
 	}
 
 	/**
@@ -49,13 +68,7 @@ public class ProjectRepresentation {
 	 * @return
 	 */
 	public List<FrameworkProfile> getFrameworkProfiles() {
-		List<FrameworkProfile> frameworkProfile = packages
-				.stream()
-				.filter(FrameworkProfile.class::isInstance)
-				.map(FrameworkProfile.class::cast)
-				.collect(Collectors.toList());
-		
-		return frameworkProfile;
+		return frameworkProfiles;
 	}
 	
 	/**
@@ -63,13 +76,7 @@ public class ProjectRepresentation {
 	 * @return
 	 */
 	public List<FramewebModel> getFramewebModels() {
-		List<FramewebModel> framewebModel = packages
-				.stream()
-				.filter(FramewebModel.class::isInstance)
-				.map(FramewebModel.class::cast)
-				.collect(Collectors.toList());
-		
-		return framewebModel;
+		return framewebModels;
 	}
 
 	/**
@@ -77,8 +84,6 @@ public class ProjectRepresentation {
 	 * @return
 	 */
 	public FrontControllerTemplate getFrontControllerTemplate() {
-		List<FrameworkProfile> frameworkProfiles = getFrameworkProfiles();
-		
 		try {
 			FrontControllerTemplate frontrControllerTemplate = frameworkProfiles
 					.stream()
@@ -99,8 +104,6 @@ public class ProjectRepresentation {
 	 * @return
 	 */
 	public ORMTemplate getORMTemplate() {
-		List<FrameworkProfile> frameworkProfiles = getFrameworkProfiles();
-	
 		try {
 			ORMTemplate ormTemplate = frameworkProfiles
 					.stream()
@@ -120,9 +123,27 @@ public class ProjectRepresentation {
 	 * 
 	 * @return
 	 */
+	public DITemplate getDITemplate() {
+		try {
+			DITemplate diTemplate = frameworkProfiles
+					.stream()
+					.filter(DITemplate.class::isInstance)
+					.map(DITemplate.class::cast)
+					.findFirst()
+					.get();
+			
+			return diTemplate;
+			
+		} catch (NullPointerException e) {
+			return null;
+		}
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
 	public EntityModel getEntityModel() {
-		List<FramewebModel> framewebModels = getFramewebModels();
-
 		try {
 			EntityModel entityModel = framewebModels
 					.stream()
@@ -159,8 +180,6 @@ public class ProjectRepresentation {
 	 * @return
 	 */
 	public NavigationModel getNavigationModel() {
-		List<FramewebModel> framewebModels = getFramewebModels();
-		
 		try {
 			NavigationModel navigationModel = framewebModels
 					.stream()
@@ -181,15 +200,84 @@ public class ProjectRepresentation {
 		} catch (NullPointerException | IndexOutOfBoundsException | NoSuchElementException e) {
 			return null;
 		}
-		
 	}
-
+	
 	/**
 	 * 
 	 * @return
 	 */
 	public boolean hasNavigationModel() {
 		return getNavigationModel() != null;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public PersistenceModel getPersistenceModel() {
+		try {
+			PersistenceModel persistenceModel = framewebModels
+					.stream()
+					.filter(PersistenceModel.class::isInstance)
+					.filter(model -> {
+						boolean hasPersistencePackage = model.eContents()
+								.stream()
+								.anyMatch(PersistencePackage.class::isInstance);
+						
+						return hasPersistencePackage;
+					})
+					.map(PersistenceModel.class::cast)
+					.findFirst()
+					.get();
+			
+			return persistenceModel;
+			
+		} catch (NullPointerException | IndexOutOfBoundsException | NoSuchElementException e) {
+			return null;
+		}
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public boolean hasPersistenceModel() {
+		return getPersistenceModel() != null;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public ApplicationModel getApplicationModel() {
+		try {
+			ApplicationModel applicationModel = framewebModels
+					.stream()
+					.filter(ApplicationModel.class::isInstance)
+					.filter(model -> {
+						boolean hasApplicationPackage = model.eContents()
+								.stream()
+								.anyMatch(ApplicationPackage.class::isInstance);
+						
+						return hasApplicationPackage;
+					})
+					.map(ApplicationModel.class::cast)
+					.findFirst()
+					.get();
+			
+			return applicationModel;
+			
+		} catch (NullPointerException | IndexOutOfBoundsException | NoSuchElementException e) {
+			return null;
+		}
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public boolean hasApplicationModel() {
+		return getApplicationModel() != null;
 	}
 	
 	/**
