@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE XML>
 <feature
       id="br.ufes.inf.nemo.frameweb.codegenerator.feature"
       label="FrameWeb Code Generator"
@@ -26,6 +25,13 @@
 
    <plugin
          id="br.ufes.inf.nemo.frameweb.codegenerator"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="br.ufes.inf.nemo.frameweb.utils"
          download-size="0"
          install-size="0"
          version="0.0.0"
