@@ -10,6 +10,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
+import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceInterface;
 import br.ufes.inf.nemo.frameweb.utils.IFolderUtils;
 
 public class ApplicationModelCodeGenerator {
@@ -49,9 +50,14 @@ public class ApplicationModelCodeGenerator {
 					.stream()
 					.filter(ServiceClass.class::isInstance)
 					.map(ServiceClass.class::cast)
-					.map(serviceClass -> new ClassCodeGenerator(
-							serviceClass,
-							diTemplate))
+					.map(serviceClass -> new ClassCodeGenerator(serviceClass, diTemplate))
+					.forEach(it -> it.generate(package_, diTemplateFolder));
+
+			applicationPackage.getOwnedTypes()
+					.stream()
+					.filter(ServiceInterface.class::isInstance)
+					.map(ServiceInterface.class::cast)
+					.map(serviceInterface -> new ClassCodeGenerator(serviceInterface, diTemplate))
 					.forEach(it -> it.generate(package_, diTemplateFolder));
 		});
 	}

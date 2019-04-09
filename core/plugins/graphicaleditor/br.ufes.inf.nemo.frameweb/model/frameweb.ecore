@@ -158,7 +158,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="pageDependencyConstraint"
         ordered="false" lowerBound="1" eType="#//PageConstraint" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DAOServiceAssociation" eSuperTypes="#//ServiceAssociation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DAOServiceAssociation" eSuperTypes="#//ServiceAssociation">
+    <eOperations name="getSourceMember" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    <eOperations name="getTargetMember" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NavigationAttribute" abstract="true"
       eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
   <eClassifiers xsi:type="ecore:EEnum" name="InheritanceMapping">

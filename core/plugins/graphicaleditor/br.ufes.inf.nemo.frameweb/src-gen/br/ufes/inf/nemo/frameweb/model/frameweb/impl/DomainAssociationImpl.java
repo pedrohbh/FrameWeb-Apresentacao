@@ -233,6 +233,11 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 					order));
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Property getSourceMember() {
 		Property sourceMember = getMemberEnds().stream().filter(member -> member.getName().equals("Source")).findFirst()
@@ -241,6 +246,11 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 		return sourceMember;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Property getTargetMember() {
 		Property targetMember = getMemberEnds().stream().filter(member -> member.getName().equals("Target")).findFirst()

@@ -33,7 +33,6 @@ public class EntityModelCodeGenerator {
 	}
 
 	/**
-	 * Gera as classes do modelo de entidades dentro de um dado diretorio (pacote)
 	 * 
 	 * @param srcFolder
 	 * @param templateFolder 

@@ -13,6 +13,7 @@ import br.ufes.inf.nemo.frameweb.codegenerator.exceptions.UndefinedClassRuntimeE
 import br.ufes.inf.nemo.frameweb.codegenerator.exceptions.UndefinedFrameworkProfileRuntimeException;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOInterface;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DAOServiceAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
@@ -51,6 +52,8 @@ public class ClassRenderer {
 	}
 	
 	public String render() {
+		System.out.println("Instance::" + class_.getClass().getCanonicalName());
+		
 		if (frameworkTemplate == null) {
 			throw new UndefinedFrameworkProfileRuntimeException();
 		
@@ -204,7 +207,11 @@ public class ClassRenderer {
 			.addParameter(PACKAGE, serviceClass.getPackage())
 			.addParameter(CLASS, serviceClass)
 			.addParameter(ATTRIBUTES, serviceClass.getAttributes())
-			.addParameter(ASSOCIATIONS, serviceClass.getAssociations())
+			.addParameter(ASSOCIATIONS, serviceClass.getAssociations()
+					.stream()
+					.filter(DAOServiceAssociation.class::isInstance)
+					.map(DAOServiceAssociation.class::cast)
+					.collect(Collectors.toList()))
 			.addParameter(METHODS, serviceClass.getOperations()
 					.stream()
 					.filter(ServiceMethod.class::isInstance)

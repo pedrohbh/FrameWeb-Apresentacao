@@ -7,6 +7,7 @@ import org.eclipse.core.resources.IFolder;
 
 import br.ufes.inf.nemo.frameweb.codegenerator.classes.ClassCodeGenerator;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOClass;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DAOInterface;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.PersistenceModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.PersistencePackage;
@@ -52,6 +53,13 @@ public class PersistenceModelCodeGenerator {
 					.map(daoClass -> new ClassCodeGenerator(
 							daoClass,
 							diTemplate))
+					.forEach(it -> it.generate(package_, diTemplateFolder));
+			
+			persistencePackage.getOwnedTypes()
+					.stream()
+					.filter(DAOInterface.class::isInstance)
+					.map(DAOInterface.class::cast)
+					.map(daoInterface -> new ClassCodeGenerator(daoInterface, diTemplate))
 					.forEach(it -> it.generate(package_, diTemplateFolder));
 		});
 	}

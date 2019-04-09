@@ -1707,6 +1707,26 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EOperation getDAOServiceAssociation__GetSourceMember() {
+		return daoServiceAssociationEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getDAOServiceAssociation__GetTargetMember() {
+		return daoServiceAssociationEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getNavigationAttribute() {
 		return navigationAttributeEClass;
 	}
@@ -3150,6 +3170,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEReference(pageDependencyEClass, PAGE_DEPENDENCY__PAGE_DEPENDENCY_CONSTRAINT);
 
 		daoServiceAssociationEClass = createEClass(DAO_SERVICE_ASSOCIATION);
+		createEOperation(daoServiceAssociationEClass, DAO_SERVICE_ASSOCIATION___GET_SOURCE_MEMBER);
+		createEOperation(daoServiceAssociationEClass, DAO_SERVICE_ASSOCIATION___GET_TARGET_MEMBER);
 
 		navigationAttributeEClass = createEClass(NAVIGATION_ATTRIBUTE);
 
@@ -3696,6 +3718,12 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		initEClass(daoServiceAssociationEClass, DAOServiceAssociation.class, "DAOServiceAssociation", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEOperation(getDAOServiceAssociation__GetSourceMember(), theUMLPackage.getProperty(), "getSourceMember", 0,
+				1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getDAOServiceAssociation__GetTargetMember(), theUMLPackage.getProperty(), "getTargetMember", 0,
+				1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(navigationAttributeEClass, NavigationAttribute.class, "NavigationAttribute", IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

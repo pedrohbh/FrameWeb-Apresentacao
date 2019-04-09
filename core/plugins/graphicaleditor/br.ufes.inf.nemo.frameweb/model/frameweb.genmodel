@@ -160,7 +160,10 @@
     <genClasses ecoreClass="frameweb.ecore#//PageDependency">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference frameweb.ecore#//PageDependency/pageDependencyConstraint"/>
     </genClasses>
-    <genClasses ecoreClass="frameweb.ecore#//DAOServiceAssociation"/>
+    <genClasses ecoreClass="frameweb.ecore#//DAOServiceAssociation">
+      <genOperations ecoreOperation="frameweb.ecore#//DAOServiceAssociation/getSourceMember"/>
+      <genOperations ecoreOperation="frameweb.ecore#//DAOServiceAssociation/getTargetMember"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="frameweb.ecore#//NavigationAttribute"/>
     <genClasses image="false" ecoreClass="frameweb.ecore#//NavigationClass"/>
     <genClasses ecoreClass="frameweb.ecore#//DomainMethod">

@@ -41,7 +41,6 @@ public class NavigationModelCodeGenerator {
 	}
 
 	/**
-	 * Gera as classes do modelo de navegacao dentro de um dado diretorio (pacote)
 	 * 
 	 * @param srcFolder
 	 */
@@ -57,15 +56,12 @@ public class NavigationModelCodeGenerator {
 					.stream()
 					.filter(FrontControllerClass.class::isInstance)
 					.map(FrontControllerClass.class::cast)
-					.map(frontControllerClass -> new ClassCodeGenerator(
-							frontControllerClass,
-							frontControllerTemplate))
+					.map(frontControllerClass -> new ClassCodeGenerator(frontControllerClass, frontControllerTemplate))
 					.forEach(it -> it.generate(package_, frontControllerTemplateFolder));
 		});
 	}
 	
 	/**
-	 * Gera os arquivos da view dentro de um dado diretorio
 	 * 
 	 * @param viewFolder
 	 * @param templateFolder 
@@ -76,9 +72,7 @@ public class NavigationModelCodeGenerator {
 					.stream()
 					.filter(Page.class::isInstance)
 					.map(Page.class::cast)
-					.map(page -> new ClassCodeGenerator(
-							page,
-							frontControllerTemplate))
+					.map(page -> new ClassCodeGenerator(page, frontControllerTemplate))
 					.forEach(it -> it.generate(viewFolder, frontControllerFolder));
 		});
 	}

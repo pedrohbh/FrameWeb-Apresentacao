@@ -11,8 +11,10 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.uml2.uml.Class;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.Enumeration;
+import org.eclipse.uml2.uml.Interface;
 
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOClass;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DAOInterface;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkProfile;
@@ -21,6 +23,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
+import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceInterface;
 
 public class ClassCodeGenerator {
 
@@ -106,6 +109,10 @@ public class ClassCodeGenerator {
 			if (element instanceof ServiceClass || element instanceof DAOClass) {
 				Class class_ = (Class) element;
 				fileName = class_.getName() + diTemplate.getClassExtension();
+			
+			} else if (element instanceof ServiceInterface || element instanceof DAOInterface) {
+				Interface interface_ = (Interface) element;
+				fileName = interface_.getName() + diTemplate.getClassExtension();
 			}
 		}
 		

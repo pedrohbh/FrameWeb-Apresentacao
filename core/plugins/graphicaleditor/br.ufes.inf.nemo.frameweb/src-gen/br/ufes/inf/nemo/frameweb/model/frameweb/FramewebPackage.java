@@ -44261,13 +44261,31 @@ public interface FramewebPackage extends EPackage {
 	int DAO_SERVICE_ASSOCIATION___GET_END_TYPES = SERVICE_ASSOCIATION___GET_END_TYPES;
 
 	/**
+	 * The operation id for the '<em>Get Source Member</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DAO_SERVICE_ASSOCIATION___GET_SOURCE_MEMBER = SERVICE_ASSOCIATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Target Member</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DAO_SERVICE_ASSOCIATION___GET_TARGET_MEMBER = SERVICE_ASSOCIATION_OPERATION_COUNT + 1;
+
+	/**
 	 * The number of operations of the '<em>DAO Service Association</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DAO_SERVICE_ASSOCIATION_OPERATION_COUNT = SERVICE_ASSOCIATION_OPERATION_COUNT + 0;
+	int DAO_SERVICE_ASSOCIATION_OPERATION_COUNT = SERVICE_ASSOCIATION_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.DomainMethodImpl <em>Domain Method</em>}' class.
@@ -125584,6 +125602,26 @@ public interface FramewebPackage extends EPackage {
 	EClass getDAOServiceAssociation();
 
 	/**
+	 * Returns the meta object for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DAOServiceAssociation#getSourceMember() <em>Get Source Member</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Source Member</em>' operation.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DAOServiceAssociation#getSourceMember()
+	 * @generated
+	 */
+	EOperation getDAOServiceAssociation__GetSourceMember();
+
+	/**
+	 * Returns the meta object for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DAOServiceAssociation#getTargetMember() <em>Get Target Member</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Target Member</em>' operation.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DAOServiceAssociation#getTargetMember()
+	 * @generated
+	 */
+	EOperation getDAOServiceAssociation__GetTargetMember();
+
+	/**
 	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAttribute <em>Navigation Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -127585,6 +127623,22 @@ public interface FramewebPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DAO_SERVICE_ASSOCIATION = eINSTANCE.getDAOServiceAssociation();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Source Member</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation DAO_SERVICE_ASSOCIATION___GET_SOURCE_MEMBER = eINSTANCE.getDAOServiceAssociation__GetSourceMember();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Target Member</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation DAO_SERVICE_ASSOCIATION___GET_TARGET_MEMBER = eINSTANCE.getDAOServiceAssociation__GetTargetMember();
 
 		/**
 		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.NavigationAttributeImpl <em>Navigation Attribute</em>}' class.

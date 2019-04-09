@@ -47,14 +47,9 @@ public class ServiceControllerAssociationImpl extends AssociationImpl implements
 	 */
 	@Override
 	public Property getSourceMember() {
-		Property sourceMember = getMemberEnds()
-				.stream()
-				.filter(member -> member.getName()
-				.equals("Source"))
-				.findFirst()
-				.get();
-
-		return sourceMember;
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -64,14 +59,9 @@ public class ServiceControllerAssociationImpl extends AssociationImpl implements
 	 */
 	@Override
 	public Property getTargetMember() {
-		Property targetMember = getMemberEnds()
-				.stream()
-				.filter(member -> member.getName()
-				.equals("Target"))
-				.findFirst()
-				.get();
-
-		return targetMember;
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
