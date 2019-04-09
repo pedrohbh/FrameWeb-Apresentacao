@@ -50,9 +50,7 @@ public class PersistenceModelCodeGenerator {
 					.stream()
 					.filter(DAOClass.class::isInstance)
 					.map(DAOClass.class::cast)
-					.map(daoClass -> new ClassCodeGenerator(
-							daoClass,
-							diTemplate))
+					.map(daoClass -> new ClassCodeGenerator(daoClass, diTemplate))
 					.forEach(it -> it.generate(package_, diTemplateFolder));
 			
 			persistencePackage.getOwnedTypes()

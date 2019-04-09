@@ -61,7 +61,7 @@ public class ClassCodeGenerator {
 				file.delete(true, null);
 			}
 			
-			Thread.sleep(100);
+			Thread.sleep(50);
 			
 			file.create(inputStream, true, null);
 			
