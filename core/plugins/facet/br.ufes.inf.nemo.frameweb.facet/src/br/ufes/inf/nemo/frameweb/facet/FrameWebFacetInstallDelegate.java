@@ -13,7 +13,7 @@ public class FrameWebFacetInstallDelegate implements IDelegate {
 			throws CoreException {
 
 		/**
-		 * A barra de carregamento tera tres estagios, adicao da natureza do Sirius, criacao do .aird e
+		 * A barra de carregamento de tres estagios, adicao da natureza do Sirius, criacao do .aird e
 		 * a criacao do arquivo principal .frameweb
 		 */
 		monitor.beginTask("", 3);

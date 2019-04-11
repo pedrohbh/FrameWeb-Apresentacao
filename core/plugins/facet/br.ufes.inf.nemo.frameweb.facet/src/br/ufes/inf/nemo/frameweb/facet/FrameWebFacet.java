@@ -13,6 +13,7 @@ import org.eclipse.core.runtime.Path;
 import org.osgi.framework.Bundle;
 
 public class FrameWebFacet {
+	
 	private final static String FRAMEWEB_BASE_FILE_NAME = "Model";
 	private final static String REPRESENTATIONS_FILE_NAME = "representations";
 	private final static String SIRIUS_MODELING_NATURE = "org.eclipse.sirius.nature.modelingproject";
@@ -107,4 +108,5 @@ public class FrameWebFacet {
 			e.printStackTrace();
 		}
 	}
+	
 }
