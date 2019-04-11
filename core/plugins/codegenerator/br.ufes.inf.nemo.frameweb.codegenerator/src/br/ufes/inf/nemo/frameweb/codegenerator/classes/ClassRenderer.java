@@ -6,6 +6,7 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.Enumeration;
+import org.eclipse.uml2.uml.NamedElement;
 
 import br.ufes.inf.nemo.frameweb.codegenerator.engine.JtwigTemplateEngineImpl;
 import br.ufes.inf.nemo.frameweb.codegenerator.engine.TemplateEngine;
@@ -52,7 +53,7 @@ public class ClassRenderer {
 	}
 	
 	public String render() {
-		System.out.println("Instance::" + class_.getClass().getCanonicalName());
+		System.out.println("Rendering " + class_.getClass().getCanonicalName() + "::" + ((NamedElement) class_).getName());
 		
 		if (frameworkTemplate == null) {
 			throw new UndefinedFrameworkProfileRuntimeException();
