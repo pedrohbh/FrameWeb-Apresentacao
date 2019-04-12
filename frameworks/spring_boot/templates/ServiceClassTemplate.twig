@@ -4,7 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class {{ class.Name }} {
+public class {{ class.Name }} {% for realization in realizations %}realization.Name{% endfor %}{
+	
+	{% for association in associations %}
+	@Autowired
+	private {{ association.TargetMember.Type.Name }} {{ association.TargetMember.Type.Name | title }};
+	{% endfor %}
 	
 	{% for attribute in attributes %}
 	{{ attribute.Visibility.Name }} {{ attribute.Type.Name }} {{ attribute.Name }};
@@ -12,7 +17,7 @@ public class {{ class.Name }} {
 	
 	{% for method in methods %}
 	{{ method.Visibility.Name }} {{ method.MethodType.Name }} {{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}) {
-		return {%- if method.Visibility.Name != 'void' %} null {%- endif %};
+		return{% if method.Visibility.Name != 'void' %} null{% endif %};
 	}
 	{% endfor %}
 }

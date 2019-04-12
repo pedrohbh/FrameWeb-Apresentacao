@@ -1,7 +1,0 @@
-package {{ package.Name }};
-
-public enum {{ class.Name }} {
-	{% for literal in literals %}
-		{{- literal.Name }}{% if loop.last == false %}, {% endif %}
-	{%- endfor %};
-}

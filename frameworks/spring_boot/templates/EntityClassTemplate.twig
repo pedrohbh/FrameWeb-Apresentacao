@@ -14,10 +14,10 @@ public class {{ class.Name }} implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 {% for attribute in attributes %}
-	{% if attribute.isID() -%} @Id {%- endif %}
-	{% if attribute.isID() -%} @GeneratedValue {%- endif %}
-	{% if attribute.isIsNull() == false -%} @NotNull {%- endif %}
-	@Column{% if attribute.Size > 0 -%} (length = {{ attribute.Size }}) {%- endif %}
+	{% if attribute.isID() %}@Id{% endif %}
+	{% if attribute.isID() %}@GeneratedValue{% endif %}
+	{% if attribute.isIsNull() == false %}@NotNull{% endif %}
+	@Column{% if attribute.Size > 0 %}(length = {{ attribute.Size }}){% endif %}
 	{{ attribute.Visibility.Name }} {{ attribute.Type.Name }} {{ attribute.Name }};
 {% endfor %}
 
@@ -50,7 +50,7 @@ public class {{ class.Name }} implements Serializable {
 	{{ method.Visibility.Name }} abstract {{ method.MethodType.Name }} {{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %});
 	{% else %}
 	{{ method.Visibility.Name }} {{ method.MethodType.Name }} {{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}) {
-		return {%- if method.MethodType.Name != 'void' %} null {% endif %};
+		return{%- if method.MethodType.Name != 'void' %} null{% endif %};
 	}
 	{% endif %}
 {% endfor %}

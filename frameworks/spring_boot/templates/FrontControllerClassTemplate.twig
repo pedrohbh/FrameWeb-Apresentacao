@@ -9,7 +9,7 @@ public class {{ class.Name }} {
 
 	{% for association in associations %}
 	@Autowired
-	private {{ association.TargetMember.Type.Name }} {{ association.TargetMember.Type.Name | title }};
+	private {{ association.SourceMember.Type.Name }} {{ association.TargetMember.Type.Name | title }};
 	{% endfor %}
 
 	{% for attribute in attributes %}
@@ -19,7 +19,7 @@ public class {{ class.Name }} {
 	{% for method in methods %}
 	@RequestMapping
 	public{{ method.Type.Name }} {{ method.MethodType.Name }} {{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}) {
-		return {%- if method.MethodType.Name != 'void' %} null {% endif %};
+		return{% if method.MethodType.Name != 'void' %} null{% endif %};
 	}
 	{% endfor %}
 

@@ -122,14 +122,6 @@
         <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.1/View%20Package/produtos" association="//@compose.1/View%20Package/@packagedElement.2"/>
       </packagedElement>
     </packagedElement>
-    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.1/View%20Package/adicionarProduto" supplier="//@compose.1/web.project.controllers/ProdutosController" method="//@compose.1/web.project.controllers/ProdutosController/adicionar"/>
-    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.1/web.project.controllers/ProdutosController" supplier="//@compose.1/View%20Package/produtos" resultMethod="//@compose.1/web.project.controllers/ProdutosController/adicionar">
-      <resultDependencyConstraint result="null"/>
-    </packagedElement>
-    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.1/View%20Package/produtos" supplier="//@compose.1/web.project.controllers/ProdutosController" method="//@compose.1/web.project.controllers/ProdutosController/listar"/>
-    <packagedElement xsi:type="frameweb:ResultDependency" name="" client="//@compose.1/web.project.controllers/ProdutosController" supplier="//@compose.1/View%20Package/produtos" resultMethod="//@compose.1/web.project.controllers/ProdutosController/listar">
-      <resultDependencyConstraint result="null"/>
-    </packagedElement>
   </compose>
   <compose xsi:type="frameweb:PersistenceModel" name="Persistence Model">
     <packagedElement xsi:type="frameweb:PersistencePackage" name="Persistence Package">
@@ -137,6 +129,10 @@
       <packagedElement xsi:type="frameweb:DAORealization"/>
       <packagedElement xsi:type="frameweb:DAOInterface" name="ProdutoRepository"/>
       <packagedElement xsi:type="frameweb:DAOInterface" name="CategoriaRepository"/>
+      <packagedElement xsi:type="frameweb:DAOClass" name="CategoriaRepositoryImpl"/>
+      <packagedElement xsi:type="frameweb:DAORealization" client="//@compose.2/Persistence%20Package/CategoriaRepositoryImpl" supplier="//@compose.2/Persistence%20Package/CategoriaRepository"/>
+      <packagedElement xsi:type="frameweb:DAOClass" name="ProdutoRepositoryImpl"/>
+      <packagedElement xsi:type="frameweb:DAORealization" client="//@compose.2/Persistence%20Package/ProdutoRepositoryImpl" supplier="//@compose.2/Persistence%20Package/ProdutoRepository"/>
     </packagedElement>
   </compose>
   <compose xsi:type="frameweb:ApplicationModel" name="Application Model">
@@ -157,7 +153,8 @@
         <ownedEnd name="Target" type="//@compose.2/Persistence%20Package/CategoriaRepository" association="//@compose.3/web.project.services/@packagedElement.2"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:ServiceInterface" name="ProdutoService"/>
-      <packagedElement xsi:type="frameweb:ServiceRealization" client="//@compose.3/web.project.services/ProdutoServiceImpl" supplier="//@compose.3/web.project.services/ProdutoService"/>
+      <packagedElement xsi:type="frameweb:ServiceRealization" name="" client="//@compose.3/web.project.services/ProdutoServiceImpl" supplier="//@compose.3/web.project.services/ProdutoService"/>
+      <packagedElement xsi:type="frameweb:ServiceRealization"/>
     </packagedElement>
   </compose>
 </frameweb:FramewebProject>
