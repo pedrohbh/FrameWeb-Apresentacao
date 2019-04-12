@@ -21,7 +21,6 @@ public class FrameWebFacet {
 	private IProject webProject;
 	
 	public FrameWebFacet(IProject project) {
-
 		this.webProject = project;
 	}
 

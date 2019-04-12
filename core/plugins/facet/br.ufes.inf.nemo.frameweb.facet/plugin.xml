@@ -33,14 +33,6 @@
                class="br.ufes.inf.nemo.frameweb.facet.FrameWebFacetUninstallDelegate">
          </delegate>
       </action>
-      <action
-            facet="frameweb.facet"
-            id="frameweb.facet.runtime"
-            type="runtime-changed">
-         <delegate
-               class="br.ufes.inf.nemo.frameweb.facet.FrameWebFacetRuntimeDelegate">
-         </delegate>
-      </action>
    </extension>
 
 </plugin>
