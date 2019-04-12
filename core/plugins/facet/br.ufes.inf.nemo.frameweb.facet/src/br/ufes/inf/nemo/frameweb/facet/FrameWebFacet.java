@@ -14,7 +14,7 @@ import org.osgi.framework.Bundle;
 
 public class FrameWebFacet {
 	
-	private final static String FRAMEWEB_BASE_FILE_NAME = "Model";
+	private final static String MODEL_FILE_NAME = "Model";
 	private final static String REPRESENTATIONS_FILE_NAME = "representations";
 	private final static String SIRIUS_MODELING_NATURE = "org.eclipse.sirius.nature.modelingproject";
 	
@@ -63,10 +63,10 @@ public class FrameWebFacet {
 	 */
 	public void createFrameWebFile() throws CoreException {
 		//TODO permitir que o usuario escolha o nome do arquivo .frameweb nas configuracoes da faceta
-		IFile fileDiagramFrameWeb = webProject.getFile("model.frameweb");
+		IFile fileDiagramFrameWeb = webProject.getFile(MODEL_FILE_NAME + ".frameweb");
 
 		if (!fileDiagramFrameWeb.exists()) {
-			Path pathDiagramPlugin = new Path("libs/" + FRAMEWEB_BASE_FILE_NAME + ".xml");
+			Path pathDiagramPlugin = new Path("BASE-FILES/Model.xml");
 			copyFromPlugin(pathDiagramPlugin, fileDiagramFrameWeb);
 		}
 	}
@@ -77,10 +77,10 @@ public class FrameWebFacet {
 	 * @throws CoreException
 	 */
 	public void createRepresentationsFile() throws CoreException {
-		IFile fileRepresentationsFrameWeb = webProject.getFile("representations.aird");
+		IFile fileRepresentationsFrameWeb = webProject.getFile(REPRESENTATIONS_FILE_NAME + ".aird");
 
 		if (!fileRepresentationsFrameWeb.exists()) {
-			Path pathRepresentationsPlugin = new Path("libs/" + REPRESENTATIONS_FILE_NAME + ".xml");
+			Path pathRepresentationsPlugin = new Path("BASE-FILES/Representations.xml");
 			copyFromPlugin(pathRepresentationsPlugin, fileRepresentationsFrameWeb);
 		}
 	}

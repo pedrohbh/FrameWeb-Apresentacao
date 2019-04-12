@@ -35,14 +35,6 @@ public class IProjectUtils {
 		natureIds[originalNatureIds.length] = natureId;
 
 		projectDescription.setNatureIds(natureIds);
-		
-		try {
-			Thread.sleep(1000);
-
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		
 		project.setDescription(projectDescription, null);
 	}
 

@@ -5,19 +5,10 @@ Bundle-SymbolicName: br.ufes.inf.nemo.frameweb.facet;singleton:=true
 Bundle-Version: 1.0.0
 Bundle-Activator: br.ufes.inf.nemo.frameweb.facet.FrameWebFacetActivator
 Bundle-Localization: 
-Require-Bundle: org.eclipse.ui,
- org.eclipse.core.resources,
- org.eclipse.core.runtime,
- org.eclipse.wst.common.project.facet.core,
+Require-Bundle: org.eclipse.wst.common.project.facet.core,
  org.eclipse.wst.common.project.facet.ui,
- org.eclipse.wst.common.modulecore,
- org.eclipse.jst.j2ee.web,
- org.eclipse.jst.j2ee,
- org.eclipse.jst.j2ee.core,
- org.eclipse.emf.common,
- org.eclipse.emf.ecore,
- org.eclipse.jem,
- br.ufes.inf.nemo.frameweb.utils
+ br.ufes.inf.nemo.frameweb.utils,
+ org.eclipse.core.resources
 Bundle-ActivationPolicy: lazy
 Automatic-Module-Name: br.ufes.inf.nemo.frameweb.facet
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
