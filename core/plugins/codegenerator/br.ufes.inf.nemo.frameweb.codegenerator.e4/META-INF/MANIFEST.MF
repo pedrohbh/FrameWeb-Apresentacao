@@ -3,21 +3,6 @@ Bundle-ManifestVersion: 2
 Bundle-Name: FrameWeb Code Generator E4
 Bundle-SymbolicName: br.ufes.inf.nemo.frameweb.codegenerator.e4;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Automatic-Module-Name: br.ufes.inf.nemo.frameweb.codegenerator.e4
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Require-Bundle: org.eclipse.sirius,
- br.ufes.inf.nemo.frameweb,
- org.eclipse.sirius.diagram,
- org.eclipse.core.resources,
- org.eclipse.core.runtime,
- org.eclipse.ui,
- org.eclipse.ui.editors,
- org.eclipse.ui.ide,
- org.eclipse.wst.common.project.facet.core,
- org.eclipse.ui.workbench,
- br.ufes.inf.nemo.frameweb.facet,
- br.ufes.inf.nemo.frameweb.utils,
- org.apache.commons.io
 Bundle-ClassPath: lib/jtwig/asm-5.0.3.jar,
  lib/jtwig/asm-analysis-5.0.3.jar,
  lib/jtwig/asm-tree-5.0.3.jar,
@@ -31,4 +16,19 @@ Bundle-ClassPath: lib/jtwig/asm-5.0.3.jar,
  lib/jtwig/parboiled-java-1.1.7.jar,
  lib/jtwig/slf4j-api-1.7.12.jar,
  .
-
+Require-Bundle: org.eclipse.sirius,
+ br.ufes.inf.nemo.frameweb,
+ org.eclipse.sirius.diagram,
+ org.eclipse.core.resources,
+ org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.eclipse.ui.editors,
+ org.eclipse.ui.ide,
+ org.eclipse.wst.common.project.facet.core,
+ org.eclipse.ui.workbench,
+ br.ufes.inf.nemo.frameweb.facet,
+ br.ufes.inf.nemo.frameweb.utils,
+ org.apache.commons.io,
+ org.eclipse.e4.ui.model.workbench;bundle-version="2.1.200.v20180920-1522"
+Automatic-Module-Name: br.ufes.inf.nemo.frameweb.codegenerator.e4
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

@@ -6,6 +6,7 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.Enumeration;
+import org.eclipse.uml2.uml.EnumerationLiteral;
 import org.eclipse.uml2.uml.NamedElement;
 
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.engine.JtwigTemplateEngineImpl;
@@ -14,6 +15,7 @@ import br.ufes.inf.nemo.frameweb.codegenerator.e4.exceptions.UndefinedClassRunti
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.exceptions.UndefinedFrameworkProfileRuntimeException;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOInterface;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DAOMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOServiceAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAssociation;
@@ -54,7 +56,7 @@ public class ClassRenderer {
 	}
 	
 	public String render() {
-		System.out.println("Rendering " + class_.getClass().getCanonicalName() + "::" + ((NamedElement) class_).getName());
+		System.out.println("Rendering " + class_.getClass().getSimpleName() + "::" + ((NamedElement) class_).getName());
 		
 		if (frameworkTemplate == null) {
 			throw new UndefinedFrameworkProfileRuntimeException();
@@ -130,7 +132,10 @@ public class ClassRenderer {
 		templateEngineContext
 			.addParameter(PACKAGE, enumerationClass.getPackage())
 			.addParameter(CLASS, enumerationClass)
-			.addParameter(LITERALS, enumerationClass.getOwnedLiterals());
+			.addParameter(LITERALS, enumerationClass.getOwnedLiterals()
+					.stream()
+					.map(EnumerationLiteral::getName)
+					.collect(Collectors.toList()));
 		
 		return templateEngineContext.getCode();
 	}
@@ -164,22 +169,62 @@ public class ClassRenderer {
 		return templateEngineContext.getCode();
 	}
 	
+	@SuppressWarnings("unused")
 	private String renderPage() {
-		@SuppressWarnings("unused") Page page = (Page) class_;
+		Page page = (Page) class_;
 		FrontControllerTemplate frontControllerTemplate = (FrontControllerTemplate) frameworkTemplate;
 		
 		IFile pageTemplateFile = templateFolder.getFile(frontControllerTemplate.getPageTemplate());
 		String pageTemplate = IFileUtils.getText(pageTemplateFile);
 		
-		return pageTemplate;
+		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
+		templateEngineContext.setTemplate(pageTemplate);
+		
+		/*
+		 * ADD TEMPLATE ENGINE PARAMETERS
+		 */
+		
+		return templateEngineContext.getCode();
 	}
 	
+	@SuppressWarnings("unused")
 	private String renderDAOInterface() {
-		return new String();
+		DAOInterface daoInterface = (DAOInterface) class_;
+		DITemplate diTemplate = (DITemplate) frameworkTemplate;
+		
+//		IFile daoInterfaceTemplateFile = templateFolder.getFile(diTemplate.getDAOInterfaceTemplate);
+//		String serviceInterfaceTemplate = IFileUtils.getText(daoInterfaceTemplateFile);
+		
+		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
+		templateEngineContext.setTemplate("{{ implement.this }}");
+		
+		return templateEngineContext.getCode();
 	}
 	
+	@SuppressWarnings("unused")
 	private String renderDAOClass() {
-		return new String();
+		DAOClass daoClass = (DAOClass) class_;
+		DITemplate diTemplate = (DITemplate) frameworkTemplate;
+		
+//		IFile DAOClassTemplateFile = templateFolder.getFile(diTemplate.getDAOClassTemplate());
+//		String DAOClassTemplate = IFileUtils.getText(DAOClassTemplateFile);
+		
+		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
+		templateEngineContext.setTemplate("{{ implement.this }}");
+		
+		templateEngineContext
+			.addParameter(PACKAGE, daoClass.getPackage())
+			.addParameter(CLASS, daoClass)
+			.addParameter(ATTRIBUTES, daoClass.getAttributes())
+			.addParameter(METHODS, daoClass.getOperations()
+					.stream()
+					.filter(DAOMethod.class::isInstance)
+					.map(DAOMethod.class::cast)
+					.collect(Collectors.toList()))
+			.addParameter(REALIZATIONS, daoClass.getInterfaceRealizations())
+			.addParameter(GENERALIZATIONS, daoClass.getGeneralizations());
+		
+		return templateEngineContext.getCode();
 	}
 
 	private String renderServiceInterface() {
@@ -192,7 +237,7 @@ public class ClassRenderer {
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
 		templateEngineContext.setTemplate(serviceInterfaceTemplate);
 
-//		FIXME O editor grafico nao permite a aplicacao de metodos na interface e nem parametro de template
+//		FIXME O editor grafico nao permite a aplicacao de metodos na interface e nem parametros de template
 		templateEngineContext
 			.addParameter(PACKAGE, serviceInterface.getPackage())
 			.addParameter(INTERFACE, serviceInterface);

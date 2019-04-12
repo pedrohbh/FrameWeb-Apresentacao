@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE xml>
-<?eclipse version="3.4"?>
 <plugin>
+
    <extension
          point="org.eclipse.sirius.externalJavaAction">
       <javaActions
             actionClass="br.ufes.inf.nemo.frameweb.codegenerator.e4.CodeGenerator"
             id="E4CodeGeneratorCall">
       </javaActions>
+   </extension>
+   <extension
+         id="br.ufes.inf.nemo.frameweb.codegenerator.e4.fragment"
+         point="org.eclipse.e4.workbench.model">
+      <fragment
+            uri="fragment.e4xmi">
+      </fragment>
    </extension>
 
 </plugin>
