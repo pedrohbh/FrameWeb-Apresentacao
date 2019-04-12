@@ -7,7 +7,6 @@ import org.eclipse.core.resources.IFolder;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.Enumeration;
 import org.eclipse.uml2.uml.EnumerationLiteral;
-import org.eclipse.uml2.uml.NamedElement;
 
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.engine.JtwigTemplateEngineImpl;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.engine.TemplateEngine;
@@ -56,8 +55,6 @@ public class ClassRenderer {
 	}
 	
 	public String render() {
-		System.out.println("Rendering " + class_.getClass().getSimpleName() + "::" + ((NamedElement) class_).getName());
-		
 		if (frameworkTemplate == null) {
 			throw new UndefinedFrameworkProfileRuntimeException();
 		
@@ -192,11 +189,17 @@ public class ClassRenderer {
 		DAOInterface daoInterface = (DAOInterface) class_;
 		DITemplate diTemplate = (DITemplate) frameworkTemplate;
 		
-//		IFile daoInterfaceTemplateFile = templateFolder.getFile(diTemplate.getDAOInterfaceTemplate);
+//		IFile daoInterfaceTemplateFile = templateFolder.getFile(diTemplate.getDAOInterfaceTemplate());
 //		String serviceInterfaceTemplate = IFileUtils.getText(daoInterfaceTemplateFile);
 		
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
 		templateEngineContext.setTemplate("{{ implement.this }}");
+		
+//		FIXME O editor grafico nao permite a aplicacao de metodos na interface e nem parametros de template
+		templateEngineContext
+			.addParameter(PACKAGE, daoInterface.getPackage())
+			.addParameter(INTERFACE, daoInterface);
+//			.addParameter(METHODS, daoInterface.getOperations());
 		
 		return templateEngineContext.getCode();
 	}
@@ -216,13 +219,23 @@ public class ClassRenderer {
 			.addParameter(PACKAGE, daoClass.getPackage())
 			.addParameter(CLASS, daoClass)
 			.addParameter(ATTRIBUTES, daoClass.getAttributes())
+//			FIXME metodos nao sao instanciados no modelo
 			.addParameter(METHODS, daoClass.getOperations()
 					.stream()
 					.filter(DAOMethod.class::isInstance)
 					.map(DAOMethod.class::cast)
 					.collect(Collectors.toList()))
+//			FIXME realizacoes nao sao instanciadas no modelo (apenas visualmente)
 			.addParameter(REALIZATIONS, daoClass.getInterfaceRealizations())
 			.addParameter(GENERALIZATIONS, daoClass.getGeneralizations());
+		
+//		System.out.println("Generalizations: " + daoClass.getGeneralizations().size());
+//		System.out.println("InterfaceRelizations: " + daoClass.getInterfaceRealizations().size());
+//		System.out.println("AllUsedInterfaces: " + daoClass.getAllUsedInterfaces().size());
+//		System.out.println("AllImplementedInterfaces: " + daoClass.getAllImplementedInterfaces().size());
+//		System.out.println("Associations:" + daoClass.getAssociations().size());
+//		System.out.println("Extensions:" + daoClass.getExtensions().size());
+//		System.out.println("OwnedElements:" + daoClass.getOwnedElements().size());
 		
 		return templateEngineContext.getCode();
 	}
@@ -265,11 +278,13 @@ public class ClassRenderer {
 					.filter(DAOServiceAssociation.class::isInstance)
 					.map(DAOServiceAssociation.class::cast)
 					.collect(Collectors.toList()))
+//			FIXME metodos nao sao instanciados no modelo
 			.addParameter(METHODS, serviceClass.getOperations()
 					.stream()
 					.filter(ServiceMethod.class::isInstance)
 					.map(ServiceMethod.class::cast)
 					.collect(Collectors.toList()))
+//			FIXME realizacoes nao sao instanciadas no modelo (apenas visualmente)
 			.addParameter(REALIZATIONS, serviceClass.getInterfaceRealizations())
 			.addParameter(GENERALIZATIONS, serviceClass.getGeneralizations());
 		
