@@ -868,6 +868,15 @@ public interface FramewebFactory extends EFactory {
 	FramewebConfiguration createFramewebConfiguration();
 
 	/**
+	 * Returns a new object of class '<em>DAO Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DAO Template</em>'.
+	 * @generated
+	 */
+	DAOTemplate createDAOTemplate();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -13,6 +13,7 @@ import org.eclipse.sirius.viewpoint.DRepresentationElement;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ControllerPackage;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.EntityModel;
@@ -157,6 +158,34 @@ public class ProjectRepresentation {
 	 */
 	public boolean hasDITemplate() {
 		return getDITemplate() != null;
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	public DAOTemplate getDAOTemplate() {
+		try {
+			DAOTemplate daoTemplate = frameworkProfiles
+					.stream()
+					.filter(DAOTemplate.class::isInstance)
+					.map(DAOTemplate.class::cast)
+					.findFirst()
+					.get();
+			
+			return daoTemplate;
+			
+		} catch (NullPointerException | NoSuchElementException e) {
+			return null;
+		}
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public boolean hasDAOTemplate() {
+		return getDAOTemplate() != null;
 	}
 	
 	/**

@@ -176,6 +176,9 @@ public class NavigationPackageItemProvider extends PackageItemProvider {
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__NESTED_PACKAGE,
 				FramewebFactory.eINSTANCE.createORMTemplate()));
 
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__NESTED_PACKAGE,
+				FramewebFactory.eINSTANCE.createDAOTemplate()));
+
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__OWNED_STEREOTYPE,
 				FramewebFactory.eINSTANCE.createResultType()));
 
@@ -454,6 +457,9 @@ public class NavigationPackageItemProvider extends PackageItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
 				FramewebFactory.eINSTANCE.createORMTemplate()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
+				FramewebFactory.eINSTANCE.createDAOTemplate()));
 	}
 
 	/**

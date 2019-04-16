@@ -303,5 +303,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FramewebConfiguration/templatesPath"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FramewebConfiguration/viewsPath"/>
     </genClasses>
+    <genClasses ecoreClass="frameweb.ecore#//DAOTemplate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DAOTemplate/classTemplate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DAOTemplate/interfaceTemplate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DAOTemplate/classExtension"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DAOTemplate/interfaceExtension"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

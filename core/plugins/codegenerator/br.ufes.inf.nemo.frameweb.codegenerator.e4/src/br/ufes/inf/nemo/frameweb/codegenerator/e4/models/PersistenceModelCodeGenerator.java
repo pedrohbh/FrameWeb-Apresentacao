@@ -8,7 +8,7 @@ import org.eclipse.core.resources.IFolder;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.classes.ClassCodeGenerator;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOInterface;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.PersistenceModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.PersistencePackage;
 import br.ufes.inf.nemo.frameweb.utils.IFolderUtils;
@@ -16,21 +16,21 @@ import br.ufes.inf.nemo.frameweb.utils.IFolderUtils;
 public class PersistenceModelCodeGenerator {
 	
 	private List<PersistencePackage> persistencePackages;
-	private DITemplate diTemplate;
+	private DAOTemplate daoTemplate;
 	
 	/**
 	 * 
 	 * @param persistenceModel
-	 * @param diTemplate
+	 * @param daoTemplate
 	 */
-	public PersistenceModelCodeGenerator(PersistenceModel persistenceModel, DITemplate diTemplate) {
+	public PersistenceModelCodeGenerator(PersistenceModel persistenceModel, DAOTemplate daoTemplate) {
 		persistencePackages = persistenceModel.getOwnedElements()
 				.stream()
 				.filter(PersistencePackage.class::isInstance)
 				.map(PersistencePackage.class::cast)
 				.collect(Collectors.toList());
 		
-		this.diTemplate = diTemplate;
+		this.daoTemplate = daoTemplate;
 	}
 
 	/**
@@ -50,14 +50,14 @@ public class PersistenceModelCodeGenerator {
 					.stream()
 					.filter(DAOClass.class::isInstance)
 					.map(DAOClass.class::cast)
-					.map(daoClass -> new ClassCodeGenerator(daoClass, diTemplate))
+					.map(daoClass -> new ClassCodeGenerator(daoClass, daoTemplate))
 					.forEach(it -> it.generate(package_, diTemplateFolder));
 			
 			persistencePackage.getOwnedTypes()
 					.stream()
 					.filter(DAOInterface.class::isInstance)
 					.map(DAOInterface.class::cast)
-					.map(daoInterface -> new ClassCodeGenerator(daoInterface, diTemplate))
+					.map(daoInterface -> new ClassCodeGenerator(daoInterface, daoTemplate))
 					.forEach(it -> it.generate(package_, diTemplateFolder));
 		});
 	}

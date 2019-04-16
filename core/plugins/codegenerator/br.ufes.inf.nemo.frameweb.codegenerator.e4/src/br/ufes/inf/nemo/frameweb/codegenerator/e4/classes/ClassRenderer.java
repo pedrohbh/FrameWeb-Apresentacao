@@ -16,6 +16,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.DAOClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOInterface;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOServiceAssociation;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
@@ -184,16 +185,15 @@ public class ClassRenderer {
 		return templateEngineContext.getCode();
 	}
 	
-	@SuppressWarnings("unused")
 	private String renderDAOInterface() {
 		DAOInterface daoInterface = (DAOInterface) class_;
-		DITemplate diTemplate = (DITemplate) frameworkTemplate;
+		DAOTemplate daoTemplate = (DAOTemplate) frameworkTemplate;
 		
-//		IFile daoInterfaceTemplateFile = templateFolder.getFile(diTemplate.getDAOInterfaceTemplate());
-//		String serviceInterfaceTemplate = IFileUtils.getText(daoInterfaceTemplateFile);
+		IFile daoInterfaceTemplateFile = templateFolder.getFile(daoTemplate.getInterfaceTemplate());
+		String daoInterfaceTemplate = IFileUtils.getText(daoInterfaceTemplateFile);
 		
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
-		templateEngineContext.setTemplate("{{ implement.this }}");
+		templateEngineContext.setTemplate(daoInterfaceTemplate);
 		
 //		FIXME O editor grafico nao permite a aplicacao de metodos na interface e nem parametros de template
 		templateEngineContext
@@ -204,22 +204,20 @@ public class ClassRenderer {
 		return templateEngineContext.getCode();
 	}
 	
-	@SuppressWarnings("unused")
 	private String renderDAOClass() {
 		DAOClass daoClass = (DAOClass) class_;
-		DITemplate diTemplate = (DITemplate) frameworkTemplate;
+		DAOTemplate daoTemplate = (DAOTemplate) frameworkTemplate;
 		
-//		IFile DAOClassTemplateFile = templateFolder.getFile(diTemplate.getDAOClassTemplate());
-//		String DAOClassTemplate = IFileUtils.getText(DAOClassTemplateFile);
+		IFile DAOClassTemplateFile = templateFolder.getFile(daoTemplate.getClassTemplate());
+		String DAOClassTemplate = IFileUtils.getText(DAOClassTemplateFile);
 		
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
-		templateEngineContext.setTemplate("{{ implement.this }}");
+		templateEngineContext.setTemplate(DAOClassTemplate);
 		
 		templateEngineContext
 			.addParameter(PACKAGE, daoClass.getPackage())
 			.addParameter(CLASS, daoClass)
 			.addParameter(ATTRIBUTES, daoClass.getAttributes())
-//			FIXME metodos nao sao instanciados no modelo
 			.addParameter(METHODS, daoClass.getOperations()
 					.stream()
 					.filter(DAOMethod.class::isInstance)
@@ -278,7 +276,6 @@ public class ClassRenderer {
 					.filter(DAOServiceAssociation.class::isInstance)
 					.map(DAOServiceAssociation.class::cast)
 					.collect(Collectors.toList()))
-//			FIXME metodos nao sao instanciados no modelo
 			.addParameter(METHODS, serviceClass.getOperations()
 					.stream()
 					.filter(ServiceMethod.class::isInstance)

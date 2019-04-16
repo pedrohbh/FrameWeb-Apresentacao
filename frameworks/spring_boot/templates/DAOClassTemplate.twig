@@ -1,0 +1,12 @@
+package {{ package.Name }};
+
+import org.springframework.stereotype.Repository;
+import javax.persistence.PersistenceContext;
+
+@Repository
+public class {{ class.Name }} {% if generalizations is not empty %}extends {% for generalizationSet in generalizations[0].getGeneralizationSets() %}{{ generalizationSet.Name }} {% endfor %}{% endif %}{
+
+    @PersistenceContext
+    EntityManager entityManager;
+
+}

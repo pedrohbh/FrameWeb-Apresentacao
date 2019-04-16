@@ -269,6 +269,9 @@ public class VocabularyItemProvider extends PackageItemProvider {
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__NESTED_PACKAGE,
 				FramewebFactory.eINSTANCE.createORMTemplate()));
 
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__NESTED_PACKAGE,
+				FramewebFactory.eINSTANCE.createDAOTemplate()));
+
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__OWNED_STEREOTYPE,
 				FramewebFactory.eINSTANCE.createResultType()));
 
@@ -547,6 +550,9 @@ public class VocabularyItemProvider extends PackageItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
 				FramewebFactory.eINSTANCE.createORMTemplate()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
+				FramewebFactory.eINSTANCE.createDAOTemplate()));
 
 		newChildDescriptors.add(createChildParameter(FramewebPackage.Literals.VOCABULARY__DIRECTLY_IMPORTS_DOCUMENTS,
 				FramewebFactory.eINSTANCE.createIRI()));

@@ -245,6 +245,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createORMTemplate();
 		case FramewebPackage.FRAMEWEB_CONFIGURATION:
 			return createFramewebConfiguration();
+		case FramewebPackage.DAO_TEMPLATE:
+			return createDAOTemplate();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1356,6 +1358,17 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	public FramewebConfiguration createFramewebConfiguration() {
 		FramewebConfigurationImpl framewebConfiguration = new FramewebConfigurationImpl();
 		return framewebConfiguration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DAOTemplate createDAOTemplate() {
+		DAOTemplateImpl daoTemplate = new DAOTemplateImpl();
+		return daoTemplate;
 	}
 
 	/**

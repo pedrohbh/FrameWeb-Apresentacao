@@ -43,7 +43,6 @@ public class DAOServiceAssociationImpl extends AssociationImpl implements DAOSer
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	public Property getSourceMember() {
@@ -56,7 +55,6 @@ public class DAOServiceAssociationImpl extends AssociationImpl implements DAOSer
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	public Property getTargetMember() {

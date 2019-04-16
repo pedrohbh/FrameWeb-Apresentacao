@@ -973,7 +973,6 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.DAOMethod" referenceName="ownedOperation">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Method"/>
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="methodType" valueExpression="void"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -1171,7 +1170,6 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.ServiceMethod" referenceName="ownedOperation">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Method"/>
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="methodType" valueExpression="void"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>

@@ -15,6 +15,7 @@ import org.eclipse.uml2.uml.Interface;
 
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOInterface;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkProfile;
@@ -106,13 +107,25 @@ public class ClassCodeGenerator {
 		} else if (frameworkProfile instanceof DITemplate) {
 			DITemplate diTemplate = (DITemplate) frameworkProfile;
 			
-			if (element instanceof ServiceClass || element instanceof DAOClass) {
+			if (element instanceof ServiceClass) {
 				Class class_ = (Class) element;
 				fileName = class_.getName() + diTemplate.getClassExtension();
 			
-			} else if (element instanceof ServiceInterface || element instanceof DAOInterface) {
+			} else if (element instanceof ServiceInterface) {
 				Interface interface_ = (Interface) element;
-				fileName = interface_.getName() + diTemplate.getClassExtension();
+				fileName = interface_.getName() + diTemplate.getInterfaceExtension();
+			}
+			
+		} else if (frameworkProfile instanceof DAOTemplate) {
+			DAOTemplate daoTemplate = (DAOTemplate) frameworkProfile;
+			
+			if (element instanceof DAOClass) {
+				Class class_ = (Class) element;
+				fileName = class_.getName() + daoTemplate.getClassExtension();
+				
+			} else if (element instanceof DAOInterface) {
+				Interface interface_ = (Interface) element;
+				fileName = interface_.getName() + daoTemplate.getInterfaceExtension();
 			}
 		}
 		

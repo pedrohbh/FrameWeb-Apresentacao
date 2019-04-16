@@ -2235,6 +2235,29 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DAOTemplateItemProvider daoTemplateItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDAOTemplateAdapter() {
+		if (daoTemplateItemProvider == null) {
+			daoTemplateItemProvider = new DAOTemplateItemProvider(this);
+		}
+
+		return daoTemplateItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2527,6 +2550,8 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 			ormTemplateItemProvider.dispose();
 		if (framewebConfigurationItemProvider != null)
 			framewebConfigurationItemProvider.dispose();
+		if (daoTemplateItemProvider != null)
+			daoTemplateItemProvider.dispose();
 	}
 
 }

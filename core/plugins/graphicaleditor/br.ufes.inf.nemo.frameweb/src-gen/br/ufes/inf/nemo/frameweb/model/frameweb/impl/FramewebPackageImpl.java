@@ -26,6 +26,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.DAOInterface;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAORealization;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOServiceAssociation;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DataProperty;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DateTimeAttribute;
@@ -867,6 +868,13 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	private EClass framewebConfigurationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass daoTemplateEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2927,6 +2935,56 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EClass getDAOTemplate() {
+		return daoTemplateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDAOTemplate_ClassTemplate() {
+		return (EAttribute) daoTemplateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDAOTemplate_InterfaceTemplate() {
+		return (EAttribute) daoTemplateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDAOTemplate_ClassExtension() {
+		return (EAttribute) daoTemplateEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDAOTemplate_InterfaceExtension() {
+		return (EAttribute) daoTemplateEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getFrameworkCategoryList() {
 		return frameworkCategoryListEEnum;
 	}
@@ -3365,6 +3423,12 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEAttribute(framewebConfigurationEClass, FRAMEWEB_CONFIGURATION__TEMPLATES_PATH);
 		createEAttribute(framewebConfigurationEClass, FRAMEWEB_CONFIGURATION__VIEWS_PATH);
 
+		daoTemplateEClass = createEClass(DAO_TEMPLATE);
+		createEAttribute(daoTemplateEClass, DAO_TEMPLATE__CLASS_TEMPLATE);
+		createEAttribute(daoTemplateEClass, DAO_TEMPLATE__INTERFACE_TEMPLATE);
+		createEAttribute(daoTemplateEClass, DAO_TEMPLATE__CLASS_EXTENSION);
+		createEAttribute(daoTemplateEClass, DAO_TEMPLATE__INTERFACE_EXTENSION);
+
 		// Create enums
 		frameworkCategoryListEEnum = createEEnum(FRAMEWORK_CATEGORY_LIST);
 		frameworkKindListEEnum = createEEnum(FRAMEWORK_KIND_LIST);
@@ -3522,6 +3586,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		frontControllerTemplateEClass.getESuperTypes().add(this.getFrameworkProfile());
 		diTemplateEClass.getESuperTypes().add(this.getFrameworkProfile());
 		ormTemplateEClass.getESuperTypes().add(this.getFrameworkProfile());
+		daoTemplateEClass.getESuperTypes().add(this.getFrameworkProfile());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(framewebProjectEClass, FramewebProject.class, "FramewebProject", !IS_ABSTRACT, !IS_INTERFACE,
@@ -4078,6 +4143,21 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getFramewebConfiguration_ViewsPath(), theTypesPackage.getString(), "viewsPath", null, 0, 1,
 				FramewebConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(daoTemplateEClass, DAOTemplate.class, "DAOTemplate", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDAOTemplate_ClassTemplate(), theTypesPackage.getString(), "classTemplate", null, 0, 1,
+				DAOTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDAOTemplate_InterfaceTemplate(), theTypesPackage.getString(), "interfaceTemplate", null, 0, 1,
+				DAOTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDAOTemplate_ClassExtension(), theTypesPackage.getString(), "classExtension", null, 0, 1,
+				DAOTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDAOTemplate_InterfaceExtension(), theTypesPackage.getString(), "interfaceExtension", null, 0,
+				1, DAOTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(frameworkCategoryListEEnum, FrameworkCategoryList.class, "FrameworkCategoryList");

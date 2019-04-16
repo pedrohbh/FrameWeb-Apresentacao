@@ -236,7 +236,6 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	public Property getSourceMember() {
@@ -249,7 +248,6 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
 	public Property getTargetMember() {

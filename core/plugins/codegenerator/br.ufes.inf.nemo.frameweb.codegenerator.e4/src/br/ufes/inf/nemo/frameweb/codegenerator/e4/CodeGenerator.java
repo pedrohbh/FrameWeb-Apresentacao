@@ -1,7 +1,6 @@
 package br.ufes.inf.nemo.frameweb.codegenerator.e4;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.Map;
 
 import org.eclipse.core.resources.IFolder;
@@ -18,8 +17,6 @@ import br.ufes.inf.nemo.frameweb.utils.IProjectUtils;
 
 public class CodeGenerator implements IExternalJavaAction {
 
-	public List<String> teste;
-	
 	@Override
 	public boolean canExecute(Collection<? extends EObject> selections) {
 		boolean canExecute = selections
@@ -69,10 +66,10 @@ public class CodeGenerator implements IExternalJavaAction {
 			applicationModelCodeGenerator.generate(srcFolder, templatesFolder);
 		}
 		
-		if (representation.hasPersistenceModel() && representation.hasDITemplate()) {
+		if (representation.hasPersistenceModel() && representation.hasDAOTemplate()) {
 			PersistenceModelCodeGenerator persistenceModelCodeGenerator = new PersistenceModelCodeGenerator(
 					representation.getPersistenceModel(),
-					representation.getDITemplate()
+					representation.getDAOTemplate()
 			);
 		
 			persistenceModelCodeGenerator.generate(srcFolder, templatesFolder);
