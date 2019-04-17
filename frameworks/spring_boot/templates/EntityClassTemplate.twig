@@ -13,6 +13,7 @@ import javax.validation.constraints.NotNull;
 public class {{ class.Name }} implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+
 {% for attribute in attributes %}
 	{% if attribute.isID() %}@Id{% endif %}
 	{% if attribute.isID() %}@GeneratedValue{% endif %}
@@ -22,12 +23,14 @@ public class {{ class.Name }} implements Serializable {
 {% endfor %}
 
 {% for association in associations %}
-	{% if association.SourceMember.Type.Name == class.Name and association.TargetMember.Type.Name == class.Name %}
+	{%- set sourceMember = association.SourceMember -%}
+	{%- set targetMember = association.TargetMember -%}
+	{% if sourceMember.Type.Name == class.Name and targetMember.Type.Name == class.Name %}
 	//Referenciando a si proprio
-	{% elseif association.SourceMember.Type.Name == class.Name %}
-	//Referenciando ({{ association.TargetMember.Type.Name }})
-	{% elseif association.TargetMember.Type.Name == class.Name %}
-	//Referenciado por ({{ association.SourceMember.Type.Name }})
+	{% elseif sourceMember.Type.Name == class.Name %}
+	//Referenciando ({{ targetMember.Type.Name }})
+	{% elseif targetMember.Type.Name == class.Name %}
+	//Referenciado por ({{ sourceMember.Type.Name }})
 	{% endif %}
 {% endfor %}
 
@@ -39,7 +42,7 @@ public class {{ class.Name }} implements Serializable {
 	public {{ attribute.Type.Name }} get{{ attribute.Name | capitalize }}() {
 		return {{ attribute.Name }};
 	}
-
+	
 	public void set{{ attribute.Name | capitalize }}({{ attribute.Type.Name }} {{ attribute.Name }}) {
 		this.{{ attribute.Name }} = {{ attribute.Name }};
 	}
@@ -47,11 +50,12 @@ public class {{ class.Name }} implements Serializable {
 
 {% for method in methods %}
 	{% if method.isAbstract() %}
-	{{ method.Visibility.Name }} abstract {{ method.MethodType.Name }} {{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %});
+	{{ method.Visibility.Name }} abstract {% if method.MethodType is null %}void{% else %}{{ method.MethodType.Name }}{% endif %} {{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %});
 	{% else %}
-	{{ method.Visibility.Name }} {{ method.MethodType.Name }} {{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}) {
-		return{%- if method.MethodType.Name != 'void' %} null{% endif %};
+	{{ method.Visibility.Name }} {% if method.MethodType is null %}void{% else %}{{ method.MethodType.Name }}{% endif %} {{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}) {
+		return{% if method.MethodType is not null %} null{% endif %};
 	}
 	{% endif %}
 {% endfor %}
+
 }

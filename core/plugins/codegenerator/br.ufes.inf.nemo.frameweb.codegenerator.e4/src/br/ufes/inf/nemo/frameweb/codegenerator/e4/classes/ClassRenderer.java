@@ -167,6 +167,7 @@ public class ClassRenderer {
 		return templateEngineContext.getCode();
 	}
 	
+//	TODO implementar o renderizador de pagina html
 	@SuppressWarnings("unused")
 	private String renderPage() {
 		Page page = (Page) class_;
@@ -226,14 +227,6 @@ public class ClassRenderer {
 //			FIXME realizacoes nao sao instanciadas no modelo (apenas visualmente)
 			.addParameter(REALIZATIONS, daoClass.getInterfaceRealizations())
 			.addParameter(GENERALIZATIONS, daoClass.getGeneralizations());
-		
-//		System.out.println("Generalizations: " + daoClass.getGeneralizations().size());
-//		System.out.println("InterfaceRelizations: " + daoClass.getInterfaceRealizations().size());
-//		System.out.println("AllUsedInterfaces: " + daoClass.getAllUsedInterfaces().size());
-//		System.out.println("AllImplementedInterfaces: " + daoClass.getAllImplementedInterfaces().size());
-//		System.out.println("Associations:" + daoClass.getAssociations().size());
-//		System.out.println("Extensions:" + daoClass.getExtensions().size());
-//		System.out.println("OwnedElements:" + daoClass.getOwnedElements().size());
 		
 		return templateEngineContext.getCode();
 	}

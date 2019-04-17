@@ -1,0 +1,7 @@
+public {{ attribute.Type.Name }} get{{ attribute.Name | capitalize }}() {
+	return {{ attribute.Name }};
+}
+
+public void set{{ attribute.Name | capitalize }}({{ attribute.Type.Name }} {{ attribute.Name }}) {
+	this.{{ attribute.Name }} = {{ attribute.Name }};
+}
