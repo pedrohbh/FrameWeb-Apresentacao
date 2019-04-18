@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class {{ class.Name }} {% for realization in realizations %}realization.Name{% endfor %}{
+public class {{ class.Name }} implements {% for realization in realizations %}realization.Name{% if loop.last == false %}, {% endif %}{% endfor %}{
 	
 	{% for association in associations %}
 	@Autowired

@@ -8566,13 +8566,31 @@ public interface FramewebPackage extends EPackage {
 	int DOMAIN_ASSOCIATION___GET_TARGET_MEMBER = UMLPackage.ASSOCIATION_OPERATION_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Get Source Cardinality</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_ASSOCIATION___GET_SOURCE_CARDINALITY = UMLPackage.ASSOCIATION_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Target Cardinality</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_ASSOCIATION___GET_TARGET_CARDINALITY = UMLPackage.ASSOCIATION_OPERATION_COUNT + 3;
+
+	/**
 	 * The number of operations of the '<em>Domain Association</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_ASSOCIATION_OPERATION_COUNT = UMLPackage.ASSOCIATION_OPERATION_COUNT + 2;
+	int DOMAIN_ASSOCIATION_OPERATION_COUNT = UMLPackage.ASSOCIATION_OPERATION_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.AttributeImpl <em>Attribute</em>}' class.
@@ -126395,6 +126413,26 @@ public interface FramewebPackage extends EPackage {
 	EOperation getDomainAssociation__GetTargetMember();
 
 	/**
+	 * Returns the meta object for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DomainAssociation#getSourceCardinality() <em>Get Source Cardinality</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Source Cardinality</em>' operation.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DomainAssociation#getSourceCardinality()
+	 * @generated
+	 */
+	EOperation getDomainAssociation__GetSourceCardinality();
+
+	/**
+	 * Returns the meta object for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DomainAssociation#getTargetCardinality() <em>Get Target Cardinality</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Target Cardinality</em>' operation.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DomainAssociation#getTargetCardinality()
+	 * @generated
+	 */
+	EOperation getDomainAssociation__GetTargetCardinality();
+
+	/**
 	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.Attribute <em>Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -128539,6 +128577,22 @@ public interface FramewebPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation DOMAIN_ASSOCIATION___GET_TARGET_MEMBER = eINSTANCE.getDomainAssociation__GetTargetMember();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Source Cardinality</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation DOMAIN_ASSOCIATION___GET_SOURCE_CARDINALITY = eINSTANCE.getDomainAssociation__GetSourceCardinality();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Target Cardinality</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation DOMAIN_ASSOCIATION___GET_TARGET_CARDINALITY = eINSTANCE.getDomainAssociation__GetTargetCardinality();
 
 		/**
 		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.AttributeImpl <em>Attribute</em>}' class.

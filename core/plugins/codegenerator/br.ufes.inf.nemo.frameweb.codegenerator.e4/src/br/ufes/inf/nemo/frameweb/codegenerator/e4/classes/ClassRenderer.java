@@ -45,12 +45,12 @@ public class ClassRenderer {
 	public final static String REALIZATIONS = "realizations";
 	public final static String LITERALS = "literals";
 	
-	private Element class_;
+	private Element element;
 	private FrameworkProfile frameworkTemplate;
 	private IFolder templateFolder;
 	
-	public ClassRenderer(Element class_, FrameworkProfile frameworkTemplate, IFolder templateFolder) {
-		this.class_ = class_;
+	public ClassRenderer(Element element, FrameworkProfile frameworkTemplate, IFolder templateFolder) {
+		this.element = element;
 		this.frameworkTemplate = frameworkTemplate;
 		this.templateFolder = templateFolder;
 	}
@@ -59,28 +59,28 @@ public class ClassRenderer {
 		if (frameworkTemplate == null) {
 			throw new UndefinedFrameworkProfileRuntimeException();
 		
-		} else if (class_ instanceof DomainClass) {
+		} else if (element instanceof DomainClass) {
 			return renderDomainClass();
 		
-		} else if (class_ instanceof Enumeration) {
+		} else if (element instanceof Enumeration) {
 			return renderEnumerationClass();
 			
-		} else if (class_ instanceof FrontControllerClass) {
+		} else if (element instanceof FrontControllerClass) {
 			return renderFrontControllerClass();
 
-		} else if (class_ instanceof Page) {
+		} else if (element instanceof Page) {
 			return renderPage();
 			
-		} else if (class_ instanceof DAOInterface) {
+		} else if (element instanceof DAOInterface) {
 			return renderDAOInterface();
 		
-		} else if (class_ instanceof DAOClass) {
+		} else if (element instanceof DAOClass) {
 			return renderDAOClass();
 			
-		} else if (class_ instanceof ServiceInterface) {
+		} else if (element instanceof ServiceInterface) {
 			return renderServiceInterface();
 		
-		} else if (class_ instanceof ServiceClass) {
+		} else if (element instanceof ServiceClass) {
 			return renderServiceClass();
 			
 		} else {
@@ -89,7 +89,7 @@ public class ClassRenderer {
 	}
 
 	private String renderDomainClass() {
-		DomainClass domainClass = (DomainClass) class_;
+		DomainClass domainClass = (DomainClass) element;
 		ORMTemplate ormTemplate = (ORMTemplate) frameworkTemplate;
 
 		IFile classTemplateFile = templateFolder.getFile(ormTemplate.getClassTemplate());
@@ -113,12 +113,12 @@ public class ClassRenderer {
 					.map(DomainMethod.class::cast)
 					.collect(Collectors.toList()))
 			.addParameter(GENERALIZATIONS, domainClass.getGeneralizations());
-		
+
 		return templateEngineContext.getCode();
 	}
 	
 	private String renderEnumerationClass() {
-		Enumeration enumerationClass = (Enumeration) class_;
+		Enumeration enumerationClass = (Enumeration) element;
 		ORMTemplate ormTemplate = (ORMTemplate) frameworkTemplate;
 				
 		IFile enumerationClassTemplateFile = templateFolder.getFile(ormTemplate.getEnumerationClassTemplate());
@@ -139,7 +139,7 @@ public class ClassRenderer {
 	}
 	
 	private String renderFrontControllerClass() {
-		FrontControllerClass frontControllerClass = (FrontControllerClass) class_;
+		FrontControllerClass frontControllerClass = (FrontControllerClass) element;
 		FrontControllerTemplate frontControllerTemplate = (FrontControllerTemplate) frameworkTemplate;
 		
 		IFile frontControllerClassTemplateFile = templateFolder.getFile(frontControllerTemplate.getClassTemplate());
@@ -170,7 +170,7 @@ public class ClassRenderer {
 //	TODO implementar o renderizador de pagina html
 	@SuppressWarnings("unused")
 	private String renderPage() {
-		Page page = (Page) class_;
+		Page page = (Page) element;
 		FrontControllerTemplate frontControllerTemplate = (FrontControllerTemplate) frameworkTemplate;
 		
 		IFile pageTemplateFile = templateFolder.getFile(frontControllerTemplate.getPageTemplate());
@@ -187,7 +187,7 @@ public class ClassRenderer {
 	}
 	
 	private String renderDAOInterface() {
-		DAOInterface daoInterface = (DAOInterface) class_;
+		DAOInterface daoInterface = (DAOInterface) element;
 		DAOTemplate daoTemplate = (DAOTemplate) frameworkTemplate;
 		
 		IFile daoInterfaceTemplateFile = templateFolder.getFile(daoTemplate.getInterfaceTemplate());
@@ -206,7 +206,7 @@ public class ClassRenderer {
 	}
 	
 	private String renderDAOClass() {
-		DAOClass daoClass = (DAOClass) class_;
+		DAOClass daoClass = (DAOClass) element;
 		DAOTemplate daoTemplate = (DAOTemplate) frameworkTemplate;
 		
 		IFile DAOClassTemplateFile = templateFolder.getFile(daoTemplate.getClassTemplate());
@@ -232,7 +232,7 @@ public class ClassRenderer {
 	}
 
 	private String renderServiceInterface() {
-		ServiceInterface serviceInterface = (ServiceInterface) class_;
+		ServiceInterface serviceInterface = (ServiceInterface) element;
 		DITemplate diTemplate = (DITemplate) frameworkTemplate;
 		
 		IFile serviceInterfaceTemplateFile = templateFolder.getFile(diTemplate.getInterfaceTemplate());
@@ -251,7 +251,7 @@ public class ClassRenderer {
 	}
 	
 	private String renderServiceClass() {
-		ServiceClass serviceClass = (ServiceClass) class_;
+		ServiceClass serviceClass = (ServiceClass) element;
 		DITemplate diTemplate = (DITemplate) frameworkTemplate;
 		
 		IFile serviceClassTemplateFile = templateFolder.getFile(diTemplate.getClassTemplate());

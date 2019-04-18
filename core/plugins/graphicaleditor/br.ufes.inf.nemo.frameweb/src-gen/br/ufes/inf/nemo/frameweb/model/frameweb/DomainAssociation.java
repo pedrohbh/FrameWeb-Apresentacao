@@ -157,4 +157,20 @@ public interface DomainAssociation extends Association {
 	 */
 	Property getTargetMember();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" dataType="org.eclipse.uml2.types.String"
+	 * @generated
+	 */
+	String getSourceCardinality();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" dataType="org.eclipse.uml2.types.String"
+	 * @generated
+	 */
+	String getTargetCardinality();
+
 } // DomainAssociation

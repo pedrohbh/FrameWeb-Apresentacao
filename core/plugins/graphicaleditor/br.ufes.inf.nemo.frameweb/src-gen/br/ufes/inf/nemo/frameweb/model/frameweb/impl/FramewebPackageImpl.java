@@ -1225,6 +1225,26 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EOperation getDomainAssociation__GetSourceCardinality() {
+		return domainAssociationEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getDomainAssociation__GetTargetCardinality() {
+		return domainAssociationEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getAttribute() {
 		return attributeEClass;
 	}
@@ -3155,6 +3175,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEAttribute(domainAssociationEClass, DOMAIN_ASSOCIATION__ORDER);
 		createEOperation(domainAssociationEClass, DOMAIN_ASSOCIATION___GET_SOURCE_MEMBER);
 		createEOperation(domainAssociationEClass, DOMAIN_ASSOCIATION___GET_TARGET_MEMBER);
+		createEOperation(domainAssociationEClass, DOMAIN_ASSOCIATION___GET_SOURCE_CARDINALITY);
+		createEOperation(domainAssociationEClass, DOMAIN_ASSOCIATION___GET_TARGET_CARDINALITY);
 
 		attributeEClass = createEClass(ATTRIBUTE);
 		createEAttribute(attributeEClass, ATTRIBUTE__SIZE);
@@ -3643,6 +3665,12 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		initEOperation(getDomainAssociation__GetTargetMember(), theUMLPackage.getProperty(), "getTargetMember", 0, 1,
 				IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getDomainAssociation__GetSourceCardinality(), theTypesPackage.getString(),
+				"getSourceCardinality", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getDomainAssociation__GetTargetCardinality(), theTypesPackage.getString(),
+				"getTargetCardinality", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(attributeEClass, Attribute.class, "Attribute", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

@@ -15,23 +15,24 @@ public class {{ class.Name }} implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 {% for attribute in attributes %}
-	{% if attribute.isID() %}@Id{% endif %}
-	{% if attribute.isID() %}@GeneratedValue{% endif %}
-	{% if attribute.isIsNull() == false %}@NotNull{% endif %}
-	@Column{% if attribute.Size > 0 %}(length = {{ attribute.Size }}){% endif %}
+	{{ (attribute.isID()) 				? 	'@Id' 				: '' }}
+	{{ (attribute.isID()) 				?	'@GeneratedValue' 	: '' }}
+	{{ (attribute.isIsNull() == false) 	? 	'@NotNull' 			: '' }}
 	{{ attribute.Visibility.Name }} {{ attribute.Type.Name }} {{ attribute.Name }};
 {% endfor %}
 
 {% for association in associations %}
 	{%- set sourceMember = association.SourceMember -%}
 	{%- set targetMember = association.TargetMember -%}
+	
 	{% if sourceMember.Type.Name == class.Name and targetMember.Type.Name == class.Name %}
-	//Referenciando a si proprio
+	A -> A
 	{% elseif sourceMember.Type.Name == class.Name %}
-	//Referenciando ({{ targetMember.Type.Name }})
+	A -> B
 	{% elseif targetMember.Type.Name == class.Name %}
-	//Referenciado por ({{ sourceMember.Type.Name }})
+	A <- B
 	{% endif %}
+	
 {% endfor %}
 
 	public {{ class.Name }}() {

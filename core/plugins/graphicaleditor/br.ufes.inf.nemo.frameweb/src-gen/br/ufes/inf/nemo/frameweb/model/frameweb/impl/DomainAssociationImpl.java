@@ -260,6 +260,29 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 */
+	@Override
+	public String getSourceCardinality() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getTargetCardinality() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -357,6 +380,10 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 			return getSourceMember();
 		case FramewebPackage.DOMAIN_ASSOCIATION___GET_TARGET_MEMBER:
 			return getTargetMember();
+		case FramewebPackage.DOMAIN_ASSOCIATION___GET_SOURCE_CARDINALITY:
+			return getSourceCardinality();
+		case FramewebPackage.DOMAIN_ASSOCIATION___GET_TARGET_CARDINALITY:
+			return getTargetCardinality();
 		}
 		return super.eInvoke(operationID, arguments);
 	}
