@@ -163,7 +163,7 @@ public interface DomainAssociation extends Association {
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String"
 	 * @generated
 	 */
-	String getSourceCardinality();
+	String getSourceToTargetCardinality();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -171,6 +171,6 @@ public interface DomainAssociation extends Association {
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String"
 	 * @generated
 	 */
-	String getTargetCardinality();
+	String getTargetToSourceCardinality();
 
 } // DomainAssociation

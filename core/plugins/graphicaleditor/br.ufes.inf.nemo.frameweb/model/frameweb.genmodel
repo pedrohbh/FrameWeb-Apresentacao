@@ -97,8 +97,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DomainAssociation/order"/>
       <genOperations ecoreOperation="frameweb.ecore#//DomainAssociation/getSourceMember"/>
       <genOperations ecoreOperation="frameweb.ecore#//DomainAssociation/getTargetMember"/>
-      <genOperations ecoreOperation="frameweb.ecore#//DomainAssociation/getSourceCardinality"/>
-      <genOperations ecoreOperation="frameweb.ecore#//DomainAssociation/getTargetCardinality"/>
+      <genOperations ecoreOperation="frameweb.ecore#//DomainAssociation/getSourceToTargetCardinality"/>
+      <genOperations ecoreOperation="frameweb.ecore#//DomainAssociation/getTargetToSourceCardinality"/>
     </genClasses>
     <genClasses image="false" ecoreClass="frameweb.ecore#//Attribute">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//Attribute/size"/>

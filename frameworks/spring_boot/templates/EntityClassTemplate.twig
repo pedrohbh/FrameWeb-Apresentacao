@@ -1,6 +1,7 @@
 package {{ package.Name }};
 
 import java.io.Serializable;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -24,15 +25,57 @@ public class {{ class.Name }} implements Serializable {
 {% for association in associations %}
 	{%- set sourceMember = association.SourceMember -%}
 	{%- set targetMember = association.TargetMember -%}
+	{%- set sourceToTargetCardinality = association.SourceToTargetCardinality -%}
+	{%- set targetToSourceCardinality = association.TargetToSourceCardinality -%}
 	
 	{% if sourceMember.Type.Name == class.Name and targetMember.Type.Name == class.Name %}
-	A -> A
-	{% elseif sourceMember.Type.Name == class.Name %}
-	A -> B
-	{% elseif targetMember.Type.Name == class.Name %}
-	A <- B
-	{% endif %}
+		{# TODO #}
+		{% if sourceToTargetCardinality == "OneToMany" %}
 	
+		{% elseif sourceToTargetCardinality == "ManyToOne" %}
+		
+		{% elseif sourceToTargetCardinality == "OneToOne" %}
+		
+		{% elseif sourceToTargetCardinality == "ManyToMany" %}
+		
+		{% endif %}
+	{% elseif sourceMember.Type.Name == class.Name %}
+		{% if sourceToTargetCardinality == "OneToMany" %}
+		@OneToMany(mappedBy="{{ sourceMember.Type.Name | lower }}")
+		private {{ association.Collection | title }}<{{ targetMember.Type.Name }}> collection{{ targetMember.Type.Name }};
+		{% elseif sourceToTargetCardinality == "ManyToOne" %}
+		@ManyToOne
+		@JoinColumn(name = "{{ targetMember.Type.Name | lower }}_id")
+		private {{ targetMember.Type.Name }} {{ targetMember.Type.Name | lower }};
+		{% elseif sourceToTargetCardinality == "OneToOne" %}
+		@OneToOne
+		@JoinColumn(name = "{{ targetMember.Type.Name | lower }}_id")
+		private {{ targetMember.Type.Name }} {{ targetMember.Type.Name | lower }};
+		{% elseif sourceToTargetCardinality == "ManyToMany" %}
+		@ManyToMany
+		@JoinTable(
+			name = "{{ sourceMember.Type.Name | lower }}_{{ targetMember.Type.Name | lower }}",
+			joinColumns = @JoinColumn(name = "{{ sourceMember.Type.Name | lower }}_id"),
+			inverseJoinColumns = @JoinColumn(name = "{{ targetMember.Type.Name | lower }}_id")
+		)
+		private {{ association.Collection | title }}<{{ targetMember.Type.Name }}> collection{{ targetMember.Type.Name }};
+		{% endif %}
+	{% elseif targetMember.Type.Name == class.Name %}
+		{% if targetToSourceCardinality == "OneToMany" %}
+		@OneToMany(mappedBy="{{ targetMember.Type.Name | lower }}")
+		private {{ association.Collection | title }}<{{ sourceMember.Type.Name }}> collection{{ sourceMember.Type.Name }};
+		{% elseif targetToSourceCardinality == "ManyToOne" %}
+		@ManyToOne
+		@JoinColumn(name = "{{ sourceMember.Type.Name | lower }}_id")
+		private {{ sourceMember.Type.Name }} {{ sourceMember.Type.Name | lower }};
+		{% elseif sourceToTargetCardinality == "OneToOne" %}
+		@OneToOne(mappedBy="{{ targetMember.Type.Name | lower }}")
+		private {{ sourceMember.Type.Name }} {{ sourceMember.Type.Name | lower }};
+		{% elseif sourceToTargetCardinality == "ManyToMany" %}
+		@ManyToMany(mappedBy="collection{{ targetMember.Type.Name }}")
+		private {{ association.Collection | title }}<{{ sourceMember.Type.Name }}> collection{{ sourceMember.Type.Name }};
+		{% endif %}
+	{% endif %}
 {% endfor %}
 
 	public {{ class.Name }}() {

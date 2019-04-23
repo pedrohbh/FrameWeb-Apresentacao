@@ -262,22 +262,44 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * <!-- end-user-doc -->
 	 */
 	@Override
-	public String getSourceCardinality() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public String getSourceToTargetCardinality() {
+		Property sourceMember = getSourceMember();
+		Property targetMember = getTargetMember();
+		
+		if ((sourceMember.getLower() == 1 || sourceMember.getLower() == 0) && sourceMember.getUpper() == 1) {
+			if (targetMember.getUpper() == -1 || targetMember.getUpper() > 1) {
+				return "OneToMany";
+				
+			} else {
+				return "OneToOne";
+			}
+			
+		} else {
+			if (targetMember.getUpper() == -1 || targetMember.getUpper() > 1) {
+				return "ManyToMany";
+			} else {
+				return "ManyToOne";
+			}
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	@Override
-	public String getTargetCardinality() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public String getTargetToSourceCardinality() {
+		String relationCardinality = getSourceToTargetCardinality();
+		
+		if (relationCardinality == "OneToMany") {
+			return "ManyToOne";
+		
+		} else if (relationCardinality == "ManyToOne") {
+			return "OneToMany";
+		
+		} else {
+			return relationCardinality;
+		}
 	}
 
 	/**
@@ -380,10 +402,10 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 			return getSourceMember();
 		case FramewebPackage.DOMAIN_ASSOCIATION___GET_TARGET_MEMBER:
 			return getTargetMember();
-		case FramewebPackage.DOMAIN_ASSOCIATION___GET_SOURCE_CARDINALITY:
-			return getSourceCardinality();
-		case FramewebPackage.DOMAIN_ASSOCIATION___GET_TARGET_CARDINALITY:
-			return getTargetCardinality();
+		case FramewebPackage.DOMAIN_ASSOCIATION___GET_SOURCE_TO_TARGET_CARDINALITY:
+			return getSourceToTargetCardinality();
+		case FramewebPackage.DOMAIN_ASSOCIATION___GET_TARGET_TO_SOURCE_CARDINALITY:
+			return getTargetToSourceCardinality();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -4,7 +4,7 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.PersistenceContext;
 
 @Repository
-public class {{ class.Name }} {% if generalizations is not empty %}extends {{ generalizations.get(0).getGeneralizationSets().get(0).Name }}{% endif %}{
+public class {{ class.Name }} implements {{ class.Name | replace({'Impl': ''}) }}{#{% if generalizations is not empty %}extends {{ generalizations.get(0).getGeneralizationSets().get(0).Name }}{% endif %}#}{
 
     @PersistenceContext
     EntityManager entityManager;
