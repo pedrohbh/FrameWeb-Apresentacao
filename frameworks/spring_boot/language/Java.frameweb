@@ -9,7 +9,6 @@
     <packagedElement xsi:type="uml:PrimitiveType" name="double"/>
     <packagedElement xsi:type="uml:PrimitiveType" name="boolean"/>
     <packagedElement xsi:type="uml:PrimitiveType" name="char"/>
-	<packagedElement xsi:type="uml:PrimitiveType" name="void"/>
     <packagedElement xsi:type="uml:Class" name="Object"/>
     <packagedElement xsi:type="uml:Class" name="String"/>
     <packagedElement xsi:type="uml:Class" name="Calendar"/>
