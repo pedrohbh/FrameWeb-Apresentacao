@@ -57,7 +57,7 @@ public class {{ class.Name }} implements Serializable {
 		{% elseif sourceToTargetCardinality == "ManyToMany" %}
 		@ManyToMany
 		@JoinTable(
-			name = "{{ sourceName }}_{{ sourceName }}",
+			name = "{{ sourceName }}_{{ targetName }}",
 			joinColumns = @JoinColumn("{{ sourceName }}_id"),
 			inverseJoinColumns = @JoinColumn("{{ targetName }}_id")
 		)
