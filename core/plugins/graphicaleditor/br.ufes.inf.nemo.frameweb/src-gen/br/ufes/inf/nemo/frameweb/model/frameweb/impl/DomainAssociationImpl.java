@@ -239,8 +239,8 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 */
 	@Override
 	public Property getSourceMember() {
-//		Property sourceMember = getMemberEnds().stream().filter(member -> member.getName().equals("Source")).findFirst()
-//				.get();
+		//		Property sourceMember = getMemberEnds().stream().filter(member -> member.getName().equals("Source")).findFirst()
+		//				.get();
 		Property sourceMember = getMemberEnds().get(0);
 
 		return sourceMember;
@@ -252,8 +252,8 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 */
 	@Override
 	public Property getTargetMember() {
-//		Property targetMember = getMemberEnds().stream().filter(member -> member.getName().equals("Target")).findFirst()
-//				.get();
+		//		Property targetMember = getMemberEnds().stream().filter(member -> member.getName().equals("Target")).findFirst()
+		//				.get();
 		Property targetMember = getMemberEnds().get(1);
 
 		return targetMember;
@@ -267,15 +267,15 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	public String getSourceToTargetCardinality() {
 		Property sourceMember = getSourceMember();
 		Property targetMember = getTargetMember();
-		
+
 		if ((sourceMember.getLower() == 1 || sourceMember.getLower() == 0) && sourceMember.getUpper() == 1) {
 			if (targetMember.getUpper() == -1 || targetMember.getUpper() > 1) {
 				return "OneToMany";
-				
+
 			} else {
 				return "OneToOne";
 			}
-			
+
 		} else {
 			if (targetMember.getUpper() == -1 || targetMember.getUpper() > 1) {
 				return "ManyToMany";
@@ -292,13 +292,13 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	@Override
 	public String getTargetToSourceCardinality() {
 		String relationCardinality = getSourceToTargetCardinality();
-		
+
 		if (relationCardinality == "OneToMany") {
 			return "ManyToOne";
-		
+
 		} else if (relationCardinality == "ManyToOne") {
 			return "OneToMany";
-		
+
 		} else {
 			return relationCardinality;
 		}

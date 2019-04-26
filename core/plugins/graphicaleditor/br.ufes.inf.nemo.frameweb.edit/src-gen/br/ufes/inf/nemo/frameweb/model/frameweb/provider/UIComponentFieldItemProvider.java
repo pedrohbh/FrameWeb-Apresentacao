@@ -3,8 +3,8 @@
 package br.ufes.inf.nemo.frameweb.model.frameweb.provider;
 
 import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage;
-
 import br.ufes.inf.nemo.frameweb.model.frameweb.UIComponentField;
+
 import java.util.Collection;
 import java.util.List;
 

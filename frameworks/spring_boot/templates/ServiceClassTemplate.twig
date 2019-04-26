@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class {{ class.Name }} implements {{ class.Name | replace({'Impl': ''}) }} {#{% for realization in realizations %}realization.Name{% if loop.last == false %}, {% endif %}{% endfor %}#}{
+public class {{ class.Name }} {% if generalizations is not empty %}extends {{ ((generalizations[0]).GeneralizationSets[0]).Name }} {% endif %}implements {{ class.Name | replace({'Impl': ''}) }} {
 	
 	{% for association in associations %}
 	@Autowired

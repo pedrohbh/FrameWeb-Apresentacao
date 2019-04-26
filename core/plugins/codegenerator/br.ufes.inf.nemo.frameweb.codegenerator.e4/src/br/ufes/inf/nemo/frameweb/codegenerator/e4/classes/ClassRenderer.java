@@ -25,6 +25,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkProfile;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
+import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
@@ -44,6 +45,9 @@ public class ClassRenderer {
 	public final static String GENERALIZATIONS = "generalizations";
 	public final static String REALIZATIONS = "realizations";
 	public final static String LITERALS = "literals";
+	public final static String RESULT_DEPENDENCY = "resultDependency";
+	public final static String NAVIGATION_ASSOCIATION = "navigationAssociation";
+	public final static String PAGE = "page";
 	
 	private Element element;
 	private FrameworkProfile frameworkTemplate;
@@ -168,7 +172,6 @@ public class ClassRenderer {
 	}
 	
 //	TODO implementar o renderizador de pagina html
-	@SuppressWarnings("unused")
 	private String renderPage() {
 		Page page = (Page) element;
 		FrontControllerTemplate frontControllerTemplate = (FrontControllerTemplate) frameworkTemplate;
@@ -178,6 +181,14 @@ public class ClassRenderer {
 		
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
 		templateEngineContext.setTemplate(pageTemplate);
+		
+		templateEngineContext
+			.addParameter(PAGE, page)
+			.addParameter(NAVIGATION_ASSOCIATION, page.getAssociations()
+					.stream()
+					.filter(NavigationAssociation.class::isInstance)
+					.map(NavigationAssociation.class::cast)
+					.collect(Collectors.toList()));
 		
 		/*
 		 * ADD TEMPLATE ENGINE PARAMETERS

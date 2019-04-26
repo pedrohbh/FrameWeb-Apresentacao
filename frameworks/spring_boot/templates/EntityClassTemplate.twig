@@ -17,7 +17,7 @@ import javax.persistence.ManyToMany;
 import javax.validation.constraints.NotNull;
 
 @Entity
-public class {{ class.Name }} implements Serializable {
+public class {{ class.Name }} {% if generalizations is not empty %}extends {{ ((generalizations[0]).GeneralizationSets[0]).Name }} {% endif %}implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
