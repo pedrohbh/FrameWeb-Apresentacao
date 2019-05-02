@@ -623,13 +623,13 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseFramewebConfiguration(FramewebConfiguration object) {
-			return createFramewebConfigurationAdapter();
+		public Adapter caseDAOTemplate(DAOTemplate object) {
+			return createDAOTemplateAdapter();
 		}
 
 		@Override
-		public Adapter caseDAOTemplate(DAOTemplate object) {
-			return createDAOTemplateAdapter();
+		public Adapter caseFrameWebConfiguration(FrameWebConfiguration object) {
+			return createFrameWebConfigurationAdapter();
 		}
 
 		@Override
@@ -2304,20 +2304,6 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FramewebConfiguration <em>Configuration</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebConfiguration
-	 * @generated
-	 */
-	public Adapter createFramewebConfigurationAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate <em>DAO Template</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -2328,6 +2314,20 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDAOTemplateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration <em>Frame Web Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration
+	 * @generated
+	 */
+	public Adapter createFrameWebConfigurationAdapter() {
 		return null;
 	}
 

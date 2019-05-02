@@ -13,6 +13,7 @@ import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.ApplicationModelCodeGen
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.EntityModelCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.NavigationModelCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.PersistenceModelCodeGenerator;
+import br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration;
 import br.ufes.inf.nemo.frameweb.utils.IProjectUtils;
 
 public class CodeGenerator implements IExternalJavaAction {
@@ -32,11 +33,11 @@ public class CodeGenerator implements IExternalJavaAction {
 
 		IProject project = IProjectUtils.getSelectedProject();
 		
-//		FramewebConfiguration fwConfig = representation.getFramewebConfiguration();
+		FrameWebConfiguration fwConfig = representation.getFrameWebConfiguration();
 		
-		IFolder srcFolder = project.getFolder("/src");
-		IFolder templatesFolder = project.getFolder("/templates");
-		IFolder viewsFolder = project.getFolder("/WebContent/WEB-INF");
+		IFolder srcFolder = project.getFolder(fwConfig.getSrcPath());
+		IFolder templatesFolder = project.getFolder(fwConfig.getTemplatePath());
+		IFolder viewsFolder = project.getFolder(fwConfig.getViewPath());
 		
 		if (representation.hasEntityModel() && representation.hasORMTemplate()) {
 			EntityModelCodeGenerator entityModelCodeGenerator = new EntityModelCodeGenerator(

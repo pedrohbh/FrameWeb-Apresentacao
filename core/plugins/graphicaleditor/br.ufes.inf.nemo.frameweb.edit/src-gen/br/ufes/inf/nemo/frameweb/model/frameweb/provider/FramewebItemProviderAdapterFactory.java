@@ -2212,29 +2212,6 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.FramewebConfiguration} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FramewebConfigurationItemProvider framewebConfigurationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.FramewebConfiguration}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFramewebConfigurationAdapter() {
-		if (framewebConfigurationItemProvider == null) {
-			framewebConfigurationItemProvider = new FramewebConfigurationItemProvider(this);
-		}
-
-		return framewebConfigurationItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2255,6 +2232,29 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 		}
 
 		return daoTemplateItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FrameWebConfigurationItemProvider frameWebConfigurationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFrameWebConfigurationAdapter() {
+		if (frameWebConfigurationItemProvider == null) {
+			frameWebConfigurationItemProvider = new FrameWebConfigurationItemProvider(this);
+		}
+
+		return frameWebConfigurationItemProvider;
 	}
 
 	/**
@@ -2548,10 +2548,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 			diTemplateItemProvider.dispose();
 		if (ormTemplateItemProvider != null)
 			ormTemplateItemProvider.dispose();
-		if (framewebConfigurationItemProvider != null)
-			framewebConfigurationItemProvider.dispose();
 		if (daoTemplateItemProvider != null)
 			daoTemplateItemProvider.dispose();
+		if (frameWebConfigurationItemProvider != null)
+			frameWebConfigurationItemProvider.dispose();
 	}
 
 }

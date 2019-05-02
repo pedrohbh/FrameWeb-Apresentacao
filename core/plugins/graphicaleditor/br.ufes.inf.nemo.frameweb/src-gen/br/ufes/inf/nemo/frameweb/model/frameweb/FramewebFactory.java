@@ -859,15 +859,6 @@ public interface FramewebFactory extends EFactory {
 	ORMTemplate createORMTemplate();
 
 	/**
-	 * Returns a new object of class '<em>Configuration</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Configuration</em>'.
-	 * @generated
-	 */
-	FramewebConfiguration createFramewebConfiguration();
-
-	/**
 	 * Returns a new object of class '<em>DAO Template</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -875,6 +866,15 @@ public interface FramewebFactory extends EFactory {
 	 * @generated
 	 */
 	DAOTemplate createDAOTemplate();
+
+	/**
+	 * Returns a new object of class '<em>Frame Web Configuration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Frame Web Configuration</em>'.
+	 * @generated
+	 */
+	FrameWebConfiguration createFrameWebConfiguration();
 
 	/**
 	 * Returns the package supported by this factory.

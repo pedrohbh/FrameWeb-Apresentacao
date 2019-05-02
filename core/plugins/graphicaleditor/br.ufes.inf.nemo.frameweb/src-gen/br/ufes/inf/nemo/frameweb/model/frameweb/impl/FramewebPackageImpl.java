@@ -2,123 +2,7 @@
  */
 package br.ufes.inf.nemo.frameweb.model.frameweb.impl;
 
-import br.ufes.inf.nemo.frameweb.model.frameweb.Annotation;
-import br.ufes.inf.nemo.frameweb.model.frameweb.AnonymousIndividual;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationModel;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationPackage;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Attribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.AttributeMapping;
-import br.ufes.inf.nemo.frameweb.model.frameweb.AttributeMappingProperty;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Axiom;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Cascade;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ChainingConstraint;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ClassMapping;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ClassMappingPropery;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Collection;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ConstantNameList;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Controller;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ControllerPackage;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DAOAttribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DAOClass;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DAOGeneralization;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DAOGeneralizationSet;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DAOInterface;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DAOMethod;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DAORealization;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DAOServiceAssociation;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DataProperty;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DateTimeAttribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DateTimePrecision;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DecimalAttribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAssociation;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAttribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainConstraints;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainGeneralization;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainGeneralizationSet;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainMethod;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainProperty;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainVocabularyAssociation;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainVocabularyProperty;
-import br.ufes.inf.nemo.frameweb.model.frameweb.EmbeddedAttribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.EntityModel;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Fetch;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebConfiguration;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebFactory;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebModel;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebProject;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkCategoryList;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkKindList;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkProfile;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerDependency;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerMethod;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Generation;
-import br.ufes.inf.nemo.frameweb.model.frameweb.IOParameter;
-import br.ufes.inf.nemo.frameweb.model.frameweb.IdAttribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Individual;
-import br.ufes.inf.nemo.frameweb.model.frameweb.InheritanceMapping;
-import br.ufes.inf.nemo.frameweb.model.frameweb.LOBAttribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.MappingLib;
-import br.ufes.inf.nemo.frameweb.model.frameweb.MethodConstraint;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NamedIndividual;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAssociation;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAttribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationClass;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationCompositionPart;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationCompositionWhole;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationConstraint;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationDependency;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationGeneralization;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationGeneralizationSet;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationModel;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationPackage;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationProperty;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ObjectProperty;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Order;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
-import br.ufes.inf.nemo.frameweb.model.frameweb.PageConstraint;
-import br.ufes.inf.nemo.frameweb.model.frameweb.PageDependency;
-import br.ufes.inf.nemo.frameweb.model.frameweb.PersistenceModel;
-import br.ufes.inf.nemo.frameweb.model.frameweb.PersistencePackage;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ResultConstraint;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ResultDependency;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ResultProperty;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ResultSet;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ResultType;
-import br.ufes.inf.nemo.frameweb.model.frameweb.SemanticPackage;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceAssociation;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceAttribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceControllerAssociation;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceGeneralization;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceGeneralizationSet;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceInterface;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceMethod;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceRealization;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Tag;
-import br.ufes.inf.nemo.frameweb.model.frameweb.TagLib;
-import br.ufes.inf.nemo.frameweb.model.frameweb.TagProperty;
-import br.ufes.inf.nemo.frameweb.model.frameweb.UIComponent;
-import br.ufes.inf.nemo.frameweb.model.frameweb.UIComponentField;
-import br.ufes.inf.nemo.frameweb.model.frameweb.VersionAttribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ViewPackage;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Vocabulary;
-import br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyAssociation;
-import br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyClass;
-import br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyConstraints;
-import br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyDataType;
-import br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyEntity;
-import br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyLiteral;
-import br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyModel;
-import br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyProperty;
-
+import br.ufes.inf.nemo.frameweb.model.frameweb.*;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -867,14 +751,14 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass framewebConfigurationEClass = null;
+	private EClass daoTemplateEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass daoTemplateEClass = null;
+	private EClass frameWebConfigurationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2915,46 +2799,6 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getFramewebConfiguration() {
-		return framewebConfigurationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getFramewebConfiguration_SourcePath() {
-		return (EAttribute) framewebConfigurationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getFramewebConfiguration_TemplatesPath() {
-		return (EAttribute) framewebConfigurationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getFramewebConfiguration_ViewsPath() {
-		return (EAttribute) framewebConfigurationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getDAOTemplate() {
 		return daoTemplateEClass;
 	}
@@ -2997,6 +2841,46 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	@Override
 	public EAttribute getDAOTemplate_InterfaceExtension() {
 		return (EAttribute) daoTemplateEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFrameWebConfiguration() {
+		return frameWebConfigurationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFrameWebConfiguration_SrcPath() {
+		return (EAttribute) frameWebConfigurationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFrameWebConfiguration_ViewPath() {
+		return (EAttribute) frameWebConfigurationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFrameWebConfiguration_TemplatePath() {
+		return (EAttribute) frameWebConfigurationEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -3440,16 +3324,16 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE);
 
-		framewebConfigurationEClass = createEClass(FRAMEWEB_CONFIGURATION);
-		createEAttribute(framewebConfigurationEClass, FRAMEWEB_CONFIGURATION__SOURCE_PATH);
-		createEAttribute(framewebConfigurationEClass, FRAMEWEB_CONFIGURATION__TEMPLATES_PATH);
-		createEAttribute(framewebConfigurationEClass, FRAMEWEB_CONFIGURATION__VIEWS_PATH);
-
 		daoTemplateEClass = createEClass(DAO_TEMPLATE);
 		createEAttribute(daoTemplateEClass, DAO_TEMPLATE__CLASS_TEMPLATE);
 		createEAttribute(daoTemplateEClass, DAO_TEMPLATE__INTERFACE_TEMPLATE);
 		createEAttribute(daoTemplateEClass, DAO_TEMPLATE__CLASS_EXTENSION);
 		createEAttribute(daoTemplateEClass, DAO_TEMPLATE__INTERFACE_EXTENSION);
+
+		frameWebConfigurationEClass = createEClass(FRAME_WEB_CONFIGURATION);
+		createEAttribute(frameWebConfigurationEClass, FRAME_WEB_CONFIGURATION__SRC_PATH);
+		createEAttribute(frameWebConfigurationEClass, FRAME_WEB_CONFIGURATION__VIEW_PATH);
+		createEAttribute(frameWebConfigurationEClass, FRAME_WEB_CONFIGURATION__TEMPLATE_PATH);
 
 		// Create enums
 		frameworkCategoryListEEnum = createEEnum(FRAMEWORK_CATEGORY_LIST);
@@ -3609,6 +3493,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		diTemplateEClass.getESuperTypes().add(this.getFrameworkProfile());
 		ormTemplateEClass.getESuperTypes().add(this.getFrameworkProfile());
 		daoTemplateEClass.getESuperTypes().add(this.getFrameworkProfile());
+		frameWebConfigurationEClass.getESuperTypes().add(this.getFrameworkProfile());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(framewebProjectEClass, FramewebProject.class, "FramewebProject", !IS_ABSTRACT, !IS_INTERFACE,
@@ -4160,18 +4045,6 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 				"enumerationClassTemplate", null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(framewebConfigurationEClass, FramewebConfiguration.class, "FramewebConfiguration", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFramewebConfiguration_SourcePath(), theTypesPackage.getString(), "sourcePath", null, 0, 1,
-				FramewebConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFramewebConfiguration_TemplatesPath(), theTypesPackage.getString(), "templatesPath", null, 0,
-				1, FramewebConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFramewebConfiguration_ViewsPath(), theTypesPackage.getString(), "viewsPath", null, 0, 1,
-				FramewebConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(daoTemplateEClass, DAOTemplate.class, "DAOTemplate", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDAOTemplate_ClassTemplate(), theTypesPackage.getString(), "classTemplate", null, 0, 1,
@@ -4186,6 +4059,18 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getDAOTemplate_InterfaceExtension(), theTypesPackage.getString(), "interfaceExtension", null, 0,
 				1, DAOTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(frameWebConfigurationEClass, FrameWebConfiguration.class, "FrameWebConfiguration", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFrameWebConfiguration_SrcPath(), theTypesPackage.getString(), "srcPath", null, 0, 1,
+				FrameWebConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFrameWebConfiguration_ViewPath(), theTypesPackage.getString(), "viewPath", null, 0, 1,
+				FrameWebConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFrameWebConfiguration_TemplatePath(), theTypesPackage.getString(), "templatePath", null, 0, 1,
+				FrameWebConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(frameworkCategoryListEEnum, FrameworkCategoryList.class, "FrameworkCategoryList");

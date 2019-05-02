@@ -16,7 +16,7 @@ public class FrameWebFacetInstallDelegate implements IDelegate {
 		 * A barra de carregamento de tres estagios, adicao da natureza do Sirius, criacao do .aird e
 		 * a criacao do arquivo principal .frameweb
 		 */
-		monitor.beginTask("", 3);
+		monitor.beginTask("", 4);
 
 		FrameWebFacet frameWebFacet = new FrameWebFacet(project);
 
@@ -44,6 +44,12 @@ public class FrameWebFacetInstallDelegate implements IDelegate {
 			
 			frameWebFacet.createFrameWebFile();
 
+			monitor.worked(1);
+			
+			Thread.sleep(1000);
+			
+			frameWebFacet.createFrameWebConfigurationFile();
+			
 			monitor.worked(1);
 			
 			Thread.sleep(1000);

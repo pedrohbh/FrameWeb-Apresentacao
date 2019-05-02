@@ -17,7 +17,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.EntityModel;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebConfiguration;
+import br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkProfile;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
@@ -333,8 +333,20 @@ public class ProjectRepresentation {
 	 * 
 	 * @return
 	 */
-	public FramewebConfiguration getFramewebConfiguration() {
-		return null;
+	public FrameWebConfiguration getFrameWebConfiguration() {
+		try {
+			FrameWebConfiguration fwConfig = frameworkProfiles
+					.stream()
+					.filter(FrameWebConfiguration.class::isInstance)
+					.map(FrameWebConfiguration.class::cast)
+					.findFirst()
+					.get();
+			
+			return fwConfig;
+			
+		} catch (NullPointerException | NoSuchElementException e) {
+			return null;
+		}
 	}
 
 }

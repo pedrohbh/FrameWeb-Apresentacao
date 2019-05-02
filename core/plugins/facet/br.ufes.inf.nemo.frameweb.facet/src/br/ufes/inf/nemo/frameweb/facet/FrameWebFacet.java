@@ -16,6 +16,7 @@ public class FrameWebFacet {
 	
 	private final static String MODEL_FILE_NAME = "Model";
 	private final static String REPRESENTATIONS_FILE_NAME = "representations";
+	private final static String CONFIGURATION_FILE_NAME = "Configuration";
 	private final static String SIRIUS_MODELING_NATURE = "org.eclipse.sirius.nature.modelingproject";
 	
 	private IProject webProject;
@@ -56,6 +57,14 @@ public class FrameWebFacet {
 		}
 	}
 
+	public void removeConfigurationFile() throws CoreException {
+		IFile configuration = webProject.getFile(CONFIGURATION_FILE_NAME + ".frameweb");
+		
+		if (configuration.exists()) {
+			configuration.delete(true, null);
+		}
+	}
+	
 	/**
 	 * Cria um arquivo de diagramas .frameweb.
 	 * 
@@ -85,6 +94,16 @@ public class FrameWebFacet {
 		}
 	}
 
+	public void createFrameWebConfigurationFile() throws CoreException {
+		IFile fileConfigurationFrameWeb = webProject.getFile(CONFIGURATION_FILE_NAME + ".frameweb");
+		
+		if (!fileConfigurationFrameWeb.exists()) {
+			Path pathConfigurationPlugin = new Path("BASE-FILES/Configuration.xml");
+			copyFromPlugin(pathConfigurationPlugin, fileConfigurationFrameWeb);
+		}
+		
+	}
+	
 	/**
 	 * Cria um fluxo entre um arquivo localizado na raiz do plugin para um arquivo
 	 * localizado no projeto web onde a faceta foi instalada.

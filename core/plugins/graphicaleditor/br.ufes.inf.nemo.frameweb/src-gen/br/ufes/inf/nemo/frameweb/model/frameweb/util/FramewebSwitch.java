@@ -3032,13 +3032,6 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.FRAMEWEB_CONFIGURATION: {
-			FramewebConfiguration framewebConfiguration = (FramewebConfiguration) theEObject;
-			T result = caseFramewebConfiguration(framewebConfiguration);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case FramewebPackage.DAO_TEMPLATE: {
 			DAOTemplate daoTemplate = (DAOTemplate) theEObject;
 			T result = caseDAOTemplate(daoTemplate);
@@ -3062,6 +3055,33 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = caseElement(daoTemplate);
 			if (result == null)
 				result = caseEModelElement(daoTemplate);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FramewebPackage.FRAME_WEB_CONFIGURATION: {
+			FrameWebConfiguration frameWebConfiguration = (FrameWebConfiguration) theEObject;
+			T result = caseFrameWebConfiguration(frameWebConfiguration);
+			if (result == null)
+				result = caseFrameworkProfile(frameWebConfiguration);
+			if (result == null)
+				result = caseProfile(frameWebConfiguration);
+			if (result == null)
+				result = casePackage(frameWebConfiguration);
+			if (result == null)
+				result = caseNamespace(frameWebConfiguration);
+			if (result == null)
+				result = casePackageableElement(frameWebConfiguration);
+			if (result == null)
+				result = caseTemplateableElement(frameWebConfiguration);
+			if (result == null)
+				result = caseNamedElement(frameWebConfiguration);
+			if (result == null)
+				result = caseParameterableElement(frameWebConfiguration);
+			if (result == null)
+				result = caseElement(frameWebConfiguration);
+			if (result == null)
+				result = caseEModelElement(frameWebConfiguration);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -4617,21 +4637,6 @@ public class FramewebSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Configuration</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Configuration</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFramewebConfiguration(FramewebConfiguration object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>DAO Template</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -4643,6 +4648,21 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDAOTemplate(DAOTemplate object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Frame Web Configuration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Frame Web Configuration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFrameWebConfiguration(FrameWebConfiguration object) {
 		return null;
 	}
 

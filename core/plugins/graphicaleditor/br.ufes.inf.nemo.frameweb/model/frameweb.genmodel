@@ -300,16 +300,16 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/abstractMethodTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/enumerationClassTemplate"/>
     </genClasses>
-    <genClasses ecoreClass="frameweb.ecore#//FramewebConfiguration">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FramewebConfiguration/sourcePath"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FramewebConfiguration/templatesPath"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FramewebConfiguration/viewsPath"/>
-    </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//DAOTemplate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DAOTemplate/classTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DAOTemplate/interfaceTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DAOTemplate/classExtension"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DAOTemplate/interfaceExtension"/>
+    </genClasses>
+    <genClasses ecoreClass="frameweb.ecore#//FrameWebConfiguration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrameWebConfiguration/srcPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrameWebConfiguration/viewPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrameWebConfiguration/templatePath"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

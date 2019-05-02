@@ -15,7 +15,7 @@ public class FrameWebFacetUninstallDelegate implements IDelegate {
 		/**
 		 * A barra de carregamento tera dois estagios, remocao da natureza do Sirius e remocao do arquivo .aird
 		 */
-		monitor.beginTask("", 2);
+		monitor.beginTask("", 3);
 		
 		FrameWebFacet webProject = new FrameWebFacet(project);
 		
@@ -24,6 +24,8 @@ public class FrameWebFacetUninstallDelegate implements IDelegate {
 			
 			monitor.worked(1);
 			
+			Thread.sleep(500);
+			
 			/**
 			 * Revisar se remover o representation.aird e realmente necessario
 			 */
@@ -31,6 +33,17 @@ public class FrameWebFacetUninstallDelegate implements IDelegate {
 			
 			monitor.worked(1);
 			
+			Thread.sleep(500);
+			
+			webProject.removeConfigurationFile();
+			
+			monitor.worked(1);
+			
+			Thread.sleep(500);
+			
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+
 		} finally {
 			monitor.done();
 		}
