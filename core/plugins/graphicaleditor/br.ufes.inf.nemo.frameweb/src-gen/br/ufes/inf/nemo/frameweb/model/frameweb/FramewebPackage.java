@@ -30516,13 +30516,22 @@ public interface FramewebPackage extends EPackage {
 	int RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT = NAVIGATION_DEPENDENCY_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Http Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESULT_DEPENDENCY__HTTP_STATUS = NAVIGATION_DEPENDENCY_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Result Dependency</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_DEPENDENCY_FEATURE_COUNT = NAVIGATION_DEPENDENCY_FEATURE_COUNT + 2;
+	int RESULT_DEPENDENCY_FEATURE_COUNT = NAVIGATION_DEPENDENCY_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Get EAnnotation</em>' operation.
@@ -32867,13 +32876,22 @@ public interface FramewebPackage extends EPackage {
 	int FRONT_CONTROLLER_METHOD__METHOD_TYPE = UMLPackage.OPERATION_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Request Method</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_METHOD__REQUEST_METHOD = UMLPackage.OPERATION_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Front Controller Method</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FRONT_CONTROLLER_METHOD_FEATURE_COUNT = UMLPackage.OPERATION_FEATURE_COUNT + 2;
+	int FRONT_CONTROLLER_METHOD_FEATURE_COUNT = UMLPackage.OPERATION_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Get EAnnotation</em>' operation.
@@ -127338,6 +127356,4104 @@ public interface FramewebPackage extends EPackage {
 	int FRAME_WEB_CONFIGURATION_OPERATION_COUNT = FRAMEWORK_PROFILE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.RestControllerTemplateImpl <em>Rest Controller Template</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.RestControllerTemplateImpl
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getRestControllerTemplate()
+	 * @generated
+	 */
+	int REST_CONTROLLER_TEMPLATE = 105;
+
+	/**
+	 * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__EANNOTATIONS = FRAMEWORK_PROFILE__EANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__OWNED_COMMENT = FRAMEWORK_PROFILE__OWNED_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Owned Element</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__OWNED_ELEMENT = FRAMEWORK_PROFILE__OWNED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Owner</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__OWNER = FRAMEWORK_PROFILE__OWNER;
+
+	/**
+	 * The feature id for the '<em><b>Client Dependency</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__CLIENT_DEPENDENCY = FRAMEWORK_PROFILE__CLIENT_DEPENDENCY;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__NAME = FRAMEWORK_PROFILE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Name Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__NAME_EXPRESSION = FRAMEWORK_PROFILE__NAME_EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Namespace</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__NAMESPACE = FRAMEWORK_PROFILE__NAMESPACE;
+
+	/**
+	 * The feature id for the '<em><b>Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__QUALIFIED_NAME = FRAMEWORK_PROFILE__QUALIFIED_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Visibility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__VISIBILITY = FRAMEWORK_PROFILE__VISIBILITY;
+
+	/**
+	 * The feature id for the '<em><b>Owned Rule</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__OWNED_RULE = FRAMEWORK_PROFILE__OWNED_RULE;
+
+	/**
+	 * The feature id for the '<em><b>Element Import</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__ELEMENT_IMPORT = FRAMEWORK_PROFILE__ELEMENT_IMPORT;
+
+	/**
+	 * The feature id for the '<em><b>Package Import</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__PACKAGE_IMPORT = FRAMEWORK_PROFILE__PACKAGE_IMPORT;
+
+	/**
+	 * The feature id for the '<em><b>Owned Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__OWNED_MEMBER = FRAMEWORK_PROFILE__OWNED_MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Imported Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__IMPORTED_MEMBER = FRAMEWORK_PROFILE__IMPORTED_MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__MEMBER = FRAMEWORK_PROFILE__MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Owning Template Parameter</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__OWNING_TEMPLATE_PARAMETER = FRAMEWORK_PROFILE__OWNING_TEMPLATE_PARAMETER;
+
+	/**
+	 * The feature id for the '<em><b>Template Parameter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__TEMPLATE_PARAMETER = FRAMEWORK_PROFILE__TEMPLATE_PARAMETER;
+
+	/**
+	 * The feature id for the '<em><b>Template Binding</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__TEMPLATE_BINDING = FRAMEWORK_PROFILE__TEMPLATE_BINDING;
+
+	/**
+	 * The feature id for the '<em><b>Owned Template Signature</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__OWNED_TEMPLATE_SIGNATURE = FRAMEWORK_PROFILE__OWNED_TEMPLATE_SIGNATURE;
+
+	/**
+	 * The feature id for the '<em><b>URI</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__URI = FRAMEWORK_PROFILE__URI;
+
+	/**
+	 * The feature id for the '<em><b>Nested Package</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__NESTED_PACKAGE = FRAMEWORK_PROFILE__NESTED_PACKAGE;
+
+	/**
+	 * The feature id for the '<em><b>Nesting Package</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__NESTING_PACKAGE = FRAMEWORK_PROFILE__NESTING_PACKAGE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Stereotype</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__OWNED_STEREOTYPE = FRAMEWORK_PROFILE__OWNED_STEREOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Type</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__OWNED_TYPE = FRAMEWORK_PROFILE__OWNED_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Package Merge</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__PACKAGE_MERGE = FRAMEWORK_PROFILE__PACKAGE_MERGE;
+
+	/**
+	 * The feature id for the '<em><b>Packaged Element</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__PACKAGED_ELEMENT = FRAMEWORK_PROFILE__PACKAGED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Profile Application</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__PROFILE_APPLICATION = FRAMEWORK_PROFILE__PROFILE_APPLICATION;
+
+	/**
+	 * The feature id for the '<em><b>Metaclass Reference</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__METACLASS_REFERENCE = FRAMEWORK_PROFILE__METACLASS_REFERENCE;
+
+	/**
+	 * The feature id for the '<em><b>Metamodel Reference</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__METAMODEL_REFERENCE = FRAMEWORK_PROFILE__METAMODEL_REFERENCE;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__CATEGORY = FRAMEWORK_PROFILE__CATEGORY;
+
+	/**
+	 * The feature id for the '<em><b>Kind</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__KIND = FRAMEWORK_PROFILE__KIND;
+
+	/**
+	 * The feature id for the '<em><b>Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__VERSION = FRAMEWORK_PROFILE__VERSION;
+
+	/**
+	 * The feature id for the '<em><b>Class Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__CLASS_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Class Extension</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE__CLASS_EXTENSION = FRAMEWORK_PROFILE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Rest Controller Template</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE_FEATURE_COUNT = FRAMEWORK_PROFILE_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get EAnnotation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_EANNOTATION__STRING = FRAMEWORK_PROFILE___GET_EANNOTATION__STRING;
+
+	/**
+	 * The operation id for the '<em>Validate Has Owner</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___VALIDATE_HAS_OWNER__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_HAS_OWNER__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Not Own Self</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___VALIDATE_NOT_OWN_SELF__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_NOT_OWN_SELF__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Add Keyword</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___ADD_KEYWORD__STRING = FRAMEWORK_PROFILE___ADD_KEYWORD__STRING;
+
+	/**
+	 * The operation id for the '<em>Apply Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___APPLY_STEREOTYPE__STEREOTYPE = FRAMEWORK_PROFILE___APPLY_STEREOTYPE__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Create EAnnotation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___CREATE_EANNOTATION__STRING = FRAMEWORK_PROFILE___CREATE_EANNOTATION__STRING;
+
+	/**
+	 * The operation id for the '<em>Destroy</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___DESTROY = FRAMEWORK_PROFILE___DESTROY;
+
+	/**
+	 * The operation id for the '<em>Get Keywords</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_KEYWORDS = FRAMEWORK_PROFILE___GET_KEYWORDS;
+
+	/**
+	 * The operation id for the '<em>Get Applicable Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_APPLICABLE_STEREOTYPE__STRING = FRAMEWORK_PROFILE___GET_APPLICABLE_STEREOTYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Applicable Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_APPLICABLE_STEREOTYPES = FRAMEWORK_PROFILE___GET_APPLICABLE_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Get Applied Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_APPLIED_STEREOTYPE__STRING = FRAMEWORK_PROFILE___GET_APPLIED_STEREOTYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Applied Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_APPLIED_STEREOTYPES = FRAMEWORK_PROFILE___GET_APPLIED_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Get Applied Substereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_APPLIED_SUBSTEREOTYPE__STEREOTYPE_STRING = FRAMEWORK_PROFILE___GET_APPLIED_SUBSTEREOTYPE__STEREOTYPE_STRING;
+
+	/**
+	 * The operation id for the '<em>Get Applied Substereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_APPLIED_SUBSTEREOTYPES__STEREOTYPE = FRAMEWORK_PROFILE___GET_APPLIED_SUBSTEREOTYPES__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Get Model</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_MODEL = FRAMEWORK_PROFILE___GET_MODEL;
+
+	/**
+	 * The operation id for the '<em>Get Nearest Package</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_NEAREST_PACKAGE = FRAMEWORK_PROFILE___GET_NEAREST_PACKAGE;
+
+	/**
+	 * The operation id for the '<em>Get Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_RELATIONSHIPS = FRAMEWORK_PROFILE___GET_RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>Get Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_RELATIONSHIPS__ECLASS = FRAMEWORK_PROFILE___GET_RELATIONSHIPS__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Get Required Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_REQUIRED_STEREOTYPE__STRING = FRAMEWORK_PROFILE___GET_REQUIRED_STEREOTYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Required Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_REQUIRED_STEREOTYPES = FRAMEWORK_PROFILE___GET_REQUIRED_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Get Source Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_SOURCE_DIRECTED_RELATIONSHIPS = FRAMEWORK_PROFILE___GET_SOURCE_DIRECTED_RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>Get Source Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_SOURCE_DIRECTED_RELATIONSHIPS__ECLASS = FRAMEWORK_PROFILE___GET_SOURCE_DIRECTED_RELATIONSHIPS__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Get Stereotype Application</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_STEREOTYPE_APPLICATION__STEREOTYPE = FRAMEWORK_PROFILE___GET_STEREOTYPE_APPLICATION__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Get Stereotype Applications</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_STEREOTYPE_APPLICATIONS = FRAMEWORK_PROFILE___GET_STEREOTYPE_APPLICATIONS;
+
+	/**
+	 * The operation id for the '<em>Get Target Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_TARGET_DIRECTED_RELATIONSHIPS = FRAMEWORK_PROFILE___GET_TARGET_DIRECTED_RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>Get Target Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_TARGET_DIRECTED_RELATIONSHIPS__ECLASS = FRAMEWORK_PROFILE___GET_TARGET_DIRECTED_RELATIONSHIPS__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_VALUE__STEREOTYPE_STRING = FRAMEWORK_PROFILE___GET_VALUE__STEREOTYPE_STRING;
+
+	/**
+	 * The operation id for the '<em>Has Keyword</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___HAS_KEYWORD__STRING = FRAMEWORK_PROFILE___HAS_KEYWORD__STRING;
+
+	/**
+	 * The operation id for the '<em>Has Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___HAS_VALUE__STEREOTYPE_STRING = FRAMEWORK_PROFILE___HAS_VALUE__STEREOTYPE_STRING;
+
+	/**
+	 * The operation id for the '<em>Is Stereotype Applicable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___IS_STEREOTYPE_APPLICABLE__STEREOTYPE = FRAMEWORK_PROFILE___IS_STEREOTYPE_APPLICABLE__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Is Stereotype Applied</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___IS_STEREOTYPE_APPLIED__STEREOTYPE = FRAMEWORK_PROFILE___IS_STEREOTYPE_APPLIED__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Is Stereotype Required</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___IS_STEREOTYPE_REQUIRED__STEREOTYPE = FRAMEWORK_PROFILE___IS_STEREOTYPE_REQUIRED__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Remove Keyword</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___REMOVE_KEYWORD__STRING = FRAMEWORK_PROFILE___REMOVE_KEYWORD__STRING;
+
+	/**
+	 * The operation id for the '<em>Set Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___SET_VALUE__STEREOTYPE_STRING_OBJECT = FRAMEWORK_PROFILE___SET_VALUE__STEREOTYPE_STRING_OBJECT;
+
+	/**
+	 * The operation id for the '<em>Unapply Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___UNAPPLY_STEREOTYPE__STEREOTYPE = FRAMEWORK_PROFILE___UNAPPLY_STEREOTYPE__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>All Owned Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___ALL_OWNED_ELEMENTS = FRAMEWORK_PROFILE___ALL_OWNED_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Must Be Owned</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___MUST_BE_OWNED = FRAMEWORK_PROFILE___MUST_BE_OWNED;
+
+	/**
+	 * The operation id for the '<em>Validate Visibility Needs Ownership</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___VALIDATE_VISIBILITY_NEEDS_OWNERSHIP__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_VISIBILITY_NEEDS_OWNERSHIP__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Has Qualified Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___VALIDATE_HAS_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_HAS_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Has No Qualified Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___VALIDATE_HAS_NO_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_HAS_NO_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Create Dependency</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___CREATE_DEPENDENCY__NAMEDELEMENT = FRAMEWORK_PROFILE___CREATE_DEPENDENCY__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Create Usage</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___CREATE_USAGE__NAMEDELEMENT = FRAMEWORK_PROFILE___CREATE_USAGE__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Get Label</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_LABEL = FRAMEWORK_PROFILE___GET_LABEL;
+
+	/**
+	 * The operation id for the '<em>Get Label</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_LABEL__BOOLEAN = FRAMEWORK_PROFILE___GET_LABEL__BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Get Namespace</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_NAMESPACE = FRAMEWORK_PROFILE___GET_NAMESPACE;
+
+	/**
+	 * The operation id for the '<em>All Namespaces</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___ALL_NAMESPACES = FRAMEWORK_PROFILE___ALL_NAMESPACES;
+
+	/**
+	 * The operation id for the '<em>All Owning Packages</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___ALL_OWNING_PACKAGES = FRAMEWORK_PROFILE___ALL_OWNING_PACKAGES;
+
+	/**
+	 * The operation id for the '<em>Is Distinguishable From</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___IS_DISTINGUISHABLE_FROM__NAMEDELEMENT_NAMESPACE = FRAMEWORK_PROFILE___IS_DISTINGUISHABLE_FROM__NAMEDELEMENT_NAMESPACE;
+
+	/**
+	 * The operation id for the '<em>Get Qualified Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_QUALIFIED_NAME = FRAMEWORK_PROFILE___GET_QUALIFIED_NAME;
+
+	/**
+	 * The operation id for the '<em>Separator</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___SEPARATOR = FRAMEWORK_PROFILE___SEPARATOR;
+
+	/**
+	 * The operation id for the '<em>Get Client Dependencies</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_CLIENT_DEPENDENCIES = FRAMEWORK_PROFILE___GET_CLIENT_DEPENDENCIES;
+
+	/**
+	 * The operation id for the '<em>Validate Members Distinguishable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___VALIDATE_MEMBERS_DISTINGUISHABLE__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_MEMBERS_DISTINGUISHABLE__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Cannot Import Self</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___VALIDATE_CANNOT_IMPORT_SELF__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_CANNOT_IMPORT_SELF__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Cannot Import Owned Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___VALIDATE_CANNOT_IMPORT_OWNED_MEMBERS__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_CANNOT_IMPORT_OWNED_MEMBERS__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Create Element Import</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___CREATE_ELEMENT_IMPORT__PACKAGEABLEELEMENT_VISIBILITYKIND = FRAMEWORK_PROFILE___CREATE_ELEMENT_IMPORT__PACKAGEABLEELEMENT_VISIBILITYKIND;
+
+	/**
+	 * The operation id for the '<em>Create Package Import</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___CREATE_PACKAGE_IMPORT__PACKAGE_VISIBILITYKIND = FRAMEWORK_PROFILE___CREATE_PACKAGE_IMPORT__PACKAGE_VISIBILITYKIND;
+
+	/**
+	 * The operation id for the '<em>Get Imported Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_IMPORTED_ELEMENTS = FRAMEWORK_PROFILE___GET_IMPORTED_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Get Imported Packages</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_IMPORTED_PACKAGES = FRAMEWORK_PROFILE___GET_IMPORTED_PACKAGES;
+
+	/**
+	 * The operation id for the '<em>Get Owned Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_OWNED_MEMBERS = FRAMEWORK_PROFILE___GET_OWNED_MEMBERS;
+
+	/**
+	 * The operation id for the '<em>Exclude Collisions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___EXCLUDE_COLLISIONS__ELIST = FRAMEWORK_PROFILE___EXCLUDE_COLLISIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Names Of Member</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_NAMES_OF_MEMBER__NAMEDELEMENT = FRAMEWORK_PROFILE___GET_NAMES_OF_MEMBER__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Import Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___IMPORT_MEMBERS__ELIST = FRAMEWORK_PROFILE___IMPORT_MEMBERS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Imported Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_IMPORTED_MEMBERS = FRAMEWORK_PROFILE___GET_IMPORTED_MEMBERS;
+
+	/**
+	 * The operation id for the '<em>Members Are Distinguishable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___MEMBERS_ARE_DISTINGUISHABLE = FRAMEWORK_PROFILE___MEMBERS_ARE_DISTINGUISHABLE;
+
+	/**
+	 * The operation id for the '<em>Is Compatible With</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___IS_COMPATIBLE_WITH__PARAMETERABLEELEMENT = FRAMEWORK_PROFILE___IS_COMPATIBLE_WITH__PARAMETERABLEELEMENT;
+
+	/**
+	 * The operation id for the '<em>Is Template Parameter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___IS_TEMPLATE_PARAMETER = FRAMEWORK_PROFILE___IS_TEMPLATE_PARAMETER;
+
+	/**
+	 * The operation id for the '<em>Validate Namespace Needs Visibility</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___VALIDATE_NAMESPACE_NEEDS_VISIBILITY__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_NAMESPACE_NEEDS_VISIBILITY__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Is Template</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___IS_TEMPLATE = FRAMEWORK_PROFILE___IS_TEMPLATE;
+
+	/**
+	 * The operation id for the '<em>Parameterable Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___PARAMETERABLE_ELEMENTS = FRAMEWORK_PROFILE___PARAMETERABLE_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Validate Elements Public Or Private</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___VALIDATE_ELEMENTS_PUBLIC_OR_PRIVATE__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_ELEMENTS_PUBLIC_OR_PRIVATE__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Apply Profile</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___APPLY_PROFILE__PROFILE = FRAMEWORK_PROFILE___APPLY_PROFILE__PROFILE;
+
+	/**
+	 * The operation id for the '<em>Create Owned Class</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___CREATE_OWNED_CLASS__STRING_BOOLEAN = FRAMEWORK_PROFILE___CREATE_OWNED_CLASS__STRING_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Create Owned Enumeration</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___CREATE_OWNED_ENUMERATION__STRING = FRAMEWORK_PROFILE___CREATE_OWNED_ENUMERATION__STRING;
+
+	/**
+	 * The operation id for the '<em>Create Owned Interface</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___CREATE_OWNED_INTERFACE__STRING = FRAMEWORK_PROFILE___CREATE_OWNED_INTERFACE__STRING;
+
+	/**
+	 * The operation id for the '<em>Create Owned Primitive Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___CREATE_OWNED_PRIMITIVE_TYPE__STRING = FRAMEWORK_PROFILE___CREATE_OWNED_PRIMITIVE_TYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Create Owned Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___CREATE_OWNED_STEREOTYPE__STRING_BOOLEAN = FRAMEWORK_PROFILE___CREATE_OWNED_STEREOTYPE__STRING_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Get All Applied Profiles</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_ALL_APPLIED_PROFILES = FRAMEWORK_PROFILE___GET_ALL_APPLIED_PROFILES;
+
+	/**
+	 * The operation id for the '<em>Get All Profile Applications</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_ALL_PROFILE_APPLICATIONS = FRAMEWORK_PROFILE___GET_ALL_PROFILE_APPLICATIONS;
+
+	/**
+	 * The operation id for the '<em>Get Applied Profile</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_APPLIED_PROFILE__STRING = FRAMEWORK_PROFILE___GET_APPLIED_PROFILE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Applied Profile</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_APPLIED_PROFILE__STRING_BOOLEAN = FRAMEWORK_PROFILE___GET_APPLIED_PROFILE__STRING_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Get Applied Profiles</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_APPLIED_PROFILES = FRAMEWORK_PROFILE___GET_APPLIED_PROFILES;
+
+	/**
+	 * The operation id for the '<em>Get Profile Application</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_PROFILE_APPLICATION__PROFILE = FRAMEWORK_PROFILE___GET_PROFILE_APPLICATION__PROFILE;
+
+	/**
+	 * The operation id for the '<em>Get Profile Application</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_PROFILE_APPLICATION__PROFILE_BOOLEAN = FRAMEWORK_PROFILE___GET_PROFILE_APPLICATION__PROFILE_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Is Model Library</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___IS_MODEL_LIBRARY = FRAMEWORK_PROFILE___IS_MODEL_LIBRARY;
+
+	/**
+	 * The operation id for the '<em>Is Profile Applied</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___IS_PROFILE_APPLIED__PROFILE = FRAMEWORK_PROFILE___IS_PROFILE_APPLIED__PROFILE;
+
+	/**
+	 * The operation id for the '<em>Unapply Profile</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___UNAPPLY_PROFILE__PROFILE = FRAMEWORK_PROFILE___UNAPPLY_PROFILE__PROFILE;
+
+	/**
+	 * The operation id for the '<em>Apply Profiles</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___APPLY_PROFILES__ELIST = FRAMEWORK_PROFILE___APPLY_PROFILES__ELIST;
+
+	/**
+	 * The operation id for the '<em>All Applicable Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___ALL_APPLICABLE_STEREOTYPES = FRAMEWORK_PROFILE___ALL_APPLICABLE_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Containing Profile</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___CONTAINING_PROFILE = FRAMEWORK_PROFILE___CONTAINING_PROFILE;
+
+	/**
+	 * The operation id for the '<em>Makes Visible</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___MAKES_VISIBLE__NAMEDELEMENT = FRAMEWORK_PROFILE___MAKES_VISIBLE__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Get Nested Packages</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_NESTED_PACKAGES = FRAMEWORK_PROFILE___GET_NESTED_PACKAGES;
+
+	/**
+	 * The operation id for the '<em>Get Owned Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_OWNED_STEREOTYPES = FRAMEWORK_PROFILE___GET_OWNED_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Get Owned Types</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_OWNED_TYPES = FRAMEWORK_PROFILE___GET_OWNED_TYPES;
+
+	/**
+	 * The operation id for the '<em>Visible Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___VISIBLE_MEMBERS = FRAMEWORK_PROFILE___VISIBLE_MEMBERS;
+
+	/**
+	 * The operation id for the '<em>Validate Metaclass Reference Not Specialized</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___VALIDATE_METACLASS_REFERENCE_NOT_SPECIALIZED__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_METACLASS_REFERENCE_NOT_SPECIALIZED__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate References Same Metamodel</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___VALIDATE_REFERENCES_SAME_METAMODEL__DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___VALIDATE_REFERENCES_SAME_METAMODEL__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Create</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___CREATE__CLASSIFIER = FRAMEWORK_PROFILE___CREATE__CLASSIFIER;
+
+	/**
+	 * The operation id for the '<em>Define</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___DEFINE = FRAMEWORK_PROFILE___DEFINE;
+
+	/**
+	 * The operation id for the '<em>Define</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___DEFINE__MAP_DIAGNOSTICCHAIN_MAP = FRAMEWORK_PROFILE___DEFINE__MAP_DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Get Definition</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_DEFINITION = FRAMEWORK_PROFILE___GET_DEFINITION;
+
+	/**
+	 * The operation id for the '<em>Get Definition</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_DEFINITION__NAMEDELEMENT = FRAMEWORK_PROFILE___GET_DEFINITION__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Get Owned Extensions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_OWNED_EXTENSIONS__BOOLEAN = FRAMEWORK_PROFILE___GET_OWNED_EXTENSIONS__BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Get Referenced Metaclasses</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_REFERENCED_METACLASSES = FRAMEWORK_PROFILE___GET_REFERENCED_METACLASSES;
+
+	/**
+	 * The operation id for the '<em>Get Referenced Metamodels</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___GET_REFERENCED_METAMODELS = FRAMEWORK_PROFILE___GET_REFERENCED_METAMODELS;
+
+	/**
+	 * The operation id for the '<em>Is Defined</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE___IS_DEFINED = FRAMEWORK_PROFILE___IS_DEFINED;
+
+	/**
+	 * The number of operations of the '<em>Rest Controller Template</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_TEMPLATE_OPERATION_COUNT = FRAMEWORK_PROFILE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.RestControllerMethodImpl <em>Rest Controller Method</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.RestControllerMethodImpl
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getRestControllerMethod()
+	 * @generated
+	 */
+	int REST_CONTROLLER_METHOD = 106;
+
+	/**
+	 * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__EANNOTATIONS = UMLPackage.OPERATION__EANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__OWNED_COMMENT = UMLPackage.OPERATION__OWNED_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Owned Element</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__OWNED_ELEMENT = UMLPackage.OPERATION__OWNED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Owner</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__OWNER = UMLPackage.OPERATION__OWNER;
+
+	/**
+	 * The feature id for the '<em><b>Client Dependency</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__CLIENT_DEPENDENCY = UMLPackage.OPERATION__CLIENT_DEPENDENCY;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__NAME = UMLPackage.OPERATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Name Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__NAME_EXPRESSION = UMLPackage.OPERATION__NAME_EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Namespace</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__NAMESPACE = UMLPackage.OPERATION__NAMESPACE;
+
+	/**
+	 * The feature id for the '<em><b>Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__QUALIFIED_NAME = UMLPackage.OPERATION__QUALIFIED_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Visibility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__VISIBILITY = UMLPackage.OPERATION__VISIBILITY;
+
+	/**
+	 * The feature id for the '<em><b>Owned Rule</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__OWNED_RULE = UMLPackage.OPERATION__OWNED_RULE;
+
+	/**
+	 * The feature id for the '<em><b>Element Import</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__ELEMENT_IMPORT = UMLPackage.OPERATION__ELEMENT_IMPORT;
+
+	/**
+	 * The feature id for the '<em><b>Package Import</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__PACKAGE_IMPORT = UMLPackage.OPERATION__PACKAGE_IMPORT;
+
+	/**
+	 * The feature id for the '<em><b>Owned Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__OWNED_MEMBER = UMLPackage.OPERATION__OWNED_MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Imported Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__IMPORTED_MEMBER = UMLPackage.OPERATION__IMPORTED_MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__MEMBER = UMLPackage.OPERATION__MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Is Leaf</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__IS_LEAF = UMLPackage.OPERATION__IS_LEAF;
+
+	/**
+	 * The feature id for the '<em><b>Redefined Element</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__REDEFINED_ELEMENT = UMLPackage.OPERATION__REDEFINED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Redefinition Context</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__REDEFINITION_CONTEXT = UMLPackage.OPERATION__REDEFINITION_CONTEXT;
+
+	/**
+	 * The feature id for the '<em><b>Featuring Classifier</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__FEATURING_CLASSIFIER = UMLPackage.OPERATION__FEATURING_CLASSIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Is Static</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__IS_STATIC = UMLPackage.OPERATION__IS_STATIC;
+
+	/**
+	 * The feature id for the '<em><b>Concurrency</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__CONCURRENCY = UMLPackage.OPERATION__CONCURRENCY;
+
+	/**
+	 * The feature id for the '<em><b>Is Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__IS_ABSTRACT = UMLPackage.OPERATION__IS_ABSTRACT;
+
+	/**
+	 * The feature id for the '<em><b>Method</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__METHOD = UMLPackage.OPERATION__METHOD;
+
+	/**
+	 * The feature id for the '<em><b>Owned Parameter</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__OWNED_PARAMETER = UMLPackage.OPERATION__OWNED_PARAMETER;
+
+	/**
+	 * The feature id for the '<em><b>Owned Parameter Set</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__OWNED_PARAMETER_SET = UMLPackage.OPERATION__OWNED_PARAMETER_SET;
+
+	/**
+	 * The feature id for the '<em><b>Raised Exception</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__RAISED_EXCEPTION = UMLPackage.OPERATION__RAISED_EXCEPTION;
+
+	/**
+	 * The feature id for the '<em><b>Owning Template Parameter</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__OWNING_TEMPLATE_PARAMETER = UMLPackage.OPERATION__OWNING_TEMPLATE_PARAMETER;
+
+	/**
+	 * The feature id for the '<em><b>Template Parameter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__TEMPLATE_PARAMETER = UMLPackage.OPERATION__TEMPLATE_PARAMETER;
+
+	/**
+	 * The feature id for the '<em><b>Template Binding</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__TEMPLATE_BINDING = UMLPackage.OPERATION__TEMPLATE_BINDING;
+
+	/**
+	 * The feature id for the '<em><b>Owned Template Signature</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__OWNED_TEMPLATE_SIGNATURE = UMLPackage.OPERATION__OWNED_TEMPLATE_SIGNATURE;
+
+	/**
+	 * The feature id for the '<em><b>Body Condition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__BODY_CONDITION = UMLPackage.OPERATION__BODY_CONDITION;
+
+	/**
+	 * The feature id for the '<em><b>Class</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__CLASS = UMLPackage.OPERATION__CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Datatype</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__DATATYPE = UMLPackage.OPERATION__DATATYPE;
+
+	/**
+	 * The feature id for the '<em><b>Interface</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__INTERFACE = UMLPackage.OPERATION__INTERFACE;
+
+	/**
+	 * The feature id for the '<em><b>Is Ordered</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__IS_ORDERED = UMLPackage.OPERATION__IS_ORDERED;
+
+	/**
+	 * The feature id for the '<em><b>Is Query</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__IS_QUERY = UMLPackage.OPERATION__IS_QUERY;
+
+	/**
+	 * The feature id for the '<em><b>Is Unique</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__IS_UNIQUE = UMLPackage.OPERATION__IS_UNIQUE;
+
+	/**
+	 * The feature id for the '<em><b>Lower</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__LOWER = UMLPackage.OPERATION__LOWER;
+
+	/**
+	 * The feature id for the '<em><b>Postcondition</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__POSTCONDITION = UMLPackage.OPERATION__POSTCONDITION;
+
+	/**
+	 * The feature id for the '<em><b>Precondition</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__PRECONDITION = UMLPackage.OPERATION__PRECONDITION;
+
+	/**
+	 * The feature id for the '<em><b>Redefined Operation</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__REDEFINED_OPERATION = UMLPackage.OPERATION__REDEFINED_OPERATION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__TYPE = UMLPackage.OPERATION__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Upper</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__UPPER = UMLPackage.OPERATION__UPPER;
+
+	/**
+	 * The feature id for the '<em><b>Request Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__REQUEST_TYPE = UMLPackage.OPERATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Is Default</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__IS_DEFAULT = UMLPackage.OPERATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Method Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__METHOD_TYPE = UMLPackage.OPERATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Rest Controller Method</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD_FEATURE_COUNT = UMLPackage.OPERATION_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Get EAnnotation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_EANNOTATION__STRING = UMLPackage.OPERATION___GET_EANNOTATION__STRING;
+
+	/**
+	 * The operation id for the '<em>Validate Has Owner</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___VALIDATE_HAS_OWNER__DIAGNOSTICCHAIN_MAP = UMLPackage.OPERATION___VALIDATE_HAS_OWNER__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Not Own Self</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___VALIDATE_NOT_OWN_SELF__DIAGNOSTICCHAIN_MAP = UMLPackage.OPERATION___VALIDATE_NOT_OWN_SELF__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Add Keyword</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___ADD_KEYWORD__STRING = UMLPackage.OPERATION___ADD_KEYWORD__STRING;
+
+	/**
+	 * The operation id for the '<em>Apply Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___APPLY_STEREOTYPE__STEREOTYPE = UMLPackage.OPERATION___APPLY_STEREOTYPE__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Create EAnnotation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___CREATE_EANNOTATION__STRING = UMLPackage.OPERATION___CREATE_EANNOTATION__STRING;
+
+	/**
+	 * The operation id for the '<em>Destroy</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___DESTROY = UMLPackage.OPERATION___DESTROY;
+
+	/**
+	 * The operation id for the '<em>Get Keywords</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_KEYWORDS = UMLPackage.OPERATION___GET_KEYWORDS;
+
+	/**
+	 * The operation id for the '<em>Get Applicable Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_APPLICABLE_STEREOTYPE__STRING = UMLPackage.OPERATION___GET_APPLICABLE_STEREOTYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Applicable Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_APPLICABLE_STEREOTYPES = UMLPackage.OPERATION___GET_APPLICABLE_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Get Applied Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_APPLIED_STEREOTYPE__STRING = UMLPackage.OPERATION___GET_APPLIED_STEREOTYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Applied Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_APPLIED_STEREOTYPES = UMLPackage.OPERATION___GET_APPLIED_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Get Applied Substereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_APPLIED_SUBSTEREOTYPE__STEREOTYPE_STRING = UMLPackage.OPERATION___GET_APPLIED_SUBSTEREOTYPE__STEREOTYPE_STRING;
+
+	/**
+	 * The operation id for the '<em>Get Applied Substereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_APPLIED_SUBSTEREOTYPES__STEREOTYPE = UMLPackage.OPERATION___GET_APPLIED_SUBSTEREOTYPES__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Get Model</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_MODEL = UMLPackage.OPERATION___GET_MODEL;
+
+	/**
+	 * The operation id for the '<em>Get Nearest Package</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_NEAREST_PACKAGE = UMLPackage.OPERATION___GET_NEAREST_PACKAGE;
+
+	/**
+	 * The operation id for the '<em>Get Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_RELATIONSHIPS = UMLPackage.OPERATION___GET_RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>Get Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_RELATIONSHIPS__ECLASS = UMLPackage.OPERATION___GET_RELATIONSHIPS__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Get Required Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_REQUIRED_STEREOTYPE__STRING = UMLPackage.OPERATION___GET_REQUIRED_STEREOTYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Required Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_REQUIRED_STEREOTYPES = UMLPackage.OPERATION___GET_REQUIRED_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Get Source Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_SOURCE_DIRECTED_RELATIONSHIPS = UMLPackage.OPERATION___GET_SOURCE_DIRECTED_RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>Get Source Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_SOURCE_DIRECTED_RELATIONSHIPS__ECLASS = UMLPackage.OPERATION___GET_SOURCE_DIRECTED_RELATIONSHIPS__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Get Stereotype Application</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_STEREOTYPE_APPLICATION__STEREOTYPE = UMLPackage.OPERATION___GET_STEREOTYPE_APPLICATION__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Get Stereotype Applications</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_STEREOTYPE_APPLICATIONS = UMLPackage.OPERATION___GET_STEREOTYPE_APPLICATIONS;
+
+	/**
+	 * The operation id for the '<em>Get Target Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_TARGET_DIRECTED_RELATIONSHIPS = UMLPackage.OPERATION___GET_TARGET_DIRECTED_RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>Get Target Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_TARGET_DIRECTED_RELATIONSHIPS__ECLASS = UMLPackage.OPERATION___GET_TARGET_DIRECTED_RELATIONSHIPS__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_VALUE__STEREOTYPE_STRING = UMLPackage.OPERATION___GET_VALUE__STEREOTYPE_STRING;
+
+	/**
+	 * The operation id for the '<em>Has Keyword</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___HAS_KEYWORD__STRING = UMLPackage.OPERATION___HAS_KEYWORD__STRING;
+
+	/**
+	 * The operation id for the '<em>Has Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___HAS_VALUE__STEREOTYPE_STRING = UMLPackage.OPERATION___HAS_VALUE__STEREOTYPE_STRING;
+
+	/**
+	 * The operation id for the '<em>Is Stereotype Applicable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___IS_STEREOTYPE_APPLICABLE__STEREOTYPE = UMLPackage.OPERATION___IS_STEREOTYPE_APPLICABLE__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Is Stereotype Applied</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___IS_STEREOTYPE_APPLIED__STEREOTYPE = UMLPackage.OPERATION___IS_STEREOTYPE_APPLIED__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Is Stereotype Required</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___IS_STEREOTYPE_REQUIRED__STEREOTYPE = UMLPackage.OPERATION___IS_STEREOTYPE_REQUIRED__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Remove Keyword</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___REMOVE_KEYWORD__STRING = UMLPackage.OPERATION___REMOVE_KEYWORD__STRING;
+
+	/**
+	 * The operation id for the '<em>Set Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___SET_VALUE__STEREOTYPE_STRING_OBJECT = UMLPackage.OPERATION___SET_VALUE__STEREOTYPE_STRING_OBJECT;
+
+	/**
+	 * The operation id for the '<em>Unapply Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___UNAPPLY_STEREOTYPE__STEREOTYPE = UMLPackage.OPERATION___UNAPPLY_STEREOTYPE__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>All Owned Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___ALL_OWNED_ELEMENTS = UMLPackage.OPERATION___ALL_OWNED_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Must Be Owned</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___MUST_BE_OWNED = UMLPackage.OPERATION___MUST_BE_OWNED;
+
+	/**
+	 * The operation id for the '<em>Validate Visibility Needs Ownership</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___VALIDATE_VISIBILITY_NEEDS_OWNERSHIP__DIAGNOSTICCHAIN_MAP = UMLPackage.OPERATION___VALIDATE_VISIBILITY_NEEDS_OWNERSHIP__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Has Qualified Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___VALIDATE_HAS_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP = UMLPackage.OPERATION___VALIDATE_HAS_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Has No Qualified Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___VALIDATE_HAS_NO_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP = UMLPackage.OPERATION___VALIDATE_HAS_NO_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Create Dependency</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___CREATE_DEPENDENCY__NAMEDELEMENT = UMLPackage.OPERATION___CREATE_DEPENDENCY__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Create Usage</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___CREATE_USAGE__NAMEDELEMENT = UMLPackage.OPERATION___CREATE_USAGE__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Get Label</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_LABEL = UMLPackage.OPERATION___GET_LABEL;
+
+	/**
+	 * The operation id for the '<em>Get Label</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_LABEL__BOOLEAN = UMLPackage.OPERATION___GET_LABEL__BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Get Namespace</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_NAMESPACE = UMLPackage.OPERATION___GET_NAMESPACE;
+
+	/**
+	 * The operation id for the '<em>All Namespaces</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___ALL_NAMESPACES = UMLPackage.OPERATION___ALL_NAMESPACES;
+
+	/**
+	 * The operation id for the '<em>All Owning Packages</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___ALL_OWNING_PACKAGES = UMLPackage.OPERATION___ALL_OWNING_PACKAGES;
+
+	/**
+	 * The operation id for the '<em>Is Distinguishable From</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___IS_DISTINGUISHABLE_FROM__NAMEDELEMENT_NAMESPACE = UMLPackage.OPERATION___IS_DISTINGUISHABLE_FROM__NAMEDELEMENT_NAMESPACE;
+
+	/**
+	 * The operation id for the '<em>Get Qualified Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_QUALIFIED_NAME = UMLPackage.OPERATION___GET_QUALIFIED_NAME;
+
+	/**
+	 * The operation id for the '<em>Separator</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___SEPARATOR = UMLPackage.OPERATION___SEPARATOR;
+
+	/**
+	 * The operation id for the '<em>Get Client Dependencies</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_CLIENT_DEPENDENCIES = UMLPackage.OPERATION___GET_CLIENT_DEPENDENCIES;
+
+	/**
+	 * The operation id for the '<em>Validate Members Distinguishable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___VALIDATE_MEMBERS_DISTINGUISHABLE__DIAGNOSTICCHAIN_MAP = UMLPackage.OPERATION___VALIDATE_MEMBERS_DISTINGUISHABLE__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Cannot Import Self</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___VALIDATE_CANNOT_IMPORT_SELF__DIAGNOSTICCHAIN_MAP = UMLPackage.OPERATION___VALIDATE_CANNOT_IMPORT_SELF__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Cannot Import Owned Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___VALIDATE_CANNOT_IMPORT_OWNED_MEMBERS__DIAGNOSTICCHAIN_MAP = UMLPackage.OPERATION___VALIDATE_CANNOT_IMPORT_OWNED_MEMBERS__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Create Element Import</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___CREATE_ELEMENT_IMPORT__PACKAGEABLEELEMENT_VISIBILITYKIND = UMLPackage.OPERATION___CREATE_ELEMENT_IMPORT__PACKAGEABLEELEMENT_VISIBILITYKIND;
+
+	/**
+	 * The operation id for the '<em>Create Package Import</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___CREATE_PACKAGE_IMPORT__PACKAGE_VISIBILITYKIND = UMLPackage.OPERATION___CREATE_PACKAGE_IMPORT__PACKAGE_VISIBILITYKIND;
+
+	/**
+	 * The operation id for the '<em>Get Imported Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_IMPORTED_ELEMENTS = UMLPackage.OPERATION___GET_IMPORTED_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Get Imported Packages</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_IMPORTED_PACKAGES = UMLPackage.OPERATION___GET_IMPORTED_PACKAGES;
+
+	/**
+	 * The operation id for the '<em>Get Owned Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_OWNED_MEMBERS = UMLPackage.OPERATION___GET_OWNED_MEMBERS;
+
+	/**
+	 * The operation id for the '<em>Exclude Collisions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___EXCLUDE_COLLISIONS__ELIST = UMLPackage.OPERATION___EXCLUDE_COLLISIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Names Of Member</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_NAMES_OF_MEMBER__NAMEDELEMENT = UMLPackage.OPERATION___GET_NAMES_OF_MEMBER__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Import Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___IMPORT_MEMBERS__ELIST = UMLPackage.OPERATION___IMPORT_MEMBERS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Imported Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_IMPORTED_MEMBERS = UMLPackage.OPERATION___GET_IMPORTED_MEMBERS;
+
+	/**
+	 * The operation id for the '<em>Members Are Distinguishable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___MEMBERS_ARE_DISTINGUISHABLE = UMLPackage.OPERATION___MEMBERS_ARE_DISTINGUISHABLE;
+
+	/**
+	 * The operation id for the '<em>Validate Redefinition Consistent</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___VALIDATE_REDEFINITION_CONSISTENT__DIAGNOSTICCHAIN_MAP = UMLPackage.OPERATION___VALIDATE_REDEFINITION_CONSISTENT__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Non Leaf Redefinition</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___VALIDATE_NON_LEAF_REDEFINITION__DIAGNOSTICCHAIN_MAP = UMLPackage.OPERATION___VALIDATE_NON_LEAF_REDEFINITION__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Redefinition Context Valid</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___VALIDATE_REDEFINITION_CONTEXT_VALID__DIAGNOSTICCHAIN_MAP = UMLPackage.OPERATION___VALIDATE_REDEFINITION_CONTEXT_VALID__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Is Consistent With</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___IS_CONSISTENT_WITH__REDEFINABLEELEMENT = UMLPackage.OPERATION___IS_CONSISTENT_WITH__REDEFINABLEELEMENT;
+
+	/**
+	 * The operation id for the '<em>Is Redefinition Context Valid</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___IS_REDEFINITION_CONTEXT_VALID__REDEFINABLEELEMENT = UMLPackage.OPERATION___IS_REDEFINITION_CONTEXT_VALID__REDEFINABLEELEMENT;
+
+	/**
+	 * The operation id for the '<em>Validate Abstract No Method</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___VALIDATE_ABSTRACT_NO_METHOD__DIAGNOSTICCHAIN_MAP = UMLPackage.OPERATION___VALIDATE_ABSTRACT_NO_METHOD__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Create Return Result</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___CREATE_RETURN_RESULT__STRING_TYPE = UMLPackage.OPERATION___CREATE_RETURN_RESULT__STRING_TYPE;
+
+	/**
+	 * The operation id for the '<em>Input Parameters</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___INPUT_PARAMETERS = UMLPackage.OPERATION___INPUT_PARAMETERS;
+
+	/**
+	 * The operation id for the '<em>Output Parameters</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___OUTPUT_PARAMETERS = UMLPackage.OPERATION___OUTPUT_PARAMETERS;
+
+	/**
+	 * The operation id for the '<em>Is Compatible With</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___IS_COMPATIBLE_WITH__PARAMETERABLEELEMENT = UMLPackage.OPERATION___IS_COMPATIBLE_WITH__PARAMETERABLEELEMENT;
+
+	/**
+	 * The operation id for the '<em>Is Template Parameter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___IS_TEMPLATE_PARAMETER = UMLPackage.OPERATION___IS_TEMPLATE_PARAMETER;
+
+	/**
+	 * The operation id for the '<em>Is Template</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___IS_TEMPLATE = UMLPackage.OPERATION___IS_TEMPLATE;
+
+	/**
+	 * The operation id for the '<em>Parameterable Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___PARAMETERABLE_ELEMENTS = UMLPackage.OPERATION___PARAMETERABLE_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Validate At Most One Return</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___VALIDATE_AT_MOST_ONE_RETURN__DIAGNOSTICCHAIN_MAP = UMLPackage.OPERATION___VALIDATE_AT_MOST_ONE_RETURN__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Only Body For Query</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___VALIDATE_ONLY_BODY_FOR_QUERY__DIAGNOSTICCHAIN_MAP = UMLPackage.OPERATION___VALIDATE_ONLY_BODY_FOR_QUERY__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Get Return Result</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_RETURN_RESULT = UMLPackage.OPERATION___GET_RETURN_RESULT;
+
+	/**
+	 * The operation id for the '<em>Set Is Ordered</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___SET_IS_ORDERED__BOOLEAN = UMLPackage.OPERATION___SET_IS_ORDERED__BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Set Is Unique</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___SET_IS_UNIQUE__BOOLEAN = UMLPackage.OPERATION___SET_IS_UNIQUE__BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Set Lower</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___SET_LOWER__INT = UMLPackage.OPERATION___SET_LOWER__INT;
+
+	/**
+	 * The operation id for the '<em>Set Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___SET_TYPE__TYPE = UMLPackage.OPERATION___SET_TYPE__TYPE;
+
+	/**
+	 * The operation id for the '<em>Set Upper</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___SET_UPPER__INT = UMLPackage.OPERATION___SET_UPPER__INT;
+
+	/**
+	 * The operation id for the '<em>Is Ordered</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___IS_ORDERED = UMLPackage.OPERATION___IS_ORDERED;
+
+	/**
+	 * The operation id for the '<em>Is Unique</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___IS_UNIQUE = UMLPackage.OPERATION___IS_UNIQUE;
+
+	/**
+	 * The operation id for the '<em>Get Lower</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_LOWER = UMLPackage.OPERATION___GET_LOWER;
+
+	/**
+	 * The operation id for the '<em>Return Result</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___RETURN_RESULT = UMLPackage.OPERATION___RETURN_RESULT;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_TYPE = UMLPackage.OPERATION___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Get Upper</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD___GET_UPPER = UMLPackage.OPERATION___GET_UPPER;
+
+	/**
+	 * The number of operations of the '<em>Rest Controller Method</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD_OPERATION_COUNT = UMLPackage.OPERATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.RestControllerClassImpl <em>Rest Controller Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.RestControllerClassImpl
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getRestControllerClass()
+	 * @generated
+	 */
+	int REST_CONTROLLER_CLASS = 107;
+
+	/**
+	 * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__EANNOTATIONS = UMLPackage.CLASS__EANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__OWNED_COMMENT = UMLPackage.CLASS__OWNED_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Owned Element</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__OWNED_ELEMENT = UMLPackage.CLASS__OWNED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Owner</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__OWNER = UMLPackage.CLASS__OWNER;
+
+	/**
+	 * The feature id for the '<em><b>Client Dependency</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__CLIENT_DEPENDENCY = UMLPackage.CLASS__CLIENT_DEPENDENCY;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__NAME = UMLPackage.CLASS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Name Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__NAME_EXPRESSION = UMLPackage.CLASS__NAME_EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Namespace</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__NAMESPACE = UMLPackage.CLASS__NAMESPACE;
+
+	/**
+	 * The feature id for the '<em><b>Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__QUALIFIED_NAME = UMLPackage.CLASS__QUALIFIED_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Visibility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__VISIBILITY = UMLPackage.CLASS__VISIBILITY;
+
+	/**
+	 * The feature id for the '<em><b>Owned Rule</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__OWNED_RULE = UMLPackage.CLASS__OWNED_RULE;
+
+	/**
+	 * The feature id for the '<em><b>Element Import</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__ELEMENT_IMPORT = UMLPackage.CLASS__ELEMENT_IMPORT;
+
+	/**
+	 * The feature id for the '<em><b>Package Import</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__PACKAGE_IMPORT = UMLPackage.CLASS__PACKAGE_IMPORT;
+
+	/**
+	 * The feature id for the '<em><b>Owned Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__OWNED_MEMBER = UMLPackage.CLASS__OWNED_MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Imported Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__IMPORTED_MEMBER = UMLPackage.CLASS__IMPORTED_MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__MEMBER = UMLPackage.CLASS__MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Is Leaf</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__IS_LEAF = UMLPackage.CLASS__IS_LEAF;
+
+	/**
+	 * The feature id for the '<em><b>Redefined Element</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__REDEFINED_ELEMENT = UMLPackage.CLASS__REDEFINED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Redefinition Context</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__REDEFINITION_CONTEXT = UMLPackage.CLASS__REDEFINITION_CONTEXT;
+
+	/**
+	 * The feature id for the '<em><b>Owning Template Parameter</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__OWNING_TEMPLATE_PARAMETER = UMLPackage.CLASS__OWNING_TEMPLATE_PARAMETER;
+
+	/**
+	 * The feature id for the '<em><b>Template Parameter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__TEMPLATE_PARAMETER = UMLPackage.CLASS__TEMPLATE_PARAMETER;
+
+	/**
+	 * The feature id for the '<em><b>Package</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__PACKAGE = UMLPackage.CLASS__PACKAGE;
+
+	/**
+	 * The feature id for the '<em><b>Template Binding</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__TEMPLATE_BINDING = UMLPackage.CLASS__TEMPLATE_BINDING;
+
+	/**
+	 * The feature id for the '<em><b>Owned Template Signature</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__OWNED_TEMPLATE_SIGNATURE = UMLPackage.CLASS__OWNED_TEMPLATE_SIGNATURE;
+
+	/**
+	 * The feature id for the '<em><b>Feature</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__FEATURE = UMLPackage.CLASS__FEATURE;
+
+	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__ATTRIBUTE = UMLPackage.CLASS__ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Collaboration Use</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__COLLABORATION_USE = UMLPackage.CLASS__COLLABORATION_USE;
+
+	/**
+	 * The feature id for the '<em><b>General</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__GENERAL = UMLPackage.CLASS__GENERAL;
+
+	/**
+	 * The feature id for the '<em><b>Generalization</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__GENERALIZATION = UMLPackage.CLASS__GENERALIZATION;
+
+	/**
+	 * The feature id for the '<em><b>Powertype Extent</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__POWERTYPE_EXTENT = UMLPackage.CLASS__POWERTYPE_EXTENT;
+
+	/**
+	 * The feature id for the '<em><b>Inherited Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__INHERITED_MEMBER = UMLPackage.CLASS__INHERITED_MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Is Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__IS_ABSTRACT = UMLPackage.CLASS__IS_ABSTRACT;
+
+	/**
+	 * The feature id for the '<em><b>Is Final Specialization</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__IS_FINAL_SPECIALIZATION = UMLPackage.CLASS__IS_FINAL_SPECIALIZATION;
+
+	/**
+	 * The feature id for the '<em><b>Owned Use Case</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__OWNED_USE_CASE = UMLPackage.CLASS__OWNED_USE_CASE;
+
+	/**
+	 * The feature id for the '<em><b>Use Case</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__USE_CASE = UMLPackage.CLASS__USE_CASE;
+
+	/**
+	 * The feature id for the '<em><b>Redefined Classifier</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__REDEFINED_CLASSIFIER = UMLPackage.CLASS__REDEFINED_CLASSIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Representation</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__REPRESENTATION = UMLPackage.CLASS__REPRESENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Substitution</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__SUBSTITUTION = UMLPackage.CLASS__SUBSTITUTION;
+
+	/**
+	 * The feature id for the '<em><b>Owned Attribute</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__OWNED_ATTRIBUTE = UMLPackage.CLASS__OWNED_ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Connector</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__OWNED_CONNECTOR = UMLPackage.CLASS__OWNED_CONNECTOR;
+
+	/**
+	 * The feature id for the '<em><b>Part</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__PART = UMLPackage.CLASS__PART;
+
+	/**
+	 * The feature id for the '<em><b>Role</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__ROLE = UMLPackage.CLASS__ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Port</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__OWNED_PORT = UMLPackage.CLASS__OWNED_PORT;
+
+	/**
+	 * The feature id for the '<em><b>Classifier Behavior</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__CLASSIFIER_BEHAVIOR = UMLPackage.CLASS__CLASSIFIER_BEHAVIOR;
+
+	/**
+	 * The feature id for the '<em><b>Interface Realization</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__INTERFACE_REALIZATION = UMLPackage.CLASS__INTERFACE_REALIZATION;
+
+	/**
+	 * The feature id for the '<em><b>Owned Behavior</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__OWNED_BEHAVIOR = UMLPackage.CLASS__OWNED_BEHAVIOR;
+
+	/**
+	 * The feature id for the '<em><b>Owned Operation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__OWNED_OPERATION = UMLPackage.CLASS__OWNED_OPERATION;
+
+	/**
+	 * The feature id for the '<em><b>Extension</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__EXTENSION = UMLPackage.CLASS__EXTENSION;
+
+	/**
+	 * The feature id for the '<em><b>Is Active</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__IS_ACTIVE = UMLPackage.CLASS__IS_ACTIVE;
+
+	/**
+	 * The feature id for the '<em><b>Nested Classifier</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__NESTED_CLASSIFIER = UMLPackage.CLASS__NESTED_CLASSIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Owned Reception</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__OWNED_RECEPTION = UMLPackage.CLASS__OWNED_RECEPTION;
+
+	/**
+	 * The feature id for the '<em><b>Super Class</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS__SUPER_CLASS = UMLPackage.CLASS__SUPER_CLASS;
+
+	/**
+	 * The number of structural features of the '<em>Rest Controller Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS_FEATURE_COUNT = UMLPackage.CLASS_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get EAnnotation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_EANNOTATION__STRING = UMLPackage.CLASS___GET_EANNOTATION__STRING;
+
+	/**
+	 * The operation id for the '<em>Validate Has Owner</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___VALIDATE_HAS_OWNER__DIAGNOSTICCHAIN_MAP = UMLPackage.CLASS___VALIDATE_HAS_OWNER__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Not Own Self</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___VALIDATE_NOT_OWN_SELF__DIAGNOSTICCHAIN_MAP = UMLPackage.CLASS___VALIDATE_NOT_OWN_SELF__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Add Keyword</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___ADD_KEYWORD__STRING = UMLPackage.CLASS___ADD_KEYWORD__STRING;
+
+	/**
+	 * The operation id for the '<em>Apply Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___APPLY_STEREOTYPE__STEREOTYPE = UMLPackage.CLASS___APPLY_STEREOTYPE__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Create EAnnotation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___CREATE_EANNOTATION__STRING = UMLPackage.CLASS___CREATE_EANNOTATION__STRING;
+
+	/**
+	 * The operation id for the '<em>Destroy</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___DESTROY = UMLPackage.CLASS___DESTROY;
+
+	/**
+	 * The operation id for the '<em>Get Keywords</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_KEYWORDS = UMLPackage.CLASS___GET_KEYWORDS;
+
+	/**
+	 * The operation id for the '<em>Get Applicable Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_APPLICABLE_STEREOTYPE__STRING = UMLPackage.CLASS___GET_APPLICABLE_STEREOTYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Applicable Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_APPLICABLE_STEREOTYPES = UMLPackage.CLASS___GET_APPLICABLE_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Get Applied Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_APPLIED_STEREOTYPE__STRING = UMLPackage.CLASS___GET_APPLIED_STEREOTYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Applied Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_APPLIED_STEREOTYPES = UMLPackage.CLASS___GET_APPLIED_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Get Applied Substereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_APPLIED_SUBSTEREOTYPE__STEREOTYPE_STRING = UMLPackage.CLASS___GET_APPLIED_SUBSTEREOTYPE__STEREOTYPE_STRING;
+
+	/**
+	 * The operation id for the '<em>Get Applied Substereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_APPLIED_SUBSTEREOTYPES__STEREOTYPE = UMLPackage.CLASS___GET_APPLIED_SUBSTEREOTYPES__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Get Model</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_MODEL = UMLPackage.CLASS___GET_MODEL;
+
+	/**
+	 * The operation id for the '<em>Get Nearest Package</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_NEAREST_PACKAGE = UMLPackage.CLASS___GET_NEAREST_PACKAGE;
+
+	/**
+	 * The operation id for the '<em>Get Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_RELATIONSHIPS = UMLPackage.CLASS___GET_RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>Get Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_RELATIONSHIPS__ECLASS = UMLPackage.CLASS___GET_RELATIONSHIPS__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Get Required Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_REQUIRED_STEREOTYPE__STRING = UMLPackage.CLASS___GET_REQUIRED_STEREOTYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Required Stereotypes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_REQUIRED_STEREOTYPES = UMLPackage.CLASS___GET_REQUIRED_STEREOTYPES;
+
+	/**
+	 * The operation id for the '<em>Get Source Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_SOURCE_DIRECTED_RELATIONSHIPS = UMLPackage.CLASS___GET_SOURCE_DIRECTED_RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>Get Source Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_SOURCE_DIRECTED_RELATIONSHIPS__ECLASS = UMLPackage.CLASS___GET_SOURCE_DIRECTED_RELATIONSHIPS__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Get Stereotype Application</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_STEREOTYPE_APPLICATION__STEREOTYPE = UMLPackage.CLASS___GET_STEREOTYPE_APPLICATION__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Get Stereotype Applications</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_STEREOTYPE_APPLICATIONS = UMLPackage.CLASS___GET_STEREOTYPE_APPLICATIONS;
+
+	/**
+	 * The operation id for the '<em>Get Target Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_TARGET_DIRECTED_RELATIONSHIPS = UMLPackage.CLASS___GET_TARGET_DIRECTED_RELATIONSHIPS;
+
+	/**
+	 * The operation id for the '<em>Get Target Directed Relationships</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_TARGET_DIRECTED_RELATIONSHIPS__ECLASS = UMLPackage.CLASS___GET_TARGET_DIRECTED_RELATIONSHIPS__ECLASS;
+
+	/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_VALUE__STEREOTYPE_STRING = UMLPackage.CLASS___GET_VALUE__STEREOTYPE_STRING;
+
+	/**
+	 * The operation id for the '<em>Has Keyword</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___HAS_KEYWORD__STRING = UMLPackage.CLASS___HAS_KEYWORD__STRING;
+
+	/**
+	 * The operation id for the '<em>Has Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___HAS_VALUE__STEREOTYPE_STRING = UMLPackage.CLASS___HAS_VALUE__STEREOTYPE_STRING;
+
+	/**
+	 * The operation id for the '<em>Is Stereotype Applicable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___IS_STEREOTYPE_APPLICABLE__STEREOTYPE = UMLPackage.CLASS___IS_STEREOTYPE_APPLICABLE__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Is Stereotype Applied</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___IS_STEREOTYPE_APPLIED__STEREOTYPE = UMLPackage.CLASS___IS_STEREOTYPE_APPLIED__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Is Stereotype Required</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___IS_STEREOTYPE_REQUIRED__STEREOTYPE = UMLPackage.CLASS___IS_STEREOTYPE_REQUIRED__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>Remove Keyword</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___REMOVE_KEYWORD__STRING = UMLPackage.CLASS___REMOVE_KEYWORD__STRING;
+
+	/**
+	 * The operation id for the '<em>Set Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___SET_VALUE__STEREOTYPE_STRING_OBJECT = UMLPackage.CLASS___SET_VALUE__STEREOTYPE_STRING_OBJECT;
+
+	/**
+	 * The operation id for the '<em>Unapply Stereotype</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___UNAPPLY_STEREOTYPE__STEREOTYPE = UMLPackage.CLASS___UNAPPLY_STEREOTYPE__STEREOTYPE;
+
+	/**
+	 * The operation id for the '<em>All Owned Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___ALL_OWNED_ELEMENTS = UMLPackage.CLASS___ALL_OWNED_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Must Be Owned</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___MUST_BE_OWNED = UMLPackage.CLASS___MUST_BE_OWNED;
+
+	/**
+	 * The operation id for the '<em>Validate Visibility Needs Ownership</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___VALIDATE_VISIBILITY_NEEDS_OWNERSHIP__DIAGNOSTICCHAIN_MAP = UMLPackage.CLASS___VALIDATE_VISIBILITY_NEEDS_OWNERSHIP__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Has Qualified Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___VALIDATE_HAS_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP = UMLPackage.CLASS___VALIDATE_HAS_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Has No Qualified Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___VALIDATE_HAS_NO_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP = UMLPackage.CLASS___VALIDATE_HAS_NO_QUALIFIED_NAME__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Create Dependency</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___CREATE_DEPENDENCY__NAMEDELEMENT = UMLPackage.CLASS___CREATE_DEPENDENCY__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Create Usage</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___CREATE_USAGE__NAMEDELEMENT = UMLPackage.CLASS___CREATE_USAGE__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Get Label</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_LABEL = UMLPackage.CLASS___GET_LABEL;
+
+	/**
+	 * The operation id for the '<em>Get Label</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_LABEL__BOOLEAN = UMLPackage.CLASS___GET_LABEL__BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Get Namespace</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_NAMESPACE = UMLPackage.CLASS___GET_NAMESPACE;
+
+	/**
+	 * The operation id for the '<em>All Namespaces</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___ALL_NAMESPACES = UMLPackage.CLASS___ALL_NAMESPACES;
+
+	/**
+	 * The operation id for the '<em>All Owning Packages</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___ALL_OWNING_PACKAGES = UMLPackage.CLASS___ALL_OWNING_PACKAGES;
+
+	/**
+	 * The operation id for the '<em>Is Distinguishable From</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___IS_DISTINGUISHABLE_FROM__NAMEDELEMENT_NAMESPACE = UMLPackage.CLASS___IS_DISTINGUISHABLE_FROM__NAMEDELEMENT_NAMESPACE;
+
+	/**
+	 * The operation id for the '<em>Get Qualified Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_QUALIFIED_NAME = UMLPackage.CLASS___GET_QUALIFIED_NAME;
+
+	/**
+	 * The operation id for the '<em>Separator</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___SEPARATOR = UMLPackage.CLASS___SEPARATOR;
+
+	/**
+	 * The operation id for the '<em>Get Client Dependencies</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_CLIENT_DEPENDENCIES = UMLPackage.CLASS___GET_CLIENT_DEPENDENCIES;
+
+	/**
+	 * The operation id for the '<em>Validate Members Distinguishable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___VALIDATE_MEMBERS_DISTINGUISHABLE__DIAGNOSTICCHAIN_MAP = UMLPackage.CLASS___VALIDATE_MEMBERS_DISTINGUISHABLE__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Cannot Import Self</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___VALIDATE_CANNOT_IMPORT_SELF__DIAGNOSTICCHAIN_MAP = UMLPackage.CLASS___VALIDATE_CANNOT_IMPORT_SELF__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Cannot Import Owned Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___VALIDATE_CANNOT_IMPORT_OWNED_MEMBERS__DIAGNOSTICCHAIN_MAP = UMLPackage.CLASS___VALIDATE_CANNOT_IMPORT_OWNED_MEMBERS__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Create Element Import</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___CREATE_ELEMENT_IMPORT__PACKAGEABLEELEMENT_VISIBILITYKIND = UMLPackage.CLASS___CREATE_ELEMENT_IMPORT__PACKAGEABLEELEMENT_VISIBILITYKIND;
+
+	/**
+	 * The operation id for the '<em>Create Package Import</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___CREATE_PACKAGE_IMPORT__PACKAGE_VISIBILITYKIND = UMLPackage.CLASS___CREATE_PACKAGE_IMPORT__PACKAGE_VISIBILITYKIND;
+
+	/**
+	 * The operation id for the '<em>Get Imported Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_IMPORTED_ELEMENTS = UMLPackage.CLASS___GET_IMPORTED_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Get Imported Packages</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_IMPORTED_PACKAGES = UMLPackage.CLASS___GET_IMPORTED_PACKAGES;
+
+	/**
+	 * The operation id for the '<em>Get Owned Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_OWNED_MEMBERS = UMLPackage.CLASS___GET_OWNED_MEMBERS;
+
+	/**
+	 * The operation id for the '<em>Exclude Collisions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___EXCLUDE_COLLISIONS__ELIST = UMLPackage.CLASS___EXCLUDE_COLLISIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Names Of Member</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_NAMES_OF_MEMBER__NAMEDELEMENT = UMLPackage.CLASS___GET_NAMES_OF_MEMBER__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Import Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___IMPORT_MEMBERS__ELIST = UMLPackage.CLASS___IMPORT_MEMBERS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Imported Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_IMPORTED_MEMBERS = UMLPackage.CLASS___GET_IMPORTED_MEMBERS;
+
+	/**
+	 * The operation id for the '<em>Members Are Distinguishable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___MEMBERS_ARE_DISTINGUISHABLE = UMLPackage.CLASS___MEMBERS_ARE_DISTINGUISHABLE;
+
+	/**
+	 * The operation id for the '<em>Validate Redefinition Consistent</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___VALIDATE_REDEFINITION_CONSISTENT__DIAGNOSTICCHAIN_MAP = UMLPackage.CLASS___VALIDATE_REDEFINITION_CONSISTENT__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Non Leaf Redefinition</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___VALIDATE_NON_LEAF_REDEFINITION__DIAGNOSTICCHAIN_MAP = UMLPackage.CLASS___VALIDATE_NON_LEAF_REDEFINITION__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Redefinition Context Valid</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___VALIDATE_REDEFINITION_CONTEXT_VALID__DIAGNOSTICCHAIN_MAP = UMLPackage.CLASS___VALIDATE_REDEFINITION_CONTEXT_VALID__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Is Consistent With</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___IS_CONSISTENT_WITH__REDEFINABLEELEMENT = UMLPackage.CLASS___IS_CONSISTENT_WITH__REDEFINABLEELEMENT;
+
+	/**
+	 * The operation id for the '<em>Is Redefinition Context Valid</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___IS_REDEFINITION_CONTEXT_VALID__REDEFINABLEELEMENT = UMLPackage.CLASS___IS_REDEFINITION_CONTEXT_VALID__REDEFINABLEELEMENT;
+
+	/**
+	 * The operation id for the '<em>Is Compatible With</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___IS_COMPATIBLE_WITH__PARAMETERABLEELEMENT = UMLPackage.CLASS___IS_COMPATIBLE_WITH__PARAMETERABLEELEMENT;
+
+	/**
+	 * The operation id for the '<em>Is Template Parameter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___IS_TEMPLATE_PARAMETER = UMLPackage.CLASS___IS_TEMPLATE_PARAMETER;
+
+	/**
+	 * The operation id for the '<em>Validate Namespace Needs Visibility</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___VALIDATE_NAMESPACE_NEEDS_VISIBILITY__DIAGNOSTICCHAIN_MAP = UMLPackage.CLASS___VALIDATE_NAMESPACE_NEEDS_VISIBILITY__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Create Association</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___CREATE_ASSOCIATION__BOOLEAN_AGGREGATIONKIND_STRING_INT_INT_TYPE_BOOLEAN_AGGREGATIONKIND_STRING_INT_INT = UMLPackage.CLASS___CREATE_ASSOCIATION__BOOLEAN_AGGREGATIONKIND_STRING_INT_INT_TYPE_BOOLEAN_AGGREGATIONKIND_STRING_INT_INT;
+
+	/**
+	 * The operation id for the '<em>Get Associations</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_ASSOCIATIONS = UMLPackage.CLASS___GET_ASSOCIATIONS;
+
+	/**
+	 * The operation id for the '<em>Conforms To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___CONFORMS_TO__TYPE = UMLPackage.CLASS___CONFORMS_TO__TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Template</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___IS_TEMPLATE = UMLPackage.CLASS___IS_TEMPLATE;
+
+	/**
+	 * The operation id for the '<em>Parameterable Elements</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___PARAMETERABLE_ELEMENTS = UMLPackage.CLASS___PARAMETERABLE_ELEMENTS;
+
+	/**
+	 * The operation id for the '<em>Validate Specialize Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___VALIDATE_SPECIALIZE_TYPE__DIAGNOSTICCHAIN_MAP = UMLPackage.CLASS___VALIDATE_SPECIALIZE_TYPE__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Maps To Generalization Set</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___VALIDATE_MAPS_TO_GENERALIZATION_SET__DIAGNOSTICCHAIN_MAP = UMLPackage.CLASS___VALIDATE_MAPS_TO_GENERALIZATION_SET__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate Non Final Parents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___VALIDATE_NON_FINAL_PARENTS__DIAGNOSTICCHAIN_MAP = UMLPackage.CLASS___VALIDATE_NON_FINAL_PARENTS__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Validate No Cycles In Generalization</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___VALIDATE_NO_CYCLES_IN_GENERALIZATION__DIAGNOSTICCHAIN_MAP = UMLPackage.CLASS___VALIDATE_NO_CYCLES_IN_GENERALIZATION__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Get All Attributes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_ALL_ATTRIBUTES = UMLPackage.CLASS___GET_ALL_ATTRIBUTES;
+
+	/**
+	 * The operation id for the '<em>Get All Operations</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_ALL_OPERATIONS = UMLPackage.CLASS___GET_ALL_OPERATIONS;
+
+	/**
+	 * The operation id for the '<em>Get All Used Interfaces</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_ALL_USED_INTERFACES = UMLPackage.CLASS___GET_ALL_USED_INTERFACES;
+
+	/**
+	 * The operation id for the '<em>Get Operation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_OPERATION__STRING_ELIST_ELIST = UMLPackage.CLASS___GET_OPERATION__STRING_ELIST_ELIST;
+
+	/**
+	 * The operation id for the '<em>Get Operation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_OPERATION__STRING_ELIST_ELIST_BOOLEAN = UMLPackage.CLASS___GET_OPERATION__STRING_ELIST_ELIST_BOOLEAN;
+
+	/**
+	 * The operation id for the '<em>Get Operations</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_OPERATIONS = UMLPackage.CLASS___GET_OPERATIONS;
+
+	/**
+	 * The operation id for the '<em>Get Used Interfaces</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_USED_INTERFACES = UMLPackage.CLASS___GET_USED_INTERFACES;
+
+	/**
+	 * The operation id for the '<em>All Features</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___ALL_FEATURES = UMLPackage.CLASS___ALL_FEATURES;
+
+	/**
+	 * The operation id for the '<em>All Parents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___ALL_PARENTS = UMLPackage.CLASS___ALL_PARENTS;
+
+	/**
+	 * The operation id for the '<em>Get Generals</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_GENERALS = UMLPackage.CLASS___GET_GENERALS;
+
+	/**
+	 * The operation id for the '<em>Has Visibility Of</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___HAS_VISIBILITY_OF__NAMEDELEMENT = UMLPackage.CLASS___HAS_VISIBILITY_OF__NAMEDELEMENT;
+
+	/**
+	 * The operation id for the '<em>Inherit</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___INHERIT__ELIST = UMLPackage.CLASS___INHERIT__ELIST;
+
+	/**
+	 * The operation id for the '<em>Inheritable Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___INHERITABLE_MEMBERS__CLASSIFIER = UMLPackage.CLASS___INHERITABLE_MEMBERS__CLASSIFIER;
+
+	/**
+	 * The operation id for the '<em>Get Inherited Members</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_INHERITED_MEMBERS = UMLPackage.CLASS___GET_INHERITED_MEMBERS;
+
+	/**
+	 * The operation id for the '<em>May Specialize Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___MAY_SPECIALIZE_TYPE__CLASSIFIER = UMLPackage.CLASS___MAY_SPECIALIZE_TYPE__CLASSIFIER;
+
+	/**
+	 * The operation id for the '<em>Parents</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___PARENTS = UMLPackage.CLASS___PARENTS;
+
+	/**
+	 * The operation id for the '<em>Directly Realized Interfaces</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___DIRECTLY_REALIZED_INTERFACES = UMLPackage.CLASS___DIRECTLY_REALIZED_INTERFACES;
+
+	/**
+	 * The operation id for the '<em>Directly Used Interfaces</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___DIRECTLY_USED_INTERFACES = UMLPackage.CLASS___DIRECTLY_USED_INTERFACES;
+
+	/**
+	 * The operation id for the '<em>All Realized Interfaces</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___ALL_REALIZED_INTERFACES = UMLPackage.CLASS___ALL_REALIZED_INTERFACES;
+
+	/**
+	 * The operation id for the '<em>All Used Interfaces</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___ALL_USED_INTERFACES = UMLPackage.CLASS___ALL_USED_INTERFACES;
+
+	/**
+	 * The operation id for the '<em>Is Substitutable For</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___IS_SUBSTITUTABLE_FOR__CLASSIFIER = UMLPackage.CLASS___IS_SUBSTITUTABLE_FOR__CLASSIFIER;
+
+	/**
+	 * The operation id for the '<em>All Attributes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___ALL_ATTRIBUTES = UMLPackage.CLASS___ALL_ATTRIBUTES;
+
+	/**
+	 * The operation id for the '<em>All Slottable Features</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___ALL_SLOTTABLE_FEATURES = UMLPackage.CLASS___ALL_SLOTTABLE_FEATURES;
+
+	/**
+	 * The operation id for the '<em>Create Owned Attribute</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___CREATE_OWNED_ATTRIBUTE__STRING_TYPE_INT_INT = UMLPackage.CLASS___CREATE_OWNED_ATTRIBUTE__STRING_TYPE_INT_INT;
+
+	/**
+	 * The operation id for the '<em>Get Parts</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_PARTS = UMLPackage.CLASS___GET_PARTS;
+
+	/**
+	 * The operation id for the '<em>All Roles</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___ALL_ROLES = UMLPackage.CLASS___ALL_ROLES;
+
+	/**
+	 * The operation id for the '<em>Get Owned Ports</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_OWNED_PORTS = UMLPackage.CLASS___GET_OWNED_PORTS;
+
+	/**
+	 * The operation id for the '<em>Validate Class Behavior</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___VALIDATE_CLASS_BEHAVIOR__DIAGNOSTICCHAIN_MAP = UMLPackage.CLASS___VALIDATE_CLASS_BEHAVIOR__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Get All Implemented Interfaces</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_ALL_IMPLEMENTED_INTERFACES = UMLPackage.CLASS___GET_ALL_IMPLEMENTED_INTERFACES;
+
+	/**
+	 * The operation id for the '<em>Get Implemented Interfaces</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_IMPLEMENTED_INTERFACES = UMLPackage.CLASS___GET_IMPLEMENTED_INTERFACES;
+
+	/**
+	 * The operation id for the '<em>Validate Passive Class</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___VALIDATE_PASSIVE_CLASS__DIAGNOSTICCHAIN_MAP = UMLPackage.CLASS___VALIDATE_PASSIVE_CLASS__DIAGNOSTICCHAIN_MAP;
+
+	/**
+	 * The operation id for the '<em>Create Owned Operation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___CREATE_OWNED_OPERATION__STRING_ELIST_ELIST_TYPE = UMLPackage.CLASS___CREATE_OWNED_OPERATION__STRING_ELIST_ELIST_TYPE;
+
+	/**
+	 * The operation id for the '<em>Is Metaclass</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___IS_METACLASS = UMLPackage.CLASS___IS_METACLASS;
+
+	/**
+	 * The operation id for the '<em>Get Extensions</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_EXTENSIONS = UMLPackage.CLASS___GET_EXTENSIONS;
+
+	/**
+	 * The operation id for the '<em>Get Super Classes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS___GET_SUPER_CLASSES = UMLPackage.CLASS___GET_SUPER_CLASSES;
+
+	/**
+	 * The number of operations of the '<em>Rest Controller Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_CLASS_OPERATION_COUNT = UMLPackage.CLASS_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkCategoryList <em>Framework Category List</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -127345,7 +131461,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getFrameworkCategoryList()
 	 * @generated
 	 */
-	int FRAMEWORK_CATEGORY_LIST = 105;
+	int FRAMEWORK_CATEGORY_LIST = 108;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkKindList <em>Framework Kind List</em>}' enum.
@@ -127355,7 +131471,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getFrameworkKindList()
 	 * @generated
 	 */
-	int FRAMEWORK_KIND_LIST = 106;
+	int FRAMEWORK_KIND_LIST = 109;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DateTimePrecision <em>Date Time Precision</em>}' enum.
@@ -127365,7 +131481,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getDateTimePrecision()
 	 * @generated
 	 */
-	int DATE_TIME_PRECISION = 107;
+	int DATE_TIME_PRECISION = 110;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.Generation <em>Generation</em>}' enum.
@@ -127375,7 +131491,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getGeneration()
 	 * @generated
 	 */
-	int GENERATION = 108;
+	int GENERATION = 111;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.Collection <em>Collection</em>}' enum.
@@ -127385,7 +131501,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getCollection()
 	 * @generated
 	 */
-	int COLLECTION = 109;
+	int COLLECTION = 112;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.Order <em>Order</em>}' enum.
@@ -127395,7 +131511,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getOrder()
 	 * @generated
 	 */
-	int ORDER = 110;
+	int ORDER = 113;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.Cascade <em>Cascade</em>}' enum.
@@ -127405,7 +131521,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getCascade()
 	 * @generated
 	 */
-	int CASCADE = 111;
+	int CASCADE = 114;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.Fetch <em>Fetch</em>}' enum.
@@ -127415,7 +131531,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getFetch()
 	 * @generated
 	 */
-	int FETCH = 112;
+	int FETCH = 115;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ConstantNameList <em>Constant Name List</em>}' enum.
@@ -127425,7 +131541,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getConstantNameList()
 	 * @generated
 	 */
-	int CONSTANT_NAME_LIST = 113;
+	int CONSTANT_NAME_LIST = 116;
 
 	/**
 	 * The meta object id for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.InheritanceMapping <em>Inheritance Mapping</em>}' enum.
@@ -127435,7 +131551,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getInheritanceMapping()
 	 * @generated
 	 */
-	int INHERITANCE_MAPPING = 114;
+	int INHERITANCE_MAPPING = 117;
 
 	/**
 	 * The meta object id for the '<em>Rational</em>' data type.
@@ -127444,7 +131560,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getRational()
 	 * @generated
 	 */
-	int RATIONAL = 115;
+	int RATIONAL = 118;
 
 	/**
 	 * The meta object id for the '<em>Decimal</em>' data type.
@@ -127453,7 +131569,7 @@ public interface FramewebPackage extends EPackage {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getDecimal()
 	 * @generated
 	 */
-	int DECIMAL = 116;
+	int DECIMAL = 119;
 
 	/**
 	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FramewebProject <em>Project</em>}'.
@@ -128002,6 +132118,17 @@ public interface FramewebPackage extends EPackage {
 	EReference getResultDependency_ResultDependencyConstraint();
 
 	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ResultDependency#getHttpStatus <em>Http Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Http Status</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ResultDependency#getHttpStatus()
+	 * @see #getResultDependency()
+	 * @generated
+	 */
+	EAttribute getResultDependency_HttpStatus();
+
+	/**
 	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAssociation <em>Navigation Association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -128042,6 +132169,17 @@ public interface FramewebPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getFrontControllerMethod_MethodType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerMethod#getRequestMethod <em>Request Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Request Method</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerMethod#getRequestMethod()
+	 * @see #getFrontControllerMethod()
+	 * @generated
+	 */
+	EAttribute getFrontControllerMethod_RequestMethod();
 
 	/**
 	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass <em>Service Class</em>}'.
@@ -129510,6 +133648,91 @@ public interface FramewebPackage extends EPackage {
 	EAttribute getFrameWebConfiguration_TemplatePath();
 
 	/**
+	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerTemplate <em>Rest Controller Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Rest Controller Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerTemplate
+	 * @generated
+	 */
+	EClass getRestControllerTemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerTemplate#getClassTemplate <em>Class Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Class Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerTemplate#getClassTemplate()
+	 * @see #getRestControllerTemplate()
+	 * @generated
+	 */
+	EAttribute getRestControllerTemplate_ClassTemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerTemplate#getClassExtension <em>Class Extension</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Class Extension</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerTemplate#getClassExtension()
+	 * @see #getRestControllerTemplate()
+	 * @generated
+	 */
+	EAttribute getRestControllerTemplate_ClassExtension();
+
+	/**
+	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod <em>Rest Controller Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Rest Controller Method</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod
+	 * @generated
+	 */
+	EClass getRestControllerMethod();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod#getRequestType <em>Request Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Request Type</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod#getRequestType()
+	 * @see #getRestControllerMethod()
+	 * @generated
+	 */
+	EAttribute getRestControllerMethod_RequestType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod#isIsDefault <em>Is Default</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Default</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod#isIsDefault()
+	 * @see #getRestControllerMethod()
+	 * @generated
+	 */
+	EAttribute getRestControllerMethod_IsDefault();
+
+	/**
+	 * Returns the meta object for the reference '{@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod#getMethodType <em>Method Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Method Type</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod#getMethodType()
+	 * @see #getRestControllerMethod()
+	 * @generated
+	 */
+	EReference getRestControllerMethod_MethodType();
+
+	/**
+	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerClass <em>Rest Controller Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Rest Controller Class</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerClass
+	 * @generated
+	 */
+	EClass getRestControllerClass();
+
+	/**
 	 * Returns the meta object for enum '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkCategoryList <em>Framework Category List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -130116,6 +134339,14 @@ public interface FramewebPackage extends EPackage {
 				.getResultDependency_ResultDependencyConstraint();
 
 		/**
+		 * The meta object literal for the '<em><b>Http Status</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RESULT_DEPENDENCY__HTTP_STATUS = eINSTANCE.getResultDependency_HttpStatus();
+
+		/**
 		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.NavigationAssociationImpl <em>Navigation Association</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -130150,6 +134381,14 @@ public interface FramewebPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FRONT_CONTROLLER_METHOD__METHOD_TYPE = eINSTANCE.getFrontControllerMethod_MethodType();
+
+		/**
+		 * The meta object literal for the '<em><b>Request Method</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FRONT_CONTROLLER_METHOD__REQUEST_METHOD = eINSTANCE.getFrontControllerMethod_RequestMethod();
 
 		/**
 		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ServiceClassImpl <em>Service Class</em>}' class.
@@ -131445,6 +135684,76 @@ public interface FramewebPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FRAME_WEB_CONFIGURATION__TEMPLATE_PATH = eINSTANCE.getFrameWebConfiguration_TemplatePath();
+
+		/**
+		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.RestControllerTemplateImpl <em>Rest Controller Template</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.RestControllerTemplateImpl
+		 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getRestControllerTemplate()
+		 * @generated
+		 */
+		EClass REST_CONTROLLER_TEMPLATE = eINSTANCE.getRestControllerTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Class Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REST_CONTROLLER_TEMPLATE__CLASS_TEMPLATE = eINSTANCE.getRestControllerTemplate_ClassTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Class Extension</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REST_CONTROLLER_TEMPLATE__CLASS_EXTENSION = eINSTANCE.getRestControllerTemplate_ClassExtension();
+
+		/**
+		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.RestControllerMethodImpl <em>Rest Controller Method</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.RestControllerMethodImpl
+		 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getRestControllerMethod()
+		 * @generated
+		 */
+		EClass REST_CONTROLLER_METHOD = eINSTANCE.getRestControllerMethod();
+
+		/**
+		 * The meta object literal for the '<em><b>Request Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REST_CONTROLLER_METHOD__REQUEST_TYPE = eINSTANCE.getRestControllerMethod_RequestType();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Default</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REST_CONTROLLER_METHOD__IS_DEFAULT = eINSTANCE.getRestControllerMethod_IsDefault();
+
+		/**
+		 * The meta object literal for the '<em><b>Method Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REST_CONTROLLER_METHOD__METHOD_TYPE = eINSTANCE.getRestControllerMethod_MethodType();
+
+		/**
+		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.RestControllerClassImpl <em>Rest Controller Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.RestControllerClassImpl
+		 * @see br.ufes.inf.nemo.frameweb.model.frameweb.impl.FramewebPackageImpl#getRestControllerClass()
+		 * @generated
+		 */
+		EClass REST_CONTROLLER_CLASS = eINSTANCE.getRestControllerClass();
 
 		/**
 		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkCategoryList <em>Framework Category List</em>}' enum.

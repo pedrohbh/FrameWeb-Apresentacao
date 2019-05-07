@@ -139,11 +139,13 @@
     <genClasses ecoreClass="frameweb.ecore#//ResultDependency">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//ResultDependency/resultMethod"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference frameweb.ecore#//ResultDependency/resultDependencyConstraint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ResultDependency/httpStatus"/>
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//NavigationAssociation"/>
     <genClasses ecoreClass="frameweb.ecore#//FrontControllerMethod">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerMethod/isDefault"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//FrontControllerMethod/methodType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerMethod/requestMethod"/>
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//ServiceClass"/>
     <genClasses ecoreClass="frameweb.ecore#//ServiceInterface"/>
@@ -311,5 +313,15 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrameWebConfiguration/viewPath"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrameWebConfiguration/templatePath"/>
     </genClasses>
+    <genClasses ecoreClass="frameweb.ecore#//RestControllerTemplate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//RestControllerTemplate/classTemplate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//RestControllerTemplate/classExtension"/>
+    </genClasses>
+    <genClasses ecoreClass="frameweb.ecore#//RestControllerMethod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//RestControllerMethod/requestType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//RestControllerMethod/isDefault"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//RestControllerMethod/methodType"/>
+    </genClasses>
+    <genClasses ecoreClass="frameweb.ecore#//RestControllerClass"/>
   </genPackages>
 </genmodel:GenModel>

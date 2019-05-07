@@ -58,34 +58,36 @@
         <ownedLiteral name="CANCELADO" classifier="//@compose.0/web.project.model/EstadoPedido"/>
         <ownedLiteral name="ANDAMENTO" classifier="//@compose.0/web.project.model/EstadoPedido"/>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:DomainAssociation" name="é referente a" memberEnd="//@compose.0/web.project.model/é%20referente%20a/Source //@compose.0/web.project.model/é%20referente%20a/Target">
-        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/web.project.model/é%20referente%20a/Source"/>
-        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/web.project.model/é%20referente%20a/Target"/>
+      <packagedElement xsi:type="frameweb:DomainAssociation" name="é referente a" memberEnd="//@compose.0/web.project.model/é%20referente%20a/itensPedidos //@compose.0/web.project.model/é%20referente%20a/produto">
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/web.project.model/é%20referente%20a/itensPedidos"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/web.project.model/é%20referente%20a/produto"/>
         <ownedRule xsi:type="frameweb:VocabularyConstraints" name="Vocabulary Constraint" constrainedElement="//@compose.0/web.project.model/é%20referente%20a"/>
-        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/web.project.model/ItemPedido" association="//@compose.0/web.project.model/é%20referente%20a">
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="itensPedidos" type="//@compose.0/web.project.model/ItemPedido" association="//@compose.0/web.project.model/é%20referente%20a">
           <lowerValue xsi:type="uml:LiteralInteger"/>
           <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
         </ownedEnd>
-        <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/web.project.model/Produto" association="//@compose.0/web.project.model/é%20referente%20a"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="produto" type="//@compose.0/web.project.model/Produto" association="//@compose.0/web.project.model/é%20referente%20a">
+          <defaultValue xsi:type="uml:LiteralString" value=""/>
+        </ownedEnd>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:DomainAssociation" name="caracterizado por" memberEnd="//@compose.0/web.project.model/caracterizado%20por/Source //@compose.0/web.project.model/caracterizado%20por/Target">
-        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/web.project.model/caracterizado%20por/Source"/>
-        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/web.project.model/caracterizado%20por/Target"/>
+      <packagedElement xsi:type="frameweb:DomainAssociation" name="caracterizado por" memberEnd="//@compose.0/web.project.model/caracterizado%20por/produtos //@compose.0/web.project.model/caracterizado%20por/categorias">
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/web.project.model/caracterizado%20por/produtos"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/web.project.model/caracterizado%20por/categorias"/>
         <ownedRule xsi:type="frameweb:VocabularyConstraints" name="Vocabulary Constraint" constrainedElement="//@compose.0/web.project.model/caracterizado%20por"/>
-        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/web.project.model/Produto" association="//@compose.0/web.project.model/caracterizado%20por">
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="produtos" type="//@compose.0/web.project.model/Produto" association="//@compose.0/web.project.model/caracterizado%20por">
           <lowerValue xsi:type="uml:LiteralInteger"/>
           <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
         </ownedEnd>
-        <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/web.project.model/Categoria" association="//@compose.0/web.project.model/caracterizado%20por">
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="categorias" type="//@compose.0/web.project.model/Categoria" association="//@compose.0/web.project.model/caracterizado%20por">
           <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
         </ownedEnd>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:DomainAssociation" name="agrega" memberEnd="//@compose.0/web.project.model/agrega/Source //@compose.0/web.project.model/agrega/Target" collection="list">
-        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/web.project.model/agrega/Source"/>
-        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/web.project.model/agrega/Target"/>
+      <packagedElement xsi:type="frameweb:DomainAssociation" name="agrega" memberEnd="//@compose.0/web.project.model/agrega/pedido //@compose.0/web.project.model/agrega/itens" collection="list">
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/web.project.model/agrega/pedido"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/web.project.model/agrega/itens"/>
         <ownedRule xsi:type="frameweb:VocabularyConstraints" name="Vocabulary Constraint" constrainedElement="//@compose.0/web.project.model/agrega"/>
-        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/web.project.model/Pedido" association="//@compose.0/web.project.model/agrega"/>
-        <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/web.project.model/ItemPedido" association="//@compose.0/web.project.model/agrega">
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="pedido" type="//@compose.0/web.project.model/Pedido" association="//@compose.0/web.project.model/agrega"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="itens" type="//@compose.0/web.project.model/ItemPedido" association="//@compose.0/web.project.model/agrega">
           <lowerValue xsi:type="uml:LiteralInteger"/>
           <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
         </ownedEnd>
@@ -113,12 +115,16 @@
     </packagedElement>
     <packagedElement xsi:type="frameweb:ViewPackage" name="View Package">
       <packagedElement xsi:type="frameweb:Page" name="produtos">
-        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.1/View%20Package/adicionarProduto" association="//@compose.1/View%20Package/@packagedElement.2"/>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.1/View%20Package/adicionarProduto" association="//@compose.1/View%20Package/add"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:UIComponent" name="adicionarProduto"/>
-      <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.1/View%20Package/@packagedElement.2/@ownedEnd.0 //@compose.1/View%20Package/produtos/@ownedAttribute.0">
-        <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.1/View%20Package/produtos" association="//@compose.1/View%20Package/@packagedElement.2"/>
+      <packagedElement xsi:type="frameweb:NavigationAssociation" name="add" memberEnd="//@compose.1/View%20Package/add/@ownedEnd.0 //@compose.1/View%20Package/produtos/@ownedAttribute.0">
+        <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.1/View%20Package/produtos" association="//@compose.1/View%20Package/add"/>
       </packagedElement>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.1/View%20Package/adicionarProduto" supplier="//@compose.1/web.project.controller/ProdutosController" method="//@compose.1/web.project.controller/ProdutosController/adicionar"/>
+    <packagedElement xsi:type="frameweb:ResultDependency" name="" client="//@compose.1/web.project.controller/ProdutosController" supplier="//@compose.1/View%20Package/produtos" resultMethod="//@compose.1/web.project.controller/ProdutosController/adicionar">
+      <resultDependencyConstraint result="null"/>
     </packagedElement>
   </compose>
   <compose xsi:type="frameweb:PersistenceModel" name="Persistence Model">

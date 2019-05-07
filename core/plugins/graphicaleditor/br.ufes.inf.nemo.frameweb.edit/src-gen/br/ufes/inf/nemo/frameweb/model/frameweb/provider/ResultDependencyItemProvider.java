@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -47,6 +48,7 @@ public class ResultDependencyItemProvider extends NavigationDependencyItemProvid
 			super.getPropertyDescriptors(object);
 
 			addResultMethodPropertyDescriptor(object);
+			addHttpStatusPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -65,6 +67,22 @@ public class ResultDependencyItemProvider extends NavigationDependencyItemProvid
 								"_UI_ResultDependency_type"),
 						FramewebPackage.Literals.RESULT_DEPENDENCY__RESULT_METHOD, true, false, true, null, null,
 						null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Http Status feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addHttpStatusPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ResultDependency_httpStatus_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ResultDependency_httpStatus_feature",
+								"_UI_ResultDependency_type"),
+						FramewebPackage.Literals.RESULT_DEPENDENCY__HTTP_STATUS, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -143,6 +161,9 @@ public class ResultDependencyItemProvider extends NavigationDependencyItemProvid
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ResultDependency.class)) {
+		case FramewebPackage.RESULT_DEPENDENCY__HTTP_STATUS:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
 		case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;

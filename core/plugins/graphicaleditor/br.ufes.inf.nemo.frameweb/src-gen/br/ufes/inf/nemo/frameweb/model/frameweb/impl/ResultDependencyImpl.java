@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ResultDependencyImpl#getResultMethod <em>Result Method</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ResultDependencyImpl#getResultDependencyConstraint <em>Result Dependency Constraint</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ResultDependencyImpl#getHttpStatus <em>Http Status</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,6 +51,26 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * @ordered
 	 */
 	protected ResultConstraint resultDependencyConstraint;
+
+	/**
+	 * The default value of the '{@link #getHttpStatus() <em>Http Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHttpStatus()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String HTTP_STATUS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getHttpStatus() <em>Http Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHttpStatus()
+	 * @generated
+	 * @ordered
+	 */
+	protected String httpStatus = HTTP_STATUS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -175,6 +196,30 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * @generated
 	 */
 	@Override
+	public String getHttpStatus() {
+		return httpStatus;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setHttpStatus(String newHttpStatus) {
+		String oldHttpStatus = httpStatus;
+		httpStatus = newHttpStatus;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.RESULT_DEPENDENCY__HTTP_STATUS,
+					oldHttpStatus, httpStatus));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT:
@@ -197,6 +242,8 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 			return basicGetResultMethod();
 		case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT:
 			return getResultDependencyConstraint();
+		case FramewebPackage.RESULT_DEPENDENCY__HTTP_STATUS:
+			return getHttpStatus();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -214,6 +261,9 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 			return;
 		case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT:
 			setResultDependencyConstraint((ResultConstraint) newValue);
+			return;
+		case FramewebPackage.RESULT_DEPENDENCY__HTTP_STATUS:
+			setHttpStatus((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -233,6 +283,9 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 		case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT:
 			setResultDependencyConstraint((ResultConstraint) null);
 			return;
+		case FramewebPackage.RESULT_DEPENDENCY__HTTP_STATUS:
+			setHttpStatus(HTTP_STATUS_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -249,8 +302,27 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 			return resultMethod != null;
 		case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT:
 			return resultDependencyConstraint != null;
+		case FramewebPackage.RESULT_DEPENDENCY__HTTP_STATUS:
+			return HTTP_STATUS_EDEFAULT == null ? httpStatus != null : !HTTP_STATUS_EDEFAULT.equals(httpStatus);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (httpStatus: ");
+		result.append(httpStatus);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ResultDependencyImpl

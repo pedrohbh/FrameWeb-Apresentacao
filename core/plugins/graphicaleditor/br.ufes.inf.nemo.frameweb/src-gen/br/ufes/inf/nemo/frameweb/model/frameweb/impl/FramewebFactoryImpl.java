@@ -247,6 +247,12 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createDAOTemplate();
 		case FramewebPackage.FRAME_WEB_CONFIGURATION:
 			return createFrameWebConfiguration();
+		case FramewebPackage.REST_CONTROLLER_TEMPLATE:
+			return createRestControllerTemplate();
+		case FramewebPackage.REST_CONTROLLER_METHOD:
+			return createRestControllerMethod();
+		case FramewebPackage.REST_CONTROLLER_CLASS:
+			return createRestControllerClass();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1369,6 +1375,39 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	public FrameWebConfiguration createFrameWebConfiguration() {
 		FrameWebConfigurationImpl frameWebConfiguration = new FrameWebConfigurationImpl();
 		return frameWebConfiguration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public RestControllerTemplate createRestControllerTemplate() {
+		RestControllerTemplateImpl restControllerTemplate = new RestControllerTemplateImpl();
+		return restControllerTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public RestControllerMethod createRestControllerMethod() {
+		RestControllerMethodImpl restControllerMethod = new RestControllerMethodImpl();
+		return restControllerMethod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public RestControllerClass createRestControllerClass() {
+		RestControllerClassImpl restControllerClass = new RestControllerClassImpl();
+		return restControllerClass;
 	}
 
 	/**

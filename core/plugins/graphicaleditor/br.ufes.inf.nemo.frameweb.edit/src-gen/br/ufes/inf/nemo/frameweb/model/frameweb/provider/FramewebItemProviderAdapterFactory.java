@@ -2258,6 +2258,75 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerTemplate} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RestControllerTemplateItemProvider restControllerTemplateItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerTemplate}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRestControllerTemplateAdapter() {
+		if (restControllerTemplateItemProvider == null) {
+			restControllerTemplateItemProvider = new RestControllerTemplateItemProvider(this);
+		}
+
+		return restControllerTemplateItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RestControllerMethodItemProvider restControllerMethodItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRestControllerMethodAdapter() {
+		if (restControllerMethodItemProvider == null) {
+			restControllerMethodItemProvider = new RestControllerMethodItemProvider(this);
+		}
+
+		return restControllerMethodItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RestControllerClassItemProvider restControllerClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRestControllerClassAdapter() {
+		if (restControllerClassItemProvider == null) {
+			restControllerClassItemProvider = new RestControllerClassItemProvider(this);
+		}
+
+		return restControllerClassItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2552,6 +2621,12 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 			daoTemplateItemProvider.dispose();
 		if (frameWebConfigurationItemProvider != null)
 			frameWebConfigurationItemProvider.dispose();
+		if (restControllerTemplateItemProvider != null)
+			restControllerTemplateItemProvider.dispose();
+		if (restControllerMethodItemProvider != null)
+			restControllerMethodItemProvider.dispose();
+		if (restControllerClassItemProvider != null)
+			restControllerClassItemProvider.dispose();
 	}
 
 }

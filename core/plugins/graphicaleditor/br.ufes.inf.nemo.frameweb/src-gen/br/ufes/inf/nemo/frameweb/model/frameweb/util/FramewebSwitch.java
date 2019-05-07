@@ -3086,6 +3086,95 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case FramewebPackage.REST_CONTROLLER_TEMPLATE: {
+			RestControllerTemplate restControllerTemplate = (RestControllerTemplate) theEObject;
+			T result = caseRestControllerTemplate(restControllerTemplate);
+			if (result == null)
+				result = caseFrameworkProfile(restControllerTemplate);
+			if (result == null)
+				result = caseProfile(restControllerTemplate);
+			if (result == null)
+				result = casePackage(restControllerTemplate);
+			if (result == null)
+				result = caseNamespace(restControllerTemplate);
+			if (result == null)
+				result = casePackageableElement(restControllerTemplate);
+			if (result == null)
+				result = caseTemplateableElement(restControllerTemplate);
+			if (result == null)
+				result = caseNamedElement(restControllerTemplate);
+			if (result == null)
+				result = caseParameterableElement(restControllerTemplate);
+			if (result == null)
+				result = caseElement(restControllerTemplate);
+			if (result == null)
+				result = caseEModelElement(restControllerTemplate);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FramewebPackage.REST_CONTROLLER_METHOD: {
+			RestControllerMethod restControllerMethod = (RestControllerMethod) theEObject;
+			T result = caseRestControllerMethod(restControllerMethod);
+			if (result == null)
+				result = caseOperation(restControllerMethod);
+			if (result == null)
+				result = caseBehavioralFeature(restControllerMethod);
+			if (result == null)
+				result = caseParameterableElement(restControllerMethod);
+			if (result == null)
+				result = caseTemplateableElement(restControllerMethod);
+			if (result == null)
+				result = caseNamespace(restControllerMethod);
+			if (result == null)
+				result = caseFeature(restControllerMethod);
+			if (result == null)
+				result = caseRedefinableElement(restControllerMethod);
+			if (result == null)
+				result = caseNamedElement(restControllerMethod);
+			if (result == null)
+				result = caseElement(restControllerMethod);
+			if (result == null)
+				result = caseEModelElement(restControllerMethod);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FramewebPackage.REST_CONTROLLER_CLASS: {
+			RestControllerClass restControllerClass = (RestControllerClass) theEObject;
+			T result = caseRestControllerClass(restControllerClass);
+			if (result == null)
+				result = caseClass(restControllerClass);
+			if (result == null)
+				result = caseEncapsulatedClassifier(restControllerClass);
+			if (result == null)
+				result = caseBehavioredClassifier(restControllerClass);
+			if (result == null)
+				result = caseStructuredClassifier(restControllerClass);
+			if (result == null)
+				result = caseClassifier(restControllerClass);
+			if (result == null)
+				result = caseNamespace(restControllerClass);
+			if (result == null)
+				result = caseRedefinableElement(restControllerClass);
+			if (result == null)
+				result = caseType(restControllerClass);
+			if (result == null)
+				result = caseTemplateableElement(restControllerClass);
+			if (result == null)
+				result = casePackageableElement(restControllerClass);
+			if (result == null)
+				result = caseNamedElement(restControllerClass);
+			if (result == null)
+				result = caseParameterableElement(restControllerClass);
+			if (result == null)
+				result = caseElement(restControllerClass);
+			if (result == null)
+				result = caseEModelElement(restControllerClass);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -4663,6 +4752,51 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFrameWebConfiguration(FrameWebConfiguration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Rest Controller Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Rest Controller Template</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRestControllerTemplate(RestControllerTemplate object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Rest Controller Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Rest Controller Method</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRestControllerMethod(RestControllerMethod object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Rest Controller Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Rest Controller Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRestControllerClass(RestControllerClass object) {
 		return null;
 	}
 

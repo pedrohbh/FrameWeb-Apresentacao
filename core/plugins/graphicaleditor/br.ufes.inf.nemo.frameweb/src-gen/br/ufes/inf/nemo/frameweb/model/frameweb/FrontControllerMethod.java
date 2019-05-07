@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.Type;
  * <ul>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerMethod#isIsDefault <em>Is Default</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerMethod#getMethodType <em>Method Type</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerMethod#getRequestMethod <em>Request Method</em>}</li>
  * </ul>
  *
  * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getFrontControllerMethod()
@@ -74,5 +75,31 @@ public interface FrontControllerMethod extends Operation {
 	 * @generated
 	 */
 	void setMethodType(Type value);
+
+	/**
+	 * Returns the value of the '<em><b>Request Method</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Request Method</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Request Method</em>' attribute.
+	 * @see #setRequestMethod(String)
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getFrontControllerMethod_RequestMethod()
+	 * @model dataType="org.eclipse.uml2.types.String"
+	 * @generated
+	 */
+	String getRequestMethod();
+
+	/**
+	 * Sets the value of the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerMethod#getRequestMethod <em>Request Method</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Request Method</em>' attribute.
+	 * @see #getRequestMethod()
+	 * @generated
+	 */
+	void setRequestMethod(String value);
 
 } // FrontControllerMethod

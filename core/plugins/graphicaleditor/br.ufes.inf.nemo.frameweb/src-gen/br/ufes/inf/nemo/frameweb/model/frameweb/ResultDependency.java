@@ -13,6 +13,7 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * <ul>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.ResultDependency#getResultMethod <em>Result Method</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.ResultDependency#getResultDependencyConstraint <em>Result Dependency Constraint</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.ResultDependency#getHttpStatus <em>Http Status</em>}</li>
  * </ul>
  *
  * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getResultDependency()
@@ -71,5 +72,31 @@ public interface ResultDependency extends NavigationDependency {
 	 * @generated
 	 */
 	void setResultDependencyConstraint(ResultConstraint value);
+
+	/**
+	 * Returns the value of the '<em><b>Http Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Http Status</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Http Status</em>' attribute.
+	 * @see #setHttpStatus(String)
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getResultDependency_HttpStatus()
+	 * @model dataType="org.eclipse.uml2.types.String"
+	 * @generated
+	 */
+	String getHttpStatus();
+
+	/**
+	 * Sets the value of the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ResultDependency#getHttpStatus <em>Http Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Http Status</em>' attribute.
+	 * @see #getHttpStatus()
+	 * @generated
+	 */
+	void setHttpStatus(String value);
 
 } // ResultDependency

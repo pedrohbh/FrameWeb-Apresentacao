@@ -633,6 +633,21 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseRestControllerTemplate(RestControllerTemplate object) {
+			return createRestControllerTemplateAdapter();
+		}
+
+		@Override
+		public Adapter caseRestControllerMethod(RestControllerMethod object) {
+			return createRestControllerMethodAdapter();
+		}
+
+		@Override
+		public Adapter caseRestControllerClass(RestControllerClass object) {
+			return createRestControllerClassAdapter();
+		}
+
+		@Override
 		public Adapter caseEModelElement(EModelElement object) {
 			return createEModelElementAdapter();
 		}
@@ -2328,6 +2343,48 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFrameWebConfigurationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerTemplate <em>Rest Controller Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerTemplate
+	 * @generated
+	 */
+	public Adapter createRestControllerTemplateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod <em>Rest Controller Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod
+	 * @generated
+	 */
+	public Adapter createRestControllerMethodAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerClass <em>Rest Controller Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerClass
+	 * @generated
+	 */
+	public Adapter createRestControllerClassAdapter() {
 		return null;
 	}
 

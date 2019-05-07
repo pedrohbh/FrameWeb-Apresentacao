@@ -877,6 +877,33 @@ public interface FramewebFactory extends EFactory {
 	FrameWebConfiguration createFrameWebConfiguration();
 
 	/**
+	 * Returns a new object of class '<em>Rest Controller Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Rest Controller Template</em>'.
+	 * @generated
+	 */
+	RestControllerTemplate createRestControllerTemplate();
+
+	/**
+	 * Returns a new object of class '<em>Rest Controller Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Rest Controller Method</em>'.
+	 * @generated
+	 */
+	RestControllerMethod createRestControllerMethod();
+
+	/**
+	 * Returns a new object of class '<em>Rest Controller Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Rest Controller Class</em>'.
+	 * @generated
+	 */
+	RestControllerClass createRestControllerClass();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

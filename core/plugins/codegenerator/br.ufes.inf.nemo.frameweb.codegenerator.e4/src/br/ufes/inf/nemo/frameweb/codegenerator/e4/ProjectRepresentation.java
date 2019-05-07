@@ -25,6 +25,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.PersistenceModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.PersistencePackage;
+import br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerTemplate;
 
 public class ProjectRepresentation {
 	
@@ -86,14 +87,14 @@ public class ProjectRepresentation {
 	 */
 	public FrontControllerTemplate getFrontControllerTemplate() {
 		try {
-			FrontControllerTemplate frontrControllerTemplate = frameworkProfiles
+			FrontControllerTemplate frontControllerTemplate = frameworkProfiles
 					.stream()
 					.filter(FrontControllerTemplate.class::isInstance)
 					.map(FrontControllerTemplate.class::cast)
 					.findFirst()
 					.get();
 			
-			return frontrControllerTemplate;
+			return frontControllerTemplate;
 			
 		} catch (NullPointerException e) {
 			return null;
@@ -102,6 +103,30 @@ public class ProjectRepresentation {
 	
 	public boolean hasFrontControllerTemplate() {
 		return getFrontControllerTemplate() != null;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public RestControllerTemplate getRestControllerTemplate() {
+		try {
+			RestControllerTemplate restControllerTemplate = frameworkProfiles
+					.stream()
+					.filter(RestControllerTemplate.class::isInstance)
+					.map(RestControllerTemplate.class::cast)
+					.findFirst()
+					.get();
+			
+			return restControllerTemplate;
+			
+		} catch (NullPointerException e) {
+			return null;
+		}
+	}
+	
+	public boolean hasRestControllerTemplate() {
+		return getRestControllerTemplate() != null;
 	}
 	
 	/**

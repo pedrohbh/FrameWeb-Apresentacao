@@ -26,6 +26,7 @@ import org.eclipse.uml2.uml.internal.impl.OperationImpl;
  * <ul>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerMethodImpl#isIsDefault <em>Is Default</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerMethodImpl#getMethodType <em>Method Type</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerMethodImpl#getRequestMethod <em>Request Method</em>}</li>
  * </ul>
  *
  * @generated
@@ -61,6 +62,26 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 	 * @ordered
 	 */
 	protected Type methodType;
+
+	/**
+	 * The default value of the '{@link #getRequestMethod() <em>Request Method</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRequestMethod()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String REQUEST_METHOD_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRequestMethod() <em>Request Method</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRequestMethod()
+	 * @generated
+	 * @ordered
+	 */
+	protected String requestMethod = REQUEST_METHOD_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -153,6 +174,30 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 	 * @generated
 	 */
 	@Override
+	public String getRequestMethod() {
+		return requestMethod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setRequestMethod(String newRequestMethod) {
+		String oldRequestMethod = requestMethod;
+		requestMethod = newRequestMethod;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					FramewebPackage.FRONT_CONTROLLER_METHOD__REQUEST_METHOD, oldRequestMethod, requestMethod));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case FramewebPackage.FRONT_CONTROLLER_METHOD__IS_DEFAULT:
@@ -161,6 +206,8 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 			if (resolve)
 				return getMethodType();
 			return basicGetMethodType();
+		case FramewebPackage.FRONT_CONTROLLER_METHOD__REQUEST_METHOD:
+			return getRequestMethod();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -178,6 +225,9 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 			return;
 		case FramewebPackage.FRONT_CONTROLLER_METHOD__METHOD_TYPE:
 			setMethodType((Type) newValue);
+			return;
+		case FramewebPackage.FRONT_CONTROLLER_METHOD__REQUEST_METHOD:
+			setRequestMethod((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -197,6 +247,9 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 		case FramewebPackage.FRONT_CONTROLLER_METHOD__METHOD_TYPE:
 			setMethodType((Type) null);
 			return;
+		case FramewebPackage.FRONT_CONTROLLER_METHOD__REQUEST_METHOD:
+			setRequestMethod(REQUEST_METHOD_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -213,6 +266,9 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 			return isDefault != IS_DEFAULT_EDEFAULT;
 		case FramewebPackage.FRONT_CONTROLLER_METHOD__METHOD_TYPE:
 			return methodType != null;
+		case FramewebPackage.FRONT_CONTROLLER_METHOD__REQUEST_METHOD:
+			return REQUEST_METHOD_EDEFAULT == null ? requestMethod != null
+					: !REQUEST_METHOD_EDEFAULT.equals(requestMethod);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -230,6 +286,8 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (isDefault: ");
 		result.append(isDefault);
+		result.append(", requestMethod: ");
+		result.append(requestMethod);
 		result.append(')');
 		return result.toString();
 	}
