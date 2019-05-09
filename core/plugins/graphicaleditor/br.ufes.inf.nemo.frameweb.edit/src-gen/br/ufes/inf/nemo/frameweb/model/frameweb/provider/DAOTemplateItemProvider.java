@@ -48,8 +48,6 @@ public class DAOTemplateItemProvider extends FrameworkProfileItemProvider {
 
 			addClassTemplatePropertyDescriptor(object);
 			addInterfaceTemplatePropertyDescriptor(object);
-			addClassExtensionPropertyDescriptor(object);
-			addInterfaceExtensionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -83,38 +81,6 @@ public class DAOTemplateItemProvider extends FrameworkProfileItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_DAOTemplate_interfaceTemplate_feature",
 								"_UI_DAOTemplate_type"),
 						FramewebPackage.Literals.DAO_TEMPLATE__INTERFACE_TEMPLATE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Class Extension feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addClassExtensionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_DAOTemplate_classExtension_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_DAOTemplate_classExtension_feature",
-								"_UI_DAOTemplate_type"),
-						FramewebPackage.Literals.DAO_TEMPLATE__CLASS_EXTENSION, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Interface Extension feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addInterfaceExtensionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_DAOTemplate_interfaceExtension_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_DAOTemplate_interfaceExtension_feature",
-								"_UI_DAOTemplate_type"),
-						FramewebPackage.Literals.DAO_TEMPLATE__INTERFACE_EXTENSION, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -166,8 +132,6 @@ public class DAOTemplateItemProvider extends FrameworkProfileItemProvider {
 		switch (notification.getFeatureID(DAOTemplate.class)) {
 		case FramewebPackage.DAO_TEMPLATE__CLASS_TEMPLATE:
 		case FramewebPackage.DAO_TEMPLATE__INTERFACE_TEMPLATE:
-		case FramewebPackage.DAO_TEMPLATE__CLASS_EXTENSION:
-		case FramewebPackage.DAO_TEMPLATE__INTERFACE_EXTENSION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

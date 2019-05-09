@@ -9,3 +9,4 @@ Export-Package: br.ufes.inf.nemo.frameweb.utils
 Require-Bundle: org.eclipse.core.resources,
  org.eclipse.core.runtime,
  org.eclipse.ui
+Import-Package: org.apache.commons.io

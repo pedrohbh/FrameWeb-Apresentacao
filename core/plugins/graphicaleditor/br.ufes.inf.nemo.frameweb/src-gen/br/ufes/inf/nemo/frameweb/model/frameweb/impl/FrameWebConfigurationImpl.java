@@ -22,6 +22,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrameWebConfigurationImpl#getSrcPath <em>Src Path</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrameWebConfigurationImpl#getViewPath <em>View Path</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrameWebConfigurationImpl#getTemplatePath <em>Template Path</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrameWebConfigurationImpl#getClassExtension <em>Class Extension</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrameWebConfigurationImpl#getPageExtension <em>Page Extension</em>}</li>
  * </ul>
  *
  * @generated
@@ -86,6 +88,46 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 	 * @ordered
 	 */
 	protected String templatePath = TEMPLATE_PATH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getClassExtension() <em>Class Extension</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassExtension()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CLASS_EXTENSION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getClassExtension() <em>Class Extension</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassExtension()
+	 * @generated
+	 * @ordered
+	 */
+	protected String classExtension = CLASS_EXTENSION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPageExtension() <em>Page Extension</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPageExtension()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PAGE_EXTENSION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPageExtension() <em>Page Extension</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPageExtension()
+	 * @generated
+	 * @ordered
+	 */
+	protected String pageExtension = PAGE_EXTENSION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -187,6 +229,56 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 	 * @generated
 	 */
 	@Override
+	public String getClassExtension() {
+		return classExtension;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("restriction")
+	@Override
+	public void setClassExtension(String newClassExtension) {
+		String oldClassExtension = classExtension;
+		classExtension = newClassExtension;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					FramewebPackage.FRAME_WEB_CONFIGURATION__CLASS_EXTENSION, oldClassExtension, classExtension));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getPageExtension() {
+		return pageExtension;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("restriction")
+	@Override
+	public void setPageExtension(String newPageExtension) {
+		String oldPageExtension = pageExtension;
+		pageExtension = newPageExtension;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					FramewebPackage.FRAME_WEB_CONFIGURATION__PAGE_EXTENSION, oldPageExtension, pageExtension));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__SRC_PATH:
@@ -195,6 +287,10 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 			return getViewPath();
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__TEMPLATE_PATH:
 			return getTemplatePath();
+		case FramewebPackage.FRAME_WEB_CONFIGURATION__CLASS_EXTENSION:
+			return getClassExtension();
+		case FramewebPackage.FRAME_WEB_CONFIGURATION__PAGE_EXTENSION:
+			return getPageExtension();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -215,6 +311,12 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 			return;
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__TEMPLATE_PATH:
 			setTemplatePath((String) newValue);
+			return;
+		case FramewebPackage.FRAME_WEB_CONFIGURATION__CLASS_EXTENSION:
+			setClassExtension((String) newValue);
+			return;
+		case FramewebPackage.FRAME_WEB_CONFIGURATION__PAGE_EXTENSION:
+			setPageExtension((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -237,6 +339,12 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__TEMPLATE_PATH:
 			setTemplatePath(TEMPLATE_PATH_EDEFAULT);
 			return;
+		case FramewebPackage.FRAME_WEB_CONFIGURATION__CLASS_EXTENSION:
+			setClassExtension(CLASS_EXTENSION_EDEFAULT);
+			return;
+		case FramewebPackage.FRAME_WEB_CONFIGURATION__PAGE_EXTENSION:
+			setPageExtension(PAGE_EXTENSION_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -255,6 +363,12 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 			return VIEW_PATH_EDEFAULT == null ? viewPath != null : !VIEW_PATH_EDEFAULT.equals(viewPath);
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__TEMPLATE_PATH:
 			return TEMPLATE_PATH_EDEFAULT == null ? templatePath != null : !TEMPLATE_PATH_EDEFAULT.equals(templatePath);
+		case FramewebPackage.FRAME_WEB_CONFIGURATION__CLASS_EXTENSION:
+			return CLASS_EXTENSION_EDEFAULT == null ? classExtension != null
+					: !CLASS_EXTENSION_EDEFAULT.equals(classExtension);
+		case FramewebPackage.FRAME_WEB_CONFIGURATION__PAGE_EXTENSION:
+			return PAGE_EXTENSION_EDEFAULT == null ? pageExtension != null
+					: !PAGE_EXTENSION_EDEFAULT.equals(pageExtension);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -276,6 +390,10 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 		result.append(viewPath);
 		result.append(", templatePath: ");
 		result.append(templatePath);
+		result.append(", classExtension: ");
+		result.append(classExtension);
+		result.append(", pageExtension: ");
+		result.append(pageExtension);
 		result.append(')');
 		return result.toString();
 	}

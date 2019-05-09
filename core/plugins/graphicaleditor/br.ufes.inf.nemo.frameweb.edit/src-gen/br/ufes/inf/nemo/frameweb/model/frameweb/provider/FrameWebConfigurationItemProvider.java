@@ -49,6 +49,8 @@ public class FrameWebConfigurationItemProvider extends FrameworkProfileItemProvi
 			addSrcPathPropertyDescriptor(object);
 			addViewPathPropertyDescriptor(object);
 			addTemplatePathPropertyDescriptor(object);
+			addClassExtensionPropertyDescriptor(object);
+			addPageExtensionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -102,6 +104,38 @@ public class FrameWebConfigurationItemProvider extends FrameworkProfileItemProvi
 	}
 
 	/**
+	 * This adds a property descriptor for the Class Extension feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClassExtensionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FrameWebConfiguration_classExtension_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_FrameWebConfiguration_classExtension_feature", "_UI_FrameWebConfiguration_type"),
+						FramewebPackage.Literals.FRAME_WEB_CONFIGURATION__CLASS_EXTENSION, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Page Extension feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPageExtensionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FrameWebConfiguration_pageExtension_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_FrameWebConfiguration_pageExtension_feature", "_UI_FrameWebConfiguration_type"),
+						FramewebPackage.Literals.FRAME_WEB_CONFIGURATION__PAGE_EXTENSION, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns FrameWebConfiguration.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -150,6 +184,8 @@ public class FrameWebConfigurationItemProvider extends FrameworkProfileItemProvi
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__SRC_PATH:
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__VIEW_PATH:
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__TEMPLATE_PATH:
+		case FramewebPackage.FRAME_WEB_CONFIGURATION__CLASS_EXTENSION:
+		case FramewebPackage.FRAME_WEB_CONFIGURATION__PAGE_EXTENSION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

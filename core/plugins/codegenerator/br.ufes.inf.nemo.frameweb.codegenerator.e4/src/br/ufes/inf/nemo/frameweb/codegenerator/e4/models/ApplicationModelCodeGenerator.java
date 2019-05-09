@@ -3,27 +3,26 @@ package br.ufes.inf.nemo.frameweb.codegenerator.e4.models;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 
+import br.ufes.inf.nemo.frameweb.codegenerator.e4.ProjectConfiguration;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.classes.ClassCodeGenerator;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceInterface;
+import br.ufes.inf.nemo.frameweb.utils.IFileUtils;
 import br.ufes.inf.nemo.frameweb.utils.IFolderUtils;
 
-public class ApplicationModelCodeGenerator {
+public class ApplicationModelCodeGenerator implements ModelCodeGenerator {
 	
 	private List<ApplicationPackage> applicationPackages;
 	private DITemplate diTemplate;
+	private ProjectConfiguration projectConfiguration;
 	
-	/**
-	 * 
-	 * @param applicationModel
-	 * @param diTemplate
-	 */
-	public ApplicationModelCodeGenerator(ApplicationModel applicationModel, DITemplate diTemplate) {
+	public ApplicationModelCodeGenerator(ApplicationModel applicationModel, DITemplate diTemplate, ProjectConfiguration projectConfiguration) {
 		applicationPackages = applicationModel.getOwnedElements()
 				.stream()
 				.filter(ApplicationPackage.class::isInstance)
@@ -31,34 +30,51 @@ public class ApplicationModelCodeGenerator {
 				.collect(Collectors.toList());
 		
 		this.diTemplate = diTemplate;
+		this.projectConfiguration = projectConfiguration;
 	}
 	
-	/**
-	 * 
-	 * @param srcFolder
-	 * @param diTemplateFolder
-	 */
-	public void generate(IFolder srcFolder, IFolder diTemplateFolder) {
+	@Override
+	public void generate() {
+		String templatePath = diTemplate.getClassTemplate();
+		String template = projectConfiguration.getTemplate(templatePath);
+		
+		String interfaceTemplatePath = diTemplate.getInterfaceTemplate();
+		String interfaceTemplate = projectConfiguration.getTemplate(interfaceTemplatePath);
+		
+		IFolder src = projectConfiguration.getSourceFolder();
+		
 		applicationPackages.forEach(applicationPackage -> {
 			String packagePath = IFolderUtils.packageNameToPath(applicationPackage.getName());
 
-			IFolderUtils.makeDirectory(srcFolder, packagePath);
+			IFolderUtils.makeDirectory(src, packagePath);
 			
-			IFolder package_ = srcFolder.getFolder(packagePath);
+			IFolder package_ = src.getFolder(packagePath);
 
 			applicationPackage.getOwnedTypes()
 					.stream()
 					.filter(ServiceClass.class::isInstance)
 					.map(ServiceClass.class::cast)
-					.map(serviceClass -> new ClassCodeGenerator(serviceClass, diTemplate))
-					.forEach(it -> it.generate(package_, diTemplateFolder));
+					.forEach(serviceClass -> {
+						String code = ClassCodeGenerator.render(serviceClass, template);
+						
+						String fileName = serviceClass.getName() + projectConfiguration.getClassExtension();
+						IFile file = package_.getFile(fileName);
+						
+						IFileUtils.createFile(file, code);
+					});
 
 			applicationPackage.getOwnedTypes()
 					.stream()
 					.filter(ServiceInterface.class::isInstance)
 					.map(ServiceInterface.class::cast)
-					.map(serviceInterface -> new ClassCodeGenerator(serviceInterface, diTemplate))
-					.forEach(it -> it.generate(package_, diTemplateFolder));
+					.forEach(serviceInterface -> {
+						String code = ClassCodeGenerator.render(serviceInterface, interfaceTemplate);
+						
+						String fileName = serviceInterface.getName() + projectConfiguration.getClassExtension();
+						IFile file = package_.getFile(fileName);
+						
+						IFileUtils.createFile(file, code);
+					});
 		});
 	}
 	

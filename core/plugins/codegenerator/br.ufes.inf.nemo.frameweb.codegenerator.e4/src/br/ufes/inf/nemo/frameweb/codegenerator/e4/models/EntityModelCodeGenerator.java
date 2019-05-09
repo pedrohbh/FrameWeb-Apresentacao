@@ -3,26 +3,26 @@ package br.ufes.inf.nemo.frameweb.codegenerator.e4.models;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.uml2.uml.Enumeration;
 
+import br.ufes.inf.nemo.frameweb.codegenerator.e4.ProjectConfiguration;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.classes.ClassCodeGenerator;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.EntityModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
+import br.ufes.inf.nemo.frameweb.utils.IFileUtils;
 import br.ufes.inf.nemo.frameweb.utils.IFolderUtils;
 
-public class EntityModelCodeGenerator {
+public class EntityModelCodeGenerator implements ModelCodeGenerator {
 
 	private List<DomainPackage> domainPackages;
 	private ORMTemplate ormTemplate;
+	private ProjectConfiguration projectConfiguration;
 	
-	/**
-	 * @param entityModel
-	 * @param ormTemplate
-	 */
-	public EntityModelCodeGenerator(EntityModel entityModel, ORMTemplate ormTemplate) {
+	public EntityModelCodeGenerator(EntityModel entityModel, ORMTemplate ormTemplate, ProjectConfiguration projectConfiguration) {
 		domainPackages = entityModel.getOwnedElements()
 				.stream()
 				.filter(DomainPackage.class::isInstance)
@@ -30,36 +30,52 @@ public class EntityModelCodeGenerator {
 				.collect(Collectors.toList());
 		
 		this.ormTemplate = ormTemplate;
+		this.projectConfiguration = projectConfiguration;
 	}
 
-	/**
-	 * 
-	 * @param srcFolder
-	 * @param templateFolder 
-	 * @param templatesFolder 
-	 */
-	public void generate(IFolder srcFolder, IFolder ormTemplateFolder) {
+	@Override
+	public void generate() {
+		String templatePath = ormTemplate.getClassTemplate();
+		String template = projectConfiguration.getTemplate(templatePath);
+		
+		String enumTemplatePath = ormTemplate.getEnumerationClassTemplate();
+		String enumTemplate = projectConfiguration.getTemplate(enumTemplatePath);
+		
+		IFolder src = projectConfiguration.getSourceFolder();
+		
 		domainPackages.forEach(domainPackage -> {
 			String packagePath = IFolderUtils.packageNameToPath(domainPackage.getName());
 
-			IFolderUtils.makeDirectory(srcFolder, packagePath);
+			IFolderUtils.makeDirectory(src, packagePath);
 
-			IFolder package_ = srcFolder.getFolder(packagePath);
+			IFolder package_ = src.getFolder(packagePath);
 				
 			domainPackage.getOwnedTypes()
 					.stream()
 					.filter(DomainClass.class::isInstance)
 					.map(DomainClass.class::cast)
-					.map(domainClass -> new ClassCodeGenerator(domainClass, ormTemplate))
-					.forEach(it -> it.generate(package_, ormTemplateFolder));
+					.forEach(domainClass -> {
+						String code = ClassCodeGenerator.render(domainClass, template);
+						
+						String fileName = domainClass.getName() + projectConfiguration.getClassExtension();
+						IFile file = package_.getFile(fileName);
+						
+						IFileUtils.createFile(file, code);
+					});
 			
 			domainPackage.getOwnedTypes()
 					.stream()
 					.filter(Enumeration.class::isInstance)
 					.map(Enumeration.class::cast)
-					.map(enumeration -> new ClassCodeGenerator(enumeration, ormTemplate))
-					.forEach(it -> it.generate(package_, ormTemplateFolder));
+					.forEach(enumerationClass -> {
+						String code = ClassCodeGenerator.render(enumerationClass, enumTemplate);
+						
+						String fileName = enumerationClass.getName() + projectConfiguration.getClassExtension();
+						IFile file = package_.getFile(fileName);
+						
+						IFileUtils.createFile(file, code);
+					});
 		});
 	}
-	
+
 }

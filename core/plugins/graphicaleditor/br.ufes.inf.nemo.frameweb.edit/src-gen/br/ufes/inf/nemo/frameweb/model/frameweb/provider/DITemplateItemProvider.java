@@ -47,11 +47,7 @@ public class DITemplateItemProvider extends FrameworkProfileItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addInterfaceTemplatePropertyDescriptor(object);
-			addInterfaceExtensionPropertyDescriptor(object);
-			addClassExtensionPropertyDescriptor(object);
 			addClassTemplatePropertyDescriptor(object);
-			addServiceClassInjectionTemplatePropertyDescriptor(object);
-			addDaoClassInjectionTemplatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -73,38 +69,6 @@ public class DITemplateItemProvider extends FrameworkProfileItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Interface Extension feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addInterfaceExtensionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_DITemplate_interfaceExtension_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_DITemplate_interfaceExtension_feature",
-								"_UI_DITemplate_type"),
-						FramewebPackage.Literals.DI_TEMPLATE__INTERFACE_EXTENSION, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Class Extension feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addClassExtensionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_DITemplate_classExtension_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_DITemplate_classExtension_feature",
-								"_UI_DITemplate_type"),
-						FramewebPackage.Literals.DI_TEMPLATE__CLASS_EXTENSION, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Class Template feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -118,38 +82,6 @@ public class DITemplateItemProvider extends FrameworkProfileItemProvider {
 								"_UI_DITemplate_type"),
 						FramewebPackage.Literals.DI_TEMPLATE__CLASS_TEMPLATE, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Service Class Injection Template feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addServiceClassInjectionTemplatePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_DITemplate_serviceClassInjectionTemplate_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_DITemplate_serviceClassInjectionTemplate_feature",
-						"_UI_DITemplate_type"),
-				FramewebPackage.Literals.DI_TEMPLATE__SERVICE_CLASS_INJECTION_TEMPLATE, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Dao Class Injection Template feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDaoClassInjectionTemplatePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_DITemplate_daoClassInjectionTemplate_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_DITemplate_daoClassInjectionTemplate_feature",
-						"_UI_DITemplate_type"),
-				FramewebPackage.Literals.DI_TEMPLATE__DAO_CLASS_INJECTION_TEMPLATE, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -199,11 +131,7 @@ public class DITemplateItemProvider extends FrameworkProfileItemProvider {
 
 		switch (notification.getFeatureID(DITemplate.class)) {
 		case FramewebPackage.DI_TEMPLATE__INTERFACE_TEMPLATE:
-		case FramewebPackage.DI_TEMPLATE__INTERFACE_EXTENSION:
-		case FramewebPackage.DI_TEMPLATE__CLASS_EXTENSION:
 		case FramewebPackage.DI_TEMPLATE__CLASS_TEMPLATE:
-		case FramewebPackage.DI_TEMPLATE__SERVICE_CLASS_INJECTION_TEMPLATE:
-		case FramewebPackage.DI_TEMPLATE__DAO_CLASS_INJECTION_TEMPLATE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

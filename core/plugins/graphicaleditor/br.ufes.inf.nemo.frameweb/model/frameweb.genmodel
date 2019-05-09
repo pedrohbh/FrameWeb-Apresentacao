@@ -279,39 +279,27 @@
     <genClasses ecoreClass="frameweb.ecore#//DomainProperty"/>
     <genClasses ecoreClass="frameweb.ecore#//FrontControllerTemplate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/classTemplate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/methodTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/pageTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/formTemplate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/classExtension"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/pageExtension"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/attributeTemplate"/>
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//DITemplate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DITemplate/interfaceTemplate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DITemplate/interfaceExtension"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DITemplate/classExtension"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DITemplate/classTemplate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DITemplate/serviceClassInjectionTemplate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DITemplate/daoClassInjectionTemplate"/>
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//ORMTemplate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/classTemplate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/classExtension"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/attributeTemplate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/methodTemplate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/abstractMethodTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/enumerationClassTemplate"/>
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//DAOTemplate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DAOTemplate/classTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DAOTemplate/interfaceTemplate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DAOTemplate/classExtension"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DAOTemplate/interfaceExtension"/>
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//FrameWebConfiguration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrameWebConfiguration/srcPath"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrameWebConfiguration/viewPath"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrameWebConfiguration/templatePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrameWebConfiguration/classExtension"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrameWebConfiguration/pageExtension"/>
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//RestControllerTemplate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//RestControllerTemplate/classTemplate"/>

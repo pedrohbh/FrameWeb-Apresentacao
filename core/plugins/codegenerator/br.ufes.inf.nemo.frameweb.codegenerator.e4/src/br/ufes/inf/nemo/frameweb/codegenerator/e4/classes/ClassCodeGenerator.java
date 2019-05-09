@@ -1,135 +1,211 @@
 package br.ufes.inf.nemo.frameweb.codegenerator.e4.classes;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.util.stream.Collectors;
 
-import org.apache.commons.io.IOUtils;
-import org.eclipse.core.resources.IFile;
-import org.eclipse.core.resources.IFolder;
-import org.eclipse.core.runtime.CoreException;
-
-import org.eclipse.uml2.uml.Class;
-import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.Enumeration;
-import org.eclipse.uml2.uml.Interface;
+import org.eclipse.uml2.uml.EnumerationLiteral;
 
+import br.ufes.inf.nemo.frameweb.codegenerator.e4.engine.JtwigTemplateEngineImpl;
+import br.ufes.inf.nemo.frameweb.codegenerator.e4.engine.TemplateEngine;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOInterface;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DAOMethod;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DAOServiceAssociation;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkProfile;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DomainMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
+import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerMethod;
+import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
+import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceControllerAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceInterface;
+import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceMethod;
 
 public class ClassCodeGenerator {
 
-	private Element element;
-	private FrameworkProfile frameworkProfile;
+	public final static String PACKAGE = "package";
+	public final static String CLASS = "class";
+	public final static String INTERFACE = "interface";
+	public final static String ATTRIBUTES = "attributes";
+	public final static String METHODS = "methods";
+	public final static String ASSOCIATIONS = "associations";
+	public final static String GENERALIZATIONS = "generalizations";
+	public final static String REALIZATIONS = "realizations";
+	public final static String LITERALS = "literals";
+	public final static String RESULT_DEPENDENCY = "resultDependency";
+	public final static String NAVIGATION_ASSOCIATION = "navigationAssociation";
+	public final static String PAGE = "page";
 
-	/**
-	 * 
-	 * @param element
-	 * @param frameworkProfile
-	 * @param templateFolder 
-	 */
-	public ClassCodeGenerator(Element element, FrameworkProfile frameworkProfile) {
-		this.element = element;
-		this.frameworkProfile = frameworkProfile;
+	public static String render(DomainClass class_, String template) {
+		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
+		templateEngineContext.setTemplate(template);
+
+		templateEngineContext
+			.addParameter(PACKAGE, class_.getPackage())
+			.addParameter(CLASS, class_)
+			.addParameter(ATTRIBUTES, class_.getAttributes())
+			.addParameter(ASSOCIATIONS, class_.getAssociations()
+					.stream()
+					.filter(DomainAssociation.class::isInstance)
+					.map(DomainAssociation.class::cast)
+					.collect(Collectors.toList()))
+			.addParameter(METHODS, class_.getOperations()
+					.stream()
+					.filter(DomainMethod.class::isInstance)
+					.map(DomainMethod.class::cast)
+					.collect(Collectors.toList()))
+			.addParameter(GENERALIZATIONS, class_.getGeneralizations());
+
+		return templateEngineContext.getCode();
 	}
 	
-	/**
-	 * 
-	 * @param packageFolder
-	 * @param templateFolder 
-	 */
-	public void generate(IFolder packageFolder, IFolder templateFolder) {
-		ClassRenderer framewebRenderer = new ClassRenderer(element, frameworkProfile, templateFolder);
-		String code = framewebRenderer.render();
+	public static String render(Enumeration class_, String template) {
+		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
+		templateEngineContext.setTemplate(template);
 		
-		String fileName = getFileNameWithExtension(element, frameworkProfile);
-		IFile file = packageFolder.getFile(fileName);
+		templateEngineContext
+			.addParameter(PACKAGE, class_.getPackage())
+			.addParameter(CLASS, class_)
+			.addParameter(LITERALS, class_.getOwnedLiterals()
+					.stream()
+					.map(EnumerationLiteral::getName)
+					.collect(Collectors.toList()));
 		
-		try {
-			InputStream inputStream = IOUtils.toInputStream(code, "UTF-8");
-
-//			TODO atualizar o conteudo do arquivo ao inves de sobrescrever o codigo
-			if (file.exists()) {
-				file.delete(true, null);
-			}
-			
-			Thread.sleep(100);
-			
-			file.create(inputStream, true, null);
-			
-		} catch (CoreException | IOException | InterruptedException e) {
-			e.printStackTrace();
-		}
+		return templateEngineContext.getCode();
 	}
 	
-	/**
-	 * 
-	 * @param element
-	 * @param framework
-	 * @return
-	 */
-	private String getFileNameWithExtension(Element element, FrameworkProfile framework) {
-		String fileName = null;
+	public static String render(FrontControllerClass class_, String template) {
+//		IFile frontControllerClassTemplateFile = templateFolder.getFile(frontControllerTemplate.getClassTemplate());
+//		String frontControllerClassTemplate = IFileUtils.getText(frontControllerClassTemplateFile);
 		
-		if (frameworkProfile instanceof ORMTemplate) {
-			ORMTemplate ormTemplate = (ORMTemplate) frameworkProfile;
-			
-			if (element instanceof DomainClass) {
-				Class class_ = (Class) element;
-				fileName = class_.getName() + ormTemplate.getClassExtension();
-			
-			} else if (element instanceof Enumeration) {
-				Enumeration enumeration = (Enumeration) element;
-				fileName = enumeration.getName() + ormTemplate.getClassExtension();
-			}
-			
-		} else if (frameworkProfile instanceof FrontControllerTemplate) {
-			FrontControllerTemplate frontControllerTemplate = (FrontControllerTemplate) frameworkProfile;
-			
-			if (element instanceof FrontControllerClass) {
-				Class class_ = (Class) element;
-				fileName = class_.getName() + frontControllerTemplate.getClassExtension();
-				
-			} else if (element instanceof Page) {
-				Page page = (Page) element;
-				fileName = page.getName() + frontControllerTemplate.getPageExtension();
-			}
-			
-		} else if (frameworkProfile instanceof DITemplate) {
-			DITemplate diTemplate = (DITemplate) frameworkProfile;
-			
-			if (element instanceof ServiceClass) {
-				Class class_ = (Class) element;
-				fileName = class_.getName() + diTemplate.getClassExtension();
-			
-			} else if (element instanceof ServiceInterface) {
-				Interface interface_ = (Interface) element;
-				fileName = interface_.getName() + diTemplate.getInterfaceExtension();
-			}
-			
-		} else if (frameworkProfile instanceof DAOTemplate) {
-			DAOTemplate daoTemplate = (DAOTemplate) frameworkProfile;
-			
-			if (element instanceof DAOClass) {
-				Class class_ = (Class) element;
-				fileName = class_.getName() + daoTemplate.getClassExtension();
-				
-			} else if (element instanceof DAOInterface) {
-				Interface interface_ = (Interface) element;
-				fileName = interface_.getName() + daoTemplate.getInterfaceExtension();
-			}
-		}
+		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
+		templateEngineContext.setTemplate(template);
+
+		templateEngineContext
+			.addParameter(PACKAGE, class_.getPackage())
+			.addParameter(CLASS, class_)
+			.addParameter(ATTRIBUTES, class_.getAttributes())
+			.addParameter(ASSOCIATIONS, class_.getAssociations()
+					.stream()
+					.filter(ServiceControllerAssociation.class::isInstance)
+					.map(ServiceControllerAssociation.class::cast)
+					.collect(Collectors.toList()))
+			.addParameter(METHODS, class_.getOperations()
+					.stream()
+					.filter(FrontControllerMethod.class::isInstance)
+					.map(FrontControllerMethod.class::cast)
+					.collect(Collectors.toList()))
+			.addParameter(GENERALIZATIONS, class_.getGeneralizations());
 		
-		return fileName;
+		return templateEngineContext.getCode();
+	}
+	
+//	TODO implementar o renderizador de pagina html
+	public static String render(Page page, String template) {
+//		IFile pageTemplateFile = templateFolder.getFile(frontControllerTemplate.getPageTemplate());
+//		String pageTemplate = IFileUtils.getText(pageTemplateFile);
+		
+		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
+		templateEngineContext.setTemplate(template);
+		
+		templateEngineContext
+			.addParameter(PAGE, page)
+			.addParameter(NAVIGATION_ASSOCIATION, page.getAssociations()
+					.stream()
+					.filter(NavigationAssociation.class::isInstance)
+					.map(NavigationAssociation.class::cast)
+					.collect(Collectors.toList()));
+		
+		/*
+		 * ADD TEMPLATE ENGINE PARAMETERS
+		 */
+		
+		return templateEngineContext.getCode();
+	}
+	
+	public static String render(DAOInterface interface_, String template) {
+//		IFile daoInterfaceTemplateFile = templateFolder.getFile(daoTemplate.getInterfaceTemplate());
+//		String daoInterfaceTemplate = IFileUtils.getText(daoInterfaceTemplateFile);
+		
+		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
+		templateEngineContext.setTemplate(template);
+		
+//		FIXME O editor grafico nao permite a aplicacao de metodos na interface e nem parametros de template
+		templateEngineContext
+			.addParameter(PACKAGE, interface_.getPackage())
+			.addParameter(INTERFACE, interface_);
+//			.addParameter(METHODS, daoInterface.getOperations());
+		
+		return templateEngineContext.getCode();
+	}
+	
+	public static String render(DAOClass class_, String template) {
+//		IFile DAOClassTemplateFile = templateFolder.getFile(daoTemplate.getClassTemplate());
+//		String DAOClassTemplate = IFileUtils.getText(DAOClassTemplateFile);
+		
+		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
+		templateEngineContext.setTemplate(template);
+		
+		templateEngineContext
+			.addParameter(PACKAGE, class_.getPackage())
+			.addParameter(CLASS, class_)
+			.addParameter(ATTRIBUTES, class_.getAttributes())
+			.addParameter(METHODS, class_.getOperations()
+					.stream()
+					.filter(DAOMethod.class::isInstance)
+					.map(DAOMethod.class::cast)
+					.collect(Collectors.toList()))
+//			FIXME realizacoes nao sao instanciadas no modelo (apenas visualmente)
+			.addParameter(REALIZATIONS, class_.getInterfaceRealizations())
+			.addParameter(GENERALIZATIONS, class_.getGeneralizations());
+		
+		return templateEngineContext.getCode();
+	}
+
+	public static String render(ServiceInterface interface_, String template) {
+//		IFile serviceInterfaceTemplateFile = templateFolder.getFile(diTemplate.getInterfaceTemplate());
+//		String serviceInterfaceTemplate = IFileUtils.getText(serviceInterfaceTemplateFile);
+		
+		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
+		templateEngineContext.setTemplate(template);
+
+//		FIXME O editor grafico nao permite a aplicacao de metodos na interface e nem parametros de template
+		templateEngineContext
+			.addParameter(PACKAGE, interface_.getPackage())
+			.addParameter(INTERFACE, interface_);
+//			.addParameter(METHODS, serviceInterface.getOperations());
+			
+		return templateEngineContext.getCode();
+	}
+	
+	public static String render(ServiceClass class_, String template) {
+//		IFile serviceClassTemplateFile = templateFolder.getFile(diTemplate.getClassTemplate());
+//		String serviceClassTemplate = IFileUtils.getText(serviceClassTemplateFile);
+		
+		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
+		templateEngineContext.setTemplate(template);
+		
+		templateEngineContext
+			.addParameter(PACKAGE, class_.getPackage())
+			.addParameter(CLASS, class_)
+			.addParameter(ATTRIBUTES, class_.getAttributes())
+			.addParameter(ASSOCIATIONS, class_.getAssociations()
+					.stream()
+					.filter(DAOServiceAssociation.class::isInstance)
+					.map(DAOServiceAssociation.class::cast)
+					.collect(Collectors.toList()))
+			.addParameter(METHODS, class_.getOperations()
+					.stream()
+					.filter(ServiceMethod.class::isInstance)
+					.map(ServiceMethod.class::cast)
+					.collect(Collectors.toList()))
+//			FIXME realizacoes nao sao instanciadas no modelo (apenas visualmente)
+			.addParameter(REALIZATIONS, class_.getInterfaceRealizations())
+			.addParameter(GENERALIZATIONS, class_.getGeneralizations());
+		
+		return templateEngineContext.getCode();
 	}
 	
 }

@@ -121088,22 +121088,13 @@ public interface FramewebPackage extends EPackage {
 	int FRONT_CONTROLLER_TEMPLATE__CLASS_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Method Template</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FRONT_CONTROLLER_TEMPLATE__METHOD_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Page Template</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FRONT_CONTROLLER_TEMPLATE__PAGE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 2;
+	int FRONT_CONTROLLER_TEMPLATE__PAGE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Form Template</b></em>' attribute.
@@ -121112,34 +121103,7 @@ public interface FramewebPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FRONT_CONTROLLER_TEMPLATE__FORM_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Class Extension</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FRONT_CONTROLLER_TEMPLATE__CLASS_EXTENSION = FRAMEWORK_PROFILE_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Page Extension</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION = FRAMEWORK_PROFILE_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Attribute Template</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FRONT_CONTROLLER_TEMPLATE__ATTRIBUTE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 6;
+	int FRONT_CONTROLLER_TEMPLATE__FORM_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Front Controller Template</em>' class.
@@ -121148,7 +121112,7 @@ public interface FramewebPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FRONT_CONTROLLER_TEMPLATE_FEATURE_COUNT = FRAMEWORK_PROFILE_FEATURE_COUNT + 7;
+	int FRONT_CONTROLLER_TEMPLATE_FEATURE_COUNT = FRAMEWORK_PROFILE_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Get EAnnotation</em>' operation.
@@ -122421,49 +122385,13 @@ public interface FramewebPackage extends EPackage {
 	int DI_TEMPLATE__INTERFACE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Interface Extension</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DI_TEMPLATE__INTERFACE_EXTENSION = FRAMEWORK_PROFILE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Class Extension</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DI_TEMPLATE__CLASS_EXTENSION = FRAMEWORK_PROFILE_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Class Template</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DI_TEMPLATE__CLASS_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Service Class Injection Template</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DI_TEMPLATE__SERVICE_CLASS_INJECTION_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Dao Class Injection Template</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DI_TEMPLATE__DAO_CLASS_INJECTION_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 5;
+	int DI_TEMPLATE__CLASS_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>DI Template</em>' class.
@@ -122472,7 +122400,7 @@ public interface FramewebPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DI_TEMPLATE_FEATURE_COUNT = FRAMEWORK_PROFILE_FEATURE_COUNT + 6;
+	int DI_TEMPLATE_FEATURE_COUNT = FRAMEWORK_PROFILE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get EAnnotation</em>' operation.
@@ -123745,49 +123673,13 @@ public interface FramewebPackage extends EPackage {
 	int ORM_TEMPLATE__CLASS_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Class Extension</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORM_TEMPLATE__CLASS_EXTENSION = FRAMEWORK_PROFILE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Attribute Template</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORM_TEMPLATE__ATTRIBUTE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Method Template</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORM_TEMPLATE__METHOD_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Abstract Method Template</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 4;
-
-	/**
 	 * The feature id for the '<em><b>Enumeration Class Template</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 5;
+	int ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>ORM Template</em>' class.
@@ -123796,7 +123688,7 @@ public interface FramewebPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORM_TEMPLATE_FEATURE_COUNT = FRAMEWORK_PROFILE_FEATURE_COUNT + 6;
+	int ORM_TEMPLATE_FEATURE_COUNT = FRAMEWORK_PROFILE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get EAnnotation</em>' operation.
@@ -125078,31 +124970,13 @@ public interface FramewebPackage extends EPackage {
 	int DAO_TEMPLATE__INTERFACE_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Class Extension</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DAO_TEMPLATE__CLASS_EXTENSION = FRAMEWORK_PROFILE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Interface Extension</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DAO_TEMPLATE__INTERFACE_EXTENSION = FRAMEWORK_PROFILE_FEATURE_COUNT + 3;
-
-	/**
 	 * The number of structural features of the '<em>DAO Template</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DAO_TEMPLATE_FEATURE_COUNT = FRAMEWORK_PROFILE_FEATURE_COUNT + 4;
+	int DAO_TEMPLATE_FEATURE_COUNT = FRAMEWORK_PROFILE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get EAnnotation</em>' operation.
@@ -126393,13 +126267,31 @@ public interface FramewebPackage extends EPackage {
 	int FRAME_WEB_CONFIGURATION__TEMPLATE_PATH = FRAMEWORK_PROFILE_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Class Extension</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRAME_WEB_CONFIGURATION__CLASS_EXTENSION = FRAMEWORK_PROFILE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Page Extension</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRAME_WEB_CONFIGURATION__PAGE_EXTENSION = FRAMEWORK_PROFILE_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Frame Web Configuration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FRAME_WEB_CONFIGURATION_FEATURE_COUNT = FRAMEWORK_PROFILE_FEATURE_COUNT + 3;
+	int FRAME_WEB_CONFIGURATION_FEATURE_COUNT = FRAMEWORK_PROFILE_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Get EAnnotation</em>' operation.
@@ -133333,17 +133225,6 @@ public interface FramewebPackage extends EPackage {
 	EAttribute getFrontControllerTemplate_ClassTemplate();
 
 	/**
-	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getMethodTemplate <em>Method Template</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Method Template</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getMethodTemplate()
-	 * @see #getFrontControllerTemplate()
-	 * @generated
-	 */
-	EAttribute getFrontControllerTemplate_MethodTemplate();
-
-	/**
 	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getPageTemplate <em>Page Template</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -133364,39 +133245,6 @@ public interface FramewebPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFrontControllerTemplate_FormTemplate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getClassExtension <em>Class Extension</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Class Extension</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getClassExtension()
-	 * @see #getFrontControllerTemplate()
-	 * @generated
-	 */
-	EAttribute getFrontControllerTemplate_ClassExtension();
-
-	/**
-	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getPageExtension <em>Page Extension</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Page Extension</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getPageExtension()
-	 * @see #getFrontControllerTemplate()
-	 * @generated
-	 */
-	EAttribute getFrontControllerTemplate_PageExtension();
-
-	/**
-	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getAttributeTemplate <em>Attribute Template</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Attribute Template</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getAttributeTemplate()
-	 * @see #getFrontControllerTemplate()
-	 * @generated
-	 */
-	EAttribute getFrontControllerTemplate_AttributeTemplate();
 
 	/**
 	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate <em>DI Template</em>}'.
@@ -133420,28 +133268,6 @@ public interface FramewebPackage extends EPackage {
 	EAttribute getDITemplate_InterfaceTemplate();
 
 	/**
-	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getInterfaceExtension <em>Interface Extension</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Interface Extension</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getInterfaceExtension()
-	 * @see #getDITemplate()
-	 * @generated
-	 */
-	EAttribute getDITemplate_InterfaceExtension();
-
-	/**
-	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getClassExtension <em>Class Extension</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Class Extension</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getClassExtension()
-	 * @see #getDITemplate()
-	 * @generated
-	 */
-	EAttribute getDITemplate_ClassExtension();
-
-	/**
 	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getClassTemplate <em>Class Template</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -133451,28 +133277,6 @@ public interface FramewebPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getDITemplate_ClassTemplate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getServiceClassInjectionTemplate <em>Service Class Injection Template</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Service Class Injection Template</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getServiceClassInjectionTemplate()
-	 * @see #getDITemplate()
-	 * @generated
-	 */
-	EAttribute getDITemplate_ServiceClassInjectionTemplate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getDaoClassInjectionTemplate <em>Dao Class Injection Template</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Dao Class Injection Template</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getDaoClassInjectionTemplate()
-	 * @see #getDITemplate()
-	 * @generated
-	 */
-	EAttribute getDITemplate_DaoClassInjectionTemplate();
 
 	/**
 	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate <em>ORM Template</em>}'.
@@ -133494,50 +133298,6 @@ public interface FramewebPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getORMTemplate_ClassTemplate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getClassExtension <em>Class Extension</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Class Extension</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getClassExtension()
-	 * @see #getORMTemplate()
-	 * @generated
-	 */
-	EAttribute getORMTemplate_ClassExtension();
-
-	/**
-	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getAttributeTemplate <em>Attribute Template</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Attribute Template</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getAttributeTemplate()
-	 * @see #getORMTemplate()
-	 * @generated
-	 */
-	EAttribute getORMTemplate_AttributeTemplate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getMethodTemplate <em>Method Template</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Method Template</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getMethodTemplate()
-	 * @see #getORMTemplate()
-	 * @generated
-	 */
-	EAttribute getORMTemplate_MethodTemplate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getAbstractMethodTemplate <em>Abstract Method Template</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Abstract Method Template</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getAbstractMethodTemplate()
-	 * @see #getORMTemplate()
-	 * @generated
-	 */
-	EAttribute getORMTemplate_AbstractMethodTemplate();
 
 	/**
 	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getEnumerationClassTemplate <em>Enumeration Class Template</em>}'.
@@ -133583,28 +133343,6 @@ public interface FramewebPackage extends EPackage {
 	EAttribute getDAOTemplate_InterfaceTemplate();
 
 	/**
-	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate#getClassExtension <em>Class Extension</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Class Extension</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate#getClassExtension()
-	 * @see #getDAOTemplate()
-	 * @generated
-	 */
-	EAttribute getDAOTemplate_ClassExtension();
-
-	/**
-	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate#getInterfaceExtension <em>Interface Extension</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Interface Extension</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate#getInterfaceExtension()
-	 * @see #getDAOTemplate()
-	 * @generated
-	 */
-	EAttribute getDAOTemplate_InterfaceExtension();
-
-	/**
 	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration <em>Frame Web Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -133646,6 +133384,28 @@ public interface FramewebPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFrameWebConfiguration_TemplatePath();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration#getClassExtension <em>Class Extension</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Class Extension</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration#getClassExtension()
+	 * @see #getFrameWebConfiguration()
+	 * @generated
+	 */
+	EAttribute getFrameWebConfiguration_ClassExtension();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration#getPageExtension <em>Page Extension</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Page Extension</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration#getPageExtension()
+	 * @see #getFrameWebConfiguration()
+	 * @generated
+	 */
+	EAttribute getFrameWebConfiguration_PageExtension();
 
 	/**
 	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerTemplate <em>Rest Controller Template</em>}'.
@@ -135444,14 +135204,6 @@ public interface FramewebPackage extends EPackage {
 		EAttribute FRONT_CONTROLLER_TEMPLATE__CLASS_TEMPLATE = eINSTANCE.getFrontControllerTemplate_ClassTemplate();
 
 		/**
-		 * The meta object literal for the '<em><b>Method Template</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FRONT_CONTROLLER_TEMPLATE__METHOD_TEMPLATE = eINSTANCE.getFrontControllerTemplate_MethodTemplate();
-
-		/**
 		 * The meta object literal for the '<em><b>Page Template</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -135466,31 +135218,6 @@ public interface FramewebPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FRONT_CONTROLLER_TEMPLATE__FORM_TEMPLATE = eINSTANCE.getFrontControllerTemplate_FormTemplate();
-
-		/**
-		 * The meta object literal for the '<em><b>Class Extension</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FRONT_CONTROLLER_TEMPLATE__CLASS_EXTENSION = eINSTANCE.getFrontControllerTemplate_ClassExtension();
-
-		/**
-		 * The meta object literal for the '<em><b>Page Extension</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION = eINSTANCE.getFrontControllerTemplate_PageExtension();
-
-		/**
-		 * The meta object literal for the '<em><b>Attribute Template</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FRONT_CONTROLLER_TEMPLATE__ATTRIBUTE_TEMPLATE = eINSTANCE
-				.getFrontControllerTemplate_AttributeTemplate();
 
 		/**
 		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.DITemplateImpl <em>DI Template</em>}' class.
@@ -135511,45 +135238,12 @@ public interface FramewebPackage extends EPackage {
 		EAttribute DI_TEMPLATE__INTERFACE_TEMPLATE = eINSTANCE.getDITemplate_InterfaceTemplate();
 
 		/**
-		 * The meta object literal for the '<em><b>Interface Extension</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DI_TEMPLATE__INTERFACE_EXTENSION = eINSTANCE.getDITemplate_InterfaceExtension();
-
-		/**
-		 * The meta object literal for the '<em><b>Class Extension</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DI_TEMPLATE__CLASS_EXTENSION = eINSTANCE.getDITemplate_ClassExtension();
-
-		/**
 		 * The meta object literal for the '<em><b>Class Template</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute DI_TEMPLATE__CLASS_TEMPLATE = eINSTANCE.getDITemplate_ClassTemplate();
-
-		/**
-		 * The meta object literal for the '<em><b>Service Class Injection Template</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DI_TEMPLATE__SERVICE_CLASS_INJECTION_TEMPLATE = eINSTANCE
-				.getDITemplate_ServiceClassInjectionTemplate();
-
-		/**
-		 * The meta object literal for the '<em><b>Dao Class Injection Template</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DI_TEMPLATE__DAO_CLASS_INJECTION_TEMPLATE = eINSTANCE.getDITemplate_DaoClassInjectionTemplate();
 
 		/**
 		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl <em>ORM Template</em>}' class.
@@ -135568,38 +135262,6 @@ public interface FramewebPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ORM_TEMPLATE__CLASS_TEMPLATE = eINSTANCE.getORMTemplate_ClassTemplate();
-
-		/**
-		 * The meta object literal for the '<em><b>Class Extension</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ORM_TEMPLATE__CLASS_EXTENSION = eINSTANCE.getORMTemplate_ClassExtension();
-
-		/**
-		 * The meta object literal for the '<em><b>Attribute Template</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ORM_TEMPLATE__ATTRIBUTE_TEMPLATE = eINSTANCE.getORMTemplate_AttributeTemplate();
-
-		/**
-		 * The meta object literal for the '<em><b>Method Template</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ORM_TEMPLATE__METHOD_TEMPLATE = eINSTANCE.getORMTemplate_MethodTemplate();
-
-		/**
-		 * The meta object literal for the '<em><b>Abstract Method Template</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ORM_TEMPLATE__ABSTRACT_METHOD_TEMPLATE = eINSTANCE.getORMTemplate_AbstractMethodTemplate();
 
 		/**
 		 * The meta object literal for the '<em><b>Enumeration Class Template</b></em>' attribute feature.
@@ -135636,22 +135298,6 @@ public interface FramewebPackage extends EPackage {
 		EAttribute DAO_TEMPLATE__INTERFACE_TEMPLATE = eINSTANCE.getDAOTemplate_InterfaceTemplate();
 
 		/**
-		 * The meta object literal for the '<em><b>Class Extension</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DAO_TEMPLATE__CLASS_EXTENSION = eINSTANCE.getDAOTemplate_ClassExtension();
-
-		/**
-		 * The meta object literal for the '<em><b>Interface Extension</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DAO_TEMPLATE__INTERFACE_EXTENSION = eINSTANCE.getDAOTemplate_InterfaceExtension();
-
-		/**
 		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrameWebConfigurationImpl <em>Frame Web Configuration</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -135684,6 +135330,22 @@ public interface FramewebPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FRAME_WEB_CONFIGURATION__TEMPLATE_PATH = eINSTANCE.getFrameWebConfiguration_TemplatePath();
+
+		/**
+		 * The meta object literal for the '<em><b>Class Extension</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FRAME_WEB_CONFIGURATION__CLASS_EXTENSION = eINSTANCE.getFrameWebConfiguration_ClassExtension();
+
+		/**
+		 * The meta object literal for the '<em><b>Page Extension</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FRAME_WEB_CONFIGURATION__PAGE_EXTENSION = eINSTANCE.getFrameWebConfiguration_PageExtension();
 
 		/**
 		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.RestControllerTemplateImpl <em>Rest Controller Template</em>}' class.

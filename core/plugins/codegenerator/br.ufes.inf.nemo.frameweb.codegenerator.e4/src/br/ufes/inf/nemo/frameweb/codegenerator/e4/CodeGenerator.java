@@ -3,7 +3,6 @@ package br.ufes.inf.nemo.frameweb.codegenerator.e4;
 import java.util.Collection;
 import java.util.Map;
 
-import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.sirius.diagram.DSemanticDiagram;
@@ -13,11 +12,19 @@ import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.ApplicationModelCodeGen
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.EntityModelCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.NavigationModelCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.PersistenceModelCodeGenerator;
+import br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationModel;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
+import br.ufes.inf.nemo.frameweb.model.frameweb.EntityModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration;
+import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
+import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationModel;
+import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
+import br.ufes.inf.nemo.frameweb.model.frameweb.PersistenceModel;
 import br.ufes.inf.nemo.frameweb.utils.IProjectUtils;
 
 public class CodeGenerator implements IExternalJavaAction {
-
+	
 	@Override
 	public boolean canExecute(Collection<? extends EObject> selections) {
 		boolean canExecute = selections
@@ -29,51 +36,53 @@ public class CodeGenerator implements IExternalJavaAction {
 
 	@Override
 	public void execute(Collection<? extends EObject> selections, Map<String, Object> parameters) {
-		ProjectRepresentation representation = new ProjectRepresentation(selections);
+		DiagramRepresentation diagram = new DiagramRepresentation(selections);
 
+//		FIXME obter o IProject do EclipseContext atraves de injecao de dependencia (e4)
 		IProject project = IProjectUtils.getSelectedProject();
 		
-		FrameWebConfiguration fwConfig = representation.getFrameWebConfiguration();
+		FrameWebConfiguration configuration = diagram.getFrameWebConfiguration();
 		
-		IFolder srcFolder = project.getFolder(fwConfig.getSrcPath());
-		IFolder templatesFolder = project.getFolder(fwConfig.getTemplatePath());
-		IFolder viewsFolder = project.getFolder(fwConfig.getViewPath());
+		ProjectConfiguration projectConfiguration = new ProjectConfiguration(project, configuration);
 		
-		if (representation.hasEntityModel() && representation.hasORMTemplate()) {
-			EntityModelCodeGenerator entityModelCodeGenerator = new EntityModelCodeGenerator(
-					representation.getEntityModel(),
-					representation.getORMTemplate()
-			);
-
-			entityModelCodeGenerator.generate(srcFolder, templatesFolder);
-		}
-
-		if (representation.hasNavigationModel() && representation.hasFrontControllerTemplate()) {
-			NavigationModelCodeGenerator navigationModelCodeGenerator = new NavigationModelCodeGenerator(
-					representation.getNavigationModel(),
-					representation.getFrontControllerTemplate()
-			);
-
-			navigationModelCodeGenerator.generate(srcFolder, templatesFolder);
-			navigationModelCodeGenerator.generateViews(viewsFolder, templatesFolder);
-		}
-		
-		if (representation.hasApplicationModel() && representation.hasDITemplate()) {
-			ApplicationModelCodeGenerator applicationModelCodeGenerator = new ApplicationModelCodeGenerator(
-					representation.getApplicationModel(),
-					representation.getDITemplate()
-			);
+		if (diagram.hasEntityModel() && diagram.hasORMTemplate()) {
+			EntityModel model = diagram.getEntityModel();
+			ORMTemplate template = diagram.getORMTemplate();
 			
-			applicationModelCodeGenerator.generate(srcFolder, templatesFolder);
+			EntityModelCodeGenerator entityModelCodeGenerator = 
+					new EntityModelCodeGenerator(model, template, projectConfiguration);
+
+			entityModelCodeGenerator.generate();
+		}
+
+		if (diagram.hasNavigationModel() && diagram.hasFrontControllerTemplate()) {
+			NavigationModel model = diagram.getNavigationModel();
+			FrontControllerTemplate template = diagram.getFrontControllerTemplate();
+			
+			NavigationModelCodeGenerator navigationModelCodeGenerator =
+					new NavigationModelCodeGenerator(model, template, projectConfiguration);
+
+			navigationModelCodeGenerator.generate();
 		}
 		
-		if (representation.hasPersistenceModel() && representation.hasDAOTemplate()) {
-			PersistenceModelCodeGenerator persistenceModelCodeGenerator = new PersistenceModelCodeGenerator(
-					representation.getPersistenceModel(),
-					representation.getDAOTemplate()
-			);
+		if (diagram.hasApplicationModel() && diagram.hasDITemplate()) {
+			ApplicationModel model = diagram.getApplicationModel();
+			DITemplate template = diagram.getDITemplate();
+			
+			ApplicationModelCodeGenerator applicationModelCodeGenerator = 
+					new ApplicationModelCodeGenerator(model, template, projectConfiguration);
+			
+			applicationModelCodeGenerator.generate();
+		}
 		
-			persistenceModelCodeGenerator.generate(srcFolder, templatesFolder);
+		if (diagram.hasPersistenceModel() && diagram.hasDAOTemplate()) {
+			PersistenceModel model = diagram.getPersistenceModel();
+			DAOTemplate template = diagram.getDAOTemplate();
+			
+			PersistenceModelCodeGenerator persistenceModelCodeGenerator = 
+					new PersistenceModelCodeGenerator(model, template, projectConfiguration);
+		
+			persistenceModelCodeGenerator.generate();
 		}
 	}
 
