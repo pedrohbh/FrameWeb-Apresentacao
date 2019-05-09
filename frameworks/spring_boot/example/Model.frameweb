@@ -97,14 +97,14 @@
   <compose xsi:type="frameweb:NavigationModel" name="Navigation Model">
     <packagedElement xsi:type="frameweb:ControllerPackage" name="web.project.controller">
       <packagedElement xsi:type="frameweb:FrontControllerClass" name="ProdutosController">
-        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="adicionar">
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="adicionar" requestMethod="post">
           <ownedParameter name="produto" type="//@compose.0/web.project.model/Produto"/>
           <ownedParameter name="categoriaId">
             <type xsi:type="uml:Class" href="language/Java.frameweb#//@compose.0/Long"/>
           </ownedParameter>
           <methodType xsi:type="uml:Class" href="language/Java.frameweb#//@compose.0/String"/>
         </ownedOperation>
-        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="listar"/>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="listar" requestMethod="get"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:ServiceControllerAssociation" memberEnd="//@compose.1/web.project.controller/@packagedElement.1/Source //@compose.1/web.project.controller/@packagedElement.1/Target">
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.1/web.project.controller/@packagedElement.1/Source"/>
@@ -136,7 +136,6 @@
   <compose xsi:type="frameweb:ApplicationModel" name="Application Model">
     <packagedElement xsi:type="frameweb:ApplicationPackage" name="web.project.service">
       <packagedElement xsi:type="frameweb:ServiceClass" name="ProdutoServiceImpl">
-        <generalization xsi:type="frameweb:ServiceGeneralization"/>
         <ownedOperation xsi:type="frameweb:ServiceMethod" name="listarProdutos"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:DAOServiceAssociation" memberEnd="//@compose.3/web.project.service/@packagedElement.1/Source //@compose.3/web.project.service/@packagedElement.1/Target">
