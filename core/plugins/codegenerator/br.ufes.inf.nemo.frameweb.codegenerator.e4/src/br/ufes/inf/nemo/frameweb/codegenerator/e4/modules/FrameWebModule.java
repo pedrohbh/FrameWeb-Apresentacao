@@ -6,7 +6,7 @@ import com.google.inject.AbstractModule;
 
 import br.ufes.inf.nemo.frameweb.utils.IProjectUtils;
 
-public class FrameWebModules extends AbstractModule {
+public class FrameWebModule extends AbstractModule {
 
 	@Override
 	protected void configure() {

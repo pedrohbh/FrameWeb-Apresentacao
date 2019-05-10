@@ -14,7 +14,7 @@ import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.ApplicationModelCodeGen
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.EntityModelCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.NavigationModelCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.PersistenceModelCodeGenerator;
-import br.ufes.inf.nemo.frameweb.codegenerator.e4.modules.FrameWebModules;
+import br.ufes.inf.nemo.frameweb.codegenerator.e4.modules.FrameWebModule;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
@@ -36,7 +36,7 @@ public class CodeGenerator implements IExternalJavaAction {
 			.anyMatch(DSemanticDiagram.class::isInstance);
 		
 		if (canExecute) {
-			injector = Guice.createInjector(new FrameWebModules());
+			injector = Guice.createInjector(new FrameWebModule());
 			projectConfiguration = injector.getInstance(ProjectConfiguration.class);
 		}
 		
