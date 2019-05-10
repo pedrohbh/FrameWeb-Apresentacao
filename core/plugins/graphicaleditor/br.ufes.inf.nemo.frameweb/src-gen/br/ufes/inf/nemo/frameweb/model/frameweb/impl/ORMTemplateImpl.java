@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getClassTemplate <em>Class Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getEnumerationClassTemplate <em>Enumeration Class Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getClassExtension <em>Class Extension</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +67,26 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @ordered
 	 */
 	protected String enumerationClassTemplate = ENUMERATION_CLASS_TEMPLATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getClassExtension() <em>Class Extension</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassExtension()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CLASS_EXTENSION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getClassExtension() <em>Class Extension</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassExtension()
+	 * @generated
+	 * @ordered
+	 */
+	protected String classExtension = CLASS_EXTENSION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -141,12 +162,38 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @generated
 	 */
 	@Override
+	public String getClassExtension() {
+		return classExtension;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setClassExtension(String newClassExtension) {
+		String oldClassExtension = classExtension;
+		classExtension = newClassExtension;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.ORM_TEMPLATE__CLASS_EXTENSION,
+					oldClassExtension, classExtension));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case FramewebPackage.ORM_TEMPLATE__CLASS_TEMPLATE:
 			return getClassTemplate();
 		case FramewebPackage.ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE:
 			return getEnumerationClassTemplate();
+		case FramewebPackage.ORM_TEMPLATE__CLASS_EXTENSION:
+			return getClassExtension();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -164,6 +211,9 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 			return;
 		case FramewebPackage.ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE:
 			setEnumerationClassTemplate((String) newValue);
+			return;
+		case FramewebPackage.ORM_TEMPLATE__CLASS_EXTENSION:
+			setClassExtension((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -183,6 +233,9 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		case FramewebPackage.ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE:
 			setEnumerationClassTemplate(ENUMERATION_CLASS_TEMPLATE_EDEFAULT);
 			return;
+		case FramewebPackage.ORM_TEMPLATE__CLASS_EXTENSION:
+			setClassExtension(CLASS_EXTENSION_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -201,6 +254,9 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		case FramewebPackage.ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE:
 			return ENUMERATION_CLASS_TEMPLATE_EDEFAULT == null ? enumerationClassTemplate != null
 					: !ENUMERATION_CLASS_TEMPLATE_EDEFAULT.equals(enumerationClassTemplate);
+		case FramewebPackage.ORM_TEMPLATE__CLASS_EXTENSION:
+			return CLASS_EXTENSION_EDEFAULT == null ? classExtension != null
+					: !CLASS_EXTENSION_EDEFAULT.equals(classExtension);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -220,6 +276,8 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		result.append(classTemplate);
 		result.append(", enumerationClassTemplate: ");
 		result.append(enumerationClassTemplate);
+		result.append(", classExtension: ");
+		result.append(classExtension);
 		result.append(')');
 		return result.toString();
 	}

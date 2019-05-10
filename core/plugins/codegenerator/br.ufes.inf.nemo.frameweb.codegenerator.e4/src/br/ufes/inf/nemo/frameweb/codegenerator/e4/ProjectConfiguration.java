@@ -3,18 +3,21 @@ package br.ufes.inf.nemo.frameweb.codegenerator.e4;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 
+import com.google.inject.Inject;
+
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration;
 import br.ufes.inf.nemo.frameweb.utils.IFileUtils;
 
 public class ProjectConfiguration {
 	
-	private FrameWebConfiguration configuration;
+	@Inject
 	private IProject project;
-
-	public ProjectConfiguration(IProject project, FrameWebConfiguration configuration) {
-		this.project = project;
+	
+	private FrameWebConfiguration configuration;
+	
+	public void setConfiguration(FrameWebConfiguration configuration) {
 		this.configuration = configuration;
-	}	
+	}
 	
 	public IFolder getSourceFolder() {
 		String srcFolderPath = configuration.getSrcPath();

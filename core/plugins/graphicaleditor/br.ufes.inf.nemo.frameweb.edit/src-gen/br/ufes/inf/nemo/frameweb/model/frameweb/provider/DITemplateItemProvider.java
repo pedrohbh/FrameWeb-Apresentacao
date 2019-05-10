@@ -48,6 +48,7 @@ public class DITemplateItemProvider extends FrameworkProfileItemProvider {
 
 			addInterfaceTemplatePropertyDescriptor(object);
 			addClassTemplatePropertyDescriptor(object);
+			addClassExtensionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -81,6 +82,22 @@ public class DITemplateItemProvider extends FrameworkProfileItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_DITemplate_classTemplate_feature",
 								"_UI_DITemplate_type"),
 						FramewebPackage.Literals.DI_TEMPLATE__CLASS_TEMPLATE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Class Extension feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClassExtensionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_DITemplate_classExtension_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_DITemplate_classExtension_feature",
+								"_UI_DITemplate_type"),
+						FramewebPackage.Literals.DI_TEMPLATE__CLASS_EXTENSION, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -132,6 +149,7 @@ public class DITemplateItemProvider extends FrameworkProfileItemProvider {
 		switch (notification.getFeatureID(DITemplate.class)) {
 		case FramewebPackage.DI_TEMPLATE__INTERFACE_TEMPLATE:
 		case FramewebPackage.DI_TEMPLATE__CLASS_TEMPLATE:
+		case FramewebPackage.DI_TEMPLATE__CLASS_EXTENSION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

@@ -48,6 +48,7 @@ public class ORMTemplateItemProvider extends FrameworkProfileItemProvider {
 
 			addClassTemplatePropertyDescriptor(object);
 			addEnumerationClassTemplatePropertyDescriptor(object);
+			addClassExtensionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -82,6 +83,22 @@ public class ORMTemplateItemProvider extends FrameworkProfileItemProvider {
 						"_UI_ORMTemplate_type"),
 				FramewebPackage.Literals.ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE, true, false, false,
 				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Class Extension feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClassExtensionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ORMTemplate_classExtension_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ORMTemplate_classExtension_feature",
+								"_UI_ORMTemplate_type"),
+						FramewebPackage.Literals.ORM_TEMPLATE__CLASS_EXTENSION, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -132,6 +149,7 @@ public class ORMTemplateItemProvider extends FrameworkProfileItemProvider {
 		switch (notification.getFeatureID(ORMTemplate.class)) {
 		case FramewebPackage.ORM_TEMPLATE__CLASS_TEMPLATE:
 		case FramewebPackage.ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE:
+		case FramewebPackage.ORM_TEMPLATE__CLASS_EXTENSION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

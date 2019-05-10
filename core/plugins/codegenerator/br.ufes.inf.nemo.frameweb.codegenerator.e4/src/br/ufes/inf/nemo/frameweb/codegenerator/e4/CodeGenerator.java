@@ -3,33 +3,42 @@ package br.ufes.inf.nemo.frameweb.codegenerator.e4;
 import java.util.Collection;
 import java.util.Map;
 
-import org.eclipse.core.resources.IProject;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.sirius.diagram.DSemanticDiagram;
 import org.eclipse.sirius.tools.api.ui.IExternalJavaAction;
+
+import com.google.inject.Guice;
+import com.google.inject.Injector;
 
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.ApplicationModelCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.EntityModelCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.NavigationModelCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.PersistenceModelCodeGenerator;
+import br.ufes.inf.nemo.frameweb.codegenerator.e4.modules.FrameWebModules;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.EntityModel;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.PersistenceModel;
-import br.ufes.inf.nemo.frameweb.utils.IProjectUtils;
 
 public class CodeGenerator implements IExternalJavaAction {
+	
+	private Injector injector;
+	private ProjectConfiguration projectConfiguration;
 	
 	@Override
 	public boolean canExecute(Collection<? extends EObject> selections) {
 		boolean canExecute = selections
 			.stream()
 			.anyMatch(DSemanticDiagram.class::isInstance);
+		
+		if (canExecute) {
+			injector = Guice.createInjector(new FrameWebModules());
+			projectConfiguration = injector.getInstance(ProjectConfiguration.class);
+		}
 		
 		return canExecute;
 	}
@@ -38,12 +47,7 @@ public class CodeGenerator implements IExternalJavaAction {
 	public void execute(Collection<? extends EObject> selections, Map<String, Object> parameters) {
 		DiagramRepresentation diagram = new DiagramRepresentation(selections);
 
-//		FIXME obter o IProject do EclipseContext atraves de injecao de dependencia (e4)
-		IProject project = IProjectUtils.getSelectedProject();
-		
-		FrameWebConfiguration configuration = diagram.getFrameWebConfiguration();
-		
-		ProjectConfiguration projectConfiguration = new ProjectConfiguration(project, configuration);
+		projectConfiguration.setConfiguration(diagram.getFrameWebConfiguration());
 		
 		if (diagram.hasEntityModel() && diagram.hasORMTemplate()) {
 			EntityModel model = diagram.getEntityModel();

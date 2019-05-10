@@ -2778,6 +2778,26 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EAttribute getFrontControllerTemplate_ClassExtension() {
+		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFrontControllerTemplate_PageExtension() {
+		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getDITemplate() {
 		return diTemplateEClass;
 	}
@@ -2800,6 +2820,16 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	@Override
 	public EAttribute getDITemplate_ClassTemplate() {
 		return (EAttribute) diTemplateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDITemplate_ClassExtension() {
+		return (EAttribute) diTemplateEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2838,6 +2868,16 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EAttribute getORMTemplate_ClassExtension() {
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getDAOTemplate() {
 		return daoTemplateEClass;
 	}
@@ -2860,6 +2900,26 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	@Override
 	public EAttribute getDAOTemplate_InterfaceTemplate() {
 		return (EAttribute) daoTemplateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDAOTemplate_ClassExtension() {
+		return (EAttribute) daoTemplateEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDAOTemplate_InterfaceExtension() {
+		return (EAttribute) daoTemplateEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -3424,18 +3484,24 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__CLASS_TEMPLATE);
 		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__PAGE_TEMPLATE);
 		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__FORM_TEMPLATE);
+		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__CLASS_EXTENSION);
+		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION);
 
 		diTemplateEClass = createEClass(DI_TEMPLATE);
 		createEAttribute(diTemplateEClass, DI_TEMPLATE__INTERFACE_TEMPLATE);
 		createEAttribute(diTemplateEClass, DI_TEMPLATE__CLASS_TEMPLATE);
+		createEAttribute(diTemplateEClass, DI_TEMPLATE__CLASS_EXTENSION);
 
 		ormTemplateEClass = createEClass(ORM_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__CLASS_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE);
+		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__CLASS_EXTENSION);
 
 		daoTemplateEClass = createEClass(DAO_TEMPLATE);
 		createEAttribute(daoTemplateEClass, DAO_TEMPLATE__CLASS_TEMPLATE);
 		createEAttribute(daoTemplateEClass, DAO_TEMPLATE__INTERFACE_TEMPLATE);
+		createEAttribute(daoTemplateEClass, DAO_TEMPLATE__CLASS_EXTENSION);
+		createEAttribute(daoTemplateEClass, DAO_TEMPLATE__INTERFACE_EXTENSION);
 
 		frameWebConfigurationEClass = createEClass(FRAME_WEB_CONFIGURATION);
 		createEAttribute(frameWebConfigurationEClass, FRAME_WEB_CONFIGURATION__SRC_PATH);
@@ -4119,6 +4185,12 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getFrontControllerTemplate_FormTemplate(), theTypesPackage.getString(), "formTemplate", null, 0,
 				1, FrontControllerTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFrontControllerTemplate_ClassExtension(), theTypesPackage.getString(), "classExtension", null,
+				0, 1, FrontControllerTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFrontControllerTemplate_PageExtension(), theTypesPackage.getString(), "pageExtension", null,
+				0, 1, FrontControllerTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(diTemplateEClass, DITemplate.class, "DITemplate", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4126,6 +4198,9 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 				DITemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDITemplate_ClassTemplate(), theTypesPackage.getString(), "classTemplate", null, 0, 1,
+				DITemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDITemplate_ClassExtension(), theTypesPackage.getString(), "classExtension", null, 0, 1,
 				DITemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
@@ -4137,6 +4212,9 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getORMTemplate_EnumerationClassTemplate(), theTypesPackage.getString(),
 				"enumerationClassTemplate", null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getORMTemplate_ClassExtension(), theTypesPackage.getString(), "classExtension", null, 0, 1,
+				ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(daoTemplateEClass, DAOTemplate.class, "DAOTemplate", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4145,6 +4223,12 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDAOTemplate_InterfaceTemplate(), theTypesPackage.getString(), "interfaceTemplate", null, 0, 1,
 				DAOTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDAOTemplate_ClassExtension(), theTypesPackage.getString(), "classExtension", null, 0, 1,
+				DAOTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDAOTemplate_InterfaceExtension(), theTypesPackage.getString(), "interfaceExtension", null, 0,
+				1, DAOTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(frameWebConfigurationEClass, FrameWebConfiguration.class, "FrameWebConfiguration", !IS_ABSTRACT,

@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.DITemplateImpl#getInterfaceTemplate <em>Interface Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.DITemplateImpl#getClassTemplate <em>Class Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.DITemplateImpl#getClassExtension <em>Class Extension</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +67,26 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * @ordered
 	 */
 	protected String classTemplate = CLASS_TEMPLATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getClassExtension() <em>Class Extension</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassExtension()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CLASS_EXTENSION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getClassExtension() <em>Class Extension</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassExtension()
+	 * @generated
+	 * @ordered
+	 */
+	protected String classExtension = CLASS_EXTENSION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -140,12 +161,38 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * @generated
 	 */
 	@Override
+	public String getClassExtension() {
+		return classExtension;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setClassExtension(String newClassExtension) {
+		String oldClassExtension = classExtension;
+		classExtension = newClassExtension;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.DI_TEMPLATE__CLASS_EXTENSION,
+					oldClassExtension, classExtension));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case FramewebPackage.DI_TEMPLATE__INTERFACE_TEMPLATE:
 			return getInterfaceTemplate();
 		case FramewebPackage.DI_TEMPLATE__CLASS_TEMPLATE:
 			return getClassTemplate();
+		case FramewebPackage.DI_TEMPLATE__CLASS_EXTENSION:
+			return getClassExtension();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -163,6 +210,9 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 			return;
 		case FramewebPackage.DI_TEMPLATE__CLASS_TEMPLATE:
 			setClassTemplate((String) newValue);
+			return;
+		case FramewebPackage.DI_TEMPLATE__CLASS_EXTENSION:
+			setClassExtension((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -182,6 +232,9 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 		case FramewebPackage.DI_TEMPLATE__CLASS_TEMPLATE:
 			setClassTemplate(CLASS_TEMPLATE_EDEFAULT);
 			return;
+		case FramewebPackage.DI_TEMPLATE__CLASS_EXTENSION:
+			setClassExtension(CLASS_EXTENSION_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -200,6 +253,9 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 		case FramewebPackage.DI_TEMPLATE__CLASS_TEMPLATE:
 			return CLASS_TEMPLATE_EDEFAULT == null ? classTemplate != null
 					: !CLASS_TEMPLATE_EDEFAULT.equals(classTemplate);
+		case FramewebPackage.DI_TEMPLATE__CLASS_EXTENSION:
+			return CLASS_EXTENSION_EDEFAULT == null ? classExtension != null
+					: !CLASS_EXTENSION_EDEFAULT.equals(classExtension);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -219,6 +275,8 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 		result.append(interfaceTemplate);
 		result.append(", classTemplate: ");
 		result.append(classTemplate);
+		result.append(", classExtension: ");
+		result.append(classExtension);
 		result.append(')');
 		return result.toString();
 	}

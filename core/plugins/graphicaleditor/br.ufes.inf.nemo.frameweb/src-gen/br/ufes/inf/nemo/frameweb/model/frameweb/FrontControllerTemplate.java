@@ -14,6 +14,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getClassTemplate <em>Class Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getPageTemplate <em>Page Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getFormTemplate <em>Form Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getClassExtension <em>Class Extension</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getPageExtension <em>Page Extension</em>}</li>
  * </ul>
  *
  * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getFrontControllerTemplate()
@@ -98,5 +100,57 @@ public interface FrontControllerTemplate extends FrameworkProfile {
 	 * @generated
 	 */
 	void setFormTemplate(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Class Extension</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Class Extension</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Class Extension</em>' attribute.
+	 * @see #setClassExtension(String)
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getFrontControllerTemplate_ClassExtension()
+	 * @model dataType="org.eclipse.uml2.types.String"
+	 * @generated
+	 */
+	String getClassExtension();
+
+	/**
+	 * Sets the value of the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getClassExtension <em>Class Extension</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Class Extension</em>' attribute.
+	 * @see #getClassExtension()
+	 * @generated
+	 */
+	void setClassExtension(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Page Extension</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Page Extension</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Page Extension</em>' attribute.
+	 * @see #setPageExtension(String)
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getFrontControllerTemplate_PageExtension()
+	 * @model dataType="org.eclipse.uml2.types.String"
+	 * @generated
+	 */
+	String getPageExtension();
+
+	/**
+	 * Sets the value of the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getPageExtension <em>Page Extension</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Page Extension</em>' attribute.
+	 * @see #getPageExtension()
+	 * @generated
+	 */
+	void setPageExtension(String value);
 
 } // FrontControllerTemplate

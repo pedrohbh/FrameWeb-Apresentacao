@@ -13,6 +13,7 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * <ul>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getClassTemplate <em>Class Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getEnumerationClassTemplate <em>Enumeration Class Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getClassExtension <em>Class Extension</em>}</li>
  * </ul>
  *
  * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getORMTemplate()
@@ -71,5 +72,31 @@ public interface ORMTemplate extends FrameworkProfile {
 	 * @generated
 	 */
 	void setEnumerationClassTemplate(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Class Extension</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Class Extension</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Class Extension</em>' attribute.
+	 * @see #setClassExtension(String)
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getORMTemplate_ClassExtension()
+	 * @model dataType="org.eclipse.uml2.types.String"
+	 * @generated
+	 */
+	String getClassExtension();
+
+	/**
+	 * Sets the value of the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate#getClassExtension <em>Class Extension</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Class Extension</em>' attribute.
+	 * @see #getClassExtension()
+	 * @generated
+	 */
+	void setClassExtension(String value);
 
 } // ORMTemplate

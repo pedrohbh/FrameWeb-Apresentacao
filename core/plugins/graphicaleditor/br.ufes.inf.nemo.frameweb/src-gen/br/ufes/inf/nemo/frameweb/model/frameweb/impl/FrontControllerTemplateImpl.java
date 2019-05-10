@@ -22,6 +22,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getClassTemplate <em>Class Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getPageTemplate <em>Page Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getFormTemplate <em>Form Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getClassExtension <em>Class Extension</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getPageExtension <em>Page Extension</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,6 +89,46 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @ordered
 	 */
 	protected String formTemplate = FORM_TEMPLATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getClassExtension() <em>Class Extension</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassExtension()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CLASS_EXTENSION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getClassExtension() <em>Class Extension</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClassExtension()
+	 * @generated
+	 * @ordered
+	 */
+	protected String classExtension = CLASS_EXTENSION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPageExtension() <em>Page Extension</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPageExtension()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PAGE_EXTENSION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPageExtension() <em>Page Extension</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPageExtension()
+	 * @generated
+	 * @ordered
+	 */
+	protected String pageExtension = PAGE_EXTENSION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -185,6 +227,54 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
+	public String getClassExtension() {
+		return classExtension;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setClassExtension(String newClassExtension) {
+		String oldClassExtension = classExtension;
+		classExtension = newClassExtension;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					FramewebPackage.FRONT_CONTROLLER_TEMPLATE__CLASS_EXTENSION, oldClassExtension, classExtension));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getPageExtension() {
+		return pageExtension;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPageExtension(String newPageExtension) {
+		String oldPageExtension = pageExtension;
+		pageExtension = newPageExtension;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION, oldPageExtension, pageExtension));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__CLASS_TEMPLATE:
@@ -193,6 +283,10 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 			return getPageTemplate();
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__FORM_TEMPLATE:
 			return getFormTemplate();
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__CLASS_EXTENSION:
+			return getClassExtension();
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION:
+			return getPageExtension();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -213,6 +307,12 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 			return;
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__FORM_TEMPLATE:
 			setFormTemplate((String) newValue);
+			return;
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__CLASS_EXTENSION:
+			setClassExtension((String) newValue);
+			return;
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION:
+			setPageExtension((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -235,6 +335,12 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__FORM_TEMPLATE:
 			setFormTemplate(FORM_TEMPLATE_EDEFAULT);
 			return;
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__CLASS_EXTENSION:
+			setClassExtension(CLASS_EXTENSION_EDEFAULT);
+			return;
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION:
+			setPageExtension(PAGE_EXTENSION_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -254,6 +360,12 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 			return PAGE_TEMPLATE_EDEFAULT == null ? pageTemplate != null : !PAGE_TEMPLATE_EDEFAULT.equals(pageTemplate);
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__FORM_TEMPLATE:
 			return FORM_TEMPLATE_EDEFAULT == null ? formTemplate != null : !FORM_TEMPLATE_EDEFAULT.equals(formTemplate);
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__CLASS_EXTENSION:
+			return CLASS_EXTENSION_EDEFAULT == null ? classExtension != null
+					: !CLASS_EXTENSION_EDEFAULT.equals(classExtension);
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION:
+			return PAGE_EXTENSION_EDEFAULT == null ? pageExtension != null
+					: !PAGE_EXTENSION_EDEFAULT.equals(pageExtension);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -275,6 +387,10 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 		result.append(pageTemplate);
 		result.append(", formTemplate: ");
 		result.append(formTemplate);
+		result.append(", classExtension: ");
+		result.append(classExtension);
+		result.append(", pageExtension: ");
+		result.append(pageExtension);
 		result.append(')');
 		return result.toString();
 	}

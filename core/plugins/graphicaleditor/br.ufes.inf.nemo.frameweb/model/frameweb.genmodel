@@ -281,18 +281,24 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/classTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/pageTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/formTemplate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/classExtension"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/pageExtension"/>
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//DITemplate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DITemplate/interfaceTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DITemplate/classTemplate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DITemplate/classExtension"/>
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//ORMTemplate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/classTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/enumerationClassTemplate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/classExtension"/>
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//DAOTemplate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DAOTemplate/classTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DAOTemplate/interfaceTemplate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DAOTemplate/classExtension"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DAOTemplate/interfaceExtension"/>
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//FrameWebConfiguration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrameWebConfiguration/srcPath"/>
