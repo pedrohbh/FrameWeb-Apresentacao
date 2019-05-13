@@ -1453,9 +1453,6 @@
           <ownedTools xsi:type="tool_1:ExternalJavaAction" name="fw.codegenerator" label="Generate Source Code" forceRefresh="true" elementsToSelect="aql:self" id="E4CodeGeneratorCall">
             <parameters name="semantic" value="aql:self.getSemanticElements()"/>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:ExternalJavaAction" name="Gerar código" id="JavaActionCallGerador">
-            <parameters name="semantic" value="aql:self.getSemanticElements()"/>
-          </ownedTools>
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>

@@ -27,19 +27,18 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.PersistenceModel;
 
 public class CodeGenerator implements IExternalJavaAction {
 	
-	private Injector injector;
 	private ProjectProperties projectProperties;
+	
+	public CodeGenerator() {
+		Injector injector = Guice.createInjector(new FrameWebModule());
+		projectProperties = injector.getInstance(ProjectProperties.class);
+	}
 	
 	@Override
 	public boolean canExecute(Collection<? extends EObject> selections) {
 		boolean canExecute = selections
 			.stream()
 			.anyMatch(DSemanticDiagram.class::isInstance);
-		
-		if (canExecute) {
-			injector = Guice.createInjector(new FrameWebModule());
-			projectProperties = injector.getInstance(ProjectProperties.class);
-		}
 		
 		return canExecute;
 	}

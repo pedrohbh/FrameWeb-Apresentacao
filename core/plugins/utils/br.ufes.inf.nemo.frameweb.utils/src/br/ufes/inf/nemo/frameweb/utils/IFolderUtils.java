@@ -32,7 +32,7 @@ public class IFolderUtils {
 	}
 	
 	/**
-	 * Transforma pacotes com qualquer separador além de "/" para caminhos de OS
+	 * Transforma pacotes com qualquer separador além de "/" para um caminho no sistema de arquivos
 	 * 
 	 * @param packageName
 	 * @return packagePath
