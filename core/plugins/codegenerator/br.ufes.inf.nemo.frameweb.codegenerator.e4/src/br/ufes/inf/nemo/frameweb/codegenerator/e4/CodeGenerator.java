@@ -12,6 +12,7 @@ import com.google.inject.Injector;
 
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.ApplicationModelCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.EntityModelCodeGenerator;
+import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.ModelCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.NavigationModelCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.PersistenceModelCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.modules.FrameWebModule;
@@ -53,7 +54,7 @@ public class CodeGenerator implements IExternalJavaAction {
 			EntityModel model = diagram.getEntityModel();
 			ORMTemplate template = diagram.getORMTemplate();
 			
-			EntityModelCodeGenerator entityModelCodeGenerator = 
+			ModelCodeGenerator entityModelCodeGenerator = 
 					new EntityModelCodeGenerator(model, template, projectConfiguration);
 
 			entityModelCodeGenerator.generate();
@@ -63,7 +64,7 @@ public class CodeGenerator implements IExternalJavaAction {
 			NavigationModel model = diagram.getNavigationModel();
 			FrontControllerTemplate template = diagram.getFrontControllerTemplate();
 			
-			NavigationModelCodeGenerator navigationModelCodeGenerator =
+			ModelCodeGenerator navigationModelCodeGenerator =
 					new NavigationModelCodeGenerator(model, template, projectConfiguration);
 
 			navigationModelCodeGenerator.generate();
@@ -73,7 +74,7 @@ public class CodeGenerator implements IExternalJavaAction {
 			ApplicationModel model = diagram.getApplicationModel();
 			DITemplate template = diagram.getDITemplate();
 			
-			ApplicationModelCodeGenerator applicationModelCodeGenerator = 
+			ModelCodeGenerator applicationModelCodeGenerator = 
 					new ApplicationModelCodeGenerator(model, template, projectConfiguration);
 			
 			applicationModelCodeGenerator.generate();
@@ -83,7 +84,7 @@ public class CodeGenerator implements IExternalJavaAction {
 			PersistenceModel model = diagram.getPersistenceModel();
 			DAOTemplate template = diagram.getDAOTemplate();
 			
-			PersistenceModelCodeGenerator persistenceModelCodeGenerator = 
+			ModelCodeGenerator persistenceModelCodeGenerator = 
 					new PersistenceModelCodeGenerator(model, template, projectConfiguration);
 		
 			persistenceModelCodeGenerator.generate();
