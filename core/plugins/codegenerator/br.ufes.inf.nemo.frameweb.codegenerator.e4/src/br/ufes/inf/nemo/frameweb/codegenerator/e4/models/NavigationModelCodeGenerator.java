@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 
-import br.ufes.inf.nemo.frameweb.codegenerator.e4.ProjectConfiguration;
+import br.ufes.inf.nemo.frameweb.codegenerator.e4.ProjectProperties;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.classes.ClassCodeGenerator;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ControllerPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
@@ -22,10 +22,10 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 	private List<ControllerPackage> controllerPackages;
 	private List<ViewPackage> viewPackages;
 	private FrontControllerTemplate frontControllerTemplate;
-	private ProjectConfiguration projectConfiguration;
+	private ProjectProperties projectConfiguration;
 
 	public NavigationModelCodeGenerator(NavigationModel navigationModel,
-			FrontControllerTemplate frontControllerTemplate, ProjectConfiguration projectConfiguration) {
+			FrontControllerTemplate frontControllerTemplate, ProjectProperties projectConfiguration) {
 		
 		controllerPackages = navigationModel.getOwnedElements()
 				.stream()

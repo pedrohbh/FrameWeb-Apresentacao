@@ -27,6 +27,9 @@ Require-Bundle: org.eclipse.sirius,
  org.eclipse.core.runtime,
  org.eclipse.core.resources,
  com.google.inject,
- org.eclipse.e4.core.di
+ org.eclipse.e4.core.di,
+ org.eclipse.e4.tools,
+ org.eclipse.e4.ui.di,
+ org.eclipse.rcp
 Automatic-Module-Name: br.ufes.inf.nemo.frameweb.codegenerator.e4
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

@@ -7,7 +7,7 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.uml2.uml.Enumeration;
 
-import br.ufes.inf.nemo.frameweb.codegenerator.e4.ProjectConfiguration;
+import br.ufes.inf.nemo.frameweb.codegenerator.e4.ProjectProperties;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.classes.ClassCodeGenerator;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage;
@@ -20,9 +20,9 @@ public class EntityModelCodeGenerator implements ModelCodeGenerator {
 
 	private List<DomainPackage> domainPackages;
 	private ORMTemplate ormTemplate;
-	private ProjectConfiguration projectConfiguration;
+	private ProjectProperties projectConfiguration;
 	
-	public EntityModelCodeGenerator(EntityModel entityModel, ORMTemplate ormTemplate, ProjectConfiguration projectConfiguration) {
+	public EntityModelCodeGenerator(EntityModel entityModel, ORMTemplate ormTemplate, ProjectProperties projectConfiguration) {
 		domainPackages = entityModel.getOwnedElements()
 				.stream()
 				.filter(DomainPackage.class::isInstance)

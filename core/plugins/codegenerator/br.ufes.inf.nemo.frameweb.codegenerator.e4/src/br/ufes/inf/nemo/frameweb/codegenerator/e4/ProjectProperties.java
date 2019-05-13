@@ -8,7 +8,7 @@ import com.google.inject.Inject;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration;
 import br.ufes.inf.nemo.frameweb.utils.IFileUtils;
 
-public class ProjectConfiguration {
+public class ProjectProperties {
 	
 	@Inject
 	private IProject project;

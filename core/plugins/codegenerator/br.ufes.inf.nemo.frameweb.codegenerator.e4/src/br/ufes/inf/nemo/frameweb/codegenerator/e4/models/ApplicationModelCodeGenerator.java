@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 
-import br.ufes.inf.nemo.frameweb.codegenerator.e4.ProjectConfiguration;
+import br.ufes.inf.nemo.frameweb.codegenerator.e4.ProjectProperties;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.classes.ClassCodeGenerator;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationPackage;
@@ -20,9 +20,9 @@ public class ApplicationModelCodeGenerator implements ModelCodeGenerator {
 	
 	private List<ApplicationPackage> applicationPackages;
 	private DITemplate diTemplate;
-	private ProjectConfiguration projectConfiguration;
+	private ProjectProperties projectConfiguration;
 	
-	public ApplicationModelCodeGenerator(ApplicationModel applicationModel, DITemplate diTemplate, ProjectConfiguration projectConfiguration) {
+	public ApplicationModelCodeGenerator(ApplicationModel applicationModel, DITemplate diTemplate, ProjectProperties projectConfiguration) {
 		applicationPackages = applicationModel.getOwnedElements()
 				.stream()
 				.filter(ApplicationPackage.class::isInstance)

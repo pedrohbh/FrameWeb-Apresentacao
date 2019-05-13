@@ -28,7 +28,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.PersistenceModel;
 public class CodeGenerator implements IExternalJavaAction {
 	
 	private Injector injector;
-	private ProjectConfiguration projectConfiguration;
+	private ProjectProperties projectProperties;
 	
 	@Override
 	public boolean canExecute(Collection<? extends EObject> selections) {
@@ -38,7 +38,7 @@ public class CodeGenerator implements IExternalJavaAction {
 		
 		if (canExecute) {
 			injector = Guice.createInjector(new FrameWebModule());
-			projectConfiguration = injector.getInstance(ProjectConfiguration.class);
+			projectProperties = injector.getInstance(ProjectProperties.class);
 		}
 		
 		return canExecute;
@@ -48,14 +48,14 @@ public class CodeGenerator implements IExternalJavaAction {
 	public void execute(Collection<? extends EObject> selections, Map<String, Object> parameters) {
 		DiagramRepresentation diagram = new DiagramRepresentation(selections);
 
-		projectConfiguration.setConfiguration(diagram.getFrameWebConfiguration());
+		projectProperties.setConfiguration(diagram.getFrameWebConfiguration());
 		
 		if (diagram.hasEntityModel() && diagram.hasORMTemplate()) {
 			EntityModel model = diagram.getEntityModel();
 			ORMTemplate template = diagram.getORMTemplate();
 			
 			ModelCodeGenerator entityModelCodeGenerator = 
-					new EntityModelCodeGenerator(model, template, projectConfiguration);
+					new EntityModelCodeGenerator(model, template, projectProperties);
 
 			entityModelCodeGenerator.generate();
 		}
@@ -65,7 +65,7 @@ public class CodeGenerator implements IExternalJavaAction {
 			FrontControllerTemplate template = diagram.getFrontControllerTemplate();
 			
 			ModelCodeGenerator navigationModelCodeGenerator =
-					new NavigationModelCodeGenerator(model, template, projectConfiguration);
+					new NavigationModelCodeGenerator(model, template, projectProperties);
 
 			navigationModelCodeGenerator.generate();
 		}
@@ -75,7 +75,7 @@ public class CodeGenerator implements IExternalJavaAction {
 			DITemplate template = diagram.getDITemplate();
 			
 			ModelCodeGenerator applicationModelCodeGenerator = 
-					new ApplicationModelCodeGenerator(model, template, projectConfiguration);
+					new ApplicationModelCodeGenerator(model, template, projectProperties);
 			
 			applicationModelCodeGenerator.generate();
 		}
@@ -85,7 +85,7 @@ public class CodeGenerator implements IExternalJavaAction {
 			DAOTemplate template = diagram.getDAOTemplate();
 			
 			ModelCodeGenerator persistenceModelCodeGenerator = 
-					new PersistenceModelCodeGenerator(model, template, projectConfiguration);
+					new PersistenceModelCodeGenerator(model, template, projectProperties);
 		
 			persistenceModelCodeGenerator.generate();
 		}

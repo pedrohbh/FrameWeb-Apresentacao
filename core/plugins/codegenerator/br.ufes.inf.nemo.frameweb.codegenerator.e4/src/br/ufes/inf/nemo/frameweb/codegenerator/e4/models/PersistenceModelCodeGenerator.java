@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 
-import br.ufes.inf.nemo.frameweb.codegenerator.e4.ProjectConfiguration;
+import br.ufes.inf.nemo.frameweb.codegenerator.e4.ProjectProperties;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.classes.ClassCodeGenerator;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOInterface;
@@ -20,9 +20,9 @@ public class PersistenceModelCodeGenerator implements ModelCodeGenerator {
 	
 	private List<PersistencePackage> persistencePackages;
 	private DAOTemplate daoTemplate;
-	private ProjectConfiguration projectConfiguration;
+	private ProjectProperties projectConfiguration;
 	
-	public PersistenceModelCodeGenerator(PersistenceModel persistenceModel, DAOTemplate daoTemplate, ProjectConfiguration projectConfiguration) {
+	public PersistenceModelCodeGenerator(PersistenceModel persistenceModel, DAOTemplate daoTemplate, ProjectProperties projectConfiguration) {
 		persistencePackages = persistenceModel.getOwnedElements()
 				.stream()
 				.filter(PersistencePackage.class::isInstance)
