@@ -1,0 +1,6 @@
+{% for form in forms %}
+	{{ form.Name }}
+	{% for attribute in form.Attributes %}
+		{{ attribute.Type.Name }} {{ attribute.Name }}
+	{% endfor %}
+{% endfor %}

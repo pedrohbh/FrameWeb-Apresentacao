@@ -1,10 +1,12 @@
 package br.ufes.inf.nemo.frameweb.codegenerator.e4.models;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
+import org.eclipse.uml2.uml.Association;
 
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.ProjectProperties;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.classes.ClassCodeGenerator;
@@ -13,6 +15,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
+import br.ufes.inf.nemo.frameweb.model.frameweb.UIComponent;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ViewPackage;
 import br.ufes.inf.nemo.frameweb.utils.IFileUtils;
 import br.ufes.inf.nemo.frameweb.utils.IFolderUtils;
@@ -79,12 +82,30 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 		IFolder view = projectConfiguration.getViewFolder();
 		
 		viewPackages.forEach(viewPackage -> {
+			List<UIComponent> uiComponents = viewPackage.getOwnedTypes()
+					.stream()
+					.filter(UIComponent.class::isInstance)
+					.map(UIComponent.class::cast)
+					.collect(Collectors.toList());
+			
 			viewPackage.getOwnedTypes()
 					.stream()
 					.filter(Page.class::isInstance)
 					.map(Page.class::cast)
 					.forEach(page -> {
-						String code = ClassCodeGenerator.render(page, viewTemplate);
+						List<UIComponent> pageUIComponents = new ArrayList<UIComponent>();
+						
+						for (Association navigationAssociation : page.getAssociations()) {
+							for (UIComponent uiComponent : uiComponents) {
+								List<Association> uiComponentAssociations = uiComponent.getAssociations();
+								
+								if (uiComponentAssociations.contains(navigationAssociation)) {
+									pageUIComponents.add(uiComponent);
+								}
+							}
+						}
+						
+						String code = ClassCodeGenerator.render(page, pageUIComponents, viewTemplate);
 						
 						String fileName = page.getName() + projectConfiguration.getPageExtension();
 						IFile file = view.getFile(fileName);

@@ -1,5 +1,6 @@
 package br.ufes.inf.nemo.frameweb.codegenerator.e4.classes;
 
+import java.util.List;
 import java.util.stream.Collectors;
 
 import org.eclipse.uml2.uml.Enumeration;
@@ -22,6 +23,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceControllerAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceInterface;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceMethod;
+import br.ufes.inf.nemo.frameweb.model.frameweb.UIComponent;
 
 public class ClassCodeGenerator {
 
@@ -35,8 +37,9 @@ public class ClassCodeGenerator {
 	public final static String REALIZATIONS = "realizations";
 	public final static String LITERALS = "literals";
 	public final static String RESULT_DEPENDENCY = "resultDependency";
-	public final static String NAVIGATION_ASSOCIATION = "navigationAssociation";
+	public final static String NAVIGATION_ASSOCIATIONS = "navigationAssociation";
 	public final static String PAGE = "page";
+	public final static String FORMS = "forms";
 
 	public static String render(DomainClass class_, String template) {
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
@@ -103,7 +106,7 @@ public class ClassCodeGenerator {
 	}
 	
 //	TODO implementar o renderizador de pagina html
-	public static String render(Page page, String template) {
+	public static String render(Page page, List<UIComponent> pageUIComponents, String template) {
 //		IFile pageTemplateFile = templateFolder.getFile(frontControllerTemplate.getPageTemplate());
 //		String pageTemplate = IFileUtils.getText(pageTemplateFile);
 		
@@ -112,11 +115,12 @@ public class ClassCodeGenerator {
 		
 		templateEngineContext
 			.addParameter(PAGE, page)
-			.addParameter(NAVIGATION_ASSOCIATION, page.getAssociations()
+			.addParameter(NAVIGATION_ASSOCIATIONS, page.getAssociations()
 					.stream()
 					.filter(NavigationAssociation.class::isInstance)
 					.map(NavigationAssociation.class::cast)
-					.collect(Collectors.toList()));
+					.collect(Collectors.toList()))
+			.addParameter(FORMS, pageUIComponents);
 		
 		/*
 		 * ADD TEMPLATE ENGINE PARAMETERS
