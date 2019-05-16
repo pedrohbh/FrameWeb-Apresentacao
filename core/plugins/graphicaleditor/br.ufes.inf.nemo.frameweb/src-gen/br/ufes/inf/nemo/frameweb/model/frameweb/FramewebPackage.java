@@ -121124,13 +121124,22 @@ public interface FramewebPackage extends EPackage {
 	int FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION = FRAMEWORK_PROFILE_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Rest Class Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRONT_CONTROLLER_TEMPLATE__REST_CLASS_TEMPLATE = FRAMEWORK_PROFILE_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Front Controller Template</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FRONT_CONTROLLER_TEMPLATE_FEATURE_COUNT = FRAMEWORK_PROFILE_FEATURE_COUNT + 5;
+	int FRONT_CONTROLLER_TEMPLATE_FEATURE_COUNT = FRAMEWORK_PROFILE_FEATURE_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Get EAnnotation</em>' operation.
@@ -133323,6 +133332,17 @@ public interface FramewebPackage extends EPackage {
 	EAttribute getFrontControllerTemplate_PageExtension();
 
 	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getRestClassTemplate <em>Rest Class Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Rest Class Template</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getRestClassTemplate()
+	 * @see #getFrontControllerTemplate()
+	 * @generated
+	 */
+	EAttribute getFrontControllerTemplate_RestClassTemplate();
+
+	/**
 	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate <em>DI Template</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -135354,6 +135374,15 @@ public interface FramewebPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION = eINSTANCE.getFrontControllerTemplate_PageExtension();
+
+		/**
+		 * The meta object literal for the '<em><b>Rest Class Template</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FRONT_CONTROLLER_TEMPLATE__REST_CLASS_TEMPLATE = eINSTANCE
+				.getFrontControllerTemplate_RestClassTemplate();
 
 		/**
 		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.DITemplateImpl <em>DI Template</em>}' class.

@@ -15,6 +15,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
+import br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.UIComponent;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ViewPackage;
 import br.ufes.inf.nemo.frameweb.utils.IFileUtils;
@@ -51,6 +52,9 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 		String templatePath = frontControllerTemplate.getClassTemplate();
 		String template = projectConfiguration.getTemplate(templatePath);
 		
+		String restTemplatePath = frontControllerTemplate.getRestClassTemplate();
+		String restTemplate = projectConfiguration.getTemplate(restTemplatePath);
+		
 		IFolder src = projectConfiguration.getSourceFolder();
 		
 		controllerPackages.forEach(controllerPackage -> {
@@ -68,6 +72,19 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 						String code = ClassCodeGenerator.render(frontControllerClass, template);
 						
 						String fileName = frontControllerClass.getName() + projectConfiguration.getClassExtension();
+						IFile file = package_.getFile(fileName);
+						
+						IFileUtils.createFile(file, code);
+					});
+			
+			controllerPackage.getOwnedTypes()
+					.stream()
+					.filter(RestControllerClass.class::isInstance)
+					.map(RestControllerClass.class::cast)
+					.forEach(restControllerClass -> {
+						String code = ClassCodeGenerator.render(restControllerClass, restTemplate);
+						
+						String fileName = restControllerClass.getName() + projectConfiguration.getClassExtension();
 						IFile file = package_.getFile(fileName);
 						
 						IFileUtils.createFile(file, code);

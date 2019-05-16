@@ -51,6 +51,7 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 			addFormTemplatePropertyDescriptor(object);
 			addClassExtensionPropertyDescriptor(object);
 			addPageExtensionPropertyDescriptor(object);
+			addRestClassTemplatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -136,6 +137,22 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 	}
 
 	/**
+	 * This adds a property descriptor for the Rest Class Template feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRestClassTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_FrontControllerTemplate_restClassTemplate_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_FrontControllerTemplate_restClassTemplate_feature",
+						"_UI_FrontControllerTemplate_type"),
+				FramewebPackage.Literals.FRONT_CONTROLLER_TEMPLATE__REST_CLASS_TEMPLATE, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns FrontControllerTemplate.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -186,6 +203,7 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__FORM_TEMPLATE:
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__CLASS_EXTENSION:
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION:
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__REST_CLASS_TEMPLATE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

@@ -2798,6 +2798,16 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EAttribute getFrontControllerTemplate_RestClassTemplate() {
+		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getDITemplate() {
 		return diTemplateEClass;
 	}
@@ -3486,6 +3496,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__FORM_TEMPLATE);
 		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__CLASS_EXTENSION);
 		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION);
+		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__REST_CLASS_TEMPLATE);
 
 		diTemplateEClass = createEClass(DI_TEMPLATE);
 		createEAttribute(diTemplateEClass, DI_TEMPLATE__INTERFACE_TEMPLATE);
@@ -4191,6 +4202,9 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getFrontControllerTemplate_PageExtension(), theTypesPackage.getString(), "pageExtension", null,
 				0, 1, FrontControllerTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFrontControllerTemplate_RestClassTemplate(), theTypesPackage.getString(), "restClassTemplate",
+				null, 0, 1, FrontControllerTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(diTemplateEClass, DITemplate.class, "DITemplate", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

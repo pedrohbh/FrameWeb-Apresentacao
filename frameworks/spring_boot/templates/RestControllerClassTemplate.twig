@@ -1,0 +1,35 @@
+package {{ package.Name }};
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@CrossOrigin
+@RestController
+public class {{ class.Name }} {% if generalizations is not empty %}extends {{ ((generalizations[0]).GeneralizationSets[0]).Name }} {% endif %}{
+
+	{% for association in associations %}
+	@Autowired
+	private {{ association.SourceMember.Type.Name }} {{ association.TargetMember.Type.Name | title }};
+	{% endfor %}
+
+	{% for attribute in attributes %}
+	private {{ attribute.Type.Name }} {{ attribute.Name }};
+	{% endfor %}
+
+	{% for method in methods %}
+	{% if (method.RequestType | lower) == 'get' %}
+	@GetMapping(/*PATH*/)
+	{% elseif (method.RequestType | lower) == 'post' %}
+	@PostMapping(/*PATH*/)
+	{% elseif (method.RequestType | lower) == 'put' %}
+	@PutMapping(/*PATH*/)
+	{% elseif (method.RequestType | lower) == 'delete' %}
+	@DeleteMapping(/*PATH*/)
+	{% endif -%}
+	{{ method.Visibility.Name }} {% if method.MethodType is null %}void{% else %}{{ method.MethodType.Name }}{% endif %} {{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}) {
+		return{% if method.MethodType is not null %} null{% endif %};
+	}
+	{% endfor %}
+
+}

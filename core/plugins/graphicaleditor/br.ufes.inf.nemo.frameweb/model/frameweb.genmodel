@@ -283,6 +283,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/formTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/classExtension"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/pageExtension"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/restClassTemplate"/>
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//DITemplate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DITemplate/interfaceTemplate"/>

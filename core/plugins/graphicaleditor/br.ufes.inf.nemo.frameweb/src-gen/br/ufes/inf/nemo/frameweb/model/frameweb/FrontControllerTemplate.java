@@ -16,6 +16,7 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getFormTemplate <em>Form Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getClassExtension <em>Class Extension</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getPageExtension <em>Page Extension</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getRestClassTemplate <em>Rest Class Template</em>}</li>
  * </ul>
  *
  * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getFrontControllerTemplate()
@@ -152,5 +153,31 @@ public interface FrontControllerTemplate extends FrameworkProfile {
 	 * @generated
 	 */
 	void setPageExtension(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Rest Class Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Rest Class Template</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Rest Class Template</em>' attribute.
+	 * @see #setRestClassTemplate(String)
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getFrontControllerTemplate_RestClassTemplate()
+	 * @model dataType="org.eclipse.uml2.types.String"
+	 * @generated
+	 */
+	String getRestClassTemplate();
+
+	/**
+	 * Sets the value of the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getRestClassTemplate <em>Rest Class Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Rest Class Template</em>' attribute.
+	 * @see #getRestClassTemplate()
+	 * @generated
+	 */
+	void setRestClassTemplate(String value);
 
 } // FrontControllerTemplate

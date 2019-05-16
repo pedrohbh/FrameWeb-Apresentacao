@@ -19,6 +19,8 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
+import br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerClass;
+import br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceControllerAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceInterface;
@@ -99,6 +101,32 @@ public class ClassCodeGenerator {
 					.stream()
 					.filter(FrontControllerMethod.class::isInstance)
 					.map(FrontControllerMethod.class::cast)
+					.collect(Collectors.toList()))
+			.addParameter(GENERALIZATIONS, class_.getGeneralizations());
+		
+		return templateEngineContext.getCode();
+	}
+	
+	public static String render(RestControllerClass class_, String template) {
+//		IFile frontControllerClassTemplateFile = templateFolder.getFile(frontControllerTemplate.getClassTemplate());
+//		String frontControllerClassTemplate = IFileUtils.getText(frontControllerClassTemplateFile);
+		
+		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
+		templateEngineContext.setTemplate(template);
+
+		templateEngineContext
+			.addParameter(PACKAGE, class_.getPackage())
+			.addParameter(CLASS, class_)
+			.addParameter(ATTRIBUTES, class_.getAttributes())
+			.addParameter(ASSOCIATIONS, class_.getAssociations()
+					.stream()
+					.filter(ServiceControllerAssociation.class::isInstance)
+					.map(ServiceControllerAssociation.class::cast)
+					.collect(Collectors.toList()))
+			.addParameter(METHODS, class_.getOperations()
+					.stream()
+					.filter(RestControllerMethod.class::isInstance)
+					.map(RestControllerMethod.class::cast)
 					.collect(Collectors.toList()))
 			.addParameter(GENERALIZATIONS, class_.getGeneralizations());
 		

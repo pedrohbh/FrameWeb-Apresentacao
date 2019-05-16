@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getFormTemplate <em>Form Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getClassExtension <em>Class Extension</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getPageExtension <em>Page Extension</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getRestClassTemplate <em>Rest Class Template</em>}</li>
  * </ul>
  *
  * @generated
@@ -129,6 +130,26 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @ordered
 	 */
 	protected String pageExtension = PAGE_EXTENSION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getRestClassTemplate() <em>Rest Class Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRestClassTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String REST_CLASS_TEMPLATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRestClassTemplate() <em>Rest Class Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRestClassTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected String restClassTemplate = REST_CLASS_TEMPLATE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -275,6 +296,31 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
+	public String getRestClassTemplate() {
+		return restClassTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setRestClassTemplate(String newRestClassTemplate) {
+		String oldRestClassTemplate = restClassTemplate;
+		restClassTemplate = newRestClassTemplate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					FramewebPackage.FRONT_CONTROLLER_TEMPLATE__REST_CLASS_TEMPLATE, oldRestClassTemplate,
+					restClassTemplate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__CLASS_TEMPLATE:
@@ -287,6 +333,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 			return getClassExtension();
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION:
 			return getPageExtension();
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__REST_CLASS_TEMPLATE:
+			return getRestClassTemplate();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -313,6 +361,9 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 			return;
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION:
 			setPageExtension((String) newValue);
+			return;
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__REST_CLASS_TEMPLATE:
+			setRestClassTemplate((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -341,6 +392,9 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION:
 			setPageExtension(PAGE_EXTENSION_EDEFAULT);
 			return;
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__REST_CLASS_TEMPLATE:
+			setRestClassTemplate(REST_CLASS_TEMPLATE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -366,6 +420,9 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION:
 			return PAGE_EXTENSION_EDEFAULT == null ? pageExtension != null
 					: !PAGE_EXTENSION_EDEFAULT.equals(pageExtension);
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__REST_CLASS_TEMPLATE:
+			return REST_CLASS_TEMPLATE_EDEFAULT == null ? restClassTemplate != null
+					: !REST_CLASS_TEMPLATE_EDEFAULT.equals(restClassTemplate);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -391,6 +448,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 		result.append(classExtension);
 		result.append(", pageExtension: ");
 		result.append(pageExtension);
+		result.append(", restClassTemplate: ");
+		result.append(restClassTemplate);
 		result.append(')');
 		return result.toString();
 	}
