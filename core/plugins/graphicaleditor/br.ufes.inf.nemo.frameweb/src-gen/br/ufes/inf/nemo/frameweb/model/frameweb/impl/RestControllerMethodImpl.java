@@ -24,6 +24,7 @@ import org.eclipse.uml2.uml.internal.impl.OperationImpl;
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.RestControllerMethodImpl#getRequestType <em>Request Type</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.RestControllerMethodImpl#isIsDefault <em>Is Default</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.RestControllerMethodImpl#getMethodType <em>Method Type</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.RestControllerMethodImpl#getRequestMapping <em>Request Mapping</em>}</li>
  * </ul>
  *
  * @generated
@@ -75,6 +76,25 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @ordered
 	 */
 	protected Type methodType;
+
+	/**
+	 * The default value of the '{@link #getRequestMapping() <em>Request Mapping</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRequestMapping()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String REQUEST_MAPPING_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getRequestMapping() <em>Request Mapping</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRequestMapping()
+	 * @generated
+	 * @ordered
+	 */
+	protected String requestMapping = REQUEST_MAPPING_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -191,6 +211,30 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @generated
 	 */
 	@Override
+	public String getRequestMapping() {
+		return requestMapping;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setRequestMapping(String newRequestMapping) {
+		String oldRequestMapping = requestMapping;
+		requestMapping = newRequestMapping;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_MAPPING, oldRequestMapping, requestMapping));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_TYPE:
@@ -201,6 +245,8 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 			if (resolve)
 				return getMethodType();
 			return basicGetMethodType();
+		case FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_MAPPING:
+			return getRequestMapping();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -221,6 +267,9 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 			return;
 		case FramewebPackage.REST_CONTROLLER_METHOD__METHOD_TYPE:
 			setMethodType((Type) newValue);
+			return;
+		case FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_MAPPING:
+			setRequestMapping((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -243,6 +292,9 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 		case FramewebPackage.REST_CONTROLLER_METHOD__METHOD_TYPE:
 			setMethodType((Type) null);
 			return;
+		case FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_MAPPING:
+			setRequestMapping(REQUEST_MAPPING_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -261,6 +313,9 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 			return isDefault != IS_DEFAULT_EDEFAULT;
 		case FramewebPackage.REST_CONTROLLER_METHOD__METHOD_TYPE:
 			return methodType != null;
+		case FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_MAPPING:
+			return REQUEST_MAPPING_EDEFAULT == null ? requestMapping != null
+					: !REQUEST_MAPPING_EDEFAULT.equals(requestMapping);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -280,6 +335,8 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 		result.append(requestType);
 		result.append(", isDefault: ");
 		result.append(isDefault);
+		result.append(", requestMapping: ");
+		result.append(requestMapping);
 		result.append(')');
 		return result.toString();
 	}

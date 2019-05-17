@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
    <feature url="features/br.ufes.inf.nemo.frameweb.codegenerator.feature_1.0.0.qualifier.jar" id="br.ufes.inf.nemo.frameweb.codegenerator.feature" version="1.0.0.qualifier">
-      <category name="frameweb.category"/>
+      <category name="fw.category"/>
    </feature>
    <feature url="features/br.ufes.inf.nemo.frameweb.graphicaleditor.feature_1.0.0.qualifier.jar" id="br.ufes.inf.nemo.frameweb.graphicaleditor.feature" version="1.0.0.qualifier">
-      <category name="frameweb.category"/>
+      <category name="fw.category"/>
    </feature>
-   <category-def name="frameweb.category" label="Frameweb Editor"/>
+   <category-def name="fw.category" label="FrameWeb Editor"/>
 </site>

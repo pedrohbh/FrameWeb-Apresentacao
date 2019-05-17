@@ -17,6 +17,7 @@ import org.eclipse.uml2.uml.Type;
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod#getRequestType <em>Request Type</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod#isIsDefault <em>Is Default</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod#getMethodType <em>Method Type</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod#getRequestMapping <em>Request Mapping</em>}</li>
  * </ul>
  *
  * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getRestControllerMethod()
@@ -102,4 +103,30 @@ public interface RestControllerMethod extends Operation {
 	 * @generated
 	 */
 	void setMethodType(Type value);
+
+	/**
+	 * Returns the value of the '<em><b>Request Mapping</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Request Mapping</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Request Mapping</em>' attribute.
+	 * @see #setRequestMapping(String)
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getRestControllerMethod_RequestMapping()
+	 * @model dataType="org.eclipse.uml2.types.String"
+	 * @generated
+	 */
+	String getRequestMapping();
+
+	/**
+	 * Sets the value of the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod#getRequestMapping <em>Request Mapping</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Request Mapping</em>' attribute.
+	 * @see #getRequestMapping()
+	 * @generated
+	 */
+	void setRequestMapping(String value);
 } // RestControllerMethod

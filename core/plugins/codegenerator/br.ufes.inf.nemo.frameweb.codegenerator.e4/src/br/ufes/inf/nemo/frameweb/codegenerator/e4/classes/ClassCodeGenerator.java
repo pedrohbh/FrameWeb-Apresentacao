@@ -196,7 +196,7 @@ public class ClassCodeGenerator {
 		return templateEngineContext.getCode();
 	}
 
-	public static String render(ServiceInterface interface_, String template) {
+	public static String render(ServiceInterface interface_, List<ServiceMethod> serviceMethods, String template) {
 //		IFile serviceInterfaceTemplateFile = templateFolder.getFile(diTemplate.getInterfaceTemplate());
 //		String serviceInterfaceTemplate = IFileUtils.getText(serviceInterfaceTemplateFile);
 		
@@ -206,8 +206,8 @@ public class ClassCodeGenerator {
 //		FIXME O editor grafico nao permite a aplicacao de metodos na interface e nem parametros de template
 		templateEngineContext
 			.addParameter(PACKAGE, interface_.getPackage())
-			.addParameter(INTERFACE, interface_);
-//			.addParameter(METHODS, serviceInterface.getOperations());
+			.addParameter(INTERFACE, interface_)
+			.addParameter(METHODS, serviceMethods);
 			
 		return templateEngineContext.getCode();
 	}

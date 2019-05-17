@@ -13,6 +13,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceInterface;
+import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceMethod;
 import br.ufes.inf.nemo.frameweb.utils.IFileUtils;
 import br.ufes.inf.nemo.frameweb.utils.IFolderUtils;
 
@@ -68,7 +69,18 @@ public class ApplicationModelCodeGenerator implements ModelCodeGenerator {
 					.filter(ServiceInterface.class::isInstance)
 					.map(ServiceInterface.class::cast)
 					.forEach(serviceInterface -> {
-						String code = ClassCodeGenerator.render(serviceInterface, interfaceTemplate);
+//						FIXME a busca deve ser feita pela realizacao, mas como ela nao funciona, aqui sera feita por meio de nomes.
+//						Isso e errado! As realizacoes devem ser consertadas para que isso funcione adequadamente
+						List<ServiceMethod> serviceMethods = applicationPackage.getOwnedTypes()
+								.stream()
+								.filter(ServiceClass.class::isInstance)
+								.map(ServiceClass.class::cast)
+								.filter(serviceClass -> serviceInterface.getName().equals(serviceClass.getName() + "Impl"))
+								.map(ServiceClass::getOperations)
+								.map(ServiceMethod.class::cast)
+								.collect(Collectors.toList());
+						
+						String code = ClassCodeGenerator.render(serviceInterface, serviceMethods, interfaceTemplate);
 						
 						String fileName = serviceInterface.getName() + projectConfiguration.getClassExtension();
 						IFile file = package_.getFile(fileName);

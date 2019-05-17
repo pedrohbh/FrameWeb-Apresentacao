@@ -54,6 +54,7 @@ public class RestControllerMethodItemProvider extends OperationItemProvider {
 			addRequestTypePropertyDescriptor(object);
 			addIsDefaultPropertyDescriptor(object);
 			addMethodTypePropertyDescriptor(object);
+			addRequestMappingPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -106,6 +107,22 @@ public class RestControllerMethodItemProvider extends OperationItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Request Mapping feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRequestMappingPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_RestControllerMethod_requestMapping_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_RestControllerMethod_requestMapping_feature", "_UI_RestControllerMethod_type"),
+						FramewebPackage.Literals.REST_CONTROLLER_METHOD__REQUEST_MAPPING, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns RestControllerMethod.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -153,6 +170,7 @@ public class RestControllerMethodItemProvider extends OperationItemProvider {
 		switch (notification.getFeatureID(RestControllerMethod.class)) {
 		case FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_TYPE:
 		case FramewebPackage.REST_CONTROLLER_METHOD__IS_DEFAULT:
+		case FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_MAPPING:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

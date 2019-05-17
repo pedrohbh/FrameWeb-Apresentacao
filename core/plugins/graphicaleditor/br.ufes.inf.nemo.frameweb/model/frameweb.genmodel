@@ -316,6 +316,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//RestControllerMethod/requestType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//RestControllerMethod/isDefault"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//RestControllerMethod/methodType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//RestControllerMethod/requestMapping"/>
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//RestControllerClass"/>
   </genPackages>

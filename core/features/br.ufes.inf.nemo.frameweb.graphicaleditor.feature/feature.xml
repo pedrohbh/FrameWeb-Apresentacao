@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE XML>
 <feature
       id="br.ufes.inf.nemo.frameweb.graphicaleditor.feature"
       label="FrameWeb Graphical Editor"
@@ -40,6 +39,13 @@
 
    <plugin
          id="br.ufes.inf.nemo.frameweb.editor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="br.ufes.inf.nemo.frameweb.facet"
          download-size="0"
          install-size="0"
          version="0.0.0"

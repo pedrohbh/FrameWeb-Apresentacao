@@ -1,8 +1,12 @@
 package {{ package.Name }};
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin
 @RestController
@@ -10,7 +14,7 @@ public class {{ class.Name }} {% if generalizations is not empty %}extends {{ ((
 
 	{% for association in associations %}
 	@Autowired
-	private {{ association.SourceMember.Type.Name }} {{ association.TargetMember.Type.Name | title }};
+	private {{ association.TargetMember.Type.Name }} {{ association.TargetMember.Type.Name | title }};
 	{% endfor %}
 
 	{% for attribute in attributes %}
@@ -19,13 +23,13 @@ public class {{ class.Name }} {% if generalizations is not empty %}extends {{ ((
 
 	{% for method in methods %}
 	{% if (method.RequestType | lower) == 'get' %}
-	@GetMapping(/*PATH*/)
+	@GetMapping("{{ method.RequestMapping }}")
 	{% elseif (method.RequestType | lower) == 'post' %}
-	@PostMapping(/*PATH*/)
+	@PostMapping("{{ method.RequestMapping }}")
 	{% elseif (method.RequestType | lower) == 'put' %}
-	@PutMapping(/*PATH*/)
+	@PutMapping("{{ method.RequestMapping }}")
 	{% elseif (method.RequestType | lower) == 'delete' %}
-	@DeleteMapping(/*PATH*/)
+	@DeleteMapping("{{ method.RequestMapping }}")
 	{% endif -%}
 	{{ method.Visibility.Name }} {% if method.MethodType is null %}void{% else %}{{ method.MethodType.Name }}{% endif %} {{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}) {
 		return{% if method.MethodType is not null %} null{% endif %};

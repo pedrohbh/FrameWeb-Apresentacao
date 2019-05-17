@@ -129032,13 +129032,22 @@ public interface FramewebPackage extends EPackage {
 	int REST_CONTROLLER_METHOD__METHOD_TYPE = UMLPackage.OPERATION_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Request Mapping</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONTROLLER_METHOD__REQUEST_MAPPING = UMLPackage.OPERATION_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Rest Controller Method</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REST_CONTROLLER_METHOD_FEATURE_COUNT = UMLPackage.OPERATION_FEATURE_COUNT + 3;
+	int REST_CONTROLLER_METHOD_FEATURE_COUNT = UMLPackage.OPERATION_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Get EAnnotation</em>' operation.
@@ -133623,6 +133632,17 @@ public interface FramewebPackage extends EPackage {
 	EReference getRestControllerMethod_MethodType();
 
 	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod#getRequestMapping <em>Request Mapping</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Request Mapping</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod#getRequestMapping()
+	 * @see #getRestControllerMethod()
+	 * @generated
+	 */
+	EAttribute getRestControllerMethod_RequestMapping();
+
+	/**
 	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerClass <em>Rest Controller Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -135603,6 +135623,14 @@ public interface FramewebPackage extends EPackage {
 		 * @generated
 		 */
 		EReference REST_CONTROLLER_METHOD__METHOD_TYPE = eINSTANCE.getRestControllerMethod_MethodType();
+
+		/**
+		 * The meta object literal for the '<em><b>Request Mapping</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REST_CONTROLLER_METHOD__REQUEST_MAPPING = eINSTANCE.getRestControllerMethod_RequestMapping();
 
 		/**
 		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.RestControllerClassImpl <em>Rest Controller Class</em>}' class.

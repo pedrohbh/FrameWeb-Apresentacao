@@ -3068,6 +3068,16 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EAttribute getRestControllerMethod_RequestMapping() {
+		return (EAttribute) restControllerMethodEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getRestControllerClass() {
 		return restControllerClassEClass;
 	}
@@ -3529,6 +3539,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEAttribute(restControllerMethodEClass, REST_CONTROLLER_METHOD__REQUEST_TYPE);
 		createEAttribute(restControllerMethodEClass, REST_CONTROLLER_METHOD__IS_DEFAULT);
 		createEReference(restControllerMethodEClass, REST_CONTROLLER_METHOD__METHOD_TYPE);
+		createEAttribute(restControllerMethodEClass, REST_CONTROLLER_METHOD__REQUEST_MAPPING);
 
 		restControllerClassEClass = createEClass(REST_CONTROLLER_CLASS);
 
@@ -4283,6 +4294,9 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEReference(getRestControllerMethod_MethodType(), theUMLPackage.getType(), null, "methodType", null, 0, 1,
 				RestControllerMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRestControllerMethod_RequestMapping(), theTypesPackage.getString(), "requestMapping", null, 0,
+				1, RestControllerMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(restControllerClassEClass, RestControllerClass.class, "RestControllerClass", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
