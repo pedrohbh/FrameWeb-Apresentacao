@@ -50,6 +50,12 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 	@Override
 	public void generate() {
 		String templatePath = frontControllerTemplate.getClassTemplate();
+		
+		if (templatePath == null)
+			return;
+		if (templatePath.isEmpty())
+			return;
+		
 		String template = projectConfiguration.getTemplate(templatePath);
 		
 		String restTemplatePath = frontControllerTemplate.getRestClassTemplate();
@@ -94,6 +100,12 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 //		TODO As paginas web ainda nao foram trabalhadas, acredito que essa parte de geracao
 //		da view necessite de adaptacoes. Temporariamente permanecera assim...
 		String viewTemplatePath = frontControllerTemplate.getPageTemplate();
+		
+		if (viewTemplatePath == null)
+			return;
+		if (viewTemplatePath.isEmpty())
+			return;
+		
 		String viewTemplate = projectConfiguration.getTemplate(viewTemplatePath);
 		
 		IFolder view = projectConfiguration.getViewFolder();
