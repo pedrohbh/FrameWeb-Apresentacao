@@ -3,6 +3,8 @@
 package br.ufes.inf.nemo.frameweb.model.frameweb.impl;
 
 import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage;
+import br.ufes.inf.nemo.frameweb.model.frameweb.HttpMethodType;
+import br.ufes.inf.nemo.frameweb.model.frameweb.HttpStatus;
 import br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -25,6 +27,7 @@ import org.eclipse.uml2.uml.internal.impl.OperationImpl;
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.RestControllerMethodImpl#isIsDefault <em>Is Default</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.RestControllerMethodImpl#getMethodType <em>Method Type</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.RestControllerMethodImpl#getRequestMapping <em>Request Mapping</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.RestControllerMethodImpl#getDesiredResponseStatus <em>Desired Response Status</em>}</li>
  * </ul>
  *
  * @generated
@@ -39,7 +42,7 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String REQUEST_TYPE_EDEFAULT = null;
+	protected static final HttpMethodType REQUEST_TYPE_EDEFAULT = HttpMethodType.GET;
 	/**
 	 * The cached value of the '{@link #getRequestType() <em>Request Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -48,7 +51,7 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @generated
 	 * @ordered
 	 */
-	protected String requestType = REQUEST_TYPE_EDEFAULT;
+	protected HttpMethodType requestType = REQUEST_TYPE_EDEFAULT;
 	/**
 	 * The default value of the '{@link #isIsDefault() <em>Is Default</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -97,6 +100,25 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	protected String requestMapping = REQUEST_MAPPING_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getDesiredResponseStatus() <em>Desired Response Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDesiredResponseStatus()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final HttpStatus DESIRED_RESPONSE_STATUS_EDEFAULT = HttpStatus.SUCCESS;
+	/**
+	 * The cached value of the '{@link #getDesiredResponseStatus() <em>Desired Response Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDesiredResponseStatus()
+	 * @generated
+	 * @ordered
+	 */
+	protected HttpStatus desiredResponseStatus = DESIRED_RESPONSE_STATUS_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -121,7 +143,7 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @generated
 	 */
 	@Override
-	public String getRequestType() {
+	public HttpMethodType getRequestType() {
 		return requestType;
 	}
 
@@ -131,9 +153,9 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @generated
 	 */
 	@Override
-	public void setRequestType(String newRequestType) {
-		String oldRequestType = requestType;
-		requestType = newRequestType;
+	public void setRequestType(HttpMethodType newRequestType) {
+		HttpMethodType oldRequestType = requestType;
+		requestType = newRequestType == null ? REQUEST_TYPE_EDEFAULT : newRequestType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_TYPE,
 					oldRequestType, requestType));
@@ -235,6 +257,32 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @generated
 	 */
 	@Override
+	public HttpStatus getDesiredResponseStatus() {
+		return desiredResponseStatus;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDesiredResponseStatus(HttpStatus newDesiredResponseStatus) {
+		HttpStatus oldDesiredResponseStatus = desiredResponseStatus;
+		desiredResponseStatus = newDesiredResponseStatus == null ? DESIRED_RESPONSE_STATUS_EDEFAULT
+				: newDesiredResponseStatus;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					FramewebPackage.REST_CONTROLLER_METHOD__DESIRED_RESPONSE_STATUS, oldDesiredResponseStatus,
+					desiredResponseStatus));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_TYPE:
@@ -247,6 +295,8 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 			return basicGetMethodType();
 		case FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_MAPPING:
 			return getRequestMapping();
+		case FramewebPackage.REST_CONTROLLER_METHOD__DESIRED_RESPONSE_STATUS:
+			return getDesiredResponseStatus();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -260,7 +310,7 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_TYPE:
-			setRequestType((String) newValue);
+			setRequestType((HttpMethodType) newValue);
 			return;
 		case FramewebPackage.REST_CONTROLLER_METHOD__IS_DEFAULT:
 			setIsDefault((Boolean) newValue);
@@ -270,6 +320,9 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 			return;
 		case FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_MAPPING:
 			setRequestMapping((String) newValue);
+			return;
+		case FramewebPackage.REST_CONTROLLER_METHOD__DESIRED_RESPONSE_STATUS:
+			setDesiredResponseStatus((HttpStatus) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -295,6 +348,9 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 		case FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_MAPPING:
 			setRequestMapping(REQUEST_MAPPING_EDEFAULT);
 			return;
+		case FramewebPackage.REST_CONTROLLER_METHOD__DESIRED_RESPONSE_STATUS:
+			setDesiredResponseStatus(DESIRED_RESPONSE_STATUS_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -308,7 +364,7 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_TYPE:
-			return REQUEST_TYPE_EDEFAULT == null ? requestType != null : !REQUEST_TYPE_EDEFAULT.equals(requestType);
+			return requestType != REQUEST_TYPE_EDEFAULT;
 		case FramewebPackage.REST_CONTROLLER_METHOD__IS_DEFAULT:
 			return isDefault != IS_DEFAULT_EDEFAULT;
 		case FramewebPackage.REST_CONTROLLER_METHOD__METHOD_TYPE:
@@ -316,6 +372,8 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 		case FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_MAPPING:
 			return REQUEST_MAPPING_EDEFAULT == null ? requestMapping != null
 					: !REQUEST_MAPPING_EDEFAULT.equals(requestMapping);
+		case FramewebPackage.REST_CONTROLLER_METHOD__DESIRED_RESPONSE_STATUS:
+			return desiredResponseStatus != DESIRED_RESPONSE_STATUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -337,6 +395,8 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 		result.append(isDefault);
 		result.append(", requestMapping: ");
 		result.append(requestMapping);
+		result.append(", desiredResponseStatus: ");
+		result.append(desiredResponseStatus);
 		result.append(')');
 		return result.toString();
 	}

@@ -55,6 +55,7 @@ public class RestControllerMethodItemProvider extends OperationItemProvider {
 			addIsDefaultPropertyDescriptor(object);
 			addMethodTypePropertyDescriptor(object);
 			addRequestMappingPropertyDescriptor(object);
+			addDesiredResponseStatusPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -123,6 +124,22 @@ public class RestControllerMethodItemProvider extends OperationItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Desired Response Status feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDesiredResponseStatusPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_RestControllerMethod_desiredResponseStatus_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_RestControllerMethod_desiredResponseStatus_feature", "_UI_RestControllerMethod_type"),
+				FramewebPackage.Literals.REST_CONTROLLER_METHOD__DESIRED_RESPONSE_STATUS, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns RestControllerMethod.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -171,6 +188,7 @@ public class RestControllerMethodItemProvider extends OperationItemProvider {
 		case FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_TYPE:
 		case FramewebPackage.REST_CONTROLLER_METHOD__IS_DEFAULT:
 		case FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_MAPPING:
+		case FramewebPackage.REST_CONTROLLER_METHOD__DESIRED_RESPONSE_STATUS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

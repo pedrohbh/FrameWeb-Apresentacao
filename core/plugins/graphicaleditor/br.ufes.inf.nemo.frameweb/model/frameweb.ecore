@@ -341,11 +341,29 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="classExtension" eType="ecore:EDataType platform:/plugin/org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RestControllerMethod" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestType" eType="ecore:EDataType platform:/plugin/org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestType" eType="#//HttpMethodType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isDefault" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="methodType" ordered="false"
         eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Type"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestMapping" eType="ecore:EDataType platform:/plugin/org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="desiredResponseStatus"
+        eType="#//HttpStatus"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RestControllerClass" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="HttpStatus">
+    <eLiterals name="SUCCESS" value="200" literal="SUCCESS"/>
+    <eLiterals name="CREATED" value="201"/>
+    <eLiterals name="NO_CONTENT" value="204"/>
+    <eLiterals name="PARTIAL_CONTENT" value="206"/>
+    <eLiterals name="BAD_REQUEST" value="400"/>
+    <eLiterals name="NOT_FOUND" value="404"/>
+    <eLiterals name="METHOD_NOT_ALLOWED" value="405"/>
+    <eLiterals name="CONFLICT" value="409"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="HttpMethodType">
+    <eLiterals name="GET"/>
+    <eLiterals name="PUT" value="1"/>
+    <eLiterals name="POST" value="2" literal="POST_"/>
+    <eLiterals name="DELETE" value="3"/>
+  </eClassifiers>
 </ecore:EPackage>

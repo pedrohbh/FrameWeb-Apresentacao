@@ -1,12 +1,21 @@
 package {{ package.Name }};
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 @CrossOrigin
 @RestController
@@ -22,15 +31,32 @@ public class {{ class.Name }} {% if generalizations is not empty %}extends {{ ((
 	{% endfor %}
 
 	{% for method in methods %}
-	{% if (method.RequestType | lower) == 'get' %}
+		{%- if method.RequestType == 'GET' %}
 	@GetMapping("{{ method.RequestMapping }}")
-	{% elseif (method.RequestType | lower) == 'post' %}
+		{%- elseif method.RequestType == 'POST' %}
 	@PostMapping("{{ method.RequestMapping }}")
-	{% elseif (method.RequestType | lower) == 'put' %}
+		{%- elseif method.RequestType == 'PUT' %}
 	@PutMapping("{{ method.RequestMapping }}")
-	{% elseif (method.RequestType | lower) == 'delete' %}
+		{%- elseif method.RequestType == 'DELETE' %}
 	@DeleteMapping("{{ method.RequestMapping }}")
-	{% endif -%}
+		{%- endif %}
+		{%- if method.DesiredResponseStatus == 'SUCCESS' %}
+	@ResponseStatus(HttpStatus.OK)
+		{%- elseif method.DesiredResponseStatus == 'CREATED' %}
+	@ResponseStatus(HttpStatus.CREATED)
+		{%- elseif method.DesiredResponseStatus == 'NO_CONTENT' %}
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+		{%- elseif method.DesiredResponseStatus == 'PARTIAL_CONTENT' %}
+	@ResponseStatus(HttpStatus.PARTIAL_CONTENT)
+		{%- elseif method.DesiredResponseStatus == 'BAD_REQUEST' %}
+	@ResponseStatus(HttpStatus.BAD_REQUEST)
+		{%- elseif method.DesiredResponseStatus == 'NOT_FOUND' %}
+	@ResponseStatus(HttpStatus.NOT_FOUND)
+		{%- elseif method.DesiredResponseStatus == 'METHOD_NOT_ALLOWED' %}
+	@ResponseStatus(HttpStatus.METHOD_NOT_ALLOWED)
+		{%- elseif method.DesiredResponseStatus == 'CONFLICT' %}
+	@ResponseStatus(HttpStatus.CONFLICT)
+		{%- endif %}
 	{{ method.Visibility.Name }} {% if method.MethodType is null %}void{% else %}{{ method.MethodType.Name }}{% endif %} {{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}) {
 		return{% if method.MethodType is not null %} null{% endif %};
 	}

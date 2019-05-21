@@ -59,6 +59,8 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerDependency;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Generation;
+import br.ufes.inf.nemo.frameweb.model.frameweb.HttpMethodType;
+import br.ufes.inf.nemo.frameweb.model.frameweb.HttpStatus;
 import br.ufes.inf.nemo.frameweb.model.frameweb.IOParameter;
 import br.ufes.inf.nemo.frameweb.model.frameweb.IdAttribute;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Individual;
@@ -968,6 +970,20 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	private EEnum inheritanceMappingEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum httpStatusEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum httpMethodTypeEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -3078,6 +3094,16 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EAttribute getRestControllerMethod_DesiredResponseStatus() {
+		return (EAttribute) restControllerMethodEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getRestControllerClass() {
 		return restControllerClassEClass;
 	}
@@ -3180,6 +3206,26 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	@Override
 	public EEnum getInheritanceMapping() {
 		return inheritanceMappingEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getHttpStatus() {
+		return httpStatusEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getHttpMethodType() {
+		return httpMethodTypeEEnum;
 	}
 
 	/**
@@ -3540,6 +3586,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEAttribute(restControllerMethodEClass, REST_CONTROLLER_METHOD__IS_DEFAULT);
 		createEReference(restControllerMethodEClass, REST_CONTROLLER_METHOD__METHOD_TYPE);
 		createEAttribute(restControllerMethodEClass, REST_CONTROLLER_METHOD__REQUEST_MAPPING);
+		createEAttribute(restControllerMethodEClass, REST_CONTROLLER_METHOD__DESIRED_RESPONSE_STATUS);
 
 		restControllerClassEClass = createEClass(REST_CONTROLLER_CLASS);
 
@@ -3554,6 +3601,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		fetchEEnum = createEEnum(FETCH);
 		constantNameListEEnum = createEEnum(CONSTANT_NAME_LIST);
 		inheritanceMappingEEnum = createEEnum(INHERITANCE_MAPPING);
+		httpStatusEEnum = createEEnum(HTTP_STATUS);
+		httpMethodTypeEEnum = createEEnum(HTTP_METHOD_TYPE);
 
 		// Create data types
 		rationalEDataType = createEDataType(RATIONAL);
@@ -4285,7 +4334,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		initEClass(restControllerMethodEClass, RestControllerMethod.class, "RestControllerMethod", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRestControllerMethod_RequestType(), theTypesPackage.getString(), "requestType", null, 0, 1,
+		initEAttribute(getRestControllerMethod_RequestType(), this.getHttpMethodType(), "requestType", null, 0, 1,
 				RestControllerMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRestControllerMethod_IsDefault(), ecorePackage.getEBoolean(), "isDefault", null, 0, 1,
@@ -4297,6 +4346,9 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getRestControllerMethod_RequestMapping(), theTypesPackage.getString(), "requestMapping", null, 0,
 				1, RestControllerMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRestControllerMethod_DesiredResponseStatus(), this.getHttpStatus(), "desiredResponseStatus",
+				null, 0, 1, RestControllerMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(restControllerClassEClass, RestControllerClass.class, "RestControllerClass", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4364,6 +4416,22 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		addEEnumLiteral(inheritanceMappingEEnum, InheritanceMapping.SINGLETABLE);
 		addEEnumLiteral(inheritanceMappingEEnum, InheritanceMapping.UNION);
 		addEEnumLiteral(inheritanceMappingEEnum, InheritanceMapping.JOIN);
+
+		initEEnum(httpStatusEEnum, HttpStatus.class, "HttpStatus");
+		addEEnumLiteral(httpStatusEEnum, HttpStatus.SUCCESS);
+		addEEnumLiteral(httpStatusEEnum, HttpStatus.CREATED);
+		addEEnumLiteral(httpStatusEEnum, HttpStatus.NO_CONTENT);
+		addEEnumLiteral(httpStatusEEnum, HttpStatus.PARTIAL_CONTENT);
+		addEEnumLiteral(httpStatusEEnum, HttpStatus.BAD_REQUEST);
+		addEEnumLiteral(httpStatusEEnum, HttpStatus.NOT_FOUND);
+		addEEnumLiteral(httpStatusEEnum, HttpStatus.METHOD_NOT_ALLOWED);
+		addEEnumLiteral(httpStatusEEnum, HttpStatus.CONFLICT);
+
+		initEEnum(httpMethodTypeEEnum, HttpMethodType.class, "HttpMethodType");
+		addEEnumLiteral(httpMethodTypeEEnum, HttpMethodType.GET);
+		addEEnumLiteral(httpMethodTypeEEnum, HttpMethodType.PUT);
+		addEEnumLiteral(httpMethodTypeEEnum, HttpMethodType.POST);
+		addEEnumLiteral(httpMethodTypeEEnum, HttpMethodType.DELETE);
 
 		// Initialize data types
 		initEDataType(rationalEDataType, double.class, "Rational", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

@@ -74,6 +74,22 @@
       <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//InheritanceMapping/union"/>
       <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//InheritanceMapping/join"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="frameweb.ecore#//HttpStatus">
+      <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//HttpStatus/SUCCESS"/>
+      <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//HttpStatus/CREATED"/>
+      <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//HttpStatus/NO_CONTENT"/>
+      <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//HttpStatus/PARTIAL_CONTENT"/>
+      <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//HttpStatus/BAD_REQUEST"/>
+      <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//HttpStatus/NOT_FOUND"/>
+      <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//HttpStatus/METHOD_NOT_ALLOWED"/>
+      <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//HttpStatus/CONFLICT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="frameweb.ecore#//HttpMethodType">
+      <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//HttpMethodType/GET"/>
+      <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//HttpMethodType/PUT"/>
+      <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//HttpMethodType/POST"/>
+      <genEnumLiterals ecoreEnumLiteral="frameweb.ecore#//HttpMethodType/DELETE"/>
+    </genEnums>
     <genDataTypes ecoreDataType="frameweb.ecore#//Rational"/>
     <genDataTypes ecoreDataType="frameweb.ecore#//Decimal"/>
     <genClasses ecoreClass="frameweb.ecore#//FramewebProject">
@@ -317,6 +333,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//RestControllerMethod/isDefault"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//RestControllerMethod/methodType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//RestControllerMethod/requestMapping"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//RestControllerMethod/desiredResponseStatus"/>
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//RestControllerClass"/>
   </genPackages>

@@ -286,6 +286,10 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createConstantNameListFromString(eDataType, initialValue);
 		case FramewebPackage.INHERITANCE_MAPPING:
 			return createInheritanceMappingFromString(eDataType, initialValue);
+		case FramewebPackage.HTTP_STATUS:
+			return createHttpStatusFromString(eDataType, initialValue);
+		case FramewebPackage.HTTP_METHOD_TYPE:
+			return createHttpMethodTypeFromString(eDataType, initialValue);
 		case FramewebPackage.RATIONAL:
 			return createRationalFromString(eDataType, initialValue);
 		case FramewebPackage.DECIMAL:
@@ -323,6 +327,10 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return convertConstantNameListToString(eDataType, instanceValue);
 		case FramewebPackage.INHERITANCE_MAPPING:
 			return convertInheritanceMappingToString(eDataType, instanceValue);
+		case FramewebPackage.HTTP_STATUS:
+			return convertHttpStatusToString(eDataType, instanceValue);
+		case FramewebPackage.HTTP_METHOD_TYPE:
+			return convertHttpMethodTypeToString(eDataType, instanceValue);
 		case FramewebPackage.RATIONAL:
 			return convertRationalToString(eDataType, instanceValue);
 		case FramewebPackage.DECIMAL:
@@ -1627,6 +1635,50 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	public String convertInheritanceMappingToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HttpStatus createHttpStatusFromString(EDataType eDataType, String initialValue) {
+		HttpStatus result = HttpStatus.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertHttpStatusToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HttpMethodType createHttpMethodTypeFromString(EDataType eDataType, String initialValue) {
+		HttpMethodType result = HttpMethodType.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertHttpMethodTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
