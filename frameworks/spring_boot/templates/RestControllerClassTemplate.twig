@@ -23,7 +23,7 @@ public class {{ class.Name }} {% if generalizations is not empty %}extends {{ ((
 
 	{% for association in associations %}
 	@Autowired
-	private {{ association.TargetMember.Type.Name }} {{ association.TargetMember.Type.Name | title }};
+	private {{ association.TargetMember.Type.Name }} {{ association.TargetMember.Type.Name | lower }};
 	{% endfor %}
 
 	{% for attribute in attributes %}
