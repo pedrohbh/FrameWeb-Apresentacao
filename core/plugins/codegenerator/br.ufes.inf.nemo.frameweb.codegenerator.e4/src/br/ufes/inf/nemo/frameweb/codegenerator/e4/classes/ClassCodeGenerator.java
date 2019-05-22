@@ -196,6 +196,8 @@ public class ClassCodeGenerator {
 //		IFile serviceInterfaceTemplateFile = templateFolder.getFile(diTemplate.getInterfaceTemplate());
 //		String serviceInterfaceTemplate = IFileUtils.getText(serviceInterfaceTemplateFile);
 		
+		serviceMethods.forEach(System.out::println);
+		
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
 		templateEngineContext.setTemplate(template);
 

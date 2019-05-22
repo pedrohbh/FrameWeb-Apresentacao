@@ -1,5 +1,6 @@
 package br.ufes.inf.nemo.frameweb.codegenerator.e4.models;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -71,14 +72,27 @@ public class ApplicationModelCodeGenerator implements ModelCodeGenerator {
 					.forEach(serviceInterface -> {
 //						FIXME a busca deve ser feita pela realizacao, mas como ela nao funciona, aqui sera feita por meio de nomes.
 //						Isso e errado! As realizacoes devem ser consertadas para que isso funcione adequadamente
-						List<ServiceMethod> serviceMethods = applicationPackage.getOwnedTypes()
+						List<ServiceClass> serviceClasses = applicationPackage.getOwnedTypes()
 								.stream()
 								.filter(ServiceClass.class::isInstance)
 								.map(ServiceClass.class::cast)
-								.filter(serviceClass -> serviceInterface.getName().equals(serviceClass.getName() + "Impl"))
-								.map(ServiceClass::getOperations)
-								.map(ServiceMethod.class::cast)
 								.collect(Collectors.toList());
+						
+						List<ServiceMethod> serviceMethods = new ArrayList<ServiceMethod>();
+						
+						for (ServiceClass serviceClass : serviceClasses) {
+							if (serviceClass.getName().contains(serviceInterface.getName())) {
+								serviceMethods.addAll(serviceClass.getOperations()
+										.stream()
+										.filter(ServiceMethod.class::isInstance)
+										.map(ServiceMethod.class::cast)
+										.collect(Collectors.toList()));
+								
+								break;
+							}
+						}
+						
+						serviceMethods.forEach(System.out::println);
 						
 						String code = ClassCodeGenerator.render(serviceInterface, serviceMethods, interfaceTemplate);
 						
