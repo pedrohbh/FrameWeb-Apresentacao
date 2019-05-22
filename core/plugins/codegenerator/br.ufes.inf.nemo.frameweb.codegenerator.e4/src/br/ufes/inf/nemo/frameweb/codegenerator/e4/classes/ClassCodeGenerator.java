@@ -153,7 +153,7 @@ public class ClassCodeGenerator {
 		return templateEngineContext.getCode();
 	}
 	
-	public static String render(DAOInterface interface_, String template) {
+	public static String render(DAOInterface interface_, List<DAOMethod> daoMethods, String template) {
 //		IFile daoInterfaceTemplateFile = templateFolder.getFile(daoTemplate.getInterfaceTemplate());
 //		String daoInterfaceTemplate = IFileUtils.getText(daoInterfaceTemplateFile);
 		
@@ -163,8 +163,8 @@ public class ClassCodeGenerator {
 //		FIXME O editor grafico nao permite a aplicacao de metodos na interface e nem parametros de template
 		templateEngineContext
 			.addParameter(PACKAGE, interface_.getPackage())
-			.addParameter(INTERFACE, interface_);
-//			.addParameter(METHODS, daoInterface.getOperations());
+			.addParameter(INTERFACE, interface_)
+			.addParameter(METHODS, daoMethods);
 		
 		return templateEngineContext.getCode();
 	}

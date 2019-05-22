@@ -15,6 +15,7 @@ import org.eclipse.uml2.uml.Type;
  * </p>
  * <ul>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.DAOMethod#getMethodType <em>Method Type</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.DAOMethod#getQuery <em>Query</em>}</li>
  * </ul>
  *
  * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getDAOMethod()
@@ -47,5 +48,31 @@ public interface DAOMethod extends Operation {
 	 * @generated
 	 */
 	void setMethodType(Type value);
+
+	/**
+	 * Returns the value of the '<em><b>Query</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Query</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Query</em>' attribute.
+	 * @see #setQuery(String)
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getDAOMethod_Query()
+	 * @model dataType="org.eclipse.uml2.types.String"
+	 * @generated
+	 */
+	String getQuery();
+
+	/**
+	 * Sets the value of the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DAOMethod#getQuery <em>Query</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Query</em>' attribute.
+	 * @see #getQuery()
+	 * @generated
+	 */
+	void setQuery(String value);
 
 } // DAOMethod

@@ -17,6 +17,8 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.uml2.uml.UMLPackage;
 
 import org.eclipse.uml2.uml.edit.providers.OperationItemProvider;
@@ -50,6 +52,7 @@ public class DAOMethodItemProvider extends OperationItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addMethodTypePropertyDescriptor(object);
+			addQueryPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -67,6 +70,22 @@ public class DAOMethodItemProvider extends OperationItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_DAOMethod_methodType_feature",
 								"_UI_DAOMethod_type"),
 						FramewebPackage.Literals.DAO_METHOD__METHOD_TYPE, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Query feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addQueryPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_DAOMethod_query_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_DAOMethod_query_feature",
+								"_UI_DAOMethod_type"),
+						FramewebPackage.Literals.DAO_METHOD__QUERY, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -113,6 +132,12 @@ public class DAOMethodItemProvider extends OperationItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(DAOMethod.class)) {
+		case FramewebPackage.DAO_METHOD__QUERY:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		}
 		super.notifyChanged(notification);
 	}
 

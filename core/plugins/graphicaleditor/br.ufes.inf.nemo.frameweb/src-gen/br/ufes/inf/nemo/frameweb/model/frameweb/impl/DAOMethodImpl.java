@@ -25,6 +25,7 @@ import org.eclipse.uml2.uml.internal.impl.OperationImpl;
  * </p>
  * <ul>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.DAOMethodImpl#getMethodType <em>Method Type</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.DAOMethodImpl#getQuery <em>Query</em>}</li>
  * </ul>
  *
  * @generated
@@ -40,6 +41,25 @@ public class DAOMethodImpl extends OperationImpl implements DAOMethod {
 	 * @ordered
 	 */
 	protected Type methodType;
+
+	/**
+	 * The default value of the '{@link #getQuery() <em>Query</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQuery()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String QUERY_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getQuery() <em>Query</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQuery()
+	 * @generated
+	 * @ordered
+	 */
+	protected String query = QUERY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -108,12 +128,37 @@ public class DAOMethodImpl extends OperationImpl implements DAOMethod {
 	 * @generated
 	 */
 	@Override
+	public String getQuery() {
+		return query;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setQuery(String newQuery) {
+		String oldQuery = query;
+		query = newQuery;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.DAO_METHOD__QUERY, oldQuery, query));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case FramewebPackage.DAO_METHOD__METHOD_TYPE:
 			if (resolve)
 				return getMethodType();
 			return basicGetMethodType();
+		case FramewebPackage.DAO_METHOD__QUERY:
+			return getQuery();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -128,6 +173,9 @@ public class DAOMethodImpl extends OperationImpl implements DAOMethod {
 		switch (featureID) {
 		case FramewebPackage.DAO_METHOD__METHOD_TYPE:
 			setMethodType((Type) newValue);
+			return;
+		case FramewebPackage.DAO_METHOD__QUERY:
+			setQuery((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -144,6 +192,9 @@ public class DAOMethodImpl extends OperationImpl implements DAOMethod {
 		case FramewebPackage.DAO_METHOD__METHOD_TYPE:
 			setMethodType((Type) null);
 			return;
+		case FramewebPackage.DAO_METHOD__QUERY:
+			setQuery(QUERY_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -158,8 +209,27 @@ public class DAOMethodImpl extends OperationImpl implements DAOMethod {
 		switch (featureID) {
 		case FramewebPackage.DAO_METHOD__METHOD_TYPE:
 			return methodType != null;
+		case FramewebPackage.DAO_METHOD__QUERY:
+			return QUERY_EDEFAULT == null ? query != null : !QUERY_EDEFAULT.equals(query);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (query: ");
+		result.append(query);
+		result.append(')');
+		return result.toString();
 	}
 
 } //DAOMethodImpl

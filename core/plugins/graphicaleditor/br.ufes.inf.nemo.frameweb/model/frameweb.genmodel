@@ -198,6 +198,7 @@
     <genClasses image="false" ecoreClass="frameweb.ecore#//NavigationDependency"/>
     <genClasses ecoreClass="frameweb.ecore#//DAOMethod">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//DAOMethod/methodType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DAOMethod/query"/>
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//DomainPackage"/>
     <genClasses ecoreClass="frameweb.ecore#//ViewPackage"/>

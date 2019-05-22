@@ -92,8 +92,6 @@ public class ApplicationModelCodeGenerator implements ModelCodeGenerator {
 							}
 						}
 						
-						serviceMethods.forEach(System.out::println);
-						
 						String code = ClassCodeGenerator.render(serviceInterface, serviceMethods, interfaceTemplate);
 						
 						String fileName = serviceInterface.getName() + projectConfiguration.getClassExtension();

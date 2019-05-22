@@ -50017,13 +50017,22 @@ public interface FramewebPackage extends EPackage {
 	int DAO_METHOD__METHOD_TYPE = UMLPackage.OPERATION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Query</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DAO_METHOD__QUERY = UMLPackage.OPERATION_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>DAO Method</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DAO_METHOD_FEATURE_COUNT = UMLPackage.OPERATION_FEATURE_COUNT + 1;
+	int DAO_METHOD_FEATURE_COUNT = UMLPackage.OPERATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get EAnnotation</em>' operation.
@@ -132462,6 +132471,17 @@ public interface FramewebPackage extends EPackage {
 	EReference getDAOMethod_MethodType();
 
 	/**
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DAOMethod#getQuery <em>Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Query</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DAOMethod#getQuery()
+	 * @see #getDAOMethod()
+	 * @generated
+	 */
+	EAttribute getDAOMethod_Query();
+
+	/**
 	 * Returns the meta object for class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage <em>Domain Package</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -134630,6 +134650,14 @@ public interface FramewebPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DAO_METHOD__METHOD_TYPE = eINSTANCE.getDAOMethod_MethodType();
+
+		/**
+		 * The meta object literal for the '<em><b>Query</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DAO_METHOD__QUERY = eINSTANCE.getDAOMethod_Query();
 
 		/**
 		 * The meta object literal for the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.DomainPackageImpl <em>Domain Package</em>}' class.

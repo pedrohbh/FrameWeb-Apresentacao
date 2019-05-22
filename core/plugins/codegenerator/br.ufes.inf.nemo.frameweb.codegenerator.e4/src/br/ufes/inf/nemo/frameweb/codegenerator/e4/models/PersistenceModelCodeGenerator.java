@@ -1,5 +1,6 @@
 package br.ufes.inf.nemo.frameweb.codegenerator.e4.models;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -10,6 +11,7 @@ import br.ufes.inf.nemo.frameweb.codegenerator.e4.ProjectProperties;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.classes.ClassCodeGenerator;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOInterface;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DAOMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.PersistenceModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.PersistencePackage;
@@ -68,7 +70,30 @@ public class PersistenceModelCodeGenerator implements ModelCodeGenerator {
 					.filter(DAOInterface.class::isInstance)
 					.map(DAOInterface.class::cast)
 					.forEach(daoInterface -> {
-						String code = ClassCodeGenerator.render(daoInterface, interfaceTemplate);
+//						FIXME a busca deve ser feita pela realizacao, mas como ela nao funciona, aqui sera feita por meio de nomes.
+//						Isso e errado! As realizacoes devem ser consertadas para que isso funcione adequadamente
+						List<DAOClass> daoClasses = persistencePackage.getOwnedTypes()
+								.stream()
+								.filter(DAOClass.class::isInstance)
+								.map(DAOClass.class::cast)
+								.collect(Collectors.toList());
+						
+						List<DAOMethod> daoMethods = new ArrayList<DAOMethod>();
+						
+						for (DAOClass daoClass : daoClasses) {
+							if (daoClass.getName().contains(daoInterface.getName())) {
+								daoMethods.addAll(daoClass.getOperations()
+										.stream()
+										.filter(DAOMethod.class::isInstance)
+										.map(DAOMethod.class::cast)
+										.collect(Collectors.toList()));
+								
+								break;
+							}
+						}
+						
+						
+						String code = ClassCodeGenerator.render(daoInterface, daoMethods, interfaceTemplate);
 						
 						String fileName = daoInterface.getName() + projectConfiguration.getClassExtension();
 						IFile file = package_.getFile(fileName);

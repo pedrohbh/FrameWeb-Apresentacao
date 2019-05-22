@@ -1934,6 +1934,16 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EAttribute getDAOMethod_Query() {
+		return (EAttribute) daoMethodEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getDomainPackage() {
 		return domainPackageEClass;
 	}
@@ -3404,6 +3414,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		daoMethodEClass = createEClass(DAO_METHOD);
 		createEReference(daoMethodEClass, DAO_METHOD__METHOD_TYPE);
+		createEAttribute(daoMethodEClass, DAO_METHOD__QUERY);
 
 		domainPackageEClass = createEClass(DOMAIN_PACKAGE);
 
@@ -4004,6 +4015,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEReference(getDAOMethod_MethodType(), theUMLPackage.getType(), null, "methodType", null, 0, 1,
 				DAOMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDAOMethod_Query(), theTypesPackage.getString(), "query", null, 0, 1, DAOMethod.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(domainPackageEClass, DomainPackage.class, "DomainPackage", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

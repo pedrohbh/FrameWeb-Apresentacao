@@ -46,7 +46,7 @@ public enum HttpMethodType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	POST(2, "POST", "POST"),
+	POST(2, "POST", "POST_"),
 
 	/**
 	 * The '<em><b>DELETE</b></em>' literal object.
@@ -97,7 +97,7 @@ public enum HttpMethodType implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #POST
-	 * @model
+	 * @model literal="POST_"
 	 * @generated
 	 * @ordered
 	 */
