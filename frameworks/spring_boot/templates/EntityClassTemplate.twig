@@ -26,7 +26,7 @@ public class {{ class.Name }} {% if generalizations is not empty %}extends {{ ((
 	{{ (attribute.isID()) 				? 	'@Id' 				: '' }}
 	{{ (attribute.isID()) 				?	'@GeneratedValue' 	: '' }}
 	{{ (attribute.isIsNull() == false) 	? 	'@NotNull' 			: '' }}
-	@Column(name = "{{ attribute.Name }}", unique = {{ attribute.isIsUnique() }})
+	{% if attribute.isID() == false %}@Column(name = "{{ attribute.Name }}", unique = {{ (attribute.isIsUnique()) ? 'true' : 'false' }}){% else %}@Column{% endif %}
 	{{ attribute.Visibility.Name }} {{ attribute.Type.Name }} {{ attribute.Name }};
 {% endfor %}
 
