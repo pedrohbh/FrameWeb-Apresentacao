@@ -26,7 +26,7 @@ public class {{ class.Name }} {% if generalizations is not empty %}extends {{ ((
 	{{ (attribute.isID()) 				? 	'@Id' 				: '' }}
 	{{ (attribute.isID()) 				?	'@GeneratedValue' 	: '' }}
 	{{ (attribute.isIsNull() == false) 	? 	'@NotNull' 			: '' }}
-	{% if attribute.isID() == false %}@Column(name = "{{ attribute.Name }}", unique = {{ (attribute.isIsUnique()) ? 'true' : 'false' }}){% else %}@Column{% endif %}
+	{% if attribute.isID() == false %}@Column(name = "{{ attribute.Name }}", unique = {{ (attribute.isUnique() == true) ? 'true' : 'false' }}){% else %}@Column{% endif %}
 	{{ attribute.Visibility.Name }} {{ attribute.Type.Name }} {{ attribute.Name }};
 {% endfor %}
 
@@ -226,6 +226,7 @@ public class {{ class.Name }} {% if generalizations is not empty %}extends {{ ((
 	{{ method.Visibility.Name }} abstract {% if method.MethodType is null %}void{% else %}{{ method.MethodType.Name }}{% endif %} {{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %});
 	{% else %}
 	{{ method.Visibility.Name }} {% if method.MethodType is null %}void{% else %}{{ method.MethodType.Name }}{% endif %} {{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}) {
+		// TODO Auto-generated method stub
 		return{% if method.MethodType is not null %} null{% endif %};
 	}
 	{% endif %}

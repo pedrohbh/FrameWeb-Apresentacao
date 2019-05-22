@@ -16,7 +16,9 @@ public class {{ class.Name }} {% if generalizations is not empty %}extends {{ ((
 	{% endfor %}
 	
 	{% for method in methods %}
+	@Override
 	{{ method.Visibility.Name }} {% if method.MethodType is null %}void{% else %}{{ method.MethodType.Name }}{% endif %} {{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}) {
+		// TODO Auto-generated method stub
 		return{% if method.MethodType is not null %} null{% endif %};
 	}
 	{% endfor %}
