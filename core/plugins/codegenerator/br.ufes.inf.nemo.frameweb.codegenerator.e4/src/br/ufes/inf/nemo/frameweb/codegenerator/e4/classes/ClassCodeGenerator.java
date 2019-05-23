@@ -82,9 +82,6 @@ public class ClassCodeGenerator {
 	}
 	
 	public static String render(FrontControllerClass class_, String template) {
-//		IFile frontControllerClassTemplateFile = templateFolder.getFile(frontControllerTemplate.getClassTemplate());
-//		String frontControllerClassTemplate = IFileUtils.getText(frontControllerClassTemplateFile);
-		
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
 		templateEngineContext.setTemplate(template);
 
@@ -108,9 +105,6 @@ public class ClassCodeGenerator {
 	}
 	
 	public static String render(RestControllerClass class_, String template) {
-//		IFile frontControllerClassTemplateFile = templateFolder.getFile(frontControllerTemplate.getClassTemplate());
-//		String frontControllerClassTemplate = IFileUtils.getText(frontControllerClassTemplateFile);
-		
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
 		templateEngineContext.setTemplate(template);
 
@@ -131,9 +125,6 @@ public class ClassCodeGenerator {
 	
 //	TODO implementar o renderizador de pagina html
 	public static String render(Page page, List<UIComponent> pageUIComponents, String template) {
-//		IFile pageTemplateFile = templateFolder.getFile(frontControllerTemplate.getPageTemplate());
-//		String pageTemplate = IFileUtils.getText(pageTemplateFile);
-		
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
 		templateEngineContext.setTemplate(template);
 		
@@ -146,17 +137,10 @@ public class ClassCodeGenerator {
 					.collect(Collectors.toList()))
 			.addParameter(FORMS, pageUIComponents);
 		
-		/*
-		 * ADD TEMPLATE ENGINE PARAMETERS
-		 */
-		
 		return templateEngineContext.getCode();
 	}
 	
 	public static String render(DAOInterface interface_, List<DAOMethod> daoMethods, String template) {
-//		IFile daoInterfaceTemplateFile = templateFolder.getFile(daoTemplate.getInterfaceTemplate());
-//		String daoInterfaceTemplate = IFileUtils.getText(daoInterfaceTemplateFile);
-		
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
 		templateEngineContext.setTemplate(template);
 		
@@ -170,9 +154,6 @@ public class ClassCodeGenerator {
 	}
 	
 	public static String render(DAOClass class_, String template) {
-//		IFile DAOClassTemplateFile = templateFolder.getFile(daoTemplate.getClassTemplate());
-//		String DAOClassTemplate = IFileUtils.getText(DAOClassTemplateFile);
-		
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
 		templateEngineContext.setTemplate(template);
 		
@@ -193,11 +174,6 @@ public class ClassCodeGenerator {
 	}
 
 	public static String render(ServiceInterface interface_, List<ServiceMethod> serviceMethods, String template) {
-//		IFile serviceInterfaceTemplateFile = templateFolder.getFile(diTemplate.getInterfaceTemplate());
-//		String serviceInterfaceTemplate = IFileUtils.getText(serviceInterfaceTemplateFile);
-		
-		serviceMethods.forEach(System.out::println);
-		
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
 		templateEngineContext.setTemplate(template);
 
@@ -211,9 +187,6 @@ public class ClassCodeGenerator {
 	}
 	
 	public static String render(ServiceClass class_, String template) {
-//		IFile serviceClassTemplateFile = templateFolder.getFile(diTemplate.getClassTemplate());
-//		String serviceClassTemplate = IFileUtils.getText(serviceClassTemplateFile);
-		
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
 		templateEngineContext.setTemplate(template);
 		
