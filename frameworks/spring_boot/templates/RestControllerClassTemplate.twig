@@ -33,7 +33,7 @@ public class {{ class.Name }} {% if generalizations is not empty %}extends {{ ((
 	{% for method in methods %}
 		{%- if method.RequestType == 'GET' %}
 	@GetMapping("{{ method.RequestMapping }}")
-		{%- elseif method.RequestType == 'POST' %}
+		{%- elseif method.RequestType == 'POST_' %}
 	@PostMapping("{{ method.RequestMapping }}")
 		{%- elseif method.RequestType == 'PUT' %}
 	@PutMapping("{{ method.RequestMapping }}")
