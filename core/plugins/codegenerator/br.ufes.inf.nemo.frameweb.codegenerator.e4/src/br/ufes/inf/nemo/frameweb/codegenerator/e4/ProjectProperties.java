@@ -27,7 +27,7 @@ public class ProjectProperties {
 	}
 	
 	public IFolder getTemplateFolder() {
-		String templateFolderPath = configuration.getTemplatePath();
+		String templateFolderPath = configuration.getFrameworkDefinitionPath();
 		IFolder templateFolder = project.getFolder(templateFolderPath);
 		
 		return templateFolder;

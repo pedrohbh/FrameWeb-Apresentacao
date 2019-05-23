@@ -48,7 +48,7 @@ public class FrameWebConfigurationItemProvider extends FrameworkProfileItemProvi
 
 			addSrcPathPropertyDescriptor(object);
 			addViewPathPropertyDescriptor(object);
-			addTemplatePathPropertyDescriptor(object);
+			addFrameworkDefinitionPathPropertyDescriptor(object);
 			addClassExtensionPropertyDescriptor(object);
 			addPageExtensionPropertyDescriptor(object);
 		}
@@ -88,19 +88,19 @@ public class FrameWebConfigurationItemProvider extends FrameworkProfileItemProvi
 	}
 
 	/**
-	 * This adds a property descriptor for the Template Path feature.
+	 * This adds a property descriptor for the Framework Definition Path feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTemplatePathPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FrameWebConfiguration_templatePath_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_FrameWebConfiguration_templatePath_feature", "_UI_FrameWebConfiguration_type"),
-						FramewebPackage.Literals.FRAME_WEB_CONFIGURATION__TEMPLATE_PATH, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	protected void addFrameworkDefinitionPathPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_FrameWebConfiguration_frameworkDefinitionPath_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_FrameWebConfiguration_frameworkDefinitionPath_feature", "_UI_FrameWebConfiguration_type"),
+				FramewebPackage.Literals.FRAME_WEB_CONFIGURATION__FRAMEWORK_DEFINITION_PATH, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -183,7 +183,7 @@ public class FrameWebConfigurationItemProvider extends FrameworkProfileItemProvi
 		switch (notification.getFeatureID(FrameWebConfiguration.class)) {
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__SRC_PATH:
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__VIEW_PATH:
-		case FramewebPackage.FRAME_WEB_CONFIGURATION__TEMPLATE_PATH:
+		case FramewebPackage.FRAME_WEB_CONFIGURATION__FRAMEWORK_DEFINITION_PATH:
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__CLASS_EXTENSION:
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__PAGE_EXTENSION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

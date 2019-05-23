@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrameWebConfigurationImpl#getSrcPath <em>Src Path</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrameWebConfigurationImpl#getViewPath <em>View Path</em>}</li>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrameWebConfigurationImpl#getTemplatePath <em>Template Path</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrameWebConfigurationImpl#getFrameworkDefinitionPath <em>Framework Definition Path</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrameWebConfigurationImpl#getClassExtension <em>Class Extension</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrameWebConfigurationImpl#getPageExtension <em>Page Extension</em>}</li>
  * </ul>
@@ -70,24 +70,24 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 	protected String viewPath = VIEW_PATH_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getTemplatePath() <em>Template Path</em>}' attribute.
+	 * The default value of the '{@link #getFrameworkDefinitionPath() <em>Framework Definition Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTemplatePath()
+	 * @see #getFrameworkDefinitionPath()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TEMPLATE_PATH_EDEFAULT = null;
+	protected static final String FRAMEWORK_DEFINITION_PATH_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getTemplatePath() <em>Template Path</em>}' attribute.
+	 * The cached value of the '{@link #getFrameworkDefinitionPath() <em>Framework Definition Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTemplatePath()
+	 * @see #getFrameworkDefinitionPath()
 	 * @generated
 	 * @ordered
 	 */
-	protected String templatePath = TEMPLATE_PATH_EDEFAULT;
+	protected String frameworkDefinitionPath = FRAMEWORK_DEFINITION_PATH_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getClassExtension() <em>Class Extension</em>}' attribute.
@@ -204,8 +204,8 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 	 * @generated
 	 */
 	@Override
-	public String getTemplatePath() {
-		return templatePath;
+	public String getFrameworkDefinitionPath() {
+		return frameworkDefinitionPath;
 	}
 
 	/**
@@ -215,12 +215,13 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 	 */
 	@SuppressWarnings("restriction")
 	@Override
-	public void setTemplatePath(String newTemplatePath) {
-		String oldTemplatePath = templatePath;
-		templatePath = newTemplatePath;
+	public void setFrameworkDefinitionPath(String newFrameworkDefinitionPath) {
+		String oldFrameworkDefinitionPath = frameworkDefinitionPath;
+		frameworkDefinitionPath = newFrameworkDefinitionPath;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					FramewebPackage.FRAME_WEB_CONFIGURATION__TEMPLATE_PATH, oldTemplatePath, templatePath));
+					FramewebPackage.FRAME_WEB_CONFIGURATION__FRAMEWORK_DEFINITION_PATH, oldFrameworkDefinitionPath,
+					frameworkDefinitionPath));
 	}
 
 	/**
@@ -285,8 +286,8 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 			return getSrcPath();
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__VIEW_PATH:
 			return getViewPath();
-		case FramewebPackage.FRAME_WEB_CONFIGURATION__TEMPLATE_PATH:
-			return getTemplatePath();
+		case FramewebPackage.FRAME_WEB_CONFIGURATION__FRAMEWORK_DEFINITION_PATH:
+			return getFrameworkDefinitionPath();
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__CLASS_EXTENSION:
 			return getClassExtension();
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__PAGE_EXTENSION:
@@ -309,8 +310,8 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__VIEW_PATH:
 			setViewPath((String) newValue);
 			return;
-		case FramewebPackage.FRAME_WEB_CONFIGURATION__TEMPLATE_PATH:
-			setTemplatePath((String) newValue);
+		case FramewebPackage.FRAME_WEB_CONFIGURATION__FRAMEWORK_DEFINITION_PATH:
+			setFrameworkDefinitionPath((String) newValue);
 			return;
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__CLASS_EXTENSION:
 			setClassExtension((String) newValue);
@@ -336,8 +337,8 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__VIEW_PATH:
 			setViewPath(VIEW_PATH_EDEFAULT);
 			return;
-		case FramewebPackage.FRAME_WEB_CONFIGURATION__TEMPLATE_PATH:
-			setTemplatePath(TEMPLATE_PATH_EDEFAULT);
+		case FramewebPackage.FRAME_WEB_CONFIGURATION__FRAMEWORK_DEFINITION_PATH:
+			setFrameworkDefinitionPath(FRAMEWORK_DEFINITION_PATH_EDEFAULT);
 			return;
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__CLASS_EXTENSION:
 			setClassExtension(CLASS_EXTENSION_EDEFAULT);
@@ -361,8 +362,9 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 			return SRC_PATH_EDEFAULT == null ? srcPath != null : !SRC_PATH_EDEFAULT.equals(srcPath);
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__VIEW_PATH:
 			return VIEW_PATH_EDEFAULT == null ? viewPath != null : !VIEW_PATH_EDEFAULT.equals(viewPath);
-		case FramewebPackage.FRAME_WEB_CONFIGURATION__TEMPLATE_PATH:
-			return TEMPLATE_PATH_EDEFAULT == null ? templatePath != null : !TEMPLATE_PATH_EDEFAULT.equals(templatePath);
+		case FramewebPackage.FRAME_WEB_CONFIGURATION__FRAMEWORK_DEFINITION_PATH:
+			return FRAMEWORK_DEFINITION_PATH_EDEFAULT == null ? frameworkDefinitionPath != null
+					: !FRAMEWORK_DEFINITION_PATH_EDEFAULT.equals(frameworkDefinitionPath);
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__CLASS_EXTENSION:
 			return CLASS_EXTENSION_EDEFAULT == null ? classExtension != null
 					: !CLASS_EXTENSION_EDEFAULT.equals(classExtension);
@@ -388,8 +390,8 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 		result.append(srcPath);
 		result.append(", viewPath: ");
 		result.append(viewPath);
-		result.append(", templatePath: ");
-		result.append(templatePath);
+		result.append(", frameworkDefinitionPath: ");
+		result.append(frameworkDefinitionPath);
 		result.append(", classExtension: ");
 		result.append(classExtension);
 		result.append(", pageExtension: ");

@@ -126330,13 +126330,13 @@ public interface FramewebPackage extends EPackage {
 	int FRAME_WEB_CONFIGURATION__VIEW_PATH = FRAMEWORK_PROFILE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Template Path</b></em>' attribute.
+	 * The feature id for the '<em><b>Framework Definition Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FRAME_WEB_CONFIGURATION__TEMPLATE_PATH = FRAMEWORK_PROFILE_FEATURE_COUNT + 2;
+	int FRAME_WEB_CONFIGURATION__FRAMEWORK_DEFINITION_PATH = FRAMEWORK_PROFILE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Class Extension</b></em>' attribute.
@@ -133573,15 +133573,15 @@ public interface FramewebPackage extends EPackage {
 	EAttribute getFrameWebConfiguration_ViewPath();
 
 	/**
-	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration#getTemplatePath <em>Template Path</em>}'.
+	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration#getFrameworkDefinitionPath <em>Framework Definition Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Template Path</em>'.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration#getTemplatePath()
+	 * @return the meta object for the attribute '<em>Framework Definition Path</em>'.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration#getFrameworkDefinitionPath()
 	 * @see #getFrameWebConfiguration()
 	 * @generated
 	 */
-	EAttribute getFrameWebConfiguration_TemplatePath();
+	EAttribute getFrameWebConfiguration_FrameworkDefinitionPath();
 
 	/**
 	 * Returns the meta object for the attribute '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration#getClassExtension <em>Class Extension</em>}'.
@@ -135629,12 +135629,13 @@ public interface FramewebPackage extends EPackage {
 		EAttribute FRAME_WEB_CONFIGURATION__VIEW_PATH = eINSTANCE.getFrameWebConfiguration_ViewPath();
 
 		/**
-		 * The meta object literal for the '<em><b>Template Path</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Framework Definition Path</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute FRAME_WEB_CONFIGURATION__TEMPLATE_PATH = eINSTANCE.getFrameWebConfiguration_TemplatePath();
+		EAttribute FRAME_WEB_CONFIGURATION__FRAMEWORK_DEFINITION_PATH = eINSTANCE
+				.getFrameWebConfiguration_FrameworkDefinitionPath();
 
 		/**
 		 * The meta object literal for the '<em><b>Class Extension</b></em>' attribute feature.

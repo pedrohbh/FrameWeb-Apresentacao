@@ -13,7 +13,7 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * <ul>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration#getSrcPath <em>Src Path</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration#getViewPath <em>View Path</em>}</li>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration#getTemplatePath <em>Template Path</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration#getFrameworkDefinitionPath <em>Framework Definition Path</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration#getClassExtension <em>Class Extension</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration#getPageExtension <em>Page Extension</em>}</li>
  * </ul>
@@ -76,30 +76,30 @@ public interface FrameWebConfiguration extends FrameworkProfile {
 	void setViewPath(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Template Path</b></em>' attribute.
+	 * Returns the value of the '<em><b>Framework Definition Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Template Path</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Framework Definition Path</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Template Path</em>' attribute.
-	 * @see #setTemplatePath(String)
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getFrameWebConfiguration_TemplatePath()
+	 * @return the value of the '<em>Framework Definition Path</em>' attribute.
+	 * @see #setFrameworkDefinitionPath(String)
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getFrameWebConfiguration_FrameworkDefinitionPath()
 	 * @model dataType="org.eclipse.uml2.types.String"
 	 * @generated
 	 */
-	String getTemplatePath();
+	String getFrameworkDefinitionPath();
 
 	/**
-	 * Sets the value of the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration#getTemplatePath <em>Template Path</em>}' attribute.
+	 * Sets the value of the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration#getFrameworkDefinitionPath <em>Framework Definition Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Template Path</em>' attribute.
-	 * @see #getTemplatePath()
+	 * @param value the new value of the '<em>Framework Definition Path</em>' attribute.
+	 * @see #getFrameworkDefinitionPath()
 	 * @generated
 	 */
-	void setTemplatePath(String value);
+	void setFrameworkDefinitionPath(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Class Extension</b></em>' attribute.

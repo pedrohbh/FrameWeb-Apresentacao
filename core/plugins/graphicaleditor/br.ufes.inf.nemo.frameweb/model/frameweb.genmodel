@@ -321,7 +321,7 @@
     <genClasses ecoreClass="frameweb.ecore#//FrameWebConfiguration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrameWebConfiguration/srcPath"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrameWebConfiguration/viewPath"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrameWebConfiguration/templatePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrameWebConfiguration/frameworkDefinitionPath"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrameWebConfiguration/classExtension"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrameWebConfiguration/pageExtension"/>
     </genClasses>

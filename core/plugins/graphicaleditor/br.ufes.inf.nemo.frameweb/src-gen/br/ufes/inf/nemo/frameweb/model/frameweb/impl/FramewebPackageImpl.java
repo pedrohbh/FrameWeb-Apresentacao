@@ -2994,7 +2994,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrameWebConfiguration_TemplatePath() {
+	public EAttribute getFrameWebConfiguration_FrameworkDefinitionPath() {
 		return (EAttribute) frameWebConfigurationEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -3584,7 +3584,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		frameWebConfigurationEClass = createEClass(FRAME_WEB_CONFIGURATION);
 		createEAttribute(frameWebConfigurationEClass, FRAME_WEB_CONFIGURATION__SRC_PATH);
 		createEAttribute(frameWebConfigurationEClass, FRAME_WEB_CONFIGURATION__VIEW_PATH);
-		createEAttribute(frameWebConfigurationEClass, FRAME_WEB_CONFIGURATION__TEMPLATE_PATH);
+		createEAttribute(frameWebConfigurationEClass, FRAME_WEB_CONFIGURATION__FRAMEWORK_DEFINITION_PATH);
 		createEAttribute(frameWebConfigurationEClass, FRAME_WEB_CONFIGURATION__CLASS_EXTENSION);
 		createEAttribute(frameWebConfigurationEClass, FRAME_WEB_CONFIGURATION__PAGE_EXTENSION);
 
@@ -4326,9 +4326,9 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getFrameWebConfiguration_ViewPath(), theTypesPackage.getString(), "viewPath", null, 0, 1,
 				FrameWebConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFrameWebConfiguration_TemplatePath(), theTypesPackage.getString(), "templatePath", null, 0, 1,
-				FrameWebConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFrameWebConfiguration_FrameworkDefinitionPath(), theTypesPackage.getString(),
+				"frameworkDefinitionPath", null, 0, 1, FrameWebConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFrameWebConfiguration_ClassExtension(), theTypesPackage.getString(), "classExtension", null,
 				0, 1, FrameWebConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
