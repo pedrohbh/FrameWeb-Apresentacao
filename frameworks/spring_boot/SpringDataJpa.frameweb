@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <frameweb:FramewebProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015">
-  <configures xsi:type="frameweb:DITemplate" name="Spring DI" category="DependencyInjection" version="1.0" interfaceTemplate="ServiceInterfaceTemplate.twig" classExtension=".java" classTemplate="ServiceClassTemplate.twig"/>
+  <configures xsi:type="frameweb:ORMTemplate" name="Spring Data Jpa" category="ObjetoRelacional" version="1.0" classTemplate="templates/EntityClassTemplate.twig" classExtension=".java" enumerationClassTemplate="templates/EnumerationClassTemplate.twig"/>
 </frameweb:FramewebProject>

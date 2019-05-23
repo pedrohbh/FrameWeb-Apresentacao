@@ -16,5 +16,15 @@
     <packagedElement xsi:type="uml:Class" name="Set"/>
     <packagedElement xsi:type="uml:Class" name="Date"/>
     <packagedElement xsi:type="uml:Class" name="Long"/>
+    <packagedElement xsi:type="uml:Class" name="Integer"/>
+    <packagedElement xsi:type="uml:Class" name="Double"/>
+    <packagedElement xsi:type="uml:Class" name="Boolean"/>
+    <packagedElement xsi:type="uml:Class" name="Character"/>
+    <packagedElement xsi:type="uml:Class" name="Float"/>
+    <packagedElement xsi:type="uml:Class" name="Map"/>
+    <packagedElement xsi:type="uml:Class" name="DateTime"/>
+    <packagedElement xsi:type="uml:Class" name="ArrayList"/>
+    <packagedElement xsi:type="uml:Class" name="HashMap"/>
+    <packagedElement xsi:type="uml:Class" name="HashSet"/>
   </compose>
 </frameweb:FramewebProject>

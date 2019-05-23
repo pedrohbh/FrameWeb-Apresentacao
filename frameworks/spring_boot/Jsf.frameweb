@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <frameweb:FramewebProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015">
-  <configures xsi:type="frameweb:FrontControllerTemplate" name="Jsf" classTemplate="FrontControllerClassTemplate.twig" pageTemplate="Page.twig" formTemplate="%09%3Ch%3Aform%20id%3D%22FW_ID%22%3EFW_BODY%0A%09%3C%2Fh%3Aform%3E" classExtension=".java" pageExtension=".xhtml" restClassTemplate="RestControllerClassTemplate.twig">
+  <configures xsi:type="frameweb:FrontControllerTemplate" name="Jsf" classTemplate="templates/FrontControllerClassTemplate.twig" pageTemplate="templates/Page.twig" formTemplate="%09%3Ch%3Aform%20id%3D%22FW_ID%22%3EFW_BODY%0A%09%3C%2Fh%3Aform%3E" classExtension=".java" pageExtension=".xhtml" restClassTemplate="templates/RestControllerClassTemplate.twig">
     <packagedElement xsi:type="frameweb:TagLib" name="JSFhtml" URI="http://java.sun.com/jsf/html" prefix="h">
       <packagedElement xsi:type="frameweb:Tag" name="body" codeGenerationTemplate=""/>
       <packagedElement xsi:type="frameweb:Tag" name="button"/>
