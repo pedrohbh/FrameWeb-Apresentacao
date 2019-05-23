@@ -25,7 +25,7 @@ public class {{ class.Name }} {% if generalizations is not empty %}extends {{ ((
 {% for attribute in attributes %}
 	{{ (attribute.isID()) 				? 	'@Id' 				: '' }}
 	{{ (attribute.isID()) 				?	'@GeneratedValue' 	: '' }}
-	{{ (attribute.isIsNull() == false) 	? 	'@NotNull' 			: '' }}{% if attribute.isID() == false %}
+	{{ (attribute.isIsNull() == false and attribute.isID() == false) 	? 	'@NotNull' 			: '' }}{% if attribute.isID() == false %}
 	@Column(unique = {{ (attribute.isUnique() == true) ? 'true' : 'false' }}){% endif %}
 	{{ attribute.Visibility.Name }} {{ attribute.Type.Name }} {{ attribute.Name }};
 {% endfor %}
