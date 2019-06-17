@@ -12,7 +12,17 @@ public class {{ class.Name }} {% if generalizations is not empty %}extends {{ ((
 	{% endfor %}
 	
 	{% for attribute in attributes %}
-	{{ attribute.Visibility.Name }} {{ attribute.Type.Name }} {{ attribute.Name }};
+	private {{ attribute.Type.Name }} {{ attribute.Name }};
+	{% endfor %}
+
+	{% for attribute in attributes %}	
+	public {{ attribute.Type.Name }} get{{ attribute.Name | title }}() {
+		return {{ attribute.Name }};
+	}
+	
+	public void set{{ attribute.Name | title }}({{ attribute.Type.Name }} {{ attribute.Name }}) {
+		this.{{ attribute.Name }} = {{ attribute.Name }};
+	}
 	{% endfor %}
 	
 	{% for method in methods %}

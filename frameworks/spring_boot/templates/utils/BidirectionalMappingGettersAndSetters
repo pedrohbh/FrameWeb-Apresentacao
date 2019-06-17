@@ -1,0 +1,98 @@
+{# ASSOCIATIONS GETTERS AND SETTERS #}
+{% for association in associations %}
+	{%- set sourceToTargetCardinality = association.SourceToTargetCardinality -%}
+	{%- set targetToSourceCardinality = association.TargetToSourceCardinality -%}
+	{%- set sourceTypeName = association.SourceMember.Type.Name -%}
+	{%- set targetTypeName = association.TargetMember.Type.Name -%}
+	{%- set sourceName = association.SourceMember.Name -%}
+	{%- set targetName = association.TargetMember.Name -%}
+	{%- set collection = association.Collection | title -%}
+	
+	{% if sourceTypeName == class.Name and targetTypeName == class.Name %}
+		{% if sourceToTargetCardinality == "OneToMany" or sourceToTargetCardinality == "ManyToOne" %}
+	    public {{ sourceTypeName }} get{{ sourceName | title }}() {
+			return {{ sourceName }};
+		}
+		
+		public void set{{ sourceName | title }}({{ sourceTypeName }} {{ sourceName }}) {
+			this.{{ sourceName }} = {{ sourceName }};
+		}
+		
+		public {{ collection }}<{{ targetTypeName }}> get{{ targetName | title }}() {
+			return {{ targetName }};
+		}
+		
+		public void set{{ targetName | title }}({{ collection }}<{{ targetTypeName }}> {{ targetName }}) {
+			this.{{ targetName }} = {{ targetName }};
+		}
+		{% elseif sourceToTargetCardinality == "OneToOne" %}
+		public {{ sourceTypeName }} get{{ sourceName | title }}() {
+			return {{ sourceName }};
+		}
+		
+		public void set{{ sourceName | title }}({{ sourceTypeName }} {{ sourceName }}) {
+			this.{{ sourceName }} = {{ sourceName }};
+		}
+		
+		public {{ targetTypeName }} get{{ targetName | title }}() {
+			return {{ targetName }};
+		}
+		
+		public void set{{ targetName | title }}({{ targetTypeName }} {{ targetName }}) {
+			this.{{ targetName }} = {{ targetName }};
+		}
+		{% elseif sourceToTargetCardinality == "ManyToMany" %}
+		public {{ collection }}<{{ sourceTypeName }}> get{{ sourceName | title }}() {
+			return {{ sourceName }};
+		}
+		
+		public void set{{ sourceName | title }}({{ collection }}<{{ sourceTypeName }}> {{ sourceName }}) {
+			this.{{ sourceName }} = {{ sourceName }};
+		}
+		
+		public {{ collection }}<{{ targetTypeName }}> get{{ targetName | title }}() {
+			return {{ targetName }};
+		}
+		
+		public void set{{ targetName | title }}({{ collection }}<{{ targetTypeName }}> {{ targetName }}) {
+			this.{{ targetName }} = {{ targetName }};
+		}
+		{% endif %}
+	{% elseif sourceTypeName == class.Name %}
+		{% if sourceToTargetCardinality == "OneToMany" or sourceToTargetCardinality == "ManyToMany" %}
+		public {{ collection }}<{{ targetTypeName }}> get{{ targetName | title }}() {
+			return {{ targetName }};
+		}
+		
+		public void set{{ targetName | title }}({{ collection }}<{{ targetTypeName }}> {{ targetName }}) {
+			this.{{ targetName }} = {{ targetName }};
+		}
+		{% elseif sourceToTargetCardinality == "ManyToOne" or sourceToTargetCardinality == "OneToOne" %}
+		public {{ targetTypeName }} get{{ targetName | title }}() {
+			return {{ targetName }};
+		}
+		
+		public void set{{ targetName | title }}({{ targetTypeName }} {{ targetName }}) {
+			this.{{ targetName }} = {{ targetName }};
+		}
+		{% endif %}
+	{% elseif targetTypeName == class.Name %}
+		{% if targetToSourceCardinality == "OneToMany" or sourceToTargetCardinality == "ManyToMany" %}
+		public {{ collection }}<{{ sourceTypeName }}> get{{ sourceName | title }}() {
+			return {{ sourceName }};
+		}
+		
+		public void set{{ sourceName | title }}({{ collection }}<{{ sourceTypeName }}> {{ sourceName }}) {
+			this.{{ sourceName }} = {{ sourceName }};
+		}
+		{% elseif targetToSourceCardinality == "ManyToOne" or sourceToTargetCardinality == "OneToOne" %}
+		public {{ sourceTypeName }} get{{ sourceName | title }}() {
+			return {{ sourceName }};
+		}
+		
+		public void set{{ sourceName | title }}({{ sourceTypeName }} {{ sourceName }}) {
+			this.{{ sourceName }} = {{ sourceName }};
+		}
+		{% endif %}
+	{% endif %}
+{% endfor %}

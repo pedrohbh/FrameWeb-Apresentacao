@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface {{ interface.Name }} extends JpaRepository<{{ interface.Name | replace({'Repository': ''}) }}, Long> {
 
 	{% for method in methods %}
-	{% if (method.Query is not empty) and (method.Query is not null) %}@Query("{{ method.Query }}"){% endif %}
+	{% if (method.Query is not empty) %}@Query("{{ method.Query }}"){% endif %}
 	public {% if method.MethodType is null %}void{% else %}{{ method.MethodType.Name }}{% endif %} {{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %});
 	{% endfor %}
 

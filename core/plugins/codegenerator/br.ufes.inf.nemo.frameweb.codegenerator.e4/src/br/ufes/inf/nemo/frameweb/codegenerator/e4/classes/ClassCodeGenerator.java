@@ -104,6 +104,7 @@ public class ClassCodeGenerator {
 		return templateEngineContext.getCode();
 	}
 	
+//	TODO terminar a implementacao de REST para o FrameWeb
 	public static String render(RestControllerClass class_, String template) {
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
 		templateEngineContext.setTemplate(template);
@@ -144,7 +145,8 @@ public class ClassCodeGenerator {
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
 		templateEngineContext.setTemplate(template);
 		
-//		FIXME O editor grafico nao permite a aplicacao de metodos na interface e nem parametros de template
+//		FIXME O editor grafico nao permite a aplicacao de metodos na interface e nem parametros de template,
+//		fazendo com que seja necessario resgatar os metodos direto da classe que implementa a interface
 		templateEngineContext
 			.addParameter(PACKAGE, interface_.getPackage())
 			.addParameter(INTERFACE, interface_)
@@ -177,7 +179,8 @@ public class ClassCodeGenerator {
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
 		templateEngineContext.setTemplate(template);
 
-//		FIXME O editor grafico nao permite a aplicacao de metodos na interface e nem parametros de template
+//		FIXME O editor grafico nao permite a aplicacao de metodos na interface e nem parametros de template,
+//		fazendo com que seja necessario resgatar os metodos direto da classe que implementa a interface
 		templateEngineContext
 			.addParameter(PACKAGE, interface_.getPackage())
 			.addParameter(INTERFACE, interface_)
