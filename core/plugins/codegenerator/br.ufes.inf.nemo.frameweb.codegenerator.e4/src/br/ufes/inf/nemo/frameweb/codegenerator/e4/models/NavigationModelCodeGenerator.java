@@ -122,6 +122,10 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 					.filter(Page.class::isInstance)
 					.map(Page.class::cast)
 					.forEach(page -> {
+//						FIXME nao foi possivel obter o formulario atraves da associacao de page e, para
+//						solucionar isso (provisoriamente), uma uniao foi feita entre as associacoes de
+//						formulario e pagina. O correto a se fazer e obter os dados do formulario atraves
+//						da navegacao pela associacao page -> form.
 						List<UIComponent> pageUIComponents = new ArrayList<UIComponent>();
 						
 						for (Association navigationAssociation : page.getAssociations()) {
