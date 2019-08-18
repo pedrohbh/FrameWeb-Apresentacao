@@ -1,3 +1,0 @@
-<h:form id="FW_ID">
-	FW_BODY
-</h:form>     

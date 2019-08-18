@@ -1,3 +1,0 @@
-﻿
-<br />
-<h:inputText id="FW_ID" value="#{FW_VALUE}" />
