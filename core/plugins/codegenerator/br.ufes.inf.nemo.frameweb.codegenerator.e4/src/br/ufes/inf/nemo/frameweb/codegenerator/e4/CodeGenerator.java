@@ -7,15 +7,11 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.sirius.diagram.DSemanticDiagram;
 import org.eclipse.sirius.tools.api.ui.IExternalJavaAction;
 
-import com.google.inject.Guice;
-import com.google.inject.Injector;
-
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.ApplicationModelCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.EntityModelCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.ModelCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.NavigationModelCodeGenerator;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.PersistenceModelCodeGenerator;
-import br.ufes.inf.nemo.frameweb.codegenerator.e4.modules.FrameWebModule;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
@@ -24,14 +20,21 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.PersistenceModel;
+import br.ufes.inf.nemo.frameweb.utils.IProjectUtils;
 
 public class CodeGenerator implements IExternalJavaAction {
 	
 	private ProjectProperties projectProperties;
 	
+	/*
+	 * O Google Guice apresentou problemas ao ser importado em outras maquinas, provavelmente
+	 * o repositorio dele esteja com problemas, portanto precisamos passar o IProject atual
+	 * como parametro.
+	 */
 	public CodeGenerator() {
-		Injector injector = Guice.createInjector(new FrameWebModule());
-		projectProperties = injector.getInstance(ProjectProperties.class);
+		// Injector injector = Guice.createInjector(new FrameWebModule());
+		// projectProperties = injector.getInstance(ProjectProperties.class);
+		projectProperties = new ProjectProperties(IProjectUtils.getSelectedProject());
 	}
 	
 	@Override

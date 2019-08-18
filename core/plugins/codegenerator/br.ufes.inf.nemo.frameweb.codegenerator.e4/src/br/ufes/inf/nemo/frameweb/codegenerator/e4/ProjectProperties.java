@@ -3,17 +3,19 @@ package br.ufes.inf.nemo.frameweb.codegenerator.e4;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 
-import com.google.inject.Inject;
-
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration;
 import br.ufes.inf.nemo.frameweb.utils.IFileUtils;
 
 public class ProjectProperties {
 	
-	@Inject
+	// @Inject
 	private IProject project;
 	
 	private FrameWebConfiguration configuration;
+	
+	public ProjectProperties(IProject project) {
+		this.project = project;
+	}
 	
 	public void setConfiguration(FrameWebConfiguration configuration) {
 		this.configuration = configuration;
