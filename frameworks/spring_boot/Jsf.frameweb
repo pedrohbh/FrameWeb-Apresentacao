@@ -33,6 +33,7 @@
       <packagedElement xsi:type="frameweb:Tag" name="selectOneListbox"/>
       <packagedElement xsi:type="frameweb:Tag" name="selectOneMenu" codeGenerationTemplate="%09%09%3Cbr%20%2F%3E%0A%09%09%3Ch%3AselectOneMenu%20id%3D%22FW_ID%22%20value%3D%22%23%7BFW_VALUE%7D%22%3E%0A%09%09%3C%2Fh%3AselectOneMenu%3E"/>
       <packagedElement xsi:type="frameweb:Tag" name="selectOneRadio"/>
+      <packagedElement xsi:type="frameweb:Tag" name="inputNumber"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:TagLib" name="JSFcomposite" URI="http://jsflive.at/taglib" prefix="jf">
       <packagedElement xsi:type="frameweb:Tag" name="actionSource"/>

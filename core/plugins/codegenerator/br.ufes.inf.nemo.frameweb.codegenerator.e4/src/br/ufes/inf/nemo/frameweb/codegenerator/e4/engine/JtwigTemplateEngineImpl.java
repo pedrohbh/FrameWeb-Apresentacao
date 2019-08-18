@@ -15,6 +15,10 @@ public class JtwigTemplateEngineImpl implements TemplateEngine {
 	private JtwigModel jtwigModel;
 
 	public void setTemplate(String template) {
+		/*
+		 * Metodo extra no Jtwig para transformar nomes de classes em variaveis de mesmo nome,
+		 * porem em camel case. 
+		 */
 		EnvironmentConfiguration configuration = EnvironmentConfigurationBuilder
 			.configuration()
 				.functions()
