@@ -11,21 +11,24 @@
     <packagedElement xsi:type="uml:PrimitiveType" name="char"/>
     <packagedElement xsi:type="uml:Class" name="Object"/>
     <packagedElement xsi:type="uml:Class" name="String"/>
-    <packagedElement xsi:type="uml:Class" name="Calendar"/>
-    <packagedElement xsi:type="uml:Class" name="List"/>
-    <packagedElement xsi:type="uml:Class" name="Set"/>
     <packagedElement xsi:type="uml:Class" name="Date"/>
-    <packagedElement xsi:type="uml:Class" name="Long"/>
+    <packagedElement xsi:type="uml:Class" name="Byte"/>
+    <packagedElement xsi:type="uml:Class" name="Short"/>
     <packagedElement xsi:type="uml:Class" name="Integer"/>
+    <packagedElement xsi:type="uml:Class" name="Long"/>
+    <packagedElement xsi:type="uml:Class" name="Float"/>
     <packagedElement xsi:type="uml:Class" name="Double"/>
     <packagedElement xsi:type="uml:Class" name="Boolean"/>
     <packagedElement xsi:type="uml:Class" name="Character"/>
-    <packagedElement xsi:type="uml:Class" name="Float"/>
+    <packagedElement xsi:type="uml:Class" name="Collection"/>
+    <packagedElement xsi:type="uml:Class" name="Deque"/>
+    <packagedElement xsi:type="uml:Class" name="List"/>
     <packagedElement xsi:type="uml:Class" name="Map"/>
-    <packagedElement xsi:type="uml:Class" name="DateTime"/>
-    <packagedElement xsi:type="uml:Class" name="ArrayList"/>
-    <packagedElement xsi:type="uml:Class" name="HashMap"/>
-    <packagedElement xsi:type="uml:Class" name="HashSet"/>
+    <packagedElement xsi:type="uml:Class" name="Queue"/>
+    <packagedElement xsi:type="uml:Class" name="Set"/>
+    <packagedElement xsi:type="uml:Class" name="SortedSet"/>
+    <packagedElement xsi:type="uml:Class" name="SortedMap"/>
     <packagedElement xsi:type="uml:Class" name="BigDecimal"/>
+    <packagedElement xsi:type="uml:Class" name="BigInteger"/>
   </compose>
 </frameweb:FramewebProject>
