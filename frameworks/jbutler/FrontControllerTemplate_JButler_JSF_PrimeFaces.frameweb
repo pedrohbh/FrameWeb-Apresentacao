@@ -167,5 +167,13 @@
       <packagedElement xsi:type="frameweb:Tag" name="watermark"/>
       <packagedElement xsi:type="frameweb:Tag" name="wizard"/>
     </packagedElement>
+    <packagedElement xsi:type="frameweb:TagLib" name="JSF-HTML" URI="http://java.sun.com/jsf/html" prefix="h">
+      <packagedElement xsi:type="frameweb:Tag" name="inputHidden"/>
+      <packagedElement xsi:type="frameweb:Tag" name="outputFormat"/>
+      <packagedElement xsi:type="frameweb:Tag" name="outputLink"/>
+      <packagedElement xsi:type="frameweb:Tag" name="outputText"/>
+      <packagedElement xsi:type="frameweb:Tag" name="panelGroup"/>
+      <packagedElement xsi:type="frameweb:Tag" name="selectManyListbox"/>
+    </packagedElement>
   </configures>
 </frameweb:FramewebProject>
