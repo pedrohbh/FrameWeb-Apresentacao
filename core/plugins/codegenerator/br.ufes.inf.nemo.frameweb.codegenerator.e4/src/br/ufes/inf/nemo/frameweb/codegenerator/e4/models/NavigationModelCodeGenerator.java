@@ -141,9 +141,15 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 						String code = ClassCodeGenerator.render(page, pageUIComponents, viewTemplate);
 						
 						String fileName = page.getName() + projectConfiguration.getPageExtension();
-						IFile file = view.getFile(fileName);
-								
+						
+						String packagePath = IFolderUtils.packageNameToPath(page.getPackage().getName());
+
+						IFolder package_ = view.getFolder(packagePath);
+						IFile file = package_.getFile(fileName);
 						IFileUtils.createFile(file, code);
+						
+						IFolderUtils.makeDirectory(view, packagePath);
+					
 					});
 		});
 	}
