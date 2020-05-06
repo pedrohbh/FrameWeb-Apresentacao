@@ -284,16 +284,25 @@ public class Extend {
 	public String printProperties(EObject o) {
 
 		ArrayList<String> retorno = new ArrayList();
-
+		String idSter = "";
 		EStructuralFeature size_feature = o.eClass().getEAllAttributes().get(16);
-		EStructuralFeature null_feature = o.eClass().getEAllAttributes().get(17); 		
-		String n_feature = o.eGet(null_feature).toString();
-		if(n_feature.equals("true")) {
+		EStructuralFeature null_feature = o.eClass().getEAllAttributes().get(17);
+		EStructuralFeature id_feature = o.eClass().getEAllAttributes().get(15);
+		
+		String null_feature_str = o.eGet(null_feature).toString();
+		
+		if(null_feature_str.equals("true")) {
 			retorno.add("null");
 		}else {
 			retorno.add("not null");
 		}
-				
+		
+		String id_feature_str = o.eGet(id_feature).toString();
+		
+		if(id_feature_str.equals("true")) {
+			idSter = " <<id>> ";
+		}
+		
 		String size = (o.eGet(size_feature).toString());
 		if (!size.equals("0")) {
 			retorno.add("size=" + size);
@@ -308,7 +317,8 @@ public class Extend {
 			}
 
 			String s = "";
-
+			s += idSter;
+			
 			if (retorno.size() > 0) {
 				s += " {";
 				for (int i = 0; i < retorno.size(); i++) {
@@ -321,7 +331,9 @@ public class Extend {
 			return s;
 		} catch (Exception e) {
 			String s = "";
-
+			
+			s += idSter;
+			
 			if (retorno.size() > 0) {
 				s += " {";
 				for (int i = 0; i < retorno.size(); i++) {
@@ -342,8 +354,8 @@ public class Extend {
 		EStructuralFeature size_feature = o.eClass().getEAllAttributes().get(16);
 		
 		EStructuralFeature null_feature = o.eClass().getEAllAttributes().get(17); 		
-		String n_feature = o.eGet(null_feature).toString();
-		if(n_feature.equals("true")) {
+		String null_feature_str = o.eGet(null_feature).toString();
+		if(null_feature_str.equals("true")) {
 			retorno.add("null");
 		}else {
 			retorno.add("not null");

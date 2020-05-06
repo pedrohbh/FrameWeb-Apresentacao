@@ -728,7 +728,7 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
-        <toolSections name="Attributes e Methods">
+        <toolSections name="Attributes and Methods">
           <ownedTools xsi:type="tool:NodeCreationDescription" name="Domain Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='DomainAttribute']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
