@@ -282,12 +282,18 @@ public class Extend {
 	}
 
 	public String printProperties(EObject o) {
-		// return o.eClass().getEAllAttributes().toString();
 
 		ArrayList<String> retorno = new ArrayList();
 
 		EStructuralFeature size_feature = o.eClass().getEAllAttributes().get(16);
-
+		EStructuralFeature null_feature = o.eClass().getEAllAttributes().get(17); 		
+		String n_feature = o.eGet(null_feature).toString();
+		if(n_feature.equals("true")) {
+			retorno.add("null");
+		}else {
+			retorno.add("not null");
+		}
+				
 		String size = (o.eGet(size_feature).toString());
 		if (!size.equals("0")) {
 			retorno.add("size=" + size);
@@ -334,7 +340,16 @@ public class Extend {
 		ArrayList<String> retorno = new ArrayList();
 
 		EStructuralFeature size_feature = o.eClass().getEAllAttributes().get(16);
-
+		
+		EStructuralFeature null_feature = o.eClass().getEAllAttributes().get(17); 		
+		String n_feature = o.eGet(null_feature).toString();
+		if(n_feature.equals("true")) {
+			retorno.add("null");
+		}else {
+			retorno.add("not null");
+		}
+		
+		
 		String size = (o.eGet(size_feature).toString());
 		if (!size.equals("0")) {
 			retorno.add("size=" + size);
