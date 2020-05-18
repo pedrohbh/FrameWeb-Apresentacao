@@ -272,6 +272,10 @@ public class Extend {
 		return " ? ";
 	}
 
+	public String printIdStereotype(EObject o) {
+		return "<<id>> ";
+	}
+	
 	public String printPrefix(EObject o) {
 
 		EStructuralFeature prefix_feature = o.eClass().getEAllAttributes().get(7);
@@ -287,7 +291,7 @@ public class Extend {
 		String idSter = "";
 		EStructuralFeature size_feature = o.eClass().getEAllAttributes().get(16);
 		EStructuralFeature null_feature = o.eClass().getEAllAttributes().get(17);
-		EStructuralFeature id_feature = o.eClass().getEAllAttributes().get(15);
+//		EStructuralFeature id_feature = o.eClass().getEAllAttributes().get(15);
 		
 		String null_feature_str = o.eGet(null_feature).toString();
 		
@@ -297,11 +301,11 @@ public class Extend {
 			retorno.add("not null");
 		}
 		
-		String id_feature_str = o.eGet(id_feature).toString();
-		
-		if(id_feature_str.equals("true")) {
-			idSter = " <<id>> ";
-		}
+//		String id_feature_str = o.eGet(id_feature).toString();
+//		
+//		if(id_feature_str.equals("true")) {
+//			idSter = " <<id>> ";
+//		}
 		
 		String size = (o.eGet(size_feature).toString());
 		if (!size.equals("0")) {
