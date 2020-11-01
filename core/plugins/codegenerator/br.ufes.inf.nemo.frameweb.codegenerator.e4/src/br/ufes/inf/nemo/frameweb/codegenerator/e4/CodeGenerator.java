@@ -61,16 +61,6 @@ public class CodeGenerator implements IExternalJavaAction {
 
 			entityModelCodeGenerator.generate();
 		}
-
-		if (diagram.hasNavigationModel() && diagram.hasFrontControllerTemplate()) {
-			NavigationModel model = diagram.getNavigationModel();
-			FrontControllerTemplate template = diagram.getFrontControllerTemplate();
-			
-			ModelCodeGenerator navigationModelCodeGenerator =
-					new NavigationModelCodeGenerator(model, template, projectProperties);
-
-			navigationModelCodeGenerator.generate();
-		}
 		
 		if (diagram.hasApplicationModel() && diagram.hasDITemplate()) {
 			ApplicationModel model = diagram.getApplicationModel();
@@ -90,6 +80,16 @@ public class CodeGenerator implements IExternalJavaAction {
 					new PersistenceModelCodeGenerator(model, template, projectProperties);
 		
 			persistenceModelCodeGenerator.generate();
+		}
+		
+		if (diagram.hasNavigationModel() && diagram.hasFrontControllerTemplate()) {
+			NavigationModel model = diagram.getNavigationModel();
+			FrontControllerTemplate template = diagram.getFrontControllerTemplate();
+			
+			ModelCodeGenerator navigationModelCodeGenerator =
+					new NavigationModelCodeGenerator(model, template, projectProperties);
+
+			navigationModelCodeGenerator.generate();
 		}
 	}
 
