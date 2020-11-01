@@ -38,7 +38,9 @@ public class IFolderUtils {
 	 * @return packagePath
 	 */
 	public static String packageNameToPath(String packageName) {
-		return packageName.replaceAll("[^A-Za-z0-9]", "/").toLowerCase();
+		// Por alguma razao a Workbench do Eclipse as vezes nao se da muito bem com diretorios contendo
+		// letras maiusculas, caso isso venha a ocorrer, descomente o metodo abaixo.
+		return packageName.replaceAll("[^A-Za-z0-9]", "/"); // .toLowerCase();
 	}
 	
 }

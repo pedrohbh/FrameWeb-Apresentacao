@@ -82,14 +82,19 @@ public class CodeGenerator implements IExternalJavaAction {
 			persistenceModelCodeGenerator.generate();
 		}
 		
-		if (diagram.hasNavigationModel() && diagram.hasFrontControllerTemplate()) {
-			NavigationModel model = diagram.getNavigationModel();
-			FrontControllerTemplate template = diagram.getFrontControllerTemplate();
-			
-			ModelCodeGenerator navigationModelCodeGenerator =
-					new NavigationModelCodeGenerator(model, template, projectProperties);
-
-			navigationModelCodeGenerator.generate();
+		try {
+			if (diagram.hasNavigationModel() && diagram.hasFrontControllerTemplate()) {
+				NavigationModel model = diagram.getNavigationModel();
+				FrontControllerTemplate template = diagram.getFrontControllerTemplate();
+				
+				ModelCodeGenerator navigationModelCodeGenerator =
+						new NavigationModelCodeGenerator(model, template, projectProperties);
+	
+				navigationModelCodeGenerator.generate();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("NavigationModel CodeGenerator Error => " + e.getMessage());
 		}
 	}
 
