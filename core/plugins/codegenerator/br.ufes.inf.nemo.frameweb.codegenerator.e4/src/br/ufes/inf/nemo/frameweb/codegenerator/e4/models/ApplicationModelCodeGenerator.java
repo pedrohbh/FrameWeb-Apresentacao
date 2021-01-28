@@ -70,8 +70,8 @@ public class ApplicationModelCodeGenerator implements ModelCodeGenerator {
 					.filter(ServiceInterface.class::isInstance)
 					.map(ServiceInterface.class::cast)
 					.forEach(serviceInterface -> {
-//						FIXME a busca deve ser feita pela realizacao, mas como ela nao funciona, aqui sera feita por meio de nomes.
-//						Isso e errado! As realizacoes devem ser consertadas para que isso funcione adequadamente
+//						FIXME a busca deve ser feita pela realizacao, mas como ela nao funciona no editor grafico, nao pode ser resgatada.
+//						Aqui sera feita por meio de nomes. Isso e errado! As realizacoes devem ser consertadas para que isso funcione adequadamente.
 						List<ServiceClass> serviceClasses = applicationPackage.getOwnedTypes()
 								.stream()
 								.filter(ServiceClass.class::isInstance)
@@ -81,7 +81,7 @@ public class ApplicationModelCodeGenerator implements ModelCodeGenerator {
 						List<ServiceMethod> serviceMethods = new ArrayList<ServiceMethod>();
 						
 						for (ServiceClass serviceClass : serviceClasses) {
-							if (serviceClass.getName().contains(serviceInterface.getName())) {
+							if (serviceClass.getName().contains(serviceInterface.getName()) || serviceInterface.getName().contains(serviceClass.getName())) {
 								serviceMethods.addAll(serviceClass.getOperations()
 										.stream()
 										.filter(ServiceMethod.class::isInstance)

@@ -70,8 +70,8 @@ public class PersistenceModelCodeGenerator implements ModelCodeGenerator {
 					.filter(DAOInterface.class::isInstance)
 					.map(DAOInterface.class::cast)
 					.forEach(daoInterface -> {
-//						FIXME a busca deve ser feita pela realizacao, mas como ela nao funciona, aqui sera feita por meio de nomes.
-//						Isso e errado! As realizacoes devem ser consertadas para que isso funcione adequadamente
+//						FIXME a busca deve ser feita pela realizacao, mas como ela nao funciona no editor grafico, nao pode ser resgatada.
+//						Aqui sera feita por meio de nomes. Isso e errado! As realizacoes devem ser consertadas para que isso funcione adequadamente.
 						List<DAOClass> daoClasses = persistencePackage.getOwnedTypes()
 								.stream()
 								.filter(DAOClass.class::isInstance)
@@ -81,7 +81,7 @@ public class PersistenceModelCodeGenerator implements ModelCodeGenerator {
 						List<DAOMethod> daoMethods = new ArrayList<DAOMethod>();
 						
 						for (DAOClass daoClass : daoClasses) {
-							if (daoClass.getName().contains(daoInterface.getName())) {
+							if (daoClass.getName().contains(daoInterface.getName()) || daoInterface.getName().contains(daoClass.getName())) {
 								daoMethods.addAll(daoClass.getOperations()
 										.stream()
 										.filter(DAOMethod.class::isInstance)
@@ -91,7 +91,6 @@ public class PersistenceModelCodeGenerator implements ModelCodeGenerator {
 								break;
 							}
 						}
-						
 						
 						String code = ClassCodeGenerator.render(daoInterface, daoMethods, interfaceTemplate);
 						
