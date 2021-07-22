@@ -113,6 +113,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createServiceControllerAssociation();
 		case FramewebPackage.DOMAIN_CLASS:
 			return createDomainClass();
+		case FramewebPackage.AUTH_USER:
+			return createAuthUser();
 		case FramewebPackage.FRONT_CONTROLLER_DEPENDENCY:
 			return createFrontControllerDependency();
 		case FramewebPackage.PAGE_DEPENDENCY:
@@ -235,6 +237,12 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createDomainVocabularyProperty();
 		case FramewebPackage.DOMAIN_ATTRIBUTE:
 			return createDomainAttribute();
+		case FramewebPackage.DOMAIN_AUTH_ATTRIBUTE:
+			return createDomainAuthAttribute();
+		case FramewebPackage.AUTH_USER_NAME:
+			return createAuthUserName();
+		case FramewebPackage.AUTH_PASSWORD:
+			return createAuthPassword();
 		case FramewebPackage.DOMAIN_PROPERTY:
 			return createDomainProperty();
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE:
@@ -646,6 +654,17 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	public DomainClass createDomainClass() {
 		DomainClassImpl domainClass = new DomainClassImpl();
 		return domainClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AuthUser createAuthUser() {
+		AuthUserImpl authUser = new AuthUserImpl();
+		return authUser;
 	}
 
 	/**
@@ -1317,6 +1336,39 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	public DomainAttribute createDomainAttribute() {
 		DomainAttributeImpl domainAttribute = new DomainAttributeImpl();
 		return domainAttribute;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DomainAuthAttribute createDomainAuthAttribute() {
+		DomainAuthAttributeImpl domainAuthAttribute = new DomainAuthAttributeImpl();
+		return domainAuthAttribute;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AuthUserName createAuthUserName() {
+		AuthUserNameImpl authUserName = new AuthUserNameImpl();
+		return authUserName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AuthPassword createAuthPassword() {
+		AuthPasswordImpl authPassword = new AuthPasswordImpl();
+		return authPassword;
 	}
 
 	/**

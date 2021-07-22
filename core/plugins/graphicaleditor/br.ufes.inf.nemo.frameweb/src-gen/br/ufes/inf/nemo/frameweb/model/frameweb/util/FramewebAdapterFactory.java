@@ -253,6 +253,11 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseAuthUser(AuthUser object) {
+			return createAuthUserAdapter();
+		}
+
+		@Override
 		public Adapter caseFrontControllerDependency(FrontControllerDependency object) {
 			return createFrontControllerDependencyAdapter();
 		}
@@ -600,6 +605,21 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseDomainAttribute(DomainAttribute object) {
 			return createDomainAttributeAdapter();
+		}
+
+		@Override
+		public Adapter caseDomainAuthAttribute(DomainAuthAttribute object) {
+			return createDomainAuthAttributeAdapter();
+		}
+
+		@Override
+		public Adapter caseAuthUserName(AuthUserName object) {
+			return createAuthUserNameAdapter();
+		}
+
+		@Override
+		public Adapter caseAuthPassword(AuthPassword object) {
+			return createAuthPasswordAdapter();
 		}
 
 		@Override
@@ -1279,6 +1299,20 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDomainClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthUser <em>Auth User</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthUser
+	 * @generated
+	 */
+	public Adapter createAuthUserAdapter() {
 		return null;
 	}
 
@@ -2259,6 +2293,48 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDomainAttributeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DomainAuthAttribute <em>Domain Auth Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DomainAuthAttribute
+	 * @generated
+	 */
+	public Adapter createDomainAuthAttributeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthUserName <em>Auth User Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthUserName
+	 * @generated
+	 */
+	public Adapter createAuthUserNameAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthPassword <em>Auth Password</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthPassword
+	 * @generated
+	 */
+	public Adapter createAuthPasswordAdapter() {
 		return null;
 	}
 

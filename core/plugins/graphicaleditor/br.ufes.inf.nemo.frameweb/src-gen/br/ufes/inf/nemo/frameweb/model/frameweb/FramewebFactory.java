@@ -274,6 +274,15 @@ public interface FramewebFactory extends EFactory {
 	DomainClass createDomainClass();
 
 	/**
+	 * Returns a new object of class '<em>Auth User</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth User</em>'.
+	 * @generated
+	 */
+	AuthUser createAuthUser();
+
+	/**
 	 * Returns a new object of class '<em>Front Controller Dependency</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -821,6 +830,33 @@ public interface FramewebFactory extends EFactory {
 	 * @generated
 	 */
 	DomainAttribute createDomainAttribute();
+
+	/**
+	 * Returns a new object of class '<em>Domain Auth Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Domain Auth Attribute</em>'.
+	 * @generated
+	 */
+	DomainAuthAttribute createDomainAuthAttribute();
+
+	/**
+	 * Returns a new object of class '<em>Auth User Name</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth User Name</em>'.
+	 * @generated
+	 */
+	AuthUserName createAuthUserName();
+
+	/**
+	 * Returns a new object of class '<em>Auth Password</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Password</em>'.
+	 * @generated
+	 */
+	AuthPassword createAuthPassword();
 
 	/**
 	 * Returns a new object of class '<em>Domain Property</em>'.

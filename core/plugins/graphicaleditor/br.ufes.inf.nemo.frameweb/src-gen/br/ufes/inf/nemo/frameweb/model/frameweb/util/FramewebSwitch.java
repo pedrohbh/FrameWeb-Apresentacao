@@ -962,6 +962,43 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case FramewebPackage.AUTH_USER: {
+			AuthUser authUser = (AuthUser) theEObject;
+			T result = caseAuthUser(authUser);
+			if (result == null)
+				result = caseDomainClass(authUser);
+			if (result == null)
+				result = caseClass(authUser);
+			if (result == null)
+				result = caseEncapsulatedClassifier(authUser);
+			if (result == null)
+				result = caseBehavioredClassifier(authUser);
+			if (result == null)
+				result = caseStructuredClassifier(authUser);
+			if (result == null)
+				result = caseClassifier(authUser);
+			if (result == null)
+				result = caseNamespace(authUser);
+			if (result == null)
+				result = caseRedefinableElement(authUser);
+			if (result == null)
+				result = caseType(authUser);
+			if (result == null)
+				result = caseTemplateableElement(authUser);
+			if (result == null)
+				result = casePackageableElement(authUser);
+			if (result == null)
+				result = caseNamedElement(authUser);
+			if (result == null)
+				result = caseParameterableElement(authUser);
+			if (result == null)
+				result = caseElement(authUser);
+			if (result == null)
+				result = caseEModelElement(authUser);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case FramewebPackage.FRONT_CONTROLLER_DEPENDENCY: {
 			FrontControllerDependency frontControllerDependency = (FrontControllerDependency) theEObject;
 			T result = caseFrontControllerDependency(frontControllerDependency);
@@ -2920,6 +2957,115 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case FramewebPackage.DOMAIN_AUTH_ATTRIBUTE: {
+			DomainAuthAttribute domainAuthAttribute = (DomainAuthAttribute) theEObject;
+			T result = caseDomainAuthAttribute(domainAuthAttribute);
+			if (result == null)
+				result = caseDomainAttribute(domainAuthAttribute);
+			if (result == null)
+				result = caseAttribute(domainAuthAttribute);
+			if (result == null)
+				result = caseProperty(domainAuthAttribute);
+			if (result == null)
+				result = caseStructuralFeature(domainAuthAttribute);
+			if (result == null)
+				result = caseConnectableElement(domainAuthAttribute);
+			if (result == null)
+				result = caseDeploymentTarget(domainAuthAttribute);
+			if (result == null)
+				result = caseFeature(domainAuthAttribute);
+			if (result == null)
+				result = caseTypedElement(domainAuthAttribute);
+			if (result == null)
+				result = caseMultiplicityElement(domainAuthAttribute);
+			if (result == null)
+				result = caseParameterableElement(domainAuthAttribute);
+			if (result == null)
+				result = caseRedefinableElement(domainAuthAttribute);
+			if (result == null)
+				result = caseNamedElement(domainAuthAttribute);
+			if (result == null)
+				result = caseElement(domainAuthAttribute);
+			if (result == null)
+				result = caseEModelElement(domainAuthAttribute);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FramewebPackage.AUTH_USER_NAME: {
+			AuthUserName authUserName = (AuthUserName) theEObject;
+			T result = caseAuthUserName(authUserName);
+			if (result == null)
+				result = caseDomainAuthAttribute(authUserName);
+			if (result == null)
+				result = caseDomainAttribute(authUserName);
+			if (result == null)
+				result = caseAttribute(authUserName);
+			if (result == null)
+				result = caseProperty(authUserName);
+			if (result == null)
+				result = caseStructuralFeature(authUserName);
+			if (result == null)
+				result = caseConnectableElement(authUserName);
+			if (result == null)
+				result = caseDeploymentTarget(authUserName);
+			if (result == null)
+				result = caseFeature(authUserName);
+			if (result == null)
+				result = caseTypedElement(authUserName);
+			if (result == null)
+				result = caseMultiplicityElement(authUserName);
+			if (result == null)
+				result = caseParameterableElement(authUserName);
+			if (result == null)
+				result = caseRedefinableElement(authUserName);
+			if (result == null)
+				result = caseNamedElement(authUserName);
+			if (result == null)
+				result = caseElement(authUserName);
+			if (result == null)
+				result = caseEModelElement(authUserName);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FramewebPackage.AUTH_PASSWORD: {
+			AuthPassword authPassword = (AuthPassword) theEObject;
+			T result = caseAuthPassword(authPassword);
+			if (result == null)
+				result = caseDomainAuthAttribute(authPassword);
+			if (result == null)
+				result = caseDomainAttribute(authPassword);
+			if (result == null)
+				result = caseAttribute(authPassword);
+			if (result == null)
+				result = caseProperty(authPassword);
+			if (result == null)
+				result = caseStructuralFeature(authPassword);
+			if (result == null)
+				result = caseConnectableElement(authPassword);
+			if (result == null)
+				result = caseDeploymentTarget(authPassword);
+			if (result == null)
+				result = caseFeature(authPassword);
+			if (result == null)
+				result = caseTypedElement(authPassword);
+			if (result == null)
+				result = caseMultiplicityElement(authPassword);
+			if (result == null)
+				result = caseParameterableElement(authPassword);
+			if (result == null)
+				result = caseRedefinableElement(authPassword);
+			if (result == null)
+				result = caseNamedElement(authPassword);
+			if (result == null)
+				result = caseElement(authPassword);
+			if (result == null)
+				result = caseEModelElement(authPassword);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case FramewebPackage.DOMAIN_PROPERTY: {
 			DomainProperty domainProperty = (DomainProperty) theEObject;
 			T result = caseDomainProperty(domainProperty);
@@ -3612,6 +3758,21 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDomainClass(DomainClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Auth User</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Auth User</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAuthUser(AuthUser object) {
 		return null;
 	}
 
@@ -4662,6 +4823,51 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDomainAttribute(DomainAttribute object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Domain Auth Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Domain Auth Attribute</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDomainAuthAttribute(DomainAuthAttribute object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Auth User Name</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Auth User Name</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAuthUserName(AuthUserName object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Auth Password</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Auth Password</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAuthPassword(AuthPassword object) {
 		return null;
 	}
 

@@ -173,6 +173,10 @@
     <genClasses ecoreClass="frameweb.ecore#//DomainClass">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DomainClass/table"/>
     </genClasses>
+    <genClasses ecoreClass="frameweb.ecore#//AuthUser">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//AuthUser/authUserName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//AuthUser/authPassword"/>
+    </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//FrontControllerDependency">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//FrontControllerDependency/method"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference frameweb.ecore#//FrontControllerDependency/methodDependendencyConstraint"/>
@@ -293,6 +297,9 @@
     <genClasses ecoreClass="frameweb.ecore#//DomainVocabularyAssociation"/>
     <genClasses ecoreClass="frameweb.ecore#//DomainVocabularyProperty"/>
     <genClasses ecoreClass="frameweb.ecore#//DomainAttribute"/>
+    <genClasses ecoreClass="frameweb.ecore#//DomainAuthAttribute"/>
+    <genClasses ecoreClass="frameweb.ecore#//AuthUserName"/>
+    <genClasses ecoreClass="frameweb.ecore#//AuthPassword"/>
     <genClasses ecoreClass="frameweb.ecore#//DomainProperty"/>
     <genClasses ecoreClass="frameweb.ecore#//FrontControllerTemplate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/classTemplate"/>
