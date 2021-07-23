@@ -433,12 +433,12 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWebEntityModel" domainClass="EntityModel">
       <defaultLayer name="Default">
-        <edgeMappings name="DomainGeneralizationSet" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subNodeMappings[name='Vocabulary%20Class'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Vocabulary%20']/@subNodeMappings[name='Vocabulary%20Class'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node']" targetFinderExpression="aql:self.powertype" sourceFinderExpression="aql:self.generalization.owner" domainClass="DomainGeneralizationSet" useDomainElement="true">
+        <edgeMappings name="DomainGeneralizationSet" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthRoleClass%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subNodeMappings[name='Vocabulary%20Class'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Vocabulary%20']/@subNodeMappings[name='Vocabulary%20Class'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthRoleClass%20Node']" targetFinderExpression="aql:self.powertype" sourceFinderExpression="aql:self.generalization.owner" domainClass="DomainGeneralizationSet" useDomainElement="true">
           <style targetArrow="InputClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
           </style>
         </edgeMappings>
-        <edgeMappings name="DomainVocabularyAssociation" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Class']" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subNodeMappings[name='Vocabulary%20Class'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Vocabulary%20']/@subNodeMappings[name='Vocabulary%20Class']" targetFinderExpression="aql:self.memberEnd->at(2).type" sourceFinderExpression="aql:self.memberEnd->at(1).type" domainClass="DomainVocabularyAssociation" useDomainElement="true" reconnections="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Reconnect%20Navigation%20Association']">
+        <edgeMappings name="DomainVocabularyAssociation" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Class']" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthRoleClass%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subNodeMappings[name='Vocabulary%20Class'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Vocabulary%20']/@subNodeMappings[name='Vocabulary%20Class']" targetFinderExpression="aql:self.memberEnd->at(2).type" sourceFinderExpression="aql:self.memberEnd->at(1).type" domainClass="DomainVocabularyAssociation" useDomainElement="true" reconnections="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Reconnect%20Navigation%20Association']">
           <style sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
             <beginLabelStyleDescription showIcon="false">
@@ -452,7 +452,7 @@
             </endLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="DomainAssociation" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Class']" semanticElements="aql:self.getMembers()" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node']" targetFinderExpression="aql:self.memberEnd->at(2).type" sourceFinderExpression="aql:self.memberEnd->at(1).type" targetExpression="var:self" domainClass="DomainAssociation" useDomainElement="true">
+        <edgeMappings name="DomainAssociation" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Class']" semanticElements="aql:self.getMembers()" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthRoleClass%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthRoleClass%20Node']" targetFinderExpression="aql:self.memberEnd->at(2).type" sourceFinderExpression="aql:self.memberEnd->at(1).type" targetExpression="var:self" domainClass="DomainAssociation" useDomainElement="true">
           <style sizeComputationExpression="2" endsCentering="Both">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
             <beginLabelStyleDescription showIcon="false" labelExpression="aql:self.memberEnd->at(1).printCardinalidade() + self.ownedRule->at(1).printConstraint() + self.ownedRule->at(3).printVocabularyConstraint()">
@@ -540,79 +540,6 @@
                 </style>
               </conditionnalStyles>
             </subNodeMappings>
-            <subContainerMappings name="AuthUserClass Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Class']" semanticCandidatesExpression="feature:eAllContents" domainClass="AuthUser" childrenPresentation="List">
-              <subNodeMappings name="DomainAttribute" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Attributes%20Label']" semanticCandidatesExpression="feature:eAllContents" domainClass="DomainAttribute">
-                <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printProperties()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
-                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-                </style>
-              </subNodeMappings>
-              <subNodeMappings name="EmbeddedAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="EmbeddedAttribute">
-                <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printSize() + self.owlProperty()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
-                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-                </style>
-              </subNodeMappings>
-              <subNodeMappings name="IdAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="IdAttribute">
-                <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printSize() + self.owlProperty()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
-                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-                </style>
-              </subNodeMappings>
-              <subNodeMappings name="LOBAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="LOBAttribute">
-                <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printSize() + self.owlProperty()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
-                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-                </style>
-              </subNodeMappings>
-              <subNodeMappings name="VersionAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="VersionAttribute">
-                <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printSize() + self.owlProperty()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
-                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-                </style>
-              </subNodeMappings>
-              <subNodeMappings name="DecimalAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="DecimalAttribute">
-                <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printSize() + self.owlProperty()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
-                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-                </style>
-              </subNodeMappings>
-              <subNodeMappings name="DateTimeAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="DateTimeAttribute">
-                <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printDateProperties()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
-                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-                </style>
-              </subNodeMappings>
-              <subNodeMappings name="DomainMethod" semanticCandidatesExpression="feature:eAllContents" domainClass="DomainMethod">
-                <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.printParameters()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
-                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-                </style>
-                <conditionnalStyles predicateExpression="aql:self.print_isAbstract()">
-                  <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.printParameters()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
-                    <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                    <labelFormat>italic</labelFormat>
-                    <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                    <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-                  </style>
-                </conditionnalStyles>
-              </subNodeMappings>
-              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="aql:'&lt;&lt;AuthUser>>\n' + self.name">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelFormat>bold</labelFormat>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
-              </style>
-            </subContainerMappings>
             <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="aql:self.name">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelFormat>bold</labelFormat>
@@ -718,6 +645,79 @@
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="AuthRoleClass Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Class']" semanticCandidatesExpression="feature:eAllContents" domainClass="AuthRole" childrenPresentation="List">
+            <subNodeMappings name="DomainAttribute" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Attributes%20Label']" semanticCandidatesExpression="aql: self.eContents()->select(p|p.oclIsTypeOf(frameweb::DomainAttribute))" domainClass="DomainAttribute">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printProperties()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="EmbeddedAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="EmbeddedAttribute">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printSize() + self.owlProperty()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="IdAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="AuthRoleName">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printSize() + self.owlProperty()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="LOBAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="LOBAttribute">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printSize() + self.owlProperty()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="VersionAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="VersionAttribute">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printSize() + self.owlProperty()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="DecimalAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="DecimalAttribute">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printSize() + self.owlProperty()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="DateTimeAttribute" semanticCandidatesExpression="feature:eAllContents" domainClass="DateTimeAttribute">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printDateProperties()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="DomainMethod" semanticCandidatesExpression="feature:eAllContents" domainClass="DomainMethod">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.printParameters()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+              <conditionnalStyles predicateExpression="aql:self.print_isAbstract()">
+                <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.printParameters()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelFormat>italic</labelFormat>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+                </style>
+              </conditionnalStyles>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="aql:'&lt;&lt;AuthRole>>\n' + self.name">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             </style>
           </subContainerMappings>
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainPackage.png">
@@ -890,9 +890,22 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="AuthRoleClass" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthRoleClass%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainClass.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.AuthRole" referenceName="packagedElement" variableName="Pageinstance">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Role"/>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.AuthRoleName" referenceName="ownedAttribute">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="roleName"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="visibility" valueExpression="private"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
         <toolSections name="Attributes and Methods">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Domain Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='DomainAttribute'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node']/@subNodeMappings[name='DomainAttribute']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Domain Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='DomainAttribute'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node']/@subNodeMappings[name='DomainAttribute'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthRoleClass%20Node']/@subNodeMappings[name='DomainAttribute']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -902,7 +915,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Embedded Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='EmbeddedAttribute'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node']/@subNodeMappings[name='EmbeddedAttribute']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Embedded Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='EmbeddedAttribute'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node']/@subNodeMappings[name='EmbeddedAttribute'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthRoleClass%20Node']/@subNodeMappings[name='EmbeddedAttribute']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -920,7 +933,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Version Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='VersionAttribute'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node']/@subNodeMappings[name='VersionAttribute']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Version Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='VersionAttribute'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node']/@subNodeMappings[name='VersionAttribute'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthRoleClass%20Node']/@subNodeMappings[name='VersionAttribute']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -929,7 +942,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Decimal Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='DecimalAttribute'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node']/@subNodeMappings[name='DecimalAttribute']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Decimal Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='DecimalAttribute'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node']/@subNodeMappings[name='DecimalAttribute'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthRoleClass%20Node']/@subNodeMappings[name='DecimalAttribute']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -938,7 +951,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="DateTime Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='DateTimeAttribute'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subContainerMappings[name='AuthUserClass%20Node']/@subNodeMappings[name='DateTimeAttribute']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="DateTime Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='DateTimeAttribute'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node']/@subNodeMappings[name='DateTimeAttribute'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthRoleClass%20Node']/@subNodeMappings[name='DateTimeAttribute']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -947,7 +960,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="LOB Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='LOBAttribute'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node']/@subNodeMappings[name='LOBAttribute']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="LOB Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='LOBAttribute'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node']/@subNodeMappings[name='LOBAttribute'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthRoleClass%20Node']/@subNodeMappings[name='LOBAttribute']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -956,7 +969,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Domain Method" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='DomainMethod'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node']/@subNodeMappings[name='DomainMethod']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Domain Method" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='DomainClass%20Node']/@subNodeMappings[name='DomainMethod'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthUserClass%20Node']/@subNodeMappings[name='DomainMethod'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='AuthRoleClass%20Node']/@subNodeMappings[name='DomainMethod']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/DomainAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
