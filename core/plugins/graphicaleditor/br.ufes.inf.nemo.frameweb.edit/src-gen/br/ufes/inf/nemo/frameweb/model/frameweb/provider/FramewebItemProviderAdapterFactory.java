@@ -717,6 +717,52 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthUser} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AuthUserItemProvider authUserItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthUser}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAuthUserAdapter() {
+		if (authUserItemProvider == null) {
+			authUserItemProvider = new AuthUserItemProvider(this);
+		}
+
+		return authUserItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthRole} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AuthRoleItemProvider authRoleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthRole}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAuthRoleAdapter() {
+		if (authRoleItemProvider == null) {
+			authRoleItemProvider = new AuthRoleItemProvider(this);
+		}
+
+		return authRoleItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerDependency} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2120,6 +2166,98 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.DomainAuthAttribute} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DomainAuthAttributeItemProvider domainAuthAttributeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.DomainAuthAttribute}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDomainAuthAttributeAdapter() {
+		if (domainAuthAttributeItemProvider == null) {
+			domainAuthAttributeItemProvider = new DomainAuthAttributeItemProvider(this);
+		}
+
+		return domainAuthAttributeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthUserName} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AuthUserNameItemProvider authUserNameItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthUserName}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAuthUserNameAdapter() {
+		if (authUserNameItemProvider == null) {
+			authUserNameItemProvider = new AuthUserNameItemProvider(this);
+		}
+
+		return authUserNameItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthPassword} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AuthPasswordItemProvider authPasswordItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthPassword}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAuthPasswordAdapter() {
+		if (authPasswordItemProvider == null) {
+			authPasswordItemProvider = new AuthPasswordItemProvider(this);
+		}
+
+		return authPasswordItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthRoleName} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AuthRoleNameItemProvider authRoleNameItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthRoleName}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAuthRoleNameAdapter() {
+		if (authRoleNameItemProvider == null) {
+			authRoleNameItemProvider = new AuthRoleNameItemProvider(this);
+		}
+
+		return authRoleNameItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.DomainProperty} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2487,6 +2625,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 			serviceControllerAssociationItemProvider.dispose();
 		if (domainClassItemProvider != null)
 			domainClassItemProvider.dispose();
+		if (authUserItemProvider != null)
+			authUserItemProvider.dispose();
+		if (authRoleItemProvider != null)
+			authRoleItemProvider.dispose();
 		if (frontControllerDependencyItemProvider != null)
 			frontControllerDependencyItemProvider.dispose();
 		if (pageDependencyItemProvider != null)
@@ -2609,6 +2751,14 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 			domainVocabularyPropertyItemProvider.dispose();
 		if (domainAttributeItemProvider != null)
 			domainAttributeItemProvider.dispose();
+		if (domainAuthAttributeItemProvider != null)
+			domainAuthAttributeItemProvider.dispose();
+		if (authUserNameItemProvider != null)
+			authUserNameItemProvider.dispose();
+		if (authPasswordItemProvider != null)
+			authPasswordItemProvider.dispose();
+		if (authRoleNameItemProvider != null)
+			authRoleNameItemProvider.dispose();
 		if (domainPropertyItemProvider != null)
 			domainPropertyItemProvider.dispose();
 		if (frontControllerTemplateItemProvider != null)

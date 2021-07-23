@@ -147,6 +147,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="authPassword" lowerBound="1"
         eType="#//AuthPassword"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AuthRole" eSuperTypes="#//DomainClass">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="authRoleName" lowerBound="1"
+        eType="#//AuthRoleName"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ConstantNameList">
     <eLiterals name="DAO"/>
     <eLiterals name="interface" value="1"/>
@@ -313,6 +317,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="DomainAuthAttribute" eSuperTypes="#//DomainAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="AuthUserName" eSuperTypes="#//DomainAuthAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="AuthPassword" eSuperTypes="#//DomainAuthAttribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AuthRoleName" eSuperTypes="#//DomainAuthAttribute #//IdAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="DomainProperty" eSuperTypes="../../org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
   <eClassifiers xsi:type="ecore:EClass" name="FrontControllerTemplate" eSuperTypes="#//FrameworkProfile">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="classTemplate" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>

@@ -206,6 +206,18 @@ public class ResultTypeItemProvider extends StereotypeItemProvider {
 				FramewebFactory.eINSTANCE.createDomainAttribute()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createDomainAuthAttribute()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createAuthUserName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createAuthPassword()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createAuthRoleName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
 				FramewebFactory.eINSTANCE.createDomainProperty()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.BEHAVIORED_CLASSIFIER__INTERFACE_REALIZATION,
@@ -258,6 +270,12 @@ public class ResultTypeItemProvider extends StereotypeItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createDomainClass()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthUser()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthRole()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createDAOServiceAssociation()));

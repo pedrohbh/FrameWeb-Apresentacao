@@ -324,6 +324,12 @@ public class VocabularyItemProvider extends PackageItemProvider {
 				FramewebFactory.eINSTANCE.createDomainClass()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__OWNED_TYPE,
+				FramewebFactory.eINSTANCE.createAuthUser()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__OWNED_TYPE,
+				FramewebFactory.eINSTANCE.createAuthRole()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__OWNED_TYPE,
 				FramewebFactory.eINSTANCE.createDAOServiceAssociation()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__OWNED_TYPE,
@@ -427,6 +433,12 @@ public class VocabularyItemProvider extends PackageItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
 				FramewebFactory.eINSTANCE.createDomainClass()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
+				FramewebFactory.eINSTANCE.createAuthUser()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
+				FramewebFactory.eINSTANCE.createAuthRole()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
 				FramewebFactory.eINSTANCE.createFrontControllerDependency()));

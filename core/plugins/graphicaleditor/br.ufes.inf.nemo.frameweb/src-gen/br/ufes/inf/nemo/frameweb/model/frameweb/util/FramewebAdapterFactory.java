@@ -258,6 +258,11 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseAuthRole(AuthRole object) {
+			return createAuthRoleAdapter();
+		}
+
+		@Override
 		public Adapter caseFrontControllerDependency(FrontControllerDependency object) {
 			return createFrontControllerDependencyAdapter();
 		}
@@ -620,6 +625,11 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseAuthPassword(AuthPassword object) {
 			return createAuthPasswordAdapter();
+		}
+
+		@Override
+		public Adapter caseAuthRoleName(AuthRoleName object) {
+			return createAuthRoleNameAdapter();
 		}
 
 		@Override
@@ -1313,6 +1323,20 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAuthUserAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthRole <em>Auth Role</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthRole
+	 * @generated
+	 */
+	public Adapter createAuthRoleAdapter() {
 		return null;
 	}
 
@@ -2335,6 +2359,20 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAuthPasswordAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthRoleName <em>Auth Role Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthRoleName
+	 * @generated
+	 */
+	public Adapter createAuthRoleNameAdapter() {
 		return null;
 	}
 

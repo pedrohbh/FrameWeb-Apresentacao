@@ -170,6 +170,12 @@ public class ServiceInterfaceItemProvider extends InterfaceItemProvider {
 				FramewebFactory.eINSTANCE.createDomainClass()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthUser()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthRole()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createDAOServiceAssociation()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
@@ -285,6 +291,18 @@ public class ServiceInterfaceItemProvider extends InterfaceItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_ATTRIBUTE,
 				FramewebFactory.eINSTANCE.createDomainAttribute()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createDomainAuthAttribute()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createAuthUserName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createAuthPassword()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createAuthRoleName()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_ATTRIBUTE,
 				FramewebFactory.eINSTANCE.createDomainProperty()));
