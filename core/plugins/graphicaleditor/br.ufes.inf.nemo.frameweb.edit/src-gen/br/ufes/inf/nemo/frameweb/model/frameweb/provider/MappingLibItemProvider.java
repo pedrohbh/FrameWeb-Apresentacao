@@ -248,6 +248,9 @@ public class MappingLibItemProvider extends PackageItemProvider {
 				FramewebFactory.eINSTANCE.createAuthRole()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__OWNED_TYPE,
+				FramewebFactory.eINSTANCE.createAuthPermission()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__OWNED_TYPE,
 				FramewebFactory.eINSTANCE.createDAOServiceAssociation()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__OWNED_TYPE,
@@ -357,6 +360,9 @@ public class MappingLibItemProvider extends PackageItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
 				FramewebFactory.eINSTANCE.createAuthRole()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
+				FramewebFactory.eINSTANCE.createAuthPermission()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
 				FramewebFactory.eINSTANCE.createFrontControllerDependency()));

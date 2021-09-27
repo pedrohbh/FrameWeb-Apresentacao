@@ -856,6 +856,9 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 				FramewebFactory.eINSTANCE.createAuthRoleName()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PROPERTY__QUALIFIER,
+				FramewebFactory.eINSTANCE.createAuthPermName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PROPERTY__QUALIFIER,
 				FramewebFactory.eINSTANCE.createDomainProperty()));
 
 		newChildDescriptors.add(

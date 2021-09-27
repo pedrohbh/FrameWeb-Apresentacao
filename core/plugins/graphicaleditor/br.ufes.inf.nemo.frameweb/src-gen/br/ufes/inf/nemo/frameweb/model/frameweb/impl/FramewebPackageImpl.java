@@ -10,6 +10,8 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.Attribute;
 import br.ufes.inf.nemo.frameweb.model.frameweb.AttributeMapping;
 import br.ufes.inf.nemo.frameweb.model.frameweb.AttributeMappingProperty;
 import br.ufes.inf.nemo.frameweb.model.frameweb.AuthPassword;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthPermName;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthPermission;
 import br.ufes.inf.nemo.frameweb.model.frameweb.AuthRole;
 import br.ufes.inf.nemo.frameweb.model.frameweb.AuthRoleName;
 import br.ufes.inf.nemo.frameweb.model.frameweb.AuthUser;
@@ -367,6 +369,13 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	private EClass authRoleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass authPermissionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -885,6 +894,13 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	private EClass authRoleNameEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass authPermNameEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1824,6 +1840,26 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	@Override
 	public EReference getAuthRole_AuthRoleName() {
 		return (EReference) authRoleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAuthPermission() {
+		return authPermissionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAuthPermission_AuthPermName() {
+		return (EReference) authPermissionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2892,6 +2928,16 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EClass getAuthPermName() {
+		return authPermNameEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getDomainProperty() {
 		return domainPropertyEClass;
 	}
@@ -3528,6 +3574,9 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		authRoleEClass = createEClass(AUTH_ROLE);
 		createEReference(authRoleEClass, AUTH_ROLE__AUTH_ROLE_NAME);
 
+		authPermissionEClass = createEClass(AUTH_PERMISSION);
+		createEReference(authPermissionEClass, AUTH_PERMISSION__AUTH_PERM_NAME);
+
 		frontControllerDependencyEClass = createEClass(FRONT_CONTROLLER_DEPENDENCY);
 		createEReference(frontControllerDependencyEClass, FRONT_CONTROLLER_DEPENDENCY__METHOD);
 		createEReference(frontControllerDependencyEClass, FRONT_CONTROLLER_DEPENDENCY__METHOD_DEPENDENDENCY_CONSTRAINT);
@@ -3708,6 +3757,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		authRoleNameEClass = createEClass(AUTH_ROLE_NAME);
 
+		authPermNameEClass = createEClass(AUTH_PERM_NAME);
+
 		domainPropertyEClass = createEClass(DOMAIN_PROPERTY);
 
 		frontControllerTemplateEClass = createEClass(FRONT_CONTROLLER_TEMPLATE);
@@ -3837,6 +3888,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		domainClassEClass.getESuperTypes().add(theUMLPackage.getClass_());
 		authUserEClass.getESuperTypes().add(this.getDomainClass());
 		authRoleEClass.getESuperTypes().add(this.getDomainClass());
+		authPermissionEClass.getESuperTypes().add(this.getDomainClass());
 		frontControllerDependencyEClass.getESuperTypes().add(this.getNavigationDependency());
 		pageDependencyEClass.getESuperTypes().add(this.getNavigationDependency());
 		daoServiceAssociationEClass.getESuperTypes().add(this.getServiceAssociation());
@@ -3916,6 +3968,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		authPasswordEClass.getESuperTypes().add(this.getDomainAuthAttribute());
 		authRoleNameEClass.getESuperTypes().add(this.getDomainAuthAttribute());
 		authRoleNameEClass.getESuperTypes().add(this.getIdAttribute());
+		authPermNameEClass.getESuperTypes().add(this.getDomainAuthAttribute());
+		authPermNameEClass.getESuperTypes().add(this.getIdAttribute());
 		domainPropertyEClass.getESuperTypes().add(theUMLPackage.getProperty());
 		frontControllerTemplateEClass.getESuperTypes().add(this.getFrameworkProfile());
 		diTemplateEClass.getESuperTypes().add(this.getFrameworkProfile());
@@ -4128,6 +4182,12 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAuthRole_AuthRoleName(), this.getAuthRoleName(), null, "authRoleName", null, 1, 1,
 				AuthRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(authPermissionEClass, AuthPermission.class, "AuthPermission", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAuthPermission_AuthPermName(), this.getAuthPermName(), null, "authPermName", null, 1, 1,
+				AuthPermission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(frontControllerDependencyEClass, FrontControllerDependency.class, "FrontControllerDependency",
@@ -4440,6 +4500,9 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(authRoleNameEClass, AuthRoleName.class, "AuthRoleName", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(authPermNameEClass, AuthPermName.class, "AuthPermName", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(domainPropertyEClass, DomainProperty.class, "DomainProperty", !IS_ABSTRACT, !IS_INTERFACE,

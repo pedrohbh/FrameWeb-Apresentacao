@@ -292,6 +292,15 @@ public interface FramewebFactory extends EFactory {
 	AuthRole createAuthRole();
 
 	/**
+	 * Returns a new object of class '<em>Auth Permission</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Permission</em>'.
+	 * @generated
+	 */
+	AuthPermission createAuthPermission();
+
+	/**
 	 * Returns a new object of class '<em>Front Controller Dependency</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -875,6 +884,15 @@ public interface FramewebFactory extends EFactory {
 	 * @generated
 	 */
 	AuthRoleName createAuthRoleName();
+
+	/**
+	 * Returns a new object of class '<em>Auth Perm Name</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Perm Name</em>'.
+	 * @generated
+	 */
+	AuthPermName createAuthPermName();
 
 	/**
 	 * Returns a new object of class '<em>Domain Property</em>'.

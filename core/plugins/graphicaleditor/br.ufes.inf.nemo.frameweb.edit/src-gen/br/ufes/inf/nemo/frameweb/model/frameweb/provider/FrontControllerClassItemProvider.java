@@ -218,6 +218,9 @@ public class FrontControllerClassItemProvider extends ClassItemProvider {
 				FramewebFactory.eINSTANCE.createAuthRoleName()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createAuthPermName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
 				FramewebFactory.eINSTANCE.createDomainProperty()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.BEHAVIORED_CLASSIFIER__INTERFACE_REALIZATION,
@@ -276,6 +279,9 @@ public class FrontControllerClassItemProvider extends ClassItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createAuthRole()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthPermission()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createDAOServiceAssociation()));

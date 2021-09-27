@@ -763,6 +763,29 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthPermission} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AuthPermissionItemProvider authPermissionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthPermission}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAuthPermissionAdapter() {
+		if (authPermissionItemProvider == null) {
+			authPermissionItemProvider = new AuthPermissionItemProvider(this);
+		}
+
+		return authPermissionItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerDependency} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2258,6 +2281,29 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthPermName} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AuthPermNameItemProvider authPermNameItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthPermName}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAuthPermNameAdapter() {
+		if (authPermNameItemProvider == null) {
+			authPermNameItemProvider = new AuthPermNameItemProvider(this);
+		}
+
+		return authPermNameItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.DomainProperty} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2629,6 +2675,8 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 			authUserItemProvider.dispose();
 		if (authRoleItemProvider != null)
 			authRoleItemProvider.dispose();
+		if (authPermissionItemProvider != null)
+			authPermissionItemProvider.dispose();
 		if (frontControllerDependencyItemProvider != null)
 			frontControllerDependencyItemProvider.dispose();
 		if (pageDependencyItemProvider != null)
@@ -2759,6 +2807,8 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 			authPasswordItemProvider.dispose();
 		if (authRoleNameItemProvider != null)
 			authRoleNameItemProvider.dispose();
+		if (authPermNameItemProvider != null)
+			authPermNameItemProvider.dispose();
 		if (domainPropertyItemProvider != null)
 			domainPropertyItemProvider.dispose();
 		if (frontControllerTemplateItemProvider != null)

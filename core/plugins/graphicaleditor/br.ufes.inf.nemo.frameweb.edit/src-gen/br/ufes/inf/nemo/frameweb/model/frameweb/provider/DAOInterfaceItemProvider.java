@@ -221,6 +221,9 @@ public class DAOInterfaceItemProvider extends InterfaceItemProvider {
 				FramewebFactory.eINSTANCE.createAuthRole()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthPermission()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createDAOServiceAssociation()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
@@ -348,6 +351,9 @@ public class DAOInterfaceItemProvider extends InterfaceItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_ATTRIBUTE,
 				FramewebFactory.eINSTANCE.createAuthRoleName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createAuthPermName()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_ATTRIBUTE,
 				FramewebFactory.eINSTANCE.createDomainProperty()));

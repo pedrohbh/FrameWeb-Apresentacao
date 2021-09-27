@@ -264,6 +264,9 @@ public class AttributeItemProvider extends PropertyItemProvider {
 				FramewebFactory.eINSTANCE.createAuthRoleName()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PROPERTY__QUALIFIER,
+				FramewebFactory.eINSTANCE.createAuthPermName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PROPERTY__QUALIFIER,
 				FramewebFactory.eINSTANCE.createDomainProperty()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PROPERTY__DEFAULT_VALUE,

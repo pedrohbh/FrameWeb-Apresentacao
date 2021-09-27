@@ -263,6 +263,11 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseAuthPermission(AuthPermission object) {
+			return createAuthPermissionAdapter();
+		}
+
+		@Override
 		public Adapter caseFrontControllerDependency(FrontControllerDependency object) {
 			return createFrontControllerDependencyAdapter();
 		}
@@ -630,6 +635,11 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseAuthRoleName(AuthRoleName object) {
 			return createAuthRoleNameAdapter();
+		}
+
+		@Override
+		public Adapter caseAuthPermName(AuthPermName object) {
+			return createAuthPermNameAdapter();
 		}
 
 		@Override
@@ -1337,6 +1347,20 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAuthRoleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthPermission <em>Auth Permission</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthPermission
+	 * @generated
+	 */
+	public Adapter createAuthPermissionAdapter() {
 		return null;
 	}
 
@@ -2373,6 +2397,20 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAuthRoleNameAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthPermName <em>Auth Perm Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthPermName
+	 * @generated
+	 */
+	public Adapter createAuthPermNameAdapter() {
 		return null;
 	}
 

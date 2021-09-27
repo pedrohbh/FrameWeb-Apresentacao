@@ -349,6 +349,9 @@ public class DataPropertyItemProvider extends VocabularyEntityItemProvider {
 				FramewebFactory.eINSTANCE.createAuthRoleName()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__OWNED_END,
+				FramewebFactory.eINSTANCE.createAuthPermName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__OWNED_END,
 				FramewebFactory.eINSTANCE.createDomainProperty()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__OWNED_END,
@@ -437,6 +440,9 @@ public class DataPropertyItemProvider extends VocabularyEntityItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
 				FramewebFactory.eINSTANCE.createAuthRoleName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
+				FramewebFactory.eINSTANCE.createAuthPermName()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
 				FramewebFactory.eINSTANCE.createDomainProperty()));

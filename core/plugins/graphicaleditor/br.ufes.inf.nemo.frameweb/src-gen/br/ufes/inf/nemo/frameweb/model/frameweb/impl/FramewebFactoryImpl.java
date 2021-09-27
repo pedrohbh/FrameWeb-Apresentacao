@@ -117,6 +117,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createAuthUser();
 		case FramewebPackage.AUTH_ROLE:
 			return createAuthRole();
+		case FramewebPackage.AUTH_PERMISSION:
+			return createAuthPermission();
 		case FramewebPackage.FRONT_CONTROLLER_DEPENDENCY:
 			return createFrontControllerDependency();
 		case FramewebPackage.PAGE_DEPENDENCY:
@@ -247,6 +249,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createAuthPassword();
 		case FramewebPackage.AUTH_ROLE_NAME:
 			return createAuthRoleName();
+		case FramewebPackage.AUTH_PERM_NAME:
+			return createAuthPermName();
 		case FramewebPackage.DOMAIN_PROPERTY:
 			return createDomainProperty();
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE:
@@ -680,6 +684,17 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	public AuthRole createAuthRole() {
 		AuthRoleImpl authRole = new AuthRoleImpl();
 		return authRole;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AuthPermission createAuthPermission() {
+		AuthPermissionImpl authPermission = new AuthPermissionImpl();
+		return authPermission;
 	}
 
 	/**
@@ -1395,6 +1410,17 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	public AuthRoleName createAuthRoleName() {
 		AuthRoleNameImpl authRoleName = new AuthRoleNameImpl();
 		return authRoleName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AuthPermName createAuthPermName() {
+		AuthPermNameImpl authPermName = new AuthPermNameImpl();
+		return authPermName;
 	}
 
 	/**

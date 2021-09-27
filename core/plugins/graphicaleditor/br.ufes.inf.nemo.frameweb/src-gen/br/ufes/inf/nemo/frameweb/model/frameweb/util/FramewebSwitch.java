@@ -1036,6 +1036,43 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case FramewebPackage.AUTH_PERMISSION: {
+			AuthPermission authPermission = (AuthPermission) theEObject;
+			T result = caseAuthPermission(authPermission);
+			if (result == null)
+				result = caseDomainClass(authPermission);
+			if (result == null)
+				result = caseClass(authPermission);
+			if (result == null)
+				result = caseEncapsulatedClassifier(authPermission);
+			if (result == null)
+				result = caseBehavioredClassifier(authPermission);
+			if (result == null)
+				result = caseStructuredClassifier(authPermission);
+			if (result == null)
+				result = caseClassifier(authPermission);
+			if (result == null)
+				result = caseNamespace(authPermission);
+			if (result == null)
+				result = caseRedefinableElement(authPermission);
+			if (result == null)
+				result = caseType(authPermission);
+			if (result == null)
+				result = caseTemplateableElement(authPermission);
+			if (result == null)
+				result = casePackageableElement(authPermission);
+			if (result == null)
+				result = caseNamedElement(authPermission);
+			if (result == null)
+				result = caseParameterableElement(authPermission);
+			if (result == null)
+				result = caseElement(authPermission);
+			if (result == null)
+				result = caseEModelElement(authPermission);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case FramewebPackage.FRONT_CONTROLLER_DEPENDENCY: {
 			FrontControllerDependency frontControllerDependency = (FrontControllerDependency) theEObject;
 			T result = caseFrontControllerDependency(frontControllerDependency);
@@ -3142,6 +3179,45 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case FramewebPackage.AUTH_PERM_NAME: {
+			AuthPermName authPermName = (AuthPermName) theEObject;
+			T result = caseAuthPermName(authPermName);
+			if (result == null)
+				result = caseDomainAuthAttribute(authPermName);
+			if (result == null)
+				result = caseIdAttribute(authPermName);
+			if (result == null)
+				result = caseDomainAttribute(authPermName);
+			if (result == null)
+				result = caseAttribute(authPermName);
+			if (result == null)
+				result = caseProperty(authPermName);
+			if (result == null)
+				result = caseStructuralFeature(authPermName);
+			if (result == null)
+				result = caseConnectableElement(authPermName);
+			if (result == null)
+				result = caseDeploymentTarget(authPermName);
+			if (result == null)
+				result = caseFeature(authPermName);
+			if (result == null)
+				result = caseTypedElement(authPermName);
+			if (result == null)
+				result = caseMultiplicityElement(authPermName);
+			if (result == null)
+				result = caseParameterableElement(authPermName);
+			if (result == null)
+				result = caseRedefinableElement(authPermName);
+			if (result == null)
+				result = caseNamedElement(authPermName);
+			if (result == null)
+				result = caseElement(authPermName);
+			if (result == null)
+				result = caseEModelElement(authPermName);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case FramewebPackage.DOMAIN_PROPERTY: {
 			DomainProperty domainProperty = (DomainProperty) theEObject;
 			T result = caseDomainProperty(domainProperty);
@@ -3864,6 +3940,21 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAuthRole(AuthRole object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Auth Permission</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Auth Permission</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAuthPermission(AuthPermission object) {
 		return null;
 	}
 
@@ -4974,6 +5065,21 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAuthRoleName(AuthRoleName object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Auth Perm Name</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Auth Perm Name</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAuthPermName(AuthPermName object) {
 		return null;
 	}
 
