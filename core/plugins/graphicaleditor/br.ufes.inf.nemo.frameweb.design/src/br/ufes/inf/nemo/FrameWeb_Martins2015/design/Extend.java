@@ -427,6 +427,12 @@ public class Extend {
 		return (boolean) o.eGet(abstract_feature);
 	}
 
+	public boolean isTypeOf(EObject o, String name) {
+		String className = o.eClass().getName(); 
+		
+		return className.equals(name);
+	}
+	
 	public String print_resultdependency(EObject o) {
 		String response = "";
 

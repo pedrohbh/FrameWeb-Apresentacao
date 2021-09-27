@@ -475,7 +475,7 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             </style>
           </subNodeMappings>
-          <subContainerMappings name="DomainClass Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Class']" semanticCandidatesExpression="feature:eAllContents" domainClass="DomainClass" childrenPresentation="List">
+          <subContainerMappings name="DomainClass Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Class']" semanticCandidatesExpression="aql: self.eContents()->select(p| p.isTypeOf('DomainClass'))" domainClass="DomainClass" childrenPresentation="List">
             <subNodeMappings name="DomainAttribute" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Attributes%20Label']" semanticCandidatesExpression="feature:eAllContents" domainClass="DomainAttribute">
               <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name + self.printProperties()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
