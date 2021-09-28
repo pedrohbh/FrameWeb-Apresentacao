@@ -164,6 +164,9 @@ public class ServiceInterfaceItemProvider extends InterfaceItemProvider {
 				FramewebFactory.eINSTANCE.createServiceClass()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthServiceClass()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createServiceInterface()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
@@ -330,6 +333,9 @@ public class ServiceInterfaceItemProvider extends InterfaceItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_OPERATION,
 				FramewebFactory.eINSTANCE.createServiceMethod()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_OPERATION,
+				FramewebFactory.eINSTANCE.createAuthServiceMethod()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_OPERATION,
 				FramewebFactory.eINSTANCE.createDAOMethod()));

@@ -274,6 +274,15 @@ public interface FramewebFactory extends EFactory {
 	ServiceClass createServiceClass();
 
 	/**
+	 * Returns a new object of class '<em>Auth Service Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Service Class</em>'.
+	 * @generated
+	 */
+	AuthServiceClass createAuthServiceClass();
+
+	/**
 	 * Returns a new object of class '<em>Service Interface</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -389,6 +398,15 @@ public interface FramewebFactory extends EFactory {
 	 * @generated
 	 */
 	ServiceMethod createServiceMethod();
+
+	/**
+	 * Returns a new object of class '<em>Auth Service Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Service Method</em>'.
+	 * @generated
+	 */
+	AuthServiceMethod createAuthServiceMethod();
 
 	/**
 	 * Returns a new object of class '<em>Service Attribute</em>'.

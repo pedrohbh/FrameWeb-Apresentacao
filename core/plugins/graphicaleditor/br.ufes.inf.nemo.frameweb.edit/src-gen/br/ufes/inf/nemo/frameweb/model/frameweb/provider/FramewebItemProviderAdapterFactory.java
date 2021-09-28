@@ -717,6 +717,29 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceClass} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AuthServiceClassItemProvider authServiceClassItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceClass}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAuthServiceClassAdapter() {
+		if (authServiceClassItemProvider == null) {
+			authServiceClassItemProvider = new AuthServiceClassItemProvider(this);
+		}
+
+		return authServiceClassItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.ServiceInterface} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1013,6 +1036,29 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 		}
 
 		return serviceMethodItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceMethod} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AuthServiceMethodItemProvider authServiceMethodItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceMethod}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAuthServiceMethodAdapter() {
+		if (authServiceMethodItemProvider == null) {
+			authServiceMethodItemProvider = new AuthServiceMethodItemProvider(this);
+		}
+
+		return authServiceMethodItemProvider;
 	}
 
 	/**
@@ -2786,6 +2832,8 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 			authProcessingMethodItemProvider.dispose();
 		if (serviceClassItemProvider != null)
 			serviceClassItemProvider.dispose();
+		if (authServiceClassItemProvider != null)
+			authServiceClassItemProvider.dispose();
 		if (serviceInterfaceItemProvider != null)
 			serviceInterfaceItemProvider.dispose();
 		if (serviceGeneralizationItemProvider != null)
@@ -2812,6 +2860,8 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 			daoAttributeItemProvider.dispose();
 		if (serviceMethodItemProvider != null)
 			serviceMethodItemProvider.dispose();
+		if (authServiceMethodItemProvider != null)
+			authServiceMethodItemProvider.dispose();
 		if (serviceAttributeItemProvider != null)
 			serviceAttributeItemProvider.dispose();
 		if (daoMethodItemProvider != null)

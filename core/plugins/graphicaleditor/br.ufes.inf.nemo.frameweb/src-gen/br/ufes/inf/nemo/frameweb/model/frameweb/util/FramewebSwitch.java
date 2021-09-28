@@ -970,6 +970,43 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case FramewebPackage.AUTH_SERVICE_CLASS: {
+			AuthServiceClass authServiceClass = (AuthServiceClass) theEObject;
+			T result = caseAuthServiceClass(authServiceClass);
+			if (result == null)
+				result = caseServiceClass(authServiceClass);
+			if (result == null)
+				result = caseClass(authServiceClass);
+			if (result == null)
+				result = caseEncapsulatedClassifier(authServiceClass);
+			if (result == null)
+				result = caseBehavioredClassifier(authServiceClass);
+			if (result == null)
+				result = caseStructuredClassifier(authServiceClass);
+			if (result == null)
+				result = caseClassifier(authServiceClass);
+			if (result == null)
+				result = caseNamespace(authServiceClass);
+			if (result == null)
+				result = caseRedefinableElement(authServiceClass);
+			if (result == null)
+				result = caseType(authServiceClass);
+			if (result == null)
+				result = caseTemplateableElement(authServiceClass);
+			if (result == null)
+				result = casePackageableElement(authServiceClass);
+			if (result == null)
+				result = caseNamedElement(authServiceClass);
+			if (result == null)
+				result = caseParameterableElement(authServiceClass);
+			if (result == null)
+				result = caseElement(authServiceClass);
+			if (result == null)
+				result = caseEModelElement(authServiceClass);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case FramewebPackage.SERVICE_INTERFACE: {
 			ServiceInterface serviceInterface = (ServiceInterface) theEObject;
 			T result = caseServiceInterface(serviceInterface);
@@ -1425,6 +1462,35 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = caseElement(serviceMethod);
 			if (result == null)
 				result = caseEModelElement(serviceMethod);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FramewebPackage.AUTH_SERVICE_METHOD: {
+			AuthServiceMethod authServiceMethod = (AuthServiceMethod) theEObject;
+			T result = caseAuthServiceMethod(authServiceMethod);
+			if (result == null)
+				result = caseServiceMethod(authServiceMethod);
+			if (result == null)
+				result = caseOperation(authServiceMethod);
+			if (result == null)
+				result = caseBehavioralFeature(authServiceMethod);
+			if (result == null)
+				result = caseParameterableElement(authServiceMethod);
+			if (result == null)
+				result = caseTemplateableElement(authServiceMethod);
+			if (result == null)
+				result = caseNamespace(authServiceMethod);
+			if (result == null)
+				result = caseFeature(authServiceMethod);
+			if (result == null)
+				result = caseRedefinableElement(authServiceMethod);
+			if (result == null)
+				result = caseNamedElement(authServiceMethod);
+			if (result == null)
+				result = caseElement(authServiceMethod);
+			if (result == null)
+				result = caseEModelElement(authServiceMethod);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -4075,6 +4141,21 @@ public class FramewebSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Auth Service Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Auth Service Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAuthServiceClass(AuthServiceClass object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Service Interface</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -4296,6 +4377,21 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseServiceMethod(ServiceMethod object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Auth Service Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Auth Service Method</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAuthServiceMethod(AuthServiceMethod object) {
 		return null;
 	}
 

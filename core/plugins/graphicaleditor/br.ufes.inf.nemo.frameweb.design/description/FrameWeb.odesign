@@ -1447,7 +1447,7 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FrameWebApplicationModel" domainClass="ApplicationModel">
       <defaultLayer name="Default">
-        <edgeMappings name="Service Realization Line" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subNodeMappings[name='ServiceInterface']" targetFinderExpression="feature:supplier" sourceFinderExpression="feature:client" domainClass="ServiceRealization" useDomainElement="true" reconnections="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Reconnect%20Front%20Controller%20Dependency']">
+        <edgeMappings name="Service Realization Line" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='AuthServiceClass']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subNodeMappings[name='ServiceInterface']" targetFinderExpression="feature:supplier" sourceFinderExpression="feature:client" domainClass="ServiceRealization" useDomainElement="true" reconnections="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.2/@ownedTools[name='Reconnect%20Front%20Controller%20Dependency']">
           <style targetArrow="InputClosedArrow" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
             <centerLabelStyleDescription showIcon="false">
@@ -1455,7 +1455,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="ServiceGeneralizationSet" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']" targetFinderExpression="aql:self.powertype" sourceFinderExpression="aql:self.generalization.owner" domainClass="ServiceGeneralizationSet" useDomainElement="true">
+        <edgeMappings name="ServiceGeneralizationSet" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='AuthServiceClass']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='AuthServiceClass']" targetFinderExpression="aql:self.powertype" sourceFinderExpression="aql:self.generalization.owner" domainClass="ServiceGeneralizationSet" useDomainElement="true">
           <style targetArrow="InputClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
             <centerLabelStyleDescription>
@@ -1463,7 +1463,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="DAOServiceAssociation" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Class']" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subNodeMappings[name='Rest%20Controller%20Node']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='PersistencePackage']/@subNodeMappings[name='DAOInterface']" targetFinderExpression="aql:self.memberEnd->at(2).type" sourceFinderExpression="aql:self.memberEnd->at(1).type" domainClass="DAOServiceAssociation" useDomainElement="true" reconnections="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Reconnect%20Navigation%20Association']">
+        <edgeMappings name="DAOServiceAssociation" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Class']" sourceMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subNodeMappings[name='Rest%20Controller%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='AuthServiceClass']" targetMapping="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='PersistencePackage']/@subNodeMappings[name='DAOInterface']" targetFinderExpression="aql:self.memberEnd->at(2).type" sourceFinderExpression="aql:self.memberEnd->at(1).type" domainClass="DAOServiceAssociation" useDomainElement="true" reconnections="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Reconnect%20Navigation%20Association']">
           <style targetArrow="InputFillClosedArrow" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="aql:self.name">
@@ -1488,7 +1488,7 @@
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
             </style>
           </subNodeMappings>
-          <subContainerMappings name="ServiceClass" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@toolSections.1/@ownedTools[name='DAOClass']" semanticCandidatesExpression="feature:eAllContents" domainClass="ServiceClass" childrenPresentation="List">
+          <subContainerMappings name="ServiceClass" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebPersistenceModel']/@defaultLayer/@toolSections.1/@ownedTools[name='DAOClass']" semanticCandidatesExpression="aql: self.eContents()->select(p|p.isTypeOf('ServiceClass'))" domainClass="ServiceClass" childrenPresentation="List">
             <subNodeMappings name="Service Attribute Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" semanticCandidatesExpression="feature:eAllContents" domainClass="ServiceAttribute">
               <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1504,6 +1504,36 @@
               </style>
             </subNodeMappings>
             <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="aql:self.name">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="AuthServiceClass" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Auth%20Service%20Method%20Perm%20Name']" semanticCandidatesExpression="feature:eAllContents" domainClass="AuthServiceClass" childrenPresentation="List">
+            <subNodeMappings name="Service Attribute Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" semanticCandidatesExpression="feature:eAllContents" domainClass="ServiceAttribute">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.name + ' : ' + self.type.name" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="Service Method Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Names']" semanticCandidatesExpression="aql: self.eContents()->select(p|p.isTypeOf('ServiceMethod'))" domainClass="ServiceMethod">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + self.printParameters()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="Auth Service Method Node" labelDirectEdit="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@toolSections.1/@ownedTools[name='Auth%20Service%20Method%20Perm%20Name']" semanticCandidatesExpression="feature:eAllContents" domainClass="AuthServiceMethod">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.printVisibility() + '{hasPermission = ' + self.permissionName + '}' + ' ' + self.printParameters()" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="aql:self.name+'\n' + '{hasPermission = ' + self.permissionName + '}'">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelFormat>bold</labelFormat>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1577,6 +1607,15 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Auth Service Class" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='AuthServiceClass']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/ApplicationClass.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.AuthServiceClass" referenceName="packagedElement">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="ServiceClass"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
           <ownedTools xsi:type="tool:NodeCreationDescription" name="Service Interface" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subNodeMappings[name='ServiceInterface']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/ServiceInterface.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -1619,7 +1658,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Service Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']/@subNodeMappings[name='Service%20Attribute%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/ApplicationAttribute.png">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Service Attribute" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']/@subNodeMappings[name='Service%20Attribute%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='AuthServiceClass']/@subNodeMappings[name='Service%20Attribute%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/ApplicationAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1628,11 +1667,20 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Service Method" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']/@subNodeMappings[name='Service%20Method%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/ApplicationAttribute.png">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Service Method" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='ServiceClass']/@subNodeMappings[name='Service%20Method%20Node'] //@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='AuthServiceClass']/@subNodeMappings[name='Auth%20Service%20Method%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/ApplicationAttribute.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.ServiceMethod" referenceName="ownedOperation">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Method"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Auth Service Method" nodeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebApplicationModel']/@defaultLayer/@containerMappings[name='ApplicationPackage']/@subContainerMappings[name='AuthServiceClass']/@subNodeMappings[name='Auth%20Service%20Method%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/ApplicationAttribute.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.AuthServiceMethod" referenceName="ownedOperation">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Method"/>
               </firstModelOperations>
             </initialOperation>
@@ -1723,6 +1771,12 @@
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="Auth Service Method Perm Name" inputLabelExpression="aql:self.printVisibility() + '{hasPermission = ' + self.permissionName + '}' + ' ' + self.printParameters()">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="permissionName" valueExpression="var:0"/>
             </initialOperation>
           </ownedTools>
         </toolSections>

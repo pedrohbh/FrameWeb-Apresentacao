@@ -136,6 +136,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AuthProcessingMethod" eSuperTypes="#//FrontControllerMethod"/>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceClass" eSuperTypes="../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AuthServiceClass" eSuperTypes="#//ServiceClass">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="permissionName" lowerBound="1"
+        eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceInterface" eSuperTypes="../../org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceGeneralization" eSuperTypes="../../org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceControllerAssociation" eSuperTypes="#//ServiceAssociation">
@@ -200,6 +204,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="ServiceMethod" eSuperTypes="../../org.eclipse.uml2.uml/model/UML.ecore#//Operation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="methodType" ordered="false"
         eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Type"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AuthServiceMethod" eSuperTypes="#//ServiceMethod">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="permissionName" lowerBound="1"
+        eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceAttribute" eSuperTypes="../../org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceAssociation" abstract="true"

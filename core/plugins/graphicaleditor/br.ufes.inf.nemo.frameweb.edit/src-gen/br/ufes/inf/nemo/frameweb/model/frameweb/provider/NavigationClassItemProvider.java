@@ -231,6 +231,9 @@ public class NavigationClassItemProvider extends ClassItemProvider {
 				FramewebFactory.eINSTANCE.createServiceMethod()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__OWNED_OPERATION,
+				FramewebFactory.eINSTANCE.createAuthServiceMethod()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__OWNED_OPERATION,
 				FramewebFactory.eINSTANCE.createDAOMethod()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__OWNED_OPERATION,
@@ -259,6 +262,9 @@ public class NavigationClassItemProvider extends ClassItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createServiceClass()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthServiceClass()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createServiceInterface()));

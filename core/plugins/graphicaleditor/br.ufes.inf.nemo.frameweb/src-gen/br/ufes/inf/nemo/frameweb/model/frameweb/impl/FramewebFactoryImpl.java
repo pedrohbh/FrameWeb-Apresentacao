@@ -113,6 +113,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createAuthProcessingMethod();
 		case FramewebPackage.SERVICE_CLASS:
 			return createServiceClass();
+		case FramewebPackage.AUTH_SERVICE_CLASS:
+			return createAuthServiceClass();
 		case FramewebPackage.SERVICE_INTERFACE:
 			return createServiceInterface();
 		case FramewebPackage.SERVICE_GENERALIZATION:
@@ -139,6 +141,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createDAOAttribute();
 		case FramewebPackage.SERVICE_METHOD:
 			return createServiceMethod();
+		case FramewebPackage.AUTH_SERVICE_METHOD:
+			return createAuthServiceMethod();
 		case FramewebPackage.SERVICE_ATTRIBUTE:
 			return createServiceAttribute();
 		case FramewebPackage.DAO_METHOD:
@@ -680,6 +684,17 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
+	public AuthServiceClass createAuthServiceClass() {
+		AuthServiceClassImpl authServiceClass = new AuthServiceClassImpl();
+		return authServiceClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ServiceInterface createServiceInterface() {
 		ServiceInterfaceImpl serviceInterface = new ServiceInterfaceImpl();
 		return serviceInterface;
@@ -815,6 +830,17 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	public ServiceMethod createServiceMethod() {
 		ServiceMethodImpl serviceMethod = new ServiceMethodImpl();
 		return serviceMethod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AuthServiceMethod createAuthServiceMethod() {
+		AuthServiceMethodImpl authServiceMethod = new AuthServiceMethodImpl();
+		return authServiceMethod;
 	}
 
 	/**

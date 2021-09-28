@@ -299,6 +299,9 @@ public class FrameworkProfileItemProvider extends ProfileItemProvider {
 				FramewebFactory.eINSTANCE.createServiceClass()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__OWNED_TYPE,
+				FramewebFactory.eINSTANCE.createAuthServiceClass()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__OWNED_TYPE,
 				FramewebFactory.eINSTANCE.createServiceInterface()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__OWNED_TYPE,
@@ -423,6 +426,9 @@ public class FrameworkProfileItemProvider extends ProfileItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
 				FramewebFactory.eINSTANCE.createServiceClass()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
+				FramewebFactory.eINSTANCE.createAuthServiceClass()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
 				FramewebFactory.eINSTANCE.createServiceInterface()));

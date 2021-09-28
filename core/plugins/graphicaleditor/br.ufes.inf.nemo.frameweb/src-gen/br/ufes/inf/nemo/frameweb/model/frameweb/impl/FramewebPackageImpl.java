@@ -18,6 +18,8 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.AuthPermission;
 import br.ufes.inf.nemo.frameweb.model.frameweb.AuthProcessingMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.AuthRole;
 import br.ufes.inf.nemo.frameweb.model.frameweb.AuthRoleName;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceClass;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.AuthSuccessUrl;
 import br.ufes.inf.nemo.frameweb.model.frameweb.AuthUser;
 import br.ufes.inf.nemo.frameweb.model.frameweb.AuthUserName;
@@ -366,6 +368,13 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass authServiceClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass serviceInterfaceEClass = null;
 
 	/**
@@ -465,6 +474,13 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	private EClass serviceMethodEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass authServiceMethodEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1808,6 +1824,26 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EClass getAuthServiceClass() {
+		return authServiceClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAuthServiceClass_PermissionName() {
+		return (EAttribute) authServiceClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getServiceInterface() {
 		return serviceInterfaceEClass;
 	}
@@ -2090,6 +2126,26 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	@Override
 	public EReference getServiceMethod_MethodType() {
 		return (EReference) serviceMethodEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAuthServiceMethod() {
+		return authServiceMethodEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAuthServiceMethod_PermissionName() {
+		return (EAttribute) authServiceMethodEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3654,6 +3710,9 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		serviceClassEClass = createEClass(SERVICE_CLASS);
 
+		authServiceClassEClass = createEClass(AUTH_SERVICE_CLASS);
+		createEAttribute(authServiceClassEClass, AUTH_SERVICE_CLASS__PERMISSION_NAME);
+
 		serviceInterfaceEClass = createEClass(SERVICE_INTERFACE);
 
 		serviceGeneralizationEClass = createEClass(SERVICE_GENERALIZATION);
@@ -3697,6 +3756,9 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		serviceMethodEClass = createEClass(SERVICE_METHOD);
 		createEReference(serviceMethodEClass, SERVICE_METHOD__METHOD_TYPE);
+
+		authServiceMethodEClass = createEClass(AUTH_SERVICE_METHOD);
+		createEAttribute(authServiceMethodEClass, AUTH_SERVICE_METHOD__PERMISSION_NAME);
 
 		serviceAttributeEClass = createEClass(SERVICE_ATTRIBUTE);
 
@@ -3986,6 +4048,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		frontControllerMethodEClass.getESuperTypes().add(theUMLPackage.getOperation());
 		authProcessingMethodEClass.getESuperTypes().add(this.getFrontControllerMethod());
 		serviceClassEClass.getESuperTypes().add(theUMLPackage.getClass_());
+		authServiceClassEClass.getESuperTypes().add(this.getServiceClass());
 		serviceInterfaceEClass.getESuperTypes().add(theUMLPackage.getInterface());
 		serviceGeneralizationEClass.getESuperTypes().add(theUMLPackage.getGeneralization());
 		serviceControllerAssociationEClass.getESuperTypes().add(this.getServiceAssociation());
@@ -4001,6 +4064,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		domainMethodEClass.getESuperTypes().add(theUMLPackage.getOperation());
 		daoAttributeEClass.getESuperTypes().add(theUMLPackage.getProperty());
 		serviceMethodEClass.getESuperTypes().add(theUMLPackage.getOperation());
+		authServiceMethodEClass.getESuperTypes().add(this.getServiceMethod());
 		serviceAttributeEClass.getESuperTypes().add(theUMLPackage.getProperty());
 		serviceAssociationEClass.getESuperTypes().add(theUMLPackage.getAssociation());
 		navigationDependencyEClass.getESuperTypes().add(theUMLPackage.getDependency());
@@ -4266,6 +4330,12 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEClass(serviceClassEClass, ServiceClass.class, "ServiceClass", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(authServiceClassEClass, AuthServiceClass.class, "AuthServiceClass", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAuthServiceClass_PermissionName(), theTypesPackage.getString(), "permissionName", null, 1, 1,
+				AuthServiceClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
 		initEClass(serviceInterfaceEClass, ServiceInterface.class, "ServiceInterface", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
@@ -4352,6 +4422,12 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEReference(getServiceMethod_MethodType(), theUMLPackage.getType(), null, "methodType", null, 0, 1,
 				ServiceMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(authServiceMethodEClass, AuthServiceMethod.class, "AuthServiceMethod", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAuthServiceMethod_PermissionName(), theTypesPackage.getString(), "permissionName", null, 1, 1,
+				AuthServiceMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(serviceAttributeEClass, ServiceAttribute.class, "ServiceAttribute", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

@@ -253,6 +253,11 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseAuthServiceClass(AuthServiceClass object) {
+			return createAuthServiceClassAdapter();
+		}
+
+		@Override
 		public Adapter caseServiceInterface(ServiceInterface object) {
 			return createServiceInterfaceAdapter();
 		}
@@ -325,6 +330,11 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseServiceMethod(ServiceMethod object) {
 			return createServiceMethodAdapter();
+		}
+
+		@Override
+		public Adapter caseAuthServiceMethod(AuthServiceMethod object) {
+			return createAuthServiceMethodAdapter();
 		}
 
 		@Override
@@ -1348,6 +1358,20 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceClass <em>Auth Service Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceClass
+	 * @generated
+	 */
+	public Adapter createAuthServiceClassAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.ServiceInterface <em>Service Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1554,6 +1578,20 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createServiceMethodAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceMethod <em>Auth Service Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceMethod
+	 * @generated
+	 */
+	public Adapter createAuthServiceMethodAdapter() {
 		return null;
 	}
 

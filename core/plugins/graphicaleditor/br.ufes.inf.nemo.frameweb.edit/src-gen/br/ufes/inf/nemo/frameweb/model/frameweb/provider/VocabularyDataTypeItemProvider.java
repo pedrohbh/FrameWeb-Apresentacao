@@ -289,6 +289,9 @@ public class VocabularyDataTypeItemProvider extends VocabularyEntityItemProvider
 				FramewebFactory.eINSTANCE.createServiceMethod()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.DATA_TYPE__OWNED_OPERATION,
+				FramewebFactory.eINSTANCE.createAuthServiceMethod()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.DATA_TYPE__OWNED_OPERATION,
 				FramewebFactory.eINSTANCE.createDAOMethod()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.DATA_TYPE__OWNED_OPERATION,
