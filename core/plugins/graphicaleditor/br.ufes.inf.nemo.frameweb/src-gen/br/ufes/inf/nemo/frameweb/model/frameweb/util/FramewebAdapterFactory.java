@@ -188,6 +188,11 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseAuthPage(AuthPage object) {
+			return createAuthPageAdapter();
+		}
+
+		@Override
 		public Adapter caseDAOInterface(DAOInterface object) {
 			return createDAOInterfaceAdapter();
 		}
@@ -218,6 +223,16 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseAuthSuccessUrl(AuthSuccessUrl object) {
+			return createAuthSuccessUrlAdapter();
+		}
+
+		@Override
+		public Adapter caseAuthFailureUrl(AuthFailureUrl object) {
+			return createAuthFailureUrlAdapter();
+		}
+
+		@Override
 		public Adapter caseNavigationAssociation(NavigationAssociation object) {
 			return createNavigationAssociationAdapter();
 		}
@@ -225,6 +240,11 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseFrontControllerMethod(FrontControllerMethod object) {
 			return createFrontControllerMethodAdapter();
+		}
+
+		@Override
+		public Adapter caseAuthProcessingMethod(AuthProcessingMethod object) {
+			return createAuthProcessingMethodAdapter();
 		}
 
 		@Override
@@ -355,6 +375,11 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseUIComponent(UIComponent object) {
 			return createUIComponentAdapter();
+		}
+
+		@Override
+		public Adapter caseAuthForm(AuthForm object) {
+			return createAuthFormAdapter();
 		}
 
 		@Override
@@ -1141,6 +1166,20 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthPage <em>Auth Page</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthPage
+	 * @generated
+	 */
+	public Adapter createAuthPageAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DAOInterface <em>DAO Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1225,6 +1264,34 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthSuccessUrl <em>Auth Success Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthSuccessUrl
+	 * @generated
+	 */
+	public Adapter createAuthSuccessUrlAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthFailureUrl <em>Auth Failure Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthFailureUrl
+	 * @generated
+	 */
+	public Adapter createAuthFailureUrlAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAssociation <em>Navigation Association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1249,6 +1316,20 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFrontControllerMethodAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthProcessingMethod <em>Auth Processing Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthProcessingMethod
+	 * @generated
+	 */
+	public Adapter createAuthProcessingMethodAdapter() {
 		return null;
 	}
 
@@ -1613,6 +1694,20 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createUIComponentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthForm <em>Auth Form</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthForm
+	 * @generated
+	 */
+	public Adapter createAuthFormAdapter() {
 		return null;
 	}
 

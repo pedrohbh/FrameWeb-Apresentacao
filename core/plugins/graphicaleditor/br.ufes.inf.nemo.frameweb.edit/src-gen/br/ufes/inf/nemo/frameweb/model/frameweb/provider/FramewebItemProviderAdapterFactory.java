@@ -418,6 +418,29 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthPage} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AuthPageItemProvider authPageItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthPage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAuthPageAdapter() {
+		if (authPageItemProvider == null) {
+			authPageItemProvider = new AuthPageItemProvider(this);
+		}
+
+		return authPageItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.DAOInterface} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -556,6 +579,52 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthSuccessUrl} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AuthSuccessUrlItemProvider authSuccessUrlItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthSuccessUrl}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAuthSuccessUrlAdapter() {
+		if (authSuccessUrlItemProvider == null) {
+			authSuccessUrlItemProvider = new AuthSuccessUrlItemProvider(this);
+		}
+
+		return authSuccessUrlItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthFailureUrl} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AuthFailureUrlItemProvider authFailureUrlItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthFailureUrl}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAuthFailureUrlAdapter() {
+		if (authFailureUrlItemProvider == null) {
+			authFailureUrlItemProvider = new AuthFailureUrlItemProvider(this);
+		}
+
+		return authFailureUrlItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAssociation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -599,6 +668,29 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 		}
 
 		return frontControllerMethodItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthProcessingMethod} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AuthProcessingMethodItemProvider authProcessingMethodItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthProcessingMethod}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAuthProcessingMethodAdapter() {
+		if (authProcessingMethodItemProvider == null) {
+			authProcessingMethodItemProvider = new AuthProcessingMethodItemProvider(this);
+		}
+
+		return authProcessingMethodItemProvider;
 	}
 
 	/**
@@ -1105,6 +1197,29 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 		}
 
 		return uiComponentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthForm} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AuthFormItemProvider authFormItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthForm}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAuthFormAdapter() {
+		if (authFormItemProvider == null) {
+			authFormItemProvider = new AuthFormItemProvider(this);
+		}
+
+		return authFormItemProvider;
 	}
 
 	/**
@@ -2645,6 +2760,8 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 			dateTimeAttributeItemProvider.dispose();
 		if (pageItemProvider != null)
 			pageItemProvider.dispose();
+		if (authPageItemProvider != null)
+			authPageItemProvider.dispose();
 		if (daoInterfaceItemProvider != null)
 			daoInterfaceItemProvider.dispose();
 		if (daoClassItemProvider != null)
@@ -2657,10 +2774,16 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 			ioParameterItemProvider.dispose();
 		if (resultDependencyItemProvider != null)
 			resultDependencyItemProvider.dispose();
+		if (authSuccessUrlItemProvider != null)
+			authSuccessUrlItemProvider.dispose();
+		if (authFailureUrlItemProvider != null)
+			authFailureUrlItemProvider.dispose();
 		if (navigationAssociationItemProvider != null)
 			navigationAssociationItemProvider.dispose();
 		if (frontControllerMethodItemProvider != null)
 			frontControllerMethodItemProvider.dispose();
+		if (authProcessingMethodItemProvider != null)
+			authProcessingMethodItemProvider.dispose();
 		if (serviceClassItemProvider != null)
 			serviceClassItemProvider.dispose();
 		if (serviceInterfaceItemProvider != null)
@@ -2705,6 +2828,8 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 			applicationPackageItemProvider.dispose();
 		if (uiComponentItemProvider != null)
 			uiComponentItemProvider.dispose();
+		if (authFormItemProvider != null)
+			authFormItemProvider.dispose();
 		if (resultTypeItemProvider != null)
 			resultTypeItemProvider.dispose();
 		if (domainGeneralizationItemProvider != null)

@@ -98,6 +98,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="pageTagLib" upperBound="-1"
         eType="#//TagLib"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AuthPage" eSuperTypes="#//Page"/>
   <eClassifiers xsi:type="ecore:EClass" name="DAOInterface" eSuperTypes="../../org.eclipse.uml2.uml/model/UML.ecore#//Interface">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="infix" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sufix" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"
@@ -124,6 +125,8 @@
         ordered="false" lowerBound="1" eType="#//ResultConstraint" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="httpStatus" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AuthSuccessUrl" eSuperTypes="#//ResultDependency"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AuthFailureUrl" eSuperTypes="#//ResultDependency"/>
   <eClassifiers xsi:type="ecore:EClass" name="NavigationAssociation" eSuperTypes="../../org.eclipse.uml2.uml/model/UML.ecore#//Association"/>
   <eClassifiers xsi:type="ecore:EClass" name="FrontControllerMethod" eSuperTypes="../../org.eclipse.uml2.uml/model/UML.ecore#//Operation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isDefault" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
@@ -131,6 +134,7 @@
         eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Type"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestMethod" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AuthProcessingMethod" eSuperTypes="#//FrontControllerMethod"/>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceClass" eSuperTypes="../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceInterface" eSuperTypes="../../org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceGeneralization" eSuperTypes="../../org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>
@@ -213,6 +217,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="PersistencePackage" eSuperTypes="../../org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
   <eClassifiers xsi:type="ecore:EClass" name="ApplicationPackage" eSuperTypes="../../org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
   <eClassifiers xsi:type="ecore:EClass" name="UIComponent" eSuperTypes="#//NavigationClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AuthForm" eSuperTypes="#//UIComponent"/>
   <eClassifiers xsi:type="ecore:EClass" name="ResultType" eSuperTypes="../../org.eclipse.uml2.uml/model/UML.ecore#//Stereotype"/>
   <eClassifiers xsi:type="ecore:EClass" name="NavigationPackage" abstract="true" eSuperTypes="../../org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
   <eClassifiers xsi:type="ecore:EClass" name="DomainGeneralization" eSuperTypes="../../org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>

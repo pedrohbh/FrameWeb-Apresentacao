@@ -569,6 +569,45 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case FramewebPackage.AUTH_PAGE: {
+			AuthPage authPage = (AuthPage) theEObject;
+			T result = caseAuthPage(authPage);
+			if (result == null)
+				result = casePage(authPage);
+			if (result == null)
+				result = caseNavigationClass(authPage);
+			if (result == null)
+				result = caseClass(authPage);
+			if (result == null)
+				result = caseEncapsulatedClassifier(authPage);
+			if (result == null)
+				result = caseBehavioredClassifier(authPage);
+			if (result == null)
+				result = caseStructuredClassifier(authPage);
+			if (result == null)
+				result = caseClassifier(authPage);
+			if (result == null)
+				result = caseNamespace(authPage);
+			if (result == null)
+				result = caseRedefinableElement(authPage);
+			if (result == null)
+				result = caseType(authPage);
+			if (result == null)
+				result = caseTemplateableElement(authPage);
+			if (result == null)
+				result = casePackageableElement(authPage);
+			if (result == null)
+				result = caseNamedElement(authPage);
+			if (result == null)
+				result = caseParameterableElement(authPage);
+			if (result == null)
+				result = caseElement(authPage);
+			if (result == null)
+				result = caseEModelElement(authPage);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case FramewebPackage.DAO_INTERFACE: {
 			DAOInterface daoInterface = (DAOInterface) theEObject;
 			T result = caseDAOInterface(daoInterface);
@@ -755,6 +794,60 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case FramewebPackage.AUTH_SUCCESS_URL: {
+			AuthSuccessUrl authSuccessUrl = (AuthSuccessUrl) theEObject;
+			T result = caseAuthSuccessUrl(authSuccessUrl);
+			if (result == null)
+				result = caseResultDependency(authSuccessUrl);
+			if (result == null)
+				result = caseNavigationDependency(authSuccessUrl);
+			if (result == null)
+				result = caseDependency(authSuccessUrl);
+			if (result == null)
+				result = casePackageableElement(authSuccessUrl);
+			if (result == null)
+				result = caseDirectedRelationship(authSuccessUrl);
+			if (result == null)
+				result = caseNamedElement(authSuccessUrl);
+			if (result == null)
+				result = caseParameterableElement(authSuccessUrl);
+			if (result == null)
+				result = caseRelationship(authSuccessUrl);
+			if (result == null)
+				result = caseElement(authSuccessUrl);
+			if (result == null)
+				result = caseEModelElement(authSuccessUrl);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FramewebPackage.AUTH_FAILURE_URL: {
+			AuthFailureUrl authFailureUrl = (AuthFailureUrl) theEObject;
+			T result = caseAuthFailureUrl(authFailureUrl);
+			if (result == null)
+				result = caseResultDependency(authFailureUrl);
+			if (result == null)
+				result = caseNavigationDependency(authFailureUrl);
+			if (result == null)
+				result = caseDependency(authFailureUrl);
+			if (result == null)
+				result = casePackageableElement(authFailureUrl);
+			if (result == null)
+				result = caseDirectedRelationship(authFailureUrl);
+			if (result == null)
+				result = caseNamedElement(authFailureUrl);
+			if (result == null)
+				result = caseParameterableElement(authFailureUrl);
+			if (result == null)
+				result = caseRelationship(authFailureUrl);
+			if (result == null)
+				result = caseElement(authFailureUrl);
+			if (result == null)
+				result = caseEModelElement(authFailureUrl);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case FramewebPackage.NAVIGATION_ASSOCIATION: {
 			NavigationAssociation navigationAssociation = (NavigationAssociation) theEObject;
 			T result = caseNavigationAssociation(navigationAssociation);
@@ -809,6 +902,35 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = caseElement(frontControllerMethod);
 			if (result == null)
 				result = caseEModelElement(frontControllerMethod);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FramewebPackage.AUTH_PROCESSING_METHOD: {
+			AuthProcessingMethod authProcessingMethod = (AuthProcessingMethod) theEObject;
+			T result = caseAuthProcessingMethod(authProcessingMethod);
+			if (result == null)
+				result = caseFrontControllerMethod(authProcessingMethod);
+			if (result == null)
+				result = caseOperation(authProcessingMethod);
+			if (result == null)
+				result = caseBehavioralFeature(authProcessingMethod);
+			if (result == null)
+				result = caseParameterableElement(authProcessingMethod);
+			if (result == null)
+				result = caseTemplateableElement(authProcessingMethod);
+			if (result == null)
+				result = caseNamespace(authProcessingMethod);
+			if (result == null)
+				result = caseFeature(authProcessingMethod);
+			if (result == null)
+				result = caseRedefinableElement(authProcessingMethod);
+			if (result == null)
+				result = caseNamedElement(authProcessingMethod);
+			if (result == null)
+				result = caseElement(authProcessingMethod);
+			if (result == null)
+				result = caseEModelElement(authProcessingMethod);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1571,6 +1693,45 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = caseElement(uiComponent);
 			if (result == null)
 				result = caseEModelElement(uiComponent);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FramewebPackage.AUTH_FORM: {
+			AuthForm authForm = (AuthForm) theEObject;
+			T result = caseAuthForm(authForm);
+			if (result == null)
+				result = caseUIComponent(authForm);
+			if (result == null)
+				result = caseNavigationClass(authForm);
+			if (result == null)
+				result = caseClass(authForm);
+			if (result == null)
+				result = caseEncapsulatedClassifier(authForm);
+			if (result == null)
+				result = caseBehavioredClassifier(authForm);
+			if (result == null)
+				result = caseStructuredClassifier(authForm);
+			if (result == null)
+				result = caseClassifier(authForm);
+			if (result == null)
+				result = caseNamespace(authForm);
+			if (result == null)
+				result = caseRedefinableElement(authForm);
+			if (result == null)
+				result = caseType(authForm);
+			if (result == null)
+				result = caseTemplateableElement(authForm);
+			if (result == null)
+				result = casePackageableElement(authForm);
+			if (result == null)
+				result = caseNamedElement(authForm);
+			if (result == null)
+				result = caseParameterableElement(authForm);
+			if (result == null)
+				result = caseElement(authForm);
+			if (result == null)
+				result = caseEModelElement(authForm);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -3719,6 +3880,21 @@ public class FramewebSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Auth Page</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Auth Page</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAuthPage(AuthPage object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>DAO Interface</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -3809,6 +3985,36 @@ public class FramewebSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Auth Success Url</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Auth Success Url</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAuthSuccessUrl(AuthSuccessUrl object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Auth Failure Url</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Auth Failure Url</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAuthFailureUrl(AuthFailureUrl object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Navigation Association</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -3835,6 +4041,21 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFrontControllerMethod(FrontControllerMethod object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Auth Processing Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Auth Processing Method</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAuthProcessingMethod(AuthProcessingMethod object) {
 		return null;
 	}
 
@@ -4225,6 +4446,21 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseUIComponent(UIComponent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Auth Form</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Auth Form</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAuthForm(AuthForm object) {
 		return null;
 	}
 

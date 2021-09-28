@@ -157,6 +157,15 @@ public interface FramewebFactory extends EFactory {
 	Page createPage();
 
 	/**
+	 * Returns a new object of class '<em>Auth Page</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Page</em>'.
+	 * @generated
+	 */
+	AuthPage createAuthPage();
+
+	/**
 	 * Returns a new object of class '<em>DAO Interface</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -211,6 +220,24 @@ public interface FramewebFactory extends EFactory {
 	ResultDependency createResultDependency();
 
 	/**
+	 * Returns a new object of class '<em>Auth Success Url</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Success Url</em>'.
+	 * @generated
+	 */
+	AuthSuccessUrl createAuthSuccessUrl();
+
+	/**
+	 * Returns a new object of class '<em>Auth Failure Url</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Failure Url</em>'.
+	 * @generated
+	 */
+	AuthFailureUrl createAuthFailureUrl();
+
+	/**
 	 * Returns a new object of class '<em>Navigation Association</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -227,6 +254,15 @@ public interface FramewebFactory extends EFactory {
 	 * @generated
 	 */
 	FrontControllerMethod createFrontControllerMethod();
+
+	/**
+	 * Returns a new object of class '<em>Auth Processing Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Processing Method</em>'.
+	 * @generated
+	 */
+	AuthProcessingMethod createAuthProcessingMethod();
 
 	/**
 	 * Returns a new object of class '<em>Service Class</em>'.
@@ -425,6 +461,15 @@ public interface FramewebFactory extends EFactory {
 	 * @generated
 	 */
 	UIComponent createUIComponent();
+
+	/**
+	 * Returns a new object of class '<em>Auth Form</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Form</em>'.
+	 * @generated
+	 */
+	AuthForm createAuthForm();
 
 	/**
 	 * Returns a new object of class '<em>Result Type</em>'.
