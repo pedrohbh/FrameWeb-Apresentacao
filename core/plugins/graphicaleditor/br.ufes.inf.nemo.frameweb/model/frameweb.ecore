@@ -355,6 +355,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="enumerationClassTemplate"
         eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="classExtension" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="authUserClassTemplate"
+        eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="authRoleClassTemplate"
+        eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="authPermissionClassTemplate"
+        eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DAOTemplate" eSuperTypes="#//FrameworkProfile">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="classTemplate" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>

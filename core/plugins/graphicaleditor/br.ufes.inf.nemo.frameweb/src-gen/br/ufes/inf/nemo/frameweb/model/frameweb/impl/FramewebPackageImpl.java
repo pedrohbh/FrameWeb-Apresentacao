@@ -3244,6 +3244,36 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EAttribute getORMTemplate_AuthUserClassTemplate() {
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getORMTemplate_AuthRoleClassTemplate() {
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getORMTemplate_AuthPermissionClassTemplate() {
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getDAOTemplate() {
 		return daoTemplateEClass;
 	}
@@ -3940,6 +3970,9 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__CLASS_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__CLASS_EXTENSION);
+		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__AUTH_USER_CLASS_TEMPLATE);
+		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__AUTH_ROLE_CLASS_TEMPLATE);
+		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__AUTH_PERMISSION_CLASS_TEMPLATE);
 
 		daoTemplateEClass = createEClass(DAO_TEMPLATE);
 		createEAttribute(daoTemplateEClass, DAO_TEMPLATE__CLASS_TEMPLATE);
@@ -4748,6 +4781,15 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getORMTemplate_ClassExtension(), theTypesPackage.getString(), "classExtension", null, 0, 1,
 				ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getORMTemplate_AuthUserClassTemplate(), theTypesPackage.getString(), "authUserClassTemplate",
+				null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getORMTemplate_AuthRoleClassTemplate(), theTypesPackage.getString(), "authRoleClassTemplate",
+				null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getORMTemplate_AuthPermissionClassTemplate(), theTypesPackage.getString(),
+				"authPermissionClassTemplate", null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(daoTemplateEClass, DAOTemplate.class, "DAOTemplate", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

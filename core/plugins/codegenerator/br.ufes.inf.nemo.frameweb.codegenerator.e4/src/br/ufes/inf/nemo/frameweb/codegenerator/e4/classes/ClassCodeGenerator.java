@@ -8,6 +8,9 @@ import org.eclipse.uml2.uml.EnumerationLiteral;
 
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.engine.JtwigTemplateEngineImpl;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.engine.TemplateEngine;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthPermission;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthRole;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthUser;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOInterface;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DAOMethod;
@@ -65,6 +68,76 @@ public class ClassCodeGenerator {
 
 		return templateEngineContext.getCode();
 	}
+	
+	public static String render(AuthUser class_, String template) {
+		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
+		templateEngineContext.setTemplate(template);
+
+		templateEngineContext
+			.addParameter(PACKAGE, class_.getPackage())
+			.addParameter(CLASS, class_)
+			.addParameter(ATTRIBUTES, class_.getAttributes())
+			.addParameter(ASSOCIATIONS, class_.getAssociations()
+					.stream()
+					.filter(DomainAssociation.class::isInstance)
+					.map(DomainAssociation.class::cast)
+					.collect(Collectors.toList()))
+			.addParameter(METHODS, class_.getOperations()
+					.stream()
+					.filter(DomainMethod.class::isInstance)
+					.map(DomainMethod.class::cast)
+					.collect(Collectors.toList()))
+			.addParameter(GENERALIZATIONS, class_.getGeneralizations());
+
+		return templateEngineContext.getCode();
+	}
+	
+	public static String render(AuthRole class_, String template) {
+		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
+		templateEngineContext.setTemplate(template);
+
+		templateEngineContext
+			.addParameter(PACKAGE, class_.getPackage())
+			.addParameter(CLASS, class_)
+			.addParameter(ATTRIBUTES, class_.getAttributes())
+			.addParameter(ASSOCIATIONS, class_.getAssociations()
+					.stream()
+					.filter(DomainAssociation.class::isInstance)
+					.map(DomainAssociation.class::cast)
+					.collect(Collectors.toList()))
+			.addParameter(METHODS, class_.getOperations()
+					.stream()
+					.filter(DomainMethod.class::isInstance)
+					.map(DomainMethod.class::cast)
+					.collect(Collectors.toList()))
+			.addParameter(GENERALIZATIONS, class_.getGeneralizations());
+
+		return templateEngineContext.getCode();
+	}
+	
+	public static String render(AuthPermission class_, String template) {
+		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
+		templateEngineContext.setTemplate(template);
+
+		templateEngineContext
+			.addParameter(PACKAGE, class_.getPackage())
+			.addParameter(CLASS, class_)
+			.addParameter(ATTRIBUTES, class_.getAttributes())
+			.addParameter(ASSOCIATIONS, class_.getAssociations()
+					.stream()
+					.filter(DomainAssociation.class::isInstance)
+					.map(DomainAssociation.class::cast)
+					.collect(Collectors.toList()))
+			.addParameter(METHODS, class_.getOperations()
+					.stream()
+					.filter(DomainMethod.class::isInstance)
+					.map(DomainMethod.class::cast)
+					.collect(Collectors.toList()))
+			.addParameter(GENERALIZATIONS, class_.getGeneralizations());
+
+		return templateEngineContext.getCode();
+	}
+	
 	
 	public static String render(Enumeration class_, String template) {
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
