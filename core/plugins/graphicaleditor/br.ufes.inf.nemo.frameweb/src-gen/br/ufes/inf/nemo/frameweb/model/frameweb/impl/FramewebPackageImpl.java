@@ -3142,7 +3142,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrontControllerTemplate_FormTemplate() {
+	public EAttribute getFrontControllerTemplate_AuthPageTemplate() {
 		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -3152,7 +3152,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrontControllerTemplate_ClassExtension() {
+	public EAttribute getFrontControllerTemplate_FormTemplate() {
 		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -3162,7 +3162,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrontControllerTemplate_PageExtension() {
+	public EAttribute getFrontControllerTemplate_ClassExtension() {
 		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -3172,8 +3172,18 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrontControllerTemplate_RestClassTemplate() {
+	public EAttribute getFrontControllerTemplate_PageExtension() {
 		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFrontControllerTemplate_RestClassTemplate() {
+		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -3996,6 +4006,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		frontControllerTemplateEClass = createEClass(FRONT_CONTROLLER_TEMPLATE);
 		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__CLASS_TEMPLATE);
 		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__PAGE_TEMPLATE);
+		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__AUTH_PAGE_TEMPLATE);
 		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__FORM_TEMPLATE);
 		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__CLASS_EXTENSION);
 		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION);
@@ -4791,6 +4802,9 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getFrontControllerTemplate_PageTemplate(), theTypesPackage.getString(), "pageTemplate", null, 0,
 				1, FrontControllerTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFrontControllerTemplate_AuthPageTemplate(), theTypesPackage.getString(), "authPageTemplate",
+				null, 0, 1, FrontControllerTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFrontControllerTemplate_FormTemplate(), theTypesPackage.getString(), "formTemplate", null, 0,
 				1, FrontControllerTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

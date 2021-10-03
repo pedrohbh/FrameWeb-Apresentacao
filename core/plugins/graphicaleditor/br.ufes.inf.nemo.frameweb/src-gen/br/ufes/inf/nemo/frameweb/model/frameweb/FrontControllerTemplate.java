@@ -13,6 +13,7 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * <ul>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getClassTemplate <em>Class Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getPageTemplate <em>Page Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getAuthPageTemplate <em>Auth Page Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getFormTemplate <em>Form Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getClassExtension <em>Class Extension</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getPageExtension <em>Page Extension</em>}</li>
@@ -75,6 +76,28 @@ public interface FrontControllerTemplate extends FrameworkProfile {
 	 * @generated
 	 */
 	void setPageTemplate(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Auth Page Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Auth Page Template</em>' attribute.
+	 * @see #setAuthPageTemplate(String)
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getFrontControllerTemplate_AuthPageTemplate()
+	 * @model dataType="org.eclipse.uml2.types.String"
+	 * @generated
+	 */
+	String getAuthPageTemplate();
+
+	/**
+	 * Sets the value of the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getAuthPageTemplate <em>Auth Page Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Auth Page Template</em>' attribute.
+	 * @see #getAuthPageTemplate()
+	 * @generated
+	 */
+	void setAuthPageTemplate(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Form Template</b></em>' attribute.

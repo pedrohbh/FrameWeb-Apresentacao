@@ -341,6 +341,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="FrontControllerTemplate" eSuperTypes="#//FrameworkProfile">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="classTemplate" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pageTemplate" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="authPageTemplate" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="formTemplate" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="classExtension" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pageExtension" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>

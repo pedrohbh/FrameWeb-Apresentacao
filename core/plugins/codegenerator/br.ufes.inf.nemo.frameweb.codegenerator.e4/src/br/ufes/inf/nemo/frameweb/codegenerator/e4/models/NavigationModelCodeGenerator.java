@@ -10,6 +10,7 @@ import org.eclipse.uml2.uml.Association;
 
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.ProjectProperties;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.classes.ClassCodeGenerator;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthPage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ControllerPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
@@ -100,6 +101,7 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 //		TODO As paginas web ainda nao foram trabalhadas, acredito que essa parte de geracao
 //		da view necessite de adaptacoes. Temporariamente permanecera assim...
 		String viewTemplatePath = frontControllerTemplate.getPageTemplate();
+		String authViewTemplatePath = frontControllerTemplate.getAuthPageTemplate();
 		
 		if (viewTemplatePath == null)
 			return;
@@ -107,6 +109,7 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 			return;
 		
 		String viewTemplate = projectConfiguration.getTemplate(viewTemplatePath);
+		String authViewTemplate = projectConfiguration.getTemplate(authViewTemplatePath);
 		
 		IFolder view = projectConfiguration.getViewFolder();
 		
@@ -151,6 +154,35 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 						
 						IFileUtils.createFile(file, code);
 					});
+			
+			viewPackage.getOwnedTypes()
+				.stream()
+				.filter(AuthPage.class::isInstance)
+				.map(AuthPage.class::cast)
+				.forEach(page -> {
+	//				FIXME nao foi possivel obter o formulario atraves da associacao de page e, para
+	//				solucionar isso (provisoriamente), uma uniao foi feita entre as associacoes de
+	//				formulario e pagina. O correto a se fazer e obter os dados do formulario atraves
+	//				da navegacao pela associacao page -> form.
+					List<UIComponent> pageUIComponents = new ArrayList<UIComponent>();
+					
+					for (Association navigationAssociation : page.getAssociations()) {
+						for (UIComponent uiComponent : uiComponents) {
+							List<Association> uiComponentAssociations = uiComponent.getAssociations();
+							
+							if (uiComponentAssociations.contains(navigationAssociation)) {
+								pageUIComponents.add(uiComponent);
+							}
+						}
+					}
+					
+					String code = ClassCodeGenerator.render(page, pageUIComponents, authViewTemplate);
+					
+					String fileName = page.getName() + projectConfiguration.getPageExtension();
+					IFile file = package_.getFile(fileName);
+					
+					IFileUtils.createFile(file, code);
+				});
 		});
 	}
 
