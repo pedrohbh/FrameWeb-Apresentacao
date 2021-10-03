@@ -292,6 +292,15 @@ public interface FramewebFactory extends EFactory {
 	ServiceInterface createServiceInterface();
 
 	/**
+	 * Returns a new object of class '<em>Auth Service Interface</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Service Interface</em>'.
+	 * @generated
+	 */
+	AuthServiceInterface createAuthServiceInterface();
+
+	/**
 	 * Returns a new object of class '<em>Service Generalization</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

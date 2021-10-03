@@ -344,6 +344,9 @@ public class DAOClassItemProvider extends ClassItemProvider {
 				FramewebFactory.eINSTANCE.createServiceInterface()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthServiceInterface()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createServiceControllerAssociation()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,

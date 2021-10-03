@@ -55,7 +55,6 @@ public class CodeGenerator implements IExternalJavaAction {
 		if (diagram.hasEntityModel() && diagram.hasORMTemplate()) {
 			EntityModel model = diagram.getEntityModel();
 			ORMTemplate template = diagram.getORMTemplate();
-//			System.out.println("===GENERATING ENTITY MODEL CODE!!!===");
 			ModelCodeGenerator entityModelCodeGenerator = 
 					new EntityModelCodeGenerator(model, template, projectProperties);
 

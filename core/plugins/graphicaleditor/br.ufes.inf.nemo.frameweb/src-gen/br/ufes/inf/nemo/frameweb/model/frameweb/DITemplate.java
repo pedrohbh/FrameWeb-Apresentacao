@@ -14,6 +14,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getInterfaceTemplate <em>Interface Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getClassTemplate <em>Class Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getClassExtension <em>Class Extension</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getAuthInterfaceTemplate <em>Auth Interface Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getAuthClassTemplate <em>Auth Class Template</em>}</li>
  * </ul>
  *
  * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getDITemplate()
@@ -98,5 +100,49 @@ public interface DITemplate extends FrameworkProfile {
 	 * @generated
 	 */
 	void setClassExtension(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Auth Interface Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Auth Interface Template</em>' attribute.
+	 * @see #setAuthInterfaceTemplate(String)
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getDITemplate_AuthInterfaceTemplate()
+	 * @model dataType="org.eclipse.uml2.types.String"
+	 * @generated
+	 */
+	String getAuthInterfaceTemplate();
+
+	/**
+	 * Sets the value of the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getAuthInterfaceTemplate <em>Auth Interface Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Auth Interface Template</em>' attribute.
+	 * @see #getAuthInterfaceTemplate()
+	 * @generated
+	 */
+	void setAuthInterfaceTemplate(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Auth Class Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Auth Class Template</em>' attribute.
+	 * @see #setAuthClassTemplate(String)
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getDITemplate_AuthClassTemplate()
+	 * @model dataType="org.eclipse.uml2.types.String"
+	 * @generated
+	 */
+	String getAuthClassTemplate();
+
+	/**
+	 * Sets the value of the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate#getAuthClassTemplate <em>Auth Class Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Auth Class Template</em>' attribute.
+	 * @see #getAuthClassTemplate()
+	 * @generated
+	 */
+	void setAuthClassTemplate(String value);
 
 } // DITemplate

@@ -1036,6 +1036,37 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case FramewebPackage.AUTH_SERVICE_INTERFACE: {
+			AuthServiceInterface authServiceInterface = (AuthServiceInterface) theEObject;
+			T result = caseAuthServiceInterface(authServiceInterface);
+			if (result == null)
+				result = caseServiceInterface(authServiceInterface);
+			if (result == null)
+				result = caseInterface(authServiceInterface);
+			if (result == null)
+				result = caseClassifier(authServiceInterface);
+			if (result == null)
+				result = caseNamespace(authServiceInterface);
+			if (result == null)
+				result = caseRedefinableElement(authServiceInterface);
+			if (result == null)
+				result = caseType(authServiceInterface);
+			if (result == null)
+				result = caseTemplateableElement(authServiceInterface);
+			if (result == null)
+				result = casePackageableElement(authServiceInterface);
+			if (result == null)
+				result = caseNamedElement(authServiceInterface);
+			if (result == null)
+				result = caseParameterableElement(authServiceInterface);
+			if (result == null)
+				result = caseElement(authServiceInterface);
+			if (result == null)
+				result = caseEModelElement(authServiceInterface);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case FramewebPackage.SERVICE_GENERALIZATION: {
 			ServiceGeneralization serviceGeneralization = (ServiceGeneralization) theEObject;
 			T result = caseServiceGeneralization(serviceGeneralization);
@@ -4167,6 +4198,21 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseServiceInterface(ServiceInterface object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Auth Service Interface</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Auth Service Interface</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAuthServiceInterface(AuthServiceInterface object) {
 		return null;
 	}
 

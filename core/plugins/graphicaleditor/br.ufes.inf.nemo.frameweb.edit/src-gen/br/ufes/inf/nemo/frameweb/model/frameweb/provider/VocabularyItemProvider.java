@@ -324,6 +324,9 @@ public class VocabularyItemProvider extends PackageItemProvider {
 				FramewebFactory.eINSTANCE.createServiceInterface()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__OWNED_TYPE,
+				FramewebFactory.eINSTANCE.createAuthServiceInterface()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__OWNED_TYPE,
 				FramewebFactory.eINSTANCE.createServiceControllerAssociation()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__OWNED_TYPE,
@@ -451,6 +454,9 @@ public class VocabularyItemProvider extends PackageItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
 				FramewebFactory.eINSTANCE.createServiceInterface()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
+				FramewebFactory.eINSTANCE.createAuthServiceInterface()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PACKAGE__PACKAGED_ELEMENT,
 				FramewebFactory.eINSTANCE.createServiceControllerAssociation()));

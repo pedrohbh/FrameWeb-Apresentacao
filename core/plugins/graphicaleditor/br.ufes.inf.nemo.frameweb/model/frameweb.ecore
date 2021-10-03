@@ -141,6 +141,7 @@
         eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceInterface" eSuperTypes="../../org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AuthServiceInterface" eSuperTypes="#//ServiceInterface"/>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceGeneralization" eSuperTypes="../../org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceControllerAssociation" eSuperTypes="#//ServiceAssociation">
     <eOperations name="getSourceMember" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
@@ -349,6 +350,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interfaceTemplate" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="classTemplate" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="classExtension" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="authInterfaceTemplate"
+        eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="authClassTemplate" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ORMTemplate" eSuperTypes="#//FrameworkProfile">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="classTemplate" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>

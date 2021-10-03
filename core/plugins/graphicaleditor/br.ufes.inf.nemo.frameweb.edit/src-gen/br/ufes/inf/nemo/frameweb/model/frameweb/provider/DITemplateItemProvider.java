@@ -49,6 +49,8 @@ public class DITemplateItemProvider extends FrameworkProfileItemProvider {
 			addInterfaceTemplatePropertyDescriptor(object);
 			addClassTemplatePropertyDescriptor(object);
 			addClassExtensionPropertyDescriptor(object);
+			addAuthInterfaceTemplatePropertyDescriptor(object);
+			addAuthClassTemplatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -102,6 +104,38 @@ public class DITemplateItemProvider extends FrameworkProfileItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Auth Interface Template feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAuthInterfaceTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_DITemplate_authInterfaceTemplate_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_DITemplate_authInterfaceTemplate_feature",
+								"_UI_DITemplate_type"),
+						FramewebPackage.Literals.DI_TEMPLATE__AUTH_INTERFACE_TEMPLATE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Auth Class Template feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAuthClassTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_DITemplate_authClassTemplate_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_DITemplate_authClassTemplate_feature",
+								"_UI_DITemplate_type"),
+						FramewebPackage.Literals.DI_TEMPLATE__AUTH_CLASS_TEMPLATE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns DITemplate.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -150,6 +184,8 @@ public class DITemplateItemProvider extends FrameworkProfileItemProvider {
 		case FramewebPackage.DI_TEMPLATE__INTERFACE_TEMPLATE:
 		case FramewebPackage.DI_TEMPLATE__CLASS_TEMPLATE:
 		case FramewebPackage.DI_TEMPLATE__CLASS_EXTENSION:
+		case FramewebPackage.DI_TEMPLATE__AUTH_INTERFACE_TEMPLATE:
+		case FramewebPackage.DI_TEMPLATE__AUTH_CLASS_TEMPLATE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

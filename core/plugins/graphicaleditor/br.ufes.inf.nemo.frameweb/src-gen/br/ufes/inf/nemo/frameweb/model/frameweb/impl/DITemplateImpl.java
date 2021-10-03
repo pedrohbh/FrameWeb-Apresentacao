@@ -22,6 +22,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.DITemplateImpl#getInterfaceTemplate <em>Interface Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.DITemplateImpl#getClassTemplate <em>Class Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.DITemplateImpl#getClassExtension <em>Class Extension</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.DITemplateImpl#getAuthInterfaceTemplate <em>Auth Interface Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.DITemplateImpl#getAuthClassTemplate <em>Auth Class Template</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,6 +89,46 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * @ordered
 	 */
 	protected String classExtension = CLASS_EXTENSION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAuthInterfaceTemplate() <em>Auth Interface Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthInterfaceTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String AUTH_INTERFACE_TEMPLATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAuthInterfaceTemplate() <em>Auth Interface Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthInterfaceTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected String authInterfaceTemplate = AUTH_INTERFACE_TEMPLATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAuthClassTemplate() <em>Auth Class Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthClassTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String AUTH_CLASS_TEMPLATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAuthClassTemplate() <em>Auth Class Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthClassTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected String authClassTemplate = AUTH_CLASS_TEMPLATE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -185,6 +227,54 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * @generated
 	 */
 	@Override
+	public String getAuthInterfaceTemplate() {
+		return authInterfaceTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAuthInterfaceTemplate(String newAuthInterfaceTemplate) {
+		String oldAuthInterfaceTemplate = authInterfaceTemplate;
+		authInterfaceTemplate = newAuthInterfaceTemplate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.DI_TEMPLATE__AUTH_INTERFACE_TEMPLATE,
+					oldAuthInterfaceTemplate, authInterfaceTemplate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getAuthClassTemplate() {
+		return authClassTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAuthClassTemplate(String newAuthClassTemplate) {
+		String oldAuthClassTemplate = authClassTemplate;
+		authClassTemplate = newAuthClassTemplate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FramewebPackage.DI_TEMPLATE__AUTH_CLASS_TEMPLATE,
+					oldAuthClassTemplate, authClassTemplate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case FramewebPackage.DI_TEMPLATE__INTERFACE_TEMPLATE:
@@ -193,6 +283,10 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 			return getClassTemplate();
 		case FramewebPackage.DI_TEMPLATE__CLASS_EXTENSION:
 			return getClassExtension();
+		case FramewebPackage.DI_TEMPLATE__AUTH_INTERFACE_TEMPLATE:
+			return getAuthInterfaceTemplate();
+		case FramewebPackage.DI_TEMPLATE__AUTH_CLASS_TEMPLATE:
+			return getAuthClassTemplate();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -213,6 +307,12 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 			return;
 		case FramewebPackage.DI_TEMPLATE__CLASS_EXTENSION:
 			setClassExtension((String) newValue);
+			return;
+		case FramewebPackage.DI_TEMPLATE__AUTH_INTERFACE_TEMPLATE:
+			setAuthInterfaceTemplate((String) newValue);
+			return;
+		case FramewebPackage.DI_TEMPLATE__AUTH_CLASS_TEMPLATE:
+			setAuthClassTemplate((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -235,6 +335,12 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 		case FramewebPackage.DI_TEMPLATE__CLASS_EXTENSION:
 			setClassExtension(CLASS_EXTENSION_EDEFAULT);
 			return;
+		case FramewebPackage.DI_TEMPLATE__AUTH_INTERFACE_TEMPLATE:
+			setAuthInterfaceTemplate(AUTH_INTERFACE_TEMPLATE_EDEFAULT);
+			return;
+		case FramewebPackage.DI_TEMPLATE__AUTH_CLASS_TEMPLATE:
+			setAuthClassTemplate(AUTH_CLASS_TEMPLATE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -256,6 +362,12 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 		case FramewebPackage.DI_TEMPLATE__CLASS_EXTENSION:
 			return CLASS_EXTENSION_EDEFAULT == null ? classExtension != null
 					: !CLASS_EXTENSION_EDEFAULT.equals(classExtension);
+		case FramewebPackage.DI_TEMPLATE__AUTH_INTERFACE_TEMPLATE:
+			return AUTH_INTERFACE_TEMPLATE_EDEFAULT == null ? authInterfaceTemplate != null
+					: !AUTH_INTERFACE_TEMPLATE_EDEFAULT.equals(authInterfaceTemplate);
+		case FramewebPackage.DI_TEMPLATE__AUTH_CLASS_TEMPLATE:
+			return AUTH_CLASS_TEMPLATE_EDEFAULT == null ? authClassTemplate != null
+					: !AUTH_CLASS_TEMPLATE_EDEFAULT.equals(authClassTemplate);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -277,6 +389,10 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 		result.append(classTemplate);
 		result.append(", classExtension: ");
 		result.append(classExtension);
+		result.append(", authInterfaceTemplate: ");
+		result.append(authInterfaceTemplate);
+		result.append(", authClassTemplate: ");
+		result.append(authClassTemplate);
 		result.append(')');
 		return result.toString();
 	}

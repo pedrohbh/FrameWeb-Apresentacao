@@ -763,6 +763,29 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceInterface} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AuthServiceInterfaceItemProvider authServiceInterfaceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceInterface}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAuthServiceInterfaceAdapter() {
+		if (authServiceInterfaceItemProvider == null) {
+			authServiceInterfaceItemProvider = new AuthServiceInterfaceItemProvider(this);
+		}
+
+		return authServiceInterfaceItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.ServiceGeneralization} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2836,6 +2859,8 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 			authServiceClassItemProvider.dispose();
 		if (serviceInterfaceItemProvider != null)
 			serviceInterfaceItemProvider.dispose();
+		if (authServiceInterfaceItemProvider != null)
+			authServiceInterfaceItemProvider.dispose();
 		if (serviceGeneralizationItemProvider != null)
 			serviceGeneralizationItemProvider.dispose();
 		if (serviceControllerAssociationItemProvider != null)

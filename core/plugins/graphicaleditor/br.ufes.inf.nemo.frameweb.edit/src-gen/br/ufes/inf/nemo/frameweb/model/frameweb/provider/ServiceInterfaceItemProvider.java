@@ -170,6 +170,9 @@ public class ServiceInterfaceItemProvider extends InterfaceItemProvider {
 				FramewebFactory.eINSTANCE.createServiceInterface()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthServiceInterface()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createServiceControllerAssociation()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,

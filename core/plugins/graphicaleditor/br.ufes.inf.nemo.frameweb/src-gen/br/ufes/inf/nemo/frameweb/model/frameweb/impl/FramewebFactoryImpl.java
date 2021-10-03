@@ -117,6 +117,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createAuthServiceClass();
 		case FramewebPackage.SERVICE_INTERFACE:
 			return createServiceInterface();
+		case FramewebPackage.AUTH_SERVICE_INTERFACE:
+			return createAuthServiceInterface();
 		case FramewebPackage.SERVICE_GENERALIZATION:
 			return createServiceGeneralization();
 		case FramewebPackage.SERVICE_CONTROLLER_ASSOCIATION:
@@ -698,6 +700,17 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	public ServiceInterface createServiceInterface() {
 		ServiceInterfaceImpl serviceInterface = new ServiceInterfaceImpl();
 		return serviceInterface;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AuthServiceInterface createAuthServiceInterface() {
+		AuthServiceInterfaceImpl authServiceInterface = new AuthServiceInterfaceImpl();
+		return authServiceInterface;
 	}
 
 	/**
