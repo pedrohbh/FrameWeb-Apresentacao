@@ -1620,7 +1620,7 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.AuthServiceClass" referenceName="packagedElement">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="ServiceClass"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="AuthServiceClass"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
