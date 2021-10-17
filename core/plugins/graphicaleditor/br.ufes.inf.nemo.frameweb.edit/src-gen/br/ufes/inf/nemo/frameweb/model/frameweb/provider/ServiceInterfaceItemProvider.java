@@ -146,6 +146,9 @@ public class ServiceInterfaceItemProvider extends InterfaceItemProvider {
 				FramewebFactory.eINSTANCE.createPage()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthPage()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createDAOInterface()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
@@ -161,7 +164,13 @@ public class ServiceInterfaceItemProvider extends InterfaceItemProvider {
 				FramewebFactory.eINSTANCE.createServiceClass()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthServiceClass()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createServiceInterface()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthServiceInterface()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createServiceControllerAssociation()));
@@ -170,10 +179,22 @@ public class ServiceInterfaceItemProvider extends InterfaceItemProvider {
 				FramewebFactory.eINSTANCE.createDomainClass()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthUser()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthRole()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthPermission()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createDAOServiceAssociation()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createUIComponent()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthForm()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createResultType()));
@@ -287,16 +308,37 @@ public class ServiceInterfaceItemProvider extends InterfaceItemProvider {
 				FramewebFactory.eINSTANCE.createDomainAttribute()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createDomainAuthAttribute()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createAuthUserName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createAuthPassword()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createAuthRoleName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createAuthPermName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_ATTRIBUTE,
 				FramewebFactory.eINSTANCE.createDomainProperty()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_OPERATION,
 				FramewebFactory.eINSTANCE.createFrontControllerMethod()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_OPERATION,
+				FramewebFactory.eINSTANCE.createAuthProcessingMethod()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_OPERATION,
 				FramewebFactory.eINSTANCE.createDomainMethod()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_OPERATION,
 				FramewebFactory.eINSTANCE.createServiceMethod()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_OPERATION,
+				FramewebFactory.eINSTANCE.createAuthServiceMethod()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_OPERATION,
 				FramewebFactory.eINSTANCE.createDAOMethod()));

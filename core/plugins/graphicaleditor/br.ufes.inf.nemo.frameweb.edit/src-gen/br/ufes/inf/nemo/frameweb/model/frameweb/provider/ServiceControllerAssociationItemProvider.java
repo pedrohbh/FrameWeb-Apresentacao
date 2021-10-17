@@ -206,6 +206,21 @@ public class ServiceControllerAssociationItemProvider extends AssociationItemPro
 				FramewebFactory.eINSTANCE.createDomainAttribute()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__OWNED_END,
+				FramewebFactory.eINSTANCE.createDomainAuthAttribute()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__OWNED_END,
+				FramewebFactory.eINSTANCE.createAuthUserName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__OWNED_END,
+				FramewebFactory.eINSTANCE.createAuthPassword()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__OWNED_END,
+				FramewebFactory.eINSTANCE.createAuthRoleName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__OWNED_END,
+				FramewebFactory.eINSTANCE.createAuthPermName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__OWNED_END,
 				FramewebFactory.eINSTANCE.createDomainProperty()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
@@ -273,6 +288,21 @@ public class ServiceControllerAssociationItemProvider extends AssociationItemPro
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
 				FramewebFactory.eINSTANCE.createDomainAttribute()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
+				FramewebFactory.eINSTANCE.createDomainAuthAttribute()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
+				FramewebFactory.eINSTANCE.createAuthUserName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
+				FramewebFactory.eINSTANCE.createAuthPassword()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
+				FramewebFactory.eINSTANCE.createAuthRoleName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
+				FramewebFactory.eINSTANCE.createAuthPermName()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
 				FramewebFactory.eINSTANCE.createDomainProperty()));

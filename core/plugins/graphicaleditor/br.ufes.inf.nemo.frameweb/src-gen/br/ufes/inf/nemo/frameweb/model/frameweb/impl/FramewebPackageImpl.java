@@ -9,6 +9,21 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Attribute;
 import br.ufes.inf.nemo.frameweb.model.frameweb.AttributeMapping;
 import br.ufes.inf.nemo.frameweb.model.frameweb.AttributeMappingProperty;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthFailureUrl;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthForm;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthPage;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthPassword;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthPermName;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthPermission;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthProcessingMethod;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthRole;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthRoleName;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceClass;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceInterface;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceMethod;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthSuccessUrl;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthUser;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthUserName;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Axiom;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Cascade;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ChainingConstraint;
@@ -34,6 +49,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.DateTimePrecision;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DecimalAttribute;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAttribute;
+import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAuthAttribute;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainConstraints;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainGeneralization;
@@ -262,6 +278,13 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass authPageEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass daoInterfaceEClass = null;
 
 	/**
@@ -304,6 +327,20 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass authSuccessUrlEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass authFailureUrlEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass navigationAssociationEClass = null;
 
 	/**
@@ -318,6 +355,13 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass authProcessingMethodEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass serviceClassEClass = null;
 
 	/**
@@ -325,7 +369,21 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass authServiceClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass serviceInterfaceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass authServiceInterfaceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -347,6 +405,27 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	private EClass domainClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass authUserEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass authRoleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass authPermissionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -403,6 +482,13 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	private EClass serviceMethodEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass authServiceMethodEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -473,6 +559,13 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	private EClass uiComponentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass authFormEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -837,6 +930,41 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	private EClass domainAttributeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass domainAuthAttributeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass authUserNameEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass authPasswordEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass authRoleNameEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass authPermNameEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1454,6 +1582,16 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EClass getAuthPage() {
+		return authPageEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getDAOInterface() {
 		return daoInterfaceEClass;
 	}
@@ -1604,6 +1742,26 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EClass getAuthSuccessUrl() {
+		return authSuccessUrlEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAuthFailureUrl() {
+		return authFailureUrlEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getNavigationAssociation() {
 		return navigationAssociationEClass;
 	}
@@ -1654,6 +1812,16 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EClass getAuthProcessingMethod() {
+		return authProcessingMethodEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getServiceClass() {
 		return serviceClassEClass;
 	}
@@ -1664,8 +1832,38 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EClass getAuthServiceClass() {
+		return authServiceClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAuthServiceClass_PermissionName() {
+		return (EAttribute) authServiceClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getServiceInterface() {
 		return serviceInterfaceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAuthServiceInterface() {
+		return authServiceInterfaceEClass;
 	}
 
 	/**
@@ -1726,6 +1924,76 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	@Override
 	public EAttribute getDomainClass_Table() {
 		return (EAttribute) domainClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAuthUser() {
+		return authUserEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAuthUser_AuthUserName() {
+		return (EReference) authUserEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAuthUser_AuthPassword() {
+		return (EReference) authUserEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAuthRole() {
+		return authRoleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAuthRole_AuthRoleName() {
+		return (EReference) authRoleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAuthPermission() {
+		return authPermissionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAuthPermission_AuthPermName() {
+		return (EReference) authPermissionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1884,6 +2152,26 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EClass getAuthServiceMethod() {
+		return authServiceMethodEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAuthServiceMethod_PermissionName() {
+		return (EAttribute) authServiceMethodEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getServiceAttribute() {
 		return serviceAttributeEClass;
 	}
@@ -1996,6 +2284,16 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	@Override
 	public EClass getUIComponent() {
 		return uiComponentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAuthForm() {
+		return authFormEClass;
 	}
 
 	/**
@@ -2754,6 +3052,56 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EClass getDomainAuthAttribute() {
+		return domainAuthAttributeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAuthUserName() {
+		return authUserNameEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAuthPassword() {
+		return authPasswordEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAuthRoleName() {
+		return authRoleNameEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAuthPermName() {
+		return authPermNameEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getDomainProperty() {
 		return domainPropertyEClass;
 	}
@@ -2794,7 +3142,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrontControllerTemplate_FormTemplate() {
+	public EAttribute getFrontControllerTemplate_AuthPageTemplate() {
 		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2804,7 +3152,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrontControllerTemplate_ClassExtension() {
+	public EAttribute getFrontControllerTemplate_FormTemplate() {
 		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -2814,7 +3162,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrontControllerTemplate_PageExtension() {
+	public EAttribute getFrontControllerTemplate_ClassExtension() {
 		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -2824,8 +3172,18 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrontControllerTemplate_RestClassTemplate() {
+	public EAttribute getFrontControllerTemplate_PageExtension() {
 		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFrontControllerTemplate_RestClassTemplate() {
+		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -2874,6 +3232,26 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EAttribute getDITemplate_AuthInterfaceTemplate() {
+		return (EAttribute) diTemplateEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDITemplate_AuthClassTemplate() {
+		return (EAttribute) diTemplateEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getORMTemplate() {
 		return ormTemplateEClass;
 	}
@@ -2906,6 +3284,36 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	@Override
 	public EAttribute getORMTemplate_ClassExtension() {
 		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getORMTemplate_AuthUserClassTemplate() {
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getORMTemplate_AuthRoleClassTemplate() {
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getORMTemplate_AuthPermissionClassTemplate() {
+		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -3342,6 +3750,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		pageEClass = createEClass(PAGE);
 		createEReference(pageEClass, PAGE__PAGE_TAG_LIB);
 
+		authPageEClass = createEClass(AUTH_PAGE);
+
 		daoInterfaceEClass = createEClass(DAO_INTERFACE);
 		createEAttribute(daoInterfaceEClass, DAO_INTERFACE__INFIX);
 		createEAttribute(daoInterfaceEClass, DAO_INTERFACE__SUFIX);
@@ -3363,6 +3773,10 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEReference(resultDependencyEClass, RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT);
 		createEAttribute(resultDependencyEClass, RESULT_DEPENDENCY__HTTP_STATUS);
 
+		authSuccessUrlEClass = createEClass(AUTH_SUCCESS_URL);
+
+		authFailureUrlEClass = createEClass(AUTH_FAILURE_URL);
+
 		navigationAssociationEClass = createEClass(NAVIGATION_ASSOCIATION);
 
 		frontControllerMethodEClass = createEClass(FRONT_CONTROLLER_METHOD);
@@ -3370,9 +3784,16 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEReference(frontControllerMethodEClass, FRONT_CONTROLLER_METHOD__METHOD_TYPE);
 		createEAttribute(frontControllerMethodEClass, FRONT_CONTROLLER_METHOD__REQUEST_METHOD);
 
+		authProcessingMethodEClass = createEClass(AUTH_PROCESSING_METHOD);
+
 		serviceClassEClass = createEClass(SERVICE_CLASS);
 
+		authServiceClassEClass = createEClass(AUTH_SERVICE_CLASS);
+		createEAttribute(authServiceClassEClass, AUTH_SERVICE_CLASS__PERMISSION_NAME);
+
 		serviceInterfaceEClass = createEClass(SERVICE_INTERFACE);
+
+		authServiceInterfaceEClass = createEClass(AUTH_SERVICE_INTERFACE);
 
 		serviceGeneralizationEClass = createEClass(SERVICE_GENERALIZATION);
 
@@ -3382,6 +3803,16 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		domainClassEClass = createEClass(DOMAIN_CLASS);
 		createEAttribute(domainClassEClass, DOMAIN_CLASS__TABLE);
+
+		authUserEClass = createEClass(AUTH_USER);
+		createEReference(authUserEClass, AUTH_USER__AUTH_USER_NAME);
+		createEReference(authUserEClass, AUTH_USER__AUTH_PASSWORD);
+
+		authRoleEClass = createEClass(AUTH_ROLE);
+		createEReference(authRoleEClass, AUTH_ROLE__AUTH_ROLE_NAME);
+
+		authPermissionEClass = createEClass(AUTH_PERMISSION);
+		createEReference(authPermissionEClass, AUTH_PERMISSION__AUTH_PERM_NAME);
 
 		frontControllerDependencyEClass = createEClass(FRONT_CONTROLLER_DEPENDENCY);
 		createEReference(frontControllerDependencyEClass, FRONT_CONTROLLER_DEPENDENCY__METHOD);
@@ -3406,6 +3837,9 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		serviceMethodEClass = createEClass(SERVICE_METHOD);
 		createEReference(serviceMethodEClass, SERVICE_METHOD__METHOD_TYPE);
 
+		authServiceMethodEClass = createEClass(AUTH_SERVICE_METHOD);
+		createEAttribute(authServiceMethodEClass, AUTH_SERVICE_METHOD__PERMISSION_NAME);
+
 		serviceAttributeEClass = createEClass(SERVICE_ATTRIBUTE);
 
 		serviceAssociationEClass = createEClass(SERVICE_ASSOCIATION);
@@ -3427,6 +3861,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		applicationPackageEClass = createEClass(APPLICATION_PACKAGE);
 
 		uiComponentEClass = createEClass(UI_COMPONENT);
+
+		authFormEClass = createEClass(AUTH_FORM);
 
 		resultTypeEClass = createEClass(RESULT_TYPE);
 
@@ -3555,11 +3991,22 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		domainAttributeEClass = createEClass(DOMAIN_ATTRIBUTE);
 
+		domainAuthAttributeEClass = createEClass(DOMAIN_AUTH_ATTRIBUTE);
+
+		authUserNameEClass = createEClass(AUTH_USER_NAME);
+
+		authPasswordEClass = createEClass(AUTH_PASSWORD);
+
+		authRoleNameEClass = createEClass(AUTH_ROLE_NAME);
+
+		authPermNameEClass = createEClass(AUTH_PERM_NAME);
+
 		domainPropertyEClass = createEClass(DOMAIN_PROPERTY);
 
 		frontControllerTemplateEClass = createEClass(FRONT_CONTROLLER_TEMPLATE);
 		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__CLASS_TEMPLATE);
 		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__PAGE_TEMPLATE);
+		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__AUTH_PAGE_TEMPLATE);
 		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__FORM_TEMPLATE);
 		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__CLASS_EXTENSION);
 		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION);
@@ -3569,11 +4016,16 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEAttribute(diTemplateEClass, DI_TEMPLATE__INTERFACE_TEMPLATE);
 		createEAttribute(diTemplateEClass, DI_TEMPLATE__CLASS_TEMPLATE);
 		createEAttribute(diTemplateEClass, DI_TEMPLATE__CLASS_EXTENSION);
+		createEAttribute(diTemplateEClass, DI_TEMPLATE__AUTH_INTERFACE_TEMPLATE);
+		createEAttribute(diTemplateEClass, DI_TEMPLATE__AUTH_CLASS_TEMPLATE);
 
 		ormTemplateEClass = createEClass(ORM_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__CLASS_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE);
 		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__CLASS_EXTENSION);
+		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__AUTH_USER_CLASS_TEMPLATE);
+		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__AUTH_ROLE_CLASS_TEMPLATE);
+		createEAttribute(ormTemplateEClass, ORM_TEMPLATE__AUTH_PERMISSION_CLASS_TEMPLATE);
 
 		daoTemplateEClass = createEClass(DAO_TEMPLATE);
 		createEAttribute(daoTemplateEClass, DAO_TEMPLATE__CLASS_TEMPLATE);
@@ -3669,19 +4121,28 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		decimalAttributeEClass.getESuperTypes().add(this.getAttribute());
 		dateTimeAttributeEClass.getESuperTypes().add(this.getAttribute());
 		pageEClass.getESuperTypes().add(this.getNavigationClass());
+		authPageEClass.getESuperTypes().add(this.getPage());
 		daoInterfaceEClass.getESuperTypes().add(theUMLPackage.getInterface());
 		daoClassEClass.getESuperTypes().add(theUMLPackage.getClass_());
 		daoRealizationEClass.getESuperTypes().add(theUMLPackage.getInterfaceRealization());
 		frontControllerClassEClass.getESuperTypes().add(theUMLPackage.getClass_());
 		ioParameterEClass.getESuperTypes().add(this.getNavigationAttribute());
 		resultDependencyEClass.getESuperTypes().add(this.getNavigationDependency());
+		authSuccessUrlEClass.getESuperTypes().add(this.getResultDependency());
+		authFailureUrlEClass.getESuperTypes().add(this.getResultDependency());
 		navigationAssociationEClass.getESuperTypes().add(theUMLPackage.getAssociation());
 		frontControllerMethodEClass.getESuperTypes().add(theUMLPackage.getOperation());
+		authProcessingMethodEClass.getESuperTypes().add(this.getFrontControllerMethod());
 		serviceClassEClass.getESuperTypes().add(theUMLPackage.getClass_());
+		authServiceClassEClass.getESuperTypes().add(this.getServiceClass());
 		serviceInterfaceEClass.getESuperTypes().add(theUMLPackage.getInterface());
+		authServiceInterfaceEClass.getESuperTypes().add(this.getServiceInterface());
 		serviceGeneralizationEClass.getESuperTypes().add(theUMLPackage.getGeneralization());
 		serviceControllerAssociationEClass.getESuperTypes().add(this.getServiceAssociation());
 		domainClassEClass.getESuperTypes().add(theUMLPackage.getClass_());
+		authUserEClass.getESuperTypes().add(this.getDomainClass());
+		authRoleEClass.getESuperTypes().add(this.getDomainClass());
+		authPermissionEClass.getESuperTypes().add(this.getDomainClass());
 		frontControllerDependencyEClass.getESuperTypes().add(this.getNavigationDependency());
 		pageDependencyEClass.getESuperTypes().add(this.getNavigationDependency());
 		daoServiceAssociationEClass.getESuperTypes().add(this.getServiceAssociation());
@@ -3690,6 +4151,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		domainMethodEClass.getESuperTypes().add(theUMLPackage.getOperation());
 		daoAttributeEClass.getESuperTypes().add(theUMLPackage.getProperty());
 		serviceMethodEClass.getESuperTypes().add(theUMLPackage.getOperation());
+		authServiceMethodEClass.getESuperTypes().add(this.getServiceMethod());
 		serviceAttributeEClass.getESuperTypes().add(theUMLPackage.getProperty());
 		serviceAssociationEClass.getESuperTypes().add(theUMLPackage.getAssociation());
 		navigationDependencyEClass.getESuperTypes().add(theUMLPackage.getDependency());
@@ -3700,6 +4162,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		persistencePackageEClass.getESuperTypes().add(theUMLPackage.getPackage());
 		applicationPackageEClass.getESuperTypes().add(theUMLPackage.getPackage());
 		uiComponentEClass.getESuperTypes().add(this.getNavigationClass());
+		authFormEClass.getESuperTypes().add(this.getUIComponent());
 		resultTypeEClass.getESuperTypes().add(theUMLPackage.getStereotype());
 		navigationPackageEClass.getESuperTypes().add(theUMLPackage.getPackage());
 		domainGeneralizationEClass.getESuperTypes().add(theUMLPackage.getGeneralization());
@@ -3756,6 +4219,13 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		domainVocabularyAssociationEClass.getESuperTypes().add(theUMLPackage.getAssociation());
 		domainVocabularyPropertyEClass.getESuperTypes().add(theUMLPackage.getProperty());
 		domainAttributeEClass.getESuperTypes().add(this.getAttribute());
+		domainAuthAttributeEClass.getESuperTypes().add(this.getDomainAttribute());
+		authUserNameEClass.getESuperTypes().add(this.getDomainAuthAttribute());
+		authPasswordEClass.getESuperTypes().add(this.getDomainAuthAttribute());
+		authRoleNameEClass.getESuperTypes().add(this.getDomainAuthAttribute());
+		authRoleNameEClass.getESuperTypes().add(this.getIdAttribute());
+		authPermNameEClass.getESuperTypes().add(this.getDomainAuthAttribute());
+		authPermNameEClass.getESuperTypes().add(this.getIdAttribute());
 		domainPropertyEClass.getESuperTypes().add(theUMLPackage.getProperty());
 		frontControllerTemplateEClass.getESuperTypes().add(this.getFrameworkProfile());
 		diTemplateEClass.getESuperTypes().add(this.getFrameworkProfile());
@@ -3875,6 +4345,9 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(authPageEClass, AuthPage.class, "AuthPage", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(daoInterfaceEClass, DAOInterface.class, "DAOInterface", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDAOInterface_Infix(), theTypesPackage.getString(), "infix", null, 1, 1, DAOInterface.class,
@@ -3917,6 +4390,12 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 				ResultDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
+		initEClass(authSuccessUrlEClass, AuthSuccessUrl.class, "AuthSuccessUrl", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(authFailureUrlEClass, AuthFailureUrl.class, "AuthFailureUrl", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(navigationAssociationEClass, NavigationAssociation.class, "NavigationAssociation", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3932,11 +4411,23 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 				1, FrontControllerMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(authProcessingMethodEClass, AuthProcessingMethod.class, "AuthProcessingMethod", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(serviceClassEClass, ServiceClass.class, "ServiceClass", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(authServiceClassEClass, AuthServiceClass.class, "AuthServiceClass", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAuthServiceClass_PermissionName(), theTypesPackage.getString(), "permissionName", null, 1, 1,
+				AuthServiceClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
 		initEClass(serviceInterfaceEClass, ServiceInterface.class, "ServiceInterface", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(authServiceInterfaceEClass, AuthServiceInterface.class, "AuthServiceInterface", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(serviceGeneralizationEClass, ServiceGeneralization.class, "ServiceGeneralization", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3954,6 +4445,27 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDomainClass_Table(), ecorePackage.getEString(), "table", null, 0, 1, DomainClass.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(authUserEClass, AuthUser.class, "AuthUser", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAuthUser_AuthUserName(), this.getAuthUserName(), null, "authUserName", null, 1, 1,
+				AuthUser.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAuthUser_AuthPassword(), this.getAuthPassword(), null, "authPassword", null, 1, 1,
+				AuthUser.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(authRoleEClass, AuthRole.class, "AuthRole", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAuthRole_AuthRoleName(), this.getAuthRoleName(), null, "authRoleName", null, 1, 1,
+				AuthRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(authPermissionEClass, AuthPermission.class, "AuthPermission", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAuthPermission_AuthPermName(), this.getAuthPermName(), null, "authPermName", null, 1, 1,
+				AuthPermission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(frontControllerDependencyEClass, FrontControllerDependency.class, "FrontControllerDependency",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4001,6 +4513,12 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 				ServiceMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
+		initEClass(authServiceMethodEClass, AuthServiceMethod.class, "AuthServiceMethod", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAuthServiceMethod_PermissionName(), theTypesPackage.getString(), "permissionName", null, 1, 1,
+				AuthServiceMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
 		initEClass(serviceAttributeEClass, ServiceAttribute.class, "ServiceAttribute", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
@@ -4034,6 +4552,9 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(uiComponentEClass, UIComponent.class, "UIComponent", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(authFormEClass, AuthForm.class, "AuthForm", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(resultTypeEClass, ResultType.class, "ResultType", !IS_ABSTRACT, !IS_INTERFACE,
@@ -4255,6 +4776,21 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEClass(domainAttributeEClass, DomainAttribute.class, "DomainAttribute", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(domainAuthAttributeEClass, DomainAuthAttribute.class, "DomainAuthAttribute", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(authUserNameEClass, AuthUserName.class, "AuthUserName", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(authPasswordEClass, AuthPassword.class, "AuthPassword", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(authRoleNameEClass, AuthRoleName.class, "AuthRoleName", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(authPermNameEClass, AuthPermName.class, "AuthPermName", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(domainPropertyEClass, DomainProperty.class, "DomainProperty", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
@@ -4266,6 +4802,9 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getFrontControllerTemplate_PageTemplate(), theTypesPackage.getString(), "pageTemplate", null, 0,
 				1, FrontControllerTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFrontControllerTemplate_AuthPageTemplate(), theTypesPackage.getString(), "authPageTemplate",
+				null, 0, 1, FrontControllerTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFrontControllerTemplate_FormTemplate(), theTypesPackage.getString(), "formTemplate", null, 0,
 				1, FrontControllerTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4290,6 +4829,12 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getDITemplate_ClassExtension(), theTypesPackage.getString(), "classExtension", null, 0, 1,
 				DITemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDITemplate_AuthInterfaceTemplate(), theTypesPackage.getString(), "authInterfaceTemplate",
+				null, 0, 1, DITemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDITemplate_AuthClassTemplate(), theTypesPackage.getString(), "authClassTemplate", null, 0, 1,
+				DITemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(ormTemplateEClass, ORMTemplate.class, "ORMTemplate", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4302,6 +4847,15 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getORMTemplate_ClassExtension(), theTypesPackage.getString(), "classExtension", null, 0, 1,
 				ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getORMTemplate_AuthUserClassTemplate(), theTypesPackage.getString(), "authUserClassTemplate",
+				null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getORMTemplate_AuthRoleClassTemplate(), theTypesPackage.getString(), "authRoleClassTemplate",
+				null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getORMTemplate_AuthPermissionClassTemplate(), theTypesPackage.getString(),
+				"authPermissionClassTemplate", null, 0, 1, ORMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(daoTemplateEClass, DAOTemplate.class, "DAOTemplate", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

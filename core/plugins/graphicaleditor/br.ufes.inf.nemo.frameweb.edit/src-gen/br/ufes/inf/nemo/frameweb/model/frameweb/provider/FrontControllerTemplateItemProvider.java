@@ -48,6 +48,7 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 
 			addClassTemplatePropertyDescriptor(object);
 			addPageTemplatePropertyDescriptor(object);
+			addAuthPageTemplatePropertyDescriptor(object);
 			addFormTemplatePropertyDescriptor(object);
 			addClassExtensionPropertyDescriptor(object);
 			addPageExtensionPropertyDescriptor(object);
@@ -86,6 +87,22 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 								"_UI_FrontControllerTemplate_pageTemplate_feature", "_UI_FrontControllerTemplate_type"),
 						FramewebPackage.Literals.FRONT_CONTROLLER_TEMPLATE__PAGE_TEMPLATE, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Auth Page Template feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAuthPageTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_FrontControllerTemplate_authPageTemplate_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_FrontControllerTemplate_authPageTemplate_feature",
+						"_UI_FrontControllerTemplate_type"),
+				FramewebPackage.Literals.FRONT_CONTROLLER_TEMPLATE__AUTH_PAGE_TEMPLATE, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -200,6 +217,7 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 		switch (notification.getFeatureID(FrontControllerTemplate.class)) {
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__CLASS_TEMPLATE:
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PAGE_TEMPLATE:
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__AUTH_PAGE_TEMPLATE:
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__FORM_TEMPLATE:
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__CLASS_EXTENSION:
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION:

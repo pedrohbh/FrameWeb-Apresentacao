@@ -87,6 +87,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createDateTimeAttribute();
 		case FramewebPackage.PAGE:
 			return createPage();
+		case FramewebPackage.AUTH_PAGE:
+			return createAuthPage();
 		case FramewebPackage.DAO_INTERFACE:
 			return createDAOInterface();
 		case FramewebPackage.DAO_CLASS:
@@ -99,20 +101,36 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createIOParameter();
 		case FramewebPackage.RESULT_DEPENDENCY:
 			return createResultDependency();
+		case FramewebPackage.AUTH_SUCCESS_URL:
+			return createAuthSuccessUrl();
+		case FramewebPackage.AUTH_FAILURE_URL:
+			return createAuthFailureUrl();
 		case FramewebPackage.NAVIGATION_ASSOCIATION:
 			return createNavigationAssociation();
 		case FramewebPackage.FRONT_CONTROLLER_METHOD:
 			return createFrontControllerMethod();
+		case FramewebPackage.AUTH_PROCESSING_METHOD:
+			return createAuthProcessingMethod();
 		case FramewebPackage.SERVICE_CLASS:
 			return createServiceClass();
+		case FramewebPackage.AUTH_SERVICE_CLASS:
+			return createAuthServiceClass();
 		case FramewebPackage.SERVICE_INTERFACE:
 			return createServiceInterface();
+		case FramewebPackage.AUTH_SERVICE_INTERFACE:
+			return createAuthServiceInterface();
 		case FramewebPackage.SERVICE_GENERALIZATION:
 			return createServiceGeneralization();
 		case FramewebPackage.SERVICE_CONTROLLER_ASSOCIATION:
 			return createServiceControllerAssociation();
 		case FramewebPackage.DOMAIN_CLASS:
 			return createDomainClass();
+		case FramewebPackage.AUTH_USER:
+			return createAuthUser();
+		case FramewebPackage.AUTH_ROLE:
+			return createAuthRole();
+		case FramewebPackage.AUTH_PERMISSION:
+			return createAuthPermission();
 		case FramewebPackage.FRONT_CONTROLLER_DEPENDENCY:
 			return createFrontControllerDependency();
 		case FramewebPackage.PAGE_DEPENDENCY:
@@ -125,6 +143,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createDAOAttribute();
 		case FramewebPackage.SERVICE_METHOD:
 			return createServiceMethod();
+		case FramewebPackage.AUTH_SERVICE_METHOD:
+			return createAuthServiceMethod();
 		case FramewebPackage.SERVICE_ATTRIBUTE:
 			return createServiceAttribute();
 		case FramewebPackage.DAO_METHOD:
@@ -141,6 +161,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createApplicationPackage();
 		case FramewebPackage.UI_COMPONENT:
 			return createUIComponent();
+		case FramewebPackage.AUTH_FORM:
+			return createAuthForm();
 		case FramewebPackage.RESULT_TYPE:
 			return createResultType();
 		case FramewebPackage.DOMAIN_GENERALIZATION:
@@ -235,6 +257,16 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createDomainVocabularyProperty();
 		case FramewebPackage.DOMAIN_ATTRIBUTE:
 			return createDomainAttribute();
+		case FramewebPackage.DOMAIN_AUTH_ATTRIBUTE:
+			return createDomainAuthAttribute();
+		case FramewebPackage.AUTH_USER_NAME:
+			return createAuthUserName();
+		case FramewebPackage.AUTH_PASSWORD:
+			return createAuthPassword();
+		case FramewebPackage.AUTH_ROLE_NAME:
+			return createAuthRoleName();
+		case FramewebPackage.AUTH_PERM_NAME:
+			return createAuthPermName();
 		case FramewebPackage.DOMAIN_PROPERTY:
 			return createDomainProperty();
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE:
@@ -511,6 +543,17 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
+	public AuthPage createAuthPage() {
+		AuthPageImpl authPage = new AuthPageImpl();
+		return authPage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public DAOInterface createDAOInterface() {
 		DAOInterfaceImpl daoInterface = new DAOInterfaceImpl();
 		return daoInterface;
@@ -577,6 +620,28 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
+	public AuthSuccessUrl createAuthSuccessUrl() {
+		AuthSuccessUrlImpl authSuccessUrl = new AuthSuccessUrlImpl();
+		return authSuccessUrl;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AuthFailureUrl createAuthFailureUrl() {
+		AuthFailureUrlImpl authFailureUrl = new AuthFailureUrlImpl();
+		return authFailureUrl;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NavigationAssociation createNavigationAssociation() {
 		NavigationAssociationImpl navigationAssociation = new NavigationAssociationImpl();
 		return navigationAssociation;
@@ -599,6 +664,17 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
+	public AuthProcessingMethod createAuthProcessingMethod() {
+		AuthProcessingMethodImpl authProcessingMethod = new AuthProcessingMethodImpl();
+		return authProcessingMethod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ServiceClass createServiceClass() {
 		ServiceClassImpl serviceClass = new ServiceClassImpl();
 		return serviceClass;
@@ -610,9 +686,31 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
+	public AuthServiceClass createAuthServiceClass() {
+		AuthServiceClassImpl authServiceClass = new AuthServiceClassImpl();
+		return authServiceClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ServiceInterface createServiceInterface() {
 		ServiceInterfaceImpl serviceInterface = new ServiceInterfaceImpl();
 		return serviceInterface;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AuthServiceInterface createAuthServiceInterface() {
+		AuthServiceInterfaceImpl authServiceInterface = new AuthServiceInterfaceImpl();
+		return authServiceInterface;
 	}
 
 	/**
@@ -646,6 +744,39 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	public DomainClass createDomainClass() {
 		DomainClassImpl domainClass = new DomainClassImpl();
 		return domainClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AuthUser createAuthUser() {
+		AuthUserImpl authUser = new AuthUserImpl();
+		return authUser;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AuthRole createAuthRole() {
+		AuthRoleImpl authRole = new AuthRoleImpl();
+		return authRole;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AuthPermission createAuthPermission() {
+		AuthPermissionImpl authPermission = new AuthPermissionImpl();
+		return authPermission;
 	}
 
 	/**
@@ -712,6 +843,17 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	public ServiceMethod createServiceMethod() {
 		ServiceMethodImpl serviceMethod = new ServiceMethodImpl();
 		return serviceMethod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AuthServiceMethod createAuthServiceMethod() {
+		AuthServiceMethodImpl authServiceMethod = new AuthServiceMethodImpl();
+		return authServiceMethod;
 	}
 
 	/**
@@ -800,6 +942,17 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	public UIComponent createUIComponent() {
 		UIComponentImpl uiComponent = new UIComponentImpl();
 		return uiComponent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AuthForm createAuthForm() {
+		AuthFormImpl authForm = new AuthFormImpl();
+		return authForm;
 	}
 
 	/**
@@ -1317,6 +1470,61 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	public DomainAttribute createDomainAttribute() {
 		DomainAttributeImpl domainAttribute = new DomainAttributeImpl();
 		return domainAttribute;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DomainAuthAttribute createDomainAuthAttribute() {
+		DomainAuthAttributeImpl domainAuthAttribute = new DomainAuthAttributeImpl();
+		return domainAuthAttribute;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AuthUserName createAuthUserName() {
+		AuthUserNameImpl authUserName = new AuthUserNameImpl();
+		return authUserName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AuthPassword createAuthPassword() {
+		AuthPasswordImpl authPassword = new AuthPasswordImpl();
+		return authPassword;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AuthRoleName createAuthRoleName() {
+		AuthRoleNameImpl authRoleName = new AuthRoleNameImpl();
+		return authRoleName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AuthPermName createAuthPermName() {
+		AuthPermNameImpl authPermName = new AuthPermNameImpl();
+		return authPermName;
 	}
 
 	/**

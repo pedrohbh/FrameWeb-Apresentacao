@@ -195,6 +195,21 @@ public class NavigationClassItemProvider extends ClassItemProvider {
 				FramewebFactory.eINSTANCE.createDomainAttribute()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createDomainAuthAttribute()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createAuthUserName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createAuthPassword()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createAuthRoleName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createAuthPermName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
 				FramewebFactory.eINSTANCE.createDomainProperty()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.BEHAVIORED_CLASSIFIER__INTERFACE_REALIZATION,
@@ -207,10 +222,16 @@ public class NavigationClassItemProvider extends ClassItemProvider {
 				FramewebFactory.eINSTANCE.createFrontControllerMethod()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__OWNED_OPERATION,
+				FramewebFactory.eINSTANCE.createAuthProcessingMethod()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__OWNED_OPERATION,
 				FramewebFactory.eINSTANCE.createDomainMethod()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__OWNED_OPERATION,
 				FramewebFactory.eINSTANCE.createServiceMethod()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__OWNED_OPERATION,
+				FramewebFactory.eINSTANCE.createAuthServiceMethod()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__OWNED_OPERATION,
 				FramewebFactory.eINSTANCE.createDAOMethod()));
@@ -223,6 +244,9 @@ public class NavigationClassItemProvider extends ClassItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createPage()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthPage()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createDAOInterface()));
@@ -240,7 +264,13 @@ public class NavigationClassItemProvider extends ClassItemProvider {
 				FramewebFactory.eINSTANCE.createServiceClass()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthServiceClass()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createServiceInterface()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthServiceInterface()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createServiceControllerAssociation()));
@@ -249,10 +279,22 @@ public class NavigationClassItemProvider extends ClassItemProvider {
 				FramewebFactory.eINSTANCE.createDomainClass()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthUser()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthRole()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthPermission()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createDAOServiceAssociation()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createUIComponent()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createAuthForm()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createResultType()));

@@ -49,6 +49,9 @@ public class ORMTemplateItemProvider extends FrameworkProfileItemProvider {
 			addClassTemplatePropertyDescriptor(object);
 			addEnumerationClassTemplatePropertyDescriptor(object);
 			addClassExtensionPropertyDescriptor(object);
+			addAuthUserClassTemplatePropertyDescriptor(object);
+			addAuthRoleClassTemplatePropertyDescriptor(object);
+			addAuthPermissionClassTemplatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -102,6 +105,54 @@ public class ORMTemplateItemProvider extends FrameworkProfileItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Auth User Class Template feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAuthUserClassTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ORMTemplate_authUserClassTemplate_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ORMTemplate_authUserClassTemplate_feature",
+						"_UI_ORMTemplate_type"),
+				FramewebPackage.Literals.ORM_TEMPLATE__AUTH_USER_CLASS_TEMPLATE, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Auth Role Class Template feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAuthRoleClassTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ORMTemplate_authRoleClassTemplate_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ORMTemplate_authRoleClassTemplate_feature",
+						"_UI_ORMTemplate_type"),
+				FramewebPackage.Literals.ORM_TEMPLATE__AUTH_ROLE_CLASS_TEMPLATE, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Auth Permission Class Template feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAuthPermissionClassTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ORMTemplate_authPermissionClassTemplate_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ORMTemplate_authPermissionClassTemplate_feature",
+						"_UI_ORMTemplate_type"),
+				FramewebPackage.Literals.ORM_TEMPLATE__AUTH_PERMISSION_CLASS_TEMPLATE, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns ORMTemplate.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -150,6 +201,9 @@ public class ORMTemplateItemProvider extends FrameworkProfileItemProvider {
 		case FramewebPackage.ORM_TEMPLATE__CLASS_TEMPLATE:
 		case FramewebPackage.ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE:
 		case FramewebPackage.ORM_TEMPLATE__CLASS_EXTENSION:
+		case FramewebPackage.ORM_TEMPLATE__AUTH_USER_CLASS_TEMPLATE:
+		case FramewebPackage.ORM_TEMPLATE__AUTH_ROLE_CLASS_TEMPLATE:
+		case FramewebPackage.ORM_TEMPLATE__AUTH_PERMISSION_CLASS_TEMPLATE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

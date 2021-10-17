@@ -157,6 +157,15 @@ public interface FramewebFactory extends EFactory {
 	Page createPage();
 
 	/**
+	 * Returns a new object of class '<em>Auth Page</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Page</em>'.
+	 * @generated
+	 */
+	AuthPage createAuthPage();
+
+	/**
 	 * Returns a new object of class '<em>DAO Interface</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -211,6 +220,24 @@ public interface FramewebFactory extends EFactory {
 	ResultDependency createResultDependency();
 
 	/**
+	 * Returns a new object of class '<em>Auth Success Url</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Success Url</em>'.
+	 * @generated
+	 */
+	AuthSuccessUrl createAuthSuccessUrl();
+
+	/**
+	 * Returns a new object of class '<em>Auth Failure Url</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Failure Url</em>'.
+	 * @generated
+	 */
+	AuthFailureUrl createAuthFailureUrl();
+
+	/**
 	 * Returns a new object of class '<em>Navigation Association</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -229,6 +256,15 @@ public interface FramewebFactory extends EFactory {
 	FrontControllerMethod createFrontControllerMethod();
 
 	/**
+	 * Returns a new object of class '<em>Auth Processing Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Processing Method</em>'.
+	 * @generated
+	 */
+	AuthProcessingMethod createAuthProcessingMethod();
+
+	/**
 	 * Returns a new object of class '<em>Service Class</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -238,6 +274,15 @@ public interface FramewebFactory extends EFactory {
 	ServiceClass createServiceClass();
 
 	/**
+	 * Returns a new object of class '<em>Auth Service Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Service Class</em>'.
+	 * @generated
+	 */
+	AuthServiceClass createAuthServiceClass();
+
+	/**
 	 * Returns a new object of class '<em>Service Interface</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -245,6 +290,15 @@ public interface FramewebFactory extends EFactory {
 	 * @generated
 	 */
 	ServiceInterface createServiceInterface();
+
+	/**
+	 * Returns a new object of class '<em>Auth Service Interface</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Service Interface</em>'.
+	 * @generated
+	 */
+	AuthServiceInterface createAuthServiceInterface();
 
 	/**
 	 * Returns a new object of class '<em>Service Generalization</em>'.
@@ -272,6 +326,33 @@ public interface FramewebFactory extends EFactory {
 	 * @generated
 	 */
 	DomainClass createDomainClass();
+
+	/**
+	 * Returns a new object of class '<em>Auth User</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth User</em>'.
+	 * @generated
+	 */
+	AuthUser createAuthUser();
+
+	/**
+	 * Returns a new object of class '<em>Auth Role</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Role</em>'.
+	 * @generated
+	 */
+	AuthRole createAuthRole();
+
+	/**
+	 * Returns a new object of class '<em>Auth Permission</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Permission</em>'.
+	 * @generated
+	 */
+	AuthPermission createAuthPermission();
 
 	/**
 	 * Returns a new object of class '<em>Front Controller Dependency</em>'.
@@ -326,6 +407,15 @@ public interface FramewebFactory extends EFactory {
 	 * @generated
 	 */
 	ServiceMethod createServiceMethod();
+
+	/**
+	 * Returns a new object of class '<em>Auth Service Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Service Method</em>'.
+	 * @generated
+	 */
+	AuthServiceMethod createAuthServiceMethod();
 
 	/**
 	 * Returns a new object of class '<em>Service Attribute</em>'.
@@ -398,6 +488,15 @@ public interface FramewebFactory extends EFactory {
 	 * @generated
 	 */
 	UIComponent createUIComponent();
+
+	/**
+	 * Returns a new object of class '<em>Auth Form</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Form</em>'.
+	 * @generated
+	 */
+	AuthForm createAuthForm();
 
 	/**
 	 * Returns a new object of class '<em>Result Type</em>'.
@@ -821,6 +920,51 @@ public interface FramewebFactory extends EFactory {
 	 * @generated
 	 */
 	DomainAttribute createDomainAttribute();
+
+	/**
+	 * Returns a new object of class '<em>Domain Auth Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Domain Auth Attribute</em>'.
+	 * @generated
+	 */
+	DomainAuthAttribute createDomainAuthAttribute();
+
+	/**
+	 * Returns a new object of class '<em>Auth User Name</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth User Name</em>'.
+	 * @generated
+	 */
+	AuthUserName createAuthUserName();
+
+	/**
+	 * Returns a new object of class '<em>Auth Password</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Password</em>'.
+	 * @generated
+	 */
+	AuthPassword createAuthPassword();
+
+	/**
+	 * Returns a new object of class '<em>Auth Role Name</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Role Name</em>'.
+	 * @generated
+	 */
+	AuthRoleName createAuthRoleName();
+
+	/**
+	 * Returns a new object of class '<em>Auth Perm Name</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Auth Perm Name</em>'.
+	 * @generated
+	 */
+	AuthPermName createAuthPermName();
 
 	/**
 	 * Returns a new object of class '<em>Domain Property</em>'.

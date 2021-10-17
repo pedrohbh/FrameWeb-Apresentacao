@@ -22,6 +22,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getClassTemplate <em>Class Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getEnumerationClassTemplate <em>Enumeration Class Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getClassExtension <em>Class Extension</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getAuthUserClassTemplate <em>Auth User Class Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getAuthRoleClassTemplate <em>Auth Role Class Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.ORMTemplateImpl#getAuthPermissionClassTemplate <em>Auth Permission Class Template</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,6 +90,66 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @ordered
 	 */
 	protected String classExtension = CLASS_EXTENSION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAuthUserClassTemplate() <em>Auth User Class Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthUserClassTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String AUTH_USER_CLASS_TEMPLATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAuthUserClassTemplate() <em>Auth User Class Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthUserClassTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected String authUserClassTemplate = AUTH_USER_CLASS_TEMPLATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAuthRoleClassTemplate() <em>Auth Role Class Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthRoleClassTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String AUTH_ROLE_CLASS_TEMPLATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAuthRoleClassTemplate() <em>Auth Role Class Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthRoleClassTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected String authRoleClassTemplate = AUTH_ROLE_CLASS_TEMPLATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAuthPermissionClassTemplate() <em>Auth Permission Class Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthPermissionClassTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String AUTH_PERMISSION_CLASS_TEMPLATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAuthPermissionClassTemplate() <em>Auth Permission Class Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthPermissionClassTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected String authPermissionClassTemplate = AUTH_PERMISSION_CLASS_TEMPLATE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -186,6 +249,81 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @generated
 	 */
 	@Override
+	public String getAuthUserClassTemplate() {
+		return authUserClassTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAuthUserClassTemplate(String newAuthUserClassTemplate) {
+		String oldAuthUserClassTemplate = authUserClassTemplate;
+		authUserClassTemplate = newAuthUserClassTemplate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					FramewebPackage.ORM_TEMPLATE__AUTH_USER_CLASS_TEMPLATE, oldAuthUserClassTemplate,
+					authUserClassTemplate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getAuthRoleClassTemplate() {
+		return authRoleClassTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAuthRoleClassTemplate(String newAuthRoleClassTemplate) {
+		String oldAuthRoleClassTemplate = authRoleClassTemplate;
+		authRoleClassTemplate = newAuthRoleClassTemplate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					FramewebPackage.ORM_TEMPLATE__AUTH_ROLE_CLASS_TEMPLATE, oldAuthRoleClassTemplate,
+					authRoleClassTemplate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getAuthPermissionClassTemplate() {
+		return authPermissionClassTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAuthPermissionClassTemplate(String newAuthPermissionClassTemplate) {
+		String oldAuthPermissionClassTemplate = authPermissionClassTemplate;
+		authPermissionClassTemplate = newAuthPermissionClassTemplate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					FramewebPackage.ORM_TEMPLATE__AUTH_PERMISSION_CLASS_TEMPLATE, oldAuthPermissionClassTemplate,
+					authPermissionClassTemplate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case FramewebPackage.ORM_TEMPLATE__CLASS_TEMPLATE:
@@ -194,6 +332,12 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 			return getEnumerationClassTemplate();
 		case FramewebPackage.ORM_TEMPLATE__CLASS_EXTENSION:
 			return getClassExtension();
+		case FramewebPackage.ORM_TEMPLATE__AUTH_USER_CLASS_TEMPLATE:
+			return getAuthUserClassTemplate();
+		case FramewebPackage.ORM_TEMPLATE__AUTH_ROLE_CLASS_TEMPLATE:
+			return getAuthRoleClassTemplate();
+		case FramewebPackage.ORM_TEMPLATE__AUTH_PERMISSION_CLASS_TEMPLATE:
+			return getAuthPermissionClassTemplate();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -214,6 +358,15 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 			return;
 		case FramewebPackage.ORM_TEMPLATE__CLASS_EXTENSION:
 			setClassExtension((String) newValue);
+			return;
+		case FramewebPackage.ORM_TEMPLATE__AUTH_USER_CLASS_TEMPLATE:
+			setAuthUserClassTemplate((String) newValue);
+			return;
+		case FramewebPackage.ORM_TEMPLATE__AUTH_ROLE_CLASS_TEMPLATE:
+			setAuthRoleClassTemplate((String) newValue);
+			return;
+		case FramewebPackage.ORM_TEMPLATE__AUTH_PERMISSION_CLASS_TEMPLATE:
+			setAuthPermissionClassTemplate((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -236,6 +389,15 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		case FramewebPackage.ORM_TEMPLATE__CLASS_EXTENSION:
 			setClassExtension(CLASS_EXTENSION_EDEFAULT);
 			return;
+		case FramewebPackage.ORM_TEMPLATE__AUTH_USER_CLASS_TEMPLATE:
+			setAuthUserClassTemplate(AUTH_USER_CLASS_TEMPLATE_EDEFAULT);
+			return;
+		case FramewebPackage.ORM_TEMPLATE__AUTH_ROLE_CLASS_TEMPLATE:
+			setAuthRoleClassTemplate(AUTH_ROLE_CLASS_TEMPLATE_EDEFAULT);
+			return;
+		case FramewebPackage.ORM_TEMPLATE__AUTH_PERMISSION_CLASS_TEMPLATE:
+			setAuthPermissionClassTemplate(AUTH_PERMISSION_CLASS_TEMPLATE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -257,6 +419,15 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		case FramewebPackage.ORM_TEMPLATE__CLASS_EXTENSION:
 			return CLASS_EXTENSION_EDEFAULT == null ? classExtension != null
 					: !CLASS_EXTENSION_EDEFAULT.equals(classExtension);
+		case FramewebPackage.ORM_TEMPLATE__AUTH_USER_CLASS_TEMPLATE:
+			return AUTH_USER_CLASS_TEMPLATE_EDEFAULT == null ? authUserClassTemplate != null
+					: !AUTH_USER_CLASS_TEMPLATE_EDEFAULT.equals(authUserClassTemplate);
+		case FramewebPackage.ORM_TEMPLATE__AUTH_ROLE_CLASS_TEMPLATE:
+			return AUTH_ROLE_CLASS_TEMPLATE_EDEFAULT == null ? authRoleClassTemplate != null
+					: !AUTH_ROLE_CLASS_TEMPLATE_EDEFAULT.equals(authRoleClassTemplate);
+		case FramewebPackage.ORM_TEMPLATE__AUTH_PERMISSION_CLASS_TEMPLATE:
+			return AUTH_PERMISSION_CLASS_TEMPLATE_EDEFAULT == null ? authPermissionClassTemplate != null
+					: !AUTH_PERMISSION_CLASS_TEMPLATE_EDEFAULT.equals(authPermissionClassTemplate);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -278,6 +449,12 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 		result.append(enumerationClassTemplate);
 		result.append(", classExtension: ");
 		result.append(classExtension);
+		result.append(", authUserClassTemplate: ");
+		result.append(authUserClassTemplate);
+		result.append(", authRoleClassTemplate: ");
+		result.append(authRoleClassTemplate);
+		result.append(", authPermissionClassTemplate: ");
+		result.append(authPermissionClassTemplate);
 		result.append(')');
 		return result.toString();
 	}

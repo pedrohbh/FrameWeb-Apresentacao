@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getClassTemplate <em>Class Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getPageTemplate <em>Page Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getAuthPageTemplate <em>Auth Page Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getFormTemplate <em>Form Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getClassExtension <em>Class Extension</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getPageExtension <em>Page Extension</em>}</li>
@@ -70,6 +71,26 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @ordered
 	 */
 	protected String pageTemplate = PAGE_TEMPLATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAuthPageTemplate() <em>Auth Page Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthPageTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String AUTH_PAGE_TEMPLATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAuthPageTemplate() <em>Auth Page Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthPageTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected String authPageTemplate = AUTH_PAGE_TEMPLATE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getFormTemplate() <em>Form Template</em>}' attribute.
@@ -224,6 +245,31 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
+	public String getAuthPageTemplate() {
+		return authPageTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAuthPageTemplate(String newAuthPageTemplate) {
+		String oldAuthPageTemplate = authPageTemplate;
+		authPageTemplate = newAuthPageTemplate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					FramewebPackage.FRONT_CONTROLLER_TEMPLATE__AUTH_PAGE_TEMPLATE, oldAuthPageTemplate,
+					authPageTemplate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getFormTemplate() {
 		return formTemplate;
 	}
@@ -327,6 +373,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 			return getClassTemplate();
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PAGE_TEMPLATE:
 			return getPageTemplate();
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__AUTH_PAGE_TEMPLATE:
+			return getAuthPageTemplate();
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__FORM_TEMPLATE:
 			return getFormTemplate();
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__CLASS_EXTENSION:
@@ -352,6 +400,9 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 			return;
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PAGE_TEMPLATE:
 			setPageTemplate((String) newValue);
+			return;
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__AUTH_PAGE_TEMPLATE:
+			setAuthPageTemplate((String) newValue);
 			return;
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__FORM_TEMPLATE:
 			setFormTemplate((String) newValue);
@@ -383,6 +434,9 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PAGE_TEMPLATE:
 			setPageTemplate(PAGE_TEMPLATE_EDEFAULT);
 			return;
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__AUTH_PAGE_TEMPLATE:
+			setAuthPageTemplate(AUTH_PAGE_TEMPLATE_EDEFAULT);
+			return;
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__FORM_TEMPLATE:
 			setFormTemplate(FORM_TEMPLATE_EDEFAULT);
 			return;
@@ -412,6 +466,9 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 					: !CLASS_TEMPLATE_EDEFAULT.equals(classTemplate);
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PAGE_TEMPLATE:
 			return PAGE_TEMPLATE_EDEFAULT == null ? pageTemplate != null : !PAGE_TEMPLATE_EDEFAULT.equals(pageTemplate);
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__AUTH_PAGE_TEMPLATE:
+			return AUTH_PAGE_TEMPLATE_EDEFAULT == null ? authPageTemplate != null
+					: !AUTH_PAGE_TEMPLATE_EDEFAULT.equals(authPageTemplate);
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__FORM_TEMPLATE:
 			return FORM_TEMPLATE_EDEFAULT == null ? formTemplate != null : !FORM_TEMPLATE_EDEFAULT.equals(formTemplate);
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__CLASS_EXTENSION:
@@ -442,6 +499,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 		result.append(classTemplate);
 		result.append(", pageTemplate: ");
 		result.append(pageTemplate);
+		result.append(", authPageTemplate: ");
+		result.append(authPageTemplate);
 		result.append(", formTemplate: ");
 		result.append(formTemplate);
 		result.append(", classExtension: ");

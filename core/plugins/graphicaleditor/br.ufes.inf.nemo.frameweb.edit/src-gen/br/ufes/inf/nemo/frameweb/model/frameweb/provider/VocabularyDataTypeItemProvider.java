@@ -250,6 +250,21 @@ public class VocabularyDataTypeItemProvider extends VocabularyEntityItemProvider
 				FramewebFactory.eINSTANCE.createDomainAttribute()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.DATA_TYPE__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createDomainAuthAttribute()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.DATA_TYPE__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createAuthUserName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.DATA_TYPE__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createAuthPassword()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.DATA_TYPE__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createAuthRoleName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.DATA_TYPE__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createAuthPermName()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.DATA_TYPE__OWNED_ATTRIBUTE,
 				FramewebFactory.eINSTANCE.createDomainProperty()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.DATA_TYPE__OWNED_ATTRIBUTE,
@@ -265,10 +280,16 @@ public class VocabularyDataTypeItemProvider extends VocabularyEntityItemProvider
 				FramewebFactory.eINSTANCE.createFrontControllerMethod()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.DATA_TYPE__OWNED_OPERATION,
+				FramewebFactory.eINSTANCE.createAuthProcessingMethod()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.DATA_TYPE__OWNED_OPERATION,
 				FramewebFactory.eINSTANCE.createDomainMethod()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.DATA_TYPE__OWNED_OPERATION,
 				FramewebFactory.eINSTANCE.createServiceMethod()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.DATA_TYPE__OWNED_OPERATION,
+				FramewebFactory.eINSTANCE.createAuthServiceMethod()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.DATA_TYPE__OWNED_OPERATION,
 				FramewebFactory.eINSTANCE.createDAOMethod()));

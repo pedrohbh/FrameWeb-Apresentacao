@@ -11,6 +11,8 @@ import br.ufes.inf.nemo.frameweb.codegenerator.e4.ProjectProperties;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.classes.ClassCodeGenerator;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationPackage;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceClass;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceInterface;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceInterface;
@@ -42,6 +44,12 @@ public class ApplicationModelCodeGenerator implements ModelCodeGenerator {
 		
 		String interfaceTemplatePath = diTemplate.getInterfaceTemplate();
 		String interfaceTemplate = projectConfiguration.getTemplate(interfaceTemplatePath);
+		
+		String authTemplatePath = diTemplate.getAuthClassTemplate();
+		String authTemplate = projectConfiguration.getTemplate(authTemplatePath);
+		
+		String authInterfaceTemplatePath = diTemplate.getAuthInterfaceTemplate();
+		String authInterfaceTemplate = projectConfiguration.getTemplate(authInterfaceTemplatePath);
 		
 		IFolder src = projectConfiguration.getSourceFolder();
 		
@@ -99,6 +107,55 @@ public class ApplicationModelCodeGenerator implements ModelCodeGenerator {
 						
 						IFileUtils.createFile(file, code);
 					});
+			
+			// authservice 
+			applicationPackage.getOwnedTypes()
+				.stream()
+				.filter(AuthServiceClass.class::isInstance)
+				.map(AuthServiceClass.class::cast)
+				.forEach(authServiceClass -> {
+					String code = ClassCodeGenerator.render(authServiceClass, authTemplate);
+					
+					String fileName = authServiceClass.getName() + projectConfiguration.getClassExtension();
+					IFile file = package_.getFile(fileName);
+					
+					IFileUtils.createFile(file, code);
+				});
+
+			applicationPackage.getOwnedTypes()
+				.stream()
+				.filter(AuthServiceInterface.class::isInstance)
+				.map(AuthServiceInterface.class::cast)
+				.forEach(authServiceInterface -> {
+	//				FIXME a busca deve ser feita pela realizacao, mas como ela nao funciona no editor grafico, nao pode ser resgatada.
+	//				Aqui sera feita por meio de nomes. Isso e errado! As realizacoes devem ser consertadas para que isso funcione adequadamente.
+					List<AuthServiceClass> authServiceClasses = applicationPackage.getOwnedTypes()
+							.stream()
+							.filter(AuthServiceClass.class::isInstance)
+							.map(AuthServiceClass.class::cast)
+							.collect(Collectors.toList());
+					
+					List<ServiceMethod> serviceMethods = new ArrayList<ServiceMethod>();
+					
+					for (ServiceClass serviceClass : authServiceClasses) {
+						if (serviceClass.getName().contains(authServiceInterface.getName()) || authServiceInterface.getName().contains(serviceClass.getName())) {
+							serviceMethods.addAll(serviceClass.getOperations()
+									.stream()
+									.filter(ServiceMethod.class::isInstance)
+									.map(ServiceMethod.class::cast)
+									.collect(Collectors.toList()));
+							
+							break;
+						}
+					}
+					
+					String code = ClassCodeGenerator.render(authServiceInterface, serviceMethods, authInterfaceTemplate);
+					
+					String fileName = authServiceInterface.getName() + projectConfiguration.getClassExtension();
+					IFile file = package_.getFile(fileName);
+					
+					IFileUtils.createFile(file, code);
+				});
 		});
 	}
 	

@@ -9,6 +9,9 @@ import org.eclipse.uml2.uml.Enumeration;
 
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.ProjectProperties;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.classes.ClassCodeGenerator;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthPermission;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthRole;
+import br.ufes.inf.nemo.frameweb.model.frameweb.AuthUser;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.EntityModel;
@@ -40,6 +43,15 @@ public class EntityModelCodeGenerator implements ModelCodeGenerator {
 		
 		String enumTemplatePath = ormTemplate.getEnumerationClassTemplate();
 		String enumTemplate = projectConfiguration.getTemplate(enumTemplatePath);
+		
+		String authUserTemplatePath = ormTemplate.getAuthUserClassTemplate();
+		String authUserTemplate = projectConfiguration.getTemplate(authUserTemplatePath);
+		
+		String authRoleTemplatePath = ormTemplate.getAuthRoleClassTemplate();
+		String authRoleTemplate = projectConfiguration.getTemplate(authRoleTemplatePath);
+		
+		String authPermissionTemplatePath = ormTemplate.getAuthPermissionClassTemplate();
+		String authPermissionTemplate = projectConfiguration.getTemplate(authPermissionTemplatePath);
 		
 		IFolder src = projectConfiguration.getSourceFolder();
 		
@@ -75,6 +87,46 @@ public class EntityModelCodeGenerator implements ModelCodeGenerator {
 						
 						IFileUtils.createFile(file, code);
 					});
+			
+			domainPackage.getOwnedTypes()
+				.stream()
+				.filter(AuthUser.class::isInstance)
+				.map(AuthUser.class::cast)
+				.forEach(AuthUser -> {
+					String code = ClassCodeGenerator.render(AuthUser, authUserTemplate);
+					
+					String fileName = AuthUser.getName() + projectConfiguration.getClassExtension();
+					IFile file = package_.getFile(fileName);
+					
+					IFileUtils.createFile(file, code);
+				});
+			
+			domainPackage.getOwnedTypes()
+				.stream()
+				.filter(AuthRole.class::isInstance)
+				.map(AuthRole.class::cast)
+				.forEach(AuthRole -> {
+					String code = ClassCodeGenerator.render(AuthRole, authRoleTemplate);
+					
+					String fileName = AuthRole.getName() + projectConfiguration.getClassExtension();
+					IFile file = package_.getFile(fileName);
+					
+					IFileUtils.createFile(file, code);
+				});
+			
+			domainPackage.getOwnedTypes()
+				.stream()
+				.filter(AuthPermission.class::isInstance)
+				.map(AuthPermission.class::cast)
+				.forEach(AuthPermission -> {
+					String code = ClassCodeGenerator.render(AuthPermission, authPermissionTemplate);
+					
+					String fileName = AuthPermission.getName() + projectConfiguration.getClassExtension();
+					IFile file = package_.getFile(fileName);
+					
+					IFileUtils.createFile(file, code);
+				});
+			
 		});
 	}
 
