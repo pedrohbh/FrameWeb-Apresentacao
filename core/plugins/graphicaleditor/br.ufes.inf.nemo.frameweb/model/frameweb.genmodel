@@ -138,6 +138,7 @@
     <genClasses ecoreClass="frameweb.ecore#//Page">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//Page/pageTagLib"/>
     </genClasses>
+    <genClasses ecoreClass="frameweb.ecore#//AuthPage"/>
     <genClasses ecoreClass="frameweb.ecore#//DAOInterface">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DAOInterface/infix"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DAOInterface/sufix"/>
@@ -157,14 +158,21 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference frameweb.ecore#//ResultDependency/resultDependencyConstraint"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ResultDependency/httpStatus"/>
     </genClasses>
+    <genClasses ecoreClass="frameweb.ecore#//AuthSuccessUrl"/>
+    <genClasses ecoreClass="frameweb.ecore#//AuthFailureUrl"/>
     <genClasses ecoreClass="frameweb.ecore#//NavigationAssociation"/>
     <genClasses ecoreClass="frameweb.ecore#//FrontControllerMethod">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerMethod/isDefault"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//FrontControllerMethod/methodType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerMethod/requestMethod"/>
     </genClasses>
+    <genClasses ecoreClass="frameweb.ecore#//AuthProcessingMethod"/>
     <genClasses ecoreClass="frameweb.ecore#//ServiceClass"/>
+    <genClasses ecoreClass="frameweb.ecore#//AuthServiceClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//AuthServiceClass/permissionName"/>
+    </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//ServiceInterface"/>
+    <genClasses ecoreClass="frameweb.ecore#//AuthServiceInterface"/>
     <genClasses ecoreClass="frameweb.ecore#//ServiceGeneralization"/>
     <genClasses ecoreClass="frameweb.ecore#//ServiceControllerAssociation">
       <genOperations ecoreOperation="frameweb.ecore#//ServiceControllerAssociation/getSourceMember"/>
@@ -179,6 +187,9 @@
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//AuthRole">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//AuthRole/authRoleName"/>
+    </genClasses>
+    <genClasses ecoreClass="frameweb.ecore#//AuthPermission">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//AuthPermission/authPermName"/>
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//FrontControllerDependency">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//FrontControllerDependency/method"/>
@@ -200,6 +211,9 @@
     <genClasses ecoreClass="frameweb.ecore#//ServiceMethod">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//ServiceMethod/methodType"/>
     </genClasses>
+    <genClasses ecoreClass="frameweb.ecore#//AuthServiceMethod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//AuthServiceMethod/permissionName"/>
+    </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//ServiceAttribute"/>
     <genClasses image="false" ecoreClass="frameweb.ecore#//ServiceAssociation"/>
     <genClasses image="false" ecoreClass="frameweb.ecore#//NavigationDependency"/>
@@ -213,6 +227,7 @@
     <genClasses ecoreClass="frameweb.ecore#//PersistencePackage"/>
     <genClasses ecoreClass="frameweb.ecore#//ApplicationPackage"/>
     <genClasses ecoreClass="frameweb.ecore#//UIComponent"/>
+    <genClasses ecoreClass="frameweb.ecore#//AuthForm"/>
     <genClasses ecoreClass="frameweb.ecore#//ResultType"/>
     <genClasses image="false" ecoreClass="frameweb.ecore#//NavigationPackage"/>
     <genClasses ecoreClass="frameweb.ecore#//DomainGeneralization"/>
@@ -304,10 +319,12 @@
     <genClasses ecoreClass="frameweb.ecore#//AuthUserName"/>
     <genClasses ecoreClass="frameweb.ecore#//AuthPassword"/>
     <genClasses ecoreClass="frameweb.ecore#//AuthRoleName"/>
+    <genClasses ecoreClass="frameweb.ecore#//AuthPermName"/>
     <genClasses ecoreClass="frameweb.ecore#//DomainProperty"/>
     <genClasses ecoreClass="frameweb.ecore#//FrontControllerTemplate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/classTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/pageTemplate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/authPageTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/formTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/classExtension"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//FrontControllerTemplate/pageExtension"/>
@@ -317,11 +334,16 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DITemplate/interfaceTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DITemplate/classTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DITemplate/classExtension"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DITemplate/authInterfaceTemplate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DITemplate/authClassTemplate"/>
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//ORMTemplate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/classTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/enumerationClassTemplate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/classExtension"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/authUserClassTemplate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/authRoleClassTemplate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//ORMTemplate/authPermissionClassTemplate"/>
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//DAOTemplate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//DAOTemplate/classTemplate"/>

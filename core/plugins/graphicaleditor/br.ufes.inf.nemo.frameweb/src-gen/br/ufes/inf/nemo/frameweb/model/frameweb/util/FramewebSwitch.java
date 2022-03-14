@@ -3731,6 +3731,45 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case FramewebPackage.PARTIAL: {
+			Partial partial = (Partial) theEObject;
+			T result = casePartial(partial);
+			if (result == null)
+				result = casePage(partial);
+			if (result == null)
+				result = caseNavigationClass(partial);
+			if (result == null)
+				result = caseClass(partial);
+			if (result == null)
+				result = caseEncapsulatedClassifier(partial);
+			if (result == null)
+				result = caseBehavioredClassifier(partial);
+			if (result == null)
+				result = caseStructuredClassifier(partial);
+			if (result == null)
+				result = caseClassifier(partial);
+			if (result == null)
+				result = caseNamespace(partial);
+			if (result == null)
+				result = caseRedefinableElement(partial);
+			if (result == null)
+				result = caseType(partial);
+			if (result == null)
+				result = caseTemplateableElement(partial);
+			if (result == null)
+				result = casePackageableElement(partial);
+			if (result == null)
+				result = caseNamedElement(partial);
+			if (result == null)
+				result = caseParameterableElement(partial);
+			if (result == null)
+				result = caseElement(partial);
+			if (result == null)
+				result = caseEModelElement(partial);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -5593,6 +5632,21 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRestControllerClass(RestControllerClass object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Partial</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Partial</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePartial(Partial object) {
 		return null;
 	}
 

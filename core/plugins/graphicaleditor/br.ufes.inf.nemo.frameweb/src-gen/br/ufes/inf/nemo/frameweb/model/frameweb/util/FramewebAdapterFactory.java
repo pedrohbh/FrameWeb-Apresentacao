@@ -728,6 +728,11 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter casePartial(Partial object) {
+			return createPartialAdapter();
+		}
+
+		@Override
 		public Adapter caseEModelElement(EModelElement object) {
 			return createEModelElementAdapter();
 		}
@@ -2689,6 +2694,20 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRestControllerClassAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.Partial <em>Partial</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.Partial
+	 * @generated
+	 */
+	public Adapter createPartialAdapter() {
 		return null;
 	}
 

@@ -351,6 +351,9 @@ public class ServiceClassItemProvider extends ClassItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createRestControllerClass()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createPartial()));
 	}
 
 	/**

@@ -285,6 +285,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createRestControllerMethod();
 		case FramewebPackage.REST_CONTROLLER_CLASS:
 			return createRestControllerClass();
+		case FramewebPackage.PARTIAL:
+			return createPartial();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1624,6 +1626,17 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	public RestControllerClass createRestControllerClass() {
 		RestControllerClassImpl restControllerClass = new RestControllerClassImpl();
 		return restControllerClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Partial createPartial() {
+		PartialImpl partial = new PartialImpl();
+		return partial;
 	}
 
 	/**

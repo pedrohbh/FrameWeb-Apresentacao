@@ -1048,6 +1048,15 @@ public interface FramewebFactory extends EFactory {
 	RestControllerClass createRestControllerClass();
 
 	/**
+	 * Returns a new object of class '<em>Partial</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Partial</em>'.
+	 * @generated
+	 */
+	Partial createPartial();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

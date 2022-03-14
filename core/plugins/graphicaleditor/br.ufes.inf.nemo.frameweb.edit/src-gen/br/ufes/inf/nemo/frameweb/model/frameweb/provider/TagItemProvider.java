@@ -378,6 +378,9 @@ public class TagItemProvider extends StereotypeItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createRestControllerClass()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createPartial()));
 	}
 
 	/**

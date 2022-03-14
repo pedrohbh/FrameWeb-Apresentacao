@@ -411,4 +411,5 @@
     <eLiterals name="POST" value="2" literal="POST_"/>
     <eLiterals name="DELETE" value="3"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Partial" eSuperTypes="#//Page"/>
 </ecore:EPackage>

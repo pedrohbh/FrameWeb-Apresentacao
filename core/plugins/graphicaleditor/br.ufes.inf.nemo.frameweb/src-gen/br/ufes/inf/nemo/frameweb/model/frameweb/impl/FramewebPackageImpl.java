@@ -103,6 +103,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.Order;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
 import br.ufes.inf.nemo.frameweb.model.frameweb.PageConstraint;
 import br.ufes.inf.nemo.frameweb.model.frameweb.PageDependency;
+import br.ufes.inf.nemo.frameweb.model.frameweb.Partial;
 import br.ufes.inf.nemo.frameweb.model.frameweb.PersistenceModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.PersistencePackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerClass;
@@ -1028,6 +1029,13 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	private EClass restControllerClassEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass partialEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -3532,6 +3540,16 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EClass getPartial() {
+		return partialEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getFrameworkCategoryList() {
 		return frameworkCategoryListEEnum;
 	}
@@ -4053,6 +4071,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		restControllerClassEClass = createEClass(REST_CONTROLLER_CLASS);
 
+		partialEClass = createEClass(PARTIAL);
+
 		// Create enums
 		frameworkCategoryListEEnum = createEEnum(FRAMEWORK_CATEGORY_LIST);
 		frameworkKindListEEnum = createEEnum(FRAMEWORK_KIND_LIST);
@@ -4235,6 +4255,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		restControllerTemplateEClass.getESuperTypes().add(this.getFrameworkProfile());
 		restControllerMethodEClass.getESuperTypes().add(theUMLPackage.getOperation());
 		restControllerClassEClass.getESuperTypes().add(theUMLPackage.getClass_());
+		partialEClass.getESuperTypes().add(this.getPage());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(framewebProjectEClass, FramewebProject.class, "FramewebProject", !IS_ABSTRACT, !IS_INTERFACE,
@@ -4919,6 +4940,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		initEClass(restControllerClassEClass, RestControllerClass.class, "RestControllerClass", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(partialEClass, Partial.class, "Partial", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(frameworkCategoryListEEnum, FrameworkCategoryList.class, "FrameworkCategoryList");

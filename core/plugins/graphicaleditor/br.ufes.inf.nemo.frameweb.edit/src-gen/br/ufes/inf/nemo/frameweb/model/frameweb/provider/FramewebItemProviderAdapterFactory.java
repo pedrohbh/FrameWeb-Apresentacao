@@ -2695,6 +2695,29 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.Partial} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PartialItemProvider partialItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.Partial}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPartialAdapter() {
+		if (partialItemProvider == null) {
+			partialItemProvider = new PartialItemProvider(this);
+		}
+
+		return partialItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3027,6 +3050,8 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 			restControllerMethodItemProvider.dispose();
 		if (restControllerClassItemProvider != null)
 			restControllerClassItemProvider.dispose();
+		if (partialItemProvider != null)
+			partialItemProvider.dispose();
 	}
 
 }
