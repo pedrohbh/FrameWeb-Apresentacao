@@ -199,6 +199,12 @@ public class ServiceAttributeItemProvider extends PropertyItemProvider {
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PROPERTY__QUALIFIER,
 				FramewebFactory.eINSTANCE.createDomainProperty()));
 
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PROPERTY__QUALIFIER,
+				FramewebFactory.eINSTANCE.createNavigationAggregationPart()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PROPERTY__QUALIFIER,
+				FramewebFactory.eINSTANCE.createNavigationAggregationWhole()));
+
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PROPERTY__DEFAULT_VALUE,
 				FramewebFactory.eINSTANCE.createVocabularyLiteral()));
 	}

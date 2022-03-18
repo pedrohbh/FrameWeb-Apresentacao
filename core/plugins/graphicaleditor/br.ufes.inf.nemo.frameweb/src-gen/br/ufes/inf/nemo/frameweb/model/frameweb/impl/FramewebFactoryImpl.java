@@ -287,6 +287,12 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createRestControllerClass();
 		case FramewebPackage.PARTIAL:
 			return createPartial();
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION:
+			return createNavigationAggregationAssociation();
+		case FramewebPackage.NAVIGATION_AGGREGATION_PART:
+			return createNavigationAggregationPart();
+		case FramewebPackage.NAVIGATION_AGGREGATION_WHOLE:
+			return createNavigationAggregationWhole();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1637,6 +1643,39 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	public Partial createPartial() {
 		PartialImpl partial = new PartialImpl();
 		return partial;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NavigationAggregationAssociation createNavigationAggregationAssociation() {
+		NavigationAggregationAssociationImpl navigationAggregationAssociation = new NavigationAggregationAssociationImpl();
+		return navigationAggregationAssociation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NavigationAggregationPart createNavigationAggregationPart() {
+		NavigationAggregationPartImpl navigationAggregationPart = new NavigationAggregationPartImpl();
+		return navigationAggregationPart;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NavigationAggregationWhole createNavigationAggregationWhole() {
+		NavigationAggregationWholeImpl navigationAggregationWhole = new NavigationAggregationWholeImpl();
+		return navigationAggregationWhole;
 	}
 
 	/**

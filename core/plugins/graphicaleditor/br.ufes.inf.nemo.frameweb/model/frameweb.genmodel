@@ -370,5 +370,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//RestControllerMethod/desiredResponseStatus"/>
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//RestControllerClass"/>
+    <genClasses ecoreClass="frameweb.ecore#//Partial"/>
+    <genClasses ecoreClass="frameweb.ecore#//NavigationAggregationAssociation"/>
+    <genClasses ecoreClass="frameweb.ecore#//NavigationAggregationPart"/>
+    <genClasses ecoreClass="frameweb.ecore#//NavigationAggregationWhole"/>
   </genPackages>
 </genmodel:GenModel>

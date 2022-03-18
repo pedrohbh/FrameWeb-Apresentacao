@@ -861,6 +861,12 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PROPERTY__QUALIFIER,
 				FramewebFactory.eINSTANCE.createDomainProperty()));
 
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PROPERTY__QUALIFIER,
+				FramewebFactory.eINSTANCE.createNavigationAggregationPart()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PROPERTY__QUALIFIER,
+				FramewebFactory.eINSTANCE.createNavigationAggregationWhole()));
+
 		newChildDescriptors.add(
 				createChildParameter(UMLPackage.Literals.PROPERTY__QUALIFIER, UMLFactory.eINSTANCE.createProperty()));
 

@@ -223,6 +223,12 @@ public class ResultTypeItemProvider extends StereotypeItemProvider {
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
 				FramewebFactory.eINSTANCE.createDomainProperty()));
 
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createNavigationAggregationPart()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
+				FramewebFactory.eINSTANCE.createNavigationAggregationWhole()));
+
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.BEHAVIORED_CLASSIFIER__INTERFACE_REALIZATION,
 				FramewebFactory.eINSTANCE.createDAORealization()));
 
@@ -354,6 +360,9 @@ public class ResultTypeItemProvider extends StereotypeItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
 				FramewebFactory.eINSTANCE.createPartial()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CLASS__NESTED_CLASSIFIER,
+				FramewebFactory.eINSTANCE.createNavigationAggregationAssociation()));
 	}
 
 	/**

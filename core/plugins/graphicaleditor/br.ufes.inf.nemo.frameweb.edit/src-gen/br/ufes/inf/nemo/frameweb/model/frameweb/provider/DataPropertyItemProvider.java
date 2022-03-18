@@ -355,6 +355,12 @@ public class DataPropertyItemProvider extends VocabularyEntityItemProvider {
 				FramewebFactory.eINSTANCE.createDomainProperty()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__OWNED_END,
+				FramewebFactory.eINSTANCE.createNavigationAggregationPart()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__OWNED_END,
+				FramewebFactory.eINSTANCE.createNavigationAggregationWhole()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__OWNED_END,
 				UMLFactory.eINSTANCE.createProperty()));
 
 		newChildDescriptors.add(
@@ -446,6 +452,12 @@ public class DataPropertyItemProvider extends VocabularyEntityItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
 				FramewebFactory.eINSTANCE.createDomainProperty()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
+				FramewebFactory.eINSTANCE.createNavigationAggregationPart()));
+
+		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
+				FramewebFactory.eINSTANCE.createNavigationAggregationWhole()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
 				UMLFactory.eINSTANCE.createProperty()));

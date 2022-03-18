@@ -85,6 +85,9 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.LOBAttribute;
 import br.ufes.inf.nemo.frameweb.model.frameweb.MappingLib;
 import br.ufes.inf.nemo.frameweb.model.frameweb.MethodConstraint;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NamedIndividual;
+import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation;
+import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationPart;
+import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationWhole;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAttribute;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationClass;
@@ -1036,6 +1039,27 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	private EClass partialEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass navigationAggregationAssociationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass navigationAggregationPartEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass navigationAggregationWholeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -3550,6 +3574,36 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EClass getNavigationAggregationAssociation() {
+		return navigationAggregationAssociationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getNavigationAggregationPart() {
+		return navigationAggregationPartEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getNavigationAggregationWhole() {
+		return navigationAggregationWholeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getFrameworkCategoryList() {
 		return frameworkCategoryListEEnum;
 	}
@@ -4073,6 +4127,12 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		partialEClass = createEClass(PARTIAL);
 
+		navigationAggregationAssociationEClass = createEClass(NAVIGATION_AGGREGATION_ASSOCIATION);
+
+		navigationAggregationPartEClass = createEClass(NAVIGATION_AGGREGATION_PART);
+
+		navigationAggregationWholeEClass = createEClass(NAVIGATION_AGGREGATION_WHOLE);
+
 		// Create enums
 		frameworkCategoryListEEnum = createEEnum(FRAMEWORK_CATEGORY_LIST);
 		frameworkKindListEEnum = createEEnum(FRAMEWORK_KIND_LIST);
@@ -4256,6 +4316,9 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		restControllerMethodEClass.getESuperTypes().add(theUMLPackage.getOperation());
 		restControllerClassEClass.getESuperTypes().add(theUMLPackage.getClass_());
 		partialEClass.getESuperTypes().add(this.getPage());
+		navigationAggregationAssociationEClass.getESuperTypes().add(theUMLPackage.getAssociation());
+		navigationAggregationPartEClass.getESuperTypes().add(this.getNavigationProperty());
+		navigationAggregationWholeEClass.getESuperTypes().add(this.getNavigationProperty());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(framewebProjectEClass, FramewebProject.class, "FramewebProject", !IS_ABSTRACT, !IS_INTERFACE,
@@ -4942,6 +5005,15 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(partialEClass, Partial.class, "Partial", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(navigationAggregationAssociationEClass, NavigationAggregationAssociation.class,
+				"NavigationAggregationAssociation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(navigationAggregationPartEClass, NavigationAggregationPart.class, "NavigationAggregationPart",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(navigationAggregationWholeEClass, NavigationAggregationWhole.class, "NavigationAggregationWhole",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(frameworkCategoryListEEnum, FrameworkCategoryList.class, "FrameworkCategoryList");

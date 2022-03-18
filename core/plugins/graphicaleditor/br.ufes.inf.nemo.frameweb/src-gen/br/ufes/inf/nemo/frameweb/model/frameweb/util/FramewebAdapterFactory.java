@@ -733,6 +733,21 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseNavigationAggregationAssociation(NavigationAggregationAssociation object) {
+			return createNavigationAggregationAssociationAdapter();
+		}
+
+		@Override
+		public Adapter caseNavigationAggregationPart(NavigationAggregationPart object) {
+			return createNavigationAggregationPartAdapter();
+		}
+
+		@Override
+		public Adapter caseNavigationAggregationWhole(NavigationAggregationWhole object) {
+			return createNavigationAggregationWholeAdapter();
+		}
+
+		@Override
 		public Adapter caseEModelElement(EModelElement object) {
 			return createEModelElementAdapter();
 		}
@@ -2708,6 +2723,48 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPartialAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation <em>Navigation Aggregation Association</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation
+	 * @generated
+	 */
+	public Adapter createNavigationAggregationAssociationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationPart <em>Navigation Aggregation Part</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationPart
+	 * @generated
+	 */
+	public Adapter createNavigationAggregationPartAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationWhole <em>Navigation Aggregation Whole</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationWhole
+	 * @generated
+	 */
+	public Adapter createNavigationAggregationWholeAdapter() {
 		return null;
 	}
 

@@ -3770,6 +3770,103 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION: {
+			NavigationAggregationAssociation navigationAggregationAssociation = (NavigationAggregationAssociation) theEObject;
+			T result = caseNavigationAggregationAssociation(navigationAggregationAssociation);
+			if (result == null)
+				result = caseAssociation(navigationAggregationAssociation);
+			if (result == null)
+				result = caseClassifier(navigationAggregationAssociation);
+			if (result == null)
+				result = caseRelationship(navigationAggregationAssociation);
+			if (result == null)
+				result = caseNamespace(navigationAggregationAssociation);
+			if (result == null)
+				result = caseRedefinableElement(navigationAggregationAssociation);
+			if (result == null)
+				result = caseType(navigationAggregationAssociation);
+			if (result == null)
+				result = caseTemplateableElement(navigationAggregationAssociation);
+			if (result == null)
+				result = casePackageableElement(navigationAggregationAssociation);
+			if (result == null)
+				result = caseNamedElement(navigationAggregationAssociation);
+			if (result == null)
+				result = caseParameterableElement(navigationAggregationAssociation);
+			if (result == null)
+				result = caseElement(navigationAggregationAssociation);
+			if (result == null)
+				result = caseEModelElement(navigationAggregationAssociation);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FramewebPackage.NAVIGATION_AGGREGATION_PART: {
+			NavigationAggregationPart navigationAggregationPart = (NavigationAggregationPart) theEObject;
+			T result = caseNavigationAggregationPart(navigationAggregationPart);
+			if (result == null)
+				result = caseNavigationProperty(navigationAggregationPart);
+			if (result == null)
+				result = caseProperty(navigationAggregationPart);
+			if (result == null)
+				result = caseStructuralFeature(navigationAggregationPart);
+			if (result == null)
+				result = caseConnectableElement(navigationAggregationPart);
+			if (result == null)
+				result = caseDeploymentTarget(navigationAggregationPart);
+			if (result == null)
+				result = caseFeature(navigationAggregationPart);
+			if (result == null)
+				result = caseTypedElement(navigationAggregationPart);
+			if (result == null)
+				result = caseMultiplicityElement(navigationAggregationPart);
+			if (result == null)
+				result = caseParameterableElement(navigationAggregationPart);
+			if (result == null)
+				result = caseRedefinableElement(navigationAggregationPart);
+			if (result == null)
+				result = caseNamedElement(navigationAggregationPart);
+			if (result == null)
+				result = caseElement(navigationAggregationPart);
+			if (result == null)
+				result = caseEModelElement(navigationAggregationPart);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FramewebPackage.NAVIGATION_AGGREGATION_WHOLE: {
+			NavigationAggregationWhole navigationAggregationWhole = (NavigationAggregationWhole) theEObject;
+			T result = caseNavigationAggregationWhole(navigationAggregationWhole);
+			if (result == null)
+				result = caseNavigationProperty(navigationAggregationWhole);
+			if (result == null)
+				result = caseProperty(navigationAggregationWhole);
+			if (result == null)
+				result = caseStructuralFeature(navigationAggregationWhole);
+			if (result == null)
+				result = caseConnectableElement(navigationAggregationWhole);
+			if (result == null)
+				result = caseDeploymentTarget(navigationAggregationWhole);
+			if (result == null)
+				result = caseFeature(navigationAggregationWhole);
+			if (result == null)
+				result = caseTypedElement(navigationAggregationWhole);
+			if (result == null)
+				result = caseMultiplicityElement(navigationAggregationWhole);
+			if (result == null)
+				result = caseParameterableElement(navigationAggregationWhole);
+			if (result == null)
+				result = caseRedefinableElement(navigationAggregationWhole);
+			if (result == null)
+				result = caseNamedElement(navigationAggregationWhole);
+			if (result == null)
+				result = caseElement(navigationAggregationWhole);
+			if (result == null)
+				result = caseEModelElement(navigationAggregationWhole);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -5647,6 +5744,51 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePartial(Partial object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Navigation Aggregation Association</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Navigation Aggregation Association</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNavigationAggregationAssociation(NavigationAggregationAssociation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Navigation Aggregation Part</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Navigation Aggregation Part</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNavigationAggregationPart(NavigationAggregationPart object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Navigation Aggregation Whole</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Navigation Aggregation Whole</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNavigationAggregationWhole(NavigationAggregationWhole object) {
 		return null;
 	}
 
