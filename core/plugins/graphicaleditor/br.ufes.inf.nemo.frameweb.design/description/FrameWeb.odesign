@@ -294,6 +294,15 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Partial" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Partial%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationClass.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.Partial" referenceName="packagedElement" variableName="Partialinstance">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Partial"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Auth Page" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Auth%20Page%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationClass.png">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -367,21 +376,21 @@
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Partial" containerMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Partial%20Node']" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationClass.png">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb.Partial" referenceName="packagedElement" variableName="Partialinstance">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Partial"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Navigation Aggregation Association">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Navigation Aggregation Association" edgeMappings="//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@edgeMappings[name='Navigation%20Aggregation%20Association']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
-            <initialOperation/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb::NavigationAggregationWhole" referenceName="ownedAttribute" variableName="AW">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer().eContainer()">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb::NavigationAggregationAssociation" referenceName="packagedElement"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
           </ownedTools>
         </toolSections>
         <toolSections name="Controller">
