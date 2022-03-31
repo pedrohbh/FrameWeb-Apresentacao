@@ -18,6 +18,7 @@ import java.util.List;
 import javax.lang.model.type.PrimitiveType;
 
 import br.ufes.inf.nemo.FrameWeb_Martins2015.*;
+import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerDependency;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Partial;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ResultDependency;
 
@@ -490,7 +491,7 @@ public class Extend {
 		}
 	}
 
-	public String processaLabelResultDependency(ResultDependency resultDependency) {
+	public String processLabelResultDependency(ResultDependency resultDependency) {
 		EList<Element> origens = resultDependency.getSources();
 		if (origens.size() >= 1 && origens.get(0) instanceof Partial) {
 			if (resultDependency.getResultMethod() == null) {
@@ -503,6 +504,19 @@ public class Extend {
 		
 		// SCRIPT ORIGINAL PARA O LABEL DO RESULT DEPENDENCY
 		// "aql:'{method=' + self.resultMethod.name + self.resultDependencyConstraint.print_resultdependency()";
+	}
+	
+	public String processLabelFrontControllerDependency(FrontControllerDependency frontControllerDependency)
+	{
+		EList<Element> origens = frontControllerDependency.getSources();
+		if (origens.size() >= 1 && origens.get(0) instanceof Partial) {
+			if (frontControllerDependency.getMethod() == null) {
+				return "";
+			}
+		}
+		return "{method=" + frontControllerDependency.getMethod().getName() + "}";
+		// SCRIPT ORIGINAL PARA O LABEL DO FRONT CONTROLLER DEPENDECY
+		//aql:'{method='+self.method.name+'}'
 	}
 
 }
