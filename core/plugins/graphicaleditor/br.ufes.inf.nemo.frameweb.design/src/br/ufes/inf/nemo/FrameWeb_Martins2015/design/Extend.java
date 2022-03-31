@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreEList;
 import org.eclipse.sirius.diagram.business.internal.metamodel.spec.DNodeContainerSpec;
 import org.eclipse.sirius.viewpoint.DRepresentationElement;
+import org.eclipse.uml2.uml.Element;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -17,6 +18,8 @@ import java.util.List;
 import javax.lang.model.type.PrimitiveType;
 
 import br.ufes.inf.nemo.FrameWeb_Martins2015.*;
+import br.ufes.inf.nemo.frameweb.model.frameweb.Partial;
+import br.ufes.inf.nemo.frameweb.model.frameweb.ResultDependency;
 
 @SuppressWarnings("all")
 public class Extend {
@@ -25,6 +28,8 @@ public class Extend {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	
 
 	public void getSemanticElements(EObject obj) {
 //		TreeIterator<EObject> eAllContents = obj.eAllContents();
@@ -486,6 +491,23 @@ public class Extend {
 		} else {
 			return "}";
 		}
+	}
+	
+	public String processaLabelResultDependency(ResultDependency resultDependency)
+	{
+		EList<Element> origens =  resultDependency.getSources();
+		if ( origens.size() >= 1 && origens.get(0) instanceof Partial)
+		{
+			
+		}
+		else
+		{
+			return "{method=" + resultDependency.getResultMethod().getName() + print_resultdependency(resultDependency.getResultDependencyConstraint());
+					//"aql:'{method=' + self.resultMethod.name + self.resultDependencyConstraint.print_resultdependency()";
+		}
+		return "Oi";
+		
+		// aql:'{method=' + self.resultMethod.name + self.resultDependencyConstraint.print_resultdependency()
 	}
 
 }
