@@ -28,8 +28,6 @@ public class Extend {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	
 
 	public void getSemanticElements(EObject obj) {
 //		TreeIterator<EObject> eAllContents = obj.eAllContents();
@@ -280,7 +278,7 @@ public class Extend {
 	public String printIdStereotype(EObject o) {
 		return "<<id>> ";
 	}
-	
+
 	public String printPrefix(EObject o) {
 
 		EStructuralFeature prefix_feature = o.eClass().getEAllAttributes().get(7);
@@ -297,21 +295,21 @@ public class Extend {
 		EStructuralFeature size_feature = o.eClass().getEAllAttributes().get(16);
 		EStructuralFeature null_feature = o.eClass().getEAllAttributes().get(17);
 //		EStructuralFeature id_feature = o.eClass().getEAllAttributes().get(15);
-		
+
 		String null_feature_str = o.eGet(null_feature).toString();
-		
-		if(null_feature_str.equals("true")) {
+
+		if (null_feature_str.equals("true")) {
 			retorno.add("null");
-		}else {
+		} else {
 			retorno.add("not null");
 		}
-		
+
 //		String id_feature_str = o.eGet(id_feature).toString();
 //		
 //		if(id_feature_str.equals("true")) {
 //			idSter = " <<id>> ";
 //		}
-		
+
 		String size = (o.eGet(size_feature).toString());
 		if (!size.equals("0")) {
 			retorno.add("size=" + size);
@@ -327,7 +325,7 @@ public class Extend {
 
 			String s = "";
 			s += idSter;
-			
+
 			if (retorno.size() > 0) {
 				s += " {";
 				for (int i = 0; i < retorno.size(); i++) {
@@ -340,9 +338,9 @@ public class Extend {
 			return s;
 		} catch (Exception e) {
 			String s = "";
-			
+
 			s += idSter;
-			
+
 			if (retorno.size() > 0) {
 				s += " {";
 				for (int i = 0; i < retorno.size(); i++) {
@@ -361,16 +359,15 @@ public class Extend {
 		ArrayList<String> retorno = new ArrayList();
 
 		EStructuralFeature size_feature = o.eClass().getEAllAttributes().get(16);
-		
-		EStructuralFeature null_feature = o.eClass().getEAllAttributes().get(17); 		
+
+		EStructuralFeature null_feature = o.eClass().getEAllAttributes().get(17);
 		String null_feature_str = o.eGet(null_feature).toString();
-		if(null_feature_str.equals("true")) {
+		if (null_feature_str.equals("true")) {
 			retorno.add("null");
-		}else {
+		} else {
 			retorno.add("not null");
 		}
-		
-		
+
 		String size = (o.eGet(size_feature).toString());
 		if (!size.equals("0")) {
 			retorno.add("size=" + size);
@@ -433,11 +430,11 @@ public class Extend {
 	}
 
 	public boolean isTypeOf(EObject o, String name) {
-		String className = o.eClass().getName(); 
-		
+		String className = o.eClass().getName();
+
 		return className.equals(name);
 	}
-	
+
 	public String print_resultdependency(EObject o) {
 		String response = "";
 
@@ -492,22 +489,20 @@ public class Extend {
 			return "}";
 		}
 	}
-	
-	public String processaLabelResultDependency(ResultDependency resultDependency)
-	{
-		EList<Element> origens =  resultDependency.getSources();
-		if ( origens.size() >= 1 && origens.get(0) instanceof Partial)
-		{
-			
+
+	public String processaLabelResultDependency(ResultDependency resultDependency) {
+		EList<Element> origens = resultDependency.getSources();
+		if (origens.size() >= 1 && origens.get(0) instanceof Partial) {
+			if (resultDependency.getResultMethod() == null) {
+				return "";
+			}
 		}
-		else
-		{
-			return "{method=" + resultDependency.getResultMethod().getName() + print_resultdependency(resultDependency.getResultDependencyConstraint());
-					//"aql:'{method=' + self.resultMethod.name + self.resultDependencyConstraint.print_resultdependency()";
-		}
-		return "Oi";
+
+		return "{method=" + resultDependency.getResultMethod().getName()
+				+ print_resultdependency(resultDependency.getResultDependencyConstraint());
 		
-		// aql:'{method=' + self.resultMethod.name + self.resultDependencyConstraint.print_resultdependency()
+		// SCRIPT ORIGINAL PARA O LABEL DO RESULT DEPENDENCY
+		// "aql:'{method=' + self.resultMethod.name + self.resultDependencyConstraint.print_resultdependency()";
 	}
 
 }
