@@ -10,6 +10,8 @@ import org.eclipse.emf.ecore.util.EcoreEList;
 import org.eclipse.sirius.diagram.business.internal.metamodel.spec.DNodeContainerSpec;
 import org.eclipse.sirius.viewpoint.DRepresentationElement;
 import org.eclipse.uml2.uml.Element;
+import org.eclipse.uml2.uml.NamedElement;
+import org.eclipse.uml2.uml.Property;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -19,6 +21,7 @@ import javax.lang.model.type.PrimitiveType;
 
 import br.ufes.inf.nemo.FrameWeb_Martins2015.*;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerDependency;
+import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Partial;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ResultDependency;
 
@@ -517,6 +520,21 @@ public class Extend {
 		return "{method=" + frontControllerDependency.getMethod().getName() + "}";
 		// SCRIPT ORIGINAL PARA O LABEL DO FRONT CONTROLLER DEPENDECY
 		//aql:'{method='+self.method.name+'}'
+	}
+	
+	public String processLabelNavigationAssociation(NavigationAssociation navigationAssociation)
+	{
+		Property property = navigationAssociation.getMemberEnds().get(1);
+		Integer numero = property.getUpper();
+		
+		if ( numero > 1 )
+		{
+			return numero.toString();
+		}
+		else
+			return "";
+		// SCRIPT ORIGINAL PARA O LABEL DO NAVIGATION ASSOCIATION
+		//aql:self.memberEnd->at(2).upper
 	}
 
 }
