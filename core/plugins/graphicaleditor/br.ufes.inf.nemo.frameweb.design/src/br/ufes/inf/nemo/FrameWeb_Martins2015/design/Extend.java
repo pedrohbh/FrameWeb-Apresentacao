@@ -21,6 +21,7 @@ import javax.lang.model.type.PrimitiveType;
 
 import br.ufes.inf.nemo.FrameWeb_Martins2015.*;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerDependency;
+import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Partial;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ResultDependency;
@@ -535,6 +536,39 @@ public class Extend {
 			return "";
 		// SCRIPT ORIGINAL PARA O LABEL DO NAVIGATION ASSOCIATION
 		//aql:self.memberEnd->at(2).upper
+	}
+	
+	private Boolean isEmptyLowerUpperBoundNavigationAggregationAssociation(NavigationAggregationAssociation navigationAggregationAssociation)
+	{
+		int lower = navigationAggregationAssociation.getLowerBound();
+		int upper = navigationAggregationAssociation.getUpperBound();
+		if ( lower == 1 && upper == 1)
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	public String processLabelNavigationAggregationAssociationLower(NavigationAggregationAssociation navigationAggregationAssociation)
+	{
+		int lower = navigationAggregationAssociation.getLowerBound();
+		if ( isEmptyLowerUpperBoundNavigationAggregationAssociation(navigationAggregationAssociation) )
+		{
+			return "";
+		}
+		
+		return String.valueOf(lower);
+	}
+	
+	public String processLabelNavigationAggregationAssociationUpper(NavigationAggregationAssociation navigationAggregationAssociation)
+	{
+		int upper = navigationAggregationAssociation.getUpperBound();
+		if ( isEmptyLowerUpperBoundNavigationAggregationAssociation(navigationAggregationAssociation) )
+		{
+			return "";
+		}
+		
+		return String.valueOf(upper);
 	}
 
 }
