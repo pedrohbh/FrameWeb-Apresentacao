@@ -3584,6 +3584,26 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EAttribute getNavigationAggregationAssociation_LowerBound() {
+		return (EAttribute) navigationAggregationAssociationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getNavigationAggregationAssociation_UpperBound() {
+		return (EAttribute) navigationAggregationAssociationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getNavigationAggregationPart() {
 		return navigationAggregationPartEClass;
 	}
@@ -4128,6 +4148,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		partialEClass = createEClass(PARTIAL);
 
 		navigationAggregationAssociationEClass = createEClass(NAVIGATION_AGGREGATION_ASSOCIATION);
+		createEAttribute(navigationAggregationAssociationEClass, NAVIGATION_AGGREGATION_ASSOCIATION__LOWER_BOUND);
+		createEAttribute(navigationAggregationAssociationEClass, NAVIGATION_AGGREGATION_ASSOCIATION__UPPER_BOUND);
 
 		navigationAggregationPartEClass = createEClass(NAVIGATION_AGGREGATION_PART);
 
@@ -5008,6 +5030,12 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		initEClass(navigationAggregationAssociationEClass, NavigationAggregationAssociation.class,
 				"NavigationAggregationAssociation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNavigationAggregationAssociation_LowerBound(), theEcorePackage.getEInt(), "lowerBound", "1",
+				0, 1, NavigationAggregationAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNavigationAggregationAssociation_UpperBound(), theEcorePackage.getEInt(), "upperBound", "1",
+				0, 1, NavigationAggregationAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(navigationAggregationPartEClass, NavigationAggregationPart.class, "NavigationAggregationPart",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
