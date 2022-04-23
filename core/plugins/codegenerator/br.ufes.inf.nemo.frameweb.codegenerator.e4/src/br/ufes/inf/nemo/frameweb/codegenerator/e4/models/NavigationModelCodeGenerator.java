@@ -123,30 +123,30 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 			
 			
 			// TODO Fazendo a implementação do partial
-			List<UIComponent> uiComponents = viewPackage.getOwnedTypes()
-					.stream()
-					.filter(UIComponent.class::isInstance)
-					.map(UIComponent.class::cast)
-					.collect(Collectors.toList());
-			
-			viewPackage.getOwnedTypes().stream().filter(Partial.class::isInstance).map(Partial.class::cast).forEach(
-					partial -> {
+			List<UIComponent> uiComponents = viewPackage.getOwnedTypes().stream().filter(UIComponent.class::isInstance)
+					.map(UIComponent.class::cast).collect(Collectors.toList());
+
+			viewPackage.getOwnedTypes().stream().filter(Partial.class::isInstance).map(Partial.class::cast)
+					.forEach(partial -> {
 						List<UIComponent> partialUIComponents = new ArrayList<>();
-						for ( Association navigationAssociation: partial.getAssociations() )
-						{
-							for ( UIComponent uiComponent: uiComponents)
-							{
+						for (Association navigationAssociation : partial.getAssociations()) {
+							for (UIComponent uiComponent : uiComponents) {
 								List<Association> uiComponentAssociations = uiComponent.getAssociations();
-								
-								if ( uiComponentAssociations.contains(navigationAssociation))
-								{
+
+								if (uiComponentAssociations.contains(navigationAssociation)) {
 									partialUIComponents.add(uiComponent);
 								}
 							}
-							
+
 						}
-						//String code = ClassCodeGenerator.render
-						
+						String code = ClassCodeGenerator.render(partial, partialUIComponents, viewTemplate);
+
+						// TODO Verificar essa questão da extensão da classe
+						String filename = partial.getName() + projectConfiguration.getClassExtension();
+						IFile file = package_.getFile(filename);
+
+						IFileUtils.createFile(file, code);
+
 					});
 			
 			// TODO Fim do Partial
