@@ -16,6 +16,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
+import br.ufes.inf.nemo.frameweb.model.frameweb.Partial;
 import br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.UIComponent;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ViewPackage;
@@ -120,11 +121,35 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 			
 			IFolder package_ = view.getFolder(packagePath);
 			
+			
+			// TODO Fazendo a implementação do partial
 			List<UIComponent> uiComponents = viewPackage.getOwnedTypes()
 					.stream()
 					.filter(UIComponent.class::isInstance)
 					.map(UIComponent.class::cast)
 					.collect(Collectors.toList());
+			
+			viewPackage.getOwnedTypes().stream().filter(Partial.class::isInstance).map(Partial.class::cast).forEach(
+					partial -> {
+						List<UIComponent> partialUIComponents = new ArrayList<>();
+						for ( Association navigationAssociation: partial.getAssociations() )
+						{
+							for ( UIComponent uiComponent: uiComponents)
+							{
+								List<Association> uiComponentAssociations = uiComponent.getAssociations();
+								
+								if ( uiComponentAssociations.contains(navigationAssociation))
+								{
+									partialUIComponents.add(uiComponent);
+								}
+							}
+							
+						}
+						//String code = ClassCodeGenerator.render
+						
+					});
+			
+			// TODO Fim do Partial
 			
 			viewPackage.getOwnedTypes()
 					.stream()
