@@ -22,6 +22,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
+import br.ufes.inf.nemo.frameweb.model.frameweb.Partial;
 import br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
@@ -45,6 +46,8 @@ public class ClassCodeGenerator {
 	public final static String NAVIGATION_ASSOCIATIONS = "navigationAssociation";
 	public final static String PAGE = "page";
 	public final static String FORMS = "forms";
+	public final static String PARTIAL = "partial";
+	
 
 	public static String render(DomainClass class_, String template) {
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
@@ -197,6 +200,19 @@ public class ClassCodeGenerator {
 		return templateEngineContext.getCode();
 	}
 	
+	public static String render(Partial partial, List<UIComponent> partialUIComponents, String template) {
+		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
+		templateEngineContext.setTemplate(template);
+
+		templateEngineContext.addParameter(PARTIAL, partial)
+				.addParameter(NAVIGATION_ASSOCIATIONS,
+						partial.getAssociations().stream().filter(NavigationAssociation.class::isInstance)
+								.map(NavigationAssociation.class::cast).collect(Collectors.toList()))
+				.addParameter(FORMS, partialUIComponents);
+
+		return templateEngineContext.getCode();
+	}
+
 //	TODO implementar o renderizador de pagina html
 	public static String render(Page page, List<UIComponent> pageUIComponents, String template) {
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
