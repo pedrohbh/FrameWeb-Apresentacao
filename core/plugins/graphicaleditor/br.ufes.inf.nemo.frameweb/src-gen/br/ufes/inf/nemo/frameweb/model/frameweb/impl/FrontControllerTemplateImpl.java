@@ -26,6 +26,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getClassExtension <em>Class Extension</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getPageExtension <em>Page Extension</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getRestClassTemplate <em>Rest Class Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getPartialTemplate <em>Partial Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getPartialExtension <em>Partial Extension</em>}</li>
  * </ul>
  *
  * @generated
@@ -171,6 +173,46 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @ordered
 	 */
 	protected String restClassTemplate = REST_CLASS_TEMPLATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPartialTemplate() <em>Partial Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPartialTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PARTIAL_TEMPLATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPartialTemplate() <em>Partial Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPartialTemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected String partialTemplate = PARTIAL_TEMPLATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPartialExtension() <em>Partial Extension</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPartialExtension()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PARTIAL_EXTENSION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPartialExtension() <em>Partial Extension</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPartialExtension()
+	 * @generated
+	 * @ordered
+	 */
+	protected String partialExtension = PARTIAL_EXTENSION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -367,6 +409,55 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
+	public String getPartialTemplate() {
+		return partialTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPartialTemplate(String newPartialTemplate) {
+		String oldPartialTemplate = partialTemplate;
+		partialTemplate = newPartialTemplate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PARTIAL_TEMPLATE, oldPartialTemplate, partialTemplate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getPartialExtension() {
+		return partialExtension;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPartialExtension(String newPartialExtension) {
+		String oldPartialExtension = partialExtension;
+		partialExtension = newPartialExtension;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PARTIAL_EXTENSION, oldPartialExtension,
+					partialExtension));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__CLASS_TEMPLATE:
@@ -383,6 +474,10 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 			return getPageExtension();
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__REST_CLASS_TEMPLATE:
 			return getRestClassTemplate();
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PARTIAL_TEMPLATE:
+			return getPartialTemplate();
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PARTIAL_EXTENSION:
+			return getPartialExtension();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -415,6 +510,12 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 			return;
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__REST_CLASS_TEMPLATE:
 			setRestClassTemplate((String) newValue);
+			return;
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PARTIAL_TEMPLATE:
+			setPartialTemplate((String) newValue);
+			return;
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PARTIAL_EXTENSION:
+			setPartialExtension((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -449,6 +550,12 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__REST_CLASS_TEMPLATE:
 			setRestClassTemplate(REST_CLASS_TEMPLATE_EDEFAULT);
 			return;
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PARTIAL_TEMPLATE:
+			setPartialTemplate(PARTIAL_TEMPLATE_EDEFAULT);
+			return;
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PARTIAL_EXTENSION:
+			setPartialExtension(PARTIAL_EXTENSION_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -480,6 +587,12 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__REST_CLASS_TEMPLATE:
 			return REST_CLASS_TEMPLATE_EDEFAULT == null ? restClassTemplate != null
 					: !REST_CLASS_TEMPLATE_EDEFAULT.equals(restClassTemplate);
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PARTIAL_TEMPLATE:
+			return PARTIAL_TEMPLATE_EDEFAULT == null ? partialTemplate != null
+					: !PARTIAL_TEMPLATE_EDEFAULT.equals(partialTemplate);
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PARTIAL_EXTENSION:
+			return PARTIAL_EXTENSION_EDEFAULT == null ? partialExtension != null
+					: !PARTIAL_EXTENSION_EDEFAULT.equals(partialExtension);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -509,6 +622,10 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 		result.append(pageExtension);
 		result.append(", restClassTemplate: ");
 		result.append(restClassTemplate);
+		result.append(", partialTemplate: ");
+		result.append(partialTemplate);
+		result.append(", partialExtension: ");
+		result.append(partialExtension);
 		result.append(')');
 		return result.toString();
 	}

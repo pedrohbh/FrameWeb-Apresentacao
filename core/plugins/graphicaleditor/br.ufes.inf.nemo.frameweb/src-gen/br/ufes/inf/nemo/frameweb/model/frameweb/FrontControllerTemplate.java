@@ -18,6 +18,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getClassExtension <em>Class Extension</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getPageExtension <em>Page Extension</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getRestClassTemplate <em>Rest Class Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getPartialTemplate <em>Partial Template</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getPartialExtension <em>Partial Extension</em>}</li>
  * </ul>
  *
  * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getFrontControllerTemplate()
@@ -202,5 +204,49 @@ public interface FrontControllerTemplate extends FrameworkProfile {
 	 * @generated
 	 */
 	void setRestClassTemplate(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Partial Template</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Partial Template</em>' attribute.
+	 * @see #setPartialTemplate(String)
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getFrontControllerTemplate_PartialTemplate()
+	 * @model dataType="org.eclipse.uml2.types.String"
+	 * @generated
+	 */
+	String getPartialTemplate();
+
+	/**
+	 * Sets the value of the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getPartialTemplate <em>Partial Template</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Partial Template</em>' attribute.
+	 * @see #getPartialTemplate()
+	 * @generated
+	 */
+	void setPartialTemplate(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Partial Extension</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Partial Extension</em>' attribute.
+	 * @see #setPartialExtension(String)
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getFrontControllerTemplate_PartialExtension()
+	 * @model dataType="org.eclipse.uml2.types.String"
+	 * @generated
+	 */
+	String getPartialExtension();
+
+	/**
+	 * Sets the value of the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getPartialExtension <em>Partial Extension</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Partial Extension</em>' attribute.
+	 * @see #getPartialExtension()
+	 * @generated
+	 */
+	void setPartialExtension(String value);
 
 } // FrontControllerTemplate

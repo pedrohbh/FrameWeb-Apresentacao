@@ -53,6 +53,8 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 			addClassExtensionPropertyDescriptor(object);
 			addPageExtensionPropertyDescriptor(object);
 			addRestClassTemplatePropertyDescriptor(object);
+			addPartialTemplatePropertyDescriptor(object);
+			addPartialExtensionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -170,6 +172,38 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 	}
 
 	/**
+	 * This adds a property descriptor for the Partial Template feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPartialTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_FrontControllerTemplate_partialTemplate_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_FrontControllerTemplate_partialTemplate_feature",
+						"_UI_FrontControllerTemplate_type"),
+				FramewebPackage.Literals.FRONT_CONTROLLER_TEMPLATE__PARTIAL_TEMPLATE, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Partial Extension feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPartialExtensionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_FrontControllerTemplate_partialExtension_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_FrontControllerTemplate_partialExtension_feature",
+						"_UI_FrontControllerTemplate_type"),
+				FramewebPackage.Literals.FRONT_CONTROLLER_TEMPLATE__PARTIAL_EXTENSION, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns FrontControllerTemplate.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -222,6 +256,8 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__CLASS_EXTENSION:
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION:
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__REST_CLASS_TEMPLATE:
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PARTIAL_TEMPLATE:
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PARTIAL_EXTENSION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

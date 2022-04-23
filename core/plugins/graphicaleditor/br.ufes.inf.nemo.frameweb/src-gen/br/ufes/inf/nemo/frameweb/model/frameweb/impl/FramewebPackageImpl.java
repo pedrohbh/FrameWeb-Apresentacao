@@ -3224,6 +3224,26 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EAttribute getFrontControllerTemplate_PartialTemplate() {
+		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFrontControllerTemplate_PartialExtension() {
+		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getDITemplate() {
 		return diTemplateEClass;
 	}
@@ -4103,6 +4123,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__CLASS_EXTENSION);
 		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__PAGE_EXTENSION);
 		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__REST_CLASS_TEMPLATE);
+		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__PARTIAL_TEMPLATE);
+		createEAttribute(frontControllerTemplateEClass, FRONT_CONTROLLER_TEMPLATE__PARTIAL_EXTENSION);
 
 		diTemplateEClass = createEClass(DI_TEMPLATE);
 		createEAttribute(diTemplateEClass, DI_TEMPLATE__INTERFACE_TEMPLATE);
@@ -4921,6 +4943,12 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 				0, 1, FrontControllerTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFrontControllerTemplate_RestClassTemplate(), theTypesPackage.getString(), "restClassTemplate",
+				null, 0, 1, FrontControllerTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFrontControllerTemplate_PartialTemplate(), theTypesPackage.getString(), "partialTemplate",
+				null, 0, 1, FrontControllerTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFrontControllerTemplate_PartialExtension(), theTypesPackage.getString(), "partialExtension",
 				null, 0, 1, FrontControllerTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
