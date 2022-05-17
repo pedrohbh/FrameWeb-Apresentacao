@@ -390,12 +390,12 @@
             <targetViewVariable name="targetView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb::NavigationAggregationWhole" referenceName="ownedAttribute" variableName="AW">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb::NavigationAggregationSource" referenceName="ownedAttribute" variableName="AW">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:target"/>
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer().eContainer()">
                     <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb::NavigationAggregationAssociation" referenceName="packagedElement">
                       <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self">
-                        <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb::NavigationAggregationPart" referenceName="ownedEnd">
+                        <subModelOperations xsi:type="tool_1:CreateInstance" typeName="frameweb::NavigationAggregationTarget" referenceName="ownedEnd">
                           <subModelOperations xsi:type="tool_1:SetValue" featureName="association" valueExpression="aql:self.eContainer()"/>
                           <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:source"/>
                         </subModelOperations>

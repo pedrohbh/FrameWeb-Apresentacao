@@ -289,10 +289,10 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createPartial();
 		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION:
 			return createNavigationAggregationAssociation();
-		case FramewebPackage.NAVIGATION_AGGREGATION_PART:
-			return createNavigationAggregationPart();
-		case FramewebPackage.NAVIGATION_AGGREGATION_WHOLE:
-			return createNavigationAggregationWhole();
+		case FramewebPackage.NAVIGATION_AGGREGATION_TARGET:
+			return createNavigationAggregationTarget();
+		case FramewebPackage.NAVIGATION_AGGREGATION_SOURCE:
+			return createNavigationAggregationSource();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1662,9 +1662,9 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public NavigationAggregationPart createNavigationAggregationPart() {
-		NavigationAggregationPartImpl navigationAggregationPart = new NavigationAggregationPartImpl();
-		return navigationAggregationPart;
+	public NavigationAggregationTarget createNavigationAggregationTarget() {
+		NavigationAggregationTargetImpl navigationAggregationTarget = new NavigationAggregationTargetImpl();
+		return navigationAggregationTarget;
 	}
 
 	/**
@@ -1673,9 +1673,9 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public NavigationAggregationWhole createNavigationAggregationWhole() {
-		NavigationAggregationWholeImpl navigationAggregationWhole = new NavigationAggregationWholeImpl();
-		return navigationAggregationWhole;
+	public NavigationAggregationSource createNavigationAggregationSource() {
+		NavigationAggregationSourceImpl navigationAggregationSource = new NavigationAggregationSourceImpl();
+		return navigationAggregationSource;
 	}
 
 	/**

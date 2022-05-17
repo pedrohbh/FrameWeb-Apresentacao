@@ -243,10 +243,10 @@ public class IRIItemProvider extends PropertyItemProvider {
 				FramewebFactory.eINSTANCE.createDomainProperty()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PROPERTY__QUALIFIER,
-				FramewebFactory.eINSTANCE.createNavigationAggregationPart()));
+				FramewebFactory.eINSTANCE.createNavigationAggregationTarget()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PROPERTY__QUALIFIER,
-				FramewebFactory.eINSTANCE.createNavigationAggregationWhole()));
+				FramewebFactory.eINSTANCE.createNavigationAggregationSource()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.PROPERTY__DEFAULT_VALUE,
 				FramewebFactory.eINSTANCE.createVocabularyLiteral()));

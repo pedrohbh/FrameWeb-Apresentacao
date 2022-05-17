@@ -377,10 +377,10 @@ public class DAOInterfaceItemProvider extends InterfaceItemProvider {
 				FramewebFactory.eINSTANCE.createDomainProperty()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_ATTRIBUTE,
-				FramewebFactory.eINSTANCE.createNavigationAggregationPart()));
+				FramewebFactory.eINSTANCE.createNavigationAggregationTarget()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_ATTRIBUTE,
-				FramewebFactory.eINSTANCE.createNavigationAggregationWhole()));
+				FramewebFactory.eINSTANCE.createNavigationAggregationSource()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.INTERFACE__OWNED_OPERATION,
 				FramewebFactory.eINSTANCE.createFrontControllerMethod()));

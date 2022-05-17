@@ -1066,22 +1066,22 @@ public interface FramewebFactory extends EFactory {
 	NavigationAggregationAssociation createNavigationAggregationAssociation();
 
 	/**
-	 * Returns a new object of class '<em>Navigation Aggregation Part</em>'.
+	 * Returns a new object of class '<em>Navigation Aggregation Target</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Navigation Aggregation Part</em>'.
+	 * @return a new object of class '<em>Navigation Aggregation Target</em>'.
 	 * @generated
 	 */
-	NavigationAggregationPart createNavigationAggregationPart();
+	NavigationAggregationTarget createNavigationAggregationTarget();
 
 	/**
-	 * Returns a new object of class '<em>Navigation Aggregation Whole</em>'.
+	 * Returns a new object of class '<em>Navigation Aggregation Source</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Navigation Aggregation Whole</em>'.
+	 * @return a new object of class '<em>Navigation Aggregation Source</em>'.
 	 * @generated
 	 */
-	NavigationAggregationWhole createNavigationAggregationWhole();
+	NavigationAggregationSource createNavigationAggregationSource();
 
 	/**
 	 * Returns the package supported by this factory.

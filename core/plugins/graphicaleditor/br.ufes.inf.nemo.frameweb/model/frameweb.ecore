@@ -420,6 +420,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="upperBound" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"
         defaultValueLiteral="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NavigationAggregationPart" eSuperTypes="#//NavigationProperty"/>
-  <eClassifiers xsi:type="ecore:EClass" name="NavigationAggregationWhole" eSuperTypes="#//NavigationProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NavigationAggregationTarget" eSuperTypes="#//NavigationProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NavigationAggregationSource" eSuperTypes="#//NavigationProperty"/>
 </ecore:EPackage>

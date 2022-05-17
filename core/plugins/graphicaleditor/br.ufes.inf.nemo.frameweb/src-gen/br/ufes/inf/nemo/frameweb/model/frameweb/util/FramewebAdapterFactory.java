@@ -738,13 +738,13 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseNavigationAggregationPart(NavigationAggregationPart object) {
-			return createNavigationAggregationPartAdapter();
+		public Adapter caseNavigationAggregationTarget(NavigationAggregationTarget object) {
+			return createNavigationAggregationTargetAdapter();
 		}
 
 		@Override
-		public Adapter caseNavigationAggregationWhole(NavigationAggregationWhole object) {
-			return createNavigationAggregationWholeAdapter();
+		public Adapter caseNavigationAggregationSource(NavigationAggregationSource object) {
+			return createNavigationAggregationSourceAdapter();
 		}
 
 		@Override
@@ -2741,30 +2741,30 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationPart <em>Navigation Aggregation Part</em>}'.
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationTarget <em>Navigation Aggregation Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationPart
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationTarget
 	 * @generated
 	 */
-	public Adapter createNavigationAggregationPartAdapter() {
+	public Adapter createNavigationAggregationTargetAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationWhole <em>Navigation Aggregation Whole</em>}'.
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationSource <em>Navigation Aggregation Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationWhole
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationSource
 	 * @generated
 	 */
-	public Adapter createNavigationAggregationWholeAdapter() {
+	public Adapter createNavigationAggregationSourceAdapter() {
 		return null;
 	}
 

@@ -2741,49 +2741,49 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationPart} instances.
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationTarget} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NavigationAggregationPartItemProvider navigationAggregationPartItemProvider;
+	protected NavigationAggregationTargetItemProvider navigationAggregationTargetItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationPart}.
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationTarget}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createNavigationAggregationPartAdapter() {
-		if (navigationAggregationPartItemProvider == null) {
-			navigationAggregationPartItemProvider = new NavigationAggregationPartItemProvider(this);
+	public Adapter createNavigationAggregationTargetAdapter() {
+		if (navigationAggregationTargetItemProvider == null) {
+			navigationAggregationTargetItemProvider = new NavigationAggregationTargetItemProvider(this);
 		}
 
-		return navigationAggregationPartItemProvider;
+		return navigationAggregationTargetItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationWhole} instances.
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationSource} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NavigationAggregationWholeItemProvider navigationAggregationWholeItemProvider;
+	protected NavigationAggregationSourceItemProvider navigationAggregationSourceItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationWhole}.
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationSource}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createNavigationAggregationWholeAdapter() {
-		if (navigationAggregationWholeItemProvider == null) {
-			navigationAggregationWholeItemProvider = new NavigationAggregationWholeItemProvider(this);
+	public Adapter createNavigationAggregationSourceAdapter() {
+		if (navigationAggregationSourceItemProvider == null) {
+			navigationAggregationSourceItemProvider = new NavigationAggregationSourceItemProvider(this);
 		}
 
-		return navigationAggregationWholeItemProvider;
+		return navigationAggregationSourceItemProvider;
 	}
 
 	/**
@@ -3123,10 +3123,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 			partialItemProvider.dispose();
 		if (navigationAggregationAssociationItemProvider != null)
 			navigationAggregationAssociationItemProvider.dispose();
-		if (navigationAggregationPartItemProvider != null)
-			navigationAggregationPartItemProvider.dispose();
-		if (navigationAggregationWholeItemProvider != null)
-			navigationAggregationWholeItemProvider.dispose();
+		if (navigationAggregationTargetItemProvider != null)
+			navigationAggregationTargetItemProvider.dispose();
+		if (navigationAggregationSourceItemProvider != null)
+			navigationAggregationSourceItemProvider.dispose();
 	}
 
 }

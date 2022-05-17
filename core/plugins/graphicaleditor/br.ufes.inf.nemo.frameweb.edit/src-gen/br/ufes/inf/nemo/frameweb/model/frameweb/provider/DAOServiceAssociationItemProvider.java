@@ -224,10 +224,10 @@ public class DAOServiceAssociationItemProvider extends AssociationItemProvider {
 				FramewebFactory.eINSTANCE.createDomainProperty()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__OWNED_END,
-				FramewebFactory.eINSTANCE.createNavigationAggregationPart()));
+				FramewebFactory.eINSTANCE.createNavigationAggregationTarget()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__OWNED_END,
-				FramewebFactory.eINSTANCE.createNavigationAggregationWhole()));
+				FramewebFactory.eINSTANCE.createNavigationAggregationSource()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
 				FramewebFactory.eINSTANCE.createVersionAttribute()));
@@ -314,10 +314,10 @@ public class DAOServiceAssociationItemProvider extends AssociationItemProvider {
 				FramewebFactory.eINSTANCE.createDomainProperty()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
-				FramewebFactory.eINSTANCE.createNavigationAggregationPart()));
+				FramewebFactory.eINSTANCE.createNavigationAggregationTarget()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
-				FramewebFactory.eINSTANCE.createNavigationAggregationWhole()));
+				FramewebFactory.eINSTANCE.createNavigationAggregationSource()));
 	}
 
 	/**

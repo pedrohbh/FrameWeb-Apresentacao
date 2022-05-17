@@ -355,10 +355,10 @@ public class DataPropertyItemProvider extends VocabularyEntityItemProvider {
 				FramewebFactory.eINSTANCE.createDomainProperty()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__OWNED_END,
-				FramewebFactory.eINSTANCE.createNavigationAggregationPart()));
+				FramewebFactory.eINSTANCE.createNavigationAggregationTarget()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__OWNED_END,
-				FramewebFactory.eINSTANCE.createNavigationAggregationWhole()));
+				FramewebFactory.eINSTANCE.createNavigationAggregationSource()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__OWNED_END,
 				UMLFactory.eINSTANCE.createProperty()));
@@ -454,10 +454,10 @@ public class DataPropertyItemProvider extends VocabularyEntityItemProvider {
 				FramewebFactory.eINSTANCE.createDomainProperty()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
-				FramewebFactory.eINSTANCE.createNavigationAggregationPart()));
+				FramewebFactory.eINSTANCE.createNavigationAggregationTarget()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
-				FramewebFactory.eINSTANCE.createNavigationAggregationWhole()));
+				FramewebFactory.eINSTANCE.createNavigationAggregationSource()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
 				UMLFactory.eINSTANCE.createProperty()));

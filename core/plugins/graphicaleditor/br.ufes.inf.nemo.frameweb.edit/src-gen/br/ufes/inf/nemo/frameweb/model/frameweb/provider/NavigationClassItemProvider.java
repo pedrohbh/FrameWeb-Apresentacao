@@ -213,10 +213,10 @@ public class NavigationClassItemProvider extends ClassItemProvider {
 				FramewebFactory.eINSTANCE.createDomainProperty()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
-				FramewebFactory.eINSTANCE.createNavigationAggregationPart()));
+				FramewebFactory.eINSTANCE.createNavigationAggregationTarget()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.STRUCTURED_CLASSIFIER__OWNED_ATTRIBUTE,
-				FramewebFactory.eINSTANCE.createNavigationAggregationWhole()));
+				FramewebFactory.eINSTANCE.createNavigationAggregationSource()));
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.BEHAVIORED_CLASSIFIER__INTERFACE_REALIZATION,
 				FramewebFactory.eINSTANCE.createDAORealization()));
