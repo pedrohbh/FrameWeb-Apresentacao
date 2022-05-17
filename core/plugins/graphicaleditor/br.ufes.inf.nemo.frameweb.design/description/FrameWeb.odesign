@@ -2220,11 +2220,11 @@
           </initialOperation>
         </controls>
       </groups>
-      <groups name="NavigationAggregationAssociation" labelExpression="Properties" domainClass="frameweb::NavigationAggregationAssociation" semanticCandidateExpression="var:self">
+      <groups name="NavigationAggregationAssociation" labelExpression="Aggregation Properties" domainClass="frameweb::NavigationAggregationAssociation" semanticCandidateExpression="var:self">
         <controls xsi:type="properties:TextDescription" name="MemberEndSource" labelExpression="Lower Bound" valueExpression="aql:self.memberEnd->at(1).upper">
           <initialOperation>
-            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
-              <subModelOperations xsi:type="tool_1:SetValue" featureName="aql:self.memberEnd->at(1).upper" valueExpression="var:newValue"/>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.memberEnd->at(1)">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="upper" valueExpression="var:newValue"/>
             </firstModelOperations>
           </initialOperation>
         </controls>
