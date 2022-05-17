@@ -2169,11 +2169,13 @@
     <ownedJavaExtensions qualifiedClassName="br.ufes.inf.nemo.FrameWeb_Martins2015.design.Extend"/>
   </ownedViewpoints>
   <extensions xsi:type="properties:ViewExtensionDescription" name="properties">
+    <metamodels href="../../FrameWeb/core/plugins/graphicaleditor/br.ufes.inf.nemo.frameweb/model/frameweb.ecore#/"/>
     <categories name="Default">
       <pages name="ParameterMenuFrontController" labelExpression="Parameter Menu" domainClass="frameweb.FrontControllerMethod" groups="//@extensions.0/@categories.0/@groups.0"/>
       <pages name="ParameterMenuDAO" labelExpression="ParameterMenu" domainClass="frameweb.DAOMethod" groups="//@extensions.0/@categories.0/@groups.1"/>
       <pages name="ParameterMenuDomain" labelExpression="ParameterMenu" domainClass="frameweb.DomainMethod" groups="//@extensions.0/@categories.0/@groups.2"/>
       <pages name="ResultDependency" labelExpression="Result Constraints" domainClass="frameweb.ResultDependency" groups="//@extensions.0/@categories.0/@groups.3"/>
+      <pages name="NavigationAggregationAssociation" labelExpression="General" domainClass="frameweb::NavigationAggregationAssociation" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.4"/>
       <groups name="FrontControllerParameters" labelExpression="Parameters" domainClass="FrontControllerMethod" semanticCandidateExpression="aql:self">
         <controls xsi:type="properties:LabelDescription" name="Double Click on Method to Edit Parameters" labelExpression="Double Click on Method to Edit Parameters"/>
       </groups>
@@ -2214,6 +2216,22 @@
           <initialOperation>
             <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.resultDependencyConstraint">
               <subModelOperations xsi:type="tool_1:SetValue" featureName="execute" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+      </groups>
+      <groups name="NavigationAggregationAssociation" labelExpression="Properties" domainClass="frameweb::NavigationAggregationAssociation" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:TextDescription" name="MemberEndSource" labelExpression="Lower Bound" valueExpression="aql:self.memberEnd->at(1).upper">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="aql:self.memberEnd->at(1).upper" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="MemberEndTarget" labelExpression="Upper Bound" valueExpression="aql:self.memberEnd->at(2).upper">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.memberEnd->at(2)">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="upper" valueExpression="var:newValue"/>
             </firstModelOperations>
           </initialOperation>
         </controls>
