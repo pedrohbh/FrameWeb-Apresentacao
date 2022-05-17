@@ -373,10 +373,7 @@
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//RestControllerClass"/>
     <genClasses ecoreClass="frameweb.ecore#//Partial"/>
-    <genClasses ecoreClass="frameweb.ecore#//NavigationAggregationAssociation">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//NavigationAggregationAssociation/lowerBound"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//NavigationAggregationAssociation/upperBound"/>
-    </genClasses>
+    <genClasses ecoreClass="frameweb.ecore#//NavigationAggregationAssociation"/>
     <genClasses ecoreClass="frameweb.ecore#//NavigationAggregationTarget"/>
     <genClasses ecoreClass="frameweb.ecore#//NavigationAggregationSource"/>
   </genPackages>

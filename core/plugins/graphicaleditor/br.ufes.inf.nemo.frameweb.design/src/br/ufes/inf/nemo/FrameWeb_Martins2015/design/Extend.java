@@ -540,8 +540,8 @@ public class Extend {
 	
 	private Boolean isEmptyLowerUpperBoundNavigationAggregationAssociation(NavigationAggregationAssociation navigationAggregationAssociation)
 	{
-		int lower = navigationAggregationAssociation.getLowerBound();
-		int upper = navigationAggregationAssociation.getUpperBound();
+		int lower = navigationAggregationAssociation.getMemberEnds().get(0).getUpper();
+		int upper = navigationAggregationAssociation.getMemberEnds().get(1).getUpper();
 		if ( lower == 1 && upper == 1)
 		{
 			return true;
@@ -551,7 +551,7 @@ public class Extend {
 	
 	public String processLabelNavigationAggregationAssociationLower(NavigationAggregationAssociation navigationAggregationAssociation)
 	{
-		int lower = navigationAggregationAssociation.getLowerBound();
+		int lower = navigationAggregationAssociation.getMemberEnds().get(0).getUpper();
 		if ( isEmptyLowerUpperBoundNavigationAggregationAssociation(navigationAggregationAssociation) )
 		{
 			return "";
@@ -562,7 +562,7 @@ public class Extend {
 	
 	public String processLabelNavigationAggregationAssociationUpper(NavigationAggregationAssociation navigationAggregationAssociation)
 	{
-		int upper = navigationAggregationAssociation.getUpperBound();
+		int upper = navigationAggregationAssociation.getMemberEnds().get(1).getUpper();
 		if ( isEmptyLowerUpperBoundNavigationAggregationAssociation(navigationAggregationAssociation) )
 		{
 			return "";
