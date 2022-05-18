@@ -55,6 +55,7 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 			addRestClassTemplatePropertyDescriptor(object);
 			addPartialTemplatePropertyDescriptor(object);
 			addPartialExtensionPropertyDescriptor(object);
+			addIsSPAFrameworkPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -204,6 +205,22 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 	}
 
 	/**
+	 * This adds a property descriptor for the Is SPA Framework feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsSPAFrameworkPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_FrontControllerTemplate_isSPAFramework_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_FrontControllerTemplate_isSPAFramework_feature",
+						"_UI_FrontControllerTemplate_type"),
+				FramewebPackage.Literals.FRONT_CONTROLLER_TEMPLATE__IS_SPA_FRAMEWORK, true, false, false,
+				ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns FrontControllerTemplate.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -258,6 +275,7 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__REST_CLASS_TEMPLATE:
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PARTIAL_TEMPLATE:
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PARTIAL_EXTENSION:
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__IS_SPA_FRAMEWORK:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

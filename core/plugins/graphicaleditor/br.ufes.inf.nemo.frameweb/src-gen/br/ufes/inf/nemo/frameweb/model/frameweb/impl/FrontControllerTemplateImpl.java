@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getRestClassTemplate <em>Rest Class Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getPartialTemplate <em>Partial Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#getPartialExtension <em>Partial Extension</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.FrontControllerTemplateImpl#isIsSPAFramework <em>Is SPA Framework</em>}</li>
  * </ul>
  *
  * @generated
@@ -213,6 +214,26 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @ordered
 	 */
 	protected String partialExtension = PARTIAL_EXTENSION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isIsSPAFramework() <em>Is SPA Framework</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsSPAFramework()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_SPA_FRAMEWORK_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsSPAFramework() <em>Is SPA Framework</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsSPAFramework()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isSPAFramework = IS_SPA_FRAMEWORK_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -458,6 +479,30 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
+	public boolean isIsSPAFramework() {
+		return isSPAFramework;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIsSPAFramework(boolean newIsSPAFramework) {
+		boolean oldIsSPAFramework = isSPAFramework;
+		isSPAFramework = newIsSPAFramework;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					FramewebPackage.FRONT_CONTROLLER_TEMPLATE__IS_SPA_FRAMEWORK, oldIsSPAFramework, isSPAFramework));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__CLASS_TEMPLATE:
@@ -478,6 +523,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 			return getPartialTemplate();
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PARTIAL_EXTENSION:
 			return getPartialExtension();
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__IS_SPA_FRAMEWORK:
+			return isIsSPAFramework();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -516,6 +563,9 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 			return;
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PARTIAL_EXTENSION:
 			setPartialExtension((String) newValue);
+			return;
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__IS_SPA_FRAMEWORK:
+			setIsSPAFramework((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -556,6 +606,9 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PARTIAL_EXTENSION:
 			setPartialExtension(PARTIAL_EXTENSION_EDEFAULT);
 			return;
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__IS_SPA_FRAMEWORK:
+			setIsSPAFramework(IS_SPA_FRAMEWORK_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -593,6 +646,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PARTIAL_EXTENSION:
 			return PARTIAL_EXTENSION_EDEFAULT == null ? partialExtension != null
 					: !PARTIAL_EXTENSION_EDEFAULT.equals(partialExtension);
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__IS_SPA_FRAMEWORK:
+			return isSPAFramework != IS_SPA_FRAMEWORK_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -626,6 +681,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 		result.append(partialTemplate);
 		result.append(", partialExtension: ");
 		result.append(partialExtension);
+		result.append(", isSPAFramework: ");
+		result.append(isSPAFramework);
 		result.append(')');
 		return result.toString();
 	}

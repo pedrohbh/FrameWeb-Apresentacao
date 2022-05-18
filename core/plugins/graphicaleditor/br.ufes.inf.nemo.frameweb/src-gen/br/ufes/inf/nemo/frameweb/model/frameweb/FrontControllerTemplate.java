@@ -20,6 +20,7 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getRestClassTemplate <em>Rest Class Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getPartialTemplate <em>Partial Template</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#getPartialExtension <em>Partial Extension</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#isIsSPAFramework <em>Is SPA Framework</em>}</li>
  * </ul>
  *
  * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getFrontControllerTemplate()
@@ -248,5 +249,28 @@ public interface FrontControllerTemplate extends FrameworkProfile {
 	 * @generated
 	 */
 	void setPartialExtension(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Is SPA Framework</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is SPA Framework</em>' attribute.
+	 * @see #setIsSPAFramework(boolean)
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getFrontControllerTemplate_IsSPAFramework()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isIsSPAFramework();
+
+	/**
+	 * Sets the value of the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate#isIsSPAFramework <em>Is SPA Framework</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is SPA Framework</em>' attribute.
+	 * @see #isIsSPAFramework()
+	 * @generated
+	 */
+	void setIsSPAFramework(boolean value);
 
 } // FrontControllerTemplate
