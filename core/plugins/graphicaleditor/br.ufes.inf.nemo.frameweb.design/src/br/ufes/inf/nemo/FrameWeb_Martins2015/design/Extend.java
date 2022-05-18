@@ -556,6 +556,10 @@ public class Extend {
 		{
 			return "";
 		}
+		else if ( lower < 0 )
+		{
+			return "*";
+		}
 		
 		return String.valueOf(lower);
 	}
@@ -566,6 +570,10 @@ public class Extend {
 		if ( isEmptyLowerUpperBoundNavigationAggregationAssociation(navigationAggregationAssociation) )
 		{
 			return "";
+		}
+		else if ( upper < 0 )
+		{
+			return "*";
 		}
 		
 		return String.valueOf(upper);
