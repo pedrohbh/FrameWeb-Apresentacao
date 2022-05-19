@@ -197,7 +197,7 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 								}
 
 							}
-							String code = ClassCodeGenerator.render(partial, partialUIComponents, partialTemplate);
+							String code = ClassCodeGenerator.render(partial, partialUIComponents, listaNomesPartialsReferenciados, partialTemplate);
 
 							String filename = partial.getName() + partialExtension;
 							IFile file = package_.getFile(filename);

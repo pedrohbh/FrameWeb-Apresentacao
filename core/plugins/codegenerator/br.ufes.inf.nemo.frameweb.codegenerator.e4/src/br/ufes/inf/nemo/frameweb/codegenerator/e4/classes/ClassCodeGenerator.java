@@ -47,6 +47,7 @@ public class ClassCodeGenerator {
 	public final static String PAGE = "page";
 	public final static String FORMS = "forms";
 	public final static String PARTIAL = "partial";
+	public final static String REFERENCED_PARTIALS = "referencedPartials";
 	
 
 	public static String render(DomainClass class_, String template) {
@@ -200,7 +201,7 @@ public class ClassCodeGenerator {
 		return templateEngineContext.getCode();
 	}
 	
-	public static String render(Partial partial, List<UIComponent> partialUIComponents, String template) {
+	public static String render(Partial partial, List<UIComponent> partialUIComponents, List<String> partiaisReferenciados, String template) {
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
 		templateEngineContext.setTemplate(template);
 
@@ -208,7 +209,7 @@ public class ClassCodeGenerator {
 				.addParameter(NAVIGATION_ASSOCIATIONS,
 						partial.getAssociations().stream().filter(NavigationAssociation.class::isInstance)
 								.map(NavigationAssociation.class::cast).collect(Collectors.toList()))
-				.addParameter(FORMS, partialUIComponents);
+				.addParameter(FORMS, partialUIComponents).addParameter(REFERENCED_PARTIALS, partiaisReferenciados);
 
 		return templateEngineContext.getCode();
 	}
