@@ -1,6 +1,7 @@
 package br.ufes.inf.nemo.frameweb.codegenerator.e4.models;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -62,41 +63,40 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 		String restTemplate = projectConfiguration.getTemplate(restTemplatePath);
 
 		IFolder src = projectConfiguration.getSourceFolder();
-		
+
 		Boolean isSPAFramework = frontControllerTemplate.isIsSPAFramework();
-		
-		// Ajustes necessário para a adição de Frameworks SPA. Caso não seja um framework SPA, executa da mesma forma que era antes da implementação
-		if ( isSPAFramework == null || isSPAFramework == false )
-		{
+
+		// Ajustes necessário para a adição de Frameworks SPA. Caso não seja um
+		// framework SPA, executa da mesma forma que era antes da implementação
+		if (isSPAFramework == null || isSPAFramework == false) {
 			controllerPackages.forEach(controllerPackage -> {
 				String packagePath = IFolderUtils.packageNameToPath(controllerPackage.getName());
-				
-				IFolderUtils.makeDirectory(src, packagePath);
-				
-				IFolder package_ = src.getFolder(packagePath);
-				
-				controllerPackage.getOwnedTypes().stream().filter(FrontControllerClass.class::isInstance)
-				.map(FrontControllerClass.class::cast).forEach(frontControllerClass -> {
-					String code = ClassCodeGenerator.render(frontControllerClass, template);
-					
-					String fileName = frontControllerClass.getName() + projectConfiguration.getClassExtension();
-					IFile file = package_.getFile(fileName);
-					
-					IFileUtils.createFile(file, code);
-				});
-				
-				controllerPackage.getOwnedTypes().stream().filter(RestControllerClass.class::isInstance)
-				.map(RestControllerClass.class::cast).forEach(restControllerClass -> {
-					String code = ClassCodeGenerator.render(restControllerClass, restTemplate);
-					
-					String fileName = restControllerClass.getName() + projectConfiguration.getClassExtension();
-					IFile file = package_.getFile(fileName);
-					
-					IFileUtils.createFile(file, code);
-				});
-			});			
-		}
 
+				IFolderUtils.makeDirectory(src, packagePath);
+
+				IFolder package_ = src.getFolder(packagePath);
+
+				controllerPackage.getOwnedTypes().stream().filter(FrontControllerClass.class::isInstance)
+						.map(FrontControllerClass.class::cast).forEach(frontControllerClass -> {
+							String code = ClassCodeGenerator.render(frontControllerClass, template);
+
+							String fileName = frontControllerClass.getName() + projectConfiguration.getClassExtension();
+							IFile file = package_.getFile(fileName);
+
+							IFileUtils.createFile(file, code);
+						});
+
+				controllerPackage.getOwnedTypes().stream().filter(RestControllerClass.class::isInstance)
+						.map(RestControllerClass.class::cast).forEach(restControllerClass -> {
+							String code = ClassCodeGenerator.render(restControllerClass, restTemplate);
+
+							String fileName = restControllerClass.getName() + projectConfiguration.getClassExtension();
+							IFile file = package_.getFile(fileName);
+
+							IFileUtils.createFile(file, code);
+						});
+			});
+		}
 
 //		TODO As paginas web ainda nao foram trabalhadas, acredito que essa parte de geracao
 //		da view necessite de adaptacoes. Temporariamente permanecera assim...
@@ -159,27 +159,29 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 				viewPackage.getOwnedTypes().stream().filter(Partial.class::isInstance).map(Partial.class::cast)
 						.forEach(partial -> {
 							List<UIComponent> partialUIComponents = new ArrayList<>();
-							
+
 							// Área de Testes
+							List<String> listaNomesPartialsReferenciados = new LinkedList<>();
+							
 							EList<Association> associacoes = partial.getAssociations();
-							for ( Association associacao : associacoes )
-							{
-								if ( associacao instanceof NavigationAggregationAssociation )
-								{
+							for (Association associacao : associacoes) {
+								if (associacao instanceof NavigationAggregationAssociation) {
 									NavigationAggregationAssociation navigationAggregationAssociation = (NavigationAggregationAssociation) associacao;
-									for ( Property property : navigationAggregationAssociation.getMemberEnds() )
+									for ( int i = 0; i < navigationAggregationAssociation.getMembers().size(); i++ )
 									{
-										if ( property instanceof NavigationAggregationSource && property.getType().equals(partial) )
+										Property property = navigationAggregationAssociation.getMemberEnds().get(i);
+										if (property instanceof NavigationAggregationSource && property.getType().equals(partial))
 										{
-											System.out.println("SUCESSO");
-											System.out.println(property.getType().getName());											
+											listaNomesPartialsReferenciados.add(navigationAggregationAssociation.getMemberEnds().get((1-i)).getType().getName());
+											// (1-i)
+											break;											
 										}
 									}
 								}
 							}
-							
+
 							// Fim dos testes
-							
+
 							for (Association navigationAssociation : partial.getAssociations()) {
 								for (UIComponent uiComponent : uiComponents) {
 									List<Association> uiComponentAssociations = uiComponent.getAssociations();
@@ -191,7 +193,7 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 
 							}
 							String code = ClassCodeGenerator.render(partial, partialUIComponents, partialTemplate);
-							
+
 							String filename = partial.getName() + partialExtension;
 							IFile file = package_.getFile(filename);
 
