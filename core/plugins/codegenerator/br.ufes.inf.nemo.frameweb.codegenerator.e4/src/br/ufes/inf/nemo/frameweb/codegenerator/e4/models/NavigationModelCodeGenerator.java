@@ -6,7 +6,9 @@ import java.util.stream.Collectors;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.uml2.uml.Association;
+import org.eclipse.uml2.uml.Property;
 
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.ProjectProperties;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.classes.ClassCodeGenerator;
@@ -14,6 +16,8 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.AuthPage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ControllerPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
+import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation;
+import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationSource;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Partial;
@@ -155,6 +159,27 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 				viewPackage.getOwnedTypes().stream().filter(Partial.class::isInstance).map(Partial.class::cast)
 						.forEach(partial -> {
 							List<UIComponent> partialUIComponents = new ArrayList<>();
+							
+							// Área de Testes
+							EList<Association> associacoes = partial.getAssociations();
+							for ( Association associacao : associacoes )
+							{
+								if ( associacao instanceof NavigationAggregationAssociation )
+								{
+									NavigationAggregationAssociation navigationAggregationAssociation = (NavigationAggregationAssociation) associacao;
+									for ( Property property : navigationAggregationAssociation.getMemberEnds() )
+									{
+										if ( property instanceof NavigationAggregationSource && property.getType().equals(partial) )
+										{
+											System.out.println("SUCESSO");
+											System.out.println(property.getType().getName());											
+										}
+									}
+								}
+							}
+							
+							// Fim dos testes
+							
 							for (Association navigationAssociation : partial.getAssociations()) {
 								for (UIComponent uiComponent : uiComponents) {
 									List<Association> uiComponentAssociations = uiComponent.getAssociations();
