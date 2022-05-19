@@ -179,6 +179,11 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 									}
 								}
 							}
+							
+							if ( listaNomesPartialsReferenciados.size() > 0 )
+							{
+								System.out.println(listaNomesPartialsReferenciados.size());
+							}
 
 							// Fim dos testes
 
