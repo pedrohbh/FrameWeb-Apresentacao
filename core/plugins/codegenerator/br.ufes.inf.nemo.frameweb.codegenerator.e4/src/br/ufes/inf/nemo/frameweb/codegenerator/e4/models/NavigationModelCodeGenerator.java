@@ -302,7 +302,11 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 		String corrente = "";
 		for (int i = 0; i < nome.length(); i++)
 		{
-			if (Character.isUpperCase(nome.charAt(i)))
+			if (Character.isUpperCase(nome.charAt(i)) && corrente.isBlank())
+			{
+				corrente += Character.toLowerCase(nome.charAt(i));
+				continue;
+			} else if (Character.isUpperCase(nome.charAt(i)))
 			{
 				lista.add(corrente);
 				corrente = "";
