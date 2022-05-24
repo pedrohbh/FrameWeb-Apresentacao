@@ -1,8 +1,10 @@
 package br.ufes.inf.nemo.frameweb.codegenerator.e4.models;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.eclipse.core.resources.IFile;
@@ -163,6 +165,8 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 				viewPackage.getOwnedTypes().stream().filter(Partial.class::isInstance).map(Partial.class::cast)
 						.forEach(partial -> {
 							List<UIComponent> partialUIComponents = new ArrayList<>();
+							Map<String, String> partialProperties = new HashMap<>();
+							String nomePartial = partial.getName();
 
 							// Área de Testes
 							List<String> listaNomesPartialsReferenciados = new LinkedList<>();
@@ -182,12 +186,6 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 									}
 								}
 							}
-							
-							if ( listaNomesPartialsReferenciados.size() > 0 )
-							{
-								System.out.println(listaNomesPartialsReferenciados.size());
-							}
-
 							// Fim dos testes
 
 							for (Association navigationAssociation : partial.getAssociations()) {
@@ -211,18 +209,17 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 									{
 										for ( NamedElement sup : ((Dependency) dr).getSuppliers() )
 										{
-											String nome = sup.getName();
-											System.out.println(nome);
-											
+											nomePartial = sup.getName();											
 										}									
 									}
 								}							
 								
 							}
+							partialProperties.put("partialName", nomePartial);
 							// Fim novos testes
-							String code = ClassCodeGenerator.render(partial, partialUIComponents, listaNomesPartialsReferenciados, partialTemplate);
+							String code = ClassCodeGenerator.render(partial, partialUIComponents, partialProperties, listaNomesPartialsReferenciados, partialTemplate);
 
-							String filename = partial.getName() + partialExtension;
+							String filename = nomePartial + partialExtension;
 							IFile file = package_.getFile(filename);
 
 							IFileUtils.createFile(file, code);

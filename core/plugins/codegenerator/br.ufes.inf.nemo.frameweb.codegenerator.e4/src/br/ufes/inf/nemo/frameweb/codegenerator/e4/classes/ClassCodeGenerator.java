@@ -1,6 +1,7 @@
 package br.ufes.inf.nemo.frameweb.codegenerator.e4.classes;
 
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.eclipse.uml2.uml.Enumeration;
@@ -48,6 +49,7 @@ public class ClassCodeGenerator {
 	public final static String FORMS = "forms";
 	public final static String PARTIAL = "partial";
 	public final static String REFERENCED_PARTIALS = "referencedPartials";
+	public final static String PARTIAL_PROPERTIES = "partialProperties";
 	
 
 	public static String render(DomainClass class_, String template) {
@@ -201,7 +203,7 @@ public class ClassCodeGenerator {
 		return templateEngineContext.getCode();
 	}
 	
-	public static String render(Partial partial, List<UIComponent> partialUIComponents, List<String> partiaisReferenciados, String template) {
+	public static String render(Partial partial, List<UIComponent> partialUIComponents, Map<String, String> partialProperties, List<String> partiaisReferenciados, String template) {
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
 		templateEngineContext.setTemplate(template);
 
@@ -209,7 +211,7 @@ public class ClassCodeGenerator {
 				.addParameter(NAVIGATION_ASSOCIATIONS,
 						partial.getAssociations().stream().filter(NavigationAssociation.class::isInstance)
 								.map(NavigationAssociation.class::cast).collect(Collectors.toList()))
-				.addParameter(FORMS, partialUIComponents).addParameter(REFERENCED_PARTIALS, partiaisReferenciados);
+				.addParameter(FORMS, partialUIComponents).addParameter(REFERENCED_PARTIALS, partiaisReferenciados).addParameter(PARTIAL_PROPERTIES, partialProperties);
 
 		return templateEngineContext.getCode();
 	}
