@@ -34,7 +34,8 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.ViewPackage;
 import br.ufes.inf.nemo.frameweb.utils.IFileUtils;
 import br.ufes.inf.nemo.frameweb.utils.IFolderUtils;
 
-public class NavigationModelCodeGenerator implements ModelCodeGenerator {
+public class NavigationModelCodeGenerator implements ModelCodeGenerator
+{
 
 	private List<ControllerPackage> controllerPackages;
 	private List<ViewPackage> viewPackages;
@@ -42,7 +43,8 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 	private ProjectProperties projectConfiguration;
 
 	public NavigationModelCodeGenerator(NavigationModel navigationModel,
-			FrontControllerTemplate frontControllerTemplate, ProjectProperties projectConfiguration) {
+			FrontControllerTemplate frontControllerTemplate, ProjectProperties projectConfiguration)
+	{
 
 		controllerPackages = navigationModel.getOwnedElements().stream().filter(ControllerPackage.class::isInstance)
 				.map(ControllerPackage.class::cast).collect(Collectors.toList());
@@ -55,7 +57,8 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 	}
 
 	@Override
-	public void generate() {
+	public void generate()
+	{
 		String templatePath = frontControllerTemplate.getClassTemplate();
 
 		if (templatePath == null)
@@ -74,7 +77,8 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 
 		// Ajustes necessário para a adição de Frameworks SPA. Caso não seja um
 		// framework SPA, executa da mesma forma que era antes da implementação
-		if (isSPAFramework == null || isSPAFramework == false) {
+		if (isSPAFramework == null || isSPAFramework == false)
+		{
 			controllerPackages.forEach(controllerPackage -> {
 				String packagePath = IFolderUtils.packageNameToPath(controllerPackage.getName());
 
@@ -139,11 +143,14 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 //						da navegacao pela associacao page -> form.
 				List<UIComponent> pageUIComponents = new ArrayList<UIComponent>();
 
-				for (Association navigationAssociation : page.getAssociations()) {
-					for (UIComponent uiComponent : uiComponents) {
+				for (Association navigationAssociation : page.getAssociations())
+				{
+					for (UIComponent uiComponent : uiComponents)
+					{
 						List<Association> uiComponentAssociations = uiComponent.getAssociations();
 
-						if (uiComponentAssociations.contains(navigationAssociation)) {
+						if (uiComponentAssociations.contains(navigationAssociation))
+						{
 							pageUIComponents.add(uiComponent);
 						}
 					}
@@ -159,7 +166,8 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 
 			// TODO Fazendo a implementação do partial
 			if (partialViewTemplatePath != null && !partialViewTemplatePath.isBlank() && partialExtension != null
-					&& !partialExtension.isBlank()) {
+					&& !partialExtension.isBlank())
+			{
 				String partialTemplate = projectConfiguration.getTemplate(partialViewTemplatePath);
 
 				viewPackage.getOwnedTypes().stream().filter(Partial.class::isInstance).map(Partial.class::cast)
@@ -170,54 +178,62 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 
 							// Área de Testes
 							List<String> listaNomesPartialsReferenciados = new LinkedList<>();
-							
+
 							EList<Association> associacoes = partial.getAssociations();
-							for (Association associacao : associacoes) {
-								if (associacao instanceof NavigationAggregationAssociation) {
+							for (Association associacao : associacoes)
+							{
+								if (associacao instanceof NavigationAggregationAssociation)
+								{
 									NavigationAggregationAssociation navigationAggregationAssociation = (NavigationAggregationAssociation) associacao;
-									for ( int i = 0; i < navigationAggregationAssociation.getMembers().size(); i++ )
+									for (int i = 0; i < navigationAggregationAssociation.getMembers().size(); i++)
 									{
 										Property property = navigationAggregationAssociation.getMemberEnds().get(i);
-										if (property instanceof NavigationAggregationSource && property.getType().equals(partial))
+										if (property instanceof NavigationAggregationSource
+												&& property.getType().equals(partial))
 										{
-											listaNomesPartialsReferenciados.add(navigationAggregationAssociation.getMemberEnds().get((1-i)).getType().getName());
-											break;											
+											listaNomesPartialsReferenciados.add(navigationAggregationAssociation
+													.getMemberEnds().get((1 - i)).getType().getName());
+											break;
 										}
 									}
 								}
 							}
 							// Fim dos testes
 
-							for (Association navigationAssociation : partial.getAssociations()) {
-								for (UIComponent uiComponent : uiComponents) {
+							for (Association navigationAssociation : partial.getAssociations())
+							{
+								for (UIComponent uiComponent : uiComponents)
+								{
 									List<Association> uiComponentAssociations = uiComponent.getAssociations();
 
-									if (uiComponentAssociations.contains(navigationAssociation)) {
+									if (uiComponentAssociations.contains(navigationAssociation))
+									{
 										partialUIComponents.add(uiComponent);
 									}
 								}
 
 							}
-							
+
 							// Novos Testes
-							if ( partialUIComponents.size() == 0 )
+							if (partialUIComponents.size() == 0)
 							{
-								EList<DirectedRelationship> relacoes =  partial.getSourceDirectedRelationships();
-								for ( DirectedRelationship dr : relacoes )
-								{									
-									if ( dr instanceof FrontControllerDependency )
+								EList<DirectedRelationship> relacoes = partial.getSourceDirectedRelationships();
+								for (DirectedRelationship dr : relacoes)
+								{
+									if (dr instanceof FrontControllerDependency)
 									{
-										for ( NamedElement sup : ((Dependency) dr).getSuppliers() )
+										for (NamedElement sup : ((Dependency) dr).getSuppliers())
 										{
-											nomePartial = sup.getName();											
-										}									
+											nomePartial = sup.getName();
+										}
 									}
-								}							
-								
+								}
+
 							}
 							partialProperties.put("partialName", nomePartial);
 							// Fim novos testes
-							String code = ClassCodeGenerator.render(partial, partialUIComponents, partialProperties, listaNomesPartialsReferenciados, partialTemplate);
+							String code = ClassCodeGenerator.render(partial, partialUIComponents, partialProperties,
+									listaNomesPartialsReferenciados, partialTemplate);
 
 							String filename = nomePartial + partialExtension;
 							IFile file = package_.getFile(filename);
@@ -239,11 +255,14 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 						// da navegacao pela associacao page -> form.
 						List<UIComponent> pageUIComponents = new ArrayList<UIComponent>();
 
-						for (Association navigationAssociation : page.getAssociations()) {
-							for (UIComponent uiComponent : uiComponents) {
+						for (Association navigationAssociation : page.getAssociations())
+						{
+							for (UIComponent uiComponent : uiComponents)
+							{
 								List<Association> uiComponentAssociations = uiComponent.getAssociations();
 
-								if (uiComponentAssociations.contains(navigationAssociation)) {
+								if (uiComponentAssociations.contains(navigationAssociation))
+								{
 									pageUIComponents.add(uiComponent);
 								}
 							}
