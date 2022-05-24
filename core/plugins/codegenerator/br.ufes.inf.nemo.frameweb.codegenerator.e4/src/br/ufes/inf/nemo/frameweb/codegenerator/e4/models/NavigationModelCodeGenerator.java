@@ -9,6 +9,9 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.uml2.uml.Association;
+import org.eclipse.uml2.uml.Dependency;
+import org.eclipse.uml2.uml.DirectedRelationship;
+import org.eclipse.uml2.uml.NamedElement;
 import org.eclipse.uml2.uml.Property;
 
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.ProjectProperties;
@@ -16,6 +19,7 @@ import br.ufes.inf.nemo.frameweb.codegenerator.e4.classes.ClassCodeGenerator;
 import br.ufes.inf.nemo.frameweb.model.frameweb.AuthPage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ControllerPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
+import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerDependency;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationSource;
@@ -173,7 +177,6 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 										if (property instanceof NavigationAggregationSource && property.getType().equals(partial))
 										{
 											listaNomesPartialsReferenciados.add(navigationAggregationAssociation.getMemberEnds().get((1-i)).getType().getName());
-											// (1-i)
 											break;											
 										}
 									}
@@ -197,6 +200,26 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator {
 								}
 
 							}
+							
+							// Novos Testes
+							if ( partialUIComponents.size() == 0 )
+							{
+								EList<DirectedRelationship> relacoes =  partial.getSourceDirectedRelationships();
+								for ( DirectedRelationship dr : relacoes )
+								{									
+									if ( dr instanceof FrontControllerDependency )
+									{
+										for ( NamedElement sup : ((Dependency) dr).getSuppliers() )
+										{
+											String nome = sup.getName();
+											System.out.println(nome);
+											
+										}									
+									}
+								}							
+								
+							}
+							// Fim novos testes
 							String code = ClassCodeGenerator.render(partial, partialUIComponents, listaNomesPartialsReferenciados, partialTemplate);
 
 							String filename = partial.getName() + partialExtension;
