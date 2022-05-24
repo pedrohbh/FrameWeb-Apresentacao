@@ -230,7 +230,25 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 								}
 
 							}
+
+							// Partial Properties
 							partialProperties.put("partialName", nomePartial);
+							String[] splitNome = separaPorMaiuscula(nomePartial);
+							String partialNameDash = "";
+							String partialCamelCase = nomePartial.substring(0, 1).toUpperCase()
+									+ nomePartial.substring(1);
+							for (int i = 0; i < splitNome.length; i++)
+							{
+								if (i == splitNome.length - 1)
+								{
+									partialNameDash += splitNome[i];
+								} else
+								{
+									partialNameDash += splitNome[i] + "-";
+								}
+							}
+							partialProperties.put("partialNameDash", partialNameDash);
+							partialProperties.put("partialCamelCase", partialCamelCase);
 							// Fim novos testes
 							String code = ClassCodeGenerator.render(partial, partialUIComponents, partialProperties,
 									listaNomesPartialsReferenciados, partialTemplate);
@@ -276,6 +294,26 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 						IFileUtils.createFile(file, code);
 					});
 		});
+	}
+
+	private String[] separaPorMaiuscula(String nome)
+	{
+		List<String> lista = new ArrayList<>();
+		String corrente = "";
+		for (int i = 0; i < nome.length(); i++)
+		{
+			if (Character.isUpperCase(nome.charAt(i)))
+			{
+				lista.add(corrente);
+				corrente = "";
+				corrente += Character.toLowerCase(nome.charAt(i));
+			} else
+			{
+				corrente += nome.charAt(i);
+			}
+		}
+		lista.add(corrente);
+		return lista.toArray(new String[lista.size()]);
 	}
 
 }
