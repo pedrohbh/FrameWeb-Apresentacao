@@ -176,6 +176,19 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 							Map<String, Object> partialProperties = new HashMap<>();
 							String nomePartial = partial.getName();
 
+							for (Association navigationAssociation : partial.getAssociations())
+							{
+								for (UIComponent uiComponent : uiComponents)
+								{
+									List<Association> uiComponentAssociations = uiComponent.getAssociations();
+
+									if (uiComponentAssociations.contains(navigationAssociation))
+									{
+										partialUIComponents.add(uiComponent);
+									}
+								}
+							}
+
 							// Área de Testes
 							List<String> listaNomesPartialsReferenciados = new LinkedList<>();
 
@@ -195,14 +208,31 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 													.getMemberEnds().get((1 - i)).getType().getName();
 											Partial p = (Partial) navigationAggregationAssociation.getMemberEnds()
 													.get((1 - i)).getType();
-											
-											for ( DirectedRelationship dr : p.getSourceDirectedRelationships() )
+
+											boolean temForms = false;
+											for (int j = 0; j < p.getSourceDirectedRelationships().size(); j++)
 											{
-												if (dr instanceof FrontControllerDependency)
+												if (p.getSourceDirectedRelationships().get(j) instanceof UIComponent)
 												{
-													for (NamedElement sup : ((Dependency) dr).getSuppliers())
+													temForms = true;
+													nomeParcialReferenciada = ((Dependency) p
+															.getSourceDirectedRelationships().get(j)
+															.getSourceDirectedRelationships()).getSuppliers().get(0)
+																	.getName();
+													break;
+												}
+											}
+
+											if (!temForms)
+											{
+												for (DirectedRelationship dr : p.getSourceDirectedRelationships())
+												{
+													if (dr instanceof FrontControllerDependency)
 													{
-														nomeParcialReferenciada = sup.getName();
+														for (NamedElement sup : ((Dependency) dr).getSuppliers())
+														{
+															nomeParcialReferenciada = sup.getName();
+														}
 													}
 												}
 											}
@@ -213,20 +243,6 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 								}
 							}
 							// Fim dos testes
-
-							for (Association navigationAssociation : partial.getAssociations())
-							{
-								for (UIComponent uiComponent : uiComponents)
-								{
-									List<Association> uiComponentAssociations = uiComponent.getAssociations();
-
-									if (uiComponentAssociations.contains(navigationAssociation))
-									{
-										partialUIComponents.add(uiComponent);
-									}
-								}
-
-							}
 
 							// Novos Testes
 							if (partialUIComponents.size() == 0)
