@@ -171,7 +171,7 @@ public class ClassCodeGenerator
 	}
 
 	public static String render(Partial partial, List<UIComponent> partialUIComponents,
-			Map<String, String> partialProperties, List<String> partiaisReferenciados, String template)
+			Map<String, Object> partialProperties, List<String> partiaisReferenciados, String template)
 	{
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
 		templateEngineContext.setTemplate(template);

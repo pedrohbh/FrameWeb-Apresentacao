@@ -173,7 +173,7 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 				viewPackage.getOwnedTypes().stream().filter(Partial.class::isInstance).map(Partial.class::cast)
 						.forEach(partial -> {
 							List<UIComponent> partialUIComponents = new ArrayList<>();
-							Map<String, String> partialProperties = new HashMap<>();
+							Map<String, Object> partialProperties = new HashMap<>();
 							String nomePartial = partial.getName();
 
 							// Área de Testes
@@ -255,6 +255,34 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 							}
 							partialProperties.put("partialNameDash", partialNameDash);
 							partialProperties.put("partialCamelCase", partialCamelCase);
+
+							List<String> listaNomesPartialsReferenciadosNameDash = new LinkedList<>();
+							List<String> listaNomesPartialsReferenciadosCamelCase = new LinkedList<>();
+
+							for (String nome : listaNomesPartialsReferenciados)
+							{
+								String[] splitNomeRef = separaPorMaiuscula(nome);
+								String partialRefNameDash = "";
+								String partialRefCamelCase = nome.substring(0, 1).toUpperCase() + nome.substring(1);
+
+								for (int i = 0; i < splitNomeRef.length; i++)
+								{
+									if (i == splitNomeRef.length - 1)
+									{
+										partialRefNameDash += splitNomeRef[i];
+									} else
+									{
+										partialRefNameDash += splitNomeRef[i] + "-";
+									}
+								}
+								listaNomesPartialsReferenciadosNameDash.add(partialRefNameDash);
+								listaNomesPartialsReferenciadosCamelCase.add(partialRefCamelCase);
+							}
+
+							partialProperties.put("referencedPartialsCamelCase",
+									listaNomesPartialsReferenciadosCamelCase);
+							partialProperties.put("referencedPartialsNameDash",
+									listaNomesPartialsReferenciadosNameDash);
 							// Fim novos testes
 							String code = ClassCodeGenerator.render(partial, partialUIComponents, partialProperties,
 									listaNomesPartialsReferenciados, partialTemplate);
