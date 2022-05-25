@@ -191,8 +191,22 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 										if (property instanceof NavigationAggregationSource
 												&& property.getType().equals(partial))
 										{
-											listaNomesPartialsReferenciados.add(navigationAggregationAssociation
-													.getMemberEnds().get((1 - i)).getType().getName());
+											String nomeParcialReferenciada = navigationAggregationAssociation
+													.getMemberEnds().get((1 - i)).getType().getName();
+											Partial p = (Partial) navigationAggregationAssociation.getMemberEnds()
+													.get((1 - i)).getType();
+											
+											for ( DirectedRelationship dr : p.getSourceDirectedRelationships() )
+											{
+												if (dr instanceof FrontControllerDependency)
+												{
+													for (NamedElement sup : ((Dependency) dr).getSuppliers())
+													{
+														nomeParcialReferenciada = sup.getName();
+													}
+												}
+											}
+											listaNomesPartialsReferenciados.add(nomeParcialReferenciada);
 											break;
 										}
 									}
