@@ -228,10 +228,10 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 										}
 									}
 								}
-							}
-							else
+							} else
 							{
-								for ( DirectedRelationship t : partialUIComponents.get(0).getSourceDirectedRelationships())
+								for (DirectedRelationship t : partialUIComponents.get(0)
+										.getSourceDirectedRelationships())
 								{
 									nomePartial = ((Dependency) t).getSuppliers().get(0).getName();
 								}
