@@ -255,6 +255,7 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 										for (NamedElement sup : ((Dependency) dr).getSuppliers())
 										{
 											nomePartial = sup.getName();
+											partialProperties.put("FrontControllerClass", sup);
 										}
 									}
 								}
@@ -263,7 +264,9 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 								for (DirectedRelationship t : partialUIComponents.get(0)
 										.getSourceDirectedRelationships())
 								{
-									nomePartial = ((Dependency) t).getSuppliers().get(0).getName();
+									NamedElement sup = ((Dependency) t).getSuppliers().get(0);
+									nomePartial = sup.getName();
+									partialProperties.put("FrontControllerClass", sup);
 								}
 							}
 
