@@ -215,13 +215,10 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 												if (p.getSourceDirectedRelationships().get(j) instanceof UIComponent)
 												{
 													temForms = true;
-
-													NamedElement sup = ((Dependency) p.getSourceDirectedRelationships()
-															.get(j).getSourceDirectedRelationships()).getSuppliers()
-																	.get(0);
-
-													nomeParcialReferenciada = sup.getName();
-													partialProperties.put("FrontControllerClass", sup);
+													nomeParcialReferenciada = ((Dependency) p
+															.getSourceDirectedRelationships().get(j)
+															.getSourceDirectedRelationships()).getSuppliers().get(0)
+																	.getName();
 													break;
 												}
 											}
@@ -235,7 +232,6 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 														for (NamedElement sup : ((Dependency) dr).getSuppliers())
 														{
 															nomeParcialReferenciada = sup.getName();
-															partialProperties.put("FrontControllerClass", sup);
 														}
 													}
 												}
