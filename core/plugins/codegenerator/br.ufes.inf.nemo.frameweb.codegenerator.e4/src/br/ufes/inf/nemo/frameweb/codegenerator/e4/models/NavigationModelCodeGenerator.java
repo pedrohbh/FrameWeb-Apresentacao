@@ -22,6 +22,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.AuthPage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ControllerPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerDependency;
+import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationSource;
@@ -269,6 +270,13 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 									partialProperties.put("FrontControllerClass", sup);
 								}
 							}
+
+							List<FrontControllerMethod> methodsController = ((FrontControllerClass) partialProperties
+									.get("FrontControllerClass")).getOperations().stream()
+											.filter(FrontControllerMethod.class::isInstance)
+											.map(FrontControllerMethod.class::cast).collect(Collectors.toList());
+							partialProperties.put("methodsController", methodsController);
+							
 
 							// Partial Properties
 							partialProperties.put("partialName", nomePartial);
