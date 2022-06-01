@@ -276,7 +276,6 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 											.filter(FrontControllerMethod.class::isInstance)
 											.map(FrontControllerMethod.class::cast).collect(Collectors.toList());
 							partialProperties.put("methodsController", methodsController);
-							
 
 							// Partial Properties
 							partialProperties.put("partialName", nomePartial);
