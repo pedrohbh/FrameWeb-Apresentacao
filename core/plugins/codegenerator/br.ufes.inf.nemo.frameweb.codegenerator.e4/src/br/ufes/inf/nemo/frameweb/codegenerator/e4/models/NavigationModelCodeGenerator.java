@@ -173,8 +173,10 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 
 				viewPackage.getOwnedTypes().stream().filter(Partial.class::isInstance).map(Partial.class::cast)
 						.forEach(partial -> {
+							List<String> invocatedMethodsNames = new LinkedList<>();
 							List<UIComponent> partialUIComponents = new ArrayList<>();
 							Map<String, Object> partialProperties = new HashMap<>();
+							partialProperties.put("hasMethod", false);
 							String nomePartial = partial.getName();
 
 							for (Association navigationAssociation : partial.getAssociations())
@@ -253,6 +255,13 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 								{
 									if (dr instanceof FrontControllerDependency)
 									{
+										FrontControllerMethod method = ((FrontControllerDependency) dr).getMethod();
+										if (method != null && method.getName() != null && !method.getName().isBlank())
+										{
+											partialProperties.put("hasMethod", true);
+											invocatedMethodsNames.add(method.getName());
+											partialProperties.put("invocatedMethodsNames", invocatedMethodsNames);
+										}
 										for (NamedElement sup : ((Dependency) dr).getSuppliers())
 										{
 											nomePartial = sup.getName();
