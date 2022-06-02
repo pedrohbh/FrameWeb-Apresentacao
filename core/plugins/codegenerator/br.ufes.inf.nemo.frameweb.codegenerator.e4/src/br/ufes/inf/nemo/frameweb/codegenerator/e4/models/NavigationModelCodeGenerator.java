@@ -177,6 +177,7 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 							List<UIComponent> partialUIComponents = new ArrayList<>();
 							Map<String, Object> partialProperties = new HashMap<>();
 							partialProperties.put("hasMethod", false);
+							partialProperties.put("hasMethodForm", false);
 							String nomePartial = partial.getName();
 
 							for (Association navigationAssociation : partial.getAssociations())
@@ -256,7 +257,7 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 									if (dr instanceof FrontControllerDependency)
 									{
 										processaListaDeNomesDeMetodosInvocadosEmPartials(invocatedMethodsNames,
-												partialProperties, dr);
+												partialProperties, dr, "hasMethod");
 										for (NamedElement sup : ((Dependency) dr).getSuppliers())
 										{
 											nomePartial = sup.getName();
@@ -272,7 +273,7 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 									if (t instanceof FrontControllerDependency)
 									{
 										processaListaDeNomesDeMetodosInvocadosEmPartials(invocatedMethodsNames,
-												partialProperties, t);
+												partialProperties, t, "hasMethodForm");
 										for (NamedElement sup : ((Dependency) t).getSuppliers())
 										{
 											nomePartial = sup.getName();
@@ -385,12 +386,12 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 	}
 
 	private void processaListaDeNomesDeMetodosInvocadosEmPartials(List<String> invocatedMethodsNames,
-			Map<String, Object> partialProperties, DirectedRelationship dr)
+			Map<String, Object> partialProperties, DirectedRelationship dr, String nomePropriedade)
 	{
 		FrontControllerMethod method = ((FrontControllerDependency) dr).getMethod();
 		if (method != null && method.getName() != null && !method.getName().isBlank())
 		{
-			partialProperties.put("hasMethod", true);
+			partialProperties.put(nomePropriedade, true);
 			invocatedMethodsNames.add(method.getName());
 			partialProperties.put("invocatedMethodsNames", invocatedMethodsNames);
 		}
