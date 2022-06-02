@@ -255,13 +255,8 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 								{
 									if (dr instanceof FrontControllerDependency)
 									{
-										FrontControllerMethod method = ((FrontControllerDependency) dr).getMethod();
-										if (method != null && method.getName() != null && !method.getName().isBlank())
-										{
-											partialProperties.put("hasMethod", true);
-											invocatedMethodsNames.add(method.getName());
-											partialProperties.put("invocatedMethodsNames", invocatedMethodsNames);
-										}
+										processaListaDeNomesDeMetodosInvocadosEmPartials(invocatedMethodsNames,
+												partialProperties, dr);
 										for (NamedElement sup : ((Dependency) dr).getSuppliers())
 										{
 											nomePartial = sup.getName();
@@ -274,9 +269,17 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 								for (DirectedRelationship t : partialUIComponents.get(0)
 										.getSourceDirectedRelationships())
 								{
-									NamedElement sup = ((Dependency) t).getSuppliers().get(0);
-									nomePartial = sup.getName();
-									partialProperties.put("FrontControllerClass", sup);
+									if (t instanceof FrontControllerDependency)
+									{
+										processaListaDeNomesDeMetodosInvocadosEmPartials(invocatedMethodsNames,
+												partialProperties, t);
+										for (NamedElement sup : ((Dependency) t).getSuppliers())
+										{
+											nomePartial = sup.getName();
+											partialProperties.put("FrontControllerClass", sup);
+										}
+									}
+
 								}
 							}
 							if (partialProperties.get("FrontControllerClass") != null)
@@ -379,6 +382,18 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 						IFileUtils.createFile(file, code);
 					});
 		});
+	}
+
+	private void processaListaDeNomesDeMetodosInvocadosEmPartials(List<String> invocatedMethodsNames,
+			Map<String, Object> partialProperties, DirectedRelationship dr)
+	{
+		FrontControllerMethod method = ((FrontControllerDependency) dr).getMethod();
+		if (method != null && method.getName() != null && !method.getName().isBlank())
+		{
+			partialProperties.put("hasMethod", true);
+			invocatedMethodsNames.add(method.getName());
+			partialProperties.put("invocatedMethodsNames", invocatedMethodsNames);
+		}
 	}
 
 	private String[] separaPorMaiuscula(String nome)
