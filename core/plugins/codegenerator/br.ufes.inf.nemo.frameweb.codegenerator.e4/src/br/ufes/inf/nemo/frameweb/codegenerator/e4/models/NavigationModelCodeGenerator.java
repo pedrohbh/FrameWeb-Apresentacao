@@ -270,12 +270,15 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 									partialProperties.put("FrontControllerClass", sup);
 								}
 							}
+							if (  partialProperties.get("FrontControllerClass") != null )
+							{
+								List<FrontControllerMethod> methodsController = ((FrontControllerClass) partialProperties
+										.get("FrontControllerClass")).getOperations().stream()
+										.filter(FrontControllerMethod.class::isInstance)
+										.map(FrontControllerMethod.class::cast).collect(Collectors.toList());
+								partialProperties.put("methodsController", methodsController);								
+							}
 
-							List<FrontControllerMethod> methodsController = ((FrontControllerClass) partialProperties
-									.get("FrontControllerClass")).getOperations().stream()
-											.filter(FrontControllerMethod.class::isInstance)
-											.map(FrontControllerMethod.class::cast).collect(Collectors.toList());
-							partialProperties.put("methodsController", methodsController);
 
 							// Partial Properties
 							partialProperties.put("partialName", nomePartial);
