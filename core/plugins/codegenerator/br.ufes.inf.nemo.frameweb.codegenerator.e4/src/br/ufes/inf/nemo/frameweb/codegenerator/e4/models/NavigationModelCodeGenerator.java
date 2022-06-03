@@ -193,7 +193,6 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 								}
 							}
 
-							// Área de Testes
 							List<String> listaNomesPartialsReferenciados = new LinkedList<>();
 
 							EList<Association> associacoes = partial.getAssociations();
@@ -246,9 +245,7 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 									}
 								}
 							}
-							// Fim dos testes
 
-							// Novos Testes
 							if (partialUIComponents.size() == 0)
 							{
 								EList<DirectedRelationship> relacoes = partial.getSourceDirectedRelationships();
@@ -337,7 +334,7 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 									listaNomesPartialsReferenciadosCamelCase);
 							partialProperties.put("referencedPartialsNameDash",
 									listaNomesPartialsReferenciadosNameDash);
-							// Fim novos testes
+							
 							String code = ClassCodeGenerator.render(partial, partialUIComponents, partialProperties,
 									listaNomesPartialsReferenciados, partialTemplate);
 
