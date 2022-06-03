@@ -194,7 +194,7 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 								}
 							}
 
-							List<String> listaNomesPartialsReferenciados = new LinkedList<>();
+							//List<String> listaNomesPartialsReferenciados = new LinkedList<>();
 							List<ReferencedPartials> partialsReferenciadas = new LinkedList<>();
 
 							EList<Association> associacoes = partial.getAssociations();
@@ -243,7 +243,7 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 												}
 											}
 											partialsReferenciadas.add(new ReferencedPartials(nomeParcialReferenciada, upperBoundPartial));
-											listaNomesPartialsReferenciados.add(nomeParcialReferenciada);
+											//listaNomesPartialsReferenciados.add(nomeParcialReferenciada);
 											break;
 										}
 									}
@@ -315,6 +315,7 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 							partialProperties.put("partialNameDash", partialNameDash);
 							partialProperties.put("partialCamelCase", partialCamelCase);
 
+							/*
 							List<String> listaNomesPartialsReferenciadosNameDash = new LinkedList<>();
 							List<String> listaNomesPartialsReferenciadosCamelCase = new LinkedList<>();
 
@@ -342,9 +343,10 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 									listaNomesPartialsReferenciadosCamelCase);
 							partialProperties.put("referencedPartialsNameDash",
 									listaNomesPartialsReferenciadosNameDash);
+									*/
 							
 							String code = ClassCodeGenerator.render(partial, partialUIComponents, partialProperties,
-									listaNomesPartialsReferenciados, partialTemplate);
+									partialsReferenciadas, partialTemplate);
 
 							String filename = nomePartial + partialExtension;
 							IFile file = package_.getFile(filename);

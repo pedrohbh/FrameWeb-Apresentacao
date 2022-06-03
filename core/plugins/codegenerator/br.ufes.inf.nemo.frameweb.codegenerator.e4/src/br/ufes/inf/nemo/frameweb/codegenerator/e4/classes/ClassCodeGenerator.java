@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import org.eclipse.uml2.uml.Enumeration;
 import org.eclipse.uml2.uml.EnumerationLiteral;
 
+import br.ufes.inf.nemo.frameweb.codegenerator.e4.auxiliaryclasses.ReferencedPartials;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.engine.JtwigTemplateEngineImpl;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.engine.TemplateEngine;
 import br.ufes.inf.nemo.frameweb.model.frameweb.AuthPermission;
@@ -171,7 +172,7 @@ public class ClassCodeGenerator
 	}
 
 	public static String render(Partial partial, List<UIComponent> partialUIComponents,
-			Map<String, Object> partialProperties, List<String> partiaisReferenciados, String template)
+			Map<String, Object> partialProperties, List<ReferencedPartials> partiaisReferenciados, String template)
 	{
 		TemplateEngine templateEngineContext = new JtwigTemplateEngineImpl();
 		templateEngineContext.setTemplate(template);
