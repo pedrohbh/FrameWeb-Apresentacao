@@ -398,7 +398,7 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 		}
 	}
 
-	private String[] separaPorMaiuscula(String nome)
+	public static String[] separaPorMaiuscula(String nome)
 	{
 		nome = nome.replaceAll("\\s", "");
 		List<String> lista = new ArrayList<>();
