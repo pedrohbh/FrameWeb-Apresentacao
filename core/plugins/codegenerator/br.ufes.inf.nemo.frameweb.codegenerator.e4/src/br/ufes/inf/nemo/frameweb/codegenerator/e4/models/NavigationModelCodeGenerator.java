@@ -195,6 +195,7 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 							}
 
 							List<String> listaNomesPartialsReferenciados = new LinkedList<>();
+							List<ReferencedPartials> partialsReferenciadas = new LinkedList<>();
 
 							EList<Association> associacoes = partial.getAssociations();
 							for (Association associacao : associacoes)
@@ -208,10 +209,11 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 										if (property instanceof NavigationAggregationSource
 												&& property.getType().equals(partial))
 										{
-											String nomeParcialReferenciada = navigationAggregationAssociation
-													.getMemberEnds().get((1 - i)).getType().getName();
-											Partial p = (Partial) navigationAggregationAssociation.getMemberEnds()
-													.get((1 - i)).getType();
+											Property partialEscolhidaReferenciada = navigationAggregationAssociation
+													.getMemberEnds().get((1 - i));
+											String nomeParcialReferenciada = partialEscolhidaReferenciada.getType().getName();
+											Partial p = (Partial) partialEscolhidaReferenciada.getType();
+											Integer upperBoundPartial = partialEscolhidaReferenciada.getUpper();
 
 											boolean temForms = false;
 											for (int j = 0; j < p.getSourceDirectedRelationships().size(); j++)
@@ -240,6 +242,7 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 													}
 												}
 											}
+											partialsReferenciadas.add(new ReferencedPartials(nomeParcialReferenciada, upperBoundPartial));
 											listaNomesPartialsReferenciados.add(nomeParcialReferenciada);
 											break;
 										}
