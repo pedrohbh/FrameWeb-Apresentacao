@@ -17,6 +17,7 @@ import org.eclipse.uml2.uml.NamedElement;
 import org.eclipse.uml2.uml.Property;
 
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.ProjectProperties;
+import br.ufes.inf.nemo.frameweb.codegenerator.e4.auxiliaryclasses.ReferencedPartials;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.classes.ClassCodeGenerator;
 import br.ufes.inf.nemo.frameweb.model.frameweb.AuthPage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ControllerPackage;
@@ -287,6 +288,10 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 												.map(FrontControllerMethod.class::cast).collect(Collectors.toList());
 								partialProperties.put("methodsController", methodsController);
 							}
+							
+							// Área de testes
+							partialProperties.put("teste", new ReferencedPartials("Sao Goncalo"));							
+							// Fim de Testes
 
 							// Partial Properties
 							partialProperties.put("partialName", nomePartial);

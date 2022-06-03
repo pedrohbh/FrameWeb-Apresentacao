@@ -4,6 +4,8 @@ public class ReferencedPartials
 {
 	private String name;
 	private Integer upperBound;
+	private String nameDash;
+	private String nameCamelCase;
 
 	public ReferencedPartials(String name)
 	{
@@ -36,4 +38,25 @@ public class ReferencedPartials
 	{
 		this.upperBound = upperBound;
 	}
+
+	public String getNameDash()
+	{
+		return nameDash;
+	}
+
+	public void setNameDash(String nameDash)
+	{
+		this.nameDash = nameDash;
+	}
+
+	public String getNameCamelCase()
+	{
+		return nameCamelCase;
+	}
+
+	public void setNameCamelCase(String nameCamelCase)
+	{
+		this.nameCamelCase = nameCamelCase;
+	}	
+	
 }
