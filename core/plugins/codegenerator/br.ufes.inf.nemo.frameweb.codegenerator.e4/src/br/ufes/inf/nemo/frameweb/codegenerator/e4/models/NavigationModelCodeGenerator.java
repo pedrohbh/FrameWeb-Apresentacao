@@ -291,11 +291,7 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 												.map(FrontControllerMethod.class::cast).collect(Collectors.toList());
 								partialProperties.put("methodsController", methodsController);
 							}
-
-							// Área de testes
-							partialProperties.put("teste", new ReferencedPartials("Sao Goncalo"));
-							// Fim de Testes
-
+							
 							// Partial Properties
 							partialProperties.put("partialName", nomePartial);
 							String[] splitNome = separaPorMaiuscula(nomePartial);
