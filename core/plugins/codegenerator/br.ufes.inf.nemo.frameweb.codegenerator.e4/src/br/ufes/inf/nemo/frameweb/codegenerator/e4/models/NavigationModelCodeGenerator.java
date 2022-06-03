@@ -280,7 +280,6 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 											partialProperties.put("FrontControllerClass", sup);
 										}
 									}
-
 								}
 							}
 							if (partialProperties.get("FrontControllerClass") != null)
@@ -421,5 +420,4 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 		lista.add(corrente);
 		return lista.toArray(new String[lista.size()]);
 	}
-
 }
