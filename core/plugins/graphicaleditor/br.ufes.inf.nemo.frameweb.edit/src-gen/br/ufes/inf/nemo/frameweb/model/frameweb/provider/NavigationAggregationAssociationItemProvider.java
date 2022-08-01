@@ -3,6 +3,7 @@
 package br.ufes.inf.nemo.frameweb.model.frameweb.provider;
 
 import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebFactory;
+import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation;
 
 import java.util.Collection;
@@ -12,6 +13,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.uml2.uml.UMLPackage;
 
@@ -45,8 +47,25 @@ public class NavigationAggregationAssociationItemProvider extends AssociationIte
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addRelacoesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Relacoes feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRelacoesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_NavigationAggregationAssociation_relacoes_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_NavigationAggregationAssociation_relacoes_feature",
+						"_UI_NavigationAggregationAssociation_type"),
+				FramewebPackage.Literals.NAVIGATION_AGGREGATION_ASSOCIATION__RELACOES, true, false, true, null, null,
+				null));
 	}
 
 	/**

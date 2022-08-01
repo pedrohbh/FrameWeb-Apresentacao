@@ -416,7 +416,10 @@
     <eLiterals name="DELETE" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Partial" eSuperTypes="#//Page"/>
-  <eClassifiers xsi:type="ecore:EClass" name="NavigationAggregationAssociation" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Association"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NavigationAggregationAssociation" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Association">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relacoes" upperBound="-1"
+        eType="#//UIComponentField"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NavigationAggregationTarget" eSuperTypes="#//NavigationProperty"/>
   <eClassifiers xsi:type="ecore:EClass" name="NavigationAggregationSource" eSuperTypes="#//NavigationProperty"/>
 </ecore:EPackage>

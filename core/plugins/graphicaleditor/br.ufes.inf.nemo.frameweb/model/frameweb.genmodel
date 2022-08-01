@@ -374,7 +374,9 @@
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//RestControllerClass"/>
     <genClasses ecoreClass="frameweb.ecore#//Partial"/>
-    <genClasses ecoreClass="frameweb.ecore#//NavigationAggregationAssociation"/>
+    <genClasses ecoreClass="frameweb.ecore#//NavigationAggregationAssociation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//NavigationAggregationAssociation/relacoes"/>
+    </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//NavigationAggregationTarget"/>
     <genClasses ecoreClass="frameweb.ecore#//NavigationAggregationSource"/>
   </genPackages>

@@ -3474,6 +3474,16 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
+	public EReference getNavigationAggregationAssociation_Relacoes() {
+		return (EReference) navigationAggregationAssociationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getNavigationAggregationTarget() {
 		return navigationAggregationTargetEClass;
 	}
@@ -4021,6 +4031,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		partialEClass = createEClass(PARTIAL);
 
 		navigationAggregationAssociationEClass = createEClass(NAVIGATION_AGGREGATION_ASSOCIATION);
+		createEReference(navigationAggregationAssociationEClass, NAVIGATION_AGGREGATION_ASSOCIATION__RELACOES);
 
 		navigationAggregationTargetEClass = createEClass(NAVIGATION_AGGREGATION_TARGET);
 
@@ -4910,6 +4921,9 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		initEClass(navigationAggregationAssociationEClass, NavigationAggregationAssociation.class,
 				"NavigationAggregationAssociation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getNavigationAggregationAssociation_Relacoes(), this.getUIComponentField(), null, "relacoes",
+				null, 0, -1, NavigationAggregationAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(navigationAggregationTargetEClass, NavigationAggregationTarget.class, "NavigationAggregationTarget",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
