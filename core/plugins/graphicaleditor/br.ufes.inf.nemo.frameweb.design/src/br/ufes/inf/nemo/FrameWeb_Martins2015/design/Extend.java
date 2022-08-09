@@ -559,18 +559,19 @@ public class Extend {
 	
 	public String processLabelNavigationAggregationAssociationMedium(NavigationAggregationAssociation navigationAggregationAssociation)
 	{
-		int lower = navigationAggregationAssociation.getMemberEnds().get(0).getUpper();
-		Property property = navigationAggregationAssociation.getMemberEnds().get(1);
-		if ( isEmptyLowerUpperBoundNavigationAggregationAssociation(navigationAggregationAssociation) )
+		if ( navigationAggregationAssociation.getRelacoes().size() > 0 )
 		{
-			return "";
-		}
-		else if ( lower < 0 )
-		{
-			return "*";
+			StringBuffer stringBuffer = new StringBuffer();
+			String stringFinal = "{pros_attributes = [";			
+			
+			navigationAggregationAssociation.getRelacoes().stream().forEach(t -> stringBuffer.append(t.getName() + ", "));
+			String processada = stringBuffer.toString();
+			processada = processada.substring(0, processada.lastIndexOf(", "));
+			stringFinal += processada + "]}";
+			return stringFinal;			
 		}
 		
-		return String.valueOf(lower);
+		return "";
 	}
 	
 	public String processLabelNavigationAggregationAssociationLower(NavigationAggregationAssociation navigationAggregationAssociation)
