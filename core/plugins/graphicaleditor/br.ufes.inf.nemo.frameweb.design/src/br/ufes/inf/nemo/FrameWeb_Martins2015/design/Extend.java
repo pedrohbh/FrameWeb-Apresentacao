@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreEList;
 //import org.eclipse.sirius.diagram.business.internal.metamodel.spec.DNodeContainerSpec;
 import org.eclipse.sirius.viewpoint.DRepresentationElement;
+import org.eclipse.uml2.uml.Association;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.NamedElement;
 import org.eclipse.uml2.uml.Property;
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.lang.model.type.PrimitiveType;
 
@@ -26,17 +28,21 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Partial;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ResultDependency;
+import br.ufes.inf.nemo.frameweb.model.frameweb.UIComponent;
 import br.ufes.inf.nemo.frameweb.model.frameweb.UIComponentField;
 
 @SuppressWarnings("all")
-public class Extend {
+public class Extend
+{
 
-	public Extend() {
+	public Extend()
+	{
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public void getSemanticElements(EObject obj) {
+	public void getSemanticElements(EObject obj)
+	{
 //		TreeIterator<EObject> eAllContents = obj.eAllContents();
 //
 //	    String[] nivel1 = new String[] { "packagedElement", "resultDependencyConstraint" };
@@ -106,7 +112,8 @@ public class Extend {
 //	    }
 	}
 
-	public String printParameters(EObject m) {
+	public String printParameters(EObject m)
+	{
 
 		String result = null;
 
@@ -121,20 +128,24 @@ public class Extend {
 
 		result = name_value + " (";
 
-		if (m.eClass().getEStructuralFeature("ownedParameter") != null) {
+		if (m.eClass().getEStructuralFeature("ownedParameter") != null)
+		{
 			ownedParameter = m.eClass().getEStructuralFeature("ownedParameter");
 			EcoreEList parameter_list = (EcoreEList) m.eGet(ownedParameter);
 
 			int i;
-			for (i = 0; i < parameter_list.size(); i++) {
+			for (i = 0; i < parameter_list.size(); i++)
+			{
 				EObject p = (EObject) parameter_list.get(i);
 				// On Parameter
 				String Type = "void";
 				EStructuralFeature parameter_name_feature = p.eClass().getEAllAttributes().get(0);
 				String parameter_name_value = p.eGet(parameter_name_feature).toString();
-				if (p.eClass().getEStructuralFeature("type") != null) {
+				if (p.eClass().getEStructuralFeature("type") != null)
+				{
 					EStructuralFeature parameter_type_feature = p.eClass().getEStructuralFeature("type");
-					if (p.eGet(parameter_type_feature) != null) {
+					if (p.eGet(parameter_type_feature) != null)
+					{
 						EObject parameter_type_object = (EObject) p.eGet(parameter_type_feature);
 						EStructuralFeature parameter_type_name_feature = parameter_type_object.eClass()
 								.getEAllAttributes().get(0);
@@ -152,18 +163,21 @@ public class Extend {
 		methodType = m.eClass().getEStructuralFeature("methodType");
 		EObject p = (EObject) m.eGet(methodType);
 
-		if (p != null) {
+		if (p != null)
+		{
 			result = result + " : ";
 			methodType_value = (String) p.eGet(p.eClass().getEStructuralFeature("name"));
 			result = result + methodType_value;
-		} else {
+		} else
+		{
 			result = result + " : " + "void";
 		}
 
 		return result;
 	}
 
-	public String printCardinalidade(EObject o) {
+	public String printCardinalidade(EObject o)
+	{
 
 		EStructuralFeature upper = o.eClass().getEStructuralFeature("upper");
 		Integer upper_value = (Integer) o.eGet(upper);
@@ -171,17 +185,20 @@ public class Extend {
 		EStructuralFeature lower = o.eClass().getEStructuralFeature("lower");
 		Integer lower_value = (Integer) o.eGet(lower);
 
-		if (upper_value == lower_value) {
+		if (upper_value == lower_value)
+		{
 			return lower_value.toString();
 		}
 
-		if (upper_value == -1) {
+		if (upper_value == -1)
+		{
 			return lower_value + "..*";
 		}
 		return lower_value + ".." + upper_value;
 	}
 
-	public EObject[] getMembers(EObject o) {
+	public EObject[] getMembers(EObject o)
+	{
 
 		EStructuralFeature memberendfeature = o.eClass().getEStructuralFeature("memberEnd");
 		EStructuralFeature ownedrulefeature = o.eClass().getEStructuralFeature("ownedRule");
@@ -194,25 +211,30 @@ public class Extend {
 		return result;
 	}
 
-	public String printVocabularyConstraint(EObject o) {
+	public String printVocabularyConstraint(EObject o)
+	{
 
 		String result = "";
 
-		try {
+		try
+		{
 			EStructuralFeature subPropertyOf = o.eClass().getEStructuralFeature("subPropertyOf");
 			String subPropertyOf_value = o.eGet(subPropertyOf).toString();
 
-			if (!subPropertyOf_value.isEmpty()) {
+			if (!subPropertyOf_value.isEmpty())
+			{
 				result = "{rdf:subPropertyOf=" + subPropertyOf_value + "}";
 			}
-		} catch (Exception e) {
+		} catch (Exception e)
+		{
 			result = "";
 		}
 
 		return result;
 	}
 
-	public String printConstraint(EObject o) {
+	public String printConstraint(EObject o)
+	{
 
 		ArrayList<String> result = new ArrayList<>();
 
@@ -220,73 +242,89 @@ public class Extend {
 		EStructuralFeature collection = o.eClass().getEStructuralFeature("collection");
 		String collection_value = o.eGet(collection).toString();
 
-		if (!collection_value.equals("set")) {
+		if (!collection_value.equals("set"))
+		{
 			result.add("collection=" + collection_value);
 		}
 		// CASCADE
 		EStructuralFeature cascade = o.eClass().getEStructuralFeature("cascade");
 		String cascade_value = o.eGet(cascade).toString();
 
-		if (!cascade_value.equals("remove")) {
+		if (!cascade_value.equals("remove"))
+		{
 			result.add("cascade=" + cascade_value);
 		}
 		// ORDER
 		EStructuralFeature order = o.eClass().getEStructuralFeature("order");
 		String order_value = o.eGet(order).toString();
 
-		if (!order_value.equals("natural")) {
+		if (!order_value.equals("natural"))
+		{
 			result.add("order=" + order_value);
 		}
 		// FETCH
 		EStructuralFeature fetch = o.eClass().getEStructuralFeature("fetch");
 		String fetch_value = o.eGet(fetch).toString();
 
-		if (!fetch_value.equals("lazy")) {
+		if (!fetch_value.equals("lazy"))
+		{
 			result.add("fetch=" + fetch_value);
 		}
 
-		if (!result.isEmpty()) {
+		if (!result.isEmpty())
+		{
 			String retorno = " {";
 
-			for (int i = 0; i < result.size(); i++) {
+			for (int i = 0; i < result.size(); i++)
+			{
 				retorno = retorno + result.get(i);
 
-				if (i == (result.size() - 1)) {
+				if (i == (result.size() - 1))
+				{
 					retorno = retorno + "}";
-				} else {
+				} else
+				{
 					retorno = retorno + ",\n";
 				}
 			}
 
 			return retorno;
-		} else {
+		} else
+		{
 			return "";
 		}
 	}
 
-	public String printVisibility(EObject o) {
+	public String printVisibility(EObject o)
+	{
 		EStructuralFeature visibility_feature = o.eClass().getEAllAttributes().get(2);
 		String visibility_value = o.eGet(visibility_feature).toString();
-		if (visibility_value == "public") {
+		if (visibility_value == "public")
+		{
 			return " + ";
 		}
-		if (visibility_value == "package") {
+		if (visibility_value == "package")
+		{
 			return " ~ ";
 		}
-		if (visibility_value == "private") {
+		if (visibility_value == "private")
+		{
 			return " - ";
 		}
-		if (visibility_value == "protected") {
+		if (visibility_value == "protected")
+		{
 			return " # ";
 		}
 		return " ? ";
 	}
 
-	public String printIdStereotype(EObject o) {
+	public String printIdStereotype(EObject o)
+	{
 		return "<<id>> ";
 	}
 
-	public String printPrefix(EObject o) {
+	public String printPrefix(EObject o)
+	{
 
 		EStructuralFeature prefix_feature = o.eClass().getEAllAttributes().get(7);
 		String prefix = (o.eGet(prefix_feature).toString());
@@ -295,7 +333,8 @@ public class Extend {
 
 	}
 
-	public String printProperties(EObject o) {
+	public String printProperties(EObject o)
+	{
 
 		ArrayList<String> retorno = new ArrayList();
 		String idSter = "";
@@ -305,9 +344,11 @@ public class Extend {
 
 		String null_feature_str = o.eGet(null_feature).toString();
 
-		if (null_feature_str.equals("true")) {
+		if (null_feature_str.equals("true"))
+		{
 			retorno.add("null");
-		} else {
+		} else
+		{
 			retorno.add("not null");
 		}
 
@@ -318,24 +359,29 @@ public class Extend {
 //		}
 
 		String size = (o.eGet(size_feature).toString());
-		if (!size.equals("0")) {
+		if (!size.equals("0"))
+		{
 			retorno.add("size=" + size);
 		}
 
-		try {
+		try
+		{
 			EStructuralFeature owl_feature = o.eClass().getEAllAttributes().get(19);
 
 			String owl = (o.eGet(owl_feature).toString());
-			if (!owl.isEmpty()) {
+			if (!owl.isEmpty())
+			{
 				retorno.add("owl:equivalentProperty=" + owl);
 			}
 
 			String s = "";
 			s += idSter;
 
-			if (retorno.size() > 0) {
+			if (retorno.size() > 0)
+			{
 				s += " {";
-				for (int i = 0; i < retorno.size(); i++) {
+				for (int i = 0; i < retorno.size(); i++)
+				{
 					s += retorno.get(i);
 					if ((i + 1) < retorno.size())
 						s += ", ";
@@ -343,14 +389,17 @@ public class Extend {
 				s += "}";
 			}
 			return s;
-		} catch (Exception e) {
+		} catch (Exception e)
+		{
 			String s = "";
 
 			s += idSter;
 
-			if (retorno.size() > 0) {
+			if (retorno.size() > 0)
+			{
 				s += " {";
-				for (int i = 0; i < retorno.size(); i++) {
+				for (int i = 0; i < retorno.size(); i++)
+				{
 					s += retorno.get(i);
 					if ((i + 1) < retorno.size())
 						s += ", ";
@@ -361,7 +410,8 @@ public class Extend {
 		}
 	}
 
-	public String printDateProperties(EObject o) {
+	public String printDateProperties(EObject o)
+	{
 		// return o.eClass().getEAllAttributes().toString();
 		ArrayList<String> retorno = new ArrayList();
 
@@ -369,14 +419,17 @@ public class Extend {
 
 		EStructuralFeature null_feature = o.eClass().getEAllAttributes().get(17);
 		String null_feature_str = o.eGet(null_feature).toString();
-		if (null_feature_str.equals("true")) {
+		if (null_feature_str.equals("true"))
+		{
 			retorno.add("null");
-		} else {
+		} else
+		{
 			retorno.add("not null");
 		}
 
 		String size = (o.eGet(size_feature).toString());
-		if (!size.equals("0")) {
+		if (!size.equals("0"))
+		{
 			retorno.add("size=" + size);
 		}
 
@@ -385,19 +438,23 @@ public class Extend {
 		String precision = (o.eGet(precision_feature).toString());
 		retorno.add("precision=" + precision);
 
-		try {
+		try
+		{
 			EStructuralFeature owl_feature = o.eClass().getEAllAttributes().get(19);
 
 			String owl = (o.eGet(owl_feature).toString());
-			if (!owl.isEmpty()) {
+			if (!owl.isEmpty())
+			{
 				retorno.add("owl:equivalentProperty=" + owl);
 			}
 
 			String s = "";
 
-			if (retorno.size() > 0) {
+			if (retorno.size() > 0)
+			{
 				s += " {";
-				for (int i = 0; i < retorno.size(); i++) {
+				for (int i = 0; i < retorno.size(); i++)
+				{
 					s += retorno.get(i);
 					if ((i + 1) < retorno.size())
 						s += ", ";
@@ -405,12 +462,15 @@ public class Extend {
 				s += "}";
 			}
 			return s;
-		} catch (Exception e) {
+		} catch (Exception e)
+		{
 			String s = "";
 
-			if (retorno.size() > 0) {
+			if (retorno.size() > 0)
+			{
 				s += " {";
-				for (int i = 0; i < retorno.size(); i++) {
+				for (int i = 0; i < retorno.size(); i++)
+				{
 					s += retorno.get(i);
 					if ((i + 1) < retorno.size())
 						s += ", ";
@@ -424,7 +484,8 @@ public class Extend {
 	// aql:self.printVisibility() + self.name + ' : ' + self.type.name +
 	// '(size=' + self.size + ')'
 
-	public boolean print_isAbstract(EObject o) {
+	public boolean print_isAbstract(EObject o)
+	{
 		EStructuralFeature abstract_feature = o.eClass().getEAllAttributes().get(6); // OLHAR
 																						// NO
 																						// MODISCO
@@ -436,13 +497,15 @@ public class Extend {
 		return (boolean) o.eGet(abstract_feature);
 	}
 
-	public boolean isTypeOf(EObject o, String name) {
+	public boolean isTypeOf(EObject o, String name)
+	{
 		String className = o.eClass().getName();
 
 		return className.equals(name);
 	}
 
-	public String print_resultdependency(EObject o) {
+	public String print_resultdependency(EObject o)
+	{
 		String response = "";
 
 		EStructuralFeature result_feature = o.eClass().getEAllAttributes().get(5); // OLHAR
@@ -490,125 +553,151 @@ public class Extend {
 		if (!execute.equals("@this"))
 			response = response + ", execute=" + execute;
 
-		if (!response.isEmpty()) {
+		if (!response.isEmpty())
+		{
 			return response + "}";
-		} else {
+		} else
+		{
 			return "}";
 		}
 	}
 
-	public String processLabelResultDependency(ResultDependency resultDependency) {
+	public String processLabelResultDependency(ResultDependency resultDependency)
+	{
 		EList<Element> origens = resultDependency.getSources();
-		if (origens.size() >= 1 && origens.get(0) instanceof Partial) {
-			if (resultDependency.getResultMethod() == null) {
+		if (origens.size() >= 1 && origens.get(0) instanceof Partial)
+		{
+			if (resultDependency.getResultMethod() == null)
+			{
 				return "";
 			}
 		}
 
 		return "{method=" + resultDependency.getResultMethod().getName()
 				+ print_resultdependency(resultDependency.getResultDependencyConstraint());
-		
+
 		// SCRIPT ORIGINAL PARA O LABEL DO RESULT DEPENDENCY
-		// "aql:'{method=' + self.resultMethod.name + self.resultDependencyConstraint.print_resultdependency()";
+		// "aql:'{method=' + self.resultMethod.name +
+		// self.resultDependencyConstraint.print_resultdependency()";
 	}
-	
+
 	public String processLabelFrontControllerDependency(FrontControllerDependency frontControllerDependency)
 	{
 		EList<Element> origens = frontControllerDependency.getSources();
-		if (origens.size() >= 1 && origens.get(0) instanceof Partial) {
-			if (frontControllerDependency.getMethod() == null) {
+		if (origens.size() >= 1 && origens.get(0) instanceof Partial)
+		{
+			if (frontControllerDependency.getMethod() == null)
+			{
 				return "";
 			}
 		}
 		return "{method=" + frontControllerDependency.getMethod().getName() + "}";
 		// SCRIPT ORIGINAL PARA O LABEL DO FRONT CONTROLLER DEPENDECY
-		//aql:'{method='+self.method.name+'}'
+		// aql:'{method='+self.method.name+'}'
 	}
-	
+
 	public String processLabelNavigationAssociation(NavigationAssociation navigationAssociation)
 	{
 		Property property = navigationAssociation.getMemberEnds().get(1);
 		Integer numero = property.getUpper();
-		
-		if ( numero > 1 )
+
+		if (numero > 1)
 		{
 			return numero.toString();
-		}
-		else
+		} else
 			return "";
 		// SCRIPT ORIGINAL PARA O LABEL DO NAVIGATION ASSOCIATION
-		//aql:self.memberEnd->at(2).upper
+		// aql:self.memberEnd->at(2).upper
 	}
-	
+
 	public List<UIComponentField> retornaListaExemplo(NavigationAggregationAssociation navigationAggregationAssociation)
 	{
 		List<UIComponentField> listaNova = new LinkedList<>();
+		
+		// Parte atributos partial
 		Partial partial = (Partial) navigationAggregationAssociation.getMemberEnds().get(1).getType();
-		for ( Property property : partial.getOwnedAttributes() )
+		for (Property property : partial.getOwnedAttributes())
 		{
-			if ( property.getName() != null && !property.getName().isBlank() && property instanceof UIComponentField )
+			if (property.getName() != null && !property.getName().isBlank() && property instanceof UIComponentField)
 			{
 				listaNova.add((UIComponentField) property);
 			}
 		}
-		
-		
+
+		// Parte Forms
+		List<Association> listaAssoc = partial.getAssociations().stream()
+				.filter(t -> t instanceof NavigationAssociation).collect(Collectors.toList());
+		for (Association assoc : listaAssoc)
+		{
+			for (Property property : assoc.getMemberEnds())
+			{
+				if (property.getType() instanceof UIComponent)
+				{
+					UIComponent component = (UIComponent) property.getType();
+					component.getAttributes().stream().filter(t -> t instanceof UIComponentField).forEach(t -> listaNova.add((UIComponentField) t));
+				}
+			}
+		}
+
 		listaNova.add(null);
 		return listaNova;
 	}
-	
-	public String processLabelNavigationAggregationAssociationMedium(NavigationAggregationAssociation navigationAggregationAssociation)
+
+	public String processLabelNavigationAggregationAssociationMedium(
+			NavigationAggregationAssociation navigationAggregationAssociation)
 	{
-		if ( navigationAggregationAssociation.getRelacoes().size() > 0 )
+		if (navigationAggregationAssociation.getRelacoes().size() > 0)
 		{
 			StringBuffer stringBuffer = new StringBuffer();
-			String stringFinal = "{pros_attributes = [";			
-			
-			navigationAggregationAssociation.getRelacoes().stream().forEach(t -> stringBuffer.append(t.getName() + ", "));
+			String stringFinal = "{pros_attributes = [";
+
+			navigationAggregationAssociation.getRelacoes().stream()
+					.forEach(t -> stringBuffer.append(t.getName() + ", "));
 			String processada = stringBuffer.toString();
 			processada = processada.substring(0, processada.lastIndexOf(", "));
 			stringFinal += processada + "]}";
-			return stringFinal;			
+			return stringFinal;
 		}
-		
+
 		return "";
 	}
-	
-	public String processLabelNavigationAggregationAssociationLower(NavigationAggregationAssociation navigationAggregationAssociation)
+
+	public String processLabelNavigationAggregationAssociationLower(
+			NavigationAggregationAssociation navigationAggregationAssociation)
 	{
 		int lower = navigationAggregationAssociation.getMemberEnds().get(0).getUpper();
-		if ( isEmptyLowerUpperBoundNavigationAggregationAssociation(navigationAggregationAssociation) )
+		if (isEmptyLowerUpperBoundNavigationAggregationAssociation(navigationAggregationAssociation))
 		{
 			return "";
-		}
-		else if ( lower < 0 )
+		} else if (lower < 0)
 		{
 			return "*";
 		}
-		
+
 		return String.valueOf(lower);
 	}
-	
-	public String processLabelNavigationAggregationAssociationUpper(NavigationAggregationAssociation navigationAggregationAssociation)
+
+	public String processLabelNavigationAggregationAssociationUpper(
+			NavigationAggregationAssociation navigationAggregationAssociation)
 	{
 		int upper = navigationAggregationAssociation.getMemberEnds().get(1).getUpper();
-		if ( isEmptyLowerUpperBoundNavigationAggregationAssociation(navigationAggregationAssociation) )
+		if (isEmptyLowerUpperBoundNavigationAggregationAssociation(navigationAggregationAssociation))
 		{
 			return "";
-		}
-		else if ( upper < 0 )
+		} else if (upper < 0)
 		{
 			return "*";
 		}
-		
+
 		return String.valueOf(upper);
 	}
-	
-	private Boolean isEmptyLowerUpperBoundNavigationAggregationAssociation(NavigationAggregationAssociation navigationAggregationAssociation)
+
+	private Boolean isEmptyLowerUpperBoundNavigationAggregationAssociation(
+			NavigationAggregationAssociation navigationAggregationAssociation)
 	{
 		int lower = navigationAggregationAssociation.getMemberEnds().get(0).getUpper();
 		int upper = navigationAggregationAssociation.getMemberEnds().get(1).getUpper();
-		if ( lower == 1 && upper == 1)
+		if (lower == 1 && upper == 1)
 		{
 			return true;
 		}
