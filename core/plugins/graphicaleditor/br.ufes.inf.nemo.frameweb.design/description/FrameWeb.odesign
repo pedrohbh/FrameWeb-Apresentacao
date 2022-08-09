@@ -2240,6 +2240,13 @@
           </initialOperation>
         </controls>
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="RelacaoRef" labelExpression="Relacao" referenceNameExpression="relacoes" referenceOwnerExpression="var:self"/>
+        <controls xsi:type="properties:SelectDescription" name="RelacaoSelect" labelExpression="Selecionar Relação" valueExpression="feature:relacoes" candidatesExpression="service:retornaListaExemplo" candidateDisplayExpression="aql:candidate.name">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="relacoes" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
       </groups>
     </categories>
   </extensions>

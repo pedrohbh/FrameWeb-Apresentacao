@@ -15,6 +15,7 @@ import org.eclipse.uml2.uml.Property;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 
 import javax.lang.model.type.PrimitiveType;
@@ -25,6 +26,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Partial;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ResultDependency;
+import br.ufes.inf.nemo.frameweb.model.frameweb.UIComponentField;
 
 @SuppressWarnings("all")
 public class Extend {
@@ -536,7 +538,24 @@ public class Extend {
 			return "";
 		// SCRIPT ORIGINAL PARA O LABEL DO NAVIGATION ASSOCIATION
 		//aql:self.memberEnd->at(2).upper
-	}	
+	}
+	
+	public List<UIComponentField> retornaListaExemplo(NavigationAggregationAssociation navigationAggregationAssociation)
+	{
+		List<UIComponentField> listaNova = new LinkedList<>();
+		Partial partial = (Partial) navigationAggregationAssociation.getMemberEnds().get(1).getType();
+		for ( Property property : partial.getOwnedAttributes() )
+		{
+			if ( property.getName() != null && !property.getName().isBlank() && property instanceof UIComponentField )
+			{
+				listaNova.add((UIComponentField) property);
+			}
+		}
+		
+		
+		listaNova.add(null);
+		return listaNova;
+	}
 	
 	public String processLabelNavigationAggregationAssociationMedium(NavigationAggregationAssociation navigationAggregationAssociation)
 	{
