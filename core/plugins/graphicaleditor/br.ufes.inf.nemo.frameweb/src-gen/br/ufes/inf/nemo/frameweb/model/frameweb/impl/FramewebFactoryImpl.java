@@ -293,6 +293,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createNavigationAggregationTarget();
 		case FramewebPackage.NAVIGATION_AGGREGATION_SOURCE:
 			return createNavigationAggregationSource();
+		case FramewebPackage.NAVIGATION_SPA_PROPERTIES:
+			return createNavigationSPAProperties();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1676,6 +1678,17 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	public NavigationAggregationSource createNavigationAggregationSource() {
 		NavigationAggregationSourceImpl navigationAggregationSource = new NavigationAggregationSourceImpl();
 		return navigationAggregationSource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NavigationSPAProperties createNavigationSPAProperties() {
+		NavigationSPAPropertiesImpl navigationSPAProperties = new NavigationSPAPropertiesImpl();
+		return navigationSPAProperties;
 	}
 
 	/**

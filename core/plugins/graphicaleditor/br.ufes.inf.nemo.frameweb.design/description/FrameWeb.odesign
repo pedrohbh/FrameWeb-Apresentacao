@@ -65,6 +65,10 @@
               <labelFormat>bold</labelFormat>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </beginLabelStyleDescription>
+            <centerLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:processLabelNavigationAggregationAssociationMedium">
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
             <endLabelStyleDescription labelSize="9" showIcon="false" labelExpression="service:processLabelNavigationAggregationAssociationUpper">
               <labelFormat>bold</labelFormat>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>

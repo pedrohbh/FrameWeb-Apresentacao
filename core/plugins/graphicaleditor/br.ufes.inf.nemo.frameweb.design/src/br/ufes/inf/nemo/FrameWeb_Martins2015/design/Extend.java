@@ -536,17 +536,22 @@ public class Extend {
 			return "";
 		// SCRIPT ORIGINAL PARA O LABEL DO NAVIGATION ASSOCIATION
 		//aql:self.memberEnd->at(2).upper
-	}
+	}	
 	
-	private Boolean isEmptyLowerUpperBoundNavigationAggregationAssociation(NavigationAggregationAssociation navigationAggregationAssociation)
+	public String processLabelNavigationAggregationAssociationMedium(NavigationAggregationAssociation navigationAggregationAssociation)
 	{
 		int lower = navigationAggregationAssociation.getMemberEnds().get(0).getUpper();
-		int upper = navigationAggregationAssociation.getMemberEnds().get(1).getUpper();
-		if ( lower == 1 && upper == 1)
+		Property property = navigationAggregationAssociation.getMemberEnds().get(1);
+		if ( isEmptyLowerUpperBoundNavigationAggregationAssociation(navigationAggregationAssociation) )
 		{
-			return true;
+			return "";
 		}
-		return false;
+		else if ( lower < 0 )
+		{
+			return "*";
+		}
+		
+		return String.valueOf(lower);
 	}
 	
 	public String processLabelNavigationAggregationAssociationLower(NavigationAggregationAssociation navigationAggregationAssociation)
@@ -577,6 +582,17 @@ public class Extend {
 		}
 		
 		return String.valueOf(upper);
+	}
+	
+	private Boolean isEmptyLowerUpperBoundNavigationAggregationAssociation(NavigationAggregationAssociation navigationAggregationAssociation)
+	{
+		int lower = navigationAggregationAssociation.getMemberEnds().get(0).getUpper();
+		int upper = navigationAggregationAssociation.getMemberEnds().get(1).getUpper();
+		if ( lower == 1 && upper == 1)
+		{
+			return true;
+		}
+		return false;
 	}
 
 }

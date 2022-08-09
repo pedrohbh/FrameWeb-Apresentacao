@@ -2787,6 +2787,29 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationSPAProperties} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NavigationSPAPropertiesItemProvider navigationSPAPropertiesItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationSPAProperties}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNavigationSPAPropertiesAdapter() {
+		if (navigationSPAPropertiesItemProvider == null) {
+			navigationSPAPropertiesItemProvider = new NavigationSPAPropertiesItemProvider(this);
+		}
+
+		return navigationSPAPropertiesItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3127,6 +3150,8 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 			navigationAggregationTargetItemProvider.dispose();
 		if (navigationAggregationSourceItemProvider != null)
 			navigationAggregationSourceItemProvider.dispose();
+		if (navigationSPAPropertiesItemProvider != null)
+			navigationSPAPropertiesItemProvider.dispose();
 	}
 
 }

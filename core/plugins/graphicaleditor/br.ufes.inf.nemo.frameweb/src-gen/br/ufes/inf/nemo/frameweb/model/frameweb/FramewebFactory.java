@@ -1084,6 +1084,15 @@ public interface FramewebFactory extends EFactory {
 	NavigationAggregationSource createNavigationAggregationSource();
 
 	/**
+	 * Returns a new object of class '<em>Navigation SPA Properties</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Navigation SPA Properties</em>'.
+	 * @generated
+	 */
+	NavigationSPAProperties createNavigationSPAProperties();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

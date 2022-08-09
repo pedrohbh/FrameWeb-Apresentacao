@@ -419,7 +419,15 @@
   <eClassifiers xsi:type="ecore:EClass" name="NavigationAggregationAssociation" eSuperTypes="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Association">
     <eStructuralFeatures xsi:type="ecore:EReference" name="relacoes" upperBound="-1"
         eType="#//UIComponentField"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="spaProperties" upperBound="-1"
+        eType="#//NavigationSPAProperties"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NavigationAggregationTarget" eSuperTypes="#//NavigationProperty"/>
   <eClassifiers xsi:type="ecore:EClass" name="NavigationAggregationSource" eSuperTypes="#//NavigationProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NavigationSPAProperties">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="spaAttributes" upperBound="-1"
+        eType="#//UIComponentField"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="spaMethods" upperBound="-1"
+        eType="#//FrontControllerMethod"/>
+  </eClassifiers>
 </ecore:EPackage>

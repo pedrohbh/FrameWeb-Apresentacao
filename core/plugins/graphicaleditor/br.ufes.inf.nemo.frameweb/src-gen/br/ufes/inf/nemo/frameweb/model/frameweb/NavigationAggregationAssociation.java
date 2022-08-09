@@ -15,6 +15,7 @@ import org.eclipse.uml2.uml.Association;
  * </p>
  * <ul>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation#getRelacoes <em>Relacoes</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation#getSpaProperties <em>Spa Properties</em>}</li>
  * </ul>
  *
  * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getNavigationAggregationAssociation()
@@ -34,4 +35,16 @@ public interface NavigationAggregationAssociation extends Association {
 	 * @generated
 	 */
 	EList<UIComponentField> getRelacoes();
+
+	/**
+	 * Returns the value of the '<em><b>Spa Properties</b></em>' reference list.
+	 * The list contents are of type {@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationSPAProperties}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Spa Properties</em>' reference list.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getNavigationAggregationAssociation_SpaProperties()
+	 * @model
+	 * @generated
+	 */
+	EList<NavigationSPAProperties> getSpaProperties();
 } // NavigationAggregationAssociation

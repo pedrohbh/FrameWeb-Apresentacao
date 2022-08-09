@@ -376,8 +376,13 @@
     <genClasses ecoreClass="frameweb.ecore#//Partial"/>
     <genClasses ecoreClass="frameweb.ecore#//NavigationAggregationAssociation">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//NavigationAggregationAssociation/relacoes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//NavigationAggregationAssociation/spaProperties"/>
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//NavigationAggregationTarget"/>
     <genClasses ecoreClass="frameweb.ecore#//NavigationAggregationSource"/>
+    <genClasses ecoreClass="frameweb.ecore#//NavigationSPAProperties">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//NavigationSPAProperties/spaAttributes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//NavigationSPAProperties/spaMethods"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -48,6 +48,7 @@ public class NavigationAggregationAssociationItemProvider extends AssociationIte
 			super.getPropertyDescriptors(object);
 
 			addRelacoesPropertyDescriptor(object);
+			addSpaPropertiesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -66,6 +67,23 @@ public class NavigationAggregationAssociationItemProvider extends AssociationIte
 						"_UI_NavigationAggregationAssociation_type"),
 				FramewebPackage.Literals.NAVIGATION_AGGREGATION_ASSOCIATION__RELACOES, true, false, true, null, null,
 				null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Spa Properties feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSpaPropertiesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_NavigationAggregationAssociation_spaProperties_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_NavigationAggregationAssociation_spaProperties_feature",
+								"_UI_NavigationAggregationAssociation_type"),
+						FramewebPackage.Literals.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_PROPERTIES, true, false, true,
+						null, null, null));
 	}
 
 	/**
