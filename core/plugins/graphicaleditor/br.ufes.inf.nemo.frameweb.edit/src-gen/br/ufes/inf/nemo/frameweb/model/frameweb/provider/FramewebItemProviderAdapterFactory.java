@@ -33,7 +33,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * @generated
  */
 public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
-		implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
+		implements ComposeableAdapterFactory, IChangeNotifier, IDisposable
+{
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -64,7 +65,8 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FramewebItemProviderAdapterFactory() {
+	public FramewebItemProviderAdapterFactory()
+	{
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -87,8 +89,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createFramewebProjectAdapter() {
-		if (framewebProjectItemProvider == null) {
+	public Adapter createFramewebProjectAdapter()
+	{
+		if (framewebProjectItemProvider == null)
+		{
 			framewebProjectItemProvider = new FramewebProjectItemProvider(this);
 		}
 
@@ -110,8 +114,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createFramewebModelAdapter() {
-		if (framewebModelItemProvider == null) {
+	public Adapter createFramewebModelAdapter()
+	{
+		if (framewebModelItemProvider == null)
+		{
 			framewebModelItemProvider = new FramewebModelItemProvider(this);
 		}
 
@@ -133,8 +139,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createFrameworkProfileAdapter() {
-		if (frameworkProfileItemProvider == null) {
+	public Adapter createFrameworkProfileAdapter()
+	{
+		if (frameworkProfileItemProvider == null)
+		{
 			frameworkProfileItemProvider = new FrameworkProfileItemProvider(this);
 		}
 
@@ -156,8 +164,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createEntityModelAdapter() {
-		if (entityModelItemProvider == null) {
+	public Adapter createEntityModelAdapter()
+	{
+		if (entityModelItemProvider == null)
+		{
 			entityModelItemProvider = new EntityModelItemProvider(this);
 		}
 
@@ -179,8 +189,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createNavigationModelAdapter() {
-		if (navigationModelItemProvider == null) {
+	public Adapter createNavigationModelAdapter()
+	{
+		if (navigationModelItemProvider == null)
+		{
 			navigationModelItemProvider = new NavigationModelItemProvider(this);
 		}
 
@@ -202,8 +214,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createApplicationModelAdapter() {
-		if (applicationModelItemProvider == null) {
+	public Adapter createApplicationModelAdapter()
+	{
+		if (applicationModelItemProvider == null)
+		{
 			applicationModelItemProvider = new ApplicationModelItemProvider(this);
 		}
 
@@ -225,8 +239,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createPersistenceModelAdapter() {
-		if (persistenceModelItemProvider == null) {
+	public Adapter createPersistenceModelAdapter()
+	{
+		if (persistenceModelItemProvider == null)
+		{
 			persistenceModelItemProvider = new PersistenceModelItemProvider(this);
 		}
 
@@ -248,8 +264,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDomainAssociationAdapter() {
-		if (domainAssociationItemProvider == null) {
+	public Adapter createDomainAssociationAdapter()
+	{
+		if (domainAssociationItemProvider == null)
+		{
 			domainAssociationItemProvider = new DomainAssociationItemProvider(this);
 		}
 
@@ -271,8 +289,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createVersionAttributeAdapter() {
-		if (versionAttributeItemProvider == null) {
+	public Adapter createVersionAttributeAdapter()
+	{
+		if (versionAttributeItemProvider == null)
+		{
 			versionAttributeItemProvider = new VersionAttributeItemProvider(this);
 		}
 
@@ -294,8 +314,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createIdAttributeAdapter() {
-		if (idAttributeItemProvider == null) {
+	public Adapter createIdAttributeAdapter()
+	{
+		if (idAttributeItemProvider == null)
+		{
 			idAttributeItemProvider = new IdAttributeItemProvider(this);
 		}
 
@@ -317,8 +339,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createLOBAttributeAdapter() {
-		if (lobAttributeItemProvider == null) {
+	public Adapter createLOBAttributeAdapter()
+	{
+		if (lobAttributeItemProvider == null)
+		{
 			lobAttributeItemProvider = new LOBAttributeItemProvider(this);
 		}
 
@@ -340,8 +364,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createEmbeddedAttributeAdapter() {
-		if (embeddedAttributeItemProvider == null) {
+	public Adapter createEmbeddedAttributeAdapter()
+	{
+		if (embeddedAttributeItemProvider == null)
+		{
 			embeddedAttributeItemProvider = new EmbeddedAttributeItemProvider(this);
 		}
 
@@ -363,8 +389,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDecimalAttributeAdapter() {
-		if (decimalAttributeItemProvider == null) {
+	public Adapter createDecimalAttributeAdapter()
+	{
+		if (decimalAttributeItemProvider == null)
+		{
 			decimalAttributeItemProvider = new DecimalAttributeItemProvider(this);
 		}
 
@@ -386,8 +414,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDateTimeAttributeAdapter() {
-		if (dateTimeAttributeItemProvider == null) {
+	public Adapter createDateTimeAttributeAdapter()
+	{
+		if (dateTimeAttributeItemProvider == null)
+		{
 			dateTimeAttributeItemProvider = new DateTimeAttributeItemProvider(this);
 		}
 
@@ -409,8 +439,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createPageAdapter() {
-		if (pageItemProvider == null) {
+	public Adapter createPageAdapter()
+	{
+		if (pageItemProvider == null)
+		{
 			pageItemProvider = new PageItemProvider(this);
 		}
 
@@ -432,8 +464,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createAuthPageAdapter() {
-		if (authPageItemProvider == null) {
+	public Adapter createAuthPageAdapter()
+	{
+		if (authPageItemProvider == null)
+		{
 			authPageItemProvider = new AuthPageItemProvider(this);
 		}
 
@@ -455,8 +489,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDAOInterfaceAdapter() {
-		if (daoInterfaceItemProvider == null) {
+	public Adapter createDAOInterfaceAdapter()
+	{
+		if (daoInterfaceItemProvider == null)
+		{
 			daoInterfaceItemProvider = new DAOInterfaceItemProvider(this);
 		}
 
@@ -478,8 +514,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDAOClassAdapter() {
-		if (daoClassItemProvider == null) {
+	public Adapter createDAOClassAdapter()
+	{
+		if (daoClassItemProvider == null)
+		{
 			daoClassItemProvider = new DAOClassItemProvider(this);
 		}
 
@@ -501,8 +539,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDAORealizationAdapter() {
-		if (daoRealizationItemProvider == null) {
+	public Adapter createDAORealizationAdapter()
+	{
+		if (daoRealizationItemProvider == null)
+		{
 			daoRealizationItemProvider = new DAORealizationItemProvider(this);
 		}
 
@@ -524,8 +564,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createFrontControllerClassAdapter() {
-		if (frontControllerClassItemProvider == null) {
+	public Adapter createFrontControllerClassAdapter()
+	{
+		if (frontControllerClassItemProvider == null)
+		{
 			frontControllerClassItemProvider = new FrontControllerClassItemProvider(this);
 		}
 
@@ -547,8 +589,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createIOParameterAdapter() {
-		if (ioParameterItemProvider == null) {
+	public Adapter createIOParameterAdapter()
+	{
+		if (ioParameterItemProvider == null)
+		{
 			ioParameterItemProvider = new IOParameterItemProvider(this);
 		}
 
@@ -570,8 +614,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createResultDependencyAdapter() {
-		if (resultDependencyItemProvider == null) {
+	public Adapter createResultDependencyAdapter()
+	{
+		if (resultDependencyItemProvider == null)
+		{
 			resultDependencyItemProvider = new ResultDependencyItemProvider(this);
 		}
 
@@ -593,8 +639,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createAuthSuccessUrlAdapter() {
-		if (authSuccessUrlItemProvider == null) {
+	public Adapter createAuthSuccessUrlAdapter()
+	{
+		if (authSuccessUrlItemProvider == null)
+		{
 			authSuccessUrlItemProvider = new AuthSuccessUrlItemProvider(this);
 		}
 
@@ -616,8 +664,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createAuthFailureUrlAdapter() {
-		if (authFailureUrlItemProvider == null) {
+	public Adapter createAuthFailureUrlAdapter()
+	{
+		if (authFailureUrlItemProvider == null)
+		{
 			authFailureUrlItemProvider = new AuthFailureUrlItemProvider(this);
 		}
 
@@ -639,8 +689,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createNavigationAssociationAdapter() {
-		if (navigationAssociationItemProvider == null) {
+	public Adapter createNavigationAssociationAdapter()
+	{
+		if (navigationAssociationItemProvider == null)
+		{
 			navigationAssociationItemProvider = new NavigationAssociationItemProvider(this);
 		}
 
@@ -662,8 +714,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createFrontControllerMethodAdapter() {
-		if (frontControllerMethodItemProvider == null) {
+	public Adapter createFrontControllerMethodAdapter()
+	{
+		if (frontControllerMethodItemProvider == null)
+		{
 			frontControllerMethodItemProvider = new FrontControllerMethodItemProvider(this);
 		}
 
@@ -685,8 +739,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createAuthProcessingMethodAdapter() {
-		if (authProcessingMethodItemProvider == null) {
+	public Adapter createAuthProcessingMethodAdapter()
+	{
+		if (authProcessingMethodItemProvider == null)
+		{
 			authProcessingMethodItemProvider = new AuthProcessingMethodItemProvider(this);
 		}
 
@@ -708,8 +764,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createServiceClassAdapter() {
-		if (serviceClassItemProvider == null) {
+	public Adapter createServiceClassAdapter()
+	{
+		if (serviceClassItemProvider == null)
+		{
 			serviceClassItemProvider = new ServiceClassItemProvider(this);
 		}
 
@@ -731,8 +789,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createAuthServiceClassAdapter() {
-		if (authServiceClassItemProvider == null) {
+	public Adapter createAuthServiceClassAdapter()
+	{
+		if (authServiceClassItemProvider == null)
+		{
 			authServiceClassItemProvider = new AuthServiceClassItemProvider(this);
 		}
 
@@ -754,8 +814,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createServiceInterfaceAdapter() {
-		if (serviceInterfaceItemProvider == null) {
+	public Adapter createServiceInterfaceAdapter()
+	{
+		if (serviceInterfaceItemProvider == null)
+		{
 			serviceInterfaceItemProvider = new ServiceInterfaceItemProvider(this);
 		}
 
@@ -777,8 +839,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createAuthServiceInterfaceAdapter() {
-		if (authServiceInterfaceItemProvider == null) {
+	public Adapter createAuthServiceInterfaceAdapter()
+	{
+		if (authServiceInterfaceItemProvider == null)
+		{
 			authServiceInterfaceItemProvider = new AuthServiceInterfaceItemProvider(this);
 		}
 
@@ -800,8 +864,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createServiceGeneralizationAdapter() {
-		if (serviceGeneralizationItemProvider == null) {
+	public Adapter createServiceGeneralizationAdapter()
+	{
+		if (serviceGeneralizationItemProvider == null)
+		{
 			serviceGeneralizationItemProvider = new ServiceGeneralizationItemProvider(this);
 		}
 
@@ -823,8 +889,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createServiceControllerAssociationAdapter() {
-		if (serviceControllerAssociationItemProvider == null) {
+	public Adapter createServiceControllerAssociationAdapter()
+	{
+		if (serviceControllerAssociationItemProvider == null)
+		{
 			serviceControllerAssociationItemProvider = new ServiceControllerAssociationItemProvider(this);
 		}
 
@@ -846,8 +914,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDomainClassAdapter() {
-		if (domainClassItemProvider == null) {
+	public Adapter createDomainClassAdapter()
+	{
+		if (domainClassItemProvider == null)
+		{
 			domainClassItemProvider = new DomainClassItemProvider(this);
 		}
 
@@ -869,8 +939,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createAuthUserAdapter() {
-		if (authUserItemProvider == null) {
+	public Adapter createAuthUserAdapter()
+	{
+		if (authUserItemProvider == null)
+		{
 			authUserItemProvider = new AuthUserItemProvider(this);
 		}
 
@@ -892,8 +964,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createAuthRoleAdapter() {
-		if (authRoleItemProvider == null) {
+	public Adapter createAuthRoleAdapter()
+	{
+		if (authRoleItemProvider == null)
+		{
 			authRoleItemProvider = new AuthRoleItemProvider(this);
 		}
 
@@ -915,8 +989,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createAuthPermissionAdapter() {
-		if (authPermissionItemProvider == null) {
+	public Adapter createAuthPermissionAdapter()
+	{
+		if (authPermissionItemProvider == null)
+		{
 			authPermissionItemProvider = new AuthPermissionItemProvider(this);
 		}
 
@@ -938,8 +1014,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createFrontControllerDependencyAdapter() {
-		if (frontControllerDependencyItemProvider == null) {
+	public Adapter createFrontControllerDependencyAdapter()
+	{
+		if (frontControllerDependencyItemProvider == null)
+		{
 			frontControllerDependencyItemProvider = new FrontControllerDependencyItemProvider(this);
 		}
 
@@ -961,8 +1039,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createPageDependencyAdapter() {
-		if (pageDependencyItemProvider == null) {
+	public Adapter createPageDependencyAdapter()
+	{
+		if (pageDependencyItemProvider == null)
+		{
 			pageDependencyItemProvider = new PageDependencyItemProvider(this);
 		}
 
@@ -984,8 +1064,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDAOServiceAssociationAdapter() {
-		if (daoServiceAssociationItemProvider == null) {
+	public Adapter createDAOServiceAssociationAdapter()
+	{
+		if (daoServiceAssociationItemProvider == null)
+		{
 			daoServiceAssociationItemProvider = new DAOServiceAssociationItemProvider(this);
 		}
 
@@ -1007,8 +1089,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDomainMethodAdapter() {
-		if (domainMethodItemProvider == null) {
+	public Adapter createDomainMethodAdapter()
+	{
+		if (domainMethodItemProvider == null)
+		{
 			domainMethodItemProvider = new DomainMethodItemProvider(this);
 		}
 
@@ -1030,8 +1114,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDAOAttributeAdapter() {
-		if (daoAttributeItemProvider == null) {
+	public Adapter createDAOAttributeAdapter()
+	{
+		if (daoAttributeItemProvider == null)
+		{
 			daoAttributeItemProvider = new DAOAttributeItemProvider(this);
 		}
 
@@ -1053,8 +1139,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createServiceMethodAdapter() {
-		if (serviceMethodItemProvider == null) {
+	public Adapter createServiceMethodAdapter()
+	{
+		if (serviceMethodItemProvider == null)
+		{
 			serviceMethodItemProvider = new ServiceMethodItemProvider(this);
 		}
 
@@ -1076,8 +1164,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createAuthServiceMethodAdapter() {
-		if (authServiceMethodItemProvider == null) {
+	public Adapter createAuthServiceMethodAdapter()
+	{
+		if (authServiceMethodItemProvider == null)
+		{
 			authServiceMethodItemProvider = new AuthServiceMethodItemProvider(this);
 		}
 
@@ -1099,8 +1189,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createServiceAttributeAdapter() {
-		if (serviceAttributeItemProvider == null) {
+	public Adapter createServiceAttributeAdapter()
+	{
+		if (serviceAttributeItemProvider == null)
+		{
 			serviceAttributeItemProvider = new ServiceAttributeItemProvider(this);
 		}
 
@@ -1122,8 +1214,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDAOMethodAdapter() {
-		if (daoMethodItemProvider == null) {
+	public Adapter createDAOMethodAdapter()
+	{
+		if (daoMethodItemProvider == null)
+		{
 			daoMethodItemProvider = new DAOMethodItemProvider(this);
 		}
 
@@ -1145,8 +1239,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDomainPackageAdapter() {
-		if (domainPackageItemProvider == null) {
+	public Adapter createDomainPackageAdapter()
+	{
+		if (domainPackageItemProvider == null)
+		{
 			domainPackageItemProvider = new DomainPackageItemProvider(this);
 		}
 
@@ -1168,8 +1264,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createViewPackageAdapter() {
-		if (viewPackageItemProvider == null) {
+	public Adapter createViewPackageAdapter()
+	{
+		if (viewPackageItemProvider == null)
+		{
 			viewPackageItemProvider = new ViewPackageItemProvider(this);
 		}
 
@@ -1191,8 +1289,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createControllerPackageAdapter() {
-		if (controllerPackageItemProvider == null) {
+	public Adapter createControllerPackageAdapter()
+	{
+		if (controllerPackageItemProvider == null)
+		{
 			controllerPackageItemProvider = new ControllerPackageItemProvider(this);
 		}
 
@@ -1214,8 +1314,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createPersistencePackageAdapter() {
-		if (persistencePackageItemProvider == null) {
+	public Adapter createPersistencePackageAdapter()
+	{
+		if (persistencePackageItemProvider == null)
+		{
 			persistencePackageItemProvider = new PersistencePackageItemProvider(this);
 		}
 
@@ -1237,8 +1339,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createApplicationPackageAdapter() {
-		if (applicationPackageItemProvider == null) {
+	public Adapter createApplicationPackageAdapter()
+	{
+		if (applicationPackageItemProvider == null)
+		{
 			applicationPackageItemProvider = new ApplicationPackageItemProvider(this);
 		}
 
@@ -1260,8 +1364,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createUIComponentAdapter() {
-		if (uiComponentItemProvider == null) {
+	public Adapter createUIComponentAdapter()
+	{
+		if (uiComponentItemProvider == null)
+		{
 			uiComponentItemProvider = new UIComponentItemProvider(this);
 		}
 
@@ -1283,8 +1389,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createAuthFormAdapter() {
-		if (authFormItemProvider == null) {
+	public Adapter createAuthFormAdapter()
+	{
+		if (authFormItemProvider == null)
+		{
 			authFormItemProvider = new AuthFormItemProvider(this);
 		}
 
@@ -1306,8 +1414,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createResultTypeAdapter() {
-		if (resultTypeItemProvider == null) {
+	public Adapter createResultTypeAdapter()
+	{
+		if (resultTypeItemProvider == null)
+		{
 			resultTypeItemProvider = new ResultTypeItemProvider(this);
 		}
 
@@ -1329,8 +1439,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDomainGeneralizationAdapter() {
-		if (domainGeneralizationItemProvider == null) {
+	public Adapter createDomainGeneralizationAdapter()
+	{
+		if (domainGeneralizationItemProvider == null)
+		{
 			domainGeneralizationItemProvider = new DomainGeneralizationItemProvider(this);
 		}
 
@@ -1352,8 +1464,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createUIComponentFieldAdapter() {
-		if (uiComponentFieldItemProvider == null) {
+	public Adapter createUIComponentFieldAdapter()
+	{
+		if (uiComponentFieldItemProvider == null)
+		{
 			uiComponentFieldItemProvider = new UIComponentFieldItemProvider(this);
 		}
 
@@ -1375,8 +1489,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createTagLibAdapter() {
-		if (tagLibItemProvider == null) {
+	public Adapter createTagLibAdapter()
+	{
+		if (tagLibItemProvider == null)
+		{
 			tagLibItemProvider = new TagLibItemProvider(this);
 		}
 
@@ -1398,8 +1514,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createTagAdapter() {
-		if (tagItemProvider == null) {
+	public Adapter createTagAdapter()
+	{
+		if (tagItemProvider == null)
+		{
 			tagItemProvider = new TagItemProvider(this);
 		}
 
@@ -1421,8 +1539,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createNavigationCompositionPartAdapter() {
-		if (navigationCompositionPartItemProvider == null) {
+	public Adapter createNavigationCompositionPartAdapter()
+	{
+		if (navigationCompositionPartItemProvider == null)
+		{
 			navigationCompositionPartItemProvider = new NavigationCompositionPartItemProvider(this);
 		}
 
@@ -1444,8 +1564,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createNavigationCompositionWholeAdapter() {
-		if (navigationCompositionWholeItemProvider == null) {
+	public Adapter createNavigationCompositionWholeAdapter()
+	{
+		if (navigationCompositionWholeItemProvider == null)
+		{
 			navigationCompositionWholeItemProvider = new NavigationCompositionWholeItemProvider(this);
 		}
 
@@ -1467,8 +1589,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createResultSetAdapter() {
-		if (resultSetItemProvider == null) {
+	public Adapter createResultSetAdapter()
+	{
+		if (resultSetItemProvider == null)
+		{
 			resultSetItemProvider = new ResultSetItemProvider(this);
 		}
 
@@ -1490,8 +1614,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createPageConstraintAdapter() {
-		if (pageConstraintItemProvider == null) {
+	public Adapter createPageConstraintAdapter()
+	{
+		if (pageConstraintItemProvider == null)
+		{
 			pageConstraintItemProvider = new PageConstraintItemProvider(this);
 		}
 
@@ -1513,8 +1639,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createResultConstraintAdapter() {
-		if (resultConstraintItemProvider == null) {
+	public Adapter createResultConstraintAdapter()
+	{
+		if (resultConstraintItemProvider == null)
+		{
 			resultConstraintItemProvider = new ResultConstraintItemProvider(this);
 		}
 
@@ -1536,8 +1664,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createMethodConstraintAdapter() {
-		if (methodConstraintItemProvider == null) {
+	public Adapter createMethodConstraintAdapter()
+	{
+		if (methodConstraintItemProvider == null)
+		{
 			methodConstraintItemProvider = new MethodConstraintItemProvider(this);
 		}
 
@@ -1559,8 +1689,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createChainingConstraintAdapter() {
-		if (chainingConstraintItemProvider == null) {
+	public Adapter createChainingConstraintAdapter()
+	{
+		if (chainingConstraintItemProvider == null)
+		{
 			chainingConstraintItemProvider = new ChainingConstraintItemProvider(this);
 		}
 
@@ -1582,8 +1714,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createNavigationGeneralizationAdapter() {
-		if (navigationGeneralizationItemProvider == null) {
+	public Adapter createNavigationGeneralizationAdapter()
+	{
+		if (navigationGeneralizationItemProvider == null)
+		{
 			navigationGeneralizationItemProvider = new NavigationGeneralizationItemProvider(this);
 		}
 
@@ -1605,8 +1739,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDomainConstraintsAdapter() {
-		if (domainConstraintsItemProvider == null) {
+	public Adapter createDomainConstraintsAdapter()
+	{
+		if (domainConstraintsItemProvider == null)
+		{
 			domainConstraintsItemProvider = new DomainConstraintsItemProvider(this);
 		}
 
@@ -1628,8 +1764,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDAOGeneralizationAdapter() {
-		if (daoGeneralizationItemProvider == null) {
+	public Adapter createDAOGeneralizationAdapter()
+	{
+		if (daoGeneralizationItemProvider == null)
+		{
 			daoGeneralizationItemProvider = new DAOGeneralizationItemProvider(this);
 		}
 
@@ -1651,8 +1789,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createMappingLibAdapter() {
-		if (mappingLibItemProvider == null) {
+	public Adapter createMappingLibAdapter()
+	{
+		if (mappingLibItemProvider == null)
+		{
 			mappingLibItemProvider = new MappingLibItemProvider(this);
 		}
 
@@ -1674,8 +1814,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createClassMappingAdapter() {
-		if (classMappingItemProvider == null) {
+	public Adapter createClassMappingAdapter()
+	{
+		if (classMappingItemProvider == null)
+		{
 			classMappingItemProvider = new ClassMappingItemProvider(this);
 		}
 
@@ -1697,8 +1839,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createAttributeMappingAdapter() {
-		if (attributeMappingItemProvider == null) {
+	public Adapter createAttributeMappingAdapter()
+	{
+		if (attributeMappingItemProvider == null)
+		{
 			attributeMappingItemProvider = new AttributeMappingItemProvider(this);
 		}
 
@@ -1720,8 +1864,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDomainGeneralizationSetAdapter() {
-		if (domainGeneralizationSetItemProvider == null) {
+	public Adapter createDomainGeneralizationSetAdapter()
+	{
+		if (domainGeneralizationSetItemProvider == null)
+		{
 			domainGeneralizationSetItemProvider = new DomainGeneralizationSetItemProvider(this);
 		}
 
@@ -1743,8 +1889,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createControllerAdapter() {
-		if (controllerItemProvider == null) {
+	public Adapter createControllerAdapter()
+	{
+		if (controllerItemProvider == null)
+		{
 			controllerItemProvider = new ControllerItemProvider(this);
 		}
 
@@ -1766,8 +1914,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createTagPropertyAdapter() {
-		if (tagPropertyItemProvider == null) {
+	public Adapter createTagPropertyAdapter()
+	{
+		if (tagPropertyItemProvider == null)
+		{
 			tagPropertyItemProvider = new TagPropertyItemProvider(this);
 		}
 
@@ -1789,8 +1939,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createResultPropertyAdapter() {
-		if (resultPropertyItemProvider == null) {
+	public Adapter createResultPropertyAdapter()
+	{
+		if (resultPropertyItemProvider == null)
+		{
 			resultPropertyItemProvider = new ResultPropertyItemProvider(this);
 		}
 
@@ -1812,8 +1964,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createClassMappingProperyAdapter() {
-		if (classMappingProperyItemProvider == null) {
+	public Adapter createClassMappingProperyAdapter()
+	{
+		if (classMappingProperyItemProvider == null)
+		{
 			classMappingProperyItemProvider = new ClassMappingProperyItemProvider(this);
 		}
 
@@ -1835,8 +1989,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createAttributeMappingPropertyAdapter() {
-		if (attributeMappingPropertyItemProvider == null) {
+	public Adapter createAttributeMappingPropertyAdapter()
+	{
+		if (attributeMappingPropertyItemProvider == null)
+		{
 			attributeMappingPropertyItemProvider = new AttributeMappingPropertyItemProvider(this);
 		}
 
@@ -1858,8 +2014,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createServiceRealizationAdapter() {
-		if (serviceRealizationItemProvider == null) {
+	public Adapter createServiceRealizationAdapter()
+	{
+		if (serviceRealizationItemProvider == null)
+		{
 			serviceRealizationItemProvider = new ServiceRealizationItemProvider(this);
 		}
 
@@ -1881,8 +2039,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createNavigationGeneralizationSetAdapter() {
-		if (navigationGeneralizationSetItemProvider == null) {
+	public Adapter createNavigationGeneralizationSetAdapter()
+	{
+		if (navigationGeneralizationSetItemProvider == null)
+		{
 			navigationGeneralizationSetItemProvider = new NavigationGeneralizationSetItemProvider(this);
 		}
 
@@ -1904,8 +2064,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDAOGeneralizationSetAdapter() {
-		if (daoGeneralizationSetItemProvider == null) {
+	public Adapter createDAOGeneralizationSetAdapter()
+	{
+		if (daoGeneralizationSetItemProvider == null)
+		{
 			daoGeneralizationSetItemProvider = new DAOGeneralizationSetItemProvider(this);
 		}
 
@@ -1927,8 +2089,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createServiceGeneralizationSetAdapter() {
-		if (serviceGeneralizationSetItemProvider == null) {
+	public Adapter createServiceGeneralizationSetAdapter()
+	{
+		if (serviceGeneralizationSetItemProvider == null)
+		{
 			serviceGeneralizationSetItemProvider = new ServiceGeneralizationSetItemProvider(this);
 		}
 
@@ -1950,8 +2114,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createSemanticPackageAdapter() {
-		if (semanticPackageItemProvider == null) {
+	public Adapter createSemanticPackageAdapter()
+	{
+		if (semanticPackageItemProvider == null)
+		{
 			semanticPackageItemProvider = new SemanticPackageItemProvider(this);
 		}
 
@@ -1973,8 +2139,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createIRIAdapter() {
-		if (iriItemProvider == null) {
+	public Adapter createIRIAdapter()
+	{
+		if (iriItemProvider == null)
+		{
 			iriItemProvider = new IRIItemProvider(this);
 		}
 
@@ -1996,8 +2164,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createVocabularyModelAdapter() {
-		if (vocabularyModelItemProvider == null) {
+	public Adapter createVocabularyModelAdapter()
+	{
+		if (vocabularyModelItemProvider == null)
+		{
 			vocabularyModelItemProvider = new VocabularyModelItemProvider(this);
 		}
 
@@ -2019,8 +2189,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createVocabularyAdapter() {
-		if (vocabularyItemProvider == null) {
+	public Adapter createVocabularyAdapter()
+	{
+		if (vocabularyItemProvider == null)
+		{
 			vocabularyItemProvider = new VocabularyItemProvider(this);
 		}
 
@@ -2042,8 +2214,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createAxiomAdapter() {
-		if (axiomItemProvider == null) {
+	public Adapter createAxiomAdapter()
+	{
+		if (axiomItemProvider == null)
+		{
 			axiomItemProvider = new AxiomItemProvider(this);
 		}
 
@@ -2065,8 +2239,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createAnnotationAdapter() {
-		if (annotationItemProvider == null) {
+	public Adapter createAnnotationAdapter()
+	{
+		if (annotationItemProvider == null)
+		{
 			annotationItemProvider = new AnnotationItemProvider(this);
 		}
 
@@ -2088,8 +2264,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createVocabularyConstraintsAdapter() {
-		if (vocabularyConstraintsItemProvider == null) {
+	public Adapter createVocabularyConstraintsAdapter()
+	{
+		if (vocabularyConstraintsItemProvider == null)
+		{
 			vocabularyConstraintsItemProvider = new VocabularyConstraintsItemProvider(this);
 		}
 
@@ -2111,8 +2289,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createVocabularyAssociationAdapter() {
-		if (vocabularyAssociationItemProvider == null) {
+	public Adapter createVocabularyAssociationAdapter()
+	{
+		if (vocabularyAssociationItemProvider == null)
+		{
 			vocabularyAssociationItemProvider = new VocabularyAssociationItemProvider(this);
 		}
 
@@ -2134,8 +2314,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createVocabularyPropertyAdapter() {
-		if (vocabularyPropertyItemProvider == null) {
+	public Adapter createVocabularyPropertyAdapter()
+	{
+		if (vocabularyPropertyItemProvider == null)
+		{
 			vocabularyPropertyItemProvider = new VocabularyPropertyItemProvider(this);
 		}
 
@@ -2157,8 +2339,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createObjectPropertyAdapter() {
-		if (objectPropertyItemProvider == null) {
+	public Adapter createObjectPropertyAdapter()
+	{
+		if (objectPropertyItemProvider == null)
+		{
 			objectPropertyItemProvider = new ObjectPropertyItemProvider(this);
 		}
 
@@ -2180,8 +2364,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDataPropertyAdapter() {
-		if (dataPropertyItemProvider == null) {
+	public Adapter createDataPropertyAdapter()
+	{
+		if (dataPropertyItemProvider == null)
+		{
 			dataPropertyItemProvider = new DataPropertyItemProvider(this);
 		}
 
@@ -2203,8 +2389,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createVocabularyDataTypeAdapter() {
-		if (vocabularyDataTypeItemProvider == null) {
+	public Adapter createVocabularyDataTypeAdapter()
+	{
+		if (vocabularyDataTypeItemProvider == null)
+		{
 			vocabularyDataTypeItemProvider = new VocabularyDataTypeItemProvider(this);
 		}
 
@@ -2226,8 +2414,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createNamedIndividualAdapter() {
-		if (namedIndividualItemProvider == null) {
+	public Adapter createNamedIndividualAdapter()
+	{
+		if (namedIndividualItemProvider == null)
+		{
 			namedIndividualItemProvider = new NamedIndividualItemProvider(this);
 		}
 
@@ -2249,8 +2439,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createVocabularyClassAdapter() {
-		if (vocabularyClassItemProvider == null) {
+	public Adapter createVocabularyClassAdapter()
+	{
+		if (vocabularyClassItemProvider == null)
+		{
 			vocabularyClassItemProvider = new VocabularyClassItemProvider(this);
 		}
 
@@ -2272,8 +2464,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createAnonymousIndividualAdapter() {
-		if (anonymousIndividualItemProvider == null) {
+	public Adapter createAnonymousIndividualAdapter()
+	{
+		if (anonymousIndividualItemProvider == null)
+		{
 			anonymousIndividualItemProvider = new AnonymousIndividualItemProvider(this);
 		}
 
@@ -2295,8 +2489,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createVocabularyLiteralAdapter() {
-		if (vocabularyLiteralItemProvider == null) {
+	public Adapter createVocabularyLiteralAdapter()
+	{
+		if (vocabularyLiteralItemProvider == null)
+		{
 			vocabularyLiteralItemProvider = new VocabularyLiteralItemProvider(this);
 		}
 
@@ -2318,8 +2514,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDomainVocabularyAssociationAdapter() {
-		if (domainVocabularyAssociationItemProvider == null) {
+	public Adapter createDomainVocabularyAssociationAdapter()
+	{
+		if (domainVocabularyAssociationItemProvider == null)
+		{
 			domainVocabularyAssociationItemProvider = new DomainVocabularyAssociationItemProvider(this);
 		}
 
@@ -2341,8 +2539,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDomainVocabularyPropertyAdapter() {
-		if (domainVocabularyPropertyItemProvider == null) {
+	public Adapter createDomainVocabularyPropertyAdapter()
+	{
+		if (domainVocabularyPropertyItemProvider == null)
+		{
 			domainVocabularyPropertyItemProvider = new DomainVocabularyPropertyItemProvider(this);
 		}
 
@@ -2364,8 +2564,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDomainAttributeAdapter() {
-		if (domainAttributeItemProvider == null) {
+	public Adapter createDomainAttributeAdapter()
+	{
+		if (domainAttributeItemProvider == null)
+		{
 			domainAttributeItemProvider = new DomainAttributeItemProvider(this);
 		}
 
@@ -2387,8 +2589,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDomainAuthAttributeAdapter() {
-		if (domainAuthAttributeItemProvider == null) {
+	public Adapter createDomainAuthAttributeAdapter()
+	{
+		if (domainAuthAttributeItemProvider == null)
+		{
 			domainAuthAttributeItemProvider = new DomainAuthAttributeItemProvider(this);
 		}
 
@@ -2410,8 +2614,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createAuthUserNameAdapter() {
-		if (authUserNameItemProvider == null) {
+	public Adapter createAuthUserNameAdapter()
+	{
+		if (authUserNameItemProvider == null)
+		{
 			authUserNameItemProvider = new AuthUserNameItemProvider(this);
 		}
 
@@ -2433,8 +2639,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createAuthPasswordAdapter() {
-		if (authPasswordItemProvider == null) {
+	public Adapter createAuthPasswordAdapter()
+	{
+		if (authPasswordItemProvider == null)
+		{
 			authPasswordItemProvider = new AuthPasswordItemProvider(this);
 		}
 
@@ -2456,8 +2664,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createAuthRoleNameAdapter() {
-		if (authRoleNameItemProvider == null) {
+	public Adapter createAuthRoleNameAdapter()
+	{
+		if (authRoleNameItemProvider == null)
+		{
 			authRoleNameItemProvider = new AuthRoleNameItemProvider(this);
 		}
 
@@ -2479,8 +2689,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createAuthPermNameAdapter() {
-		if (authPermNameItemProvider == null) {
+	public Adapter createAuthPermNameAdapter()
+	{
+		if (authPermNameItemProvider == null)
+		{
 			authPermNameItemProvider = new AuthPermNameItemProvider(this);
 		}
 
@@ -2502,8 +2714,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDomainPropertyAdapter() {
-		if (domainPropertyItemProvider == null) {
+	public Adapter createDomainPropertyAdapter()
+	{
+		if (domainPropertyItemProvider == null)
+		{
 			domainPropertyItemProvider = new DomainPropertyItemProvider(this);
 		}
 
@@ -2525,8 +2739,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createFrontControllerTemplateAdapter() {
-		if (frontControllerTemplateItemProvider == null) {
+	public Adapter createFrontControllerTemplateAdapter()
+	{
+		if (frontControllerTemplateItemProvider == null)
+		{
 			frontControllerTemplateItemProvider = new FrontControllerTemplateItemProvider(this);
 		}
 
@@ -2548,8 +2764,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDITemplateAdapter() {
-		if (diTemplateItemProvider == null) {
+	public Adapter createDITemplateAdapter()
+	{
+		if (diTemplateItemProvider == null)
+		{
 			diTemplateItemProvider = new DITemplateItemProvider(this);
 		}
 
@@ -2571,8 +2789,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createORMTemplateAdapter() {
-		if (ormTemplateItemProvider == null) {
+	public Adapter createORMTemplateAdapter()
+	{
+		if (ormTemplateItemProvider == null)
+		{
 			ormTemplateItemProvider = new ORMTemplateItemProvider(this);
 		}
 
@@ -2594,8 +2814,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createDAOTemplateAdapter() {
-		if (daoTemplateItemProvider == null) {
+	public Adapter createDAOTemplateAdapter()
+	{
+		if (daoTemplateItemProvider == null)
+		{
 			daoTemplateItemProvider = new DAOTemplateItemProvider(this);
 		}
 
@@ -2617,8 +2839,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createFrameWebConfigurationAdapter() {
-		if (frameWebConfigurationItemProvider == null) {
+	public Adapter createFrameWebConfigurationAdapter()
+	{
+		if (frameWebConfigurationItemProvider == null)
+		{
 			frameWebConfigurationItemProvider = new FrameWebConfigurationItemProvider(this);
 		}
 
@@ -2640,8 +2864,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createRestControllerTemplateAdapter() {
-		if (restControllerTemplateItemProvider == null) {
+	public Adapter createRestControllerTemplateAdapter()
+	{
+		if (restControllerTemplateItemProvider == null)
+		{
 			restControllerTemplateItemProvider = new RestControllerTemplateItemProvider(this);
 		}
 
@@ -2663,8 +2889,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createRestControllerMethodAdapter() {
-		if (restControllerMethodItemProvider == null) {
+	public Adapter createRestControllerMethodAdapter()
+	{
+		if (restControllerMethodItemProvider == null)
+		{
 			restControllerMethodItemProvider = new RestControllerMethodItemProvider(this);
 		}
 
@@ -2686,8 +2914,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createRestControllerClassAdapter() {
-		if (restControllerClassItemProvider == null) {
+	public Adapter createRestControllerClassAdapter()
+	{
+		if (restControllerClassItemProvider == null)
+		{
 			restControllerClassItemProvider = new RestControllerClassItemProvider(this);
 		}
 
@@ -2709,8 +2939,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createPartialAdapter() {
-		if (partialItemProvider == null) {
+	public Adapter createPartialAdapter()
+	{
+		if (partialItemProvider == null)
+		{
 			partialItemProvider = new PartialItemProvider(this);
 		}
 
@@ -2732,8 +2964,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createNavigationAggregationAssociationAdapter() {
-		if (navigationAggregationAssociationItemProvider == null) {
+	public Adapter createNavigationAggregationAssociationAdapter()
+	{
+		if (navigationAggregationAssociationItemProvider == null)
+		{
 			navigationAggregationAssociationItemProvider = new NavigationAggregationAssociationItemProvider(this);
 		}
 
@@ -2755,8 +2989,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createNavigationAggregationTargetAdapter() {
-		if (navigationAggregationTargetItemProvider == null) {
+	public Adapter createNavigationAggregationTargetAdapter()
+	{
+		if (navigationAggregationTargetItemProvider == null)
+		{
 			navigationAggregationTargetItemProvider = new NavigationAggregationTargetItemProvider(this);
 		}
 
@@ -2778,8 +3014,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createNavigationAggregationSourceAdapter() {
-		if (navigationAggregationSourceItemProvider == null) {
+	public Adapter createNavigationAggregationSourceAdapter()
+	{
+		if (navigationAggregationSourceItemProvider == null)
+		{
 			navigationAggregationSourceItemProvider = new NavigationAggregationSourceItemProvider(this);
 		}
 
@@ -2801,12 +3039,66 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter createNavigationSPAPropertiesAdapter() {
-		if (navigationSPAPropertiesItemProvider == null) {
+	public Adapter createNavigationSPAPropertiesAdapter()
+	{
+		if (navigationSPAPropertiesItemProvider == null)
+		{
 			navigationSPAPropertiesItemProvider = new NavigationSPAPropertiesItemProvider(this);
 		}
 
 		return navigationSPAPropertiesItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAMethod} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NavigationAggregationAssociationSPAMethodItemProvider navigationAggregationAssociationSPAMethodItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAMethod}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNavigationAggregationAssociationSPAMethodAdapter()
+	{
+		if (navigationAggregationAssociationSPAMethodItemProvider == null)
+		{
+			navigationAggregationAssociationSPAMethodItemProvider = new NavigationAggregationAssociationSPAMethodItemProvider(
+					this);
+		}
+
+		return navigationAggregationAssociationSPAMethodItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAAttribute} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NavigationAggregationAssociationSPAAttributeItemProvider navigationAggregationAssociationSPAAttributeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAAttribute}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNavigationAggregationAssociationSPAAttributeAdapter()
+	{
+		if (navigationAggregationAssociationSPAAttributeItemProvider == null)
+		{
+			navigationAggregationAssociationSPAAttributeItemProvider = new NavigationAggregationAssociationSPAAttributeItemProvider(
+					this);
+		}
+
+		return navigationAggregationAssociationSPAAttributeItemProvider;
 	}
 
 	/**
@@ -2816,7 +3108,8 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public ComposeableAdapterFactory getRootAdapterFactory() {
+	public ComposeableAdapterFactory getRootAdapterFactory()
+	{
 		return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
 	}
 
@@ -2827,7 +3120,8 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
+	public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory)
+	{
 		this.parentAdapterFactory = parentAdapterFactory;
 	}
 
@@ -2837,7 +3131,8 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public boolean isFactoryForType(Object type) {
+	public boolean isFactoryForType(Object type)
+	{
 		return supportedTypes.contains(type) || super.isFactoryForType(type);
 	}
 
@@ -2848,7 +3143,8 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Adapter adapt(Notifier notifier, Object type) {
+	public Adapter adapt(Notifier notifier, Object type)
+	{
 		return super.adapt(notifier, this);
 	}
 
@@ -2858,10 +3154,13 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public Object adapt(Object object, Object type) {
-		if (isFactoryForType(type)) {
+	public Object adapt(Object object, Object type)
+	{
+		if (isFactoryForType(type))
+		{
 			Object adapter = super.adapt(object, type);
-			if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
+			if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter)))
+			{
 				return adapter;
 			}
 		}
@@ -2876,7 +3175,8 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public void addListener(INotifyChangedListener notifyChangedListener) {
+	public void addListener(INotifyChangedListener notifyChangedListener)
+	{
 		changeNotifier.addListener(notifyChangedListener);
 	}
 
@@ -2887,7 +3187,8 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public void removeListener(INotifyChangedListener notifyChangedListener) {
+	public void removeListener(INotifyChangedListener notifyChangedListener)
+	{
 		changeNotifier.removeListener(notifyChangedListener);
 	}
 
@@ -2898,10 +3199,12 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public void fireNotifyChanged(Notification notification) {
+	public void fireNotifyChanged(Notification notification)
+	{
 		changeNotifier.fireNotifyChanged(notification);
 
-		if (parentAdapterFactory != null) {
+		if (parentAdapterFactory != null)
+		{
 			parentAdapterFactory.fireNotifyChanged(notification);
 		}
 	}
@@ -2913,7 +3216,8 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 	 * @generated
 	 */
 	@Override
-	public void dispose() {
+	public void dispose()
+	{
 		if (framewebProjectItemProvider != null)
 			framewebProjectItemProvider.dispose();
 		if (framewebModelItemProvider != null)
@@ -3152,6 +3456,10 @@ public class FramewebItemProviderAdapterFactory extends FramewebAdapterFactory
 			navigationAggregationSourceItemProvider.dispose();
 		if (navigationSPAPropertiesItemProvider != null)
 			navigationSPAPropertiesItemProvider.dispose();
+		if (navigationAggregationAssociationSPAMethodItemProvider != null)
+			navigationAggregationAssociationSPAMethodItemProvider.dispose();
+		if (navigationAggregationAssociationSPAAttributeItemProvider != null)
+			navigationAggregationAssociationSPAAttributeItemProvider.dispose();
 	}
 
 }

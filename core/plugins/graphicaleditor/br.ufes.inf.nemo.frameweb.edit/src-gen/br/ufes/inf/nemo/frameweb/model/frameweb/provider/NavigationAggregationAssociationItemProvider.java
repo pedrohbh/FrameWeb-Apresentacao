@@ -13,8 +13,10 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.uml2.uml.UMLPackage;
 
 import org.eclipse.uml2.uml.edit.providers.AssociationItemProvider;
@@ -25,14 +27,16 @@ import org.eclipse.uml2.uml.edit.providers.AssociationItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class NavigationAggregationAssociationItemProvider extends AssociationItemProvider {
+public class NavigationAggregationAssociationItemProvider extends AssociationItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NavigationAggregationAssociationItemProvider(AdapterFactory adapterFactory) {
+	public NavigationAggregationAssociationItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -43,8 +47,10 @@ public class NavigationAggregationAssociationItemProvider extends AssociationIte
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addRelacoesPropertyDescriptor(object);
@@ -59,7 +65,8 @@ public class NavigationAggregationAssociationItemProvider extends AssociationIte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRelacoesPropertyDescriptor(Object object) {
+	protected void addRelacoesPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_NavigationAggregationAssociation_relacoes_feature"),
@@ -75,7 +82,8 @@ public class NavigationAggregationAssociationItemProvider extends AssociationIte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSpaPropertiesPropertyDescriptor(Object object) {
+	protected void addSpaPropertiesPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_NavigationAggregationAssociation_spaProperties_feature"),
@@ -87,13 +95,48 @@ public class NavigationAggregationAssociationItemProvider extends AssociationIte
 	}
 
 	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object)
+	{
+		if (childrenFeatures == null)
+		{
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(FramewebPackage.Literals.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHOD);
+			childrenFeatures.add(FramewebPackage.Literals.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTE);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child)
+	{
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
+	}
+
+	/**
 	 * This returns NavigationAggregationAssociation.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/NavigationAggregationAssociation"));
 	}
 
@@ -103,7 +146,8 @@ public class NavigationAggregationAssociationItemProvider extends AssociationIte
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -114,7 +158,8 @@ public class NavigationAggregationAssociationItemProvider extends AssociationIte
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((NavigationAggregationAssociation) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_NavigationAggregationAssociation_type")
 				: getString("_UI_NavigationAggregationAssociation_type") + " " + label;
@@ -128,8 +173,17 @@ public class NavigationAggregationAssociationItemProvider extends AssociationIte
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(NavigationAggregationAssociation.class))
+		{
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHOD:
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTE:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+			return;
+		}
 		super.notifyChanged(notification);
 	}
 
@@ -141,7 +195,8 @@ public class NavigationAggregationAssociationItemProvider extends AssociationIte
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.NAMESPACE__OWNED_RULE,
@@ -353,6 +408,14 @@ public class NavigationAggregationAssociationItemProvider extends AssociationIte
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END,
 				FramewebFactory.eINSTANCE.createNavigationAggregationSource()));
+
+		newChildDescriptors
+				.add(createChildParameter(FramewebPackage.Literals.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHOD,
+						FramewebFactory.eINSTANCE.createNavigationAggregationAssociationSPAMethod()));
+
+		newChildDescriptors
+				.add(createChildParameter(FramewebPackage.Literals.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTE,
+						FramewebFactory.eINSTANCE.createNavigationAggregationAssociationSPAAttribute()));
 	}
 
 	/**
@@ -362,7 +425,8 @@ public class NavigationAggregationAssociationItemProvider extends AssociationIte
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -371,7 +435,8 @@ public class NavigationAggregationAssociationItemProvider extends AssociationIte
 				|| childFeature == UMLPackage.Literals.ASSOCIATION__OWNED_END
 				|| childFeature == UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
@@ -385,7 +450,8 @@ public class NavigationAggregationAssociationItemProvider extends AssociationIte
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		return FramewebEditPlugin.INSTANCE;
 	}
 

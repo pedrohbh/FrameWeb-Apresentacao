@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class VersionAttributeImpl extends AttributeImpl implements VersionAttribute {
+public class VersionAttributeImpl extends AttributeImpl implements VersionAttribute
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VersionAttributeImpl() {
+	protected VersionAttributeImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class VersionAttributeImpl extends AttributeImpl implements VersionAttrib
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.VERSION_ATTRIBUTE;
 	}
 

@@ -18,7 +18,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface IdAttribute extends Attribute {
+public interface IdAttribute extends Attribute
+{
 	/**
 	 * Returns the value of the '<em><b>Generation</b></em>' attribute.
 	 * The literals are from the enumeration {@link br.ufes.inf.nemo.frameweb.model.frameweb.Generation}.

@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface DomainAuthAttribute extends DomainAttribute {
+public interface DomainAuthAttribute extends DomainAttribute
+{
 } // DomainAuthAttribute

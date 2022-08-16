@@ -26,14 +26,16 @@ import org.eclipse.uml2.uml.edit.providers.GeneralizationSetItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DomainGeneralizationSetItemProvider extends GeneralizationSetItemProvider {
+public class DomainGeneralizationSetItemProvider extends GeneralizationSetItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DomainGeneralizationSetItemProvider(AdapterFactory adapterFactory) {
+	public DomainGeneralizationSetItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -44,8 +46,10 @@ public class DomainGeneralizationSetItemProvider extends GeneralizationSetItemPr
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addMappingPropertyDescriptor(object);
@@ -59,7 +63,8 @@ public class DomainGeneralizationSetItemProvider extends GeneralizationSetItemPr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addMappingPropertyDescriptor(Object object) {
+	protected void addMappingPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_DomainGeneralizationSet_mapping_feature"),
@@ -76,7 +81,8 @@ public class DomainGeneralizationSetItemProvider extends GeneralizationSetItemPr
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/DomainGeneralizationSet"));
 	}
 
@@ -86,7 +92,8 @@ public class DomainGeneralizationSetItemProvider extends GeneralizationSetItemPr
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -97,7 +104,8 @@ public class DomainGeneralizationSetItemProvider extends GeneralizationSetItemPr
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((DomainGeneralizationSet) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_DomainGeneralizationSet_type")
 				: getString("_UI_DomainGeneralizationSet_type") + " " + label;
@@ -111,10 +119,12 @@ public class DomainGeneralizationSetItemProvider extends GeneralizationSetItemPr
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(DomainGeneralizationSet.class)) {
+		switch (notification.getFeatureID(DomainGeneralizationSet.class))
+		{
 		case FramewebPackage.DOMAIN_GENERALIZATION_SET__MAPPING:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
@@ -130,7 +140,8 @@ public class DomainGeneralizationSetItemProvider extends GeneralizationSetItemPr
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 
@@ -141,7 +152,8 @@ public class DomainGeneralizationSetItemProvider extends GeneralizationSetItemPr
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		return FramewebEditPlugin.INSTANCE;
 	}
 

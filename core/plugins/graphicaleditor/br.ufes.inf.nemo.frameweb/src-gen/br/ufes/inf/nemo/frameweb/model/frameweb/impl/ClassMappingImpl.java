@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.StereotypeImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class ClassMappingImpl extends StereotypeImpl implements ClassMapping {
+public class ClassMappingImpl extends StereotypeImpl implements ClassMapping
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ClassMappingImpl() {
+	protected ClassMappingImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class ClassMappingImpl extends StereotypeImpl implements ClassMapping {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.CLASS_MAPPING;
 	}
 

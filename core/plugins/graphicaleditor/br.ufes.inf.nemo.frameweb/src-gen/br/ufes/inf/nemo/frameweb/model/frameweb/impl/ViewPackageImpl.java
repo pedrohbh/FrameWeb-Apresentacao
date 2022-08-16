@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ViewPackageImpl extends NavigationPackageImpl implements ViewPackage {
+public class ViewPackageImpl extends NavigationPackageImpl implements ViewPackage
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ViewPackageImpl() {
+	protected ViewPackageImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class ViewPackageImpl extends NavigationPackageImpl implements ViewPackag
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.VIEW_PACKAGE;
 	}
 

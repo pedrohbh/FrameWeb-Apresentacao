@@ -27,7 +27,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface FrontControllerTemplate extends FrameworkProfile {
+public interface FrontControllerTemplate extends FrameworkProfile
+{
 	/**
 	 * Returns the value of the '<em><b>Class Template</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -28,7 +28,8 @@ import org.eclipse.uml2.uml.internal.impl.GeneralizationSetImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class DomainGeneralizationSetImpl extends GeneralizationSetImpl implements DomainGeneralizationSet {
+public class DomainGeneralizationSetImpl extends GeneralizationSetImpl implements DomainGeneralizationSet
+{
 	/**
 	 * The default value of the '{@link #getMapping() <em>Mapping</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -54,7 +55,8 @@ public class DomainGeneralizationSetImpl extends GeneralizationSetImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DomainGeneralizationSetImpl() {
+	protected DomainGeneralizationSetImpl()
+	{
 		super();
 	}
 
@@ -64,7 +66,8 @@ public class DomainGeneralizationSetImpl extends GeneralizationSetImpl implement
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.DOMAIN_GENERALIZATION_SET;
 	}
 
@@ -74,7 +77,8 @@ public class DomainGeneralizationSetImpl extends GeneralizationSetImpl implement
 	 * @generated
 	 */
 	@Override
-	public InheritanceMapping getMapping() {
+	public InheritanceMapping getMapping()
+	{
 		return mapping;
 	}
 
@@ -84,7 +88,8 @@ public class DomainGeneralizationSetImpl extends GeneralizationSetImpl implement
 	 * @generated
 	 */
 	@Override
-	public void setMapping(InheritanceMapping newMapping) {
+	public void setMapping(InheritanceMapping newMapping)
+	{
 		InheritanceMapping oldMapping = mapping;
 		mapping = newMapping == null ? MAPPING_EDEFAULT : newMapping;
 		if (eNotificationRequired())
@@ -98,8 +103,10 @@ public class DomainGeneralizationSetImpl extends GeneralizationSetImpl implement
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DOMAIN_GENERALIZATION_SET__MAPPING:
 			return getMapping();
 		}
@@ -112,8 +119,10 @@ public class DomainGeneralizationSetImpl extends GeneralizationSetImpl implement
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DOMAIN_GENERALIZATION_SET__MAPPING:
 			setMapping((InheritanceMapping) newValue);
 			return;
@@ -127,8 +136,10 @@ public class DomainGeneralizationSetImpl extends GeneralizationSetImpl implement
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DOMAIN_GENERALIZATION_SET__MAPPING:
 			setMapping(MAPPING_EDEFAULT);
 			return;
@@ -142,8 +153,10 @@ public class DomainGeneralizationSetImpl extends GeneralizationSetImpl implement
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DOMAIN_GENERALIZATION_SET__MAPPING:
 			return mapping != MAPPING_EDEFAULT;
 		}
@@ -156,7 +169,8 @@ public class DomainGeneralizationSetImpl extends GeneralizationSetImpl implement
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

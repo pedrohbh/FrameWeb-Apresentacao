@@ -28,7 +28,8 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * @generated
  */
 @SuppressWarnings("all")
-public class PageImpl extends NavigationClassImpl implements Page {
+public class PageImpl extends NavigationClassImpl implements Page
+{
 	/**
 	 * The cached value of the '{@link #getPageTagLib() <em>Page Tag Lib</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -44,7 +45,8 @@ public class PageImpl extends NavigationClassImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PageImpl() {
+	protected PageImpl()
+	{
 		super();
 	}
 
@@ -54,7 +56,8 @@ public class PageImpl extends NavigationClassImpl implements Page {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.PAGE;
 	}
 
@@ -64,8 +67,10 @@ public class PageImpl extends NavigationClassImpl implements Page {
 	 * @generated
 	 */
 	@Override
-	public EList<TagLib> getPageTagLib() {
-		if (pageTagLib == null) {
+	public EList<TagLib> getPageTagLib()
+	{
+		if (pageTagLib == null)
+		{
 			pageTagLib = new EObjectResolvingEList<TagLib>(TagLib.class, this, FramewebPackage.PAGE__PAGE_TAG_LIB);
 		}
 		return pageTagLib;
@@ -77,8 +82,10 @@ public class PageImpl extends NavigationClassImpl implements Page {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.PAGE__PAGE_TAG_LIB:
 			return getPageTagLib();
 		}
@@ -92,8 +99,10 @@ public class PageImpl extends NavigationClassImpl implements Page {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.PAGE__PAGE_TAG_LIB:
 			getPageTagLib().clear();
 			getPageTagLib().addAll((Collection<? extends TagLib>) newValue);
@@ -108,8 +117,10 @@ public class PageImpl extends NavigationClassImpl implements Page {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.PAGE__PAGE_TAG_LIB:
 			getPageTagLib().clear();
 			return;
@@ -123,8 +134,10 @@ public class PageImpl extends NavigationClassImpl implements Page {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.PAGE__PAGE_TAG_LIB:
 			return pageTagLib != null && !pageTagLib.isEmpty();
 		}

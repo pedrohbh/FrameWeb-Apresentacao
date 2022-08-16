@@ -24,7 +24,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class AuthServiceClassImpl extends ServiceClassImpl implements AuthServiceClass {
+public class AuthServiceClassImpl extends ServiceClassImpl implements AuthServiceClass
+{
 	/**
 	 * The default value of the '{@link #getPermissionName() <em>Permission Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,7 +51,8 @@ public class AuthServiceClassImpl extends ServiceClassImpl implements AuthServic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AuthServiceClassImpl() {
+	protected AuthServiceClassImpl()
+	{
 		super();
 	}
 
@@ -60,7 +62,8 @@ public class AuthServiceClassImpl extends ServiceClassImpl implements AuthServic
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.AUTH_SERVICE_CLASS;
 	}
 
@@ -70,7 +73,8 @@ public class AuthServiceClassImpl extends ServiceClassImpl implements AuthServic
 	 * @generated
 	 */
 	@Override
-	public String getPermissionName() {
+	public String getPermissionName()
+	{
 		return permissionName;
 	}
 
@@ -80,7 +84,8 @@ public class AuthServiceClassImpl extends ServiceClassImpl implements AuthServic
 	 * @generated
 	 */
 	@Override
-	public void setPermissionName(String newPermissionName) {
+	public void setPermissionName(String newPermissionName)
+	{
 		String oldPermissionName = permissionName;
 		permissionName = newPermissionName;
 		if (eNotificationRequired())
@@ -94,8 +99,10 @@ public class AuthServiceClassImpl extends ServiceClassImpl implements AuthServic
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.AUTH_SERVICE_CLASS__PERMISSION_NAME:
 			return getPermissionName();
 		}
@@ -108,8 +115,10 @@ public class AuthServiceClassImpl extends ServiceClassImpl implements AuthServic
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.AUTH_SERVICE_CLASS__PERMISSION_NAME:
 			setPermissionName((String) newValue);
 			return;
@@ -123,8 +132,10 @@ public class AuthServiceClassImpl extends ServiceClassImpl implements AuthServic
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.AUTH_SERVICE_CLASS__PERMISSION_NAME:
 			setPermissionName(PERMISSION_NAME_EDEFAULT);
 			return;
@@ -138,8 +149,10 @@ public class AuthServiceClassImpl extends ServiceClassImpl implements AuthServic
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.AUTH_SERVICE_CLASS__PERMISSION_NAME:
 			return PERMISSION_NAME_EDEFAULT == null ? permissionName != null
 					: !PERMISSION_NAME_EDEFAULT.equals(permissionName);
@@ -153,7 +166,8 @@ public class AuthServiceClassImpl extends ServiceClassImpl implements AuthServic
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

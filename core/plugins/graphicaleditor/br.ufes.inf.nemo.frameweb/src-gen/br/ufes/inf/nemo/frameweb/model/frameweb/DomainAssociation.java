@@ -24,7 +24,8 @@ import org.eclipse.uml2.uml.Property;
  * @model
  * @generated
  */
-public interface DomainAssociation extends Association {
+public interface DomainAssociation extends Association
+{
 	/**
 	 * Returns the value of the '<em><b>Collection</b></em>' attribute.
 	 * The literals are from the enumeration {@link br.ufes.inf.nemo.frameweb.model.frameweb.Collection}.

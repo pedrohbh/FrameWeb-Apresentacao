@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.Property;
  * @model
  * @generated
  */
-public interface ServiceAttribute extends Property {
+public interface ServiceAttribute extends Property
+{
 } // ServiceAttribute

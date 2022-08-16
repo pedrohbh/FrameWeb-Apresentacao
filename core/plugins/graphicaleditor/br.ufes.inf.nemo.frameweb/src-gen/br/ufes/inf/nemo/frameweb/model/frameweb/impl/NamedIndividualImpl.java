@@ -96,7 +96,8 @@ import org.eclipse.uml2.uml.util.UMLValidator;
  * @generated
  */
 @SuppressWarnings("all")
-public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIndividual {
+public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIndividual
+{
 	/**
 	 * The default value of the '{@link #isStatic() <em>Is Static</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -392,7 +393,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NamedIndividualImpl() {
+	protected NamedIndividualImpl()
+	{
 		super();
 	}
 
@@ -402,7 +404,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.NAMED_INDIVIDUAL;
 	}
 
@@ -412,7 +415,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public EList<Classifier> getFeaturingClassifiers() {
+	public EList<Classifier> getFeaturingClassifiers()
+	{
 		// TODO: implement this method to return the 'Featuring Classifier' reference list
 		// Ensure that you remove @generated or mark it @generated NOT
 		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
@@ -426,7 +430,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean isStatic() {
+	public boolean isStatic()
+	{
 		return isStatic;
 	}
 
@@ -436,7 +441,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setIsStatic(boolean newIsStatic) {
+	public void setIsStatic(boolean newIsStatic)
+	{
 		boolean oldIsStatic = isStatic;
 		isStatic = newIsStatic;
 		if (eNotificationRequired())
@@ -450,11 +456,14 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public Type getType() {
-		if (type != null && type.eIsProxy()) {
+	public Type getType()
+	{
+		if (type != null && type.eIsProxy())
+		{
 			InternalEObject oldType = (InternalEObject) type;
 			type = (Type) eResolveProxy(oldType);
-			if (type != oldType) {
+			if (type != oldType)
+			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FramewebPackage.NAMED_INDIVIDUAL__TYPE,
 							oldType, type));
@@ -468,7 +477,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Type basicGetType() {
+	public Type basicGetType()
+	{
 		return type;
 	}
 
@@ -478,7 +488,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setType(Type newType) {
+	public void setType(Type newType)
+	{
 		Type oldType = type;
 		type = newType;
 		if (eNotificationRequired())
@@ -492,7 +503,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean isOrdered() {
+	public boolean isOrdered()
+	{
 		return isOrdered;
 	}
 
@@ -502,7 +514,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setIsOrdered(boolean newIsOrdered) {
+	public void setIsOrdered(boolean newIsOrdered)
+	{
 		boolean oldIsOrdered = isOrdered;
 		isOrdered = newIsOrdered;
 		if (eNotificationRequired())
@@ -516,7 +529,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean isUnique() {
+	public boolean isUnique()
+	{
 		return isUnique;
 	}
 
@@ -526,7 +540,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setIsUnique(boolean newIsUnique) {
+	public void setIsUnique(boolean newIsUnique)
+	{
 		boolean oldIsUnique = isUnique;
 		isUnique = newIsUnique;
 		if (eNotificationRequired())
@@ -540,7 +555,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public int getLower() {
+	public int getLower()
+	{
 		// TODO: implement this method to return the 'Lower' attribute
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -552,7 +568,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setLower(int newLower) {
+	public void setLower(int newLower)
+	{
 		// TODO: implement this method to set the 'Lower' attribute
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -564,15 +581,19 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public ValueSpecification getLowerValue() {
-		if (lowerValue != null && lowerValue.eIsProxy()) {
+	public ValueSpecification getLowerValue()
+	{
+		if (lowerValue != null && lowerValue.eIsProxy())
+		{
 			InternalEObject oldLowerValue = (InternalEObject) lowerValue;
 			lowerValue = (ValueSpecification) eResolveProxy(oldLowerValue);
-			if (lowerValue != oldLowerValue) {
+			if (lowerValue != oldLowerValue)
+			{
 				InternalEObject newLowerValue = (InternalEObject) lowerValue;
 				NotificationChain msgs = oldLowerValue.eInverseRemove(this,
 						EOPPOSITE_FEATURE_BASE - FramewebPackage.NAMED_INDIVIDUAL__LOWER_VALUE, null, null);
-				if (newLowerValue.eInternalContainer() == null) {
+				if (newLowerValue.eInternalContainer() == null)
+				{
 					msgs = newLowerValue.eInverseAdd(this,
 							EOPPOSITE_FEATURE_BASE - FramewebPackage.NAMED_INDIVIDUAL__LOWER_VALUE, null, msgs);
 				}
@@ -591,7 +612,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValueSpecification basicGetLowerValue() {
+	public ValueSpecification basicGetLowerValue()
+	{
 		return lowerValue;
 	}
 
@@ -600,10 +622,12 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLowerValue(ValueSpecification newLowerValue, NotificationChain msgs) {
+	public NotificationChain basicSetLowerValue(ValueSpecification newLowerValue, NotificationChain msgs)
+	{
 		ValueSpecification oldLowerValue = lowerValue;
 		lowerValue = newLowerValue;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
 					FramewebPackage.NAMED_INDIVIDUAL__LOWER_VALUE, oldLowerValue, newLowerValue);
 			if (msgs == null)
@@ -620,8 +644,10 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setLowerValue(ValueSpecification newLowerValue) {
-		if (newLowerValue != lowerValue) {
+	public void setLowerValue(ValueSpecification newLowerValue)
+	{
+		if (newLowerValue != lowerValue)
+		{
 			NotificationChain msgs = null;
 			if (lowerValue != null)
 				msgs = ((InternalEObject) lowerValue).eInverseRemove(this,
@@ -643,7 +669,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public int getUpper() {
+	public int getUpper()
+	{
 		// TODO: implement this method to return the 'Upper' attribute
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -655,7 +682,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setUpper(int newUpper) {
+	public void setUpper(int newUpper)
+	{
 		// TODO: implement this method to set the 'Upper' attribute
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -667,15 +695,19 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public ValueSpecification getUpperValue() {
-		if (upperValue != null && upperValue.eIsProxy()) {
+	public ValueSpecification getUpperValue()
+	{
+		if (upperValue != null && upperValue.eIsProxy())
+		{
 			InternalEObject oldUpperValue = (InternalEObject) upperValue;
 			upperValue = (ValueSpecification) eResolveProxy(oldUpperValue);
-			if (upperValue != oldUpperValue) {
+			if (upperValue != oldUpperValue)
+			{
 				InternalEObject newUpperValue = (InternalEObject) upperValue;
 				NotificationChain msgs = oldUpperValue.eInverseRemove(this,
 						EOPPOSITE_FEATURE_BASE - FramewebPackage.NAMED_INDIVIDUAL__UPPER_VALUE, null, null);
-				if (newUpperValue.eInternalContainer() == null) {
+				if (newUpperValue.eInternalContainer() == null)
+				{
 					msgs = newUpperValue.eInverseAdd(this,
 							EOPPOSITE_FEATURE_BASE - FramewebPackage.NAMED_INDIVIDUAL__UPPER_VALUE, null, msgs);
 				}
@@ -694,7 +726,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValueSpecification basicGetUpperValue() {
+	public ValueSpecification basicGetUpperValue()
+	{
 		return upperValue;
 	}
 
@@ -703,10 +736,12 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetUpperValue(ValueSpecification newUpperValue, NotificationChain msgs) {
+	public NotificationChain basicSetUpperValue(ValueSpecification newUpperValue, NotificationChain msgs)
+	{
 		ValueSpecification oldUpperValue = upperValue;
 		upperValue = newUpperValue;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
 					FramewebPackage.NAMED_INDIVIDUAL__UPPER_VALUE, oldUpperValue, newUpperValue);
 			if (msgs == null)
@@ -723,8 +758,10 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setUpperValue(ValueSpecification newUpperValue) {
-		if (newUpperValue != upperValue) {
+	public void setUpperValue(ValueSpecification newUpperValue)
+	{
+		if (newUpperValue != upperValue)
+		{
 			NotificationChain msgs = null;
 			if (upperValue != null)
 				msgs = ((InternalEObject) upperValue).eInverseRemove(this,
@@ -746,7 +783,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean isReadOnly() {
+	public boolean isReadOnly()
+	{
 		return isReadOnly;
 	}
 
@@ -756,7 +794,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setIsReadOnly(boolean newIsReadOnly) {
+	public void setIsReadOnly(boolean newIsReadOnly)
+	{
 		boolean oldIsReadOnly = isReadOnly;
 		isReadOnly = newIsReadOnly;
 		if (eNotificationRequired())
@@ -770,7 +809,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public EList<ConnectorEnd> getEnds() {
+	public EList<ConnectorEnd> getEnds()
+	{
 		// TODO: implement this method to return the 'End' reference list
 		// Ensure that you remove @generated or mark it @generated NOT
 		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
@@ -784,7 +824,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public EList<PackageableElement> getDeployedElements() {
+	public EList<PackageableElement> getDeployedElements()
+	{
 		// TODO: implement this method to return the 'Deployed Element' reference list
 		// Ensure that you remove @generated or mark it @generated NOT
 		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
@@ -798,8 +839,10 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public EList<Deployment> getDeployments() {
-		if (deployments == null) {
+	public EList<Deployment> getDeployments()
+	{
+		if (deployments == null)
+		{
 			deployments = new EObjectContainmentWithInverseEList.Resolving<Deployment>(Deployment.class, this,
 					FramewebPackage.NAMED_INDIVIDUAL__DEPLOYMENT, UMLPackage.DEPLOYMENT__LOCATION);
 		}
@@ -812,7 +855,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public DataType getDatatype() {
+	public DataType getDatatype()
+	{
 		if (eContainerFeatureID() != FramewebPackage.NAMED_INDIVIDUAL__DATATYPE)
 			return null;
 		return (DataType) eContainer();
@@ -823,7 +867,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataType basicGetDatatype() {
+	public DataType basicGetDatatype()
+	{
 		if (eContainerFeatureID() != FramewebPackage.NAMED_INDIVIDUAL__DATATYPE)
 			return null;
 		return (DataType) eInternalContainer();
@@ -834,7 +879,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDatatype(DataType newDatatype, NotificationChain msgs) {
+	public NotificationChain basicSetDatatype(DataType newDatatype, NotificationChain msgs)
+	{
 		msgs = eBasicSetContainer((InternalEObject) newDatatype, FramewebPackage.NAMED_INDIVIDUAL__DATATYPE, msgs);
 		return msgs;
 	}
@@ -845,9 +891,11 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setDatatype(DataType newDatatype) {
+	public void setDatatype(DataType newDatatype)
+	{
 		if (newDatatype != eInternalContainer()
-				|| (eContainerFeatureID() != FramewebPackage.NAMED_INDIVIDUAL__DATATYPE && newDatatype != null)) {
+				|| (eContainerFeatureID() != FramewebPackage.NAMED_INDIVIDUAL__DATATYPE && newDatatype != null))
+		{
 			if (EcoreUtil.isAncestor(this, newDatatype))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
@@ -870,7 +918,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public Interface getInterface() {
+	public Interface getInterface()
+	{
 		if (eContainerFeatureID() != FramewebPackage.NAMED_INDIVIDUAL__INTERFACE)
 			return null;
 		return (Interface) eContainer();
@@ -881,7 +930,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Interface basicGetInterface() {
+	public Interface basicGetInterface()
+	{
 		if (eContainerFeatureID() != FramewebPackage.NAMED_INDIVIDUAL__INTERFACE)
 			return null;
 		return (Interface) eInternalContainer();
@@ -892,7 +942,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetInterface(Interface newInterface, NotificationChain msgs) {
+	public NotificationChain basicSetInterface(Interface newInterface, NotificationChain msgs)
+	{
 		msgs = eBasicSetContainer((InternalEObject) newInterface, FramewebPackage.NAMED_INDIVIDUAL__INTERFACE, msgs);
 		return msgs;
 	}
@@ -903,9 +954,11 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setInterface(Interface newInterface) {
+	public void setInterface(Interface newInterface)
+	{
 		if (newInterface != eInternalContainer()
-				|| (eContainerFeatureID() != FramewebPackage.NAMED_INDIVIDUAL__INTERFACE && newInterface != null)) {
+				|| (eContainerFeatureID() != FramewebPackage.NAMED_INDIVIDUAL__INTERFACE && newInterface != null))
+		{
 			if (EcoreUtil.isAncestor(this, newInterface))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
@@ -927,7 +980,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDefault() {
+	public String getDefault()
+	{
 		// TODO: implement this method to return the 'Default' attribute
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -938,7 +992,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDefault(String newDefault) {
+	public void setDefault(String newDefault)
+	{
 		// TODO: implement this method to set the 'Default' attribute
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -949,7 +1004,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void unsetDefault() {
+	public void unsetDefault()
+	{
 		// TODO: implement this method to unset the 'Default' attribute
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -960,7 +1016,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isSetDefault() {
+	public boolean isSetDefault()
+	{
 		// TODO: implement this method to return whether the 'Default' attribute is set
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -972,7 +1029,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public AggregationKind getAggregation() {
+	public AggregationKind getAggregation()
+	{
 		return aggregation;
 	}
 
@@ -982,7 +1040,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setAggregation(AggregationKind newAggregation) {
+	public void setAggregation(AggregationKind newAggregation)
+	{
 		AggregationKind oldAggregation = aggregation;
 		aggregation = newAggregation == null ? AGGREGATION_EDEFAULT : newAggregation;
 		if (eNotificationRequired())
@@ -996,7 +1055,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public Property getAssociationEnd() {
+	public Property getAssociationEnd()
+	{
 		if (eContainerFeatureID() != FramewebPackage.NAMED_INDIVIDUAL__ASSOCIATION_END)
 			return null;
 		return (Property) eContainer();
@@ -1007,7 +1067,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Property basicGetAssociationEnd() {
+	public Property basicGetAssociationEnd()
+	{
 		if (eContainerFeatureID() != FramewebPackage.NAMED_INDIVIDUAL__ASSOCIATION_END)
 			return null;
 		return (Property) eInternalContainer();
@@ -1018,7 +1079,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAssociationEnd(Property newAssociationEnd, NotificationChain msgs) {
+	public NotificationChain basicSetAssociationEnd(Property newAssociationEnd, NotificationChain msgs)
+	{
 		msgs = eBasicSetContainer((InternalEObject) newAssociationEnd,
 				FramewebPackage.NAMED_INDIVIDUAL__ASSOCIATION_END, msgs);
 		return msgs;
@@ -1030,10 +1092,12 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setAssociationEnd(Property newAssociationEnd) {
+	public void setAssociationEnd(Property newAssociationEnd)
+	{
 		if (newAssociationEnd != eInternalContainer()
 				|| (eContainerFeatureID() != FramewebPackage.NAMED_INDIVIDUAL__ASSOCIATION_END
-						&& newAssociationEnd != null)) {
+						&& newAssociationEnd != null))
+		{
 			if (EcoreUtil.isAncestor(this, newAssociationEnd))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
@@ -1056,8 +1120,10 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public EList<Property> getQualifiers() {
-		if (qualifiers == null) {
+	public EList<Property> getQualifiers()
+	{
+		if (qualifiers == null)
+		{
 			qualifiers = new EObjectContainmentWithInverseEList.Resolving<Property>(Property.class, this,
 					FramewebPackage.NAMED_INDIVIDUAL__QUALIFIER, UMLPackage.PROPERTY__ASSOCIATION_END);
 		}
@@ -1070,7 +1136,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public org.eclipse.uml2.uml.Class getClass_() {
+	public org.eclipse.uml2.uml.Class getClass_()
+	{
 		org.eclipse.uml2.uml.Class class_ = basicGetClass_();
 		return class_ != null && class_.eIsProxy()
 				? (org.eclipse.uml2.uml.Class) eResolveProxy((InternalEObject) class_)
@@ -1082,7 +1149,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public org.eclipse.uml2.uml.Class basicGetClass_() {
+	public org.eclipse.uml2.uml.Class basicGetClass_()
+	{
 		// TODO: implement this method to return the 'Class' reference
 		// -> do not perform proxy resolution
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -1095,15 +1163,19 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public ValueSpecification getDefaultValue() {
-		if (defaultValue != null && defaultValue.eIsProxy()) {
+	public ValueSpecification getDefaultValue()
+	{
+		if (defaultValue != null && defaultValue.eIsProxy())
+		{
 			InternalEObject oldDefaultValue = (InternalEObject) defaultValue;
 			defaultValue = (ValueSpecification) eResolveProxy(oldDefaultValue);
-			if (defaultValue != oldDefaultValue) {
+			if (defaultValue != oldDefaultValue)
+			{
 				InternalEObject newDefaultValue = (InternalEObject) defaultValue;
 				NotificationChain msgs = oldDefaultValue.eInverseRemove(this,
 						EOPPOSITE_FEATURE_BASE - FramewebPackage.NAMED_INDIVIDUAL__DEFAULT_VALUE, null, null);
-				if (newDefaultValue.eInternalContainer() == null) {
+				if (newDefaultValue.eInternalContainer() == null)
+				{
 					msgs = newDefaultValue.eInverseAdd(this,
 							EOPPOSITE_FEATURE_BASE - FramewebPackage.NAMED_INDIVIDUAL__DEFAULT_VALUE, null, msgs);
 				}
@@ -1122,7 +1194,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValueSpecification basicGetDefaultValue() {
+	public ValueSpecification basicGetDefaultValue()
+	{
 		return defaultValue;
 	}
 
@@ -1131,10 +1204,12 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDefaultValue(ValueSpecification newDefaultValue, NotificationChain msgs) {
+	public NotificationChain basicSetDefaultValue(ValueSpecification newDefaultValue, NotificationChain msgs)
+	{
 		ValueSpecification oldDefaultValue = defaultValue;
 		defaultValue = newDefaultValue;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
 					FramewebPackage.NAMED_INDIVIDUAL__DEFAULT_VALUE, oldDefaultValue, newDefaultValue);
 			if (msgs == null)
@@ -1151,8 +1226,10 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setDefaultValue(ValueSpecification newDefaultValue) {
-		if (newDefaultValue != defaultValue) {
+	public void setDefaultValue(ValueSpecification newDefaultValue)
+	{
+		if (newDefaultValue != defaultValue)
+		{
 			NotificationChain msgs = null;
 			if (defaultValue != null)
 				msgs = ((InternalEObject) defaultValue).eInverseRemove(this,
@@ -1174,7 +1251,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean isComposite() {
+	public boolean isComposite()
+	{
 		// TODO: implement this method to return the 'Is Composite' attribute
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -1186,7 +1264,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setIsComposite(boolean newIsComposite) {
+	public void setIsComposite(boolean newIsComposite)
+	{
 		// TODO: implement this method to set the 'Is Composite' attribute
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -1198,7 +1277,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean isDerived() {
+	public boolean isDerived()
+	{
 		return isDerived;
 	}
 
@@ -1208,7 +1288,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setIsDerived(boolean newIsDerived) {
+	public void setIsDerived(boolean newIsDerived)
+	{
 		boolean oldIsDerived = isDerived;
 		isDerived = newIsDerived;
 		if (eNotificationRequired())
@@ -1222,7 +1303,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean isDerivedUnion() {
+	public boolean isDerivedUnion()
+	{
 		return isDerivedUnion;
 	}
 
@@ -1232,7 +1314,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setIsDerivedUnion(boolean newIsDerivedUnion) {
+	public void setIsDerivedUnion(boolean newIsDerivedUnion)
+	{
 		boolean oldIsDerivedUnion = isDerivedUnion;
 		isDerivedUnion = newIsDerivedUnion;
 		if (eNotificationRequired())
@@ -1246,7 +1329,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean isID() {
+	public boolean isID()
+	{
 		return isID;
 	}
 
@@ -1256,7 +1340,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setIsID(boolean newIsID) {
+	public void setIsID(boolean newIsID)
+	{
 		boolean oldIsID = isID;
 		isID = newIsID;
 		if (eNotificationRequired())
@@ -1270,7 +1355,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public Property getOpposite() {
+	public Property getOpposite()
+	{
 		Property opposite = basicGetOpposite();
 		return opposite != null && opposite.eIsProxy() ? (Property) eResolveProxy((InternalEObject) opposite)
 				: opposite;
@@ -1281,7 +1367,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Property basicGetOpposite() {
+	public Property basicGetOpposite()
+	{
 		// TODO: implement this method to return the 'Opposite' reference
 		// -> do not perform proxy resolution
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -1294,7 +1381,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setOpposite(Property newOpposite) {
+	public void setOpposite(Property newOpposite)
+	{
 		// TODO: implement this method to set the 'Opposite' reference
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -1306,7 +1394,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public Association getOwningAssociation() {
+	public Association getOwningAssociation()
+	{
 		if (eContainerFeatureID() != FramewebPackage.NAMED_INDIVIDUAL__OWNING_ASSOCIATION)
 			return null;
 		return (Association) eContainer();
@@ -1317,7 +1406,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Association basicGetOwningAssociation() {
+	public Association basicGetOwningAssociation()
+	{
 		if (eContainerFeatureID() != FramewebPackage.NAMED_INDIVIDUAL__OWNING_ASSOCIATION)
 			return null;
 		return (Association) eInternalContainer();
@@ -1328,7 +1418,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetOwningAssociation(Association newOwningAssociation, NotificationChain msgs) {
+	public NotificationChain basicSetOwningAssociation(Association newOwningAssociation, NotificationChain msgs)
+	{
 		msgs = eBasicSetContainer((InternalEObject) newOwningAssociation,
 				FramewebPackage.NAMED_INDIVIDUAL__OWNING_ASSOCIATION, msgs);
 		return msgs;
@@ -1340,10 +1431,12 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setOwningAssociation(Association newOwningAssociation) {
+	public void setOwningAssociation(Association newOwningAssociation)
+	{
 		if (newOwningAssociation != eInternalContainer()
 				|| (eContainerFeatureID() != FramewebPackage.NAMED_INDIVIDUAL__OWNING_ASSOCIATION
-						&& newOwningAssociation != null)) {
+						&& newOwningAssociation != null))
+		{
 			if (EcoreUtil.isAncestor(this, newOwningAssociation))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
@@ -1366,8 +1459,10 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public EList<Property> getRedefinedProperties() {
-		if (redefinedProperties == null) {
+	public EList<Property> getRedefinedProperties()
+	{
+		if (redefinedProperties == null)
+		{
 			redefinedProperties = new EObjectResolvingEList<Property>(Property.class, this,
 					FramewebPackage.NAMED_INDIVIDUAL__REDEFINED_PROPERTY);
 		}
@@ -1380,8 +1475,10 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public EList<Property> getSubsettedProperties() {
-		if (subsettedProperties == null) {
+	public EList<Property> getSubsettedProperties()
+	{
+		if (subsettedProperties == null)
+		{
 			subsettedProperties = new EObjectResolvingEList<Property>(Property.class, this,
 					FramewebPackage.NAMED_INDIVIDUAL__SUBSETTED_PROPERTY);
 		}
@@ -1394,11 +1491,14 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public Association getAssociation() {
-		if (association != null && association.eIsProxy()) {
+	public Association getAssociation()
+	{
+		if (association != null && association.eIsProxy())
+		{
 			InternalEObject oldAssociation = (InternalEObject) association;
 			association = (Association) eResolveProxy(oldAssociation);
-			if (association != oldAssociation) {
+			if (association != oldAssociation)
+			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							FramewebPackage.NAMED_INDIVIDUAL__ASSOCIATION, oldAssociation, association));
@@ -1412,7 +1512,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Association basicGetAssociation() {
+	public Association basicGetAssociation()
+	{
 		return association;
 	}
 
@@ -1421,10 +1522,12 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAssociation(Association newAssociation, NotificationChain msgs) {
+	public NotificationChain basicSetAssociation(Association newAssociation, NotificationChain msgs)
+	{
 		Association oldAssociation = association;
 		association = newAssociation;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
 					FramewebPackage.NAMED_INDIVIDUAL__ASSOCIATION, oldAssociation, newAssociation);
 			if (msgs == null)
@@ -1441,8 +1544,10 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setAssociation(Association newAssociation) {
-		if (newAssociation != association) {
+	public void setAssociation(Association newAssociation)
+	{
+		if (newAssociation != association)
+		{
 			NotificationChain msgs = null;
 			if (association != null)
 				msgs = ((InternalEObject) association).eInverseRemove(this, UMLPackage.ASSOCIATION__MEMBER_END,
@@ -1464,13 +1569,16 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean validateSubsettingContextConforms(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateSubsettingContextConforms(DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
+		if (false)
+		{
+			if (diagnostics != null)
+			{
 				diagnostics
 						.add(new BasicDiagnostic(Diagnostic.ERROR, UMLValidator.DIAGNOSTIC_SOURCE,
 								UMLValidator.PROPERTY__SUBSETTING_CONTEXT_CONFORMS,
@@ -1490,13 +1598,16 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean validateDerivedUnionIsReadOnly(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateDerivedUnionIsReadOnly(DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
+		if (false)
+		{
+			if (diagnostics != null)
+			{
 				diagnostics
 						.add(new BasicDiagnostic(Diagnostic.ERROR, UMLValidator.DIAGNOSTIC_SOURCE,
 								UMLValidator.PROPERTY__DERIVED_UNION_IS_READ_ONLY,
@@ -1516,13 +1627,16 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean validateMultiplicityOfComposite(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateMultiplicityOfComposite(DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
+		if (false)
+		{
+			if (diagnostics != null)
+			{
 				diagnostics
 						.add(new BasicDiagnostic(Diagnostic.ERROR, UMLValidator.DIAGNOSTIC_SOURCE,
 								UMLValidator.PROPERTY__MULTIPLICITY_OF_COMPOSITE,
@@ -1542,13 +1656,16 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean validateRedefinedPropertyInherited(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateRedefinedPropertyInherited(DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
+		if (false)
+		{
+			if (diagnostics != null)
+			{
 				diagnostics
 						.add(new BasicDiagnostic(Diagnostic.ERROR, UMLValidator.DIAGNOSTIC_SOURCE,
 								UMLValidator.PROPERTY__REDEFINED_PROPERTY_INHERITED,
@@ -1568,13 +1685,16 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean validateSubsettingRules(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateSubsettingRules(DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
+		if (false)
+		{
+			if (diagnostics != null)
+			{
 				diagnostics
 						.add(new BasicDiagnostic(Diagnostic.ERROR, UMLValidator.DIAGNOSTIC_SOURCE,
 								UMLValidator.PROPERTY__SUBSETTING_RULES,
@@ -1594,13 +1714,16 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean validateBindingToAttribute(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateBindingToAttribute(DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
+		if (false)
+		{
+			if (diagnostics != null)
+			{
 				diagnostics
 						.add(new BasicDiagnostic(Diagnostic.ERROR, UMLValidator.DIAGNOSTIC_SOURCE,
 								UMLValidator.PROPERTY__BINDING_TO_ATTRIBUTE,
@@ -1620,13 +1743,16 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean validateDerivedUnionIsDerived(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateDerivedUnionIsDerived(DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
+		if (false)
+		{
+			if (diagnostics != null)
+			{
 				diagnostics
 						.add(new BasicDiagnostic(Diagnostic.ERROR, UMLValidator.DIAGNOSTIC_SOURCE,
 								UMLValidator.PROPERTY__DERIVED_UNION_IS_DERIVED,
@@ -1646,13 +1772,16 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean validateDeploymentTarget(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateDeploymentTarget(DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
+		if (false)
+		{
+			if (diagnostics != null)
+			{
 				diagnostics
 						.add(new BasicDiagnostic(Diagnostic.ERROR, UMLValidator.DIAGNOSTIC_SOURCE,
 								UMLValidator.PROPERTY__DEPLOYMENT_TARGET,
@@ -1672,13 +1801,16 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean validateSubsettedPropertyNames(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateSubsettedPropertyNames(DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
+		if (false)
+		{
+			if (diagnostics != null)
+			{
 				diagnostics
 						.add(new BasicDiagnostic(Diagnostic.ERROR, UMLValidator.DIAGNOSTIC_SOURCE,
 								UMLValidator.PROPERTY__SUBSETTED_PROPERTY_NAMES,
@@ -1698,13 +1830,16 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean validateTypeOfOppositeEnd(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateTypeOfOppositeEnd(DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
+		if (false)
+		{
+			if (diagnostics != null)
+			{
 				diagnostics
 						.add(new BasicDiagnostic(Diagnostic.ERROR, UMLValidator.DIAGNOSTIC_SOURCE,
 								UMLValidator.PROPERTY__TYPE_OF_OPPOSITE_END,
@@ -1724,13 +1859,16 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean validateQualifiedIsAssociationEnd(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateQualifiedIsAssociationEnd(DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
+		if (false)
+		{
+			if (diagnostics != null)
+			{
 				diagnostics
 						.add(new BasicDiagnostic(Diagnostic.ERROR, UMLValidator.DIAGNOSTIC_SOURCE,
 								UMLValidator.PROPERTY__QUALIFIED_IS_ASSOCIATION_END,
@@ -1750,7 +1888,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public Property getOtherEnd() {
+	public Property getOtherEnd()
+	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -1762,7 +1901,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setBooleanDefaultValue(boolean value) {
+	public void setBooleanDefaultValue(boolean value)
+	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -1774,7 +1914,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setIntegerDefaultValue(int value) {
+	public void setIntegerDefaultValue(int value)
+	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -1786,7 +1927,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setIsNavigable(boolean isNavigable) {
+	public void setIsNavigable(boolean isNavigable)
+	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -1798,7 +1940,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setNullDefaultValue() {
+	public void setNullDefaultValue()
+	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -1810,7 +1953,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setRealDefaultValue(double value) {
+	public void setRealDefaultValue(double value)
+	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -1822,7 +1966,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setStringDefaultValue(String value) {
+	public void setStringDefaultValue(String value)
+	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -1834,7 +1979,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void setUnlimitedNaturalDefaultValue(int value) {
+	public void setUnlimitedNaturalDefaultValue(int value)
+	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -1846,7 +1992,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean isAttribute() {
+	public boolean isAttribute()
+	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -1858,7 +2005,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean isNavigable() {
+	public boolean isNavigable()
+	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -1870,7 +2018,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public EList<Type> subsettingContext() {
+	public EList<Type> subsettingContext()
+	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -1882,13 +2031,16 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean validateUpperGeLower(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateUpperGeLower(DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
+		if (false)
+		{
+			if (diagnostics != null)
+			{
 				diagnostics
 						.add(new BasicDiagnostic(Diagnostic.ERROR, UMLValidator.DIAGNOSTIC_SOURCE,
 								UMLValidator.MULTIPLICITY_ELEMENT__UPPER_GE_LOWER,
@@ -1908,13 +2060,16 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean validateLowerGe0(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateLowerGe0(DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
+		if (false)
+		{
+			if (diagnostics != null)
+			{
 				diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, UMLValidator.DIAGNOSTIC_SOURCE,
 						UMLValidator.MULTIPLICITY_ELEMENT__LOWER_GE0,
 						EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic",
@@ -1932,13 +2087,16 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean validateValueSpecificationNoSideEffects(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateValueSpecificationNoSideEffects(DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
+		if (false)
+		{
+			if (diagnostics != null)
+			{
 				diagnostics
 						.add(new BasicDiagnostic(Diagnostic.ERROR, UMLValidator.DIAGNOSTIC_SOURCE,
 								UMLValidator.MULTIPLICITY_ELEMENT__VALUE_SPECIFICATION_NO_SIDE_EFFECTS,
@@ -1958,13 +2116,16 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean validateValueSpecificationConstant(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateValueSpecificationConstant(DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
+		if (false)
+		{
+			if (diagnostics != null)
+			{
 				diagnostics
 						.add(new BasicDiagnostic(Diagnostic.ERROR, UMLValidator.DIAGNOSTIC_SOURCE,
 								UMLValidator.MULTIPLICITY_ELEMENT__VALUE_SPECIFICATION_CONSTANT,
@@ -1984,13 +2145,16 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean validateLowerIsInteger(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateLowerIsInteger(DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
+		if (false)
+		{
+			if (diagnostics != null)
+			{
 				diagnostics
 						.add(new BasicDiagnostic(Diagnostic.ERROR, UMLValidator.DIAGNOSTIC_SOURCE,
 								UMLValidator.MULTIPLICITY_ELEMENT__LOWER_IS_INTEGER,
@@ -2010,13 +2174,16 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean validateUpperIsUnlimitedNatural(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateUpperIsUnlimitedNatural(DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
+		if (false)
+		{
+			if (diagnostics != null)
+			{
 				diagnostics
 						.add(new BasicDiagnostic(Diagnostic.ERROR, UMLValidator.DIAGNOSTIC_SOURCE,
 								UMLValidator.MULTIPLICITY_ELEMENT__UPPER_IS_UNLIMITED_NATURAL,
@@ -2036,7 +2203,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean compatibleWith(MultiplicityElement other) {
+	public boolean compatibleWith(MultiplicityElement other)
+	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -2048,7 +2216,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean includesMultiplicity(MultiplicityElement M) {
+	public boolean includesMultiplicity(MultiplicityElement M)
+	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -2060,7 +2229,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean is(int lowerbound, int upperbound) {
+	public boolean is(int lowerbound, int upperbound)
+	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -2072,7 +2242,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean isMultivalued() {
+	public boolean isMultivalued()
+	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -2084,7 +2255,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public int lowerBound() {
+	public int lowerBound()
+	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -2096,7 +2268,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public int upperBound() {
+	public int upperBound()
+	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -2109,8 +2282,10 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.NAMED_INDIVIDUAL__DEPLOYMENT:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getDeployments()).basicAdd(otherEnd, msgs);
 		case FramewebPackage.NAMED_INDIVIDUAL__DATATYPE:
@@ -2146,8 +2321,10 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.NAMED_INDIVIDUAL__LOWER_VALUE:
 			return basicSetLowerValue(null, msgs);
 		case FramewebPackage.NAMED_INDIVIDUAL__UPPER_VALUE:
@@ -2178,8 +2355,10 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
+	{
+		switch (eContainerFeatureID())
+		{
 		case FramewebPackage.NAMED_INDIVIDUAL__DATATYPE:
 			return eInternalContainer().eInverseRemove(this, UMLPackage.DATA_TYPE__OWNED_ATTRIBUTE, DataType.class,
 					msgs);
@@ -2201,8 +2380,10 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.NAMED_INDIVIDUAL__FEATURING_CLASSIFIER:
 			return getFeaturingClassifiers();
 		case FramewebPackage.NAMED_INDIVIDUAL__IS_STATIC:
@@ -2296,8 +2477,10 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.NAMED_INDIVIDUAL__IS_STATIC:
 			setIsStatic((Boolean) newValue);
 			return;
@@ -2390,8 +2573,10 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.NAMED_INDIVIDUAL__IS_STATIC:
 			setIsStatic(IS_STATIC_EDEFAULT);
 			return;
@@ -2480,8 +2665,10 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.NAMED_INDIVIDUAL__FEATURING_CLASSIFIER:
 			return !getFeaturingClassifiers().isEmpty();
 		case FramewebPackage.NAMED_INDIVIDUAL__IS_STATIC:
@@ -2552,9 +2739,12 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == Feature.class) {
-			switch (derivedFeatureID) {
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
+	{
+		if (baseClass == Feature.class)
+		{
+			switch (derivedFeatureID)
+			{
 			case FramewebPackage.NAMED_INDIVIDUAL__FEATURING_CLASSIFIER:
 				return UMLPackage.FEATURE__FEATURING_CLASSIFIER;
 			case FramewebPackage.NAMED_INDIVIDUAL__IS_STATIC:
@@ -2563,16 +2753,20 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 				return -1;
 			}
 		}
-		if (baseClass == TypedElement.class) {
-			switch (derivedFeatureID) {
+		if (baseClass == TypedElement.class)
+		{
+			switch (derivedFeatureID)
+			{
 			case FramewebPackage.NAMED_INDIVIDUAL__TYPE:
 				return UMLPackage.TYPED_ELEMENT__TYPE;
 			default:
 				return -1;
 			}
 		}
-		if (baseClass == MultiplicityElement.class) {
-			switch (derivedFeatureID) {
+		if (baseClass == MultiplicityElement.class)
+		{
+			switch (derivedFeatureID)
+			{
 			case FramewebPackage.NAMED_INDIVIDUAL__IS_ORDERED:
 				return UMLPackage.MULTIPLICITY_ELEMENT__IS_ORDERED;
 			case FramewebPackage.NAMED_INDIVIDUAL__IS_UNIQUE:
@@ -2589,24 +2783,30 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 				return -1;
 			}
 		}
-		if (baseClass == StructuralFeature.class) {
-			switch (derivedFeatureID) {
+		if (baseClass == StructuralFeature.class)
+		{
+			switch (derivedFeatureID)
+			{
 			case FramewebPackage.NAMED_INDIVIDUAL__IS_READ_ONLY:
 				return UMLPackage.STRUCTURAL_FEATURE__IS_READ_ONLY;
 			default:
 				return -1;
 			}
 		}
-		if (baseClass == ConnectableElement.class) {
-			switch (derivedFeatureID) {
+		if (baseClass == ConnectableElement.class)
+		{
+			switch (derivedFeatureID)
+			{
 			case FramewebPackage.NAMED_INDIVIDUAL__END:
 				return UMLPackage.CONNECTABLE_ELEMENT__END;
 			default:
 				return -1;
 			}
 		}
-		if (baseClass == DeploymentTarget.class) {
-			switch (derivedFeatureID) {
+		if (baseClass == DeploymentTarget.class)
+		{
+			switch (derivedFeatureID)
+			{
 			case FramewebPackage.NAMED_INDIVIDUAL__DEPLOYED_ELEMENT:
 				return UMLPackage.DEPLOYMENT_TARGET__DEPLOYED_ELEMENT;
 			case FramewebPackage.NAMED_INDIVIDUAL__DEPLOYMENT:
@@ -2615,8 +2815,10 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 				return -1;
 			}
 		}
-		if (baseClass == Property.class) {
-			switch (derivedFeatureID) {
+		if (baseClass == Property.class)
+		{
+			switch (derivedFeatureID)
+			{
 			case FramewebPackage.NAMED_INDIVIDUAL__DATATYPE:
 				return UMLPackage.PROPERTY__DATATYPE;
 			case FramewebPackage.NAMED_INDIVIDUAL__INTERFACE:
@@ -2655,8 +2857,10 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 				return -1;
 			}
 		}
-		if (baseClass == Individual.class) {
-			switch (derivedFeatureID) {
+		if (baseClass == Individual.class)
+		{
+			switch (derivedFeatureID)
+			{
 			default:
 				return -1;
 			}
@@ -2670,9 +2874,12 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == Feature.class) {
-			switch (baseFeatureID) {
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
+	{
+		if (baseClass == Feature.class)
+		{
+			switch (baseFeatureID)
+			{
 			case UMLPackage.FEATURE__FEATURING_CLASSIFIER:
 				return FramewebPackage.NAMED_INDIVIDUAL__FEATURING_CLASSIFIER;
 			case UMLPackage.FEATURE__IS_STATIC:
@@ -2681,16 +2888,20 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 				return -1;
 			}
 		}
-		if (baseClass == TypedElement.class) {
-			switch (baseFeatureID) {
+		if (baseClass == TypedElement.class)
+		{
+			switch (baseFeatureID)
+			{
 			case UMLPackage.TYPED_ELEMENT__TYPE:
 				return FramewebPackage.NAMED_INDIVIDUAL__TYPE;
 			default:
 				return -1;
 			}
 		}
-		if (baseClass == MultiplicityElement.class) {
-			switch (baseFeatureID) {
+		if (baseClass == MultiplicityElement.class)
+		{
+			switch (baseFeatureID)
+			{
 			case UMLPackage.MULTIPLICITY_ELEMENT__IS_ORDERED:
 				return FramewebPackage.NAMED_INDIVIDUAL__IS_ORDERED;
 			case UMLPackage.MULTIPLICITY_ELEMENT__IS_UNIQUE:
@@ -2707,24 +2918,30 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 				return -1;
 			}
 		}
-		if (baseClass == StructuralFeature.class) {
-			switch (baseFeatureID) {
+		if (baseClass == StructuralFeature.class)
+		{
+			switch (baseFeatureID)
+			{
 			case UMLPackage.STRUCTURAL_FEATURE__IS_READ_ONLY:
 				return FramewebPackage.NAMED_INDIVIDUAL__IS_READ_ONLY;
 			default:
 				return -1;
 			}
 		}
-		if (baseClass == ConnectableElement.class) {
-			switch (baseFeatureID) {
+		if (baseClass == ConnectableElement.class)
+		{
+			switch (baseFeatureID)
+			{
 			case UMLPackage.CONNECTABLE_ELEMENT__END:
 				return FramewebPackage.NAMED_INDIVIDUAL__END;
 			default:
 				return -1;
 			}
 		}
-		if (baseClass == DeploymentTarget.class) {
-			switch (baseFeatureID) {
+		if (baseClass == DeploymentTarget.class)
+		{
+			switch (baseFeatureID)
+			{
 			case UMLPackage.DEPLOYMENT_TARGET__DEPLOYED_ELEMENT:
 				return FramewebPackage.NAMED_INDIVIDUAL__DEPLOYED_ELEMENT;
 			case UMLPackage.DEPLOYMENT_TARGET__DEPLOYMENT:
@@ -2733,8 +2950,10 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 				return -1;
 			}
 		}
-		if (baseClass == Property.class) {
-			switch (baseFeatureID) {
+		if (baseClass == Property.class)
+		{
+			switch (baseFeatureID)
+			{
 			case UMLPackage.PROPERTY__DATATYPE:
 				return FramewebPackage.NAMED_INDIVIDUAL__DATATYPE;
 			case UMLPackage.PROPERTY__INTERFACE:
@@ -2773,8 +2992,10 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 				return -1;
 			}
 		}
-		if (baseClass == Individual.class) {
-			switch (baseFeatureID) {
+		if (baseClass == Individual.class)
+		{
+			switch (baseFeatureID)
+			{
 			default:
 				return -1;
 			}
@@ -2788,21 +3009,28 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
-		if (baseClass == Feature.class) {
-			switch (baseOperationID) {
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass)
+	{
+		if (baseClass == Feature.class)
+		{
+			switch (baseOperationID)
+			{
 			default:
 				return -1;
 			}
 		}
-		if (baseClass == TypedElement.class) {
-			switch (baseOperationID) {
+		if (baseClass == TypedElement.class)
+		{
+			switch (baseOperationID)
+			{
 			default:
 				return -1;
 			}
 		}
-		if (baseClass == MultiplicityElement.class) {
-			switch (baseOperationID) {
+		if (baseClass == MultiplicityElement.class)
+		{
+			switch (baseOperationID)
+			{
 			case UMLPackage.MULTIPLICITY_ELEMENT___VALIDATE_UPPER_GE_LOWER__DIAGNOSTICCHAIN_MAP:
 				return FramewebPackage.NAMED_INDIVIDUAL___VALIDATE_UPPER_GE_LOWER__DIAGNOSTICCHAIN_MAP;
 			case UMLPackage.MULTIPLICITY_ELEMENT___VALIDATE_LOWER_GE0__DIAGNOSTICCHAIN_MAP:
@@ -2839,30 +3067,38 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 				return -1;
 			}
 		}
-		if (baseClass == StructuralFeature.class) {
-			switch (baseOperationID) {
+		if (baseClass == StructuralFeature.class)
+		{
+			switch (baseOperationID)
+			{
 			default:
 				return -1;
 			}
 		}
-		if (baseClass == ConnectableElement.class) {
-			switch (baseOperationID) {
+		if (baseClass == ConnectableElement.class)
+		{
+			switch (baseOperationID)
+			{
 			case UMLPackage.CONNECTABLE_ELEMENT___GET_ENDS:
 				return FramewebPackage.NAMED_INDIVIDUAL___GET_ENDS;
 			default:
 				return -1;
 			}
 		}
-		if (baseClass == DeploymentTarget.class) {
-			switch (baseOperationID) {
+		if (baseClass == DeploymentTarget.class)
+		{
+			switch (baseOperationID)
+			{
 			case UMLPackage.DEPLOYMENT_TARGET___GET_DEPLOYED_ELEMENTS:
 				return FramewebPackage.NAMED_INDIVIDUAL___GET_DEPLOYED_ELEMENTS;
 			default:
 				return -1;
 			}
 		}
-		if (baseClass == Property.class) {
-			switch (baseOperationID) {
+		if (baseClass == Property.class)
+		{
+			switch (baseOperationID)
+			{
 			case UMLPackage.PROPERTY___VALIDATE_SUBSETTING_CONTEXT_CONFORMS__DIAGNOSTICCHAIN_MAP:
 				return FramewebPackage.NAMED_INDIVIDUAL___VALIDATE_SUBSETTING_CONTEXT_CONFORMS__DIAGNOSTICCHAIN_MAP;
 			case UMLPackage.PROPERTY___VALIDATE_DERIVED_UNION_IS_READ_ONLY__DIAGNOSTICCHAIN_MAP:
@@ -2927,8 +3163,10 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 				return -1;
 			}
 		}
-		if (baseClass == Individual.class) {
-			switch (baseOperationID) {
+		if (baseClass == Individual.class)
+		{
+			switch (baseOperationID)
+			{
 			default:
 				return -1;
 			}
@@ -2943,8 +3181,10 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 */
 	@Override
 	@SuppressWarnings("unchecked")
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
+	{
+		switch (operationID)
+		{
 		case FramewebPackage.NAMED_INDIVIDUAL___VALIDATE_SUBSETTING_CONTEXT_CONFORMS__DIAGNOSTICCHAIN_MAP:
 			return validateSubsettingContextConforms((DiagnosticChain) arguments.get(0),
 					(Map<Object, Object>) arguments.get(1));
@@ -3042,7 +3282,8 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 
@@ -3068,109 +3309,127 @@ public class NamedIndividualImpl extends VocabularyEntityImpl implements NamedIn
 	}
 
 	@Override
-	public ValueSpecification createDefaultValue(String arg0, Type arg1, EClass arg2) {
+	public ValueSpecification createDefaultValue(String arg0, Type arg1, EClass arg2)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property createQualifier(String arg0, Type arg1) {
+	public Property createQualifier(String arg0, Type arg1)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property createQualifier(String arg0, Type arg1, EClass arg2) {
+	public Property createQualifier(String arg0, Type arg1, EClass arg2)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getQualifier(String arg0, Type arg1) {
+	public Property getQualifier(String arg0, Type arg1)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getQualifier(String arg0, Type arg1, boolean arg2, EClass arg3, boolean arg4) {
+	public Property getQualifier(String arg0, Type arg1, boolean arg2, EClass arg3, boolean arg4)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getRedefinedProperty(String arg0, Type arg1) {
+	public Property getRedefinedProperty(String arg0, Type arg1)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getRedefinedProperty(String arg0, Type arg1, boolean arg2, EClass arg3) {
+	public Property getRedefinedProperty(String arg0, Type arg1, boolean arg2, EClass arg3)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getSubsettedProperty(String arg0, Type arg1) {
+	public Property getSubsettedProperty(String arg0, Type arg1)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getSubsettedProperty(String arg0, Type arg1, boolean arg2, EClass arg3) {
+	public Property getSubsettedProperty(String arg0, Type arg1, boolean arg2, EClass arg3)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Classifier getFeaturingClassifier(String arg0) {
+	public Classifier getFeaturingClassifier(String arg0)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Classifier getFeaturingClassifier(String arg0, boolean arg1, EClass arg2) {
+	public Classifier getFeaturingClassifier(String arg0, boolean arg1, EClass arg2)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public ValueSpecification createLowerValue(String arg0, Type arg1, EClass arg2) {
+	public ValueSpecification createLowerValue(String arg0, Type arg1, EClass arg2)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public ValueSpecification createUpperValue(String arg0, Type arg1, EClass arg2) {
+	public ValueSpecification createUpperValue(String arg0, Type arg1, EClass arg2)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Deployment createDeployment(String arg0) {
+	public Deployment createDeployment(String arg0)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public PackageableElement getDeployedElement(String arg0) {
+	public PackageableElement getDeployedElement(String arg0)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public PackageableElement getDeployedElement(String arg0, boolean arg1, EClass arg2) {
+	public PackageableElement getDeployedElement(String arg0, boolean arg1, EClass arg2)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Deployment getDeployment(String arg0) {
+	public Deployment getDeployment(String arg0)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Deployment getDeployment(String arg0, boolean arg1, boolean arg2) {
+	public Deployment getDeployment(String arg0, boolean arg1, boolean arg2)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}

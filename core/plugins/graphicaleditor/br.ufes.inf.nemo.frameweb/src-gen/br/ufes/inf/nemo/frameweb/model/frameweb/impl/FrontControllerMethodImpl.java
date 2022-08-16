@@ -32,7 +32,8 @@ import org.eclipse.uml2.uml.internal.impl.OperationImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class FrontControllerMethodImpl extends OperationImpl implements FrontControllerMethod {
+public class FrontControllerMethodImpl extends OperationImpl implements FrontControllerMethod
+{
 	/**
 	 * The default value of the '{@link #isIsDefault() <em>Is Default</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -88,7 +89,8 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FrontControllerMethodImpl() {
+	protected FrontControllerMethodImpl()
+	{
 		super();
 	}
 
@@ -98,7 +100,8 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.FRONT_CONTROLLER_METHOD;
 	}
 
@@ -108,7 +111,8 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 	 * @generated
 	 */
 	@Override
-	public boolean isIsDefault() {
+	public boolean isIsDefault()
+	{
 		return isDefault;
 	}
 
@@ -118,7 +122,8 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 	 * @generated
 	 */
 	@Override
-	public void setIsDefault(boolean newIsDefault) {
+	public void setIsDefault(boolean newIsDefault)
+	{
 		boolean oldIsDefault = isDefault;
 		isDefault = newIsDefault;
 		if (eNotificationRequired())
@@ -132,11 +137,14 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 	 * @generated
 	 */
 	@Override
-	public Type getMethodType() {
-		if (methodType != null && methodType.eIsProxy()) {
+	public Type getMethodType()
+	{
+		if (methodType != null && methodType.eIsProxy())
+		{
 			InternalEObject oldMethodType = (InternalEObject) methodType;
 			methodType = (Type) eResolveProxy(oldMethodType);
-			if (methodType != oldMethodType) {
+			if (methodType != oldMethodType)
+			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							FramewebPackage.FRONT_CONTROLLER_METHOD__METHOD_TYPE, oldMethodType, methodType));
@@ -150,7 +158,8 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Type basicGetMethodType() {
+	public Type basicGetMethodType()
+	{
 		return methodType;
 	}
 
@@ -160,7 +169,8 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 	 * @generated
 	 */
 	@Override
-	public void setMethodType(Type newMethodType) {
+	public void setMethodType(Type newMethodType)
+	{
 		Type oldMethodType = methodType;
 		methodType = newMethodType;
 		if (eNotificationRequired())
@@ -174,7 +184,8 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 	 * @generated
 	 */
 	@Override
-	public String getRequestMethod() {
+	public String getRequestMethod()
+	{
 		return requestMethod;
 	}
 
@@ -184,7 +195,8 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 	 * @generated
 	 */
 	@Override
-	public void setRequestMethod(String newRequestMethod) {
+	public void setRequestMethod(String newRequestMethod)
+	{
 		String oldRequestMethod = requestMethod;
 		requestMethod = newRequestMethod;
 		if (eNotificationRequired())
@@ -198,8 +210,10 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRONT_CONTROLLER_METHOD__IS_DEFAULT:
 			return isIsDefault();
 		case FramewebPackage.FRONT_CONTROLLER_METHOD__METHOD_TYPE:
@@ -218,8 +232,10 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRONT_CONTROLLER_METHOD__IS_DEFAULT:
 			setIsDefault((Boolean) newValue);
 			return;
@@ -239,8 +255,10 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRONT_CONTROLLER_METHOD__IS_DEFAULT:
 			setIsDefault(IS_DEFAULT_EDEFAULT);
 			return;
@@ -260,8 +278,10 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRONT_CONTROLLER_METHOD__IS_DEFAULT:
 			return isDefault != IS_DEFAULT_EDEFAULT;
 		case FramewebPackage.FRONT_CONTROLLER_METHOD__METHOD_TYPE:
@@ -279,7 +299,8 @@ public class FrontControllerMethodImpl extends OperationImpl implements FrontCon
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

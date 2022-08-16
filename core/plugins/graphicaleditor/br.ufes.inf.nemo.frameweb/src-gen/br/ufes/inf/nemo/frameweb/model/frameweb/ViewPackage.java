@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface ViewPackage extends NavigationPackage {
+public interface ViewPackage extends NavigationPackage
+{
 } // ViewPackage

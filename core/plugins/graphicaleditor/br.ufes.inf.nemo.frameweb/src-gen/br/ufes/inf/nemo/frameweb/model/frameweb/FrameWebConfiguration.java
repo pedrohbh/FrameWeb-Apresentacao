@@ -22,7 +22,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface FrameWebConfiguration extends FrameworkProfile {
+public interface FrameWebConfiguration extends FrameworkProfile
+{
 	/**
 	 * Returns the value of the '<em><b>Src Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->

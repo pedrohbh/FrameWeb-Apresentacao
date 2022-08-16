@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.ClassImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class ServiceClassImpl extends ClassImpl implements ServiceClass {
+public class ServiceClassImpl extends ClassImpl implements ServiceClass
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ServiceClassImpl() {
+	protected ServiceClassImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class ServiceClassImpl extends ClassImpl implements ServiceClass {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.SERVICE_CLASS;
 	}
 

@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.Property;
  * @model abstract="true"
  * @generated
  */
-public interface NavigationAttribute extends Property {
+public interface NavigationAttribute extends Property
+{
 } // NavigationAttribute

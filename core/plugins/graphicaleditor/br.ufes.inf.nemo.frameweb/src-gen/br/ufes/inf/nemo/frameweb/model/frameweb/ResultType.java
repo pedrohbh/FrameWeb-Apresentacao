@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.Stereotype;
  * @model
  * @generated
  */
-public interface ResultType extends Stereotype {
+public interface ResultType extends Stereotype
+{
 } // ResultType

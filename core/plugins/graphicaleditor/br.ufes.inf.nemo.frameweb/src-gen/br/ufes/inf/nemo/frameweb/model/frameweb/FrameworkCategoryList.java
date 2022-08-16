@@ -17,7 +17,8 @@ import org.eclipse.emf.common.util.Enumerator;
  * @model
  * @generated
  */
-public enum FrameworkCategoryList implements Enumerator {
+public enum FrameworkCategoryList implements Enumerator
+{
 	/**
 	 * The '<em><b>Front Controller</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -118,10 +119,13 @@ public enum FrameworkCategoryList implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static FrameworkCategoryList get(String literal) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+	public static FrameworkCategoryList get(String literal)
+	{
+		for (int i = 0; i < VALUES_ARRAY.length; ++i)
+		{
 			FrameworkCategoryList result = VALUES_ARRAY[i];
-			if (result.toString().equals(literal)) {
+			if (result.toString().equals(literal))
+			{
 				return result;
 			}
 		}
@@ -136,10 +140,13 @@ public enum FrameworkCategoryList implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static FrameworkCategoryList getByName(String name) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+	public static FrameworkCategoryList getByName(String name)
+	{
+		for (int i = 0; i < VALUES_ARRAY.length; ++i)
+		{
 			FrameworkCategoryList result = VALUES_ARRAY[i];
-			if (result.getName().equals(name)) {
+			if (result.getName().equals(name))
+			{
 				return result;
 			}
 		}
@@ -154,8 +161,10 @@ public enum FrameworkCategoryList implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static FrameworkCategoryList get(int value) {
-		switch (value) {
+	public static FrameworkCategoryList get(int value)
+	{
+		switch (value)
+		{
 		case FRONT_CONTROLLER_VALUE:
 			return FRONT_CONTROLLER;
 		case DEPENDENCY_INJECTION_VALUE:
@@ -193,7 +202,8 @@ public enum FrameworkCategoryList implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private FrameworkCategoryList(int value, String name, String literal) {
+	private FrameworkCategoryList(int value, String name, String literal)
+	{
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -205,7 +215,8 @@ public enum FrameworkCategoryList implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public int getValue() {
+	public int getValue()
+	{
 		return value;
 	}
 
@@ -215,7 +226,8 @@ public enum FrameworkCategoryList implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -225,7 +237,8 @@ public enum FrameworkCategoryList implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public String getLiteral() {
+	public String getLiteral()
+	{
 		return literal;
 	}
 
@@ -236,7 +249,8 @@ public enum FrameworkCategoryList implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return literal;
 	}
 

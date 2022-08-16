@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface ObjectProperty extends VocabularyEntity, VocabularyAssociation {
+public interface ObjectProperty extends VocabularyEntity, VocabularyAssociation
+{
 } // ObjectProperty

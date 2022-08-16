@@ -21,7 +21,8 @@ import org.eclipse.uml2.uml.Interface;
  * @model
  * @generated
  */
-public interface DAOInterface extends Interface {
+public interface DAOInterface extends Interface
+{
 	/**
 	 * Returns the value of the '<em><b>Infix</b></em>' attribute.
 	 * <!-- begin-user-doc -->

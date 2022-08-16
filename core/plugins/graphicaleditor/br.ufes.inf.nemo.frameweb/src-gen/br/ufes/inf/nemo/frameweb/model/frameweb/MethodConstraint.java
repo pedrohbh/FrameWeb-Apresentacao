@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface MethodConstraint extends NavigationConstraint {
+public interface MethodConstraint extends NavigationConstraint
+{
 } // MethodConstraint

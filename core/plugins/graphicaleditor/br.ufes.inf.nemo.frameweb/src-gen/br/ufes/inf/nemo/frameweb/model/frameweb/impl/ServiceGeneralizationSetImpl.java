@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.GeneralizationSetImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class ServiceGeneralizationSetImpl extends GeneralizationSetImpl implements ServiceGeneralizationSet {
+public class ServiceGeneralizationSetImpl extends GeneralizationSetImpl implements ServiceGeneralizationSet
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ServiceGeneralizationSetImpl() {
+	protected ServiceGeneralizationSetImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class ServiceGeneralizationSetImpl extends GeneralizationSetImpl implemen
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.SERVICE_GENERALIZATION_SET;
 	}
 

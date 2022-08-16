@@ -22,14 +22,16 @@ import org.eclipse.uml2.uml.edit.providers.InterfaceRealizationItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ServiceRealizationItemProvider extends InterfaceRealizationItemProvider {
+public class ServiceRealizationItemProvider extends InterfaceRealizationItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ServiceRealizationItemProvider(AdapterFactory adapterFactory) {
+	public ServiceRealizationItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -40,8 +42,10 @@ public class ServiceRealizationItemProvider extends InterfaceRealizationItemProv
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 		}
@@ -55,7 +59,8 @@ public class ServiceRealizationItemProvider extends InterfaceRealizationItemProv
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/ServiceRealization"));
 	}
 
@@ -65,7 +70,8 @@ public class ServiceRealizationItemProvider extends InterfaceRealizationItemProv
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -76,7 +82,8 @@ public class ServiceRealizationItemProvider extends InterfaceRealizationItemProv
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((ServiceRealization) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_ServiceRealization_type")
 				: getString("_UI_ServiceRealization_type") + " " + label;
@@ -90,7 +97,8 @@ public class ServiceRealizationItemProvider extends InterfaceRealizationItemProv
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 		super.notifyChanged(notification);
 	}
@@ -103,7 +111,8 @@ public class ServiceRealizationItemProvider extends InterfaceRealizationItemProv
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 
@@ -114,7 +123,8 @@ public class ServiceRealizationItemProvider extends InterfaceRealizationItemProv
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		return FramewebEditPlugin.INSTANCE;
 	}
 

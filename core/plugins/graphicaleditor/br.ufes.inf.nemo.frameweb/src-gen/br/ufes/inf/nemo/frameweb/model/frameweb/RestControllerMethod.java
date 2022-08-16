@@ -25,7 +25,8 @@ import org.eclipse.uml2.uml.Type;
  * @model
  * @generated
  */
-public interface RestControllerMethod extends Operation {
+public interface RestControllerMethod extends Operation
+{
 
 	/**
 	 * Returns the value of the '<em><b>Request Type</b></em>' attribute.

@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.InterfaceRealization;
  * @model
  * @generated
  */
-public interface ServiceRealization extends InterfaceRealization {
+public interface ServiceRealization extends InterfaceRealization
+{
 } // ServiceRealization

@@ -19,7 +19,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface AuthUser extends DomainClass {
+public interface AuthUser extends DomainClass
+{
 	/**
 	 * Returns the value of the '<em><b>Auth User Name</b></em>' reference.
 	 * <!-- begin-user-doc -->

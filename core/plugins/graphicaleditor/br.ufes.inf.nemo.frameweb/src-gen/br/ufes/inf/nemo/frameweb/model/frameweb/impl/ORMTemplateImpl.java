@@ -30,7 +30,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 @SuppressWarnings("all")
-public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate {
+public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
+{
 	/**
 	 * The default value of the '{@link #getClassTemplate() <em>Class Template</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -156,7 +157,8 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ORMTemplateImpl() {
+	protected ORMTemplateImpl()
+	{
 		super();
 	}
 
@@ -166,7 +168,8 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.ORM_TEMPLATE;
 	}
 
@@ -176,7 +179,8 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @generated
 	 */
 	@Override
-	public String getClassTemplate() {
+	public String getClassTemplate()
+	{
 		return classTemplate;
 	}
 
@@ -186,7 +190,8 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @generated
 	 */
 	@Override
-	public void setClassTemplate(String newClassTemplate) {
+	public void setClassTemplate(String newClassTemplate)
+	{
 		String oldClassTemplate = classTemplate;
 		classTemplate = newClassTemplate;
 		if (eNotificationRequired())
@@ -200,7 +205,8 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @generated
 	 */
 	@Override
-	public String getEnumerationClassTemplate() {
+	public String getEnumerationClassTemplate()
+	{
 		return enumerationClassTemplate;
 	}
 
@@ -210,7 +216,8 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @generated
 	 */
 	@Override
-	public void setEnumerationClassTemplate(String newEnumerationClassTemplate) {
+	public void setEnumerationClassTemplate(String newEnumerationClassTemplate)
+	{
 		String oldEnumerationClassTemplate = enumerationClassTemplate;
 		enumerationClassTemplate = newEnumerationClassTemplate;
 		if (eNotificationRequired())
@@ -225,7 +232,8 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @generated
 	 */
 	@Override
-	public String getClassExtension() {
+	public String getClassExtension()
+	{
 		return classExtension;
 	}
 
@@ -235,7 +243,8 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @generated
 	 */
 	@Override
-	public void setClassExtension(String newClassExtension) {
+	public void setClassExtension(String newClassExtension)
+	{
 		String oldClassExtension = classExtension;
 		classExtension = newClassExtension;
 		if (eNotificationRequired())
@@ -249,7 +258,8 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @generated
 	 */
 	@Override
-	public String getAuthUserClassTemplate() {
+	public String getAuthUserClassTemplate()
+	{
 		return authUserClassTemplate;
 	}
 
@@ -259,7 +269,8 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @generated
 	 */
 	@Override
-	public void setAuthUserClassTemplate(String newAuthUserClassTemplate) {
+	public void setAuthUserClassTemplate(String newAuthUserClassTemplate)
+	{
 		String oldAuthUserClassTemplate = authUserClassTemplate;
 		authUserClassTemplate = newAuthUserClassTemplate;
 		if (eNotificationRequired())
@@ -274,7 +285,8 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @generated
 	 */
 	@Override
-	public String getAuthRoleClassTemplate() {
+	public String getAuthRoleClassTemplate()
+	{
 		return authRoleClassTemplate;
 	}
 
@@ -284,7 +296,8 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @generated
 	 */
 	@Override
-	public void setAuthRoleClassTemplate(String newAuthRoleClassTemplate) {
+	public void setAuthRoleClassTemplate(String newAuthRoleClassTemplate)
+	{
 		String oldAuthRoleClassTemplate = authRoleClassTemplate;
 		authRoleClassTemplate = newAuthRoleClassTemplate;
 		if (eNotificationRequired())
@@ -299,7 +312,8 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @generated
 	 */
 	@Override
-	public String getAuthPermissionClassTemplate() {
+	public String getAuthPermissionClassTemplate()
+	{
 		return authPermissionClassTemplate;
 	}
 
@@ -309,7 +323,8 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @generated
 	 */
 	@Override
-	public void setAuthPermissionClassTemplate(String newAuthPermissionClassTemplate) {
+	public void setAuthPermissionClassTemplate(String newAuthPermissionClassTemplate)
+	{
 		String oldAuthPermissionClassTemplate = authPermissionClassTemplate;
 		authPermissionClassTemplate = newAuthPermissionClassTemplate;
 		if (eNotificationRequired())
@@ -324,8 +339,10 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.ORM_TEMPLATE__CLASS_TEMPLATE:
 			return getClassTemplate();
 		case FramewebPackage.ORM_TEMPLATE__ENUMERATION_CLASS_TEMPLATE:
@@ -348,8 +365,10 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.ORM_TEMPLATE__CLASS_TEMPLATE:
 			setClassTemplate((String) newValue);
 			return;
@@ -378,8 +397,10 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.ORM_TEMPLATE__CLASS_TEMPLATE:
 			setClassTemplate(CLASS_TEMPLATE_EDEFAULT);
 			return;
@@ -408,8 +429,10 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.ORM_TEMPLATE__CLASS_TEMPLATE:
 			return CLASS_TEMPLATE_EDEFAULT == null ? classTemplate != null
 					: !CLASS_TEMPLATE_EDEFAULT.equals(classTemplate);
@@ -438,7 +461,8 @@ public class ORMTemplateImpl extends FrameworkProfileImpl implements ORMTemplate
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

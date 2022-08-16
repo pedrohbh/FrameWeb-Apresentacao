@@ -18,7 +18,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface TagLib extends org.eclipse.uml2.uml.Package {
+public interface TagLib extends org.eclipse.uml2.uml.Package
+{
 	/**
 	 * Returns the value of the '<em><b>Prefix</b></em>' attribute.
 	 * <!-- begin-user-doc -->

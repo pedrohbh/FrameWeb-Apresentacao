@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.PackageImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class PersistencePackageImpl extends PackageImpl implements PersistencePackage {
+public class PersistencePackageImpl extends PackageImpl implements PersistencePackage
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PersistencePackageImpl() {
+	protected PersistencePackageImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class PersistencePackageImpl extends PackageImpl implements PersistencePa
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.PERSISTENCE_PACKAGE;
 	}
 

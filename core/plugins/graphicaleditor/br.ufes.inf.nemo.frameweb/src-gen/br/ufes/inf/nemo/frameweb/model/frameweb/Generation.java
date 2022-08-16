@@ -17,7 +17,8 @@ import org.eclipse.emf.common.util.Enumerator;
  * @model
  * @generated
  */
-public enum Generation implements Enumerator {
+public enum Generation implements Enumerator
+{
 	/**
 	 * The '<em><b>Auto</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -167,10 +168,13 @@ public enum Generation implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Generation get(String literal) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+	public static Generation get(String literal)
+	{
+		for (int i = 0; i < VALUES_ARRAY.length; ++i)
+		{
 			Generation result = VALUES_ARRAY[i];
-			if (result.toString().equals(literal)) {
+			if (result.toString().equals(literal))
+			{
 				return result;
 			}
 		}
@@ -185,10 +189,13 @@ public enum Generation implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Generation getByName(String name) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+	public static Generation getByName(String name)
+	{
+		for (int i = 0; i < VALUES_ARRAY.length; ++i)
+		{
 			Generation result = VALUES_ARRAY[i];
-			if (result.getName().equals(name)) {
+			if (result.getName().equals(name))
+			{
 				return result;
 			}
 		}
@@ -203,8 +210,10 @@ public enum Generation implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Generation get(int value) {
-		switch (value) {
+	public static Generation get(int value)
+	{
+		switch (value)
+		{
 		case AUTO_VALUE:
 			return AUTO;
 		case IDENTITY_VALUE:
@@ -246,7 +255,8 @@ public enum Generation implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private Generation(int value, String name, String literal) {
+	private Generation(int value, String name, String literal)
+	{
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -258,7 +268,8 @@ public enum Generation implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public int getValue() {
+	public int getValue()
+	{
 		return value;
 	}
 
@@ -268,7 +279,8 @@ public enum Generation implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -278,7 +290,8 @@ public enum Generation implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public String getLiteral() {
+	public String getLiteral()
+	{
 		return literal;
 	}
 
@@ -289,7 +302,8 @@ public enum Generation implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return literal;
 	}
 

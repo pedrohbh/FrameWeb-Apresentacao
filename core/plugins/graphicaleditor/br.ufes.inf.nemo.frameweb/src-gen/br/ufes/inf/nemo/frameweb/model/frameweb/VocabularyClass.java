@@ -18,7 +18,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface VocabularyClass extends org.eclipse.uml2.uml.Class {
+public interface VocabularyClass extends org.eclipse.uml2.uml.Class
+{
 	/**
 	 * Returns the value of the '<em><b>Prefix</b></em>' attribute.
 	 * <!-- begin-user-doc -->

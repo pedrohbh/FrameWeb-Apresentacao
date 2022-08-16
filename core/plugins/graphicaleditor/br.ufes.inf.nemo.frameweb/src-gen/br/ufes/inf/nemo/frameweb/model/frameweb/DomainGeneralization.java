@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.Generalization;
  * @model
  * @generated
  */
-public interface DomainGeneralization extends Generalization {
+public interface DomainGeneralization extends Generalization
+{
 } // DomainGeneralization

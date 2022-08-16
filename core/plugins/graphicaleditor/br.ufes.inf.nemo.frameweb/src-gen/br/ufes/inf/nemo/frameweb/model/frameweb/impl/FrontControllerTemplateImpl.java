@@ -34,7 +34,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 @SuppressWarnings("all")
-public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements FrontControllerTemplate {
+public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements FrontControllerTemplate
+{
 	/**
 	 * The default value of the '{@link #getClassTemplate() <em>Class Template</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -240,7 +241,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FrontControllerTemplateImpl() {
+	protected FrontControllerTemplateImpl()
+	{
 		super();
 	}
 
@@ -250,7 +252,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.FRONT_CONTROLLER_TEMPLATE;
 	}
 
@@ -260,7 +263,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public String getClassTemplate() {
+	public String getClassTemplate()
+	{
 		return classTemplate;
 	}
 
@@ -270,7 +274,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public void setClassTemplate(String newClassTemplate) {
+	public void setClassTemplate(String newClassTemplate)
+	{
 		String oldClassTemplate = classTemplate;
 		classTemplate = newClassTemplate;
 		if (eNotificationRequired())
@@ -284,7 +289,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public String getPageTemplate() {
+	public String getPageTemplate()
+	{
 		return pageTemplate;
 	}
 
@@ -294,7 +300,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public void setPageTemplate(String newPageTemplate) {
+	public void setPageTemplate(String newPageTemplate)
+	{
 		String oldPageTemplate = pageTemplate;
 		pageTemplate = newPageTemplate;
 		if (eNotificationRequired())
@@ -308,7 +315,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public String getAuthPageTemplate() {
+	public String getAuthPageTemplate()
+	{
 		return authPageTemplate;
 	}
 
@@ -318,7 +326,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public void setAuthPageTemplate(String newAuthPageTemplate) {
+	public void setAuthPageTemplate(String newAuthPageTemplate)
+	{
 		String oldAuthPageTemplate = authPageTemplate;
 		authPageTemplate = newAuthPageTemplate;
 		if (eNotificationRequired())
@@ -333,7 +342,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public String getFormTemplate() {
+	public String getFormTemplate()
+	{
 		return formTemplate;
 	}
 
@@ -343,7 +353,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public void setFormTemplate(String newFormTemplate) {
+	public void setFormTemplate(String newFormTemplate)
+	{
 		String oldFormTemplate = formTemplate;
 		formTemplate = newFormTemplate;
 		if (eNotificationRequired())
@@ -357,7 +368,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public String getClassExtension() {
+	public String getClassExtension()
+	{
 		return classExtension;
 	}
 
@@ -367,7 +379,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public void setClassExtension(String newClassExtension) {
+	public void setClassExtension(String newClassExtension)
+	{
 		String oldClassExtension = classExtension;
 		classExtension = newClassExtension;
 		if (eNotificationRequired())
@@ -381,7 +394,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public String getPageExtension() {
+	public String getPageExtension()
+	{
 		return pageExtension;
 	}
 
@@ -391,7 +405,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public void setPageExtension(String newPageExtension) {
+	public void setPageExtension(String newPageExtension)
+	{
 		String oldPageExtension = pageExtension;
 		pageExtension = newPageExtension;
 		if (eNotificationRequired())
@@ -405,7 +420,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public String getRestClassTemplate() {
+	public String getRestClassTemplate()
+	{
 		return restClassTemplate;
 	}
 
@@ -415,7 +431,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public void setRestClassTemplate(String newRestClassTemplate) {
+	public void setRestClassTemplate(String newRestClassTemplate)
+	{
 		String oldRestClassTemplate = restClassTemplate;
 		restClassTemplate = newRestClassTemplate;
 		if (eNotificationRequired())
@@ -430,7 +447,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public String getPartialTemplate() {
+	public String getPartialTemplate()
+	{
 		return partialTemplate;
 	}
 
@@ -440,7 +458,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public void setPartialTemplate(String newPartialTemplate) {
+	public void setPartialTemplate(String newPartialTemplate)
+	{
 		String oldPartialTemplate = partialTemplate;
 		partialTemplate = newPartialTemplate;
 		if (eNotificationRequired())
@@ -454,7 +473,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public String getPartialExtension() {
+	public String getPartialExtension()
+	{
 		return partialExtension;
 	}
 
@@ -464,7 +484,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public void setPartialExtension(String newPartialExtension) {
+	public void setPartialExtension(String newPartialExtension)
+	{
 		String oldPartialExtension = partialExtension;
 		partialExtension = newPartialExtension;
 		if (eNotificationRequired())
@@ -479,7 +500,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public boolean isIsSPAFramework() {
+	public boolean isIsSPAFramework()
+	{
 		return isSPAFramework;
 	}
 
@@ -489,7 +511,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public void setIsSPAFramework(boolean newIsSPAFramework) {
+	public void setIsSPAFramework(boolean newIsSPAFramework)
+	{
 		boolean oldIsSPAFramework = isSPAFramework;
 		isSPAFramework = newIsSPAFramework;
 		if (eNotificationRequired())
@@ -503,8 +526,10 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__CLASS_TEMPLATE:
 			return getClassTemplate();
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PAGE_TEMPLATE:
@@ -535,8 +560,10 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__CLASS_TEMPLATE:
 			setClassTemplate((String) newValue);
 			return;
@@ -577,8 +604,10 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__CLASS_TEMPLATE:
 			setClassTemplate(CLASS_TEMPLATE_EDEFAULT);
 			return;
@@ -619,8 +648,10 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__CLASS_TEMPLATE:
 			return CLASS_TEMPLATE_EDEFAULT == null ? classTemplate != null
 					: !CLASS_TEMPLATE_EDEFAULT.equals(classTemplate);
@@ -658,7 +689,8 @@ public class FrontControllerTemplateImpl extends FrameworkProfileImpl implements
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

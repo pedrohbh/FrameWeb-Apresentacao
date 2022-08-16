@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.StereotypeImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class ControllerImpl extends StereotypeImpl implements Controller {
+public class ControllerImpl extends StereotypeImpl implements Controller
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ControllerImpl() {
+	protected ControllerImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class ControllerImpl extends StereotypeImpl implements Controller {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.CONTROLLER;
 	}
 

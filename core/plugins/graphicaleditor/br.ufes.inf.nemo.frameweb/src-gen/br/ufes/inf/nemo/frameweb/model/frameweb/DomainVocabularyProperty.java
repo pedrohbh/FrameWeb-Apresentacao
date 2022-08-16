@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.Property;
  * @model
  * @generated
  */
-public interface DomainVocabularyProperty extends Property {
+public interface DomainVocabularyProperty extends Property
+{
 } // DomainVocabularyProperty

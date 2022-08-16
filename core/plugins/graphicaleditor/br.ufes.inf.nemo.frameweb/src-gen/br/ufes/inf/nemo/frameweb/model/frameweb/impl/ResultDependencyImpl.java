@@ -31,7 +31,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 @SuppressWarnings("all")
-public class ResultDependencyImpl extends NavigationDependencyImpl implements ResultDependency {
+public class ResultDependencyImpl extends NavigationDependencyImpl implements ResultDependency
+{
 	/**
 	 * The cached value of the '{@link #getResultMethod() <em>Result Method</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -77,7 +78,8 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ResultDependencyImpl() {
+	protected ResultDependencyImpl()
+	{
 		super();
 	}
 
@@ -87,7 +89,8 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.RESULT_DEPENDENCY;
 	}
 
@@ -97,11 +100,14 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public FrontControllerMethod getResultMethod() {
-		if (resultMethod != null && resultMethod.eIsProxy()) {
+	public FrontControllerMethod getResultMethod()
+	{
+		if (resultMethod != null && resultMethod.eIsProxy())
+		{
 			InternalEObject oldResultMethod = (InternalEObject) resultMethod;
 			resultMethod = (FrontControllerMethod) eResolveProxy(oldResultMethod);
-			if (resultMethod != oldResultMethod) {
+			if (resultMethod != oldResultMethod)
+			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							FramewebPackage.RESULT_DEPENDENCY__RESULT_METHOD, oldResultMethod, resultMethod));
@@ -115,7 +121,8 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FrontControllerMethod basicGetResultMethod() {
+	public FrontControllerMethod basicGetResultMethod()
+	{
 		return resultMethod;
 	}
 
@@ -125,7 +132,8 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public void setResultMethod(FrontControllerMethod newResultMethod) {
+	public void setResultMethod(FrontControllerMethod newResultMethod)
+	{
 		FrontControllerMethod oldResultMethod = resultMethod;
 		resultMethod = newResultMethod;
 		if (eNotificationRequired())
@@ -139,7 +147,8 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public ResultConstraint getResultDependencyConstraint() {
+	public ResultConstraint getResultDependencyConstraint()
+	{
 		return resultDependencyConstraint;
 	}
 
@@ -149,10 +158,12 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * @generated
 	 */
 	public NotificationChain basicSetResultDependencyConstraint(ResultConstraint newResultDependencyConstraint,
-			NotificationChain msgs) {
+			NotificationChain msgs)
+	{
 		ResultConstraint oldResultDependencyConstraint = resultDependencyConstraint;
 		resultDependencyConstraint = newResultDependencyConstraint;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
 					FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT, oldResultDependencyConstraint,
 					newResultDependencyConstraint);
@@ -170,8 +181,10 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public void setResultDependencyConstraint(ResultConstraint newResultDependencyConstraint) {
-		if (newResultDependencyConstraint != resultDependencyConstraint) {
+	public void setResultDependencyConstraint(ResultConstraint newResultDependencyConstraint)
+	{
+		if (newResultDependencyConstraint != resultDependencyConstraint)
+		{
 			NotificationChain msgs = null;
 			if (resultDependencyConstraint != null)
 				msgs = ((InternalEObject) resultDependencyConstraint).eInverseRemove(this,
@@ -196,7 +209,8 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public String getHttpStatus() {
+	public String getHttpStatus()
+	{
 		return httpStatus;
 	}
 
@@ -206,7 +220,8 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public void setHttpStatus(String newHttpStatus) {
+	public void setHttpStatus(String newHttpStatus)
+	{
 		String oldHttpStatus = httpStatus;
 		httpStatus = newHttpStatus;
 		if (eNotificationRequired())
@@ -220,8 +235,10 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT:
 			return basicSetResultDependencyConstraint(null, msgs);
 		}
@@ -234,8 +251,10 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.RESULT_DEPENDENCY__RESULT_METHOD:
 			if (resolve)
 				return getResultMethod();
@@ -254,8 +273,10 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.RESULT_DEPENDENCY__RESULT_METHOD:
 			setResultMethod((FrontControllerMethod) newValue);
 			return;
@@ -275,8 +296,10 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.RESULT_DEPENDENCY__RESULT_METHOD:
 			setResultMethod((FrontControllerMethod) null);
 			return;
@@ -296,8 +319,10 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.RESULT_DEPENDENCY__RESULT_METHOD:
 			return resultMethod != null;
 		case FramewebPackage.RESULT_DEPENDENCY__RESULT_DEPENDENCY_CONSTRAINT:
@@ -314,7 +339,8 @@ public class ResultDependencyImpl extends NavigationDependencyImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

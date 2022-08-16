@@ -26,7 +26,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 @SuppressWarnings("all")
-public class DecimalAttributeImpl extends AttributeImpl implements DecimalAttribute {
+public class DecimalAttributeImpl extends AttributeImpl implements DecimalAttribute
+{
 	/**
 	 * The default value of the '{@link #getDecimalPrecision() <em>Decimal Precision</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -72,7 +73,8 @@ public class DecimalAttributeImpl extends AttributeImpl implements DecimalAttrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DecimalAttributeImpl() {
+	protected DecimalAttributeImpl()
+	{
 		super();
 	}
 
@@ -82,7 +84,8 @@ public class DecimalAttributeImpl extends AttributeImpl implements DecimalAttrib
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.DECIMAL_ATTRIBUTE;
 	}
 
@@ -92,7 +95,8 @@ public class DecimalAttributeImpl extends AttributeImpl implements DecimalAttrib
 	 * @generated
 	 */
 	@Override
-	public long getDecimalPrecision() {
+	public long getDecimalPrecision()
+	{
 		return decimalPrecision;
 	}
 
@@ -102,7 +106,8 @@ public class DecimalAttributeImpl extends AttributeImpl implements DecimalAttrib
 	 * @generated
 	 */
 	@Override
-	public void setDecimalPrecision(long newDecimalPrecision) {
+	public void setDecimalPrecision(long newDecimalPrecision)
+	{
 		long oldDecimalPrecision = decimalPrecision;
 		decimalPrecision = newDecimalPrecision;
 		if (eNotificationRequired())
@@ -116,7 +121,8 @@ public class DecimalAttributeImpl extends AttributeImpl implements DecimalAttrib
 	 * @generated
 	 */
 	@Override
-	public long getDecimalScale() {
+	public long getDecimalScale()
+	{
 		return decimalScale;
 	}
 
@@ -126,7 +132,8 @@ public class DecimalAttributeImpl extends AttributeImpl implements DecimalAttrib
 	 * @generated
 	 */
 	@Override
-	public void setDecimalScale(long newDecimalScale) {
+	public void setDecimalScale(long newDecimalScale)
+	{
 		long oldDecimalScale = decimalScale;
 		decimalScale = newDecimalScale;
 		if (eNotificationRequired())
@@ -140,8 +147,10 @@ public class DecimalAttributeImpl extends AttributeImpl implements DecimalAttrib
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DECIMAL_ATTRIBUTE__DECIMAL_PRECISION:
 			return getDecimalPrecision();
 		case FramewebPackage.DECIMAL_ATTRIBUTE__DECIMAL_SCALE:
@@ -156,8 +165,10 @@ public class DecimalAttributeImpl extends AttributeImpl implements DecimalAttrib
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DECIMAL_ATTRIBUTE__DECIMAL_PRECISION:
 			setDecimalPrecision((Long) newValue);
 			return;
@@ -174,8 +185,10 @@ public class DecimalAttributeImpl extends AttributeImpl implements DecimalAttrib
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DECIMAL_ATTRIBUTE__DECIMAL_PRECISION:
 			setDecimalPrecision(DECIMAL_PRECISION_EDEFAULT);
 			return;
@@ -192,8 +205,10 @@ public class DecimalAttributeImpl extends AttributeImpl implements DecimalAttrib
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DECIMAL_ATTRIBUTE__DECIMAL_PRECISION:
 			return decimalPrecision != DECIMAL_PRECISION_EDEFAULT;
 		case FramewebPackage.DECIMAL_ATTRIBUTE__DECIMAL_SCALE:
@@ -208,7 +223,8 @@ public class DecimalAttributeImpl extends AttributeImpl implements DecimalAttrib
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

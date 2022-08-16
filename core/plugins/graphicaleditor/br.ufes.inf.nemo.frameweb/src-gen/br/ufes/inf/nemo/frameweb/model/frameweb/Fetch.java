@@ -17,7 +17,8 @@ import org.eclipse.emf.common.util.Enumerator;
  * @model
  * @generated
  */
-public enum Fetch implements Enumerator {
+public enum Fetch implements Enumerator
+{
 	/**
 	 * The '<em><b>Lazy</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -92,10 +93,13 @@ public enum Fetch implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Fetch get(String literal) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+	public static Fetch get(String literal)
+	{
+		for (int i = 0; i < VALUES_ARRAY.length; ++i)
+		{
 			Fetch result = VALUES_ARRAY[i];
-			if (result.toString().equals(literal)) {
+			if (result.toString().equals(literal))
+			{
 				return result;
 			}
 		}
@@ -110,10 +114,13 @@ public enum Fetch implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Fetch getByName(String name) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+	public static Fetch getByName(String name)
+	{
+		for (int i = 0; i < VALUES_ARRAY.length; ++i)
+		{
 			Fetch result = VALUES_ARRAY[i];
-			if (result.getName().equals(name)) {
+			if (result.getName().equals(name))
+			{
 				return result;
 			}
 		}
@@ -128,8 +135,10 @@ public enum Fetch implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Fetch get(int value) {
-		switch (value) {
+	public static Fetch get(int value)
+	{
+		switch (value)
+		{
 		case LAZY_VALUE:
 			return LAZY;
 		case EAGER_VALUE:
@@ -165,7 +174,8 @@ public enum Fetch implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private Fetch(int value, String name, String literal) {
+	private Fetch(int value, String name, String literal)
+	{
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -177,7 +187,8 @@ public enum Fetch implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public int getValue() {
+	public int getValue()
+	{
 		return value;
 	}
 
@@ -187,7 +198,8 @@ public enum Fetch implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -197,7 +209,8 @@ public enum Fetch implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public String getLiteral() {
+	public String getLiteral()
+	{
 		return literal;
 	}
 
@@ -208,7 +221,8 @@ public enum Fetch implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return literal;
 	}
 

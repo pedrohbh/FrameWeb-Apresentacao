@@ -17,7 +17,8 @@ import org.eclipse.emf.common.util.Enumerator;
  * @model
  * @generated
  */
-public enum HttpMethodType implements Enumerator {
+public enum HttpMethodType implements Enumerator
+{
 	/**
 	 * The '<em><b>GET</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -142,10 +143,13 @@ public enum HttpMethodType implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static HttpMethodType get(String literal) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+	public static HttpMethodType get(String literal)
+	{
+		for (int i = 0; i < VALUES_ARRAY.length; ++i)
+		{
 			HttpMethodType result = VALUES_ARRAY[i];
-			if (result.toString().equals(literal)) {
+			if (result.toString().equals(literal))
+			{
 				return result;
 			}
 		}
@@ -160,10 +164,13 @@ public enum HttpMethodType implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static HttpMethodType getByName(String name) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+	public static HttpMethodType getByName(String name)
+	{
+		for (int i = 0; i < VALUES_ARRAY.length; ++i)
+		{
 			HttpMethodType result = VALUES_ARRAY[i];
-			if (result.getName().equals(name)) {
+			if (result.getName().equals(name))
+			{
 				return result;
 			}
 		}
@@ -178,8 +185,10 @@ public enum HttpMethodType implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static HttpMethodType get(int value) {
-		switch (value) {
+	public static HttpMethodType get(int value)
+	{
+		switch (value)
+		{
 		case GET_VALUE:
 			return GET;
 		case PUT_VALUE:
@@ -219,7 +228,8 @@ public enum HttpMethodType implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private HttpMethodType(int value, String name, String literal) {
+	private HttpMethodType(int value, String name, String literal)
+	{
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -231,7 +241,8 @@ public enum HttpMethodType implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public int getValue() {
+	public int getValue()
+	{
 		return value;
 	}
 
@@ -241,7 +252,8 @@ public enum HttpMethodType implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -251,7 +263,8 @@ public enum HttpMethodType implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public String getLiteral() {
+	public String getLiteral()
+	{
 		return literal;
 	}
 
@@ -262,7 +275,8 @@ public enum HttpMethodType implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return literal;
 	}
 

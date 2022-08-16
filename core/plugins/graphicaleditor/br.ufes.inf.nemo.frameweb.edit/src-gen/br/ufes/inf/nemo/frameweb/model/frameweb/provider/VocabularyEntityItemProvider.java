@@ -27,14 +27,16 @@ import org.eclipse.uml2.uml.edit.providers.ClassifierItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class VocabularyEntityItemProvider extends ClassifierItemProvider {
+public class VocabularyEntityItemProvider extends ClassifierItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VocabularyEntityItemProvider(AdapterFactory adapterFactory) {
+	public VocabularyEntityItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -45,8 +47,10 @@ public class VocabularyEntityItemProvider extends ClassifierItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addEntityIRIPropertyDescriptor(object);
@@ -60,7 +64,8 @@ public class VocabularyEntityItemProvider extends ClassifierItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addEntityIRIPropertyDescriptor(Object object) {
+	protected void addEntityIRIPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_VocabularyEntity_entityIRI_feature"),
@@ -75,7 +80,8 @@ public class VocabularyEntityItemProvider extends ClassifierItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -86,7 +92,8 @@ public class VocabularyEntityItemProvider extends ClassifierItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((VocabularyEntity) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_VocabularyEntity_type")
 				: getString("_UI_VocabularyEntity_type") + " " + label;
@@ -100,7 +107,8 @@ public class VocabularyEntityItemProvider extends ClassifierItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 		super.notifyChanged(notification);
 	}
@@ -113,7 +121,8 @@ public class VocabularyEntityItemProvider extends ClassifierItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.NAMESPACE__OWNED_RULE,
@@ -154,14 +163,16 @@ public class VocabularyEntityItemProvider extends ClassifierItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
 		boolean qualify = childFeature == UMLPackage.Literals.CLASSIFIER__COLLABORATION_USE
 				|| childFeature == UMLPackage.Literals.CLASSIFIER__REPRESENTATION;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
@@ -175,7 +186,8 @@ public class VocabularyEntityItemProvider extends ClassifierItemProvider {
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		return FramewebEditPlugin.INSTANCE;
 	}
 

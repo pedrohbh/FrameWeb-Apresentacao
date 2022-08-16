@@ -19,7 +19,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface RestControllerTemplate extends FrameworkProfile {
+public interface RestControllerTemplate extends FrameworkProfile
+{
 
 	/**
 	 * Returns the value of the '<em><b>Class Template</b></em>' attribute.

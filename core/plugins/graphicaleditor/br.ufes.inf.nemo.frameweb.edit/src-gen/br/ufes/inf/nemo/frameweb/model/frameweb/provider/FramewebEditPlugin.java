@@ -16,7 +16,8 @@ import org.eclipse.uml2.uml.edit.UMLEditPlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public final class FramewebEditPlugin extends EMFPlugin {
+public final class FramewebEditPlugin extends EMFPlugin
+{
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
@@ -39,7 +40,8 @@ public final class FramewebEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FramewebEditPlugin() {
+	public FramewebEditPlugin()
+	{
 		super(new ResourceLocator[] { EcoreEditPlugin.INSTANCE, UMLEditPlugin.INSTANCE, });
 	}
 
@@ -51,7 +53,8 @@ public final class FramewebEditPlugin extends EMFPlugin {
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getPluginResourceLocator() {
+	public ResourceLocator getPluginResourceLocator()
+	{
 		return plugin;
 	}
 
@@ -62,7 +65,8 @@ public final class FramewebEditPlugin extends EMFPlugin {
 	 * @return the singleton instance.
 	 * @generated
 	 */
-	public static Implementation getPlugin() {
+	public static Implementation getPlugin()
+	{
 		return plugin;
 	}
 
@@ -72,14 +76,16 @@ public final class FramewebEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class Implementation extends EclipsePlugin {
+	public static class Implementation extends EclipsePlugin
+	{
 		/**
 		 * Creates an instance.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		public Implementation() {
+		public Implementation()
+		{
 			super();
 
 			// Remember the static instance.

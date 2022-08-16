@@ -24,14 +24,16 @@ import org.eclipse.uml2.uml.UMLPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AuthServiceMethodItemProvider extends ServiceMethodItemProvider {
+public class AuthServiceMethodItemProvider extends ServiceMethodItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AuthServiceMethodItemProvider(AdapterFactory adapterFactory) {
+	public AuthServiceMethodItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -42,8 +44,10 @@ public class AuthServiceMethodItemProvider extends ServiceMethodItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addPermissionNamePropertyDescriptor(object);
@@ -57,7 +61,8 @@ public class AuthServiceMethodItemProvider extends ServiceMethodItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPermissionNamePropertyDescriptor(Object object) {
+	protected void addPermissionNamePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_AuthServiceMethod_permissionName_feature"),
@@ -74,7 +79,8 @@ public class AuthServiceMethodItemProvider extends ServiceMethodItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/AuthServiceMethod"));
 	}
 
@@ -84,7 +90,8 @@ public class AuthServiceMethodItemProvider extends ServiceMethodItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -95,7 +102,8 @@ public class AuthServiceMethodItemProvider extends ServiceMethodItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((AuthServiceMethod) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_AuthServiceMethod_type")
 				: getString("_UI_AuthServiceMethod_type") + " " + label;
@@ -109,10 +117,12 @@ public class AuthServiceMethodItemProvider extends ServiceMethodItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(AuthServiceMethod.class)) {
+		switch (notification.getFeatureID(AuthServiceMethod.class))
+		{
 		case FramewebPackage.AUTH_SERVICE_METHOD__PERMISSION_NAME:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
@@ -128,7 +138,8 @@ public class AuthServiceMethodItemProvider extends ServiceMethodItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 
@@ -139,7 +150,8 @@ public class AuthServiceMethodItemProvider extends ServiceMethodItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -148,7 +160,8 @@ public class AuthServiceMethodItemProvider extends ServiceMethodItemProvider {
 				|| childFeature == UMLPackage.Literals.OPERATION__POSTCONDITION
 				|| childFeature == UMLPackage.Literals.OPERATION__PRECONDITION;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}

@@ -34,7 +34,8 @@ import org.eclipse.uml2.uml.internal.impl.ConstraintImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class DomainConstraintsImpl extends ConstraintImpl implements DomainConstraints {
+public class DomainConstraintsImpl extends ConstraintImpl implements DomainConstraints
+{
 	/**
 	 * The default value of the '{@link #getCollection() <em>Collection</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -120,7 +121,8 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DomainConstraintsImpl() {
+	protected DomainConstraintsImpl()
+	{
 		super();
 	}
 
@@ -130,7 +132,8 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.DOMAIN_CONSTRAINTS;
 	}
 
@@ -140,7 +143,8 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * @generated
 	 */
 	@Override
-	public Collection getCollection() {
+	public Collection getCollection()
+	{
 		return collection;
 	}
 
@@ -150,7 +154,8 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * @generated
 	 */
 	@Override
-	public void setCollection(Collection newCollection) {
+	public void setCollection(Collection newCollection)
+	{
 		Collection oldCollection = collection;
 		collection = newCollection == null ? COLLECTION_EDEFAULT : newCollection;
 		if (eNotificationRequired())
@@ -164,7 +169,8 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * @generated
 	 */
 	@Override
-	public Fetch getFetch() {
+	public Fetch getFetch()
+	{
 		return fetch;
 	}
 
@@ -174,7 +180,8 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * @generated
 	 */
 	@Override
-	public void setFetch(Fetch newFetch) {
+	public void setFetch(Fetch newFetch)
+	{
 		Fetch oldFetch = fetch;
 		fetch = newFetch == null ? FETCH_EDEFAULT : newFetch;
 		if (eNotificationRequired())
@@ -188,7 +195,8 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * @generated
 	 */
 	@Override
-	public Order getOrder() {
+	public Order getOrder()
+	{
 		return order;
 	}
 
@@ -198,7 +206,8 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * @generated
 	 */
 	@Override
-	public void setOrder(Order newOrder) {
+	public void setOrder(Order newOrder)
+	{
 		Order oldOrder = order;
 		order = newOrder == null ? ORDER_EDEFAULT : newOrder;
 		if (eNotificationRequired())
@@ -212,7 +221,8 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * @generated
 	 */
 	@Override
-	public Cascade getCascade() {
+	public Cascade getCascade()
+	{
 		return cascade;
 	}
 
@@ -222,7 +232,8 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * @generated
 	 */
 	@Override
-	public void setCascade(Cascade newCascade) {
+	public void setCascade(Cascade newCascade)
+	{
 		Cascade oldCascade = cascade;
 		cascade = newCascade == null ? CASCADE_EDEFAULT : newCascade;
 		if (eNotificationRequired())
@@ -236,8 +247,10 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DOMAIN_CONSTRAINTS__COLLECTION:
 			return getCollection();
 		case FramewebPackage.DOMAIN_CONSTRAINTS__FETCH:
@@ -256,8 +269,10 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DOMAIN_CONSTRAINTS__COLLECTION:
 			setCollection((Collection) newValue);
 			return;
@@ -280,8 +295,10 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DOMAIN_CONSTRAINTS__COLLECTION:
 			setCollection(COLLECTION_EDEFAULT);
 			return;
@@ -304,8 +321,10 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DOMAIN_CONSTRAINTS__COLLECTION:
 			return collection != COLLECTION_EDEFAULT;
 		case FramewebPackage.DOMAIN_CONSTRAINTS__FETCH:
@@ -324,7 +343,8 @@ public class DomainConstraintsImpl extends ConstraintImpl implements DomainConst
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

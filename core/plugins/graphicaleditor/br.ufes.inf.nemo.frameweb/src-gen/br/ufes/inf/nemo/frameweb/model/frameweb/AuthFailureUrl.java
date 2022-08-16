@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface AuthFailureUrl extends ResultDependency {
+public interface AuthFailureUrl extends ResultDependency
+{
 } // AuthFailureUrl

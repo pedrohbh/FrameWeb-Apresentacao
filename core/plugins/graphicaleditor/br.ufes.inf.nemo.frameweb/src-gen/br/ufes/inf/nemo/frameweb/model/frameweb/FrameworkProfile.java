@@ -22,7 +22,8 @@ import org.eclipse.uml2.uml.Profile;
  * @model
  * @generated
  */
-public interface FrameworkProfile extends Profile {
+public interface FrameworkProfile extends Profile
+{
 	/**
 	 * Returns the value of the '<em><b>Category</b></em>' attribute.
 	 * The literals are from the enumeration {@link br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkCategoryList}.

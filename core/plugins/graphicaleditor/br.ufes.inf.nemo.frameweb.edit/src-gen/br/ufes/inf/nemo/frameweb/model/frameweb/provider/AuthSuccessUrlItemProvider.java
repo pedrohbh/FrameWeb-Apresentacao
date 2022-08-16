@@ -18,14 +18,16 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AuthSuccessUrlItemProvider extends ResultDependencyItemProvider {
+public class AuthSuccessUrlItemProvider extends ResultDependencyItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AuthSuccessUrlItemProvider(AdapterFactory adapterFactory) {
+	public AuthSuccessUrlItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -36,8 +38,10 @@ public class AuthSuccessUrlItemProvider extends ResultDependencyItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 		}
@@ -51,7 +55,8 @@ public class AuthSuccessUrlItemProvider extends ResultDependencyItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/AuthSuccessUrl"));
 	}
 
@@ -61,7 +66,8 @@ public class AuthSuccessUrlItemProvider extends ResultDependencyItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -72,7 +78,8 @@ public class AuthSuccessUrlItemProvider extends ResultDependencyItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((AuthSuccessUrl) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_AuthSuccessUrl_type")
 				: getString("_UI_AuthSuccessUrl_type") + " " + label;
@@ -86,7 +93,8 @@ public class AuthSuccessUrlItemProvider extends ResultDependencyItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 		super.notifyChanged(notification);
 	}
@@ -99,7 +107,8 @@ public class AuthSuccessUrlItemProvider extends ResultDependencyItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

@@ -19,21 +19,26 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory {
+public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
+{
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static FramewebFactory init() {
-		try {
+	public static FramewebFactory init()
+	{
+		try
+		{
 			FramewebFactory theFramewebFactory = (FramewebFactory) EPackage.Registry.INSTANCE
 					.getEFactory(FramewebPackage.eNS_URI);
-			if (theFramewebFactory != null) {
+			if (theFramewebFactory != null)
+			{
 				return theFramewebFactory;
 			}
-		} catch (Exception exception) {
+		} catch (Exception exception)
+		{
 			EcorePlugin.INSTANCE.log(exception);
 		}
 		return new FramewebFactoryImpl();
@@ -45,7 +50,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FramewebFactoryImpl() {
+	public FramewebFactoryImpl()
+	{
 		super();
 	}
 
@@ -55,8 +61,10 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
+	public EObject create(EClass eClass)
+	{
+		switch (eClass.getClassifierID())
+		{
 		case FramewebPackage.FRAMEWEB_PROJECT:
 			return createFramewebProject();
 		case FramewebPackage.FRAMEWEB_MODEL:
@@ -295,6 +303,10 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 			return createNavigationAggregationSource();
 		case FramewebPackage.NAVIGATION_SPA_PROPERTIES:
 			return createNavigationSPAProperties();
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD:
+			return createNavigationAggregationAssociationSPAMethod();
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE:
+			return createNavigationAggregationAssociationSPAAttribute();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -306,8 +318,10 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public Object createFromString(EDataType eDataType, String initialValue) {
-		switch (eDataType.getClassifierID()) {
+	public Object createFromString(EDataType eDataType, String initialValue)
+	{
+		switch (eDataType.getClassifierID())
+		{
 		case FramewebPackage.FRAMEWORK_CATEGORY_LIST:
 			return createFrameworkCategoryListFromString(eDataType, initialValue);
 		case FramewebPackage.FRAMEWORK_KIND_LIST:
@@ -347,8 +361,10 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public String convertToString(EDataType eDataType, Object instanceValue) {
-		switch (eDataType.getClassifierID()) {
+	public String convertToString(EDataType eDataType, Object instanceValue)
+	{
+		switch (eDataType.getClassifierID())
+		{
 		case FramewebPackage.FRAMEWORK_CATEGORY_LIST:
 			return convertFrameworkCategoryListToString(eDataType, instanceValue);
 		case FramewebPackage.FRAMEWORK_KIND_LIST:
@@ -388,7 +404,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public FramewebProject createFramewebProject() {
+	public FramewebProject createFramewebProject()
+	{
 		FramewebProjectImpl framewebProject = new FramewebProjectImpl();
 		return framewebProject;
 	}
@@ -399,7 +416,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public FramewebModel createFramewebModel() {
+	public FramewebModel createFramewebModel()
+	{
 		FramewebModelImpl framewebModel = new FramewebModelImpl();
 		return framewebModel;
 	}
@@ -410,7 +428,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public FrameworkProfile createFrameworkProfile() {
+	public FrameworkProfile createFrameworkProfile()
+	{
 		FrameworkProfileImpl frameworkProfile = new FrameworkProfileImpl();
 		return frameworkProfile;
 	}
@@ -421,7 +440,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public EntityModel createEntityModel() {
+	public EntityModel createEntityModel()
+	{
 		EntityModelImpl entityModel = new EntityModelImpl();
 		return entityModel;
 	}
@@ -432,7 +452,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public NavigationModel createNavigationModel() {
+	public NavigationModel createNavigationModel()
+	{
 		NavigationModelImpl navigationModel = new NavigationModelImpl();
 		return navigationModel;
 	}
@@ -443,7 +464,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public ApplicationModel createApplicationModel() {
+	public ApplicationModel createApplicationModel()
+	{
 		ApplicationModelImpl applicationModel = new ApplicationModelImpl();
 		return applicationModel;
 	}
@@ -454,7 +476,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public PersistenceModel createPersistenceModel() {
+	public PersistenceModel createPersistenceModel()
+	{
 		PersistenceModelImpl persistenceModel = new PersistenceModelImpl();
 		return persistenceModel;
 	}
@@ -465,7 +488,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DomainAssociation createDomainAssociation() {
+	public DomainAssociation createDomainAssociation()
+	{
 		DomainAssociationImpl domainAssociation = new DomainAssociationImpl();
 		return domainAssociation;
 	}
@@ -476,7 +500,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public VersionAttribute createVersionAttribute() {
+	public VersionAttribute createVersionAttribute()
+	{
 		VersionAttributeImpl versionAttribute = new VersionAttributeImpl();
 		return versionAttribute;
 	}
@@ -487,7 +512,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public IdAttribute createIdAttribute() {
+	public IdAttribute createIdAttribute()
+	{
 		IdAttributeImpl idAttribute = new IdAttributeImpl();
 		return idAttribute;
 	}
@@ -498,7 +524,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public LOBAttribute createLOBAttribute() {
+	public LOBAttribute createLOBAttribute()
+	{
 		LOBAttributeImpl lobAttribute = new LOBAttributeImpl();
 		return lobAttribute;
 	}
@@ -509,7 +536,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public EmbeddedAttribute createEmbeddedAttribute() {
+	public EmbeddedAttribute createEmbeddedAttribute()
+	{
 		EmbeddedAttributeImpl embeddedAttribute = new EmbeddedAttributeImpl();
 		return embeddedAttribute;
 	}
@@ -520,7 +548,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DecimalAttribute createDecimalAttribute() {
+	public DecimalAttribute createDecimalAttribute()
+	{
 		DecimalAttributeImpl decimalAttribute = new DecimalAttributeImpl();
 		return decimalAttribute;
 	}
@@ -531,7 +560,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DateTimeAttribute createDateTimeAttribute() {
+	public DateTimeAttribute createDateTimeAttribute()
+	{
 		DateTimeAttributeImpl dateTimeAttribute = new DateTimeAttributeImpl();
 		return dateTimeAttribute;
 	}
@@ -542,7 +572,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public Page createPage() {
+	public Page createPage()
+	{
 		PageImpl page = new PageImpl();
 		return page;
 	}
@@ -553,7 +584,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public AuthPage createAuthPage() {
+	public AuthPage createAuthPage()
+	{
 		AuthPageImpl authPage = new AuthPageImpl();
 		return authPage;
 	}
@@ -564,7 +596,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DAOInterface createDAOInterface() {
+	public DAOInterface createDAOInterface()
+	{
 		DAOInterfaceImpl daoInterface = new DAOInterfaceImpl();
 		return daoInterface;
 	}
@@ -575,7 +608,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DAOClass createDAOClass() {
+	public DAOClass createDAOClass()
+	{
 		DAOClassImpl daoClass = new DAOClassImpl();
 		return daoClass;
 	}
@@ -586,7 +620,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DAORealization createDAORealization() {
+	public DAORealization createDAORealization()
+	{
 		DAORealizationImpl daoRealization = new DAORealizationImpl();
 		return daoRealization;
 	}
@@ -597,7 +632,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public FrontControllerClass createFrontControllerClass() {
+	public FrontControllerClass createFrontControllerClass()
+	{
 		FrontControllerClassImpl frontControllerClass = new FrontControllerClassImpl();
 		return frontControllerClass;
 	}
@@ -608,7 +644,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public IOParameter createIOParameter() {
+	public IOParameter createIOParameter()
+	{
 		IOParameterImpl ioParameter = new IOParameterImpl();
 		return ioParameter;
 	}
@@ -619,7 +656,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public ResultDependency createResultDependency() {
+	public ResultDependency createResultDependency()
+	{
 		ResultDependencyImpl resultDependency = new ResultDependencyImpl();
 		return resultDependency;
 	}
@@ -630,7 +668,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public AuthSuccessUrl createAuthSuccessUrl() {
+	public AuthSuccessUrl createAuthSuccessUrl()
+	{
 		AuthSuccessUrlImpl authSuccessUrl = new AuthSuccessUrlImpl();
 		return authSuccessUrl;
 	}
@@ -641,7 +680,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public AuthFailureUrl createAuthFailureUrl() {
+	public AuthFailureUrl createAuthFailureUrl()
+	{
 		AuthFailureUrlImpl authFailureUrl = new AuthFailureUrlImpl();
 		return authFailureUrl;
 	}
@@ -652,7 +692,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public NavigationAssociation createNavigationAssociation() {
+	public NavigationAssociation createNavigationAssociation()
+	{
 		NavigationAssociationImpl navigationAssociation = new NavigationAssociationImpl();
 		return navigationAssociation;
 	}
@@ -663,7 +704,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public FrontControllerMethod createFrontControllerMethod() {
+	public FrontControllerMethod createFrontControllerMethod()
+	{
 		FrontControllerMethodImpl frontControllerMethod = new FrontControllerMethodImpl();
 		return frontControllerMethod;
 	}
@@ -674,7 +716,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public AuthProcessingMethod createAuthProcessingMethod() {
+	public AuthProcessingMethod createAuthProcessingMethod()
+	{
 		AuthProcessingMethodImpl authProcessingMethod = new AuthProcessingMethodImpl();
 		return authProcessingMethod;
 	}
@@ -685,7 +728,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public ServiceClass createServiceClass() {
+	public ServiceClass createServiceClass()
+	{
 		ServiceClassImpl serviceClass = new ServiceClassImpl();
 		return serviceClass;
 	}
@@ -696,7 +740,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public AuthServiceClass createAuthServiceClass() {
+	public AuthServiceClass createAuthServiceClass()
+	{
 		AuthServiceClassImpl authServiceClass = new AuthServiceClassImpl();
 		return authServiceClass;
 	}
@@ -707,7 +752,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public ServiceInterface createServiceInterface() {
+	public ServiceInterface createServiceInterface()
+	{
 		ServiceInterfaceImpl serviceInterface = new ServiceInterfaceImpl();
 		return serviceInterface;
 	}
@@ -718,7 +764,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public AuthServiceInterface createAuthServiceInterface() {
+	public AuthServiceInterface createAuthServiceInterface()
+	{
 		AuthServiceInterfaceImpl authServiceInterface = new AuthServiceInterfaceImpl();
 		return authServiceInterface;
 	}
@@ -729,7 +776,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public ServiceGeneralization createServiceGeneralization() {
+	public ServiceGeneralization createServiceGeneralization()
+	{
 		ServiceGeneralizationImpl serviceGeneralization = new ServiceGeneralizationImpl();
 		return serviceGeneralization;
 	}
@@ -740,7 +788,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public ServiceControllerAssociation createServiceControllerAssociation() {
+	public ServiceControllerAssociation createServiceControllerAssociation()
+	{
 		ServiceControllerAssociationImpl serviceControllerAssociation = new ServiceControllerAssociationImpl();
 		return serviceControllerAssociation;
 	}
@@ -751,7 +800,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DomainClass createDomainClass() {
+	public DomainClass createDomainClass()
+	{
 		DomainClassImpl domainClass = new DomainClassImpl();
 		return domainClass;
 	}
@@ -762,7 +812,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public AuthUser createAuthUser() {
+	public AuthUser createAuthUser()
+	{
 		AuthUserImpl authUser = new AuthUserImpl();
 		return authUser;
 	}
@@ -773,7 +824,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public AuthRole createAuthRole() {
+	public AuthRole createAuthRole()
+	{
 		AuthRoleImpl authRole = new AuthRoleImpl();
 		return authRole;
 	}
@@ -784,7 +836,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public AuthPermission createAuthPermission() {
+	public AuthPermission createAuthPermission()
+	{
 		AuthPermissionImpl authPermission = new AuthPermissionImpl();
 		return authPermission;
 	}
@@ -795,7 +848,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public FrontControllerDependency createFrontControllerDependency() {
+	public FrontControllerDependency createFrontControllerDependency()
+	{
 		FrontControllerDependencyImpl frontControllerDependency = new FrontControllerDependencyImpl();
 		return frontControllerDependency;
 	}
@@ -806,7 +860,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public PageDependency createPageDependency() {
+	public PageDependency createPageDependency()
+	{
 		PageDependencyImpl pageDependency = new PageDependencyImpl();
 		return pageDependency;
 	}
@@ -817,7 +872,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DAOServiceAssociation createDAOServiceAssociation() {
+	public DAOServiceAssociation createDAOServiceAssociation()
+	{
 		DAOServiceAssociationImpl daoServiceAssociation = new DAOServiceAssociationImpl();
 		return daoServiceAssociation;
 	}
@@ -828,7 +884,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DomainMethod createDomainMethod() {
+	public DomainMethod createDomainMethod()
+	{
 		DomainMethodImpl domainMethod = new DomainMethodImpl();
 		return domainMethod;
 	}
@@ -839,7 +896,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DAOAttribute createDAOAttribute() {
+	public DAOAttribute createDAOAttribute()
+	{
 		DAOAttributeImpl daoAttribute = new DAOAttributeImpl();
 		return daoAttribute;
 	}
@@ -850,7 +908,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public ServiceMethod createServiceMethod() {
+	public ServiceMethod createServiceMethod()
+	{
 		ServiceMethodImpl serviceMethod = new ServiceMethodImpl();
 		return serviceMethod;
 	}
@@ -861,7 +920,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public AuthServiceMethod createAuthServiceMethod() {
+	public AuthServiceMethod createAuthServiceMethod()
+	{
 		AuthServiceMethodImpl authServiceMethod = new AuthServiceMethodImpl();
 		return authServiceMethod;
 	}
@@ -872,7 +932,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public ServiceAttribute createServiceAttribute() {
+	public ServiceAttribute createServiceAttribute()
+	{
 		ServiceAttributeImpl serviceAttribute = new ServiceAttributeImpl();
 		return serviceAttribute;
 	}
@@ -883,7 +944,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DAOMethod createDAOMethod() {
+	public DAOMethod createDAOMethod()
+	{
 		DAOMethodImpl daoMethod = new DAOMethodImpl();
 		return daoMethod;
 	}
@@ -894,7 +956,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DomainPackage createDomainPackage() {
+	public DomainPackage createDomainPackage()
+	{
 		DomainPackageImpl domainPackage = new DomainPackageImpl();
 		return domainPackage;
 	}
@@ -905,7 +968,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public ViewPackage createViewPackage() {
+	public ViewPackage createViewPackage()
+	{
 		ViewPackageImpl viewPackage = new ViewPackageImpl();
 		return viewPackage;
 	}
@@ -916,7 +980,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public ControllerPackage createControllerPackage() {
+	public ControllerPackage createControllerPackage()
+	{
 		ControllerPackageImpl controllerPackage = new ControllerPackageImpl();
 		return controllerPackage;
 	}
@@ -927,7 +992,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public PersistencePackage createPersistencePackage() {
+	public PersistencePackage createPersistencePackage()
+	{
 		PersistencePackageImpl persistencePackage = new PersistencePackageImpl();
 		return persistencePackage;
 	}
@@ -938,7 +1004,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public ApplicationPackage createApplicationPackage() {
+	public ApplicationPackage createApplicationPackage()
+	{
 		ApplicationPackageImpl applicationPackage = new ApplicationPackageImpl();
 		return applicationPackage;
 	}
@@ -949,7 +1016,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public UIComponent createUIComponent() {
+	public UIComponent createUIComponent()
+	{
 		UIComponentImpl uiComponent = new UIComponentImpl();
 		return uiComponent;
 	}
@@ -960,7 +1028,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public AuthForm createAuthForm() {
+	public AuthForm createAuthForm()
+	{
 		AuthFormImpl authForm = new AuthFormImpl();
 		return authForm;
 	}
@@ -971,7 +1040,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public ResultType createResultType() {
+	public ResultType createResultType()
+	{
 		ResultTypeImpl resultType = new ResultTypeImpl();
 		return resultType;
 	}
@@ -982,7 +1052,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DomainGeneralization createDomainGeneralization() {
+	public DomainGeneralization createDomainGeneralization()
+	{
 		DomainGeneralizationImpl domainGeneralization = new DomainGeneralizationImpl();
 		return domainGeneralization;
 	}
@@ -993,7 +1064,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public UIComponentField createUIComponentField() {
+	public UIComponentField createUIComponentField()
+	{
 		UIComponentFieldImpl uiComponentField = new UIComponentFieldImpl();
 		return uiComponentField;
 	}
@@ -1004,7 +1076,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public TagLib createTagLib() {
+	public TagLib createTagLib()
+	{
 		TagLibImpl tagLib = new TagLibImpl();
 		return tagLib;
 	}
@@ -1015,7 +1088,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public Tag createTag() {
+	public Tag createTag()
+	{
 		TagImpl tag = new TagImpl();
 		return tag;
 	}
@@ -1026,7 +1100,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public NavigationCompositionPart createNavigationCompositionPart() {
+	public NavigationCompositionPart createNavigationCompositionPart()
+	{
 		NavigationCompositionPartImpl navigationCompositionPart = new NavigationCompositionPartImpl();
 		return navigationCompositionPart;
 	}
@@ -1037,7 +1112,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public NavigationCompositionWhole createNavigationCompositionWhole() {
+	public NavigationCompositionWhole createNavigationCompositionWhole()
+	{
 		NavigationCompositionWholeImpl navigationCompositionWhole = new NavigationCompositionWholeImpl();
 		return navigationCompositionWhole;
 	}
@@ -1048,7 +1124,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public ResultSet createResultSet() {
+	public ResultSet createResultSet()
+	{
 		ResultSetImpl resultSet = new ResultSetImpl();
 		return resultSet;
 	}
@@ -1059,7 +1136,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public PageConstraint createPageConstraint() {
+	public PageConstraint createPageConstraint()
+	{
 		PageConstraintImpl pageConstraint = new PageConstraintImpl();
 		return pageConstraint;
 	}
@@ -1070,7 +1148,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public ResultConstraint createResultConstraint() {
+	public ResultConstraint createResultConstraint()
+	{
 		ResultConstraintImpl resultConstraint = new ResultConstraintImpl();
 		return resultConstraint;
 	}
@@ -1081,7 +1160,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public MethodConstraint createMethodConstraint() {
+	public MethodConstraint createMethodConstraint()
+	{
 		MethodConstraintImpl methodConstraint = new MethodConstraintImpl();
 		return methodConstraint;
 	}
@@ -1092,7 +1172,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public ChainingConstraint createChainingConstraint() {
+	public ChainingConstraint createChainingConstraint()
+	{
 		ChainingConstraintImpl chainingConstraint = new ChainingConstraintImpl();
 		return chainingConstraint;
 	}
@@ -1103,7 +1184,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public NavigationGeneralization createNavigationGeneralization() {
+	public NavigationGeneralization createNavigationGeneralization()
+	{
 		NavigationGeneralizationImpl navigationGeneralization = new NavigationGeneralizationImpl();
 		return navigationGeneralization;
 	}
@@ -1114,7 +1196,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DomainConstraints createDomainConstraints() {
+	public DomainConstraints createDomainConstraints()
+	{
 		DomainConstraintsImpl domainConstraints = new DomainConstraintsImpl();
 		return domainConstraints;
 	}
@@ -1125,7 +1208,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DAOGeneralization createDAOGeneralization() {
+	public DAOGeneralization createDAOGeneralization()
+	{
 		DAOGeneralizationImpl daoGeneralization = new DAOGeneralizationImpl();
 		return daoGeneralization;
 	}
@@ -1136,7 +1220,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public MappingLib createMappingLib() {
+	public MappingLib createMappingLib()
+	{
 		MappingLibImpl mappingLib = new MappingLibImpl();
 		return mappingLib;
 	}
@@ -1147,7 +1232,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public ClassMapping createClassMapping() {
+	public ClassMapping createClassMapping()
+	{
 		ClassMappingImpl classMapping = new ClassMappingImpl();
 		return classMapping;
 	}
@@ -1158,7 +1244,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public AttributeMapping createAttributeMapping() {
+	public AttributeMapping createAttributeMapping()
+	{
 		AttributeMappingImpl attributeMapping = new AttributeMappingImpl();
 		return attributeMapping;
 	}
@@ -1169,7 +1256,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DomainGeneralizationSet createDomainGeneralizationSet() {
+	public DomainGeneralizationSet createDomainGeneralizationSet()
+	{
 		DomainGeneralizationSetImpl domainGeneralizationSet = new DomainGeneralizationSetImpl();
 		return domainGeneralizationSet;
 	}
@@ -1180,7 +1268,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public Controller createController() {
+	public Controller createController()
+	{
 		ControllerImpl controller = new ControllerImpl();
 		return controller;
 	}
@@ -1191,7 +1280,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public TagProperty createTagProperty() {
+	public TagProperty createTagProperty()
+	{
 		TagPropertyImpl tagProperty = new TagPropertyImpl();
 		return tagProperty;
 	}
@@ -1202,7 +1292,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public ResultProperty createResultProperty() {
+	public ResultProperty createResultProperty()
+	{
 		ResultPropertyImpl resultProperty = new ResultPropertyImpl();
 		return resultProperty;
 	}
@@ -1213,7 +1304,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public ClassMappingPropery createClassMappingPropery() {
+	public ClassMappingPropery createClassMappingPropery()
+	{
 		ClassMappingProperyImpl classMappingPropery = new ClassMappingProperyImpl();
 		return classMappingPropery;
 	}
@@ -1224,7 +1316,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public AttributeMappingProperty createAttributeMappingProperty() {
+	public AttributeMappingProperty createAttributeMappingProperty()
+	{
 		AttributeMappingPropertyImpl attributeMappingProperty = new AttributeMappingPropertyImpl();
 		return attributeMappingProperty;
 	}
@@ -1235,7 +1328,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public ServiceRealization createServiceRealization() {
+	public ServiceRealization createServiceRealization()
+	{
 		ServiceRealizationImpl serviceRealization = new ServiceRealizationImpl();
 		return serviceRealization;
 	}
@@ -1246,7 +1340,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public NavigationGeneralizationSet createNavigationGeneralizationSet() {
+	public NavigationGeneralizationSet createNavigationGeneralizationSet()
+	{
 		NavigationGeneralizationSetImpl navigationGeneralizationSet = new NavigationGeneralizationSetImpl();
 		return navigationGeneralizationSet;
 	}
@@ -1257,7 +1352,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DAOGeneralizationSet createDAOGeneralizationSet() {
+	public DAOGeneralizationSet createDAOGeneralizationSet()
+	{
 		DAOGeneralizationSetImpl daoGeneralizationSet = new DAOGeneralizationSetImpl();
 		return daoGeneralizationSet;
 	}
@@ -1268,7 +1364,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public ServiceGeneralizationSet createServiceGeneralizationSet() {
+	public ServiceGeneralizationSet createServiceGeneralizationSet()
+	{
 		ServiceGeneralizationSetImpl serviceGeneralizationSet = new ServiceGeneralizationSetImpl();
 		return serviceGeneralizationSet;
 	}
@@ -1279,7 +1376,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public SemanticPackage createSemanticPackage() {
+	public SemanticPackage createSemanticPackage()
+	{
 		SemanticPackageImpl semanticPackage = new SemanticPackageImpl();
 		return semanticPackage;
 	}
@@ -1290,7 +1388,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public IRI createIRI() {
+	public IRI createIRI()
+	{
 		IRIImpl iri = new IRIImpl();
 		return iri;
 	}
@@ -1301,7 +1400,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public VocabularyModel createVocabularyModel() {
+	public VocabularyModel createVocabularyModel()
+	{
 		VocabularyModelImpl vocabularyModel = new VocabularyModelImpl();
 		return vocabularyModel;
 	}
@@ -1312,7 +1412,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public Vocabulary createVocabulary() {
+	public Vocabulary createVocabulary()
+	{
 		VocabularyImpl vocabulary = new VocabularyImpl();
 		return vocabulary;
 	}
@@ -1323,7 +1424,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public Axiom createAxiom() {
+	public Axiom createAxiom()
+	{
 		AxiomImpl axiom = new AxiomImpl();
 		return axiom;
 	}
@@ -1334,7 +1436,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public Annotation createAnnotation() {
+	public Annotation createAnnotation()
+	{
 		AnnotationImpl annotation = new AnnotationImpl();
 		return annotation;
 	}
@@ -1345,7 +1448,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public VocabularyConstraints createVocabularyConstraints() {
+	public VocabularyConstraints createVocabularyConstraints()
+	{
 		VocabularyConstraintsImpl vocabularyConstraints = new VocabularyConstraintsImpl();
 		return vocabularyConstraints;
 	}
@@ -1356,7 +1460,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public VocabularyAssociation createVocabularyAssociation() {
+	public VocabularyAssociation createVocabularyAssociation()
+	{
 		VocabularyAssociationImpl vocabularyAssociation = new VocabularyAssociationImpl();
 		return vocabularyAssociation;
 	}
@@ -1367,7 +1472,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public VocabularyProperty createVocabularyProperty() {
+	public VocabularyProperty createVocabularyProperty()
+	{
 		VocabularyPropertyImpl vocabularyProperty = new VocabularyPropertyImpl();
 		return vocabularyProperty;
 	}
@@ -1378,7 +1484,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public ObjectProperty createObjectProperty() {
+	public ObjectProperty createObjectProperty()
+	{
 		ObjectPropertyImpl objectProperty = new ObjectPropertyImpl();
 		return objectProperty;
 	}
@@ -1389,7 +1496,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DataProperty createDataProperty() {
+	public DataProperty createDataProperty()
+	{
 		DataPropertyImpl dataProperty = new DataPropertyImpl();
 		return dataProperty;
 	}
@@ -1400,7 +1508,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public VocabularyDataType createVocabularyDataType() {
+	public VocabularyDataType createVocabularyDataType()
+	{
 		VocabularyDataTypeImpl vocabularyDataType = new VocabularyDataTypeImpl();
 		return vocabularyDataType;
 	}
@@ -1411,7 +1520,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public NamedIndividual createNamedIndividual() {
+	public NamedIndividual createNamedIndividual()
+	{
 		NamedIndividualImpl namedIndividual = new NamedIndividualImpl();
 		return namedIndividual;
 	}
@@ -1422,7 +1532,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public VocabularyClass createVocabularyClass() {
+	public VocabularyClass createVocabularyClass()
+	{
 		VocabularyClassImpl vocabularyClass = new VocabularyClassImpl();
 		return vocabularyClass;
 	}
@@ -1433,7 +1544,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public AnonymousIndividual createAnonymousIndividual() {
+	public AnonymousIndividual createAnonymousIndividual()
+	{
 		AnonymousIndividualImpl anonymousIndividual = new AnonymousIndividualImpl();
 		return anonymousIndividual;
 	}
@@ -1444,7 +1556,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public VocabularyLiteral createVocabularyLiteral() {
+	public VocabularyLiteral createVocabularyLiteral()
+	{
 		VocabularyLiteralImpl vocabularyLiteral = new VocabularyLiteralImpl();
 		return vocabularyLiteral;
 	}
@@ -1455,7 +1568,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DomainVocabularyAssociation createDomainVocabularyAssociation() {
+	public DomainVocabularyAssociation createDomainVocabularyAssociation()
+	{
 		DomainVocabularyAssociationImpl domainVocabularyAssociation = new DomainVocabularyAssociationImpl();
 		return domainVocabularyAssociation;
 	}
@@ -1466,7 +1580,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DomainVocabularyProperty createDomainVocabularyProperty() {
+	public DomainVocabularyProperty createDomainVocabularyProperty()
+	{
 		DomainVocabularyPropertyImpl domainVocabularyProperty = new DomainVocabularyPropertyImpl();
 		return domainVocabularyProperty;
 	}
@@ -1477,7 +1592,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DomainAttribute createDomainAttribute() {
+	public DomainAttribute createDomainAttribute()
+	{
 		DomainAttributeImpl domainAttribute = new DomainAttributeImpl();
 		return domainAttribute;
 	}
@@ -1488,7 +1604,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DomainAuthAttribute createDomainAuthAttribute() {
+	public DomainAuthAttribute createDomainAuthAttribute()
+	{
 		DomainAuthAttributeImpl domainAuthAttribute = new DomainAuthAttributeImpl();
 		return domainAuthAttribute;
 	}
@@ -1499,7 +1616,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public AuthUserName createAuthUserName() {
+	public AuthUserName createAuthUserName()
+	{
 		AuthUserNameImpl authUserName = new AuthUserNameImpl();
 		return authUserName;
 	}
@@ -1510,7 +1628,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public AuthPassword createAuthPassword() {
+	public AuthPassword createAuthPassword()
+	{
 		AuthPasswordImpl authPassword = new AuthPasswordImpl();
 		return authPassword;
 	}
@@ -1521,7 +1640,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public AuthRoleName createAuthRoleName() {
+	public AuthRoleName createAuthRoleName()
+	{
 		AuthRoleNameImpl authRoleName = new AuthRoleNameImpl();
 		return authRoleName;
 	}
@@ -1532,7 +1652,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public AuthPermName createAuthPermName() {
+	public AuthPermName createAuthPermName()
+	{
 		AuthPermNameImpl authPermName = new AuthPermNameImpl();
 		return authPermName;
 	}
@@ -1543,7 +1664,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DomainProperty createDomainProperty() {
+	public DomainProperty createDomainProperty()
+	{
 		DomainPropertyImpl domainProperty = new DomainPropertyImpl();
 		return domainProperty;
 	}
@@ -1554,7 +1676,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public FrontControllerTemplate createFrontControllerTemplate() {
+	public FrontControllerTemplate createFrontControllerTemplate()
+	{
 		FrontControllerTemplateImpl frontControllerTemplate = new FrontControllerTemplateImpl();
 		return frontControllerTemplate;
 	}
@@ -1565,7 +1688,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DITemplate createDITemplate() {
+	public DITemplate createDITemplate()
+	{
 		DITemplateImpl diTemplate = new DITemplateImpl();
 		return diTemplate;
 	}
@@ -1576,7 +1700,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public ORMTemplate createORMTemplate() {
+	public ORMTemplate createORMTemplate()
+	{
 		ORMTemplateImpl ormTemplate = new ORMTemplateImpl();
 		return ormTemplate;
 	}
@@ -1587,7 +1712,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public DAOTemplate createDAOTemplate() {
+	public DAOTemplate createDAOTemplate()
+	{
 		DAOTemplateImpl daoTemplate = new DAOTemplateImpl();
 		return daoTemplate;
 	}
@@ -1598,7 +1724,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public FrameWebConfiguration createFrameWebConfiguration() {
+	public FrameWebConfiguration createFrameWebConfiguration()
+	{
 		FrameWebConfigurationImpl frameWebConfiguration = new FrameWebConfigurationImpl();
 		return frameWebConfiguration;
 	}
@@ -1609,7 +1736,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public RestControllerTemplate createRestControllerTemplate() {
+	public RestControllerTemplate createRestControllerTemplate()
+	{
 		RestControllerTemplateImpl restControllerTemplate = new RestControllerTemplateImpl();
 		return restControllerTemplate;
 	}
@@ -1620,7 +1748,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public RestControllerMethod createRestControllerMethod() {
+	public RestControllerMethod createRestControllerMethod()
+	{
 		RestControllerMethodImpl restControllerMethod = new RestControllerMethodImpl();
 		return restControllerMethod;
 	}
@@ -1631,7 +1760,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public RestControllerClass createRestControllerClass() {
+	public RestControllerClass createRestControllerClass()
+	{
 		RestControllerClassImpl restControllerClass = new RestControllerClassImpl();
 		return restControllerClass;
 	}
@@ -1642,7 +1772,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public Partial createPartial() {
+	public Partial createPartial()
+	{
 		PartialImpl partial = new PartialImpl();
 		return partial;
 	}
@@ -1653,7 +1784,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public NavigationAggregationAssociation createNavigationAggregationAssociation() {
+	public NavigationAggregationAssociation createNavigationAggregationAssociation()
+	{
 		NavigationAggregationAssociationImpl navigationAggregationAssociation = new NavigationAggregationAssociationImpl();
 		return navigationAggregationAssociation;
 	}
@@ -1664,7 +1796,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public NavigationAggregationTarget createNavigationAggregationTarget() {
+	public NavigationAggregationTarget createNavigationAggregationTarget()
+	{
 		NavigationAggregationTargetImpl navigationAggregationTarget = new NavigationAggregationTargetImpl();
 		return navigationAggregationTarget;
 	}
@@ -1675,7 +1808,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public NavigationAggregationSource createNavigationAggregationSource() {
+	public NavigationAggregationSource createNavigationAggregationSource()
+	{
 		NavigationAggregationSourceImpl navigationAggregationSource = new NavigationAggregationSourceImpl();
 		return navigationAggregationSource;
 	}
@@ -1686,7 +1820,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public NavigationSPAProperties createNavigationSPAProperties() {
+	public NavigationSPAProperties createNavigationSPAProperties()
+	{
 		NavigationSPAPropertiesImpl navigationSPAProperties = new NavigationSPAPropertiesImpl();
 		return navigationSPAProperties;
 	}
@@ -1696,7 +1831,32 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FrameworkCategoryList createFrameworkCategoryListFromString(EDataType eDataType, String initialValue) {
+	@Override
+	public NavigationAggregationAssociationSPAMethod createNavigationAggregationAssociationSPAMethod()
+	{
+		NavigationAggregationAssociationSPAMethodImpl navigationAggregationAssociationSPAMethod = new NavigationAggregationAssociationSPAMethodImpl();
+		return navigationAggregationAssociationSPAMethod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NavigationAggregationAssociationSPAAttribute createNavigationAggregationAssociationSPAAttribute()
+	{
+		NavigationAggregationAssociationSPAAttributeImpl navigationAggregationAssociationSPAAttribute = new NavigationAggregationAssociationSPAAttributeImpl();
+		return navigationAggregationAssociationSPAAttribute;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FrameworkCategoryList createFrameworkCategoryListFromString(EDataType eDataType, String initialValue)
+	{
 		FrameworkCategoryList result = FrameworkCategoryList.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
@@ -1709,7 +1869,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertFrameworkCategoryListToString(EDataType eDataType, Object instanceValue) {
+	public String convertFrameworkCategoryListToString(EDataType eDataType, Object instanceValue)
+	{
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -1718,7 +1879,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FrameworkKindList createFrameworkKindListFromString(EDataType eDataType, String initialValue) {
+	public FrameworkKindList createFrameworkKindListFromString(EDataType eDataType, String initialValue)
+	{
 		FrameworkKindList result = FrameworkKindList.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
@@ -1731,7 +1893,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertFrameworkKindListToString(EDataType eDataType, Object instanceValue) {
+	public String convertFrameworkKindListToString(EDataType eDataType, Object instanceValue)
+	{
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -1740,7 +1903,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DateTimePrecision createDateTimePrecisionFromString(EDataType eDataType, String initialValue) {
+	public DateTimePrecision createDateTimePrecisionFromString(EDataType eDataType, String initialValue)
+	{
 		DateTimePrecision result = DateTimePrecision.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
@@ -1753,7 +1917,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertDateTimePrecisionToString(EDataType eDataType, Object instanceValue) {
+	public String convertDateTimePrecisionToString(EDataType eDataType, Object instanceValue)
+	{
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -1762,7 +1927,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Generation createGenerationFromString(EDataType eDataType, String initialValue) {
+	public Generation createGenerationFromString(EDataType eDataType, String initialValue)
+	{
 		Generation result = Generation.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
@@ -1775,7 +1941,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertGenerationToString(EDataType eDataType, Object instanceValue) {
+	public String convertGenerationToString(EDataType eDataType, Object instanceValue)
+	{
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -1784,7 +1951,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Collection createCollectionFromString(EDataType eDataType, String initialValue) {
+	public Collection createCollectionFromString(EDataType eDataType, String initialValue)
+	{
 		Collection result = Collection.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
@@ -1797,7 +1965,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertCollectionToString(EDataType eDataType, Object instanceValue) {
+	public String convertCollectionToString(EDataType eDataType, Object instanceValue)
+	{
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -1806,7 +1975,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Order createOrderFromString(EDataType eDataType, String initialValue) {
+	public Order createOrderFromString(EDataType eDataType, String initialValue)
+	{
 		Order result = Order.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
@@ -1819,7 +1989,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertOrderToString(EDataType eDataType, Object instanceValue) {
+	public String convertOrderToString(EDataType eDataType, Object instanceValue)
+	{
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -1828,7 +1999,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Cascade createCascadeFromString(EDataType eDataType, String initialValue) {
+	public Cascade createCascadeFromString(EDataType eDataType, String initialValue)
+	{
 		Cascade result = Cascade.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
@@ -1841,7 +2013,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertCascadeToString(EDataType eDataType, Object instanceValue) {
+	public String convertCascadeToString(EDataType eDataType, Object instanceValue)
+	{
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -1850,7 +2023,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Fetch createFetchFromString(EDataType eDataType, String initialValue) {
+	public Fetch createFetchFromString(EDataType eDataType, String initialValue)
+	{
 		Fetch result = Fetch.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
@@ -1863,7 +2037,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertFetchToString(EDataType eDataType, Object instanceValue) {
+	public String convertFetchToString(EDataType eDataType, Object instanceValue)
+	{
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -1872,7 +2047,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstantNameList createConstantNameListFromString(EDataType eDataType, String initialValue) {
+	public ConstantNameList createConstantNameListFromString(EDataType eDataType, String initialValue)
+	{
 		ConstantNameList result = ConstantNameList.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
@@ -1885,7 +2061,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertConstantNameListToString(EDataType eDataType, Object instanceValue) {
+	public String convertConstantNameListToString(EDataType eDataType, Object instanceValue)
+	{
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -1894,7 +2071,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InheritanceMapping createInheritanceMappingFromString(EDataType eDataType, String initialValue) {
+	public InheritanceMapping createInheritanceMappingFromString(EDataType eDataType, String initialValue)
+	{
 		InheritanceMapping result = InheritanceMapping.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
@@ -1907,7 +2085,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertInheritanceMappingToString(EDataType eDataType, Object instanceValue) {
+	public String convertInheritanceMappingToString(EDataType eDataType, Object instanceValue)
+	{
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -1916,7 +2095,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HttpStatus createHttpStatusFromString(EDataType eDataType, String initialValue) {
+	public HttpStatus createHttpStatusFromString(EDataType eDataType, String initialValue)
+	{
 		HttpStatus result = HttpStatus.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
@@ -1929,7 +2109,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertHttpStatusToString(EDataType eDataType, Object instanceValue) {
+	public String convertHttpStatusToString(EDataType eDataType, Object instanceValue)
+	{
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -1938,7 +2119,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HttpMethodType createHttpMethodTypeFromString(EDataType eDataType, String initialValue) {
+	public HttpMethodType createHttpMethodTypeFromString(EDataType eDataType, String initialValue)
+	{
 		HttpMethodType result = HttpMethodType.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
@@ -1951,7 +2133,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertHttpMethodTypeToString(EDataType eDataType, Object instanceValue) {
+	public String convertHttpMethodTypeToString(EDataType eDataType, Object instanceValue)
+	{
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -1960,7 +2143,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Double createRationalFromString(EDataType eDataType, String initialValue) {
+	public Double createRationalFromString(EDataType eDataType, String initialValue)
+	{
 		return (Double) super.createFromString(eDataType, initialValue);
 	}
 
@@ -1969,7 +2153,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertRationalToString(EDataType eDataType, Object instanceValue) {
+	public String convertRationalToString(EDataType eDataType, Object instanceValue)
+	{
 		return super.convertToString(eDataType, instanceValue);
 	}
 
@@ -1978,7 +2163,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Double createDecimalFromString(EDataType eDataType, String initialValue) {
+	public Double createDecimalFromString(EDataType eDataType, String initialValue)
+	{
 		return (Double) super.createFromString(eDataType, initialValue);
 	}
 
@@ -1987,7 +2173,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertDecimalToString(EDataType eDataType, Object instanceValue) {
+	public String convertDecimalToString(EDataType eDataType, Object instanceValue)
+	{
 		return super.convertToString(eDataType, instanceValue);
 	}
 
@@ -1997,7 +2184,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Override
-	public FramewebPackage getFramewebPackage() {
+	public FramewebPackage getFramewebPackage()
+	{
 		return (FramewebPackage) getEPackage();
 	}
 
@@ -2008,7 +2196,8 @@ public class FramewebFactoryImpl extends EFactoryImpl implements FramewebFactory
 	 * @generated
 	 */
 	@Deprecated
-	public static FramewebPackage getPackage() {
+	public static FramewebPackage getPackage()
+	{
 		return FramewebPackage.eINSTANCE;
 	}
 

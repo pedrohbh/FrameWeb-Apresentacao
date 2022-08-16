@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.GeneralizationImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class DomainGeneralizationImpl extends GeneralizationImpl implements DomainGeneralization {
+public class DomainGeneralizationImpl extends GeneralizationImpl implements DomainGeneralization
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DomainGeneralizationImpl() {
+	protected DomainGeneralizationImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class DomainGeneralizationImpl extends GeneralizationImpl implements Doma
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.DOMAIN_GENERALIZATION;
 	}
 

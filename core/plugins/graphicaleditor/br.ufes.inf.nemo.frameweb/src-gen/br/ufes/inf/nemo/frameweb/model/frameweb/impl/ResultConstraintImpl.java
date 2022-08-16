@@ -28,7 +28,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 @SuppressWarnings("all")
-public class ResultConstraintImpl extends NavigationConstraintImpl implements ResultConstraint {
+public class ResultConstraintImpl extends NavigationConstraintImpl implements ResultConstraint
+{
 	/**
 	 * The default value of the '{@link #getExecute() <em>Execute</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -114,7 +115,8 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ResultConstraintImpl() {
+	protected ResultConstraintImpl()
+	{
 		super();
 	}
 
@@ -124,7 +126,8 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.RESULT_CONSTRAINT;
 	}
 
@@ -134,7 +137,8 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public String getExecute() {
+	public String getExecute()
+	{
 		return execute;
 	}
 
@@ -144,7 +148,8 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public void setExecute(String newExecute) {
+	public void setExecute(String newExecute)
+	{
 		String oldExecute = execute;
 		execute = newExecute;
 		if (eNotificationRequired())
@@ -158,7 +163,8 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public boolean isAjax() {
+	public boolean isAjax()
+	{
 		return ajax;
 	}
 
@@ -168,7 +174,8 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public void setAjax(boolean newAjax) {
+	public void setAjax(boolean newAjax)
+	{
 		boolean oldAjax = ajax;
 		ajax = newAjax;
 		if (eNotificationRequired())
@@ -182,7 +189,8 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public String getResult() {
+	public String getResult()
+	{
 		return result;
 	}
 
@@ -192,7 +200,8 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public void setResult(String newResult) {
+	public void setResult(String newResult)
+	{
 		String oldResult = result;
 		result = newResult;
 		if (eNotificationRequired())
@@ -206,7 +215,8 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public String getRender() {
+	public String getRender()
+	{
 		return render;
 	}
 
@@ -216,7 +226,8 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public void setRender(String newRender) {
+	public void setRender(String newRender)
+	{
 		String oldRender = render;
 		render = newRender;
 		if (eNotificationRequired())
@@ -230,8 +241,10 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.RESULT_CONSTRAINT__EXECUTE:
 			return getExecute();
 		case FramewebPackage.RESULT_CONSTRAINT__AJAX:
@@ -250,8 +263,10 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.RESULT_CONSTRAINT__EXECUTE:
 			setExecute((String) newValue);
 			return;
@@ -274,8 +289,10 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.RESULT_CONSTRAINT__EXECUTE:
 			setExecute(EXECUTE_EDEFAULT);
 			return;
@@ -298,8 +315,10 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.RESULT_CONSTRAINT__EXECUTE:
 			return EXECUTE_EDEFAULT == null ? execute != null : !EXECUTE_EDEFAULT.equals(execute);
 		case FramewebPackage.RESULT_CONSTRAINT__AJAX:
@@ -318,7 +337,8 @@ public class ResultConstraintImpl extends NavigationConstraintImpl implements Re
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

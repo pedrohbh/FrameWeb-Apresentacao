@@ -35,7 +35,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class FramewebProjectImpl extends MinimalEObjectImpl.Container implements FramewebProject {
+public class FramewebProjectImpl extends MinimalEObjectImpl.Container implements FramewebProject
+{
 	/**
 	 * The cached value of the '{@link #getCompose() <em>Compose</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -61,7 +62,8 @@ public class FramewebProjectImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FramewebProjectImpl() {
+	protected FramewebProjectImpl()
+	{
 		super();
 	}
 
@@ -71,7 +73,8 @@ public class FramewebProjectImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.FRAMEWEB_PROJECT;
 	}
 
@@ -81,8 +84,10 @@ public class FramewebProjectImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public EList<FramewebModel> getCompose() {
-		if (compose == null) {
+	public EList<FramewebModel> getCompose()
+	{
+		if (compose == null)
+		{
 			compose = new EObjectContainmentEList<FramewebModel>(FramewebModel.class, this,
 					FramewebPackage.FRAMEWEB_PROJECT__COMPOSE);
 		}
@@ -95,8 +100,10 @@ public class FramewebProjectImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public EList<FrameworkProfile> getConfigures() {
-		if (configures == null) {
+	public EList<FrameworkProfile> getConfigures()
+	{
+		if (configures == null)
+		{
 			configures = new EObjectContainmentEList<FrameworkProfile>(FrameworkProfile.class, this,
 					FramewebPackage.FRAMEWEB_PROJECT__CONFIGURES);
 		}
@@ -109,8 +116,10 @@ public class FramewebProjectImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRAMEWEB_PROJECT__COMPOSE:
 			return ((InternalEList<?>) getCompose()).basicRemove(otherEnd, msgs);
 		case FramewebPackage.FRAMEWEB_PROJECT__CONFIGURES:
@@ -125,8 +134,10 @@ public class FramewebProjectImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRAMEWEB_PROJECT__COMPOSE:
 			return getCompose();
 		case FramewebPackage.FRAMEWEB_PROJECT__CONFIGURES:
@@ -142,8 +153,10 @@ public class FramewebProjectImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRAMEWEB_PROJECT__COMPOSE:
 			getCompose().clear();
 			getCompose().addAll((Collection<? extends FramewebModel>) newValue);
@@ -162,8 +175,10 @@ public class FramewebProjectImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRAMEWEB_PROJECT__COMPOSE:
 			getCompose().clear();
 			return;
@@ -180,8 +195,10 @@ public class FramewebProjectImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRAMEWEB_PROJECT__COMPOSE:
 			return compose != null && !compose.isEmpty();
 		case FramewebPackage.FRAMEWEB_PROJECT__CONFIGURES:

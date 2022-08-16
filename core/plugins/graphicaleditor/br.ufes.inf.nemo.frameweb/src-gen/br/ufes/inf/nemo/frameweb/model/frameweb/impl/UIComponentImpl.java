@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class UIComponentImpl extends NavigationClassImpl implements UIComponent {
+public class UIComponentImpl extends NavigationClassImpl implements UIComponent
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected UIComponentImpl() {
+	protected UIComponentImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class UIComponentImpl extends NavigationClassImpl implements UIComponent 
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.UI_COMPONENT;
 	}
 

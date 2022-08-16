@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class AuthFormImpl extends UIComponentImpl implements AuthForm {
+public class AuthFormImpl extends UIComponentImpl implements AuthForm
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AuthFormImpl() {
+	protected AuthFormImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class AuthFormImpl extends UIComponentImpl implements AuthForm {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.AUTH_FORM;
 	}
 

@@ -12,7 +12,8 @@ import org.eclipse.emf.ecore.EFactory;
  * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage
  * @generated
  */
-public interface FramewebFactory extends EFactory {
+public interface FramewebFactory extends EFactory
+{
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
@@ -1091,6 +1092,24 @@ public interface FramewebFactory extends EFactory {
 	 * @generated
 	 */
 	NavigationSPAProperties createNavigationSPAProperties();
+
+	/**
+	 * Returns a new object of class '<em>Navigation Aggregation Association SPA Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Navigation Aggregation Association SPA Method</em>'.
+	 * @generated
+	 */
+	NavigationAggregationAssociationSPAMethod createNavigationAggregationAssociationSPAMethod();
+
+	/**
+	 * Returns a new object of class '<em>Navigation Aggregation Association SPA Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Navigation Aggregation Association SPA Attribute</em>'.
+	 * @generated
+	 */
+	NavigationAggregationAssociationSPAAttribute createNavigationAggregationAssociationSPAAttribute();
 
 	/**
 	 * Returns the package supported by this factory.

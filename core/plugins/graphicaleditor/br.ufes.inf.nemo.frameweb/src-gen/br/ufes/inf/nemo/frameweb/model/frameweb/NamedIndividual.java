@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface NamedIndividual extends VocabularyEntity, Individual {
+public interface NamedIndividual extends VocabularyEntity, Individual
+{
 } // NamedIndividual

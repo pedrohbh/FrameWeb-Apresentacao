@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface UIComponent extends NavigationClass {
+public interface UIComponent extends NavigationClass
+{
 } // UIComponent

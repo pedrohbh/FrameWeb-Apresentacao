@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.Property;
  * @model
  * @generated
  */
-public interface TagProperty extends Property {
+public interface TagProperty extends Property
+{
 } // TagProperty

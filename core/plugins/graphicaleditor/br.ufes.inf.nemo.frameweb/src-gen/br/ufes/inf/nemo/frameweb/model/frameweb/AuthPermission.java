@@ -18,7 +18,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface AuthPermission extends DomainClass {
+public interface AuthPermission extends DomainClass
+{
 	/**
 	 * Returns the value of the '<em><b>Auth Perm Name</b></em>' reference.
 	 * <!-- begin-user-doc -->

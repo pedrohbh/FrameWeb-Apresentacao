@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.LiteralStringImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class VocabularyLiteralImpl extends LiteralStringImpl implements VocabularyLiteral {
+public class VocabularyLiteralImpl extends LiteralStringImpl implements VocabularyLiteral
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VocabularyLiteralImpl() {
+	protected VocabularyLiteralImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class VocabularyLiteralImpl extends LiteralStringImpl implements Vocabula
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.VOCABULARY_LITERAL;
 	}
 

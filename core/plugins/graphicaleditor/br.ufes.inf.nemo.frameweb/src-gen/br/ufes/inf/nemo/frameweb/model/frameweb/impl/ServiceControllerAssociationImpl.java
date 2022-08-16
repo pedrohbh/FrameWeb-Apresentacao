@@ -20,13 +20,15 @@ import org.eclipse.uml2.uml.internal.impl.AssociationImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class ServiceControllerAssociationImpl extends AssociationImpl implements ServiceControllerAssociation {
+public class ServiceControllerAssociationImpl extends AssociationImpl implements ServiceControllerAssociation
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ServiceControllerAssociationImpl() {
+	protected ServiceControllerAssociationImpl()
+	{
 		super();
 	}
 
@@ -36,7 +38,8 @@ public class ServiceControllerAssociationImpl extends AssociationImpl implements
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.SERVICE_CONTROLLER_ASSOCIATION;
 	}
 
@@ -45,7 +48,8 @@ public class ServiceControllerAssociationImpl extends AssociationImpl implements
 	 * <!-- end-user-doc -->
 	 */
 	@Override
-	public Property getSourceMember() {
+	public Property getSourceMember()
+	{
 		Property sourceMember = getMemberEnds().stream().filter(member -> member.getName().equals("Source")).findFirst()
 				.get();
 
@@ -57,7 +61,8 @@ public class ServiceControllerAssociationImpl extends AssociationImpl implements
 	 * <!-- end-user-doc -->
 	 */
 	@Override
-	public Property getTargetMember() {
+	public Property getTargetMember()
+	{
 		Property targetMember = getMemberEnds().stream().filter(member -> member.getName().equals("Target")).findFirst()
 				.get();
 
@@ -70,8 +75,10 @@ public class ServiceControllerAssociationImpl extends AssociationImpl implements
 	 * @generated
 	 */
 	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
+	{
+		switch (operationID)
+		{
 		case FramewebPackage.SERVICE_CONTROLLER_ASSOCIATION___GET_SOURCE_MEMBER:
 			return getSourceMember();
 		case FramewebPackage.SERVICE_CONTROLLER_ASSOCIATION___GET_TARGET_MEMBER:

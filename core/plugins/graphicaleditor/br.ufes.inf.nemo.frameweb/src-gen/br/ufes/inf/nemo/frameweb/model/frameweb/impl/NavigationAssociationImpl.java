@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.AssociationImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class NavigationAssociationImpl extends AssociationImpl implements NavigationAssociation {
+public class NavigationAssociationImpl extends AssociationImpl implements NavigationAssociation
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NavigationAssociationImpl() {
+	protected NavigationAssociationImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class NavigationAssociationImpl extends AssociationImpl implements Naviga
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.NAVIGATION_ASSOCIATION;
 	}
 

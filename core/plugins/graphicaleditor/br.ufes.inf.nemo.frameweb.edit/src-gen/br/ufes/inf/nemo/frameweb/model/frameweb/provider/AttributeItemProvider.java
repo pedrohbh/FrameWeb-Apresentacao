@@ -29,14 +29,16 @@ import org.eclipse.uml2.uml.edit.providers.PropertyItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AttributeItemProvider extends PropertyItemProvider {
+public class AttributeItemProvider extends PropertyItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AttributeItemProvider(AdapterFactory adapterFactory) {
+	public AttributeItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -47,8 +49,10 @@ public class AttributeItemProvider extends PropertyItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addSizePropertyDescriptor(object);
@@ -65,7 +69,8 @@ public class AttributeItemProvider extends PropertyItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSizePropertyDescriptor(Object object) {
+	protected void addSizePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Attribute_size_feature"),
@@ -81,7 +86,8 @@ public class AttributeItemProvider extends PropertyItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIsNullPropertyDescriptor(Object object) {
+	protected void addIsNullPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Attribute_isNull_feature"),
@@ -97,7 +103,8 @@ public class AttributeItemProvider extends PropertyItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIsPersistentPropertyDescriptor(Object object) {
+	protected void addIsPersistentPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Attribute_isPersistent_feature"),
@@ -113,7 +120,8 @@ public class AttributeItemProvider extends PropertyItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addOwlEquivalentPropertyPropertyDescriptor(Object object) {
+	protected void addOwlEquivalentPropertyPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Attribute_owlEquivalentProperty_feature"),
@@ -129,7 +137,8 @@ public class AttributeItemProvider extends PropertyItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -140,7 +149,8 @@ public class AttributeItemProvider extends PropertyItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((Attribute) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_Attribute_type")
 				: getString("_UI_Attribute_type") + " " + label;
@@ -154,10 +164,12 @@ public class AttributeItemProvider extends PropertyItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Attribute.class)) {
+		switch (notification.getFeatureID(Attribute.class))
+		{
 		case FramewebPackage.ATTRIBUTE__SIZE:
 		case FramewebPackage.ATTRIBUTE__IS_NULL:
 		case FramewebPackage.ATTRIBUTE__IS_PERSISTENT:
@@ -176,7 +188,8 @@ public class AttributeItemProvider extends PropertyItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.MULTIPLICITY_ELEMENT__LOWER_VALUE,
@@ -286,7 +299,8 @@ public class AttributeItemProvider extends PropertyItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -295,7 +309,8 @@ public class AttributeItemProvider extends PropertyItemProvider {
 				|| childFeature == UMLPackage.Literals.MULTIPLICITY_ELEMENT__UPPER_VALUE
 				|| childFeature == UMLPackage.Literals.PROPERTY__DEFAULT_VALUE;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
@@ -309,7 +324,8 @@ public class AttributeItemProvider extends PropertyItemProvider {
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		return FramewebEditPlugin.INSTANCE;
 	}
 

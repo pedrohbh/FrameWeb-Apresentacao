@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class DAOAttributeImpl extends PropertyImpl implements DAOAttribute {
+public class DAOAttributeImpl extends PropertyImpl implements DAOAttribute
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DAOAttributeImpl() {
+	protected DAOAttributeImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class DAOAttributeImpl extends PropertyImpl implements DAOAttribute {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.DAO_ATTRIBUTE;
 	}
 

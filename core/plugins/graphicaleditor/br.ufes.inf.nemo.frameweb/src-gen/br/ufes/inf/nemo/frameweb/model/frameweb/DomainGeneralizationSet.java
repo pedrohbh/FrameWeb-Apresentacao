@@ -20,7 +20,8 @@ import org.eclipse.uml2.uml.GeneralizationSet;
  * @model
  * @generated
  */
-public interface DomainGeneralizationSet extends GeneralizationSet {
+public interface DomainGeneralizationSet extends GeneralizationSet
+{
 	/**
 	 * Returns the value of the '<em><b>Mapping</b></em>' attribute.
 	 * The literals are from the enumeration {@link br.ufes.inf.nemo.frameweb.model.frameweb.InheritanceMapping}.

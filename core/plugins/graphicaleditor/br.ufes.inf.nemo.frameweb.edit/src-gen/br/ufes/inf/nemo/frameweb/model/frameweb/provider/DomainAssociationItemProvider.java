@@ -29,14 +29,16 @@ import org.eclipse.uml2.uml.edit.providers.AssociationItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DomainAssociationItemProvider extends AssociationItemProvider {
+public class DomainAssociationItemProvider extends AssociationItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DomainAssociationItemProvider(AdapterFactory adapterFactory) {
+	public DomainAssociationItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -47,8 +49,10 @@ public class DomainAssociationItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addCollectionPropertyDescriptor(object);
@@ -65,7 +69,8 @@ public class DomainAssociationItemProvider extends AssociationItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCollectionPropertyDescriptor(Object object) {
+	protected void addCollectionPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_DomainAssociation_collection_feature"),
@@ -81,7 +86,8 @@ public class DomainAssociationItemProvider extends AssociationItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCascadePropertyDescriptor(Object object) {
+	protected void addCascadePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_DomainAssociation_cascade_feature"),
@@ -97,7 +103,8 @@ public class DomainAssociationItemProvider extends AssociationItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addFetchPropertyDescriptor(Object object) {
+	protected void addFetchPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_DomainAssociation_fetch_feature"),
@@ -113,7 +120,8 @@ public class DomainAssociationItemProvider extends AssociationItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addOrderPropertyDescriptor(Object object) {
+	protected void addOrderPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_DomainAssociation_order_feature"),
@@ -130,7 +138,8 @@ public class DomainAssociationItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/DomainAssociation"));
 	}
 
@@ -140,7 +149,8 @@ public class DomainAssociationItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -151,7 +161,8 @@ public class DomainAssociationItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((DomainAssociation) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_DomainAssociation_type")
 				: getString("_UI_DomainAssociation_type") + " " + label;
@@ -165,10 +176,12 @@ public class DomainAssociationItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(DomainAssociation.class)) {
+		switch (notification.getFeatureID(DomainAssociation.class))
+		{
 		case FramewebPackage.DOMAIN_ASSOCIATION__COLLECTION:
 		case FramewebPackage.DOMAIN_ASSOCIATION__CASCADE:
 		case FramewebPackage.DOMAIN_ASSOCIATION__FETCH:
@@ -187,7 +200,8 @@ public class DomainAssociationItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.NAMESPACE__OWNED_RULE,
@@ -408,7 +422,8 @@ public class DomainAssociationItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -417,7 +432,8 @@ public class DomainAssociationItemProvider extends AssociationItemProvider {
 				|| childFeature == UMLPackage.Literals.ASSOCIATION__OWNED_END
 				|| childFeature == UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
@@ -431,7 +447,8 @@ public class DomainAssociationItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		return FramewebEditPlugin.INSTANCE;
 	}
 

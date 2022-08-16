@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.PackageImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class MappingLibImpl extends PackageImpl implements MappingLib {
+public class MappingLibImpl extends PackageImpl implements MappingLib
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MappingLibImpl() {
+	protected MappingLibImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class MappingLibImpl extends PackageImpl implements MappingLib {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.MAPPING_LIB;
 	}
 

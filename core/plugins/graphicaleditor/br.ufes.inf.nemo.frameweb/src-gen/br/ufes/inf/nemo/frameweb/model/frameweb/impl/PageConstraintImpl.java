@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class PageConstraintImpl extends NavigationConstraintImpl implements PageConstraint {
+public class PageConstraintImpl extends NavigationConstraintImpl implements PageConstraint
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PageConstraintImpl() {
+	protected PageConstraintImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class PageConstraintImpl extends NavigationConstraintImpl implements Page
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.PAGE_CONSTRAINT;
 	}
 

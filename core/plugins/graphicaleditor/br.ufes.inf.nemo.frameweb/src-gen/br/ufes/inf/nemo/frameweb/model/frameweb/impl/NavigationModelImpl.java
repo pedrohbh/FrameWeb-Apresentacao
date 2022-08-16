@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class NavigationModelImpl extends FramewebModelImpl implements NavigationModel {
+public class NavigationModelImpl extends FramewebModelImpl implements NavigationModel
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NavigationModelImpl() {
+	protected NavigationModelImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class NavigationModelImpl extends FramewebModelImpl implements Navigation
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.NAVIGATION_MODEL;
 	}
 

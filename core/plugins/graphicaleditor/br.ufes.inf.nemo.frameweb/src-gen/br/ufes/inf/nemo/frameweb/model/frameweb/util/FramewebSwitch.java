@@ -63,7 +63,8 @@ import org.eclipse.uml2.uml.ValueSpecification;
  * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage
  * @generated
  */
-public class FramewebSwitch<T> extends Switch<T> {
+public class FramewebSwitch<T> extends Switch<T>
+{
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -78,8 +79,10 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FramewebSwitch() {
-		if (modelPackage == null) {
+	public FramewebSwitch()
+	{
+		if (modelPackage == null)
+		{
 			modelPackage = FramewebPackage.eINSTANCE;
 		}
 	}
@@ -93,7 +96,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected boolean isSwitchFor(EPackage ePackage) {
+	protected boolean isSwitchFor(EPackage ePackage)
+	{
 		return ePackage == modelPackage;
 	}
 
@@ -105,16 +109,20 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected T doSwitch(int classifierID, EObject theEObject) {
-		switch (classifierID) {
-		case FramewebPackage.FRAMEWEB_PROJECT: {
+	protected T doSwitch(int classifierID, EObject theEObject)
+	{
+		switch (classifierID)
+		{
+		case FramewebPackage.FRAMEWEB_PROJECT:
+		{
 			FramewebProject framewebProject = (FramewebProject) theEObject;
 			T result = caseFramewebProject(framewebProject);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.FRAMEWEB_MODEL: {
+		case FramewebPackage.FRAMEWEB_MODEL:
+		{
 			FramewebModel framewebModel = (FramewebModel) theEObject;
 			T result = caseFramewebModel(framewebModel);
 			if (result == null)
@@ -139,7 +147,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.FRAMEWORK_PROFILE: {
+		case FramewebPackage.FRAMEWORK_PROFILE:
+		{
 			FrameworkProfile frameworkProfile = (FrameworkProfile) theEObject;
 			T result = caseFrameworkProfile(frameworkProfile);
 			if (result == null)
@@ -164,7 +173,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.ENTITY_MODEL: {
+		case FramewebPackage.ENTITY_MODEL:
+		{
 			EntityModel entityModel = (EntityModel) theEObject;
 			T result = caseEntityModel(entityModel);
 			if (result == null)
@@ -191,7 +201,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.NAVIGATION_MODEL: {
+		case FramewebPackage.NAVIGATION_MODEL:
+		{
 			NavigationModel navigationModel = (NavigationModel) theEObject;
 			T result = caseNavigationModel(navigationModel);
 			if (result == null)
@@ -218,7 +229,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.APPLICATION_MODEL: {
+		case FramewebPackage.APPLICATION_MODEL:
+		{
 			ApplicationModel applicationModel = (ApplicationModel) theEObject;
 			T result = caseApplicationModel(applicationModel);
 			if (result == null)
@@ -245,7 +257,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.PERSISTENCE_MODEL: {
+		case FramewebPackage.PERSISTENCE_MODEL:
+		{
 			PersistenceModel persistenceModel = (PersistenceModel) theEObject;
 			T result = casePersistenceModel(persistenceModel);
 			if (result == null)
@@ -272,7 +285,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DOMAIN_ASSOCIATION: {
+		case FramewebPackage.DOMAIN_ASSOCIATION:
+		{
 			DomainAssociation domainAssociation = (DomainAssociation) theEObject;
 			T result = caseDomainAssociation(domainAssociation);
 			if (result == null)
@@ -303,7 +317,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.ATTRIBUTE: {
+		case FramewebPackage.ATTRIBUTE:
+		{
 			Attribute attribute = (Attribute) theEObject;
 			T result = caseAttribute(attribute);
 			if (result == null)
@@ -334,7 +349,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.VERSION_ATTRIBUTE: {
+		case FramewebPackage.VERSION_ATTRIBUTE:
+		{
 			VersionAttribute versionAttribute = (VersionAttribute) theEObject;
 			T result = caseVersionAttribute(versionAttribute);
 			if (result == null)
@@ -367,7 +383,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.ID_ATTRIBUTE: {
+		case FramewebPackage.ID_ATTRIBUTE:
+		{
 			IdAttribute idAttribute = (IdAttribute) theEObject;
 			T result = caseIdAttribute(idAttribute);
 			if (result == null)
@@ -400,7 +417,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.LOB_ATTRIBUTE: {
+		case FramewebPackage.LOB_ATTRIBUTE:
+		{
 			LOBAttribute lobAttribute = (LOBAttribute) theEObject;
 			T result = caseLOBAttribute(lobAttribute);
 			if (result == null)
@@ -433,7 +451,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.EMBEDDED_ATTRIBUTE: {
+		case FramewebPackage.EMBEDDED_ATTRIBUTE:
+		{
 			EmbeddedAttribute embeddedAttribute = (EmbeddedAttribute) theEObject;
 			T result = caseEmbeddedAttribute(embeddedAttribute);
 			if (result == null)
@@ -466,7 +485,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DECIMAL_ATTRIBUTE: {
+		case FramewebPackage.DECIMAL_ATTRIBUTE:
+		{
 			DecimalAttribute decimalAttribute = (DecimalAttribute) theEObject;
 			T result = caseDecimalAttribute(decimalAttribute);
 			if (result == null)
@@ -499,7 +519,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DATE_TIME_ATTRIBUTE: {
+		case FramewebPackage.DATE_TIME_ATTRIBUTE:
+		{
 			DateTimeAttribute dateTimeAttribute = (DateTimeAttribute) theEObject;
 			T result = caseDateTimeAttribute(dateTimeAttribute);
 			if (result == null)
@@ -532,7 +553,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.PAGE: {
+		case FramewebPackage.PAGE:
+		{
 			Page page = (Page) theEObject;
 			T result = casePage(page);
 			if (result == null)
@@ -569,7 +591,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.AUTH_PAGE: {
+		case FramewebPackage.AUTH_PAGE:
+		{
 			AuthPage authPage = (AuthPage) theEObject;
 			T result = caseAuthPage(authPage);
 			if (result == null)
@@ -608,7 +631,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DAO_INTERFACE: {
+		case FramewebPackage.DAO_INTERFACE:
+		{
 			DAOInterface daoInterface = (DAOInterface) theEObject;
 			T result = caseDAOInterface(daoInterface);
 			if (result == null)
@@ -637,7 +661,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DAO_CLASS: {
+		case FramewebPackage.DAO_CLASS:
+		{
 			DAOClass daoClass = (DAOClass) theEObject;
 			T result = caseDAOClass(daoClass);
 			if (result == null)
@@ -672,7 +697,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DAO_REALIZATION: {
+		case FramewebPackage.DAO_REALIZATION:
+		{
 			DAORealization daoRealization = (DAORealization) theEObject;
 			T result = caseDAORealization(daoRealization);
 			if (result == null)
@@ -701,7 +727,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.FRONT_CONTROLLER_CLASS: {
+		case FramewebPackage.FRONT_CONTROLLER_CLASS:
+		{
 			FrontControllerClass frontControllerClass = (FrontControllerClass) theEObject;
 			T result = caseFrontControllerClass(frontControllerClass);
 			if (result == null)
@@ -736,7 +763,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.IO_PARAMETER: {
+		case FramewebPackage.IO_PARAMETER:
+		{
 			IOParameter ioParameter = (IOParameter) theEObject;
 			T result = caseIOParameter(ioParameter);
 			if (result == null)
@@ -769,7 +797,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.RESULT_DEPENDENCY: {
+		case FramewebPackage.RESULT_DEPENDENCY:
+		{
 			ResultDependency resultDependency = (ResultDependency) theEObject;
 			T result = caseResultDependency(resultDependency);
 			if (result == null)
@@ -794,7 +823,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.AUTH_SUCCESS_URL: {
+		case FramewebPackage.AUTH_SUCCESS_URL:
+		{
 			AuthSuccessUrl authSuccessUrl = (AuthSuccessUrl) theEObject;
 			T result = caseAuthSuccessUrl(authSuccessUrl);
 			if (result == null)
@@ -821,7 +851,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.AUTH_FAILURE_URL: {
+		case FramewebPackage.AUTH_FAILURE_URL:
+		{
 			AuthFailureUrl authFailureUrl = (AuthFailureUrl) theEObject;
 			T result = caseAuthFailureUrl(authFailureUrl);
 			if (result == null)
@@ -848,7 +879,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.NAVIGATION_ASSOCIATION: {
+		case FramewebPackage.NAVIGATION_ASSOCIATION:
+		{
 			NavigationAssociation navigationAssociation = (NavigationAssociation) theEObject;
 			T result = caseNavigationAssociation(navigationAssociation);
 			if (result == null)
@@ -879,7 +911,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.FRONT_CONTROLLER_METHOD: {
+		case FramewebPackage.FRONT_CONTROLLER_METHOD:
+		{
 			FrontControllerMethod frontControllerMethod = (FrontControllerMethod) theEObject;
 			T result = caseFrontControllerMethod(frontControllerMethod);
 			if (result == null)
@@ -906,7 +939,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.AUTH_PROCESSING_METHOD: {
+		case FramewebPackage.AUTH_PROCESSING_METHOD:
+		{
 			AuthProcessingMethod authProcessingMethod = (AuthProcessingMethod) theEObject;
 			T result = caseAuthProcessingMethod(authProcessingMethod);
 			if (result == null)
@@ -935,7 +969,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.SERVICE_CLASS: {
+		case FramewebPackage.SERVICE_CLASS:
+		{
 			ServiceClass serviceClass = (ServiceClass) theEObject;
 			T result = caseServiceClass(serviceClass);
 			if (result == null)
@@ -970,7 +1005,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.AUTH_SERVICE_CLASS: {
+		case FramewebPackage.AUTH_SERVICE_CLASS:
+		{
 			AuthServiceClass authServiceClass = (AuthServiceClass) theEObject;
 			T result = caseAuthServiceClass(authServiceClass);
 			if (result == null)
@@ -1007,7 +1043,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.SERVICE_INTERFACE: {
+		case FramewebPackage.SERVICE_INTERFACE:
+		{
 			ServiceInterface serviceInterface = (ServiceInterface) theEObject;
 			T result = caseServiceInterface(serviceInterface);
 			if (result == null)
@@ -1036,7 +1073,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.AUTH_SERVICE_INTERFACE: {
+		case FramewebPackage.AUTH_SERVICE_INTERFACE:
+		{
 			AuthServiceInterface authServiceInterface = (AuthServiceInterface) theEObject;
 			T result = caseAuthServiceInterface(authServiceInterface);
 			if (result == null)
@@ -1067,7 +1105,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.SERVICE_GENERALIZATION: {
+		case FramewebPackage.SERVICE_GENERALIZATION:
+		{
 			ServiceGeneralization serviceGeneralization = (ServiceGeneralization) theEObject;
 			T result = caseServiceGeneralization(serviceGeneralization);
 			if (result == null)
@@ -1084,7 +1123,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.SERVICE_CONTROLLER_ASSOCIATION: {
+		case FramewebPackage.SERVICE_CONTROLLER_ASSOCIATION:
+		{
 			ServiceControllerAssociation serviceControllerAssociation = (ServiceControllerAssociation) theEObject;
 			T result = caseServiceControllerAssociation(serviceControllerAssociation);
 			if (result == null)
@@ -1117,7 +1157,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DOMAIN_CLASS: {
+		case FramewebPackage.DOMAIN_CLASS:
+		{
 			DomainClass domainClass = (DomainClass) theEObject;
 			T result = caseDomainClass(domainClass);
 			if (result == null)
@@ -1152,7 +1193,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.AUTH_USER: {
+		case FramewebPackage.AUTH_USER:
+		{
 			AuthUser authUser = (AuthUser) theEObject;
 			T result = caseAuthUser(authUser);
 			if (result == null)
@@ -1189,7 +1231,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.AUTH_ROLE: {
+		case FramewebPackage.AUTH_ROLE:
+		{
 			AuthRole authRole = (AuthRole) theEObject;
 			T result = caseAuthRole(authRole);
 			if (result == null)
@@ -1226,7 +1269,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.AUTH_PERMISSION: {
+		case FramewebPackage.AUTH_PERMISSION:
+		{
 			AuthPermission authPermission = (AuthPermission) theEObject;
 			T result = caseAuthPermission(authPermission);
 			if (result == null)
@@ -1263,7 +1307,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.FRONT_CONTROLLER_DEPENDENCY: {
+		case FramewebPackage.FRONT_CONTROLLER_DEPENDENCY:
+		{
 			FrontControllerDependency frontControllerDependency = (FrontControllerDependency) theEObject;
 			T result = caseFrontControllerDependency(frontControllerDependency);
 			if (result == null)
@@ -1288,7 +1333,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.PAGE_DEPENDENCY: {
+		case FramewebPackage.PAGE_DEPENDENCY:
+		{
 			PageDependency pageDependency = (PageDependency) theEObject;
 			T result = casePageDependency(pageDependency);
 			if (result == null)
@@ -1313,7 +1359,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DAO_SERVICE_ASSOCIATION: {
+		case FramewebPackage.DAO_SERVICE_ASSOCIATION:
+		{
 			DAOServiceAssociation daoServiceAssociation = (DAOServiceAssociation) theEObject;
 			T result = caseDAOServiceAssociation(daoServiceAssociation);
 			if (result == null)
@@ -1346,7 +1393,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.NAVIGATION_ATTRIBUTE: {
+		case FramewebPackage.NAVIGATION_ATTRIBUTE:
+		{
 			NavigationAttribute navigationAttribute = (NavigationAttribute) theEObject;
 			T result = caseNavigationAttribute(navigationAttribute);
 			if (result == null)
@@ -1377,7 +1425,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.NAVIGATION_CLASS: {
+		case FramewebPackage.NAVIGATION_CLASS:
+		{
 			NavigationClass navigationClass = (NavigationClass) theEObject;
 			T result = caseNavigationClass(navigationClass);
 			if (result == null)
@@ -1412,7 +1461,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DOMAIN_METHOD: {
+		case FramewebPackage.DOMAIN_METHOD:
+		{
 			DomainMethod domainMethod = (DomainMethod) theEObject;
 			T result = caseDomainMethod(domainMethod);
 			if (result == null)
@@ -1439,7 +1489,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DAO_ATTRIBUTE: {
+		case FramewebPackage.DAO_ATTRIBUTE:
+		{
 			DAOAttribute daoAttribute = (DAOAttribute) theEObject;
 			T result = caseDAOAttribute(daoAttribute);
 			if (result == null)
@@ -1470,7 +1521,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.SERVICE_METHOD: {
+		case FramewebPackage.SERVICE_METHOD:
+		{
 			ServiceMethod serviceMethod = (ServiceMethod) theEObject;
 			T result = caseServiceMethod(serviceMethod);
 			if (result == null)
@@ -1497,7 +1549,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.AUTH_SERVICE_METHOD: {
+		case FramewebPackage.AUTH_SERVICE_METHOD:
+		{
 			AuthServiceMethod authServiceMethod = (AuthServiceMethod) theEObject;
 			T result = caseAuthServiceMethod(authServiceMethod);
 			if (result == null)
@@ -1526,7 +1579,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.SERVICE_ATTRIBUTE: {
+		case FramewebPackage.SERVICE_ATTRIBUTE:
+		{
 			ServiceAttribute serviceAttribute = (ServiceAttribute) theEObject;
 			T result = caseServiceAttribute(serviceAttribute);
 			if (result == null)
@@ -1557,7 +1611,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.SERVICE_ASSOCIATION: {
+		case FramewebPackage.SERVICE_ASSOCIATION:
+		{
 			ServiceAssociation serviceAssociation = (ServiceAssociation) theEObject;
 			T result = caseServiceAssociation(serviceAssociation);
 			if (result == null)
@@ -1588,7 +1643,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.NAVIGATION_DEPENDENCY: {
+		case FramewebPackage.NAVIGATION_DEPENDENCY:
+		{
 			NavigationDependency navigationDependency = (NavigationDependency) theEObject;
 			T result = caseNavigationDependency(navigationDependency);
 			if (result == null)
@@ -1611,7 +1667,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DAO_METHOD: {
+		case FramewebPackage.DAO_METHOD:
+		{
 			DAOMethod daoMethod = (DAOMethod) theEObject;
 			T result = caseDAOMethod(daoMethod);
 			if (result == null)
@@ -1638,7 +1695,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DOMAIN_PACKAGE: {
+		case FramewebPackage.DOMAIN_PACKAGE:
+		{
 			DomainPackage domainPackage = (DomainPackage) theEObject;
 			T result = caseDomainPackage(domainPackage);
 			if (result == null)
@@ -1661,7 +1719,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.VIEW_PACKAGE: {
+		case FramewebPackage.VIEW_PACKAGE:
+		{
 			ViewPackage viewPackage = (ViewPackage) theEObject;
 			T result = caseViewPackage(viewPackage);
 			if (result == null)
@@ -1686,7 +1745,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.CONTROLLER_PACKAGE: {
+		case FramewebPackage.CONTROLLER_PACKAGE:
+		{
 			ControllerPackage controllerPackage = (ControllerPackage) theEObject;
 			T result = caseControllerPackage(controllerPackage);
 			if (result == null)
@@ -1711,7 +1771,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.PERSISTENCE_PACKAGE: {
+		case FramewebPackage.PERSISTENCE_PACKAGE:
+		{
 			PersistencePackage persistencePackage = (PersistencePackage) theEObject;
 			T result = casePersistencePackage(persistencePackage);
 			if (result == null)
@@ -1734,7 +1795,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.APPLICATION_PACKAGE: {
+		case FramewebPackage.APPLICATION_PACKAGE:
+		{
 			ApplicationPackage applicationPackage = (ApplicationPackage) theEObject;
 			T result = caseApplicationPackage(applicationPackage);
 			if (result == null)
@@ -1757,7 +1819,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.UI_COMPONENT: {
+		case FramewebPackage.UI_COMPONENT:
+		{
 			UIComponent uiComponent = (UIComponent) theEObject;
 			T result = caseUIComponent(uiComponent);
 			if (result == null)
@@ -1794,7 +1857,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.AUTH_FORM: {
+		case FramewebPackage.AUTH_FORM:
+		{
 			AuthForm authForm = (AuthForm) theEObject;
 			T result = caseAuthForm(authForm);
 			if (result == null)
@@ -1833,7 +1897,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.RESULT_TYPE: {
+		case FramewebPackage.RESULT_TYPE:
+		{
 			ResultType resultType = (ResultType) theEObject;
 			T result = caseResultType(resultType);
 			if (result == null)
@@ -1870,7 +1935,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.NAVIGATION_PACKAGE: {
+		case FramewebPackage.NAVIGATION_PACKAGE:
+		{
 			NavigationPackage navigationPackage = (NavigationPackage) theEObject;
 			T result = caseNavigationPackage(navigationPackage);
 			if (result == null)
@@ -1893,7 +1959,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DOMAIN_GENERALIZATION: {
+		case FramewebPackage.DOMAIN_GENERALIZATION:
+		{
 			DomainGeneralization domainGeneralization = (DomainGeneralization) theEObject;
 			T result = caseDomainGeneralization(domainGeneralization);
 			if (result == null)
@@ -1910,7 +1977,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.UI_COMPONENT_FIELD: {
+		case FramewebPackage.UI_COMPONENT_FIELD:
+		{
 			UIComponentField uiComponentField = (UIComponentField) theEObject;
 			T result = caseUIComponentField(uiComponentField);
 			if (result == null)
@@ -1943,7 +2011,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.TAG_LIB: {
+		case FramewebPackage.TAG_LIB:
+		{
 			TagLib tagLib = (TagLib) theEObject;
 			T result = caseTagLib(tagLib);
 			if (result == null)
@@ -1966,7 +2035,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.TAG: {
+		case FramewebPackage.TAG:
+		{
 			Tag tag = (Tag) theEObject;
 			T result = caseTag(tag);
 			if (result == null)
@@ -2003,7 +2073,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.NAVIGATION_COMPOSITION_PART: {
+		case FramewebPackage.NAVIGATION_COMPOSITION_PART:
+		{
 			NavigationCompositionPart navigationCompositionPart = (NavigationCompositionPart) theEObject;
 			T result = caseNavigationCompositionPart(navigationCompositionPart);
 			if (result == null)
@@ -2036,7 +2107,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.NAVIGATION_COMPOSITION_WHOLE: {
+		case FramewebPackage.NAVIGATION_COMPOSITION_WHOLE:
+		{
 			NavigationCompositionWhole navigationCompositionWhole = (NavigationCompositionWhole) theEObject;
 			T result = caseNavigationCompositionWhole(navigationCompositionWhole);
 			if (result == null)
@@ -2069,7 +2141,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.NAVIGATION_PROPERTY: {
+		case FramewebPackage.NAVIGATION_PROPERTY:
+		{
 			NavigationProperty navigationProperty = (NavigationProperty) theEObject;
 			T result = caseNavigationProperty(navigationProperty);
 			if (result == null)
@@ -2100,7 +2173,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.RESULT_SET: {
+		case FramewebPackage.RESULT_SET:
+		{
 			ResultSet resultSet = (ResultSet) theEObject;
 			T result = caseResultSet(resultSet);
 			if (result == null)
@@ -2123,7 +2197,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.NAVIGATION_CONSTRAINT: {
+		case FramewebPackage.NAVIGATION_CONSTRAINT:
+		{
 			NavigationConstraint navigationConstraint = (NavigationConstraint) theEObject;
 			T result = caseNavigationConstraint(navigationConstraint);
 			if (result == null)
@@ -2142,7 +2217,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.PAGE_CONSTRAINT: {
+		case FramewebPackage.PAGE_CONSTRAINT:
+		{
 			PageConstraint pageConstraint = (PageConstraint) theEObject;
 			T result = casePageConstraint(pageConstraint);
 			if (result == null)
@@ -2163,7 +2239,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.RESULT_CONSTRAINT: {
+		case FramewebPackage.RESULT_CONSTRAINT:
+		{
 			ResultConstraint resultConstraint = (ResultConstraint) theEObject;
 			T result = caseResultConstraint(resultConstraint);
 			if (result == null)
@@ -2184,7 +2261,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.METHOD_CONSTRAINT: {
+		case FramewebPackage.METHOD_CONSTRAINT:
+		{
 			MethodConstraint methodConstraint = (MethodConstraint) theEObject;
 			T result = caseMethodConstraint(methodConstraint);
 			if (result == null)
@@ -2205,7 +2283,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.CHAINING_CONSTRAINT: {
+		case FramewebPackage.CHAINING_CONSTRAINT:
+		{
 			ChainingConstraint chainingConstraint = (ChainingConstraint) theEObject;
 			T result = caseChainingConstraint(chainingConstraint);
 			if (result == null)
@@ -2226,7 +2305,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.NAVIGATION_GENERALIZATION: {
+		case FramewebPackage.NAVIGATION_GENERALIZATION:
+		{
 			NavigationGeneralization navigationGeneralization = (NavigationGeneralization) theEObject;
 			T result = caseNavigationGeneralization(navigationGeneralization);
 			if (result == null)
@@ -2243,7 +2323,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DOMAIN_CONSTRAINTS: {
+		case FramewebPackage.DOMAIN_CONSTRAINTS:
+		{
 			DomainConstraints domainConstraints = (DomainConstraints) theEObject;
 			T result = caseDomainConstraints(domainConstraints);
 			if (result == null)
@@ -2262,7 +2343,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DAO_GENERALIZATION: {
+		case FramewebPackage.DAO_GENERALIZATION:
+		{
 			DAOGeneralization daoGeneralization = (DAOGeneralization) theEObject;
 			T result = caseDAOGeneralization(daoGeneralization);
 			if (result == null)
@@ -2279,7 +2361,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.MAPPING_LIB: {
+		case FramewebPackage.MAPPING_LIB:
+		{
 			MappingLib mappingLib = (MappingLib) theEObject;
 			T result = caseMappingLib(mappingLib);
 			if (result == null)
@@ -2302,7 +2385,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.CLASS_MAPPING: {
+		case FramewebPackage.CLASS_MAPPING:
+		{
 			ClassMapping classMapping = (ClassMapping) theEObject;
 			T result = caseClassMapping(classMapping);
 			if (result == null)
@@ -2339,7 +2423,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.ATTRIBUTE_MAPPING: {
+		case FramewebPackage.ATTRIBUTE_MAPPING:
+		{
 			AttributeMapping attributeMapping = (AttributeMapping) theEObject;
 			T result = caseAttributeMapping(attributeMapping);
 			if (result == null)
@@ -2376,7 +2461,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DOMAIN_GENERALIZATION_SET: {
+		case FramewebPackage.DOMAIN_GENERALIZATION_SET:
+		{
 			DomainGeneralizationSet domainGeneralizationSet = (DomainGeneralizationSet) theEObject;
 			T result = caseDomainGeneralizationSet(domainGeneralizationSet);
 			if (result == null)
@@ -2395,7 +2481,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.CONTROLLER: {
+		case FramewebPackage.CONTROLLER:
+		{
 			Controller controller = (Controller) theEObject;
 			T result = caseController(controller);
 			if (result == null)
@@ -2432,7 +2519,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.TAG_PROPERTY: {
+		case FramewebPackage.TAG_PROPERTY:
+		{
 			TagProperty tagProperty = (TagProperty) theEObject;
 			T result = caseTagProperty(tagProperty);
 			if (result == null)
@@ -2463,7 +2551,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.RESULT_PROPERTY: {
+		case FramewebPackage.RESULT_PROPERTY:
+		{
 			ResultProperty resultProperty = (ResultProperty) theEObject;
 			T result = caseResultProperty(resultProperty);
 			if (result == null)
@@ -2494,7 +2583,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.CLASS_MAPPING_PROPERY: {
+		case FramewebPackage.CLASS_MAPPING_PROPERY:
+		{
 			ClassMappingPropery classMappingPropery = (ClassMappingPropery) theEObject;
 			T result = caseClassMappingPropery(classMappingPropery);
 			if (result == null)
@@ -2525,7 +2615,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.ATTRIBUTE_MAPPING_PROPERTY: {
+		case FramewebPackage.ATTRIBUTE_MAPPING_PROPERTY:
+		{
 			AttributeMappingProperty attributeMappingProperty = (AttributeMappingProperty) theEObject;
 			T result = caseAttributeMappingProperty(attributeMappingProperty);
 			if (result == null)
@@ -2556,7 +2647,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.SERVICE_REALIZATION: {
+		case FramewebPackage.SERVICE_REALIZATION:
+		{
 			ServiceRealization serviceRealization = (ServiceRealization) theEObject;
 			T result = caseServiceRealization(serviceRealization);
 			if (result == null)
@@ -2585,7 +2677,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.NAVIGATION_GENERALIZATION_SET: {
+		case FramewebPackage.NAVIGATION_GENERALIZATION_SET:
+		{
 			NavigationGeneralizationSet navigationGeneralizationSet = (NavigationGeneralizationSet) theEObject;
 			T result = caseNavigationGeneralizationSet(navigationGeneralizationSet);
 			if (result == null)
@@ -2604,7 +2697,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DAO_GENERALIZATION_SET: {
+		case FramewebPackage.DAO_GENERALIZATION_SET:
+		{
 			DAOGeneralizationSet daoGeneralizationSet = (DAOGeneralizationSet) theEObject;
 			T result = caseDAOGeneralizationSet(daoGeneralizationSet);
 			if (result == null)
@@ -2623,7 +2717,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.SERVICE_GENERALIZATION_SET: {
+		case FramewebPackage.SERVICE_GENERALIZATION_SET:
+		{
 			ServiceGeneralizationSet serviceGeneralizationSet = (ServiceGeneralizationSet) theEObject;
 			T result = caseServiceGeneralizationSet(serviceGeneralizationSet);
 			if (result == null)
@@ -2642,7 +2737,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.SEMANTIC_PACKAGE: {
+		case FramewebPackage.SEMANTIC_PACKAGE:
+		{
 			SemanticPackage semanticPackage = (SemanticPackage) theEObject;
 			T result = caseSemanticPackage(semanticPackage);
 			if (result == null)
@@ -2665,7 +2761,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.IRI: {
+		case FramewebPackage.IRI:
+		{
 			IRI iri = (IRI) theEObject;
 			T result = caseIRI(iri);
 			if (result == null)
@@ -2696,7 +2793,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.VOCABULARY_MODEL: {
+		case FramewebPackage.VOCABULARY_MODEL:
+		{
 			VocabularyModel vocabularyModel = (VocabularyModel) theEObject;
 			T result = caseVocabularyModel(vocabularyModel);
 			if (result == null)
@@ -2723,7 +2821,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.VOCABULARY: {
+		case FramewebPackage.VOCABULARY:
+		{
 			Vocabulary vocabulary = (Vocabulary) theEObject;
 			T result = caseVocabulary(vocabulary);
 			if (result == null)
@@ -2746,7 +2845,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.AXIOM: {
+		case FramewebPackage.AXIOM:
+		{
 			Axiom axiom = (Axiom) theEObject;
 			T result = caseAxiom(axiom);
 			if (result == null)
@@ -2781,7 +2881,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.ANNOTATION: {
+		case FramewebPackage.ANNOTATION:
+		{
 			Annotation annotation = (Annotation) theEObject;
 			T result = caseAnnotation(annotation);
 			if (result == null)
@@ -2816,7 +2917,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.VOCABULARY_CONSTRAINTS: {
+		case FramewebPackage.VOCABULARY_CONSTRAINTS:
+		{
 			VocabularyConstraints vocabularyConstraints = (VocabularyConstraints) theEObject;
 			T result = caseVocabularyConstraints(vocabularyConstraints);
 			if (result == null)
@@ -2835,7 +2937,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.VOCABULARY_ASSOCIATION: {
+		case FramewebPackage.VOCABULARY_ASSOCIATION:
+		{
 			VocabularyAssociation vocabularyAssociation = (VocabularyAssociation) theEObject;
 			T result = caseVocabularyAssociation(vocabularyAssociation);
 			if (result == null)
@@ -2866,7 +2969,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.VOCABULARY_PROPERTY: {
+		case FramewebPackage.VOCABULARY_PROPERTY:
+		{
 			VocabularyProperty vocabularyProperty = (VocabularyProperty) theEObject;
 			T result = caseVocabularyProperty(vocabularyProperty);
 			if (result == null)
@@ -2897,7 +3001,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.VOCABULARY_ENTITY: {
+		case FramewebPackage.VOCABULARY_ENTITY:
+		{
 			VocabularyEntity vocabularyEntity = (VocabularyEntity) theEObject;
 			T result = caseVocabularyEntity(vocabularyEntity);
 			if (result == null)
@@ -2924,7 +3029,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.OBJECT_PROPERTY: {
+		case FramewebPackage.OBJECT_PROPERTY:
+		{
 			ObjectProperty objectProperty = (ObjectProperty) theEObject;
 			T result = caseObjectProperty(objectProperty);
 			if (result == null)
@@ -2959,7 +3065,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DATA_PROPERTY: {
+		case FramewebPackage.DATA_PROPERTY:
+		{
 			DataProperty dataProperty = (DataProperty) theEObject;
 			T result = caseDataProperty(dataProperty);
 			if (result == null)
@@ -2994,7 +3101,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.VOCABULARY_DATA_TYPE: {
+		case FramewebPackage.VOCABULARY_DATA_TYPE:
+		{
 			VocabularyDataType vocabularyDataType = (VocabularyDataType) theEObject;
 			T result = caseVocabularyDataType(vocabularyDataType);
 			if (result == null)
@@ -3025,7 +3133,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.NAMED_INDIVIDUAL: {
+		case FramewebPackage.NAMED_INDIVIDUAL:
+		{
 			NamedIndividual namedIndividual = (NamedIndividual) theEObject;
 			T result = caseNamedIndividual(namedIndividual);
 			if (result == null)
@@ -3070,7 +3179,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.VOCABULARY_CLASS: {
+		case FramewebPackage.VOCABULARY_CLASS:
+		{
 			VocabularyClass vocabularyClass = (VocabularyClass) theEObject;
 			T result = caseVocabularyClass(vocabularyClass);
 			if (result == null)
@@ -3105,7 +3215,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.ANONYMOUS_INDIVIDUAL: {
+		case FramewebPackage.ANONYMOUS_INDIVIDUAL:
+		{
 			AnonymousIndividual anonymousIndividual = (AnonymousIndividual) theEObject;
 			T result = caseAnonymousIndividual(anonymousIndividual);
 			if (result == null)
@@ -3138,7 +3249,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.INDIVIDUAL: {
+		case FramewebPackage.INDIVIDUAL:
+		{
 			Individual individual = (Individual) theEObject;
 			T result = caseIndividual(individual);
 			if (result == null)
@@ -3169,7 +3281,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.VOCABULARY_LITERAL: {
+		case FramewebPackage.VOCABULARY_LITERAL:
+		{
 			VocabularyLiteral vocabularyLiteral = (VocabularyLiteral) theEObject;
 			T result = caseVocabularyLiteral(vocabularyLiteral);
 			if (result == null)
@@ -3194,7 +3307,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DOMAIN_VOCABULARY_ASSOCIATION: {
+		case FramewebPackage.DOMAIN_VOCABULARY_ASSOCIATION:
+		{
 			DomainVocabularyAssociation domainVocabularyAssociation = (DomainVocabularyAssociation) theEObject;
 			T result = caseDomainVocabularyAssociation(domainVocabularyAssociation);
 			if (result == null)
@@ -3225,7 +3339,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DOMAIN_VOCABULARY_PROPERTY: {
+		case FramewebPackage.DOMAIN_VOCABULARY_PROPERTY:
+		{
 			DomainVocabularyProperty domainVocabularyProperty = (DomainVocabularyProperty) theEObject;
 			T result = caseDomainVocabularyProperty(domainVocabularyProperty);
 			if (result == null)
@@ -3256,7 +3371,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DOMAIN_ATTRIBUTE: {
+		case FramewebPackage.DOMAIN_ATTRIBUTE:
+		{
 			DomainAttribute domainAttribute = (DomainAttribute) theEObject;
 			T result = caseDomainAttribute(domainAttribute);
 			if (result == null)
@@ -3289,7 +3405,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DOMAIN_AUTH_ATTRIBUTE: {
+		case FramewebPackage.DOMAIN_AUTH_ATTRIBUTE:
+		{
 			DomainAuthAttribute domainAuthAttribute = (DomainAuthAttribute) theEObject;
 			T result = caseDomainAuthAttribute(domainAuthAttribute);
 			if (result == null)
@@ -3324,7 +3441,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.AUTH_USER_NAME: {
+		case FramewebPackage.AUTH_USER_NAME:
+		{
 			AuthUserName authUserName = (AuthUserName) theEObject;
 			T result = caseAuthUserName(authUserName);
 			if (result == null)
@@ -3361,7 +3479,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.AUTH_PASSWORD: {
+		case FramewebPackage.AUTH_PASSWORD:
+		{
 			AuthPassword authPassword = (AuthPassword) theEObject;
 			T result = caseAuthPassword(authPassword);
 			if (result == null)
@@ -3398,7 +3517,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.AUTH_ROLE_NAME: {
+		case FramewebPackage.AUTH_ROLE_NAME:
+		{
 			AuthRoleName authRoleName = (AuthRoleName) theEObject;
 			T result = caseAuthRoleName(authRoleName);
 			if (result == null)
@@ -3437,7 +3557,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.AUTH_PERM_NAME: {
+		case FramewebPackage.AUTH_PERM_NAME:
+		{
 			AuthPermName authPermName = (AuthPermName) theEObject;
 			T result = caseAuthPermName(authPermName);
 			if (result == null)
@@ -3476,7 +3597,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DOMAIN_PROPERTY: {
+		case FramewebPackage.DOMAIN_PROPERTY:
+		{
 			DomainProperty domainProperty = (DomainProperty) theEObject;
 			T result = caseDomainProperty(domainProperty);
 			if (result == null)
@@ -3507,7 +3629,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE: {
+		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE:
+		{
 			FrontControllerTemplate frontControllerTemplate = (FrontControllerTemplate) theEObject;
 			T result = caseFrontControllerTemplate(frontControllerTemplate);
 			if (result == null)
@@ -3534,7 +3657,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DI_TEMPLATE: {
+		case FramewebPackage.DI_TEMPLATE:
+		{
 			DITemplate diTemplate = (DITemplate) theEObject;
 			T result = caseDITemplate(diTemplate);
 			if (result == null)
@@ -3561,7 +3685,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.ORM_TEMPLATE: {
+		case FramewebPackage.ORM_TEMPLATE:
+		{
 			ORMTemplate ormTemplate = (ORMTemplate) theEObject;
 			T result = caseORMTemplate(ormTemplate);
 			if (result == null)
@@ -3588,7 +3713,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.DAO_TEMPLATE: {
+		case FramewebPackage.DAO_TEMPLATE:
+		{
 			DAOTemplate daoTemplate = (DAOTemplate) theEObject;
 			T result = caseDAOTemplate(daoTemplate);
 			if (result == null)
@@ -3615,7 +3741,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.FRAME_WEB_CONFIGURATION: {
+		case FramewebPackage.FRAME_WEB_CONFIGURATION:
+		{
 			FrameWebConfiguration frameWebConfiguration = (FrameWebConfiguration) theEObject;
 			T result = caseFrameWebConfiguration(frameWebConfiguration);
 			if (result == null)
@@ -3642,7 +3769,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.REST_CONTROLLER_TEMPLATE: {
+		case FramewebPackage.REST_CONTROLLER_TEMPLATE:
+		{
 			RestControllerTemplate restControllerTemplate = (RestControllerTemplate) theEObject;
 			T result = caseRestControllerTemplate(restControllerTemplate);
 			if (result == null)
@@ -3669,7 +3797,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.REST_CONTROLLER_METHOD: {
+		case FramewebPackage.REST_CONTROLLER_METHOD:
+		{
 			RestControllerMethod restControllerMethod = (RestControllerMethod) theEObject;
 			T result = caseRestControllerMethod(restControllerMethod);
 			if (result == null)
@@ -3696,7 +3825,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.REST_CONTROLLER_CLASS: {
+		case FramewebPackage.REST_CONTROLLER_CLASS:
+		{
 			RestControllerClass restControllerClass = (RestControllerClass) theEObject;
 			T result = caseRestControllerClass(restControllerClass);
 			if (result == null)
@@ -3731,7 +3861,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.PARTIAL: {
+		case FramewebPackage.PARTIAL:
+		{
 			Partial partial = (Partial) theEObject;
 			T result = casePartial(partial);
 			if (result == null)
@@ -3770,7 +3901,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION: {
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION:
+		{
 			NavigationAggregationAssociation navigationAggregationAssociation = (NavigationAggregationAssociation) theEObject;
 			T result = caseNavigationAggregationAssociation(navigationAggregationAssociation);
 			if (result == null)
@@ -3801,7 +3933,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.NAVIGATION_AGGREGATION_TARGET: {
+		case FramewebPackage.NAVIGATION_AGGREGATION_TARGET:
+		{
 			NavigationAggregationTarget navigationAggregationTarget = (NavigationAggregationTarget) theEObject;
 			T result = caseNavigationAggregationTarget(navigationAggregationTarget);
 			if (result == null)
@@ -3834,7 +3967,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.NAVIGATION_AGGREGATION_SOURCE: {
+		case FramewebPackage.NAVIGATION_AGGREGATION_SOURCE:
+		{
 			NavigationAggregationSource navigationAggregationSource = (NavigationAggregationSource) theEObject;
 			T result = caseNavigationAggregationSource(navigationAggregationSource);
 			if (result == null)
@@ -3867,9 +4001,26 @@ public class FramewebSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FramewebPackage.NAVIGATION_SPA_PROPERTIES: {
+		case FramewebPackage.NAVIGATION_SPA_PROPERTIES:
+		{
 			NavigationSPAProperties navigationSPAProperties = (NavigationSPAProperties) theEObject;
 			T result = caseNavigationSPAProperties(navigationSPAProperties);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD:
+		{
+			NavigationAggregationAssociationSPAMethod navigationAggregationAssociationSPAMethod = (NavigationAggregationAssociationSPAMethod) theEObject;
+			T result = caseNavigationAggregationAssociationSPAMethod(navigationAggregationAssociationSPAMethod);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE:
+		{
+			NavigationAggregationAssociationSPAAttribute navigationAggregationAssociationSPAAttribute = (NavigationAggregationAssociationSPAAttribute) theEObject;
+			T result = caseNavigationAggregationAssociationSPAAttribute(navigationAggregationAssociationSPAAttribute);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -3890,7 +4041,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFramewebProject(FramewebProject object) {
+	public T caseFramewebProject(FramewebProject object)
+	{
 		return null;
 	}
 
@@ -3905,7 +4057,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFramewebModel(FramewebModel object) {
+	public T caseFramewebModel(FramewebModel object)
+	{
 		return null;
 	}
 
@@ -3920,7 +4073,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFrameworkProfile(FrameworkProfile object) {
+	public T caseFrameworkProfile(FrameworkProfile object)
+	{
 		return null;
 	}
 
@@ -3935,7 +4089,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEntityModel(EntityModel object) {
+	public T caseEntityModel(EntityModel object)
+	{
 		return null;
 	}
 
@@ -3950,7 +4105,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNavigationModel(NavigationModel object) {
+	public T caseNavigationModel(NavigationModel object)
+	{
 		return null;
 	}
 
@@ -3965,7 +4121,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseApplicationModel(ApplicationModel object) {
+	public T caseApplicationModel(ApplicationModel object)
+	{
 		return null;
 	}
 
@@ -3980,7 +4137,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePersistenceModel(PersistenceModel object) {
+	public T casePersistenceModel(PersistenceModel object)
+	{
 		return null;
 	}
 
@@ -3995,7 +4153,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDomainAssociation(DomainAssociation object) {
+	public T caseDomainAssociation(DomainAssociation object)
+	{
 		return null;
 	}
 
@@ -4010,7 +4169,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAttribute(Attribute object) {
+	public T caseAttribute(Attribute object)
+	{
 		return null;
 	}
 
@@ -4025,7 +4185,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVersionAttribute(VersionAttribute object) {
+	public T caseVersionAttribute(VersionAttribute object)
+	{
 		return null;
 	}
 
@@ -4040,7 +4201,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIdAttribute(IdAttribute object) {
+	public T caseIdAttribute(IdAttribute object)
+	{
 		return null;
 	}
 
@@ -4055,7 +4217,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLOBAttribute(LOBAttribute object) {
+	public T caseLOBAttribute(LOBAttribute object)
+	{
 		return null;
 	}
 
@@ -4070,7 +4233,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEmbeddedAttribute(EmbeddedAttribute object) {
+	public T caseEmbeddedAttribute(EmbeddedAttribute object)
+	{
 		return null;
 	}
 
@@ -4085,7 +4249,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDecimalAttribute(DecimalAttribute object) {
+	public T caseDecimalAttribute(DecimalAttribute object)
+	{
 		return null;
 	}
 
@@ -4100,7 +4265,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDateTimeAttribute(DateTimeAttribute object) {
+	public T caseDateTimeAttribute(DateTimeAttribute object)
+	{
 		return null;
 	}
 
@@ -4115,7 +4281,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePage(Page object) {
+	public T casePage(Page object)
+	{
 		return null;
 	}
 
@@ -4130,7 +4297,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAuthPage(AuthPage object) {
+	public T caseAuthPage(AuthPage object)
+	{
 		return null;
 	}
 
@@ -4145,7 +4313,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDAOInterface(DAOInterface object) {
+	public T caseDAOInterface(DAOInterface object)
+	{
 		return null;
 	}
 
@@ -4160,7 +4329,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDAOClass(DAOClass object) {
+	public T caseDAOClass(DAOClass object)
+	{
 		return null;
 	}
 
@@ -4175,7 +4345,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDAORealization(DAORealization object) {
+	public T caseDAORealization(DAORealization object)
+	{
 		return null;
 	}
 
@@ -4190,7 +4361,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFrontControllerClass(FrontControllerClass object) {
+	public T caseFrontControllerClass(FrontControllerClass object)
+	{
 		return null;
 	}
 
@@ -4205,7 +4377,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIOParameter(IOParameter object) {
+	public T caseIOParameter(IOParameter object)
+	{
 		return null;
 	}
 
@@ -4220,7 +4393,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseResultDependency(ResultDependency object) {
+	public T caseResultDependency(ResultDependency object)
+	{
 		return null;
 	}
 
@@ -4235,7 +4409,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAuthSuccessUrl(AuthSuccessUrl object) {
+	public T caseAuthSuccessUrl(AuthSuccessUrl object)
+	{
 		return null;
 	}
 
@@ -4250,7 +4425,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAuthFailureUrl(AuthFailureUrl object) {
+	public T caseAuthFailureUrl(AuthFailureUrl object)
+	{
 		return null;
 	}
 
@@ -4265,7 +4441,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNavigationAssociation(NavigationAssociation object) {
+	public T caseNavigationAssociation(NavigationAssociation object)
+	{
 		return null;
 	}
 
@@ -4280,7 +4457,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFrontControllerMethod(FrontControllerMethod object) {
+	public T caseFrontControllerMethod(FrontControllerMethod object)
+	{
 		return null;
 	}
 
@@ -4295,7 +4473,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAuthProcessingMethod(AuthProcessingMethod object) {
+	public T caseAuthProcessingMethod(AuthProcessingMethod object)
+	{
 		return null;
 	}
 
@@ -4310,7 +4489,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseServiceClass(ServiceClass object) {
+	public T caseServiceClass(ServiceClass object)
+	{
 		return null;
 	}
 
@@ -4325,7 +4505,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAuthServiceClass(AuthServiceClass object) {
+	public T caseAuthServiceClass(AuthServiceClass object)
+	{
 		return null;
 	}
 
@@ -4340,7 +4521,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseServiceInterface(ServiceInterface object) {
+	public T caseServiceInterface(ServiceInterface object)
+	{
 		return null;
 	}
 
@@ -4355,7 +4537,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAuthServiceInterface(AuthServiceInterface object) {
+	public T caseAuthServiceInterface(AuthServiceInterface object)
+	{
 		return null;
 	}
 
@@ -4370,7 +4553,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseServiceGeneralization(ServiceGeneralization object) {
+	public T caseServiceGeneralization(ServiceGeneralization object)
+	{
 		return null;
 	}
 
@@ -4385,7 +4569,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseServiceControllerAssociation(ServiceControllerAssociation object) {
+	public T caseServiceControllerAssociation(ServiceControllerAssociation object)
+	{
 		return null;
 	}
 
@@ -4400,7 +4585,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDomainClass(DomainClass object) {
+	public T caseDomainClass(DomainClass object)
+	{
 		return null;
 	}
 
@@ -4415,7 +4601,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAuthUser(AuthUser object) {
+	public T caseAuthUser(AuthUser object)
+	{
 		return null;
 	}
 
@@ -4430,7 +4617,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAuthRole(AuthRole object) {
+	public T caseAuthRole(AuthRole object)
+	{
 		return null;
 	}
 
@@ -4445,7 +4633,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAuthPermission(AuthPermission object) {
+	public T caseAuthPermission(AuthPermission object)
+	{
 		return null;
 	}
 
@@ -4460,7 +4649,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFrontControllerDependency(FrontControllerDependency object) {
+	public T caseFrontControllerDependency(FrontControllerDependency object)
+	{
 		return null;
 	}
 
@@ -4475,7 +4665,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePageDependency(PageDependency object) {
+	public T casePageDependency(PageDependency object)
+	{
 		return null;
 	}
 
@@ -4490,7 +4681,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDAOServiceAssociation(DAOServiceAssociation object) {
+	public T caseDAOServiceAssociation(DAOServiceAssociation object)
+	{
 		return null;
 	}
 
@@ -4505,7 +4697,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNavigationAttribute(NavigationAttribute object) {
+	public T caseNavigationAttribute(NavigationAttribute object)
+	{
 		return null;
 	}
 
@@ -4520,7 +4713,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNavigationClass(NavigationClass object) {
+	public T caseNavigationClass(NavigationClass object)
+	{
 		return null;
 	}
 
@@ -4535,7 +4729,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDomainMethod(DomainMethod object) {
+	public T caseDomainMethod(DomainMethod object)
+	{
 		return null;
 	}
 
@@ -4550,7 +4745,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDAOAttribute(DAOAttribute object) {
+	public T caseDAOAttribute(DAOAttribute object)
+	{
 		return null;
 	}
 
@@ -4565,7 +4761,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseServiceMethod(ServiceMethod object) {
+	public T caseServiceMethod(ServiceMethod object)
+	{
 		return null;
 	}
 
@@ -4580,7 +4777,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAuthServiceMethod(AuthServiceMethod object) {
+	public T caseAuthServiceMethod(AuthServiceMethod object)
+	{
 		return null;
 	}
 
@@ -4595,7 +4793,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseServiceAttribute(ServiceAttribute object) {
+	public T caseServiceAttribute(ServiceAttribute object)
+	{
 		return null;
 	}
 
@@ -4610,7 +4809,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseServiceAssociation(ServiceAssociation object) {
+	public T caseServiceAssociation(ServiceAssociation object)
+	{
 		return null;
 	}
 
@@ -4625,7 +4825,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNavigationDependency(NavigationDependency object) {
+	public T caseNavigationDependency(NavigationDependency object)
+	{
 		return null;
 	}
 
@@ -4640,7 +4841,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDAOMethod(DAOMethod object) {
+	public T caseDAOMethod(DAOMethod object)
+	{
 		return null;
 	}
 
@@ -4655,7 +4857,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDomainPackage(DomainPackage object) {
+	public T caseDomainPackage(DomainPackage object)
+	{
 		return null;
 	}
 
@@ -4670,7 +4873,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseViewPackage(ViewPackage object) {
+	public T caseViewPackage(ViewPackage object)
+	{
 		return null;
 	}
 
@@ -4685,7 +4889,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseControllerPackage(ControllerPackage object) {
+	public T caseControllerPackage(ControllerPackage object)
+	{
 		return null;
 	}
 
@@ -4700,7 +4905,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePersistencePackage(PersistencePackage object) {
+	public T casePersistencePackage(PersistencePackage object)
+	{
 		return null;
 	}
 
@@ -4715,7 +4921,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseApplicationPackage(ApplicationPackage object) {
+	public T caseApplicationPackage(ApplicationPackage object)
+	{
 		return null;
 	}
 
@@ -4730,7 +4937,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseUIComponent(UIComponent object) {
+	public T caseUIComponent(UIComponent object)
+	{
 		return null;
 	}
 
@@ -4745,7 +4953,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAuthForm(AuthForm object) {
+	public T caseAuthForm(AuthForm object)
+	{
 		return null;
 	}
 
@@ -4760,7 +4969,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseResultType(ResultType object) {
+	public T caseResultType(ResultType object)
+	{
 		return null;
 	}
 
@@ -4775,7 +4985,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNavigationPackage(NavigationPackage object) {
+	public T caseNavigationPackage(NavigationPackage object)
+	{
 		return null;
 	}
 
@@ -4790,7 +5001,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDomainGeneralization(DomainGeneralization object) {
+	public T caseDomainGeneralization(DomainGeneralization object)
+	{
 		return null;
 	}
 
@@ -4805,7 +5017,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseUIComponentField(UIComponentField object) {
+	public T caseUIComponentField(UIComponentField object)
+	{
 		return null;
 	}
 
@@ -4820,7 +5033,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTagLib(TagLib object) {
+	public T caseTagLib(TagLib object)
+	{
 		return null;
 	}
 
@@ -4835,7 +5049,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTag(Tag object) {
+	public T caseTag(Tag object)
+	{
 		return null;
 	}
 
@@ -4850,7 +5065,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNavigationCompositionPart(NavigationCompositionPart object) {
+	public T caseNavigationCompositionPart(NavigationCompositionPart object)
+	{
 		return null;
 	}
 
@@ -4865,7 +5081,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNavigationCompositionWhole(NavigationCompositionWhole object) {
+	public T caseNavigationCompositionWhole(NavigationCompositionWhole object)
+	{
 		return null;
 	}
 
@@ -4880,7 +5097,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNavigationProperty(NavigationProperty object) {
+	public T caseNavigationProperty(NavigationProperty object)
+	{
 		return null;
 	}
 
@@ -4895,7 +5113,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseResultSet(ResultSet object) {
+	public T caseResultSet(ResultSet object)
+	{
 		return null;
 	}
 
@@ -4910,7 +5129,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNavigationConstraint(NavigationConstraint object) {
+	public T caseNavigationConstraint(NavigationConstraint object)
+	{
 		return null;
 	}
 
@@ -4925,7 +5145,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePageConstraint(PageConstraint object) {
+	public T casePageConstraint(PageConstraint object)
+	{
 		return null;
 	}
 
@@ -4940,7 +5161,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseResultConstraint(ResultConstraint object) {
+	public T caseResultConstraint(ResultConstraint object)
+	{
 		return null;
 	}
 
@@ -4955,7 +5177,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMethodConstraint(MethodConstraint object) {
+	public T caseMethodConstraint(MethodConstraint object)
+	{
 		return null;
 	}
 
@@ -4970,7 +5193,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseChainingConstraint(ChainingConstraint object) {
+	public T caseChainingConstraint(ChainingConstraint object)
+	{
 		return null;
 	}
 
@@ -4985,7 +5209,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNavigationGeneralization(NavigationGeneralization object) {
+	public T caseNavigationGeneralization(NavigationGeneralization object)
+	{
 		return null;
 	}
 
@@ -5000,7 +5225,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDomainConstraints(DomainConstraints object) {
+	public T caseDomainConstraints(DomainConstraints object)
+	{
 		return null;
 	}
 
@@ -5015,7 +5241,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDAOGeneralization(DAOGeneralization object) {
+	public T caseDAOGeneralization(DAOGeneralization object)
+	{
 		return null;
 	}
 
@@ -5030,7 +5257,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMappingLib(MappingLib object) {
+	public T caseMappingLib(MappingLib object)
+	{
 		return null;
 	}
 
@@ -5045,7 +5273,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseClassMapping(ClassMapping object) {
+	public T caseClassMapping(ClassMapping object)
+	{
 		return null;
 	}
 
@@ -5060,7 +5289,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAttributeMapping(AttributeMapping object) {
+	public T caseAttributeMapping(AttributeMapping object)
+	{
 		return null;
 	}
 
@@ -5075,7 +5305,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDomainGeneralizationSet(DomainGeneralizationSet object) {
+	public T caseDomainGeneralizationSet(DomainGeneralizationSet object)
+	{
 		return null;
 	}
 
@@ -5090,7 +5321,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseController(Controller object) {
+	public T caseController(Controller object)
+	{
 		return null;
 	}
 
@@ -5105,7 +5337,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTagProperty(TagProperty object) {
+	public T caseTagProperty(TagProperty object)
+	{
 		return null;
 	}
 
@@ -5120,7 +5353,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseResultProperty(ResultProperty object) {
+	public T caseResultProperty(ResultProperty object)
+	{
 		return null;
 	}
 
@@ -5135,7 +5369,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseClassMappingPropery(ClassMappingPropery object) {
+	public T caseClassMappingPropery(ClassMappingPropery object)
+	{
 		return null;
 	}
 
@@ -5150,7 +5385,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAttributeMappingProperty(AttributeMappingProperty object) {
+	public T caseAttributeMappingProperty(AttributeMappingProperty object)
+	{
 		return null;
 	}
 
@@ -5165,7 +5401,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseServiceRealization(ServiceRealization object) {
+	public T caseServiceRealization(ServiceRealization object)
+	{
 		return null;
 	}
 
@@ -5180,7 +5417,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNavigationGeneralizationSet(NavigationGeneralizationSet object) {
+	public T caseNavigationGeneralizationSet(NavigationGeneralizationSet object)
+	{
 		return null;
 	}
 
@@ -5195,7 +5433,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDAOGeneralizationSet(DAOGeneralizationSet object) {
+	public T caseDAOGeneralizationSet(DAOGeneralizationSet object)
+	{
 		return null;
 	}
 
@@ -5210,7 +5449,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseServiceGeneralizationSet(ServiceGeneralizationSet object) {
+	public T caseServiceGeneralizationSet(ServiceGeneralizationSet object)
+	{
 		return null;
 	}
 
@@ -5225,7 +5465,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSemanticPackage(SemanticPackage object) {
+	public T caseSemanticPackage(SemanticPackage object)
+	{
 		return null;
 	}
 
@@ -5240,7 +5481,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIRI(IRI object) {
+	public T caseIRI(IRI object)
+	{
 		return null;
 	}
 
@@ -5255,7 +5497,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVocabularyModel(VocabularyModel object) {
+	public T caseVocabularyModel(VocabularyModel object)
+	{
 		return null;
 	}
 
@@ -5270,7 +5513,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVocabulary(Vocabulary object) {
+	public T caseVocabulary(Vocabulary object)
+	{
 		return null;
 	}
 
@@ -5285,7 +5529,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAxiom(Axiom object) {
+	public T caseAxiom(Axiom object)
+	{
 		return null;
 	}
 
@@ -5300,7 +5545,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAnnotation(Annotation object) {
+	public T caseAnnotation(Annotation object)
+	{
 		return null;
 	}
 
@@ -5315,7 +5561,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVocabularyConstraints(VocabularyConstraints object) {
+	public T caseVocabularyConstraints(VocabularyConstraints object)
+	{
 		return null;
 	}
 
@@ -5330,7 +5577,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVocabularyAssociation(VocabularyAssociation object) {
+	public T caseVocabularyAssociation(VocabularyAssociation object)
+	{
 		return null;
 	}
 
@@ -5345,7 +5593,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVocabularyProperty(VocabularyProperty object) {
+	public T caseVocabularyProperty(VocabularyProperty object)
+	{
 		return null;
 	}
 
@@ -5360,7 +5609,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVocabularyEntity(VocabularyEntity object) {
+	public T caseVocabularyEntity(VocabularyEntity object)
+	{
 		return null;
 	}
 
@@ -5375,7 +5625,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseObjectProperty(ObjectProperty object) {
+	public T caseObjectProperty(ObjectProperty object)
+	{
 		return null;
 	}
 
@@ -5390,7 +5641,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDataProperty(DataProperty object) {
+	public T caseDataProperty(DataProperty object)
+	{
 		return null;
 	}
 
@@ -5405,7 +5657,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVocabularyDataType(VocabularyDataType object) {
+	public T caseVocabularyDataType(VocabularyDataType object)
+	{
 		return null;
 	}
 
@@ -5420,7 +5673,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNamedIndividual(NamedIndividual object) {
+	public T caseNamedIndividual(NamedIndividual object)
+	{
 		return null;
 	}
 
@@ -5435,7 +5689,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVocabularyClass(VocabularyClass object) {
+	public T caseVocabularyClass(VocabularyClass object)
+	{
 		return null;
 	}
 
@@ -5450,7 +5705,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAnonymousIndividual(AnonymousIndividual object) {
+	public T caseAnonymousIndividual(AnonymousIndividual object)
+	{
 		return null;
 	}
 
@@ -5465,7 +5721,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIndividual(Individual object) {
+	public T caseIndividual(Individual object)
+	{
 		return null;
 	}
 
@@ -5480,7 +5737,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVocabularyLiteral(VocabularyLiteral object) {
+	public T caseVocabularyLiteral(VocabularyLiteral object)
+	{
 		return null;
 	}
 
@@ -5495,7 +5753,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDomainVocabularyAssociation(DomainVocabularyAssociation object) {
+	public T caseDomainVocabularyAssociation(DomainVocabularyAssociation object)
+	{
 		return null;
 	}
 
@@ -5510,7 +5769,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDomainVocabularyProperty(DomainVocabularyProperty object) {
+	public T caseDomainVocabularyProperty(DomainVocabularyProperty object)
+	{
 		return null;
 	}
 
@@ -5525,7 +5785,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDomainAttribute(DomainAttribute object) {
+	public T caseDomainAttribute(DomainAttribute object)
+	{
 		return null;
 	}
 
@@ -5540,7 +5801,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDomainAuthAttribute(DomainAuthAttribute object) {
+	public T caseDomainAuthAttribute(DomainAuthAttribute object)
+	{
 		return null;
 	}
 
@@ -5555,7 +5817,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAuthUserName(AuthUserName object) {
+	public T caseAuthUserName(AuthUserName object)
+	{
 		return null;
 	}
 
@@ -5570,7 +5833,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAuthPassword(AuthPassword object) {
+	public T caseAuthPassword(AuthPassword object)
+	{
 		return null;
 	}
 
@@ -5585,7 +5849,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAuthRoleName(AuthRoleName object) {
+	public T caseAuthRoleName(AuthRoleName object)
+	{
 		return null;
 	}
 
@@ -5600,7 +5865,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAuthPermName(AuthPermName object) {
+	public T caseAuthPermName(AuthPermName object)
+	{
 		return null;
 	}
 
@@ -5615,7 +5881,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDomainProperty(DomainProperty object) {
+	public T caseDomainProperty(DomainProperty object)
+	{
 		return null;
 	}
 
@@ -5630,7 +5897,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFrontControllerTemplate(FrontControllerTemplate object) {
+	public T caseFrontControllerTemplate(FrontControllerTemplate object)
+	{
 		return null;
 	}
 
@@ -5645,7 +5913,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDITemplate(DITemplate object) {
+	public T caseDITemplate(DITemplate object)
+	{
 		return null;
 	}
 
@@ -5660,7 +5929,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseORMTemplate(ORMTemplate object) {
+	public T caseORMTemplate(ORMTemplate object)
+	{
 		return null;
 	}
 
@@ -5675,7 +5945,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDAOTemplate(DAOTemplate object) {
+	public T caseDAOTemplate(DAOTemplate object)
+	{
 		return null;
 	}
 
@@ -5690,7 +5961,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFrameWebConfiguration(FrameWebConfiguration object) {
+	public T caseFrameWebConfiguration(FrameWebConfiguration object)
+	{
 		return null;
 	}
 
@@ -5705,7 +5977,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRestControllerTemplate(RestControllerTemplate object) {
+	public T caseRestControllerTemplate(RestControllerTemplate object)
+	{
 		return null;
 	}
 
@@ -5720,7 +5993,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRestControllerMethod(RestControllerMethod object) {
+	public T caseRestControllerMethod(RestControllerMethod object)
+	{
 		return null;
 	}
 
@@ -5735,7 +6009,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRestControllerClass(RestControllerClass object) {
+	public T caseRestControllerClass(RestControllerClass object)
+	{
 		return null;
 	}
 
@@ -5750,7 +6025,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePartial(Partial object) {
+	public T casePartial(Partial object)
+	{
 		return null;
 	}
 
@@ -5765,7 +6041,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNavigationAggregationAssociation(NavigationAggregationAssociation object) {
+	public T caseNavigationAggregationAssociation(NavigationAggregationAssociation object)
+	{
 		return null;
 	}
 
@@ -5780,7 +6057,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNavigationAggregationTarget(NavigationAggregationTarget object) {
+	public T caseNavigationAggregationTarget(NavigationAggregationTarget object)
+	{
 		return null;
 	}
 
@@ -5795,7 +6073,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNavigationAggregationSource(NavigationAggregationSource object) {
+	public T caseNavigationAggregationSource(NavigationAggregationSource object)
+	{
 		return null;
 	}
 
@@ -5810,7 +6089,40 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNavigationSPAProperties(NavigationSPAProperties object) {
+	public T caseNavigationSPAProperties(NavigationSPAProperties object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Navigation Aggregation Association SPA Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Navigation Aggregation Association SPA Method</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNavigationAggregationAssociationSPAMethod(NavigationAggregationAssociationSPAMethod object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Navigation Aggregation Association SPA Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Navigation Aggregation Association SPA Attribute</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNavigationAggregationAssociationSPAAttribute(NavigationAggregationAssociationSPAAttribute object)
+	{
 		return null;
 	}
 
@@ -5825,7 +6137,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEModelElement(EModelElement object) {
+	public T caseEModelElement(EModelElement object)
+	{
 		return null;
 	}
 
@@ -5840,7 +6153,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseElement(Element object) {
+	public T caseElement(Element object)
+	{
 		return null;
 	}
 
@@ -5855,7 +6169,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNamedElement(NamedElement object) {
+	public T caseNamedElement(NamedElement object)
+	{
 		return null;
 	}
 
@@ -5870,7 +6185,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNamespace(Namespace object) {
+	public T caseNamespace(Namespace object)
+	{
 		return null;
 	}
 
@@ -5885,7 +6201,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterableElement(ParameterableElement object) {
+	public T caseParameterableElement(ParameterableElement object)
+	{
 		return null;
 	}
 
@@ -5900,7 +6217,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePackageableElement(PackageableElement object) {
+	public T casePackageableElement(PackageableElement object)
+	{
 		return null;
 	}
 
@@ -5915,7 +6233,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTemplateableElement(TemplateableElement object) {
+	public T caseTemplateableElement(TemplateableElement object)
+	{
 		return null;
 	}
 
@@ -5930,7 +6249,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePackage(org.eclipse.uml2.uml.Package object) {
+	public T casePackage(org.eclipse.uml2.uml.Package object)
+	{
 		return null;
 	}
 
@@ -5945,7 +6265,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseModel(Model object) {
+	public T caseModel(Model object)
+	{
 		return null;
 	}
 
@@ -5960,7 +6281,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseProfile(Profile object) {
+	public T caseProfile(Profile object)
+	{
 		return null;
 	}
 
@@ -5975,7 +6297,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRedefinableElement(RedefinableElement object) {
+	public T caseRedefinableElement(RedefinableElement object)
+	{
 		return null;
 	}
 
@@ -5990,7 +6313,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseType(Type object) {
+	public T caseType(Type object)
+	{
 		return null;
 	}
 
@@ -6005,7 +6329,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseClassifier(Classifier object) {
+	public T caseClassifier(Classifier object)
+	{
 		return null;
 	}
 
@@ -6020,7 +6345,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRelationship(Relationship object) {
+	public T caseRelationship(Relationship object)
+	{
 		return null;
 	}
 
@@ -6035,7 +6361,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAssociation(Association object) {
+	public T caseAssociation(Association object)
+	{
 		return null;
 	}
 
@@ -6050,7 +6377,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFeature(Feature object) {
+	public T caseFeature(Feature object)
+	{
 		return null;
 	}
 
@@ -6065,7 +6393,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTypedElement(TypedElement object) {
+	public T caseTypedElement(TypedElement object)
+	{
 		return null;
 	}
 
@@ -6080,7 +6409,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMultiplicityElement(MultiplicityElement object) {
+	public T caseMultiplicityElement(MultiplicityElement object)
+	{
 		return null;
 	}
 
@@ -6095,7 +6425,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStructuralFeature(StructuralFeature object) {
+	public T caseStructuralFeature(StructuralFeature object)
+	{
 		return null;
 	}
 
@@ -6110,7 +6441,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConnectableElement(ConnectableElement object) {
+	public T caseConnectableElement(ConnectableElement object)
+	{
 		return null;
 	}
 
@@ -6125,7 +6457,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDeploymentTarget(DeploymentTarget object) {
+	public T caseDeploymentTarget(DeploymentTarget object)
+	{
 		return null;
 	}
 
@@ -6140,7 +6473,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseProperty(Property object) {
+	public T caseProperty(Property object)
+	{
 		return null;
 	}
 
@@ -6155,7 +6489,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStructuredClassifier(StructuredClassifier object) {
+	public T caseStructuredClassifier(StructuredClassifier object)
+	{
 		return null;
 	}
 
@@ -6170,7 +6505,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEncapsulatedClassifier(EncapsulatedClassifier object) {
+	public T caseEncapsulatedClassifier(EncapsulatedClassifier object)
+	{
 		return null;
 	}
 
@@ -6185,7 +6521,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseBehavioredClassifier(BehavioredClassifier object) {
+	public T caseBehavioredClassifier(BehavioredClassifier object)
+	{
 		return null;
 	}
 
@@ -6200,7 +6537,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseClass(org.eclipse.uml2.uml.Class object) {
+	public T caseClass(org.eclipse.uml2.uml.Class object)
+	{
 		return null;
 	}
 
@@ -6215,7 +6553,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInterface(Interface object) {
+	public T caseInterface(Interface object)
+	{
 		return null;
 	}
 
@@ -6230,7 +6569,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDirectedRelationship(DirectedRelationship object) {
+	public T caseDirectedRelationship(DirectedRelationship object)
+	{
 		return null;
 	}
 
@@ -6245,7 +6585,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDependency(Dependency object) {
+	public T caseDependency(Dependency object)
+	{
 		return null;
 	}
 
@@ -6260,7 +6601,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAbstraction(Abstraction object) {
+	public T caseAbstraction(Abstraction object)
+	{
 		return null;
 	}
 
@@ -6275,7 +6617,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRealization(Realization object) {
+	public T caseRealization(Realization object)
+	{
 		return null;
 	}
 
@@ -6290,7 +6633,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInterfaceRealization(InterfaceRealization object) {
+	public T caseInterfaceRealization(InterfaceRealization object)
+	{
 		return null;
 	}
 
@@ -6305,7 +6649,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseBehavioralFeature(BehavioralFeature object) {
+	public T caseBehavioralFeature(BehavioralFeature object)
+	{
 		return null;
 	}
 
@@ -6320,7 +6665,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseOperation(Operation object) {
+	public T caseOperation(Operation object)
+	{
 		return null;
 	}
 
@@ -6335,7 +6681,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGeneralization(Generalization object) {
+	public T caseGeneralization(Generalization object)
+	{
 		return null;
 	}
 
@@ -6350,7 +6697,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStereotype(Stereotype object) {
+	public T caseStereotype(Stereotype object)
+	{
 		return null;
 	}
 
@@ -6365,7 +6713,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConstraint(Constraint object) {
+	public T caseConstraint(Constraint object)
+	{
 		return null;
 	}
 
@@ -6380,7 +6729,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGeneralizationSet(GeneralizationSet object) {
+	public T caseGeneralizationSet(GeneralizationSet object)
+	{
 		return null;
 	}
 
@@ -6395,7 +6745,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDataType(DataType object) {
+	public T caseDataType(DataType object)
+	{
 		return null;
 	}
 
@@ -6410,7 +6761,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseValueSpecification(ValueSpecification object) {
+	public T caseValueSpecification(ValueSpecification object)
+	{
 		return null;
 	}
 
@@ -6425,7 +6777,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLiteralSpecification(LiteralSpecification object) {
+	public T caseLiteralSpecification(LiteralSpecification object)
+	{
 		return null;
 	}
 
@@ -6440,7 +6793,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLiteralString(LiteralString object) {
+	public T caseLiteralString(LiteralString object)
+	{
 		return null;
 	}
 
@@ -6456,7 +6810,8 @@ public class FramewebSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	public T defaultCase(EObject object) {
+	public T defaultCase(EObject object)
+	{
 		return null;
 	}
 

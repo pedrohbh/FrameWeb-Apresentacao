@@ -25,7 +25,8 @@ import org.eclipse.uml2.uml.internal.impl.ClassImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class DAOClassImpl extends ClassImpl implements DAOClass {
+public class DAOClassImpl extends ClassImpl implements DAOClass
+{
 	/**
 	 * The default value of the '{@link #getSufix() <em>Sufix</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -91,7 +92,8 @@ public class DAOClassImpl extends ClassImpl implements DAOClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DAOClassImpl() {
+	protected DAOClassImpl()
+	{
 		super();
 	}
 
@@ -101,7 +103,8 @@ public class DAOClassImpl extends ClassImpl implements DAOClass {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.DAO_CLASS;
 	}
 
@@ -111,7 +114,8 @@ public class DAOClassImpl extends ClassImpl implements DAOClass {
 	 * @generated
 	 */
 	@Override
-	public String getSufix() {
+	public String getSufix()
+	{
 		return sufix;
 	}
 
@@ -121,7 +125,8 @@ public class DAOClassImpl extends ClassImpl implements DAOClass {
 	 * @generated
 	 */
 	@Override
-	public String getInfix() {
+	public String getInfix()
+	{
 		return infix;
 	}
 
@@ -131,7 +136,8 @@ public class DAOClassImpl extends ClassImpl implements DAOClass {
 	 * @generated
 	 */
 	@Override
-	public String getPrefix() {
+	public String getPrefix()
+	{
 		return prefix;
 	}
 
@@ -141,8 +147,10 @@ public class DAOClassImpl extends ClassImpl implements DAOClass {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DAO_CLASS__SUFIX:
 			return getSufix();
 		case FramewebPackage.DAO_CLASS__INFIX:
@@ -159,8 +167,10 @@ public class DAOClassImpl extends ClassImpl implements DAOClass {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DAO_CLASS__SUFIX:
 			return SUFIX_EDEFAULT == null ? sufix != null : !SUFIX_EDEFAULT.equals(sufix);
 		case FramewebPackage.DAO_CLASS__INFIX:
@@ -177,7 +187,8 @@ public class DAOClassImpl extends ClassImpl implements DAOClass {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

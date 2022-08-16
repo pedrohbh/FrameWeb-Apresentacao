@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.ModelImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class FramewebModelImpl extends ModelImpl implements FramewebModel {
+public class FramewebModelImpl extends ModelImpl implements FramewebModel
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FramewebModelImpl() {
+	protected FramewebModelImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class FramewebModelImpl extends ModelImpl implements FramewebModel {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.FRAMEWEB_MODEL;
 	}
 

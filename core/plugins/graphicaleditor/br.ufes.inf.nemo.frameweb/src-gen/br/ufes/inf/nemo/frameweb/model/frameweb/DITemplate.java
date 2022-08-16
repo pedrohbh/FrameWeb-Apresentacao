@@ -22,7 +22,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface DITemplate extends FrameworkProfile {
+public interface DITemplate extends FrameworkProfile
+{
 	/**
 	 * Returns the value of the '<em><b>Interface Template</b></em>' attribute.
 	 * <!-- begin-user-doc -->

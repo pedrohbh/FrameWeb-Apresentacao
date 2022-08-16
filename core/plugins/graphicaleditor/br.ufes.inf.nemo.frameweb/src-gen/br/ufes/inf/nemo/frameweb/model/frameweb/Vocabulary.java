@@ -24,7 +24,8 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Vocabulary extends org.eclipse.uml2.uml.Package {
+public interface Vocabulary extends org.eclipse.uml2.uml.Package
+{
 	/**
 	 * Returns the value of the '<em><b>Directly Imports Documents</b></em>' containment reference list.
 	 * The list contents are of type {@link br.ufes.inf.nemo.frameweb.model.frameweb.IRI}.

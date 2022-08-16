@@ -18,7 +18,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface PageDependency extends NavigationDependency {
+public interface PageDependency extends NavigationDependency
+{
 	/**
 	 * Returns the value of the '<em><b>Page Dependency Constraint</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

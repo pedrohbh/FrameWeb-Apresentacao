@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.Property;
  * @model abstract="true"
  * @generated
  */
-public interface Individual extends Property {
+public interface Individual extends Property
+{
 } // Individual

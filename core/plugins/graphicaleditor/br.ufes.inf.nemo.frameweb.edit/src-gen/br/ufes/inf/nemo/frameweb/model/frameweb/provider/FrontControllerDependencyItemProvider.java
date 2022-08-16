@@ -24,14 +24,16 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FrontControllerDependencyItemProvider extends NavigationDependencyItemProvider {
+public class FrontControllerDependencyItemProvider extends NavigationDependencyItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FrontControllerDependencyItemProvider(AdapterFactory adapterFactory) {
+	public FrontControllerDependencyItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -42,8 +44,10 @@ public class FrontControllerDependencyItemProvider extends NavigationDependencyI
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addMethodPropertyDescriptor(object);
@@ -57,7 +61,8 @@ public class FrontControllerDependencyItemProvider extends NavigationDependencyI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addMethodPropertyDescriptor(Object object) {
+	protected void addMethodPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_FrontControllerDependency_method_feature"),
@@ -75,8 +80,10 @@ public class FrontControllerDependencyItemProvider extends NavigationDependencyI
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object)
+	{
+		if (childrenFeatures == null)
+		{
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(FramewebPackage.Literals.FRONT_CONTROLLER_DEPENDENCY__METHOD_DEPENDENDENCY_CONSTRAINT);
 		}
@@ -89,7 +96,8 @@ public class FrontControllerDependencyItemProvider extends NavigationDependencyI
 	 * @generated
 	 */
 	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
+	protected EStructuralFeature getChildFeature(Object object, Object child)
+	{
 		// Check the type of the specified child object and return the proper feature to use for
 		// adding (see {@link AddCommand}) it as a child.
 
@@ -103,7 +111,8 @@ public class FrontControllerDependencyItemProvider extends NavigationDependencyI
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/FrontControllerDependency"));
 	}
 
@@ -113,7 +122,8 @@ public class FrontControllerDependencyItemProvider extends NavigationDependencyI
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -124,7 +134,8 @@ public class FrontControllerDependencyItemProvider extends NavigationDependencyI
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((FrontControllerDependency) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_FrontControllerDependency_type")
 				: getString("_UI_FrontControllerDependency_type") + " " + label;
@@ -138,10 +149,12 @@ public class FrontControllerDependencyItemProvider extends NavigationDependencyI
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(FrontControllerDependency.class)) {
+		switch (notification.getFeatureID(FrontControllerDependency.class))
+		{
 		case FramewebPackage.FRONT_CONTROLLER_DEPENDENCY__METHOD_DEPENDENDENCY_CONSTRAINT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
@@ -157,7 +170,8 @@ public class FrontControllerDependencyItemProvider extends NavigationDependencyI
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(

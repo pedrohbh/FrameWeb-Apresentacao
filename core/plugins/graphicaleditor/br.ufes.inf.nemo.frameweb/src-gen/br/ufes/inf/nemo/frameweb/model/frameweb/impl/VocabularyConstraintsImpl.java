@@ -27,7 +27,8 @@ import org.eclipse.uml2.uml.internal.impl.ConstraintImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class VocabularyConstraintsImpl extends ConstraintImpl implements VocabularyConstraints {
+public class VocabularyConstraintsImpl extends ConstraintImpl implements VocabularyConstraints
+{
 	/**
 	 * The default value of the '{@link #getSubPropertyOf() <em>Sub Property Of</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -53,7 +54,8 @@ public class VocabularyConstraintsImpl extends ConstraintImpl implements Vocabul
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VocabularyConstraintsImpl() {
+	protected VocabularyConstraintsImpl()
+	{
 		super();
 	}
 
@@ -63,7 +65,8 @@ public class VocabularyConstraintsImpl extends ConstraintImpl implements Vocabul
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.VOCABULARY_CONSTRAINTS;
 	}
 
@@ -73,7 +76,8 @@ public class VocabularyConstraintsImpl extends ConstraintImpl implements Vocabul
 	 * @generated
 	 */
 	@Override
-	public String getSubPropertyOf() {
+	public String getSubPropertyOf()
+	{
 		return subPropertyOf;
 	}
 
@@ -83,7 +87,8 @@ public class VocabularyConstraintsImpl extends ConstraintImpl implements Vocabul
 	 * @generated
 	 */
 	@Override
-	public void setSubPropertyOf(String newSubPropertyOf) {
+	public void setSubPropertyOf(String newSubPropertyOf)
+	{
 		String oldSubPropertyOf = subPropertyOf;
 		subPropertyOf = newSubPropertyOf;
 		if (eNotificationRequired())
@@ -97,8 +102,10 @@ public class VocabularyConstraintsImpl extends ConstraintImpl implements Vocabul
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.VOCABULARY_CONSTRAINTS__SUB_PROPERTY_OF:
 			return getSubPropertyOf();
 		}
@@ -111,8 +118,10 @@ public class VocabularyConstraintsImpl extends ConstraintImpl implements Vocabul
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.VOCABULARY_CONSTRAINTS__SUB_PROPERTY_OF:
 			setSubPropertyOf((String) newValue);
 			return;
@@ -126,8 +135,10 @@ public class VocabularyConstraintsImpl extends ConstraintImpl implements Vocabul
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.VOCABULARY_CONSTRAINTS__SUB_PROPERTY_OF:
 			setSubPropertyOf(SUB_PROPERTY_OF_EDEFAULT);
 			return;
@@ -141,8 +152,10 @@ public class VocabularyConstraintsImpl extends ConstraintImpl implements Vocabul
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.VOCABULARY_CONSTRAINTS__SUB_PROPERTY_OF:
 			return SUB_PROPERTY_OF_EDEFAULT == null ? subPropertyOf != null
 					: !SUB_PROPERTY_OF_EDEFAULT.equals(subPropertyOf);
@@ -156,7 +169,8 @@ public class VocabularyConstraintsImpl extends ConstraintImpl implements Vocabul
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

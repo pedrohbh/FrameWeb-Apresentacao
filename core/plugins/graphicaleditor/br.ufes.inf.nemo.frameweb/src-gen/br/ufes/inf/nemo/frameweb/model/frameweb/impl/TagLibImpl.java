@@ -27,7 +27,8 @@ import org.eclipse.uml2.uml.internal.impl.PackageImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class TagLibImpl extends PackageImpl implements TagLib {
+public class TagLibImpl extends PackageImpl implements TagLib
+{
 	/**
 	 * The default value of the '{@link #getPrefix() <em>Prefix</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -53,7 +54,8 @@ public class TagLibImpl extends PackageImpl implements TagLib {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TagLibImpl() {
+	protected TagLibImpl()
+	{
 		super();
 	}
 
@@ -63,7 +65,8 @@ public class TagLibImpl extends PackageImpl implements TagLib {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.TAG_LIB;
 	}
 
@@ -73,7 +76,8 @@ public class TagLibImpl extends PackageImpl implements TagLib {
 	 * @generated
 	 */
 	@Override
-	public String getPrefix() {
+	public String getPrefix()
+	{
 		return prefix;
 	}
 
@@ -83,7 +87,8 @@ public class TagLibImpl extends PackageImpl implements TagLib {
 	 * @generated
 	 */
 	@Override
-	public void setPrefix(String newPrefix) {
+	public void setPrefix(String newPrefix)
+	{
 		String oldPrefix = prefix;
 		prefix = newPrefix;
 		if (eNotificationRequired())
@@ -96,8 +101,10 @@ public class TagLibImpl extends PackageImpl implements TagLib {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.TAG_LIB__PREFIX:
 			return getPrefix();
 		}
@@ -110,8 +117,10 @@ public class TagLibImpl extends PackageImpl implements TagLib {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.TAG_LIB__PREFIX:
 			setPrefix((String) newValue);
 			return;
@@ -125,8 +134,10 @@ public class TagLibImpl extends PackageImpl implements TagLib {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.TAG_LIB__PREFIX:
 			setPrefix(PREFIX_EDEFAULT);
 			return;
@@ -140,8 +151,10 @@ public class TagLibImpl extends PackageImpl implements TagLib {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.TAG_LIB__PREFIX:
 			return PREFIX_EDEFAULT == null ? prefix != null : !PREFIX_EDEFAULT.equals(prefix);
 		}
@@ -154,7 +167,8 @@ public class TagLibImpl extends PackageImpl implements TagLib {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface EntityModel extends FramewebModel {
+public interface EntityModel extends FramewebModel
+{
 } // EntityModel

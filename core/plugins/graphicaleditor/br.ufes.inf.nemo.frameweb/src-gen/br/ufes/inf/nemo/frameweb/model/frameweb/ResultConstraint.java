@@ -21,7 +21,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface ResultConstraint extends NavigationConstraint {
+public interface ResultConstraint extends NavigationConstraint
+{
 	/**
 	 * Returns the value of the '<em><b>Execute</b></em>' attribute.
 	 * The default value is <code>"@this"</code>.

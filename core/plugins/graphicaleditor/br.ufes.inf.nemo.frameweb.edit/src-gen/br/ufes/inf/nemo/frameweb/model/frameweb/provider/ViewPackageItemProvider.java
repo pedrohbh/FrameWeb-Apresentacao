@@ -20,14 +20,16 @@ import org.eclipse.uml2.uml.UMLPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ViewPackageItemProvider extends NavigationPackageItemProvider {
+public class ViewPackageItemProvider extends NavigationPackageItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ViewPackageItemProvider(AdapterFactory adapterFactory) {
+	public ViewPackageItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -38,8 +40,10 @@ public class ViewPackageItemProvider extends NavigationPackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 		}
@@ -53,7 +57,8 @@ public class ViewPackageItemProvider extends NavigationPackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/ViewPackage"));
 	}
 
@@ -63,7 +68,8 @@ public class ViewPackageItemProvider extends NavigationPackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -74,7 +80,8 @@ public class ViewPackageItemProvider extends NavigationPackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((ViewPackage) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_ViewPackage_type")
 				: getString("_UI_ViewPackage_type") + " " + label;
@@ -88,7 +95,8 @@ public class ViewPackageItemProvider extends NavigationPackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 		super.notifyChanged(notification);
 	}
@@ -101,7 +109,8 @@ public class ViewPackageItemProvider extends NavigationPackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 
@@ -112,7 +121,8 @@ public class ViewPackageItemProvider extends NavigationPackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -123,7 +133,8 @@ public class ViewPackageItemProvider extends NavigationPackageItemProvider {
 				|| childFeature == UMLPackage.Literals.PACKAGE__OWNED_STEREOTYPE
 				|| childFeature == UMLPackage.Literals.PACKAGE__OWNED_TYPE;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}

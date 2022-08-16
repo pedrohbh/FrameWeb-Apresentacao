@@ -22,14 +22,16 @@ import org.eclipse.uml2.uml.edit.providers.DependencyItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class NavigationDependencyItemProvider extends DependencyItemProvider {
+public class NavigationDependencyItemProvider extends DependencyItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NavigationDependencyItemProvider(AdapterFactory adapterFactory) {
+	public NavigationDependencyItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -40,8 +42,10 @@ public class NavigationDependencyItemProvider extends DependencyItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 		}
@@ -54,7 +58,8 @@ public class NavigationDependencyItemProvider extends DependencyItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -65,7 +70,8 @@ public class NavigationDependencyItemProvider extends DependencyItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((NavigationDependency) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_NavigationDependency_type")
 				: getString("_UI_NavigationDependency_type") + " " + label;
@@ -79,7 +85,8 @@ public class NavigationDependencyItemProvider extends DependencyItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 		super.notifyChanged(notification);
 	}
@@ -92,7 +99,8 @@ public class NavigationDependencyItemProvider extends DependencyItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 
@@ -103,7 +111,8 @@ public class NavigationDependencyItemProvider extends DependencyItemProvider {
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		return FramewebEditPlugin.INSTANCE;
 	}
 

@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.ClassImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class AxiomImpl extends ClassImpl implements Axiom {
+public class AxiomImpl extends ClassImpl implements Axiom
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AxiomImpl() {
+	protected AxiomImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class AxiomImpl extends ClassImpl implements Axiom {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.AXIOM;
 	}
 

@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.PackageImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public abstract class NavigationPackageImpl extends PackageImpl implements NavigationPackage {
+public abstract class NavigationPackageImpl extends PackageImpl implements NavigationPackage
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NavigationPackageImpl() {
+	protected NavigationPackageImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public abstract class NavigationPackageImpl extends PackageImpl implements Navig
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.NAVIGATION_PACKAGE;
 	}
 

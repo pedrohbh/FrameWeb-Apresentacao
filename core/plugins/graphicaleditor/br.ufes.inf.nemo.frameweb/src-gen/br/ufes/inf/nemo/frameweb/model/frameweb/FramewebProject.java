@@ -23,7 +23,8 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface FramewebProject extends EObject {
+public interface FramewebProject extends EObject
+{
 	/**
 	 * Returns the value of the '<em><b>Compose</b></em>' containment reference list.
 	 * The list contents are of type {@link br.ufes.inf.nemo.frameweb.model.frameweb.FramewebModel}.

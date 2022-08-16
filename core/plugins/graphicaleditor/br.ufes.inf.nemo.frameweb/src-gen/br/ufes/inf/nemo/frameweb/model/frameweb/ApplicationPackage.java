@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface ApplicationPackage extends org.eclipse.uml2.uml.Package {
+public interface ApplicationPackage extends org.eclipse.uml2.uml.Package
+{
 } // ApplicationPackage

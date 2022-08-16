@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.Association;
  * @model interface="true" abstract="true"
  * @generated
  */
-public interface ServiceAssociation extends Association {
+public interface ServiceAssociation extends Association
+{
 } // ServiceAssociation

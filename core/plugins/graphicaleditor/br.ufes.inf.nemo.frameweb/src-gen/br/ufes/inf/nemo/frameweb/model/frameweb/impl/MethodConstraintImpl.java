@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class MethodConstraintImpl extends NavigationConstraintImpl implements MethodConstraint {
+public class MethodConstraintImpl extends NavigationConstraintImpl implements MethodConstraint
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MethodConstraintImpl() {
+	protected MethodConstraintImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class MethodConstraintImpl extends NavigationConstraintImpl implements Me
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.METHOD_CONSTRAINT;
 	}
 

@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class VocabularyPropertyImpl extends PropertyImpl implements VocabularyProperty {
+public class VocabularyPropertyImpl extends PropertyImpl implements VocabularyProperty
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VocabularyPropertyImpl() {
+	protected VocabularyPropertyImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class VocabularyPropertyImpl extends PropertyImpl implements VocabularyPr
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.VOCABULARY_PROPERTY;
 	}
 

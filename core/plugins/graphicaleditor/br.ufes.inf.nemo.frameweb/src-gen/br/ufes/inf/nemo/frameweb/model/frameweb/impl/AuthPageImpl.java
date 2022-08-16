@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class AuthPageImpl extends PageImpl implements AuthPage {
+public class AuthPageImpl extends PageImpl implements AuthPage
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AuthPageImpl() {
+	protected AuthPageImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class AuthPageImpl extends PageImpl implements AuthPage {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.AUTH_PAGE;
 	}
 

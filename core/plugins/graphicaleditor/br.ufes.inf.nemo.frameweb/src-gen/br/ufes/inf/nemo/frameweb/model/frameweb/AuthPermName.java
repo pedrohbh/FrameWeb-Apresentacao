@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface AuthPermName extends DomainAuthAttribute, IdAttribute {
+public interface AuthPermName extends DomainAuthAttribute, IdAttribute
+{
 } // AuthPermName

@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface RestControllerClass extends org.eclipse.uml2.uml.Class {
+public interface RestControllerClass extends org.eclipse.uml2.uml.Class
+{
 } // RestControllerClass

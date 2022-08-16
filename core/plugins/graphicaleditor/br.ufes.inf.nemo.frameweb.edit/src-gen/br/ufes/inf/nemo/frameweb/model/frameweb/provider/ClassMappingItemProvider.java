@@ -25,14 +25,16 @@ import org.eclipse.uml2.uml.edit.providers.StereotypeItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ClassMappingItemProvider extends StereotypeItemProvider {
+public class ClassMappingItemProvider extends StereotypeItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ClassMappingItemProvider(AdapterFactory adapterFactory) {
+	public ClassMappingItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -43,8 +45,10 @@ public class ClassMappingItemProvider extends StereotypeItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 		}
@@ -58,7 +62,8 @@ public class ClassMappingItemProvider extends StereotypeItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/ClassMapping"));
 	}
 
@@ -68,7 +73,8 @@ public class ClassMappingItemProvider extends StereotypeItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -79,7 +85,8 @@ public class ClassMappingItemProvider extends StereotypeItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((ClassMapping) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_ClassMapping_type")
 				: getString("_UI_ClassMapping_type") + " " + label;
@@ -93,7 +100,8 @@ public class ClassMappingItemProvider extends StereotypeItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 		super.notifyChanged(notification);
 	}
@@ -106,7 +114,8 @@ public class ClassMappingItemProvider extends StereotypeItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.NAMESPACE__OWNED_RULE,
@@ -372,7 +381,8 @@ public class ClassMappingItemProvider extends StereotypeItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -385,7 +395,8 @@ public class ClassMappingItemProvider extends StereotypeItemProvider {
 				|| childFeature == UMLPackage.Literals.BEHAVIORED_CLASSIFIER__CLASSIFIER_BEHAVIOR
 				|| childFeature == UMLPackage.Literals.BEHAVIORED_CLASSIFIER__OWNED_BEHAVIOR;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
@@ -399,7 +410,8 @@ public class ClassMappingItemProvider extends StereotypeItemProvider {
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		return FramewebEditPlugin.INSTANCE;
 	}
 

@@ -28,7 +28,8 @@ import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class IRIImpl extends PropertyImpl implements IRI {
+public class IRIImpl extends PropertyImpl implements IRI
+{
 	/**
 	 * The default value of the '{@link #getIri() <em>Iri</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -74,7 +75,8 @@ public class IRIImpl extends PropertyImpl implements IRI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IRIImpl() {
+	protected IRIImpl()
+	{
 		super();
 	}
 
@@ -84,7 +86,8 @@ public class IRIImpl extends PropertyImpl implements IRI {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.IRI;
 	}
 
@@ -94,7 +97,8 @@ public class IRIImpl extends PropertyImpl implements IRI {
 	 * @generated
 	 */
 	@Override
-	public String getIri() {
+	public String getIri()
+	{
 		return iri;
 	}
 
@@ -104,7 +108,8 @@ public class IRIImpl extends PropertyImpl implements IRI {
 	 * @generated
 	 */
 	@Override
-	public void setIri(String newIri) {
+	public void setIri(String newIri)
+	{
 		String oldIri = iri;
 		iri = newIri;
 		if (eNotificationRequired())
@@ -117,7 +122,8 @@ public class IRIImpl extends PropertyImpl implements IRI {
 	 * @generated
 	 */
 	@Override
-	public String getIriVersion() {
+	public String getIriVersion()
+	{
 		return iriVersion;
 	}
 
@@ -127,7 +133,8 @@ public class IRIImpl extends PropertyImpl implements IRI {
 	 * @generated
 	 */
 	@Override
-	public void setIriVersion(String newIriVersion) {
+	public void setIriVersion(String newIriVersion)
+	{
 		String oldIriVersion = iriVersion;
 		iriVersion = newIriVersion;
 		if (eNotificationRequired())
@@ -141,8 +148,10 @@ public class IRIImpl extends PropertyImpl implements IRI {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.IRI__IRI:
 			return getIri();
 		case FramewebPackage.IRI__IRI_VERSION:
@@ -157,8 +166,10 @@ public class IRIImpl extends PropertyImpl implements IRI {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.IRI__IRI:
 			setIri((String) newValue);
 			return;
@@ -175,8 +186,10 @@ public class IRIImpl extends PropertyImpl implements IRI {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.IRI__IRI:
 			setIri(IRI_EDEFAULT);
 			return;
@@ -193,8 +206,10 @@ public class IRIImpl extends PropertyImpl implements IRI {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.IRI__IRI:
 			return IRI_EDEFAULT == null ? iri != null : !IRI_EDEFAULT.equals(iri);
 		case FramewebPackage.IRI__IRI_VERSION:
@@ -209,7 +224,8 @@ public class IRIImpl extends PropertyImpl implements IRI {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

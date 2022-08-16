@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class ResultPropertyImpl extends PropertyImpl implements ResultProperty {
+public class ResultPropertyImpl extends PropertyImpl implements ResultProperty
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ResultPropertyImpl() {
+	protected ResultPropertyImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class ResultPropertyImpl extends PropertyImpl implements ResultProperty {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.RESULT_PROPERTY;
 	}
 

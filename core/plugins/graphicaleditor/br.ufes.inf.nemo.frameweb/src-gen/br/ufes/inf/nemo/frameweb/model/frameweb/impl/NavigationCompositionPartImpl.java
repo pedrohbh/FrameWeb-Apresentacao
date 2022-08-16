@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class NavigationCompositionPartImpl extends NavigationPropertyImpl implements NavigationCompositionPart {
+public class NavigationCompositionPartImpl extends NavigationPropertyImpl implements NavigationCompositionPart
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NavigationCompositionPartImpl() {
+	protected NavigationCompositionPartImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class NavigationCompositionPartImpl extends NavigationPropertyImpl implem
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.NAVIGATION_COMPOSITION_PART;
 	}
 

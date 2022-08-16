@@ -20,7 +20,8 @@ import org.eclipse.uml2.uml.Association;
  * @model
  * @generated
  */
-public interface VocabularyAssociation extends Association {
+public interface VocabularyAssociation extends Association
+{
 	/**
 	 * Returns the value of the '<em><b>Prefix</b></em>' attribute.
 	 * <!-- begin-user-doc -->

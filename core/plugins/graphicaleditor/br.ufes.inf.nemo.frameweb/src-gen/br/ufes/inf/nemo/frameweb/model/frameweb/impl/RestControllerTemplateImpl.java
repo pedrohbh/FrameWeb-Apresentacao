@@ -23,7 +23,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class RestControllerTemplateImpl extends FrameworkProfileImpl implements RestControllerTemplate {
+public class RestControllerTemplateImpl extends FrameworkProfileImpl implements RestControllerTemplate
+{
 	/**
 	 * The default value of the '{@link #getClassTemplate() <em>Class Template</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -66,7 +67,8 @@ public class RestControllerTemplateImpl extends FrameworkProfileImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RestControllerTemplateImpl() {
+	protected RestControllerTemplateImpl()
+	{
 		super();
 	}
 
@@ -76,7 +78,8 @@ public class RestControllerTemplateImpl extends FrameworkProfileImpl implements 
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.REST_CONTROLLER_TEMPLATE;
 	}
 
@@ -86,7 +89,8 @@ public class RestControllerTemplateImpl extends FrameworkProfileImpl implements 
 	 * @generated
 	 */
 	@Override
-	public String getClassTemplate() {
+	public String getClassTemplate()
+	{
 		return classTemplate;
 	}
 
@@ -97,7 +101,8 @@ public class RestControllerTemplateImpl extends FrameworkProfileImpl implements 
 	 */
 	@SuppressWarnings("restriction")
 	@Override
-	public void setClassTemplate(String newClassTemplate) {
+	public void setClassTemplate(String newClassTemplate)
+	{
 		String oldClassTemplate = classTemplate;
 		classTemplate = newClassTemplate;
 		if (eNotificationRequired())
@@ -111,7 +116,8 @@ public class RestControllerTemplateImpl extends FrameworkProfileImpl implements 
 	 * @generated
 	 */
 	@Override
-	public String getClassExtension() {
+	public String getClassExtension()
+	{
 		return classExtension;
 	}
 
@@ -122,7 +128,8 @@ public class RestControllerTemplateImpl extends FrameworkProfileImpl implements 
 	 */
 	@SuppressWarnings("restriction")
 	@Override
-	public void setClassExtension(String newClassExtension) {
+	public void setClassExtension(String newClassExtension)
+	{
 		String oldClassExtension = classExtension;
 		classExtension = newClassExtension;
 		if (eNotificationRequired())
@@ -136,8 +143,10 @@ public class RestControllerTemplateImpl extends FrameworkProfileImpl implements 
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.REST_CONTROLLER_TEMPLATE__CLASS_TEMPLATE:
 			return getClassTemplate();
 		case FramewebPackage.REST_CONTROLLER_TEMPLATE__CLASS_EXTENSION:
@@ -152,8 +161,10 @@ public class RestControllerTemplateImpl extends FrameworkProfileImpl implements 
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.REST_CONTROLLER_TEMPLATE__CLASS_TEMPLATE:
 			setClassTemplate((String) newValue);
 			return;
@@ -170,8 +181,10 @@ public class RestControllerTemplateImpl extends FrameworkProfileImpl implements 
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.REST_CONTROLLER_TEMPLATE__CLASS_TEMPLATE:
 			setClassTemplate(CLASS_TEMPLATE_EDEFAULT);
 			return;
@@ -188,8 +201,10 @@ public class RestControllerTemplateImpl extends FrameworkProfileImpl implements 
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.REST_CONTROLLER_TEMPLATE__CLASS_TEMPLATE:
 			return CLASS_TEMPLATE_EDEFAULT == null ? classTemplate != null
 					: !CLASS_TEMPLATE_EDEFAULT.equals(classTemplate);
@@ -206,7 +221,8 @@ public class RestControllerTemplateImpl extends FrameworkProfileImpl implements 
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

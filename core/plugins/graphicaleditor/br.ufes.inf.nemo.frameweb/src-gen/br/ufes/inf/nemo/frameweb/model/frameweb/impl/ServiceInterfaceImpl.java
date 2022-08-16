@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.InterfaceImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class ServiceInterfaceImpl extends InterfaceImpl implements ServiceInterface {
+public class ServiceInterfaceImpl extends InterfaceImpl implements ServiceInterface
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ServiceInterfaceImpl() {
+	protected ServiceInterfaceImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class ServiceInterfaceImpl extends InterfaceImpl implements ServiceInterf
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.SERVICE_INTERFACE;
 	}
 

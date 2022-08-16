@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.ClassImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class FrontControllerClassImpl extends ClassImpl implements FrontControllerClass {
+public class FrontControllerClassImpl extends ClassImpl implements FrontControllerClass
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FrontControllerClassImpl() {
+	protected FrontControllerClassImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class FrontControllerClassImpl extends ClassImpl implements FrontControll
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.FRONT_CONTROLLER_CLASS;
 	}
 

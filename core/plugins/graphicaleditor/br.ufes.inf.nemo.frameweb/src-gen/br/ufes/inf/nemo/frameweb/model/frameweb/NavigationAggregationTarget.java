@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface NavigationAggregationTarget extends NavigationProperty {
+public interface NavigationAggregationTarget extends NavigationProperty
+{
 } // NavigationAggregationTarget

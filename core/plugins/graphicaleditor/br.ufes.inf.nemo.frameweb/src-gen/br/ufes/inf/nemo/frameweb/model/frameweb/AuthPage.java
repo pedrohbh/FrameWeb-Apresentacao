@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface AuthPage extends Page {
+public interface AuthPage extends Page
+{
 } // AuthPage

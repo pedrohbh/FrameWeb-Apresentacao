@@ -14,7 +14,8 @@ import org.eclipse.uml2.uml.Property;
  * @model
  * @generated
  */
-public interface ServiceControllerAssociation extends ServiceAssociation {
+public interface ServiceControllerAssociation extends ServiceAssociation
+{
 
 	/**
 	 * <!-- begin-user-doc -->

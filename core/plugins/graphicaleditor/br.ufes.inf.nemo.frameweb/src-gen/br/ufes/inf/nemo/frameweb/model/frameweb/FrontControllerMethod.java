@@ -23,7 +23,8 @@ import org.eclipse.uml2.uml.Type;
  * @model
  * @generated
  */
-public interface FrontControllerMethod extends Operation {
+public interface FrontControllerMethod extends Operation
+{
 	/**
 	 * Returns the value of the '<em><b>Is Default</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -19,7 +19,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface DecimalAttribute extends Attribute {
+public interface DecimalAttribute extends Attribute
+{
 	/**
 	 * Returns the value of the '<em><b>Decimal Precision</b></em>' attribute.
 	 * <!-- begin-user-doc -->

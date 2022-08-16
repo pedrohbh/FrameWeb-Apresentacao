@@ -24,14 +24,16 @@ import org.eclipse.uml2.uml.UMLPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class RestControllerTemplateItemProvider extends FrameworkProfileItemProvider {
+public class RestControllerTemplateItemProvider extends FrameworkProfileItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RestControllerTemplateItemProvider(AdapterFactory adapterFactory) {
+	public RestControllerTemplateItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -42,8 +44,10 @@ public class RestControllerTemplateItemProvider extends FrameworkProfileItemProv
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addClassTemplatePropertyDescriptor(object);
@@ -58,7 +62,8 @@ public class RestControllerTemplateItemProvider extends FrameworkProfileItemProv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addClassTemplatePropertyDescriptor(Object object) {
+	protected void addClassTemplatePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_RestControllerTemplate_classTemplate_feature"),
@@ -74,7 +79,8 @@ public class RestControllerTemplateItemProvider extends FrameworkProfileItemProv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addClassExtensionPropertyDescriptor(Object object) {
+	protected void addClassExtensionPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_RestControllerTemplate_classExtension_feature"),
@@ -91,7 +97,8 @@ public class RestControllerTemplateItemProvider extends FrameworkProfileItemProv
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/RestControllerTemplate"));
 	}
 
@@ -101,7 +108,8 @@ public class RestControllerTemplateItemProvider extends FrameworkProfileItemProv
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -112,7 +120,8 @@ public class RestControllerTemplateItemProvider extends FrameworkProfileItemProv
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((RestControllerTemplate) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_RestControllerTemplate_type")
 				: getString("_UI_RestControllerTemplate_type") + " " + label;
@@ -126,10 +135,12 @@ public class RestControllerTemplateItemProvider extends FrameworkProfileItemProv
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(RestControllerTemplate.class)) {
+		switch (notification.getFeatureID(RestControllerTemplate.class))
+		{
 		case FramewebPackage.REST_CONTROLLER_TEMPLATE__CLASS_TEMPLATE:
 		case FramewebPackage.REST_CONTROLLER_TEMPLATE__CLASS_EXTENSION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
@@ -146,7 +157,8 @@ public class RestControllerTemplateItemProvider extends FrameworkProfileItemProv
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 
@@ -157,7 +169,8 @@ public class RestControllerTemplateItemProvider extends FrameworkProfileItemProv
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -172,7 +185,8 @@ public class RestControllerTemplateItemProvider extends FrameworkProfileItemProv
 				|| childFeature == UMLPackage.Literals.PACKAGE__OWNED_STEREOTYPE
 				|| childFeature == UMLPackage.Literals.PACKAGE__OWNED_TYPE;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}

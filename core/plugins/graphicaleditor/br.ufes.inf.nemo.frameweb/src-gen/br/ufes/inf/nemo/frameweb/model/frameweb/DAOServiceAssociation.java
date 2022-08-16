@@ -14,7 +14,8 @@ import org.eclipse.uml2.uml.Property;
  * @model
  * @generated
  */
-public interface DAOServiceAssociation extends ServiceAssociation {
+public interface DAOServiceAssociation extends ServiceAssociation
+{
 
 	/**
 	 * <!-- begin-user-doc -->

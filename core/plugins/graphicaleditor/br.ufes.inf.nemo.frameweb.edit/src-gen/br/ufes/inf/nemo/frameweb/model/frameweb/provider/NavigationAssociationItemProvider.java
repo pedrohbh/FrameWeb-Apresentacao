@@ -25,14 +25,16 @@ import org.eclipse.uml2.uml.edit.providers.AssociationItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class NavigationAssociationItemProvider extends AssociationItemProvider {
+public class NavigationAssociationItemProvider extends AssociationItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NavigationAssociationItemProvider(AdapterFactory adapterFactory) {
+	public NavigationAssociationItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -43,8 +45,10 @@ public class NavigationAssociationItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 		}
@@ -58,7 +62,8 @@ public class NavigationAssociationItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/NavigationAssociation"));
 	}
 
@@ -68,7 +73,8 @@ public class NavigationAssociationItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -79,7 +85,8 @@ public class NavigationAssociationItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((NavigationAssociation) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_NavigationAssociation_type")
 				: getString("_UI_NavigationAssociation_type") + " " + label;
@@ -93,7 +100,8 @@ public class NavigationAssociationItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 		super.notifyChanged(notification);
 	}
@@ -106,7 +114,8 @@ public class NavigationAssociationItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.NAMESPACE__OWNED_RULE,
@@ -327,7 +336,8 @@ public class NavigationAssociationItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -336,7 +346,8 @@ public class NavigationAssociationItemProvider extends AssociationItemProvider {
 				|| childFeature == UMLPackage.Literals.ASSOCIATION__OWNED_END
 				|| childFeature == UMLPackage.Literals.ASSOCIATION__NAVIGABLE_OWNED_END;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
@@ -350,7 +361,8 @@ public class NavigationAssociationItemProvider extends AssociationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		return FramewebEditPlugin.INSTANCE;
 	}
 

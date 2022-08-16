@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.Dependency;
  * @model abstract="true"
  * @generated
  */
-public interface NavigationDependency extends Dependency {
+public interface NavigationDependency extends Dependency
+{
 } // NavigationDependency

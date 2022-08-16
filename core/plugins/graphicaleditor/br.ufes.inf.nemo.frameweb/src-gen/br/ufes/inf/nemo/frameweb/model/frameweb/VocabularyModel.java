@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface VocabularyModel extends FramewebModel {
+public interface VocabularyModel extends FramewebModel
+{
 } // VocabularyModel

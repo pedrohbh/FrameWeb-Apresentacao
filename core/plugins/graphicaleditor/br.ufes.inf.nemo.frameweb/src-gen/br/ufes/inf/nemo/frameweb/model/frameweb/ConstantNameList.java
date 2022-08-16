@@ -17,7 +17,8 @@ import org.eclipse.emf.common.util.Enumerator;
  * @model
  * @generated
  */
-public enum ConstantNameList implements Enumerator {
+public enum ConstantNameList implements Enumerator
+{
 	/**
 	 * The '<em><b>DAO</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -293,10 +294,13 @@ public enum ConstantNameList implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static ConstantNameList get(String literal) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+	public static ConstantNameList get(String literal)
+	{
+		for (int i = 0; i < VALUES_ARRAY.length; ++i)
+		{
 			ConstantNameList result = VALUES_ARRAY[i];
-			if (result.toString().equals(literal)) {
+			if (result.toString().equals(literal))
+			{
 				return result;
 			}
 		}
@@ -311,10 +315,13 @@ public enum ConstantNameList implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static ConstantNameList getByName(String name) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+	public static ConstantNameList getByName(String name)
+	{
+		for (int i = 0; i < VALUES_ARRAY.length; ++i)
+		{
 			ConstantNameList result = VALUES_ARRAY[i];
-			if (result.getName().equals(name)) {
+			if (result.getName().equals(name))
+			{
 				return result;
 			}
 		}
@@ -329,8 +336,10 @@ public enum ConstantNameList implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static ConstantNameList get(int value) {
-		switch (value) {
+	public static ConstantNameList get(int value)
+	{
+		switch (value)
+		{
 		case DAO_VALUE:
 			return DAO;
 		case INTERFACE_VALUE:
@@ -372,7 +381,8 @@ public enum ConstantNameList implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private ConstantNameList(int value, String name, String literal) {
+	private ConstantNameList(int value, String name, String literal)
+	{
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -384,7 +394,8 @@ public enum ConstantNameList implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public int getValue() {
+	public int getValue()
+	{
 		return value;
 	}
 
@@ -394,7 +405,8 @@ public enum ConstantNameList implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -404,7 +416,8 @@ public enum ConstantNameList implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public String getLiteral() {
+	public String getLiteral()
+	{
 		return literal;
 	}
 
@@ -415,7 +428,8 @@ public enum ConstantNameList implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return literal;
 	}
 

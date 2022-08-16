@@ -29,14 +29,16 @@ import org.eclipse.uml2.uml.edit.providers.InterfaceItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DAOInterfaceItemProvider extends InterfaceItemProvider {
+public class DAOInterfaceItemProvider extends InterfaceItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DAOInterfaceItemProvider(AdapterFactory adapterFactory) {
+	public DAOInterfaceItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -47,8 +49,10 @@ public class DAOInterfaceItemProvider extends InterfaceItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addInfixPropertyDescriptor(object);
@@ -63,7 +67,8 @@ public class DAOInterfaceItemProvider extends InterfaceItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addInfixPropertyDescriptor(Object object) {
+	protected void addInfixPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_DAOInterface_infix_feature"),
@@ -79,7 +84,8 @@ public class DAOInterfaceItemProvider extends InterfaceItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSufixPropertyDescriptor(Object object) {
+	protected void addSufixPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_DAOInterface_sufix_feature"),
@@ -96,7 +102,8 @@ public class DAOInterfaceItemProvider extends InterfaceItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/DAOInterface"));
 	}
 
@@ -106,7 +113,8 @@ public class DAOInterfaceItemProvider extends InterfaceItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -117,7 +125,8 @@ public class DAOInterfaceItemProvider extends InterfaceItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((DAOInterface) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_DAOInterface_type")
 				: getString("_UI_DAOInterface_type") + " " + label;
@@ -131,10 +140,12 @@ public class DAOInterfaceItemProvider extends InterfaceItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(DAOInterface.class)) {
+		switch (notification.getFeatureID(DAOInterface.class))
+		{
 		case FramewebPackage.DAO_INTERFACE__INFIX:
 		case FramewebPackage.DAO_INTERFACE__SUFIX:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
@@ -151,7 +162,8 @@ public class DAOInterfaceItemProvider extends InterfaceItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.NAMESPACE__OWNED_RULE,
@@ -411,7 +423,8 @@ public class DAOInterfaceItemProvider extends InterfaceItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -422,7 +435,8 @@ public class DAOInterfaceItemProvider extends InterfaceItemProvider {
 				|| childFeature == UMLPackage.Literals.INTERFACE__OWNED_ATTRIBUTE
 				|| childFeature == UMLPackage.Literals.INTERFACE__PROTOCOL;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
@@ -436,7 +450,8 @@ public class DAOInterfaceItemProvider extends InterfaceItemProvider {
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		return FramewebEditPlugin.INSTANCE;
 	}
 

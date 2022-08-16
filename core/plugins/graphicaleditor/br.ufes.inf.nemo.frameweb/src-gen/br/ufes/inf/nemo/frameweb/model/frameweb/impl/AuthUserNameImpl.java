@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class AuthUserNameImpl extends DomainAuthAttributeImpl implements AuthUserName {
+public class AuthUserNameImpl extends DomainAuthAttributeImpl implements AuthUserName
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AuthUserNameImpl() {
+	protected AuthUserNameImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class AuthUserNameImpl extends DomainAuthAttributeImpl implements AuthUse
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.AUTH_USER_NAME;
 	}
 

@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.InterfaceRealization;
  * @model
  * @generated
  */
-public interface DAORealization extends InterfaceRealization {
+public interface DAORealization extends InterfaceRealization
+{
 } // DAORealization

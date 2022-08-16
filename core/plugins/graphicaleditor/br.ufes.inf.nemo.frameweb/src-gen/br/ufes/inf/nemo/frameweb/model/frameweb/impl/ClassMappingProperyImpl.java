@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class ClassMappingProperyImpl extends PropertyImpl implements ClassMappingPropery {
+public class ClassMappingProperyImpl extends PropertyImpl implements ClassMappingPropery
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ClassMappingProperyImpl() {
+	protected ClassMappingProperyImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class ClassMappingProperyImpl extends PropertyImpl implements ClassMappin
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.CLASS_MAPPING_PROPERY;
 	}
 

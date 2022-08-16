@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.Stereotype;
  * @model
  * @generated
  */
-public interface Controller extends Stereotype {
+public interface Controller extends Stereotype
+{
 } // Controller

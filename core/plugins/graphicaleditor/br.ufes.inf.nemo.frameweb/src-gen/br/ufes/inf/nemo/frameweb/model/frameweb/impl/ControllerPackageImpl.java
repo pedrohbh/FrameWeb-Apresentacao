@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ControllerPackageImpl extends NavigationPackageImpl implements ControllerPackage {
+public class ControllerPackageImpl extends NavigationPackageImpl implements ControllerPackage
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ControllerPackageImpl() {
+	protected ControllerPackageImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class ControllerPackageImpl extends NavigationPackageImpl implements Cont
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.CONTROLLER_PACKAGE;
 	}
 

@@ -28,7 +28,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 @SuppressWarnings("all")
-public class UIComponentFieldImpl extends NavigationAttributeImpl implements UIComponentField {
+public class UIComponentFieldImpl extends NavigationAttributeImpl implements UIComponentField
+{
 	/**
 	 * The cached value of the '{@link #getInject() <em>Inject</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -44,7 +45,8 @@ public class UIComponentFieldImpl extends NavigationAttributeImpl implements UIC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected UIComponentFieldImpl() {
+	protected UIComponentFieldImpl()
+	{
 		super();
 	}
 
@@ -54,7 +56,8 @@ public class UIComponentFieldImpl extends NavigationAttributeImpl implements UIC
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.UI_COMPONENT_FIELD;
 	}
 
@@ -64,11 +67,14 @@ public class UIComponentFieldImpl extends NavigationAttributeImpl implements UIC
 	 * @generated
 	 */
 	@Override
-	public IOParameter getInject() {
-		if (inject != null && inject.eIsProxy()) {
+	public IOParameter getInject()
+	{
+		if (inject != null && inject.eIsProxy())
+		{
 			InternalEObject oldInject = (InternalEObject) inject;
 			inject = (IOParameter) eResolveProxy(oldInject);
-			if (inject != oldInject) {
+			if (inject != oldInject)
+			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							FramewebPackage.UI_COMPONENT_FIELD__INJECT, oldInject, inject));
@@ -82,7 +88,8 @@ public class UIComponentFieldImpl extends NavigationAttributeImpl implements UIC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IOParameter basicGetInject() {
+	public IOParameter basicGetInject()
+	{
 		return inject;
 	}
 
@@ -91,10 +98,12 @@ public class UIComponentFieldImpl extends NavigationAttributeImpl implements UIC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetInject(IOParameter newInject, NotificationChain msgs) {
+	public NotificationChain basicSetInject(IOParameter newInject, NotificationChain msgs)
+	{
 		IOParameter oldInject = inject;
 		inject = newInject;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
 					FramewebPackage.UI_COMPONENT_FIELD__INJECT, oldInject, newInject);
 			if (msgs == null)
@@ -111,8 +120,10 @@ public class UIComponentFieldImpl extends NavigationAttributeImpl implements UIC
 	 * @generated
 	 */
 	@Override
-	public void setInject(IOParameter newInject) {
-		if (newInject != inject) {
+	public void setInject(IOParameter newInject)
+	{
+		if (newInject != inject)
+		{
 			NotificationChain msgs = null;
 			if (inject != null)
 				msgs = ((InternalEObject) inject).eInverseRemove(this, FramewebPackage.IO_PARAMETER__DISPLAY,
@@ -134,8 +145,10 @@ public class UIComponentFieldImpl extends NavigationAttributeImpl implements UIC
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.UI_COMPONENT_FIELD__INJECT:
 			if (inject != null)
 				msgs = ((InternalEObject) inject).eInverseRemove(this, FramewebPackage.IO_PARAMETER__DISPLAY,
@@ -151,8 +164,10 @@ public class UIComponentFieldImpl extends NavigationAttributeImpl implements UIC
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.UI_COMPONENT_FIELD__INJECT:
 			return basicSetInject(null, msgs);
 		}
@@ -165,8 +180,10 @@ public class UIComponentFieldImpl extends NavigationAttributeImpl implements UIC
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.UI_COMPONENT_FIELD__INJECT:
 			if (resolve)
 				return getInject();
@@ -181,8 +198,10 @@ public class UIComponentFieldImpl extends NavigationAttributeImpl implements UIC
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.UI_COMPONENT_FIELD__INJECT:
 			setInject((IOParameter) newValue);
 			return;
@@ -196,8 +215,10 @@ public class UIComponentFieldImpl extends NavigationAttributeImpl implements UIC
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.UI_COMPONENT_FIELD__INJECT:
 			setInject((IOParameter) null);
 			return;
@@ -211,8 +232,10 @@ public class UIComponentFieldImpl extends NavigationAttributeImpl implements UIC
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.UI_COMPONENT_FIELD__INJECT:
 			return inject != null;
 		}

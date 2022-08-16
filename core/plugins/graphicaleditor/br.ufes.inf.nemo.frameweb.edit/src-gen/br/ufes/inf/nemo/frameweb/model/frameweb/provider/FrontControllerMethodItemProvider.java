@@ -29,14 +29,16 @@ import org.eclipse.uml2.uml.edit.providers.OperationItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FrontControllerMethodItemProvider extends OperationItemProvider {
+public class FrontControllerMethodItemProvider extends OperationItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FrontControllerMethodItemProvider(AdapterFactory adapterFactory) {
+	public FrontControllerMethodItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -47,8 +49,10 @@ public class FrontControllerMethodItemProvider extends OperationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addIsDefaultPropertyDescriptor(object);
@@ -64,7 +68,8 @@ public class FrontControllerMethodItemProvider extends OperationItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIsDefaultPropertyDescriptor(Object object) {
+	protected void addIsDefaultPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_FrontControllerMethod_isDefault_feature"),
@@ -80,7 +85,8 @@ public class FrontControllerMethodItemProvider extends OperationItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addMethodTypePropertyDescriptor(Object object) {
+	protected void addMethodTypePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_FrontControllerMethod_methodType_feature"),
@@ -95,7 +101,8 @@ public class FrontControllerMethodItemProvider extends OperationItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRequestMethodPropertyDescriptor(Object object) {
+	protected void addRequestMethodPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_FrontControllerMethod_requestMethod_feature"),
@@ -112,7 +119,8 @@ public class FrontControllerMethodItemProvider extends OperationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/FrontControllerMethod"));
 	}
 
@@ -122,7 +130,8 @@ public class FrontControllerMethodItemProvider extends OperationItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -133,7 +142,8 @@ public class FrontControllerMethodItemProvider extends OperationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((FrontControllerMethod) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_FrontControllerMethod_type")
 				: getString("_UI_FrontControllerMethod_type") + " " + label;
@@ -147,10 +157,12 @@ public class FrontControllerMethodItemProvider extends OperationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(FrontControllerMethod.class)) {
+		switch (notification.getFeatureID(FrontControllerMethod.class))
+		{
 		case FramewebPackage.FRONT_CONTROLLER_METHOD__IS_DEFAULT:
 		case FramewebPackage.FRONT_CONTROLLER_METHOD__REQUEST_METHOD:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
@@ -167,7 +179,8 @@ public class FrontControllerMethodItemProvider extends OperationItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.NAMESPACE__OWNED_RULE,
@@ -250,7 +263,8 @@ public class FrontControllerMethodItemProvider extends OperationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -259,7 +273,8 @@ public class FrontControllerMethodItemProvider extends OperationItemProvider {
 				|| childFeature == UMLPackage.Literals.OPERATION__POSTCONDITION
 				|| childFeature == UMLPackage.Literals.OPERATION__PRECONDITION;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
@@ -273,7 +288,8 @@ public class FrontControllerMethodItemProvider extends OperationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		return FramewebEditPlugin.INSTANCE;
 	}
 

@@ -23,7 +23,8 @@ import org.eclipse.uml2.uml.Property;
  * @model abstract="true"
  * @generated
  */
-public interface Attribute extends Property {
+public interface Attribute extends Property
+{
 	/**
 	 * Returns the value of the '<em><b>Size</b></em>' attribute.
 	 * <!-- begin-user-doc -->

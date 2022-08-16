@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.PackageImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class DomainPackageImpl extends PackageImpl implements DomainPackage {
+public class DomainPackageImpl extends PackageImpl implements DomainPackage
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DomainPackageImpl() {
+	protected DomainPackageImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class DomainPackageImpl extends PackageImpl implements DomainPackage {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.DOMAIN_PACKAGE;
 	}
 

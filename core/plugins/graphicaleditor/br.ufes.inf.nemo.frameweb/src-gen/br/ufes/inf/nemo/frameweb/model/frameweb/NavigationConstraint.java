@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.Constraint;
  * @model abstract="true"
  * @generated
  */
-public interface NavigationConstraint extends Constraint {
+public interface NavigationConstraint extends Constraint
+{
 } // NavigationConstraint

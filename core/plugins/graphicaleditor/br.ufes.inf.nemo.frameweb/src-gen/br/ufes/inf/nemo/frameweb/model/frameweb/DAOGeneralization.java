@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.Generalization;
  * @model
  * @generated
  */
-public interface DAOGeneralization extends Generalization {
+public interface DAOGeneralization extends Generalization
+{
 } // DAOGeneralization

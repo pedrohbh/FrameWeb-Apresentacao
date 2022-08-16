@@ -31,7 +31,8 @@ import org.eclipse.uml2.uml.internal.impl.ProfileImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfile {
+public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfile
+{
 	/**
 	 * The default value of the '{@link #getCategory() <em>Category</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -97,7 +98,8 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FrameworkProfileImpl() {
+	protected FrameworkProfileImpl()
+	{
 		super();
 	}
 
@@ -107,7 +109,8 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.FRAMEWORK_PROFILE;
 	}
 
@@ -117,7 +120,8 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 	 * @generated
 	 */
 	@Override
-	public FrameworkCategoryList getCategory() {
+	public FrameworkCategoryList getCategory()
+	{
 		return category;
 	}
 
@@ -127,7 +131,8 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 	 * @generated
 	 */
 	@Override
-	public void setCategory(FrameworkCategoryList newCategory) {
+	public void setCategory(FrameworkCategoryList newCategory)
+	{
 		FrameworkCategoryList oldCategory = category;
 		category = newCategory == null ? CATEGORY_EDEFAULT : newCategory;
 		if (eNotificationRequired())
@@ -141,7 +146,8 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 	 * @generated
 	 */
 	@Override
-	public FrameworkKindList getKind() {
+	public FrameworkKindList getKind()
+	{
 		return kind;
 	}
 
@@ -151,7 +157,8 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 	 * @generated
 	 */
 	@Override
-	public void setKind(FrameworkKindList newKind) {
+	public void setKind(FrameworkKindList newKind)
+	{
 		FrameworkKindList oldKind = kind;
 		kind = newKind == null ? KIND_EDEFAULT : newKind;
 		if (eNotificationRequired())
@@ -165,7 +172,8 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 	 * @generated
 	 */
 	@Override
-	public String getVersion() {
+	public String getVersion()
+	{
 		return version;
 	}
 
@@ -175,7 +183,8 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 	 * @generated
 	 */
 	@Override
-	public void setVersion(String newVersion) {
+	public void setVersion(String newVersion)
+	{
 		String oldVersion = version;
 		version = newVersion;
 		if (eNotificationRequired())
@@ -189,8 +198,10 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRAMEWORK_PROFILE__CATEGORY:
 			return getCategory();
 		case FramewebPackage.FRAMEWORK_PROFILE__KIND:
@@ -207,8 +218,10 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRAMEWORK_PROFILE__CATEGORY:
 			setCategory((FrameworkCategoryList) newValue);
 			return;
@@ -228,8 +241,10 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRAMEWORK_PROFILE__CATEGORY:
 			setCategory(CATEGORY_EDEFAULT);
 			return;
@@ -249,8 +264,10 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRAMEWORK_PROFILE__CATEGORY:
 			return category != CATEGORY_EDEFAULT;
 		case FramewebPackage.FRAMEWORK_PROFILE__KIND:
@@ -267,7 +284,8 @@ public class FrameworkProfileImpl extends ProfileImpl implements FrameworkProfil
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

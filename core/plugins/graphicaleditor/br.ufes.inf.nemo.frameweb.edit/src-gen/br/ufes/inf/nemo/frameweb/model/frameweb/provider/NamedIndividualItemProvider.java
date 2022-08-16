@@ -28,14 +28,16 @@ import org.eclipse.uml2.uml.UMLPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
+public class NamedIndividualItemProvider extends VocabularyEntityItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NamedIndividualItemProvider(AdapterFactory adapterFactory) {
+	public NamedIndividualItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -46,8 +48,10 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addFeaturingClassifierPropertyDescriptor(object);
@@ -90,7 +94,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addFeaturingClassifierPropertyDescriptor(Object object) {
+	protected void addFeaturingClassifierPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Feature_featuringClassifier_feature"),
@@ -106,7 +111,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIsStaticPropertyDescriptor(Object object) {
+	protected void addIsStaticPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Feature_isStatic_feature"),
@@ -122,7 +128,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTypePropertyDescriptor(Object object) {
+	protected void addTypePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_TypedElement_type_feature"),
@@ -137,7 +144,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIsOrderedPropertyDescriptor(Object object) {
+	protected void addIsOrderedPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_MultiplicityElement_isOrdered_feature"),
@@ -153,7 +161,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIsUniquePropertyDescriptor(Object object) {
+	protected void addIsUniquePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_MultiplicityElement_isUnique_feature"),
@@ -169,7 +178,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLowerPropertyDescriptor(Object object) {
+	protected void addLowerPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_MultiplicityElement_lower_feature"),
@@ -185,7 +195,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLowerValuePropertyDescriptor(Object object) {
+	protected void addLowerValuePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_MultiplicityElement_lowerValue_feature"),
@@ -201,7 +212,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addUpperPropertyDescriptor(Object object) {
+	protected void addUpperPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_MultiplicityElement_upper_feature"),
@@ -217,7 +229,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addUpperValuePropertyDescriptor(Object object) {
+	protected void addUpperValuePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_MultiplicityElement_upperValue_feature"),
@@ -233,7 +246,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIsReadOnlyPropertyDescriptor(Object object) {
+	protected void addIsReadOnlyPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_StructuralFeature_isReadOnly_feature"),
@@ -249,7 +263,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addEndPropertyDescriptor(Object object) {
+	protected void addEndPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_ConnectableElement_end_feature"),
@@ -265,7 +280,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDeployedElementPropertyDescriptor(Object object) {
+	protected void addDeployedElementPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_DeploymentTarget_deployedElement_feature"),
@@ -281,7 +297,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDeploymentPropertyDescriptor(Object object) {
+	protected void addDeploymentPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_DeploymentTarget_deployment_feature"),
@@ -297,7 +314,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDatatypePropertyDescriptor(Object object) {
+	protected void addDatatypePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Property_datatype_feature"),
@@ -313,7 +331,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addInterfacePropertyDescriptor(Object object) {
+	protected void addInterfacePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Property_interface_feature"),
@@ -329,7 +348,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDefaultPropertyDescriptor(Object object) {
+	protected void addDefaultPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Property_default_feature"),
@@ -345,7 +365,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAggregationPropertyDescriptor(Object object) {
+	protected void addAggregationPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Property_aggregation_feature"),
@@ -361,7 +382,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAssociationEndPropertyDescriptor(Object object) {
+	protected void addAssociationEndPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Property_associationEnd_feature"),
@@ -377,7 +399,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addQualifierPropertyDescriptor(Object object) {
+	protected void addQualifierPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Property_qualifier_feature"),
@@ -393,7 +416,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addClassPropertyDescriptor(Object object) {
+	protected void addClassPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Property_class_feature"),
@@ -409,7 +433,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDefaultValuePropertyDescriptor(Object object) {
+	protected void addDefaultValuePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Property_defaultValue_feature"),
@@ -425,7 +450,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIsCompositePropertyDescriptor(Object object) {
+	protected void addIsCompositePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Property_isComposite_feature"),
@@ -442,7 +468,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIsDerivedPropertyDescriptor(Object object) {
+	protected void addIsDerivedPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Property_isDerived_feature"),
@@ -458,7 +485,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIsDerivedUnionPropertyDescriptor(Object object) {
+	protected void addIsDerivedUnionPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Property_isDerivedUnion_feature"),
@@ -474,7 +502,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIsIDPropertyDescriptor(Object object) {
+	protected void addIsIDPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Property_isID_feature"),
@@ -490,7 +519,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addOppositePropertyDescriptor(Object object) {
+	protected void addOppositePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Property_opposite_feature"),
@@ -506,7 +536,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addOwningAssociationPropertyDescriptor(Object object) {
+	protected void addOwningAssociationPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Property_owningAssociation_feature"),
@@ -522,7 +553,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRedefinedPropertyPropertyDescriptor(Object object) {
+	protected void addRedefinedPropertyPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Property_redefinedProperty_feature"),
@@ -537,7 +569,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSubsettedPropertyPropertyDescriptor(Object object) {
+	protected void addSubsettedPropertyPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Property_subsettedProperty_feature"),
@@ -552,7 +585,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAssociationPropertyDescriptor(Object object) {
+	protected void addAssociationPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Property_association_feature"),
@@ -570,8 +604,10 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object)
+	{
+		if (childrenFeatures == null)
+		{
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(UMLPackage.Literals.MULTIPLICITY_ELEMENT__LOWER_VALUE);
 			childrenFeatures.add(UMLPackage.Literals.MULTIPLICITY_ELEMENT__UPPER_VALUE);
@@ -588,7 +624,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
+	protected EStructuralFeature getChildFeature(Object object, Object child)
+	{
 		// Check the type of the specified child object and return the proper feature to use for
 		// adding (see {@link AddCommand}) it as a child.
 
@@ -602,7 +639,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/NamedIndividual"));
 	}
 
@@ -612,7 +650,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -623,7 +662,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((NamedIndividual) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_NamedIndividual_type")
 				: getString("_UI_NamedIndividual_type") + " " + label;
@@ -637,10 +677,12 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(NamedIndividual.class)) {
+		switch (notification.getFeatureID(NamedIndividual.class))
+		{
 		case FramewebPackage.NAMED_INDIVIDUAL__IS_STATIC:
 		case FramewebPackage.NAMED_INDIVIDUAL__TYPE:
 		case FramewebPackage.NAMED_INDIVIDUAL__IS_ORDERED:
@@ -675,7 +717,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.MULTIPLICITY_ELEMENT__LOWER_VALUE,
@@ -932,7 +975,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -943,7 +987,8 @@ public class NamedIndividualItemProvider extends VocabularyEntityItemProvider {
 				|| childFeature == UMLPackage.Literals.CLASSIFIER__COLLABORATION_USE
 				|| childFeature == UMLPackage.Literals.CLASSIFIER__REPRESENTATION;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}

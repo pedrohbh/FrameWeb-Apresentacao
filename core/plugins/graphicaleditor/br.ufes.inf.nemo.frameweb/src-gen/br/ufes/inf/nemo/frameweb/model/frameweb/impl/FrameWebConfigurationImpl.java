@@ -28,7 +28,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements FrameWebConfiguration {
+public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements FrameWebConfiguration
+{
 	/**
 	 * The default value of the '{@link #getSrcPath() <em>Src Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -134,7 +135,8 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FrameWebConfigurationImpl() {
+	protected FrameWebConfigurationImpl()
+	{
 		super();
 	}
 
@@ -144,7 +146,8 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.FRAME_WEB_CONFIGURATION;
 	}
 
@@ -154,7 +157,8 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 	 * @generated
 	 */
 	@Override
-	public String getSrcPath() {
+	public String getSrcPath()
+	{
 		return srcPath;
 	}
 
@@ -165,7 +169,8 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 	 */
 	@SuppressWarnings("restriction")
 	@Override
-	public void setSrcPath(String newSrcPath) {
+	public void setSrcPath(String newSrcPath)
+	{
 		String oldSrcPath = srcPath;
 		srcPath = newSrcPath;
 		if (eNotificationRequired())
@@ -179,7 +184,8 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 	 * @generated
 	 */
 	@Override
-	public String getViewPath() {
+	public String getViewPath()
+	{
 		return viewPath;
 	}
 
@@ -190,7 +196,8 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 	 */
 	@SuppressWarnings("restriction")
 	@Override
-	public void setViewPath(String newViewPath) {
+	public void setViewPath(String newViewPath)
+	{
 		String oldViewPath = viewPath;
 		viewPath = newViewPath;
 		if (eNotificationRequired())
@@ -204,7 +211,8 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 	 * @generated
 	 */
 	@Override
-	public String getFrameworkDefinitionPath() {
+	public String getFrameworkDefinitionPath()
+	{
 		return frameworkDefinitionPath;
 	}
 
@@ -215,7 +223,8 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 	 */
 	@SuppressWarnings("restriction")
 	@Override
-	public void setFrameworkDefinitionPath(String newFrameworkDefinitionPath) {
+	public void setFrameworkDefinitionPath(String newFrameworkDefinitionPath)
+	{
 		String oldFrameworkDefinitionPath = frameworkDefinitionPath;
 		frameworkDefinitionPath = newFrameworkDefinitionPath;
 		if (eNotificationRequired())
@@ -230,7 +239,8 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 	 * @generated
 	 */
 	@Override
-	public String getClassExtension() {
+	public String getClassExtension()
+	{
 		return classExtension;
 	}
 
@@ -241,7 +251,8 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 	 */
 	@SuppressWarnings("restriction")
 	@Override
-	public void setClassExtension(String newClassExtension) {
+	public void setClassExtension(String newClassExtension)
+	{
 		String oldClassExtension = classExtension;
 		classExtension = newClassExtension;
 		if (eNotificationRequired())
@@ -255,7 +266,8 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 	 * @generated
 	 */
 	@Override
-	public String getPageExtension() {
+	public String getPageExtension()
+	{
 		return pageExtension;
 	}
 
@@ -266,7 +278,8 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 	 */
 	@SuppressWarnings("restriction")
 	@Override
-	public void setPageExtension(String newPageExtension) {
+	public void setPageExtension(String newPageExtension)
+	{
 		String oldPageExtension = pageExtension;
 		pageExtension = newPageExtension;
 		if (eNotificationRequired())
@@ -280,8 +293,10 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__SRC_PATH:
 			return getSrcPath();
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__VIEW_PATH:
@@ -302,8 +317,10 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__SRC_PATH:
 			setSrcPath((String) newValue);
 			return;
@@ -329,8 +346,10 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__SRC_PATH:
 			setSrcPath(SRC_PATH_EDEFAULT);
 			return;
@@ -356,8 +375,10 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__SRC_PATH:
 			return SRC_PATH_EDEFAULT == null ? srcPath != null : !SRC_PATH_EDEFAULT.equals(srcPath);
 		case FramewebPackage.FRAME_WEB_CONFIGURATION__VIEW_PATH:
@@ -381,7 +402,8 @@ public class FrameWebConfigurationImpl extends FrameworkProfileImpl implements F
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

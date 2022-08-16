@@ -86,6 +86,8 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.MappingLib;
 import br.ufes.inf.nemo.frameweb.model.frameweb.MethodConstraint;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NamedIndividual;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation;
+import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAAttribute;
+import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAMethod;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationSource;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationTarget;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAssociation;
@@ -166,7 +168,8 @@ import org.eclipse.uml2.uml.UMLPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage {
+public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1075,6 +1078,20 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass navigationAggregationAssociationSPAMethodEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass navigationAggregationAssociationSPAAttributeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum frameworkCategoryListEEnum = null;
 
 	/**
@@ -1183,7 +1200,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @see #init()
 	 * @generated
 	 */
-	private FramewebPackageImpl() {
+	private FramewebPackageImpl()
+	{
 		super(eNS_URI, FramewebFactory.eINSTANCE);
 	}
 
@@ -1206,7 +1224,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static FramewebPackage init() {
+	public static FramewebPackage init()
+	{
 		if (isInited)
 			return (FramewebPackage) EPackage.Registry.INSTANCE.getEPackage(FramewebPackage.eNS_URI);
 
@@ -1243,7 +1262,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getFramewebProject() {
+	public EClass getFramewebProject()
+	{
 		return framewebProjectEClass;
 	}
 
@@ -1253,7 +1273,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getFramewebProject_Compose() {
+	public EReference getFramewebProject_Compose()
+	{
 		return (EReference) framewebProjectEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1263,7 +1284,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getFramewebProject_Configures() {
+	public EReference getFramewebProject_Configures()
+	{
 		return (EReference) framewebProjectEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1273,7 +1295,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getFramewebModel() {
+	public EClass getFramewebModel()
+	{
 		return framewebModelEClass;
 	}
 
@@ -1283,7 +1306,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getFrameworkProfile() {
+	public EClass getFrameworkProfile()
+	{
 		return frameworkProfileEClass;
 	}
 
@@ -1293,7 +1317,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrameworkProfile_Category() {
+	public EAttribute getFrameworkProfile_Category()
+	{
 		return (EAttribute) frameworkProfileEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1303,7 +1328,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrameworkProfile_Kind() {
+	public EAttribute getFrameworkProfile_Kind()
+	{
 		return (EAttribute) frameworkProfileEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1313,7 +1339,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrameworkProfile_Version() {
+	public EAttribute getFrameworkProfile_Version()
+	{
 		return (EAttribute) frameworkProfileEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1323,7 +1350,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getEntityModel() {
+	public EClass getEntityModel()
+	{
 		return entityModelEClass;
 	}
 
@@ -1333,7 +1361,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getNavigationModel() {
+	public EClass getNavigationModel()
+	{
 		return navigationModelEClass;
 	}
 
@@ -1343,7 +1372,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getApplicationModel() {
+	public EClass getApplicationModel()
+	{
 		return applicationModelEClass;
 	}
 
@@ -1353,7 +1383,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getPersistenceModel() {
+	public EClass getPersistenceModel()
+	{
 		return persistenceModelEClass;
 	}
 
@@ -1363,7 +1394,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDomainAssociation() {
+	public EClass getDomainAssociation()
+	{
 		return domainAssociationEClass;
 	}
 
@@ -1373,7 +1405,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDomainAssociation_Collection() {
+	public EAttribute getDomainAssociation_Collection()
+	{
 		return (EAttribute) domainAssociationEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1383,7 +1416,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDomainAssociation_Cascade() {
+	public EAttribute getDomainAssociation_Cascade()
+	{
 		return (EAttribute) domainAssociationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1393,7 +1427,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDomainAssociation_Fetch() {
+	public EAttribute getDomainAssociation_Fetch()
+	{
 		return (EAttribute) domainAssociationEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1403,7 +1438,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDomainAssociation_Order() {
+	public EAttribute getDomainAssociation_Order()
+	{
 		return (EAttribute) domainAssociationEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1413,7 +1449,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EOperation getDomainAssociation__GetSourceMember() {
+	public EOperation getDomainAssociation__GetSourceMember()
+	{
 		return domainAssociationEClass.getEOperations().get(0);
 	}
 
@@ -1423,7 +1460,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EOperation getDomainAssociation__GetTargetMember() {
+	public EOperation getDomainAssociation__GetTargetMember()
+	{
 		return domainAssociationEClass.getEOperations().get(1);
 	}
 
@@ -1433,7 +1471,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EOperation getDomainAssociation__GetSourceToTargetCardinality() {
+	public EOperation getDomainAssociation__GetSourceToTargetCardinality()
+	{
 		return domainAssociationEClass.getEOperations().get(2);
 	}
 
@@ -1443,7 +1482,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EOperation getDomainAssociation__GetTargetToSourceCardinality() {
+	public EOperation getDomainAssociation__GetTargetToSourceCardinality()
+	{
 		return domainAssociationEClass.getEOperations().get(3);
 	}
 
@@ -1453,7 +1493,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getAttribute() {
+	public EClass getAttribute()
+	{
 		return attributeEClass;
 	}
 
@@ -1463,7 +1504,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAttribute_Size() {
+	public EAttribute getAttribute_Size()
+	{
 		return (EAttribute) attributeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1473,7 +1515,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAttribute_IsNull() {
+	public EAttribute getAttribute_IsNull()
+	{
 		return (EAttribute) attributeEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1483,7 +1526,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAttribute_IsPersistent() {
+	public EAttribute getAttribute_IsPersistent()
+	{
 		return (EAttribute) attributeEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1493,7 +1537,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAttribute_OwlEquivalentProperty() {
+	public EAttribute getAttribute_OwlEquivalentProperty()
+	{
 		return (EAttribute) attributeEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1503,7 +1548,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getVersionAttribute() {
+	public EClass getVersionAttribute()
+	{
 		return versionAttributeEClass;
 	}
 
@@ -1513,7 +1559,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getIdAttribute() {
+	public EClass getIdAttribute()
+	{
 		return idAttributeEClass;
 	}
 
@@ -1523,7 +1570,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getIdAttribute_Generation() {
+	public EAttribute getIdAttribute_Generation()
+	{
 		return (EAttribute) idAttributeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1533,7 +1581,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getLOBAttribute() {
+	public EClass getLOBAttribute()
+	{
 		return lobAttributeEClass;
 	}
 
@@ -1543,7 +1592,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getEmbeddedAttribute() {
+	public EClass getEmbeddedAttribute()
+	{
 		return embeddedAttributeEClass;
 	}
 
@@ -1553,7 +1603,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDecimalAttribute() {
+	public EClass getDecimalAttribute()
+	{
 		return decimalAttributeEClass;
 	}
 
@@ -1563,7 +1614,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDecimalAttribute_DecimalPrecision() {
+	public EAttribute getDecimalAttribute_DecimalPrecision()
+	{
 		return (EAttribute) decimalAttributeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1573,7 +1625,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDecimalAttribute_DecimalScale() {
+	public EAttribute getDecimalAttribute_DecimalScale()
+	{
 		return (EAttribute) decimalAttributeEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1583,7 +1636,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDateTimeAttribute() {
+	public EClass getDateTimeAttribute()
+	{
 		return dateTimeAttributeEClass;
 	}
 
@@ -1593,7 +1647,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDateTimeAttribute_DateTimePrecision() {
+	public EAttribute getDateTimeAttribute_DateTimePrecision()
+	{
 		return (EAttribute) dateTimeAttributeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1603,7 +1658,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getPage() {
+	public EClass getPage()
+	{
 		return pageEClass;
 	}
 
@@ -1613,7 +1669,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getPage_PageTagLib() {
+	public EReference getPage_PageTagLib()
+	{
 		return (EReference) pageEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1623,7 +1680,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getAuthPage() {
+	public EClass getAuthPage()
+	{
 		return authPageEClass;
 	}
 
@@ -1633,7 +1691,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDAOInterface() {
+	public EClass getDAOInterface()
+	{
 		return daoInterfaceEClass;
 	}
 
@@ -1643,7 +1702,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDAOInterface_Infix() {
+	public EAttribute getDAOInterface_Infix()
+	{
 		return (EAttribute) daoInterfaceEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1653,7 +1713,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDAOInterface_Sufix() {
+	public EAttribute getDAOInterface_Sufix()
+	{
 		return (EAttribute) daoInterfaceEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1663,7 +1724,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDAOClass() {
+	public EClass getDAOClass()
+	{
 		return daoClassEClass;
 	}
 
@@ -1673,7 +1735,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDAOClass_Sufix() {
+	public EAttribute getDAOClass_Sufix()
+	{
 		return (EAttribute) daoClassEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1683,7 +1746,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDAOClass_Infix() {
+	public EAttribute getDAOClass_Infix()
+	{
 		return (EAttribute) daoClassEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1693,7 +1757,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDAOClass_Prefix() {
+	public EAttribute getDAOClass_Prefix()
+	{
 		return (EAttribute) daoClassEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1703,7 +1768,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDAORealization() {
+	public EClass getDAORealization()
+	{
 		return daoRealizationEClass;
 	}
 
@@ -1713,7 +1779,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getFrontControllerClass() {
+	public EClass getFrontControllerClass()
+	{
 		return frontControllerClassEClass;
 	}
 
@@ -1723,7 +1790,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getIOParameter() {
+	public EClass getIOParameter()
+	{
 		return ioParameterEClass;
 	}
 
@@ -1733,7 +1801,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getIOParameter_Display() {
+	public EReference getIOParameter_Display()
+	{
 		return (EReference) ioParameterEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1743,7 +1812,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getResultDependency() {
+	public EClass getResultDependency()
+	{
 		return resultDependencyEClass;
 	}
 
@@ -1753,7 +1823,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getResultDependency_ResultMethod() {
+	public EReference getResultDependency_ResultMethod()
+	{
 		return (EReference) resultDependencyEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1763,7 +1834,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getResultDependency_ResultDependencyConstraint() {
+	public EReference getResultDependency_ResultDependencyConstraint()
+	{
 		return (EReference) resultDependencyEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1773,7 +1845,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getResultDependency_HttpStatus() {
+	public EAttribute getResultDependency_HttpStatus()
+	{
 		return (EAttribute) resultDependencyEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1783,7 +1856,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getAuthSuccessUrl() {
+	public EClass getAuthSuccessUrl()
+	{
 		return authSuccessUrlEClass;
 	}
 
@@ -1793,7 +1867,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getAuthFailureUrl() {
+	public EClass getAuthFailureUrl()
+	{
 		return authFailureUrlEClass;
 	}
 
@@ -1803,7 +1878,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getNavigationAssociation() {
+	public EClass getNavigationAssociation()
+	{
 		return navigationAssociationEClass;
 	}
 
@@ -1813,7 +1889,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getFrontControllerMethod() {
+	public EClass getFrontControllerMethod()
+	{
 		return frontControllerMethodEClass;
 	}
 
@@ -1823,7 +1900,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrontControllerMethod_IsDefault() {
+	public EAttribute getFrontControllerMethod_IsDefault()
+	{
 		return (EAttribute) frontControllerMethodEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1833,7 +1911,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getFrontControllerMethod_MethodType() {
+	public EReference getFrontControllerMethod_MethodType()
+	{
 		return (EReference) frontControllerMethodEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1843,7 +1922,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrontControllerMethod_RequestMethod() {
+	public EAttribute getFrontControllerMethod_RequestMethod()
+	{
 		return (EAttribute) frontControllerMethodEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1853,7 +1933,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getAuthProcessingMethod() {
+	public EClass getAuthProcessingMethod()
+	{
 		return authProcessingMethodEClass;
 	}
 
@@ -1863,7 +1944,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getServiceClass() {
+	public EClass getServiceClass()
+	{
 		return serviceClassEClass;
 	}
 
@@ -1873,7 +1955,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getAuthServiceClass() {
+	public EClass getAuthServiceClass()
+	{
 		return authServiceClassEClass;
 	}
 
@@ -1883,7 +1966,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAuthServiceClass_PermissionName() {
+	public EAttribute getAuthServiceClass_PermissionName()
+	{
 		return (EAttribute) authServiceClassEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1893,7 +1977,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getServiceInterface() {
+	public EClass getServiceInterface()
+	{
 		return serviceInterfaceEClass;
 	}
 
@@ -1903,7 +1988,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getAuthServiceInterface() {
+	public EClass getAuthServiceInterface()
+	{
 		return authServiceInterfaceEClass;
 	}
 
@@ -1913,7 +1999,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getServiceGeneralization() {
+	public EClass getServiceGeneralization()
+	{
 		return serviceGeneralizationEClass;
 	}
 
@@ -1923,7 +2010,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getServiceControllerAssociation() {
+	public EClass getServiceControllerAssociation()
+	{
 		return serviceControllerAssociationEClass;
 	}
 
@@ -1933,7 +2021,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EOperation getServiceControllerAssociation__GetSourceMember() {
+	public EOperation getServiceControllerAssociation__GetSourceMember()
+	{
 		return serviceControllerAssociationEClass.getEOperations().get(0);
 	}
 
@@ -1943,7 +2032,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EOperation getServiceControllerAssociation__GetTargetMember() {
+	public EOperation getServiceControllerAssociation__GetTargetMember()
+	{
 		return serviceControllerAssociationEClass.getEOperations().get(1);
 	}
 
@@ -1953,7 +2043,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDomainClass() {
+	public EClass getDomainClass()
+	{
 		return domainClassEClass;
 	}
 
@@ -1963,7 +2054,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDomainClass_Table() {
+	public EAttribute getDomainClass_Table()
+	{
 		return (EAttribute) domainClassEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1973,7 +2065,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getAuthUser() {
+	public EClass getAuthUser()
+	{
 		return authUserEClass;
 	}
 
@@ -1983,7 +2076,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getAuthUser_AuthUserName() {
+	public EReference getAuthUser_AuthUserName()
+	{
 		return (EReference) authUserEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1993,7 +2087,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getAuthUser_AuthPassword() {
+	public EReference getAuthUser_AuthPassword()
+	{
 		return (EReference) authUserEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2003,7 +2098,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getAuthRole() {
+	public EClass getAuthRole()
+	{
 		return authRoleEClass;
 	}
 
@@ -2013,7 +2109,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getAuthRole_AuthRoleName() {
+	public EReference getAuthRole_AuthRoleName()
+	{
 		return (EReference) authRoleEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2023,7 +2120,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getAuthPermission() {
+	public EClass getAuthPermission()
+	{
 		return authPermissionEClass;
 	}
 
@@ -2033,7 +2131,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getAuthPermission_AuthPermName() {
+	public EReference getAuthPermission_AuthPermName()
+	{
 		return (EReference) authPermissionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2043,7 +2142,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getFrontControllerDependency() {
+	public EClass getFrontControllerDependency()
+	{
 		return frontControllerDependencyEClass;
 	}
 
@@ -2053,7 +2153,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getFrontControllerDependency_Method() {
+	public EReference getFrontControllerDependency_Method()
+	{
 		return (EReference) frontControllerDependencyEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2063,7 +2164,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getFrontControllerDependency_MethodDependendencyConstraint() {
+	public EReference getFrontControllerDependency_MethodDependendencyConstraint()
+	{
 		return (EReference) frontControllerDependencyEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2073,7 +2175,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getPageDependency() {
+	public EClass getPageDependency()
+	{
 		return pageDependencyEClass;
 	}
 
@@ -2083,7 +2186,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getPageDependency_PageDependencyConstraint() {
+	public EReference getPageDependency_PageDependencyConstraint()
+	{
 		return (EReference) pageDependencyEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2093,7 +2197,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDAOServiceAssociation() {
+	public EClass getDAOServiceAssociation()
+	{
 		return daoServiceAssociationEClass;
 	}
 
@@ -2103,7 +2208,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EOperation getDAOServiceAssociation__GetSourceMember() {
+	public EOperation getDAOServiceAssociation__GetSourceMember()
+	{
 		return daoServiceAssociationEClass.getEOperations().get(0);
 	}
 
@@ -2113,7 +2219,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EOperation getDAOServiceAssociation__GetTargetMember() {
+	public EOperation getDAOServiceAssociation__GetTargetMember()
+	{
 		return daoServiceAssociationEClass.getEOperations().get(1);
 	}
 
@@ -2123,7 +2230,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getNavigationAttribute() {
+	public EClass getNavigationAttribute()
+	{
 		return navigationAttributeEClass;
 	}
 
@@ -2133,7 +2241,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getNavigationClass() {
+	public EClass getNavigationClass()
+	{
 		return navigationClassEClass;
 	}
 
@@ -2143,7 +2252,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDomainMethod() {
+	public EClass getDomainMethod()
+	{
 		return domainMethodEClass;
 	}
 
@@ -2153,7 +2263,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getDomainMethod_MethodType() {
+	public EReference getDomainMethod_MethodType()
+	{
 		return (EReference) domainMethodEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2163,7 +2274,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDAOAttribute() {
+	public EClass getDAOAttribute()
+	{
 		return daoAttributeEClass;
 	}
 
@@ -2173,7 +2285,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getServiceMethod() {
+	public EClass getServiceMethod()
+	{
 		return serviceMethodEClass;
 	}
 
@@ -2183,7 +2296,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getServiceMethod_MethodType() {
+	public EReference getServiceMethod_MethodType()
+	{
 		return (EReference) serviceMethodEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2193,7 +2307,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getAuthServiceMethod() {
+	public EClass getAuthServiceMethod()
+	{
 		return authServiceMethodEClass;
 	}
 
@@ -2203,7 +2318,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAuthServiceMethod_PermissionName() {
+	public EAttribute getAuthServiceMethod_PermissionName()
+	{
 		return (EAttribute) authServiceMethodEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2213,7 +2329,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getServiceAttribute() {
+	public EClass getServiceAttribute()
+	{
 		return serviceAttributeEClass;
 	}
 
@@ -2223,7 +2340,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getServiceAssociation() {
+	public EClass getServiceAssociation()
+	{
 		return serviceAssociationEClass;
 	}
 
@@ -2233,7 +2351,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getNavigationDependency() {
+	public EClass getNavigationDependency()
+	{
 		return navigationDependencyEClass;
 	}
 
@@ -2243,7 +2362,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDAOMethod() {
+	public EClass getDAOMethod()
+	{
 		return daoMethodEClass;
 	}
 
@@ -2253,7 +2373,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getDAOMethod_MethodType() {
+	public EReference getDAOMethod_MethodType()
+	{
 		return (EReference) daoMethodEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2263,7 +2384,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDAOMethod_Query() {
+	public EAttribute getDAOMethod_Query()
+	{
 		return (EAttribute) daoMethodEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2273,7 +2395,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDomainPackage() {
+	public EClass getDomainPackage()
+	{
 		return domainPackageEClass;
 	}
 
@@ -2283,7 +2406,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getViewPackage() {
+	public EClass getViewPackage()
+	{
 		return viewPackageEClass;
 	}
 
@@ -2293,7 +2417,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getControllerPackage() {
+	public EClass getControllerPackage()
+	{
 		return controllerPackageEClass;
 	}
 
@@ -2303,7 +2428,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getPersistencePackage() {
+	public EClass getPersistencePackage()
+	{
 		return persistencePackageEClass;
 	}
 
@@ -2313,7 +2439,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getApplicationPackage() {
+	public EClass getApplicationPackage()
+	{
 		return applicationPackageEClass;
 	}
 
@@ -2323,7 +2450,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getUIComponent() {
+	public EClass getUIComponent()
+	{
 		return uiComponentEClass;
 	}
 
@@ -2333,7 +2461,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getAuthForm() {
+	public EClass getAuthForm()
+	{
 		return authFormEClass;
 	}
 
@@ -2343,7 +2472,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getResultType() {
+	public EClass getResultType()
+	{
 		return resultTypeEClass;
 	}
 
@@ -2353,7 +2483,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getNavigationPackage() {
+	public EClass getNavigationPackage()
+	{
 		return navigationPackageEClass;
 	}
 
@@ -2363,7 +2494,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDomainGeneralization() {
+	public EClass getDomainGeneralization()
+	{
 		return domainGeneralizationEClass;
 	}
 
@@ -2373,7 +2505,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getUIComponentField() {
+	public EClass getUIComponentField()
+	{
 		return uiComponentFieldEClass;
 	}
 
@@ -2383,7 +2516,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getUIComponentField_Inject() {
+	public EReference getUIComponentField_Inject()
+	{
 		return (EReference) uiComponentFieldEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2393,7 +2527,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getTagLib() {
+	public EClass getTagLib()
+	{
 		return tagLibEClass;
 	}
 
@@ -2403,7 +2538,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTagLib_Prefix() {
+	public EAttribute getTagLib_Prefix()
+	{
 		return (EAttribute) tagLibEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2413,7 +2549,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getTag() {
+	public EClass getTag()
+	{
 		return tagEClass;
 	}
 
@@ -2423,7 +2560,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTag_CodeGenerationTemplate() {
+	public EAttribute getTag_CodeGenerationTemplate()
+	{
 		return (EAttribute) tagEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2433,7 +2571,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getNavigationCompositionPart() {
+	public EClass getNavigationCompositionPart()
+	{
 		return navigationCompositionPartEClass;
 	}
 
@@ -2443,7 +2582,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getNavigationCompositionWhole() {
+	public EClass getNavigationCompositionWhole()
+	{
 		return navigationCompositionWholeEClass;
 	}
 
@@ -2453,7 +2593,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getNavigationProperty() {
+	public EClass getNavigationProperty()
+	{
 		return navigationPropertyEClass;
 	}
 
@@ -2463,7 +2604,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getResultSet() {
+	public EClass getResultSet()
+	{
 		return resultSetEClass;
 	}
 
@@ -2473,7 +2615,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getNavigationConstraint() {
+	public EClass getNavigationConstraint()
+	{
 		return navigationConstraintEClass;
 	}
 
@@ -2483,7 +2626,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getPageConstraint() {
+	public EClass getPageConstraint()
+	{
 		return pageConstraintEClass;
 	}
 
@@ -2493,7 +2637,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getResultConstraint() {
+	public EClass getResultConstraint()
+	{
 		return resultConstraintEClass;
 	}
 
@@ -2503,7 +2648,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getResultConstraint_Execute() {
+	public EAttribute getResultConstraint_Execute()
+	{
 		return (EAttribute) resultConstraintEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2513,7 +2659,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getResultConstraint_Ajax() {
+	public EAttribute getResultConstraint_Ajax()
+	{
 		return (EAttribute) resultConstraintEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2523,7 +2670,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getResultConstraint_Result() {
+	public EAttribute getResultConstraint_Result()
+	{
 		return (EAttribute) resultConstraintEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2533,7 +2681,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getResultConstraint_Render() {
+	public EAttribute getResultConstraint_Render()
+	{
 		return (EAttribute) resultConstraintEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -2543,7 +2692,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getMethodConstraint() {
+	public EClass getMethodConstraint()
+	{
 		return methodConstraintEClass;
 	}
 
@@ -2553,7 +2703,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getChainingConstraint() {
+	public EClass getChainingConstraint()
+	{
 		return chainingConstraintEClass;
 	}
 
@@ -2563,7 +2714,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getNavigationGeneralization() {
+	public EClass getNavigationGeneralization()
+	{
 		return navigationGeneralizationEClass;
 	}
 
@@ -2573,7 +2725,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDomainConstraints() {
+	public EClass getDomainConstraints()
+	{
 		return domainConstraintsEClass;
 	}
 
@@ -2583,7 +2736,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDomainConstraints_Collection() {
+	public EAttribute getDomainConstraints_Collection()
+	{
 		return (EAttribute) domainConstraintsEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2593,7 +2747,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDomainConstraints_Fetch() {
+	public EAttribute getDomainConstraints_Fetch()
+	{
 		return (EAttribute) domainConstraintsEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2603,7 +2758,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDomainConstraints_Order() {
+	public EAttribute getDomainConstraints_Order()
+	{
 		return (EAttribute) domainConstraintsEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2613,7 +2769,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDomainConstraints_Cascade() {
+	public EAttribute getDomainConstraints_Cascade()
+	{
 		return (EAttribute) domainConstraintsEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -2623,7 +2780,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDAOGeneralization() {
+	public EClass getDAOGeneralization()
+	{
 		return daoGeneralizationEClass;
 	}
 
@@ -2633,7 +2791,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getMappingLib() {
+	public EClass getMappingLib()
+	{
 		return mappingLibEClass;
 	}
 
@@ -2643,7 +2802,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getClassMapping() {
+	public EClass getClassMapping()
+	{
 		return classMappingEClass;
 	}
 
@@ -2653,7 +2813,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getAttributeMapping() {
+	public EClass getAttributeMapping()
+	{
 		return attributeMappingEClass;
 	}
 
@@ -2663,7 +2824,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDomainGeneralizationSet() {
+	public EClass getDomainGeneralizationSet()
+	{
 		return domainGeneralizationSetEClass;
 	}
 
@@ -2673,7 +2835,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDomainGeneralizationSet_Mapping() {
+	public EAttribute getDomainGeneralizationSet_Mapping()
+	{
 		return (EAttribute) domainGeneralizationSetEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2683,7 +2846,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getController() {
+	public EClass getController()
+	{
 		return controllerEClass;
 	}
 
@@ -2693,7 +2857,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getTagProperty() {
+	public EClass getTagProperty()
+	{
 		return tagPropertyEClass;
 	}
 
@@ -2703,7 +2868,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getResultProperty() {
+	public EClass getResultProperty()
+	{
 		return resultPropertyEClass;
 	}
 
@@ -2713,7 +2879,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getClassMappingPropery() {
+	public EClass getClassMappingPropery()
+	{
 		return classMappingProperyEClass;
 	}
 
@@ -2723,7 +2890,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getAttributeMappingProperty() {
+	public EClass getAttributeMappingProperty()
+	{
 		return attributeMappingPropertyEClass;
 	}
 
@@ -2733,7 +2901,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getServiceRealization() {
+	public EClass getServiceRealization()
+	{
 		return serviceRealizationEClass;
 	}
 
@@ -2743,7 +2912,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getNavigationGeneralizationSet() {
+	public EClass getNavigationGeneralizationSet()
+	{
 		return navigationGeneralizationSetEClass;
 	}
 
@@ -2753,7 +2923,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDAOGeneralizationSet() {
+	public EClass getDAOGeneralizationSet()
+	{
 		return daoGeneralizationSetEClass;
 	}
 
@@ -2763,7 +2934,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getServiceGeneralizationSet() {
+	public EClass getServiceGeneralizationSet()
+	{
 		return serviceGeneralizationSetEClass;
 	}
 
@@ -2773,7 +2945,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getSemanticPackage() {
+	public EClass getSemanticPackage()
+	{
 		return semanticPackageEClass;
 	}
 
@@ -2783,7 +2956,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getIRI() {
+	public EClass getIRI()
+	{
 		return iriEClass;
 	}
 
@@ -2793,7 +2967,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getIRI_Iri() {
+	public EAttribute getIRI_Iri()
+	{
 		return (EAttribute) iriEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2803,7 +2978,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getIRI_IriVersion() {
+	public EAttribute getIRI_IriVersion()
+	{
 		return (EAttribute) iriEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2813,7 +2989,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getVocabularyModel() {
+	public EClass getVocabularyModel()
+	{
 		return vocabularyModelEClass;
 	}
 
@@ -2823,7 +3000,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getVocabulary() {
+	public EClass getVocabulary()
+	{
 		return vocabularyEClass;
 	}
 
@@ -2833,7 +3011,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getVocabulary_DirectlyImportsDocuments() {
+	public EReference getVocabulary_DirectlyImportsDocuments()
+	{
 		return (EReference) vocabularyEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2843,7 +3022,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getVocabulary_VocabularyIRI() {
+	public EReference getVocabulary_VocabularyIRI()
+	{
 		return (EReference) vocabularyEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2853,7 +3033,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getVocabulary_Axioms() {
+	public EReference getVocabulary_Axioms()
+	{
 		return (EReference) vocabularyEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2863,7 +3044,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getVocabulary_Annotations() {
+	public EReference getVocabulary_Annotations()
+	{
 		return (EReference) vocabularyEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -2873,7 +3055,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getVocabulary_VocabularyDocument() {
+	public EAttribute getVocabulary_VocabularyDocument()
+	{
 		return (EAttribute) vocabularyEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -2883,7 +3066,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getAxiom() {
+	public EClass getAxiom()
+	{
 		return axiomEClass;
 	}
 
@@ -2893,7 +3077,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getAnnotation() {
+	public EClass getAnnotation()
+	{
 		return annotationEClass;
 	}
 
@@ -2903,7 +3088,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getVocabularyConstraints() {
+	public EClass getVocabularyConstraints()
+	{
 		return vocabularyConstraintsEClass;
 	}
 
@@ -2913,7 +3099,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getVocabularyConstraints_SubPropertyOf() {
+	public EAttribute getVocabularyConstraints_SubPropertyOf()
+	{
 		return (EAttribute) vocabularyConstraintsEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2923,7 +3110,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getVocabularyAssociation() {
+	public EClass getVocabularyAssociation()
+	{
 		return vocabularyAssociationEClass;
 	}
 
@@ -2933,7 +3121,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getVocabularyAssociation_Prefix() {
+	public EAttribute getVocabularyAssociation_Prefix()
+	{
 		return (EAttribute) vocabularyAssociationEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2943,7 +3132,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getVocabularyProperty() {
+	public EClass getVocabularyProperty()
+	{
 		return vocabularyPropertyEClass;
 	}
 
@@ -2953,7 +3143,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getVocabularyEntity() {
+	public EClass getVocabularyEntity()
+	{
 		return vocabularyEntityEClass;
 	}
 
@@ -2963,7 +3154,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getVocabularyEntity_EntityIRI() {
+	public EReference getVocabularyEntity_EntityIRI()
+	{
 		return (EReference) vocabularyEntityEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2973,7 +3165,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getObjectProperty() {
+	public EClass getObjectProperty()
+	{
 		return objectPropertyEClass;
 	}
 
@@ -2983,7 +3176,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDataProperty() {
+	public EClass getDataProperty()
+	{
 		return dataPropertyEClass;
 	}
 
@@ -2993,7 +3187,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getVocabularyDataType() {
+	public EClass getVocabularyDataType()
+	{
 		return vocabularyDataTypeEClass;
 	}
 
@@ -3003,7 +3198,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getNamedIndividual() {
+	public EClass getNamedIndividual()
+	{
 		return namedIndividualEClass;
 	}
 
@@ -3013,7 +3209,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getVocabularyClass() {
+	public EClass getVocabularyClass()
+	{
 		return vocabularyClassEClass;
 	}
 
@@ -3023,7 +3220,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getVocabularyClass_Prefix() {
+	public EAttribute getVocabularyClass_Prefix()
+	{
 		return (EAttribute) vocabularyClassEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -3033,7 +3231,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getAnonymousIndividual() {
+	public EClass getAnonymousIndividual()
+	{
 		return anonymousIndividualEClass;
 	}
 
@@ -3043,7 +3242,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getIndividual() {
+	public EClass getIndividual()
+	{
 		return individualEClass;
 	}
 
@@ -3053,7 +3253,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getVocabularyLiteral() {
+	public EClass getVocabularyLiteral()
+	{
 		return vocabularyLiteralEClass;
 	}
 
@@ -3063,7 +3264,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDomainVocabularyAssociation() {
+	public EClass getDomainVocabularyAssociation()
+	{
 		return domainVocabularyAssociationEClass;
 	}
 
@@ -3073,7 +3275,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDomainVocabularyProperty() {
+	public EClass getDomainVocabularyProperty()
+	{
 		return domainVocabularyPropertyEClass;
 	}
 
@@ -3083,7 +3286,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDomainAttribute() {
+	public EClass getDomainAttribute()
+	{
 		return domainAttributeEClass;
 	}
 
@@ -3093,7 +3297,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDomainAuthAttribute() {
+	public EClass getDomainAuthAttribute()
+	{
 		return domainAuthAttributeEClass;
 	}
 
@@ -3103,7 +3308,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getAuthUserName() {
+	public EClass getAuthUserName()
+	{
 		return authUserNameEClass;
 	}
 
@@ -3113,7 +3319,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getAuthPassword() {
+	public EClass getAuthPassword()
+	{
 		return authPasswordEClass;
 	}
 
@@ -3123,7 +3330,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getAuthRoleName() {
+	public EClass getAuthRoleName()
+	{
 		return authRoleNameEClass;
 	}
 
@@ -3133,7 +3341,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getAuthPermName() {
+	public EClass getAuthPermName()
+	{
 		return authPermNameEClass;
 	}
 
@@ -3143,7 +3352,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDomainProperty() {
+	public EClass getDomainProperty()
+	{
 		return domainPropertyEClass;
 	}
 
@@ -3153,7 +3363,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getFrontControllerTemplate() {
+	public EClass getFrontControllerTemplate()
+	{
 		return frontControllerTemplateEClass;
 	}
 
@@ -3163,7 +3374,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrontControllerTemplate_ClassTemplate() {
+	public EAttribute getFrontControllerTemplate_ClassTemplate()
+	{
 		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -3173,7 +3385,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrontControllerTemplate_PageTemplate() {
+	public EAttribute getFrontControllerTemplate_PageTemplate()
+	{
 		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -3183,7 +3396,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrontControllerTemplate_AuthPageTemplate() {
+	public EAttribute getFrontControllerTemplate_AuthPageTemplate()
+	{
 		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -3193,7 +3407,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrontControllerTemplate_FormTemplate() {
+	public EAttribute getFrontControllerTemplate_FormTemplate()
+	{
 		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -3203,7 +3418,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrontControllerTemplate_ClassExtension() {
+	public EAttribute getFrontControllerTemplate_ClassExtension()
+	{
 		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -3213,7 +3429,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrontControllerTemplate_PageExtension() {
+	public EAttribute getFrontControllerTemplate_PageExtension()
+	{
 		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -3223,7 +3440,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrontControllerTemplate_RestClassTemplate() {
+	public EAttribute getFrontControllerTemplate_RestClassTemplate()
+	{
 		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -3233,7 +3451,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrontControllerTemplate_PartialTemplate() {
+	public EAttribute getFrontControllerTemplate_PartialTemplate()
+	{
 		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -3243,7 +3462,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrontControllerTemplate_PartialExtension() {
+	public EAttribute getFrontControllerTemplate_PartialExtension()
+	{
 		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -3253,7 +3473,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrontControllerTemplate_IsSPAFramework() {
+	public EAttribute getFrontControllerTemplate_IsSPAFramework()
+	{
 		return (EAttribute) frontControllerTemplateEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -3263,7 +3484,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDITemplate() {
+	public EClass getDITemplate()
+	{
 		return diTemplateEClass;
 	}
 
@@ -3273,7 +3495,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDITemplate_InterfaceTemplate() {
+	public EAttribute getDITemplate_InterfaceTemplate()
+	{
 		return (EAttribute) diTemplateEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -3283,7 +3506,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDITemplate_ClassTemplate() {
+	public EAttribute getDITemplate_ClassTemplate()
+	{
 		return (EAttribute) diTemplateEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -3293,7 +3517,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDITemplate_ClassExtension() {
+	public EAttribute getDITemplate_ClassExtension()
+	{
 		return (EAttribute) diTemplateEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -3303,7 +3528,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDITemplate_AuthInterfaceTemplate() {
+	public EAttribute getDITemplate_AuthInterfaceTemplate()
+	{
 		return (EAttribute) diTemplateEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -3313,7 +3539,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDITemplate_AuthClassTemplate() {
+	public EAttribute getDITemplate_AuthClassTemplate()
+	{
 		return (EAttribute) diTemplateEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -3323,7 +3550,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getORMTemplate() {
+	public EClass getORMTemplate()
+	{
 		return ormTemplateEClass;
 	}
 
@@ -3333,7 +3561,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getORMTemplate_ClassTemplate() {
+	public EAttribute getORMTemplate_ClassTemplate()
+	{
 		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -3343,7 +3572,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getORMTemplate_EnumerationClassTemplate() {
+	public EAttribute getORMTemplate_EnumerationClassTemplate()
+	{
 		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -3353,7 +3583,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getORMTemplate_ClassExtension() {
+	public EAttribute getORMTemplate_ClassExtension()
+	{
 		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -3363,7 +3594,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getORMTemplate_AuthUserClassTemplate() {
+	public EAttribute getORMTemplate_AuthUserClassTemplate()
+	{
 		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -3373,7 +3605,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getORMTemplate_AuthRoleClassTemplate() {
+	public EAttribute getORMTemplate_AuthRoleClassTemplate()
+	{
 		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -3383,7 +3616,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getORMTemplate_AuthPermissionClassTemplate() {
+	public EAttribute getORMTemplate_AuthPermissionClassTemplate()
+	{
 		return (EAttribute) ormTemplateEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -3393,7 +3627,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getDAOTemplate() {
+	public EClass getDAOTemplate()
+	{
 		return daoTemplateEClass;
 	}
 
@@ -3403,7 +3638,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDAOTemplate_ClassTemplate() {
+	public EAttribute getDAOTemplate_ClassTemplate()
+	{
 		return (EAttribute) daoTemplateEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -3413,7 +3649,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDAOTemplate_InterfaceTemplate() {
+	public EAttribute getDAOTemplate_InterfaceTemplate()
+	{
 		return (EAttribute) daoTemplateEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -3423,7 +3660,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDAOTemplate_ClassExtension() {
+	public EAttribute getDAOTemplate_ClassExtension()
+	{
 		return (EAttribute) daoTemplateEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -3433,7 +3671,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDAOTemplate_InterfaceExtension() {
+	public EAttribute getDAOTemplate_InterfaceExtension()
+	{
 		return (EAttribute) daoTemplateEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -3443,7 +3682,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getFrameWebConfiguration() {
+	public EClass getFrameWebConfiguration()
+	{
 		return frameWebConfigurationEClass;
 	}
 
@@ -3453,7 +3693,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrameWebConfiguration_SrcPath() {
+	public EAttribute getFrameWebConfiguration_SrcPath()
+	{
 		return (EAttribute) frameWebConfigurationEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -3463,7 +3704,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrameWebConfiguration_ViewPath() {
+	public EAttribute getFrameWebConfiguration_ViewPath()
+	{
 		return (EAttribute) frameWebConfigurationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -3473,7 +3715,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrameWebConfiguration_FrameworkDefinitionPath() {
+	public EAttribute getFrameWebConfiguration_FrameworkDefinitionPath()
+	{
 		return (EAttribute) frameWebConfigurationEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -3483,7 +3726,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrameWebConfiguration_ClassExtension() {
+	public EAttribute getFrameWebConfiguration_ClassExtension()
+	{
 		return (EAttribute) frameWebConfigurationEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -3493,7 +3737,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFrameWebConfiguration_PageExtension() {
+	public EAttribute getFrameWebConfiguration_PageExtension()
+	{
 		return (EAttribute) frameWebConfigurationEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -3503,7 +3748,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getRestControllerTemplate() {
+	public EClass getRestControllerTemplate()
+	{
 		return restControllerTemplateEClass;
 	}
 
@@ -3513,7 +3759,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getRestControllerTemplate_ClassTemplate() {
+	public EAttribute getRestControllerTemplate_ClassTemplate()
+	{
 		return (EAttribute) restControllerTemplateEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -3523,7 +3770,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getRestControllerTemplate_ClassExtension() {
+	public EAttribute getRestControllerTemplate_ClassExtension()
+	{
 		return (EAttribute) restControllerTemplateEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -3533,7 +3781,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getRestControllerMethod() {
+	public EClass getRestControllerMethod()
+	{
 		return restControllerMethodEClass;
 	}
 
@@ -3543,7 +3792,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getRestControllerMethod_RequestType() {
+	public EAttribute getRestControllerMethod_RequestType()
+	{
 		return (EAttribute) restControllerMethodEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -3553,7 +3803,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getRestControllerMethod_IsDefault() {
+	public EAttribute getRestControllerMethod_IsDefault()
+	{
 		return (EAttribute) restControllerMethodEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -3563,7 +3814,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getRestControllerMethod_MethodType() {
+	public EReference getRestControllerMethod_MethodType()
+	{
 		return (EReference) restControllerMethodEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -3573,7 +3825,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getRestControllerMethod_RequestMapping() {
+	public EAttribute getRestControllerMethod_RequestMapping()
+	{
 		return (EAttribute) restControllerMethodEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -3583,7 +3836,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getRestControllerMethod_DesiredResponseStatus() {
+	public EAttribute getRestControllerMethod_DesiredResponseStatus()
+	{
 		return (EAttribute) restControllerMethodEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -3593,7 +3847,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getRestControllerClass() {
+	public EClass getRestControllerClass()
+	{
 		return restControllerClassEClass;
 	}
 
@@ -3603,7 +3858,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getPartial() {
+	public EClass getPartial()
+	{
 		return partialEClass;
 	}
 
@@ -3613,7 +3869,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getNavigationAggregationAssociation() {
+	public EClass getNavigationAggregationAssociation()
+	{
 		return navigationAggregationAssociationEClass;
 	}
 
@@ -3623,7 +3880,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getNavigationAggregationAssociation_Relacoes() {
+	public EReference getNavigationAggregationAssociation_Relacoes()
+	{
 		return (EReference) navigationAggregationAssociationEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -3633,7 +3891,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getNavigationAggregationAssociation_SpaProperties() {
+	public EReference getNavigationAggregationAssociation_SpaProperties()
+	{
 		return (EReference) navigationAggregationAssociationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -3643,7 +3902,30 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getNavigationAggregationTarget() {
+	public EReference getNavigationAggregationAssociation_SpaMethod()
+	{
+		return (EReference) navigationAggregationAssociationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getNavigationAggregationAssociation_SpaAttribute()
+	{
+		return (EReference) navigationAggregationAssociationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getNavigationAggregationTarget()
+	{
 		return navigationAggregationTargetEClass;
 	}
 
@@ -3653,7 +3935,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getNavigationAggregationSource() {
+	public EClass getNavigationAggregationSource()
+	{
 		return navigationAggregationSourceEClass;
 	}
 
@@ -3663,7 +3946,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getNavigationSPAProperties() {
+	public EClass getNavigationSPAProperties()
+	{
 		return navigationSPAPropertiesEClass;
 	}
 
@@ -3673,7 +3957,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getNavigationSPAProperties_SpaAttributes() {
+	public EReference getNavigationSPAProperties_SpaAttributes()
+	{
 		return (EReference) navigationSPAPropertiesEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -3683,7 +3968,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getNavigationSPAProperties_SpaMethods() {
+	public EReference getNavigationSPAProperties_SpaMethods()
+	{
 		return (EReference) navigationSPAPropertiesEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -3693,7 +3979,74 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EEnum getFrameworkCategoryList() {
+	public EClass getNavigationAggregationAssociationSPAMethod()
+	{
+		return navigationAggregationAssociationSPAMethodEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getNavigationAggregationAssociationSPAMethod_SpaMethod()
+	{
+		return (EReference) navigationAggregationAssociationSPAMethodEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getNavigationAggregationAssociationSPAMethod_Value()
+	{
+		return (EAttribute) navigationAggregationAssociationSPAMethodEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getNavigationAggregationAssociationSPAAttribute()
+	{
+		return navigationAggregationAssociationSPAAttributeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getNavigationAggregationAssociationSPAAttribute_Value()
+	{
+		return (EAttribute) navigationAggregationAssociationSPAAttributeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getNavigationAggregationAssociationSPAAttribute_SpaAttribute()
+	{
+		return (EReference) navigationAggregationAssociationSPAAttributeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getFrameworkCategoryList()
+	{
 		return frameworkCategoryListEEnum;
 	}
 
@@ -3703,7 +4056,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EEnum getFrameworkKindList() {
+	public EEnum getFrameworkKindList()
+	{
 		return frameworkKindListEEnum;
 	}
 
@@ -3713,7 +4067,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EEnum getDateTimePrecision() {
+	public EEnum getDateTimePrecision()
+	{
 		return dateTimePrecisionEEnum;
 	}
 
@@ -3723,7 +4078,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EEnum getGeneration() {
+	public EEnum getGeneration()
+	{
 		return generationEEnum;
 	}
 
@@ -3733,7 +4089,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EEnum getCollection() {
+	public EEnum getCollection()
+	{
 		return collectionEEnum;
 	}
 
@@ -3743,7 +4100,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EEnum getOrder() {
+	public EEnum getOrder()
+	{
 		return orderEEnum;
 	}
 
@@ -3753,7 +4111,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EEnum getCascade() {
+	public EEnum getCascade()
+	{
 		return cascadeEEnum;
 	}
 
@@ -3763,7 +4122,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EEnum getFetch() {
+	public EEnum getFetch()
+	{
 		return fetchEEnum;
 	}
 
@@ -3773,7 +4133,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EEnum getConstantNameList() {
+	public EEnum getConstantNameList()
+	{
 		return constantNameListEEnum;
 	}
 
@@ -3783,7 +4144,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EEnum getInheritanceMapping() {
+	public EEnum getInheritanceMapping()
+	{
 		return inheritanceMappingEEnum;
 	}
 
@@ -3793,7 +4155,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EEnum getHttpStatus() {
+	public EEnum getHttpStatus()
+	{
 		return httpStatusEEnum;
 	}
 
@@ -3803,7 +4166,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EEnum getHttpMethodType() {
+	public EEnum getHttpMethodType()
+	{
 		return httpMethodTypeEEnum;
 	}
 
@@ -3813,7 +4177,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EDataType getRational() {
+	public EDataType getRational()
+	{
 		return rationalEDataType;
 	}
 
@@ -3823,7 +4188,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EDataType getDecimal() {
+	public EDataType getDecimal()
+	{
 		return decimalEDataType;
 	}
 
@@ -3833,7 +4199,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public FramewebFactory getFramewebFactory() {
+	public FramewebFactory getFramewebFactory()
+	{
 		return (FramewebFactory) getEFactoryInstance();
 	}
 
@@ -3851,7 +4218,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void createPackageContents() {
+	public void createPackageContents()
+	{
 		if (isCreated)
 			return;
 		isCreated = true;
@@ -4222,6 +4590,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		navigationAggregationAssociationEClass = createEClass(NAVIGATION_AGGREGATION_ASSOCIATION);
 		createEReference(navigationAggregationAssociationEClass, NAVIGATION_AGGREGATION_ASSOCIATION__RELACOES);
 		createEReference(navigationAggregationAssociationEClass, NAVIGATION_AGGREGATION_ASSOCIATION__SPA_PROPERTIES);
+		createEReference(navigationAggregationAssociationEClass, NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHOD);
+		createEReference(navigationAggregationAssociationEClass, NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTE);
 
 		navigationAggregationTargetEClass = createEClass(NAVIGATION_AGGREGATION_TARGET);
 
@@ -4230,6 +4600,19 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		navigationSPAPropertiesEClass = createEClass(NAVIGATION_SPA_PROPERTIES);
 		createEReference(navigationSPAPropertiesEClass, NAVIGATION_SPA_PROPERTIES__SPA_ATTRIBUTES);
 		createEReference(navigationSPAPropertiesEClass, NAVIGATION_SPA_PROPERTIES__SPA_METHODS);
+
+		navigationAggregationAssociationSPAMethodEClass = createEClass(NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD);
+		createEReference(navigationAggregationAssociationSPAMethodEClass,
+				NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__SPA_METHOD);
+		createEAttribute(navigationAggregationAssociationSPAMethodEClass,
+				NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__VALUE);
+
+		navigationAggregationAssociationSPAAttributeEClass = createEClass(
+				NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE);
+		createEAttribute(navigationAggregationAssociationSPAAttributeEClass,
+				NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE__VALUE);
+		createEReference(navigationAggregationAssociationSPAAttributeEClass,
+				NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE__SPA_ATTRIBUTE);
 
 		// Create enums
 		frameworkCategoryListEEnum = createEEnum(FRAMEWORK_CATEGORY_LIST);
@@ -4264,7 +4647,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void initializePackageContents() {
+	public void initializePackageContents()
+	{
 		if (isInitialized)
 			return;
 		isInitialized = true;
@@ -5121,6 +5505,14 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEReference(getNavigationAggregationAssociation_SpaProperties(), this.getNavigationSPAProperties(), null,
 				"spaProperties", null, 0, -1, NavigationAggregationAssociation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNavigationAggregationAssociation_SpaMethod(),
+				this.getNavigationAggregationAssociationSPAMethod(), null, "spaMethod", null, 0, -1,
+				NavigationAggregationAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNavigationAggregationAssociation_SpaAttribute(),
+				this.getNavigationAggregationAssociationSPAAttribute(), null, "spaAttribute", null, 0, -1,
+				NavigationAggregationAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(navigationAggregationTargetEClass, NavigationAggregationTarget.class, "NavigationAggregationTarget",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -5136,6 +5528,26 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEReference(getNavigationSPAProperties_SpaMethods(), this.getFrontControllerMethod(), null, "spaMethods",
 				null, 0, -1, NavigationSPAProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(navigationAggregationAssociationSPAMethodEClass, NavigationAggregationAssociationSPAMethod.class,
+				"NavigationAggregationAssociationSPAMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getNavigationAggregationAssociationSPAMethod_SpaMethod(), this.getFrontControllerMethod(), null,
+				"spaMethod", null, 0, 1, NavigationAggregationAssociationSPAMethod.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNavigationAggregationAssociationSPAMethod_Value(), theEcorePackage.getEString(), "value",
+				null, 0, 1, NavigationAggregationAssociationSPAMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(navigationAggregationAssociationSPAAttributeEClass,
+				NavigationAggregationAssociationSPAAttribute.class, "NavigationAggregationAssociationSPAAttribute",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNavigationAggregationAssociationSPAAttribute_Value(), theEcorePackage.getEString(), "value",
+				null, 0, 1, NavigationAggregationAssociationSPAAttribute.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNavigationAggregationAssociationSPAAttribute_SpaAttribute(), this.getUIComponentField(), null,
+				"spaAttribute", null, 0, 1, NavigationAggregationAssociationSPAAttribute.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(frameworkCategoryListEEnum, FrameworkCategoryList.class, "FrameworkCategoryList");
@@ -5235,7 +5647,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void createExtendedMetaDataAnnotations() {
+	protected void createExtendedMetaDataAnnotations()
+	{
 		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
 		addAnnotation(iriEClass, source, new String[] { "name", "IRI" });
 	}

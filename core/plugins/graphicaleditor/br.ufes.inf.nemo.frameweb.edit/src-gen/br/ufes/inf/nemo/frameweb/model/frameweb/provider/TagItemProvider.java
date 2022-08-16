@@ -29,14 +29,16 @@ import org.eclipse.uml2.uml.edit.providers.StereotypeItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TagItemProvider extends StereotypeItemProvider {
+public class TagItemProvider extends StereotypeItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TagItemProvider(AdapterFactory adapterFactory) {
+	public TagItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -47,8 +49,10 @@ public class TagItemProvider extends StereotypeItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addCodeGenerationTemplatePropertyDescriptor(object);
@@ -62,7 +66,8 @@ public class TagItemProvider extends StereotypeItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCodeGenerationTemplatePropertyDescriptor(Object object) {
+	protected void addCodeGenerationTemplatePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Tag_codeGenerationTemplate_feature"),
@@ -79,7 +84,8 @@ public class TagItemProvider extends StereotypeItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/Tag"));
 	}
 
@@ -89,7 +95,8 @@ public class TagItemProvider extends StereotypeItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -100,7 +107,8 @@ public class TagItemProvider extends StereotypeItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((Tag) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_Tag_type")
 				: getString("_UI_Tag_type") + " " + label;
@@ -114,10 +122,12 @@ public class TagItemProvider extends StereotypeItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Tag.class)) {
+		switch (notification.getFeatureID(Tag.class))
+		{
 		case FramewebPackage.TAG__CODE_GENERATION_TEMPLATE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
@@ -133,7 +143,8 @@ public class TagItemProvider extends StereotypeItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.NAMESPACE__OWNED_RULE,
@@ -399,7 +410,8 @@ public class TagItemProvider extends StereotypeItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -412,7 +424,8 @@ public class TagItemProvider extends StereotypeItemProvider {
 				|| childFeature == UMLPackage.Literals.BEHAVIORED_CLASSIFIER__CLASSIFIER_BEHAVIOR
 				|| childFeature == UMLPackage.Literals.BEHAVIORED_CLASSIFIER__OWNED_BEHAVIOR;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
@@ -426,7 +439,8 @@ public class TagItemProvider extends StereotypeItemProvider {
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		return FramewebEditPlugin.INSTANCE;
 	}
 

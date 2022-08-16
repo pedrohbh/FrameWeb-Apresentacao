@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.InterfaceRealizationImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class ServiceRealizationImpl extends InterfaceRealizationImpl implements ServiceRealization {
+public class ServiceRealizationImpl extends InterfaceRealizationImpl implements ServiceRealization
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ServiceRealizationImpl() {
+	protected ServiceRealizationImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class ServiceRealizationImpl extends InterfaceRealizationImpl implements 
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.SERVICE_REALIZATION;
 	}
 

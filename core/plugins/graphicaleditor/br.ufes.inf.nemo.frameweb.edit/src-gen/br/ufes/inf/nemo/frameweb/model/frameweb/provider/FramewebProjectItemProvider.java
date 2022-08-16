@@ -33,14 +33,16 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class FramewebProjectItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FramewebProjectItemProvider(AdapterFactory adapterFactory) {
+	public FramewebProjectItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -51,8 +53,10 @@ public class FramewebProjectItemProvider extends ItemProviderAdapter implements 
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addComposePropertyDescriptor(object);
@@ -67,7 +71,8 @@ public class FramewebProjectItemProvider extends ItemProviderAdapter implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addComposePropertyDescriptor(Object object) {
+	protected void addComposePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_FramewebProject_compose_feature"),
@@ -82,7 +87,8 @@ public class FramewebProjectItemProvider extends ItemProviderAdapter implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addConfiguresPropertyDescriptor(Object object) {
+	protected void addConfiguresPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_FramewebProject_configures_feature"),
@@ -100,8 +106,10 @@ public class FramewebProjectItemProvider extends ItemProviderAdapter implements 
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object)
+	{
+		if (childrenFeatures == null)
+		{
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(FramewebPackage.Literals.FRAMEWEB_PROJECT__COMPOSE);
 			childrenFeatures.add(FramewebPackage.Literals.FRAMEWEB_PROJECT__CONFIGURES);
@@ -115,7 +123,8 @@ public class FramewebProjectItemProvider extends ItemProviderAdapter implements 
 	 * @generated
 	 */
 	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
+	protected EStructuralFeature getChildFeature(Object object, Object child)
+	{
 		// Check the type of the specified child object and return the proper feature to use for
 		// adding (see {@link AddCommand}) it as a child.
 
@@ -129,7 +138,8 @@ public class FramewebProjectItemProvider extends ItemProviderAdapter implements 
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/FramewebProject"));
 	}
 
@@ -139,7 +149,8 @@ public class FramewebProjectItemProvider extends ItemProviderAdapter implements 
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -150,7 +161,8 @@ public class FramewebProjectItemProvider extends ItemProviderAdapter implements 
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		return getString("_UI_FramewebProject_type");
 	}
 
@@ -162,10 +174,12 @@ public class FramewebProjectItemProvider extends ItemProviderAdapter implements 
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(FramewebProject.class)) {
+		switch (notification.getFeatureID(FramewebProject.class))
+		{
 		case FramewebPackage.FRAMEWEB_PROJECT__COMPOSE:
 		case FramewebPackage.FRAMEWEB_PROJECT__CONFIGURES:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -182,7 +196,8 @@ public class FramewebProjectItemProvider extends ItemProviderAdapter implements 
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(FramewebPackage.Literals.FRAMEWEB_PROJECT__COMPOSE,
@@ -232,7 +247,8 @@ public class FramewebProjectItemProvider extends ItemProviderAdapter implements 
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		return FramewebEditPlugin.INSTANCE;
 	}
 

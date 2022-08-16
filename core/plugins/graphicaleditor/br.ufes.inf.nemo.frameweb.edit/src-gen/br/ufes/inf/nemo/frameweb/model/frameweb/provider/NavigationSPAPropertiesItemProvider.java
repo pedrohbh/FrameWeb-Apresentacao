@@ -28,14 +28,16 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
  * @generated
  */
 public class NavigationSPAPropertiesItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NavigationSPAPropertiesItemProvider(AdapterFactory adapterFactory) {
+	public NavigationSPAPropertiesItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -46,8 +48,10 @@ public class NavigationSPAPropertiesItemProvider extends ItemProviderAdapter imp
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addSpaAttributesPropertyDescriptor(object);
@@ -62,7 +66,8 @@ public class NavigationSPAPropertiesItemProvider extends ItemProviderAdapter imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSpaAttributesPropertyDescriptor(Object object) {
+	protected void addSpaAttributesPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_NavigationSPAProperties_spaAttributes_feature"),
@@ -78,7 +83,8 @@ public class NavigationSPAPropertiesItemProvider extends ItemProviderAdapter imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSpaMethodsPropertyDescriptor(Object object) {
+	protected void addSpaMethodsPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_NavigationSPAProperties_spaMethods_feature"),
@@ -94,7 +100,8 @@ public class NavigationSPAPropertiesItemProvider extends ItemProviderAdapter imp
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/NavigationSPAProperties"));
 	}
 
@@ -104,7 +111,8 @@ public class NavigationSPAPropertiesItemProvider extends ItemProviderAdapter imp
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -115,7 +123,8 @@ public class NavigationSPAPropertiesItemProvider extends ItemProviderAdapter imp
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		return getString("_UI_NavigationSPAProperties_type");
 	}
 
@@ -127,7 +136,8 @@ public class NavigationSPAPropertiesItemProvider extends ItemProviderAdapter imp
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 		super.notifyChanged(notification);
 	}
@@ -140,7 +150,8 @@ public class NavigationSPAPropertiesItemProvider extends ItemProviderAdapter imp
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 
@@ -151,7 +162,8 @@ public class NavigationSPAPropertiesItemProvider extends ItemProviderAdapter imp
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		return FramewebEditPlugin.INSTANCE;
 	}
 

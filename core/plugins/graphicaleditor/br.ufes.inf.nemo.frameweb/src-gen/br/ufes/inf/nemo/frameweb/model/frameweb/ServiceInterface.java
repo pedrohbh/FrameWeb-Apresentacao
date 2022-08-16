@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.Interface;
  * @model
  * @generated
  */
-public interface ServiceInterface extends Interface {
+public interface ServiceInterface extends Interface
+{
 } // ServiceInterface

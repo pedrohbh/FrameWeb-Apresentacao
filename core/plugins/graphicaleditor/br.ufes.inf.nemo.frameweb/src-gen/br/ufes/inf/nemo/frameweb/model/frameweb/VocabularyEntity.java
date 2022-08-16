@@ -20,7 +20,8 @@ import org.eclipse.uml2.uml.Classifier;
  * @model abstract="true"
  * @generated
  */
-public interface VocabularyEntity extends Classifier {
+public interface VocabularyEntity extends Classifier
+{
 	/**
 	 * Returns the value of the '<em><b>Entity IRI</b></em>' reference.
 	 * <!-- begin-user-doc -->

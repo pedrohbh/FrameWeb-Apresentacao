@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.Association;
  * @model
  * @generated
  */
-public interface NavigationAssociation extends Association {
+public interface NavigationAssociation extends Association
+{
 } // NavigationAssociation

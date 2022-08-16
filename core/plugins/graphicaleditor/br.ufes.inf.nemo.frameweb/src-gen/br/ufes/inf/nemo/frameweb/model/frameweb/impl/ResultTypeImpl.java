@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.StereotypeImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class ResultTypeImpl extends StereotypeImpl implements ResultType {
+public class ResultTypeImpl extends StereotypeImpl implements ResultType
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ResultTypeImpl() {
+	protected ResultTypeImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class ResultTypeImpl extends StereotypeImpl implements ResultType {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.RESULT_TYPE;
 	}
 

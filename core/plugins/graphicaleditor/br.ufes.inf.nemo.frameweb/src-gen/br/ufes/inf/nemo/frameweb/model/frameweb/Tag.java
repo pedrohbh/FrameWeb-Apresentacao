@@ -20,7 +20,8 @@ import org.eclipse.uml2.uml.Stereotype;
  * @model
  * @generated
  */
-public interface Tag extends Stereotype {
+public interface Tag extends Stereotype
+{
 	/**
 	 * Returns the value of the '<em><b>Code Generation Template</b></em>' attribute.
 	 * <!-- begin-user-doc -->

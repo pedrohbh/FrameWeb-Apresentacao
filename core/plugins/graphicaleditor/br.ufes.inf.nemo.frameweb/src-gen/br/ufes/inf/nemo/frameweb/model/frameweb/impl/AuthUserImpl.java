@@ -28,7 +28,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class AuthUserImpl extends DomainClassImpl implements AuthUser {
+public class AuthUserImpl extends DomainClassImpl implements AuthUser
+{
 	/**
 	 * The cached value of the '{@link #getAuthUserName() <em>Auth User Name</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -54,7 +55,8 @@ public class AuthUserImpl extends DomainClassImpl implements AuthUser {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AuthUserImpl() {
+	protected AuthUserImpl()
+	{
 		super();
 	}
 
@@ -64,7 +66,8 @@ public class AuthUserImpl extends DomainClassImpl implements AuthUser {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.AUTH_USER;
 	}
 
@@ -74,11 +77,14 @@ public class AuthUserImpl extends DomainClassImpl implements AuthUser {
 	 * @generated
 	 */
 	@Override
-	public AuthUserName getAuthUserName() {
-		if (authUserName != null && authUserName.eIsProxy()) {
+	public AuthUserName getAuthUserName()
+	{
+		if (authUserName != null && authUserName.eIsProxy())
+		{
 			InternalEObject oldAuthUserName = (InternalEObject) authUserName;
 			authUserName = (AuthUserName) eResolveProxy(oldAuthUserName);
-			if (authUserName != oldAuthUserName) {
+			if (authUserName != oldAuthUserName)
+			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FramewebPackage.AUTH_USER__AUTH_USER_NAME,
 							oldAuthUserName, authUserName));
@@ -92,7 +98,8 @@ public class AuthUserImpl extends DomainClassImpl implements AuthUser {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AuthUserName basicGetAuthUserName() {
+	public AuthUserName basicGetAuthUserName()
+	{
 		return authUserName;
 	}
 
@@ -102,7 +109,8 @@ public class AuthUserImpl extends DomainClassImpl implements AuthUser {
 	 * @generated
 	 */
 	@Override
-	public void setAuthUserName(AuthUserName newAuthUserName) {
+	public void setAuthUserName(AuthUserName newAuthUserName)
+	{
 		AuthUserName oldAuthUserName = authUserName;
 		authUserName = newAuthUserName;
 		if (eNotificationRequired())
@@ -116,11 +124,14 @@ public class AuthUserImpl extends DomainClassImpl implements AuthUser {
 	 * @generated
 	 */
 	@Override
-	public AuthPassword getAuthPassword() {
-		if (authPassword != null && authPassword.eIsProxy()) {
+	public AuthPassword getAuthPassword()
+	{
+		if (authPassword != null && authPassword.eIsProxy())
+		{
 			InternalEObject oldAuthPassword = (InternalEObject) authPassword;
 			authPassword = (AuthPassword) eResolveProxy(oldAuthPassword);
-			if (authPassword != oldAuthPassword) {
+			if (authPassword != oldAuthPassword)
+			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FramewebPackage.AUTH_USER__AUTH_PASSWORD,
 							oldAuthPassword, authPassword));
@@ -134,7 +145,8 @@ public class AuthUserImpl extends DomainClassImpl implements AuthUser {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AuthPassword basicGetAuthPassword() {
+	public AuthPassword basicGetAuthPassword()
+	{
 		return authPassword;
 	}
 
@@ -144,7 +156,8 @@ public class AuthUserImpl extends DomainClassImpl implements AuthUser {
 	 * @generated
 	 */
 	@Override
-	public void setAuthPassword(AuthPassword newAuthPassword) {
+	public void setAuthPassword(AuthPassword newAuthPassword)
+	{
 		AuthPassword oldAuthPassword = authPassword;
 		authPassword = newAuthPassword;
 		if (eNotificationRequired())
@@ -158,8 +171,10 @@ public class AuthUserImpl extends DomainClassImpl implements AuthUser {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.AUTH_USER__AUTH_USER_NAME:
 			if (resolve)
 				return getAuthUserName();
@@ -178,8 +193,10 @@ public class AuthUserImpl extends DomainClassImpl implements AuthUser {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.AUTH_USER__AUTH_USER_NAME:
 			setAuthUserName((AuthUserName) newValue);
 			return;
@@ -196,8 +213,10 @@ public class AuthUserImpl extends DomainClassImpl implements AuthUser {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.AUTH_USER__AUTH_USER_NAME:
 			setAuthUserName((AuthUserName) null);
 			return;
@@ -214,8 +233,10 @@ public class AuthUserImpl extends DomainClassImpl implements AuthUser {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.AUTH_USER__AUTH_USER_NAME:
 			return authUserName != null;
 		case FramewebPackage.AUTH_USER__AUTH_PASSWORD:

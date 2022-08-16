@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class DomainAuthAttributeImpl extends DomainAttributeImpl implements DomainAuthAttribute {
+public class DomainAuthAttributeImpl extends DomainAttributeImpl implements DomainAuthAttribute
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DomainAuthAttributeImpl() {
+	protected DomainAuthAttributeImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class DomainAuthAttributeImpl extends DomainAttributeImpl implements Doma
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.DOMAIN_AUTH_ATTRIBUTE;
 	}
 

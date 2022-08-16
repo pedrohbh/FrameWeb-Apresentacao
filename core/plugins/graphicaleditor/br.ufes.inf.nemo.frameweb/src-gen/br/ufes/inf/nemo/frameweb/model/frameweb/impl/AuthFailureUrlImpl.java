@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class AuthFailureUrlImpl extends ResultDependencyImpl implements AuthFailureUrl {
+public class AuthFailureUrlImpl extends ResultDependencyImpl implements AuthFailureUrl
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AuthFailureUrlImpl() {
+	protected AuthFailureUrlImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class AuthFailureUrlImpl extends ResultDependencyImpl implements AuthFail
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.AUTH_FAILURE_URL;
 	}
 

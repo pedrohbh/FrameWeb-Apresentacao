@@ -25,14 +25,16 @@ import org.eclipse.uml2.uml.edit.providers.PackageItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MappingLibItemProvider extends PackageItemProvider {
+public class MappingLibItemProvider extends PackageItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MappingLibItemProvider(AdapterFactory adapterFactory) {
+	public MappingLibItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -43,8 +45,10 @@ public class MappingLibItemProvider extends PackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 		}
@@ -58,7 +62,8 @@ public class MappingLibItemProvider extends PackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/MappingLib"));
 	}
 
@@ -68,7 +73,8 @@ public class MappingLibItemProvider extends PackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -79,7 +85,8 @@ public class MappingLibItemProvider extends PackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((MappingLib) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_MappingLib_type")
 				: getString("_UI_MappingLib_type") + " " + label;
@@ -93,7 +100,8 @@ public class MappingLibItemProvider extends PackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 		super.notifyChanged(notification);
 	}
@@ -106,7 +114,8 @@ public class MappingLibItemProvider extends PackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.NAMESPACE__OWNED_RULE,
@@ -558,7 +567,8 @@ public class MappingLibItemProvider extends PackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -569,7 +579,8 @@ public class MappingLibItemProvider extends PackageItemProvider {
 				|| childFeature == UMLPackage.Literals.PACKAGE__OWNED_STEREOTYPE
 				|| childFeature == UMLPackage.Literals.PACKAGE__OWNED_TYPE;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
@@ -583,7 +594,8 @@ public class MappingLibItemProvider extends PackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		return FramewebEditPlugin.INSTANCE;
 	}
 

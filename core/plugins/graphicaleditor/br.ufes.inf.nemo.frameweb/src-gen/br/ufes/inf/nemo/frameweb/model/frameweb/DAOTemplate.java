@@ -21,7 +21,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface DAOTemplate extends FrameworkProfile {
+public interface DAOTemplate extends FrameworkProfile
+{
 	/**
 	 * Returns the value of the '<em><b>Class Template</b></em>' attribute.
 	 * <!-- begin-user-doc -->

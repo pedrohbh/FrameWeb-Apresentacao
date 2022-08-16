@@ -28,7 +28,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 @SuppressWarnings("all")
-public class PageDependencyImpl extends NavigationDependencyImpl implements PageDependency {
+public class PageDependencyImpl extends NavigationDependencyImpl implements PageDependency
+{
 	/**
 	 * The cached value of the '{@link #getPageDependencyConstraint() <em>Page Dependency Constraint</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -44,7 +45,8 @@ public class PageDependencyImpl extends NavigationDependencyImpl implements Page
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PageDependencyImpl() {
+	protected PageDependencyImpl()
+	{
 		super();
 	}
 
@@ -54,7 +56,8 @@ public class PageDependencyImpl extends NavigationDependencyImpl implements Page
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.PAGE_DEPENDENCY;
 	}
 
@@ -64,7 +67,8 @@ public class PageDependencyImpl extends NavigationDependencyImpl implements Page
 	 * @generated
 	 */
 	@Override
-	public PageConstraint getPageDependencyConstraint() {
+	public PageConstraint getPageDependencyConstraint()
+	{
 		return pageDependencyConstraint;
 	}
 
@@ -74,10 +78,12 @@ public class PageDependencyImpl extends NavigationDependencyImpl implements Page
 	 * @generated
 	 */
 	public NotificationChain basicSetPageDependencyConstraint(PageConstraint newPageDependencyConstraint,
-			NotificationChain msgs) {
+			NotificationChain msgs)
+	{
 		PageConstraint oldPageDependencyConstraint = pageDependencyConstraint;
 		pageDependencyConstraint = newPageDependencyConstraint;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
 					FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_CONSTRAINT, oldPageDependencyConstraint,
 					newPageDependencyConstraint);
@@ -95,8 +101,10 @@ public class PageDependencyImpl extends NavigationDependencyImpl implements Page
 	 * @generated
 	 */
 	@Override
-	public void setPageDependencyConstraint(PageConstraint newPageDependencyConstraint) {
-		if (newPageDependencyConstraint != pageDependencyConstraint) {
+	public void setPageDependencyConstraint(PageConstraint newPageDependencyConstraint)
+	{
+		if (newPageDependencyConstraint != pageDependencyConstraint)
+		{
 			NotificationChain msgs = null;
 			if (pageDependencyConstraint != null)
 				msgs = ((InternalEObject) pageDependencyConstraint).eInverseRemove(this,
@@ -121,8 +129,10 @@ public class PageDependencyImpl extends NavigationDependencyImpl implements Page
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_CONSTRAINT:
 			return basicSetPageDependencyConstraint(null, msgs);
 		}
@@ -135,8 +145,10 @@ public class PageDependencyImpl extends NavigationDependencyImpl implements Page
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_CONSTRAINT:
 			return getPageDependencyConstraint();
 		}
@@ -149,8 +161,10 @@ public class PageDependencyImpl extends NavigationDependencyImpl implements Page
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_CONSTRAINT:
 			setPageDependencyConstraint((PageConstraint) newValue);
 			return;
@@ -164,8 +178,10 @@ public class PageDependencyImpl extends NavigationDependencyImpl implements Page
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_CONSTRAINT:
 			setPageDependencyConstraint((PageConstraint) null);
 			return;
@@ -179,8 +195,10 @@ public class PageDependencyImpl extends NavigationDependencyImpl implements Page
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.PAGE_DEPENDENCY__PAGE_DEPENDENCY_CONSTRAINT:
 			return pageDependencyConstraint != null;
 		}

@@ -40,7 +40,8 @@ import org.eclipse.uml2.uml.UMLPackage;
  * @generated
  */
 @SuppressWarnings("all")
-public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements VocabularyDataType {
+public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements VocabularyDataType
+{
 	/**
 	 * The cached value of the '{@link #getOwnedAttributes() <em>Owned Attribute</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -66,7 +67,8 @@ public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements Voca
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VocabularyDataTypeImpl() {
+	protected VocabularyDataTypeImpl()
+	{
 		super();
 	}
 
@@ -76,7 +78,8 @@ public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements Voca
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.VOCABULARY_DATA_TYPE;
 	}
 
@@ -86,8 +89,10 @@ public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements Voca
 	 * @generated
 	 */
 	@Override
-	public EList<Property> getOwnedAttributes() {
-		if (ownedAttributes == null) {
+	public EList<Property> getOwnedAttributes()
+	{
+		if (ownedAttributes == null)
+		{
 			ownedAttributes = new EObjectContainmentWithInverseEList.Resolving<Property>(Property.class, this,
 					FramewebPackage.VOCABULARY_DATA_TYPE__OWNED_ATTRIBUTE, UMLPackage.PROPERTY__DATATYPE);
 		}
@@ -100,8 +105,10 @@ public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements Voca
 	 * @generated
 	 */
 	@Override
-	public EList<Operation> getOwnedOperations() {
-		if (ownedOperations == null) {
+	public EList<Operation> getOwnedOperations()
+	{
+		if (ownedOperations == null)
+		{
 			ownedOperations = new EObjectContainmentWithInverseEList.Resolving<Operation>(Operation.class, this,
 					FramewebPackage.VOCABULARY_DATA_TYPE__OWNED_OPERATION, UMLPackage.OPERATION__DATATYPE);
 		}
@@ -114,7 +121,8 @@ public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements Voca
 	 * @generated
 	 */
 	@Override
-	public Property createOwnedAttribute(String name, Type type, int lower, int upper) {
+	public Property createOwnedAttribute(String name, Type type, int lower, int upper)
+	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -127,7 +135,8 @@ public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements Voca
 	 */
 	@Override
 	public Operation createOwnedOperation(String name, EList<String> parameterNames, EList<Type> parameterTypes,
-			Type returnType) {
+			Type returnType)
+	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -140,8 +149,10 @@ public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements Voca
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.VOCABULARY_DATA_TYPE__OWNED_ATTRIBUTE:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getOwnedAttributes()).basicAdd(otherEnd, msgs);
 		case FramewebPackage.VOCABULARY_DATA_TYPE__OWNED_OPERATION:
@@ -156,8 +167,10 @@ public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements Voca
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.VOCABULARY_DATA_TYPE__OWNED_ATTRIBUTE:
 			return ((InternalEList<?>) getOwnedAttributes()).basicRemove(otherEnd, msgs);
 		case FramewebPackage.VOCABULARY_DATA_TYPE__OWNED_OPERATION:
@@ -172,8 +185,10 @@ public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements Voca
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.VOCABULARY_DATA_TYPE__OWNED_ATTRIBUTE:
 			return getOwnedAttributes();
 		case FramewebPackage.VOCABULARY_DATA_TYPE__OWNED_OPERATION:
@@ -189,8 +204,10 @@ public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements Voca
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.VOCABULARY_DATA_TYPE__OWNED_ATTRIBUTE:
 			getOwnedAttributes().clear();
 			getOwnedAttributes().addAll((Collection<? extends Property>) newValue);
@@ -209,8 +226,10 @@ public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements Voca
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.VOCABULARY_DATA_TYPE__OWNED_ATTRIBUTE:
 			getOwnedAttributes().clear();
 			return;
@@ -227,8 +246,10 @@ public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements Voca
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.VOCABULARY_DATA_TYPE__OWNED_ATTRIBUTE:
 			return ownedAttributes != null && !ownedAttributes.isEmpty();
 		case FramewebPackage.VOCABULARY_DATA_TYPE__OWNED_OPERATION:
@@ -243,9 +264,12 @@ public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements Voca
 	 * @generated
 	 */
 	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == DataType.class) {
-			switch (derivedFeatureID) {
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
+	{
+		if (baseClass == DataType.class)
+		{
+			switch (derivedFeatureID)
+			{
 			case FramewebPackage.VOCABULARY_DATA_TYPE__OWNED_ATTRIBUTE:
 				return UMLPackage.DATA_TYPE__OWNED_ATTRIBUTE;
 			case FramewebPackage.VOCABULARY_DATA_TYPE__OWNED_OPERATION:
@@ -263,9 +287,12 @@ public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements Voca
 	 * @generated
 	 */
 	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == DataType.class) {
-			switch (baseFeatureID) {
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
+	{
+		if (baseClass == DataType.class)
+		{
+			switch (baseFeatureID)
+			{
 			case UMLPackage.DATA_TYPE__OWNED_ATTRIBUTE:
 				return FramewebPackage.VOCABULARY_DATA_TYPE__OWNED_ATTRIBUTE;
 			case UMLPackage.DATA_TYPE__OWNED_OPERATION:
@@ -283,9 +310,12 @@ public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements Voca
 	 * @generated
 	 */
 	@Override
-	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
-		if (baseClass == DataType.class) {
-			switch (baseOperationID) {
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass)
+	{
+		if (baseClass == DataType.class)
+		{
+			switch (baseOperationID)
+			{
 			case UMLPackage.DATA_TYPE___CREATE_OWNED_ATTRIBUTE__STRING_TYPE_INT_INT:
 				return FramewebPackage.VOCABULARY_DATA_TYPE___CREATE_OWNED_ATTRIBUTE__STRING_TYPE_INT_INT;
 			case UMLPackage.DATA_TYPE___CREATE_OWNED_OPERATION__STRING_ELIST_ELIST_TYPE:
@@ -304,8 +334,10 @@ public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements Voca
 	 */
 	@Override
 	@SuppressWarnings("unchecked")
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
+	{
+		switch (operationID)
+		{
 		case FramewebPackage.VOCABULARY_DATA_TYPE___CREATE_OWNED_ATTRIBUTE__STRING_TYPE_INT_INT:
 			return createOwnedAttribute((String) arguments.get(0), (Type) arguments.get(1), (Integer) arguments.get(2),
 					(Integer) arguments.get(3));
@@ -317,43 +349,50 @@ public class VocabularyDataTypeImpl extends VocabularyEntityImpl implements Voca
 	}
 
 	@Override
-	public Property createOwnedAttribute(String arg0, Type arg1) {
+	public Property createOwnedAttribute(String arg0, Type arg1)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property createOwnedAttribute(String arg0, Type arg1, EClass arg2) {
+	public Property createOwnedAttribute(String arg0, Type arg1, EClass arg2)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Operation createOwnedOperation(String arg0, EList<String> arg1, EList<Type> arg2) {
+	public Operation createOwnedOperation(String arg0, EList<String> arg1, EList<Type> arg2)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getOwnedAttribute(String arg0, Type arg1) {
+	public Property getOwnedAttribute(String arg0, Type arg1)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getOwnedAttribute(String arg0, Type arg1, boolean arg2, EClass arg3, boolean arg4) {
+	public Property getOwnedAttribute(String arg0, Type arg1, boolean arg2, EClass arg3, boolean arg4)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Operation getOwnedOperation(String arg0, EList<String> arg1, EList<Type> arg2) {
+	public Operation getOwnedOperation(String arg0, EList<String> arg1, EList<Type> arg2)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Operation getOwnedOperation(String arg0, EList<String> arg1, EList<Type> arg2, boolean arg3, boolean arg4) {
+	public Operation getOwnedOperation(String arg0, EList<String> arg1, EList<Type> arg2, boolean arg3, boolean arg4)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}

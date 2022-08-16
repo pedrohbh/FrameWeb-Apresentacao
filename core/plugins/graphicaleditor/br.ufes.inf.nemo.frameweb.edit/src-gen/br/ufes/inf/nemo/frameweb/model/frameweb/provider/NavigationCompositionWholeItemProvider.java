@@ -20,14 +20,16 @@ import org.eclipse.uml2.uml.UMLPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class NavigationCompositionWholeItemProvider extends NavigationPropertyItemProvider {
+public class NavigationCompositionWholeItemProvider extends NavigationPropertyItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NavigationCompositionWholeItemProvider(AdapterFactory adapterFactory) {
+	public NavigationCompositionWholeItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -38,8 +40,10 @@ public class NavigationCompositionWholeItemProvider extends NavigationPropertyIt
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 		}
@@ -53,7 +57,8 @@ public class NavigationCompositionWholeItemProvider extends NavigationPropertyIt
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/NavigationCompositionWhole"));
 	}
 
@@ -63,7 +68,8 @@ public class NavigationCompositionWholeItemProvider extends NavigationPropertyIt
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -74,7 +80,8 @@ public class NavigationCompositionWholeItemProvider extends NavigationPropertyIt
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((NavigationCompositionWhole) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_NavigationCompositionWhole_type")
 				: getString("_UI_NavigationCompositionWhole_type") + " " + label;
@@ -88,7 +95,8 @@ public class NavigationCompositionWholeItemProvider extends NavigationPropertyIt
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 		super.notifyChanged(notification);
 	}
@@ -101,7 +109,8 @@ public class NavigationCompositionWholeItemProvider extends NavigationPropertyIt
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 
@@ -112,7 +121,8 @@ public class NavigationCompositionWholeItemProvider extends NavigationPropertyIt
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -121,7 +131,8 @@ public class NavigationCompositionWholeItemProvider extends NavigationPropertyIt
 				|| childFeature == UMLPackage.Literals.MULTIPLICITY_ELEMENT__UPPER_VALUE
 				|| childFeature == UMLPackage.Literals.PROPERTY__DEFAULT_VALUE;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}

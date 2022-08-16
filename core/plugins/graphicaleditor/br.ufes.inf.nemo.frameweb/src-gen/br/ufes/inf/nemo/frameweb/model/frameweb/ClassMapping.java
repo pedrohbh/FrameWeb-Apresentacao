@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.Stereotype;
  * @model
  * @generated
  */
-public interface ClassMapping extends Stereotype {
+public interface ClassMapping extends Stereotype
+{
 } // ClassMapping

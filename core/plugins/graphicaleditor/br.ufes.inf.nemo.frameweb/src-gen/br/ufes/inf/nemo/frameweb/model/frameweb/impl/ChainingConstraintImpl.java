@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ChainingConstraintImpl extends NavigationConstraintImpl implements ChainingConstraint {
+public class ChainingConstraintImpl extends NavigationConstraintImpl implements ChainingConstraint
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChainingConstraintImpl() {
+	protected ChainingConstraintImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class ChainingConstraintImpl extends NavigationConstraintImpl implements 
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.CHAINING_CONSTRAINT;
 	}
 

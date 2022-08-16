@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.Property;
  * @model
  * @generated
  */
-public interface ResultProperty extends Property {
+public interface ResultProperty extends Property
+{
 } // ResultProperty

@@ -27,7 +27,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class DAOTemplateImpl extends FrameworkProfileImpl implements DAOTemplate {
+public class DAOTemplateImpl extends FrameworkProfileImpl implements DAOTemplate
+{
 	/**
 	 * The default value of the '{@link #getClassTemplate() <em>Class Template</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -113,7 +114,8 @@ public class DAOTemplateImpl extends FrameworkProfileImpl implements DAOTemplate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DAOTemplateImpl() {
+	protected DAOTemplateImpl()
+	{
 		super();
 	}
 
@@ -123,7 +125,8 @@ public class DAOTemplateImpl extends FrameworkProfileImpl implements DAOTemplate
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.DAO_TEMPLATE;
 	}
 
@@ -133,7 +136,8 @@ public class DAOTemplateImpl extends FrameworkProfileImpl implements DAOTemplate
 	 * @generated
 	 */
 	@Override
-	public String getClassTemplate() {
+	public String getClassTemplate()
+	{
 		return classTemplate;
 	}
 
@@ -144,7 +148,8 @@ public class DAOTemplateImpl extends FrameworkProfileImpl implements DAOTemplate
 	 */
 	@SuppressWarnings("restriction")
 	@Override
-	public void setClassTemplate(String newClassTemplate) {
+	public void setClassTemplate(String newClassTemplate)
+	{
 		String oldClassTemplate = classTemplate;
 		classTemplate = newClassTemplate;
 		if (eNotificationRequired())
@@ -158,7 +163,8 @@ public class DAOTemplateImpl extends FrameworkProfileImpl implements DAOTemplate
 	 * @generated
 	 */
 	@Override
-	public String getInterfaceTemplate() {
+	public String getInterfaceTemplate()
+	{
 		return interfaceTemplate;
 	}
 
@@ -169,7 +175,8 @@ public class DAOTemplateImpl extends FrameworkProfileImpl implements DAOTemplate
 	 */
 	@SuppressWarnings("restriction")
 	@Override
-	public void setInterfaceTemplate(String newInterfaceTemplate) {
+	public void setInterfaceTemplate(String newInterfaceTemplate)
+	{
 		String oldInterfaceTemplate = interfaceTemplate;
 		interfaceTemplate = newInterfaceTemplate;
 		if (eNotificationRequired())
@@ -183,7 +190,8 @@ public class DAOTemplateImpl extends FrameworkProfileImpl implements DAOTemplate
 	 * @generated
 	 */
 	@Override
-	public String getClassExtension() {
+	public String getClassExtension()
+	{
 		return classExtension;
 	}
 
@@ -194,7 +202,8 @@ public class DAOTemplateImpl extends FrameworkProfileImpl implements DAOTemplate
 	 */
 	@SuppressWarnings("restriction")
 	@Override
-	public void setClassExtension(String newClassExtension) {
+	public void setClassExtension(String newClassExtension)
+	{
 		String oldClassExtension = classExtension;
 		classExtension = newClassExtension;
 		if (eNotificationRequired())
@@ -208,7 +217,8 @@ public class DAOTemplateImpl extends FrameworkProfileImpl implements DAOTemplate
 	 * @generated
 	 */
 	@Override
-	public String getInterfaceExtension() {
+	public String getInterfaceExtension()
+	{
 		return interfaceExtension;
 	}
 
@@ -219,7 +229,8 @@ public class DAOTemplateImpl extends FrameworkProfileImpl implements DAOTemplate
 	 */
 	@SuppressWarnings("restriction")
 	@Override
-	public void setInterfaceExtension(String newInterfaceExtension) {
+	public void setInterfaceExtension(String newInterfaceExtension)
+	{
 		String oldInterfaceExtension = interfaceExtension;
 		interfaceExtension = newInterfaceExtension;
 		if (eNotificationRequired())
@@ -233,8 +244,10 @@ public class DAOTemplateImpl extends FrameworkProfileImpl implements DAOTemplate
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DAO_TEMPLATE__CLASS_TEMPLATE:
 			return getClassTemplate();
 		case FramewebPackage.DAO_TEMPLATE__INTERFACE_TEMPLATE:
@@ -253,8 +266,10 @@ public class DAOTemplateImpl extends FrameworkProfileImpl implements DAOTemplate
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DAO_TEMPLATE__CLASS_TEMPLATE:
 			setClassTemplate((String) newValue);
 			return;
@@ -277,8 +292,10 @@ public class DAOTemplateImpl extends FrameworkProfileImpl implements DAOTemplate
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DAO_TEMPLATE__CLASS_TEMPLATE:
 			setClassTemplate(CLASS_TEMPLATE_EDEFAULT);
 			return;
@@ -301,8 +318,10 @@ public class DAOTemplateImpl extends FrameworkProfileImpl implements DAOTemplate
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DAO_TEMPLATE__CLASS_TEMPLATE:
 			return CLASS_TEMPLATE_EDEFAULT == null ? classTemplate != null
 					: !CLASS_TEMPLATE_EDEFAULT.equals(classTemplate);
@@ -325,7 +344,8 @@ public class DAOTemplateImpl extends FrameworkProfileImpl implements DAOTemplate
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

@@ -377,12 +377,22 @@
     <genClasses ecoreClass="frameweb.ecore#//NavigationAggregationAssociation">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//NavigationAggregationAssociation/relacoes"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//NavigationAggregationAssociation/spaProperties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference frameweb.ecore#//NavigationAggregationAssociation/spaMethod"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference frameweb.ecore#//NavigationAggregationAssociation/spaAttribute"/>
     </genClasses>
     <genClasses ecoreClass="frameweb.ecore#//NavigationAggregationTarget"/>
     <genClasses ecoreClass="frameweb.ecore#//NavigationAggregationSource"/>
     <genClasses ecoreClass="frameweb.ecore#//NavigationSPAProperties">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//NavigationSPAProperties/spaAttributes"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//NavigationSPAProperties/spaMethods"/>
+    </genClasses>
+    <genClasses ecoreClass="frameweb.ecore#//NavigationAggregationAssociationSPAMethod">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//NavigationAggregationAssociationSPAMethod/spaMethod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//NavigationAggregationAssociationSPAMethod/value"/>
+    </genClasses>
+    <genClasses ecoreClass="frameweb.ecore#//NavigationAggregationAssociationSPAAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute frameweb.ecore#//NavigationAggregationAssociationSPAAttribute/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference frameweb.ecore#//NavigationAggregationAssociationSPAAttribute/spaAttribute"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

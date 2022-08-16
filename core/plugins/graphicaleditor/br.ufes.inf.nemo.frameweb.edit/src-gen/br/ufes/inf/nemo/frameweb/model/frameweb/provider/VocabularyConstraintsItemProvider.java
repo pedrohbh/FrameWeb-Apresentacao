@@ -29,14 +29,16 @@ import org.eclipse.uml2.uml.edit.providers.ConstraintItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class VocabularyConstraintsItemProvider extends ConstraintItemProvider {
+public class VocabularyConstraintsItemProvider extends ConstraintItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VocabularyConstraintsItemProvider(AdapterFactory adapterFactory) {
+	public VocabularyConstraintsItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -47,8 +49,10 @@ public class VocabularyConstraintsItemProvider extends ConstraintItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addSubPropertyOfPropertyDescriptor(object);
@@ -62,7 +66,8 @@ public class VocabularyConstraintsItemProvider extends ConstraintItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSubPropertyOfPropertyDescriptor(Object object) {
+	protected void addSubPropertyOfPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_VocabularyConstraints_subPropertyOf_feature"),
@@ -79,7 +84,8 @@ public class VocabularyConstraintsItemProvider extends ConstraintItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/VocabularyConstraints"));
 	}
 
@@ -89,7 +95,8 @@ public class VocabularyConstraintsItemProvider extends ConstraintItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -100,7 +107,8 @@ public class VocabularyConstraintsItemProvider extends ConstraintItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((VocabularyConstraints) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_VocabularyConstraints_type")
 				: getString("_UI_VocabularyConstraints_type") + " " + label;
@@ -114,10 +122,12 @@ public class VocabularyConstraintsItemProvider extends ConstraintItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(VocabularyConstraints.class)) {
+		switch (notification.getFeatureID(VocabularyConstraints.class))
+		{
 		case FramewebPackage.VOCABULARY_CONSTRAINTS__SUB_PROPERTY_OF:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
@@ -133,7 +143,8 @@ public class VocabularyConstraintsItemProvider extends ConstraintItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CONSTRAINT__SPECIFICATION,
@@ -147,14 +158,16 @@ public class VocabularyConstraintsItemProvider extends ConstraintItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
 		boolean qualify = childFeature == UMLPackage.Literals.NAMED_ELEMENT__NAME_EXPRESSION
 				|| childFeature == UMLPackage.Literals.CONSTRAINT__SPECIFICATION;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
@@ -168,7 +181,8 @@ public class VocabularyConstraintsItemProvider extends ConstraintItemProvider {
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		return FramewebEditPlugin.INSTANCE;
 	}
 

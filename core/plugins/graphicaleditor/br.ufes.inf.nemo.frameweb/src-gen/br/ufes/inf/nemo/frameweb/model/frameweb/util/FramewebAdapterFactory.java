@@ -60,7 +60,8 @@ import org.eclipse.uml2.uml.ValueSpecification;
  * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage
  * @generated
  */
-public class FramewebAdapterFactory extends AdapterFactoryImpl {
+public class FramewebAdapterFactory extends AdapterFactoryImpl
+{
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
@@ -75,8 +76,10 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FramewebAdapterFactory() {
-		if (modelPackage == null) {
+	public FramewebAdapterFactory()
+	{
+		if (modelPackage == null)
+		{
 			modelPackage = FramewebPackage.eINSTANCE;
 		}
 	}
@@ -90,11 +93,14 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	@Override
-	public boolean isFactoryForType(Object object) {
-		if (object == modelPackage) {
+	public boolean isFactoryForType(Object object)
+	{
+		if (object == modelPackage)
+		{
 			return true;
 		}
-		if (object instanceof EObject) {
+		if (object instanceof EObject)
+		{
 			return ((EObject) object).eClass().getEPackage() == modelPackage;
 		}
 		return false;
@@ -106,864 +112,1050 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FramewebSwitch<Adapter> modelSwitch = new FramewebSwitch<Adapter>() {
+	protected FramewebSwitch<Adapter> modelSwitch = new FramewebSwitch<Adapter>()
+	{
 		@Override
-		public Adapter caseFramewebProject(FramewebProject object) {
+		public Adapter caseFramewebProject(FramewebProject object)
+		{
 			return createFramewebProjectAdapter();
 		}
 
 		@Override
-		public Adapter caseFramewebModel(FramewebModel object) {
+		public Adapter caseFramewebModel(FramewebModel object)
+		{
 			return createFramewebModelAdapter();
 		}
 
 		@Override
-		public Adapter caseFrameworkProfile(FrameworkProfile object) {
+		public Adapter caseFrameworkProfile(FrameworkProfile object)
+		{
 			return createFrameworkProfileAdapter();
 		}
 
 		@Override
-		public Adapter caseEntityModel(EntityModel object) {
+		public Adapter caseEntityModel(EntityModel object)
+		{
 			return createEntityModelAdapter();
 		}
 
 		@Override
-		public Adapter caseNavigationModel(NavigationModel object) {
+		public Adapter caseNavigationModel(NavigationModel object)
+		{
 			return createNavigationModelAdapter();
 		}
 
 		@Override
-		public Adapter caseApplicationModel(ApplicationModel object) {
+		public Adapter caseApplicationModel(ApplicationModel object)
+		{
 			return createApplicationModelAdapter();
 		}
 
 		@Override
-		public Adapter casePersistenceModel(PersistenceModel object) {
+		public Adapter casePersistenceModel(PersistenceModel object)
+		{
 			return createPersistenceModelAdapter();
 		}
 
 		@Override
-		public Adapter caseDomainAssociation(DomainAssociation object) {
+		public Adapter caseDomainAssociation(DomainAssociation object)
+		{
 			return createDomainAssociationAdapter();
 		}
 
 		@Override
-		public Adapter caseAttribute(Attribute object) {
+		public Adapter caseAttribute(Attribute object)
+		{
 			return createAttributeAdapter();
 		}
 
 		@Override
-		public Adapter caseVersionAttribute(VersionAttribute object) {
+		public Adapter caseVersionAttribute(VersionAttribute object)
+		{
 			return createVersionAttributeAdapter();
 		}
 
 		@Override
-		public Adapter caseIdAttribute(IdAttribute object) {
+		public Adapter caseIdAttribute(IdAttribute object)
+		{
 			return createIdAttributeAdapter();
 		}
 
 		@Override
-		public Adapter caseLOBAttribute(LOBAttribute object) {
+		public Adapter caseLOBAttribute(LOBAttribute object)
+		{
 			return createLOBAttributeAdapter();
 		}
 
 		@Override
-		public Adapter caseEmbeddedAttribute(EmbeddedAttribute object) {
+		public Adapter caseEmbeddedAttribute(EmbeddedAttribute object)
+		{
 			return createEmbeddedAttributeAdapter();
 		}
 
 		@Override
-		public Adapter caseDecimalAttribute(DecimalAttribute object) {
+		public Adapter caseDecimalAttribute(DecimalAttribute object)
+		{
 			return createDecimalAttributeAdapter();
 		}
 
 		@Override
-		public Adapter caseDateTimeAttribute(DateTimeAttribute object) {
+		public Adapter caseDateTimeAttribute(DateTimeAttribute object)
+		{
 			return createDateTimeAttributeAdapter();
 		}
 
 		@Override
-		public Adapter casePage(Page object) {
+		public Adapter casePage(Page object)
+		{
 			return createPageAdapter();
 		}
 
 		@Override
-		public Adapter caseAuthPage(AuthPage object) {
+		public Adapter caseAuthPage(AuthPage object)
+		{
 			return createAuthPageAdapter();
 		}
 
 		@Override
-		public Adapter caseDAOInterface(DAOInterface object) {
+		public Adapter caseDAOInterface(DAOInterface object)
+		{
 			return createDAOInterfaceAdapter();
 		}
 
 		@Override
-		public Adapter caseDAOClass(DAOClass object) {
+		public Adapter caseDAOClass(DAOClass object)
+		{
 			return createDAOClassAdapter();
 		}
 
 		@Override
-		public Adapter caseDAORealization(DAORealization object) {
+		public Adapter caseDAORealization(DAORealization object)
+		{
 			return createDAORealizationAdapter();
 		}
 
 		@Override
-		public Adapter caseFrontControllerClass(FrontControllerClass object) {
+		public Adapter caseFrontControllerClass(FrontControllerClass object)
+		{
 			return createFrontControllerClassAdapter();
 		}
 
 		@Override
-		public Adapter caseIOParameter(IOParameter object) {
+		public Adapter caseIOParameter(IOParameter object)
+		{
 			return createIOParameterAdapter();
 		}
 
 		@Override
-		public Adapter caseResultDependency(ResultDependency object) {
+		public Adapter caseResultDependency(ResultDependency object)
+		{
 			return createResultDependencyAdapter();
 		}
 
 		@Override
-		public Adapter caseAuthSuccessUrl(AuthSuccessUrl object) {
+		public Adapter caseAuthSuccessUrl(AuthSuccessUrl object)
+		{
 			return createAuthSuccessUrlAdapter();
 		}
 
 		@Override
-		public Adapter caseAuthFailureUrl(AuthFailureUrl object) {
+		public Adapter caseAuthFailureUrl(AuthFailureUrl object)
+		{
 			return createAuthFailureUrlAdapter();
 		}
 
 		@Override
-		public Adapter caseNavigationAssociation(NavigationAssociation object) {
+		public Adapter caseNavigationAssociation(NavigationAssociation object)
+		{
 			return createNavigationAssociationAdapter();
 		}
 
 		@Override
-		public Adapter caseFrontControllerMethod(FrontControllerMethod object) {
+		public Adapter caseFrontControllerMethod(FrontControllerMethod object)
+		{
 			return createFrontControllerMethodAdapter();
 		}
 
 		@Override
-		public Adapter caseAuthProcessingMethod(AuthProcessingMethod object) {
+		public Adapter caseAuthProcessingMethod(AuthProcessingMethod object)
+		{
 			return createAuthProcessingMethodAdapter();
 		}
 
 		@Override
-		public Adapter caseServiceClass(ServiceClass object) {
+		public Adapter caseServiceClass(ServiceClass object)
+		{
 			return createServiceClassAdapter();
 		}
 
 		@Override
-		public Adapter caseAuthServiceClass(AuthServiceClass object) {
+		public Adapter caseAuthServiceClass(AuthServiceClass object)
+		{
 			return createAuthServiceClassAdapter();
 		}
 
 		@Override
-		public Adapter caseServiceInterface(ServiceInterface object) {
+		public Adapter caseServiceInterface(ServiceInterface object)
+		{
 			return createServiceInterfaceAdapter();
 		}
 
 		@Override
-		public Adapter caseAuthServiceInterface(AuthServiceInterface object) {
+		public Adapter caseAuthServiceInterface(AuthServiceInterface object)
+		{
 			return createAuthServiceInterfaceAdapter();
 		}
 
 		@Override
-		public Adapter caseServiceGeneralization(ServiceGeneralization object) {
+		public Adapter caseServiceGeneralization(ServiceGeneralization object)
+		{
 			return createServiceGeneralizationAdapter();
 		}
 
 		@Override
-		public Adapter caseServiceControllerAssociation(ServiceControllerAssociation object) {
+		public Adapter caseServiceControllerAssociation(ServiceControllerAssociation object)
+		{
 			return createServiceControllerAssociationAdapter();
 		}
 
 		@Override
-		public Adapter caseDomainClass(DomainClass object) {
+		public Adapter caseDomainClass(DomainClass object)
+		{
 			return createDomainClassAdapter();
 		}
 
 		@Override
-		public Adapter caseAuthUser(AuthUser object) {
+		public Adapter caseAuthUser(AuthUser object)
+		{
 			return createAuthUserAdapter();
 		}
 
 		@Override
-		public Adapter caseAuthRole(AuthRole object) {
+		public Adapter caseAuthRole(AuthRole object)
+		{
 			return createAuthRoleAdapter();
 		}
 
 		@Override
-		public Adapter caseAuthPermission(AuthPermission object) {
+		public Adapter caseAuthPermission(AuthPermission object)
+		{
 			return createAuthPermissionAdapter();
 		}
 
 		@Override
-		public Adapter caseFrontControllerDependency(FrontControllerDependency object) {
+		public Adapter caseFrontControllerDependency(FrontControllerDependency object)
+		{
 			return createFrontControllerDependencyAdapter();
 		}
 
 		@Override
-		public Adapter casePageDependency(PageDependency object) {
+		public Adapter casePageDependency(PageDependency object)
+		{
 			return createPageDependencyAdapter();
 		}
 
 		@Override
-		public Adapter caseDAOServiceAssociation(DAOServiceAssociation object) {
+		public Adapter caseDAOServiceAssociation(DAOServiceAssociation object)
+		{
 			return createDAOServiceAssociationAdapter();
 		}
 
 		@Override
-		public Adapter caseNavigationAttribute(NavigationAttribute object) {
+		public Adapter caseNavigationAttribute(NavigationAttribute object)
+		{
 			return createNavigationAttributeAdapter();
 		}
 
 		@Override
-		public Adapter caseNavigationClass(NavigationClass object) {
+		public Adapter caseNavigationClass(NavigationClass object)
+		{
 			return createNavigationClassAdapter();
 		}
 
 		@Override
-		public Adapter caseDomainMethod(DomainMethod object) {
+		public Adapter caseDomainMethod(DomainMethod object)
+		{
 			return createDomainMethodAdapter();
 		}
 
 		@Override
-		public Adapter caseDAOAttribute(DAOAttribute object) {
+		public Adapter caseDAOAttribute(DAOAttribute object)
+		{
 			return createDAOAttributeAdapter();
 		}
 
 		@Override
-		public Adapter caseServiceMethod(ServiceMethod object) {
+		public Adapter caseServiceMethod(ServiceMethod object)
+		{
 			return createServiceMethodAdapter();
 		}
 
 		@Override
-		public Adapter caseAuthServiceMethod(AuthServiceMethod object) {
+		public Adapter caseAuthServiceMethod(AuthServiceMethod object)
+		{
 			return createAuthServiceMethodAdapter();
 		}
 
 		@Override
-		public Adapter caseServiceAttribute(ServiceAttribute object) {
+		public Adapter caseServiceAttribute(ServiceAttribute object)
+		{
 			return createServiceAttributeAdapter();
 		}
 
 		@Override
-		public Adapter caseServiceAssociation(ServiceAssociation object) {
+		public Adapter caseServiceAssociation(ServiceAssociation object)
+		{
 			return createServiceAssociationAdapter();
 		}
 
 		@Override
-		public Adapter caseNavigationDependency(NavigationDependency object) {
+		public Adapter caseNavigationDependency(NavigationDependency object)
+		{
 			return createNavigationDependencyAdapter();
 		}
 
 		@Override
-		public Adapter caseDAOMethod(DAOMethod object) {
+		public Adapter caseDAOMethod(DAOMethod object)
+		{
 			return createDAOMethodAdapter();
 		}
 
 		@Override
-		public Adapter caseDomainPackage(DomainPackage object) {
+		public Adapter caseDomainPackage(DomainPackage object)
+		{
 			return createDomainPackageAdapter();
 		}
 
 		@Override
-		public Adapter caseViewPackage(ViewPackage object) {
+		public Adapter caseViewPackage(ViewPackage object)
+		{
 			return createViewPackageAdapter();
 		}
 
 		@Override
-		public Adapter caseControllerPackage(ControllerPackage object) {
+		public Adapter caseControllerPackage(ControllerPackage object)
+		{
 			return createControllerPackageAdapter();
 		}
 
 		@Override
-		public Adapter casePersistencePackage(PersistencePackage object) {
+		public Adapter casePersistencePackage(PersistencePackage object)
+		{
 			return createPersistencePackageAdapter();
 		}
 
 		@Override
-		public Adapter caseApplicationPackage(ApplicationPackage object) {
+		public Adapter caseApplicationPackage(ApplicationPackage object)
+		{
 			return createApplicationPackageAdapter();
 		}
 
 		@Override
-		public Adapter caseUIComponent(UIComponent object) {
+		public Adapter caseUIComponent(UIComponent object)
+		{
 			return createUIComponentAdapter();
 		}
 
 		@Override
-		public Adapter caseAuthForm(AuthForm object) {
+		public Adapter caseAuthForm(AuthForm object)
+		{
 			return createAuthFormAdapter();
 		}
 
 		@Override
-		public Adapter caseResultType(ResultType object) {
+		public Adapter caseResultType(ResultType object)
+		{
 			return createResultTypeAdapter();
 		}
 
 		@Override
-		public Adapter caseNavigationPackage(NavigationPackage object) {
+		public Adapter caseNavigationPackage(NavigationPackage object)
+		{
 			return createNavigationPackageAdapter();
 		}
 
 		@Override
-		public Adapter caseDomainGeneralization(DomainGeneralization object) {
+		public Adapter caseDomainGeneralization(DomainGeneralization object)
+		{
 			return createDomainGeneralizationAdapter();
 		}
 
 		@Override
-		public Adapter caseUIComponentField(UIComponentField object) {
+		public Adapter caseUIComponentField(UIComponentField object)
+		{
 			return createUIComponentFieldAdapter();
 		}
 
 		@Override
-		public Adapter caseTagLib(TagLib object) {
+		public Adapter caseTagLib(TagLib object)
+		{
 			return createTagLibAdapter();
 		}
 
 		@Override
-		public Adapter caseTag(Tag object) {
+		public Adapter caseTag(Tag object)
+		{
 			return createTagAdapter();
 		}
 
 		@Override
-		public Adapter caseNavigationCompositionPart(NavigationCompositionPart object) {
+		public Adapter caseNavigationCompositionPart(NavigationCompositionPart object)
+		{
 			return createNavigationCompositionPartAdapter();
 		}
 
 		@Override
-		public Adapter caseNavigationCompositionWhole(NavigationCompositionWhole object) {
+		public Adapter caseNavigationCompositionWhole(NavigationCompositionWhole object)
+		{
 			return createNavigationCompositionWholeAdapter();
 		}
 
 		@Override
-		public Adapter caseNavigationProperty(NavigationProperty object) {
+		public Adapter caseNavigationProperty(NavigationProperty object)
+		{
 			return createNavigationPropertyAdapter();
 		}
 
 		@Override
-		public Adapter caseResultSet(ResultSet object) {
+		public Adapter caseResultSet(ResultSet object)
+		{
 			return createResultSetAdapter();
 		}
 
 		@Override
-		public Adapter caseNavigationConstraint(NavigationConstraint object) {
+		public Adapter caseNavigationConstraint(NavigationConstraint object)
+		{
 			return createNavigationConstraintAdapter();
 		}
 
 		@Override
-		public Adapter casePageConstraint(PageConstraint object) {
+		public Adapter casePageConstraint(PageConstraint object)
+		{
 			return createPageConstraintAdapter();
 		}
 
 		@Override
-		public Adapter caseResultConstraint(ResultConstraint object) {
+		public Adapter caseResultConstraint(ResultConstraint object)
+		{
 			return createResultConstraintAdapter();
 		}
 
 		@Override
-		public Adapter caseMethodConstraint(MethodConstraint object) {
+		public Adapter caseMethodConstraint(MethodConstraint object)
+		{
 			return createMethodConstraintAdapter();
 		}
 
 		@Override
-		public Adapter caseChainingConstraint(ChainingConstraint object) {
+		public Adapter caseChainingConstraint(ChainingConstraint object)
+		{
 			return createChainingConstraintAdapter();
 		}
 
 		@Override
-		public Adapter caseNavigationGeneralization(NavigationGeneralization object) {
+		public Adapter caseNavigationGeneralization(NavigationGeneralization object)
+		{
 			return createNavigationGeneralizationAdapter();
 		}
 
 		@Override
-		public Adapter caseDomainConstraints(DomainConstraints object) {
+		public Adapter caseDomainConstraints(DomainConstraints object)
+		{
 			return createDomainConstraintsAdapter();
 		}
 
 		@Override
-		public Adapter caseDAOGeneralization(DAOGeneralization object) {
+		public Adapter caseDAOGeneralization(DAOGeneralization object)
+		{
 			return createDAOGeneralizationAdapter();
 		}
 
 		@Override
-		public Adapter caseMappingLib(MappingLib object) {
+		public Adapter caseMappingLib(MappingLib object)
+		{
 			return createMappingLibAdapter();
 		}
 
 		@Override
-		public Adapter caseClassMapping(ClassMapping object) {
+		public Adapter caseClassMapping(ClassMapping object)
+		{
 			return createClassMappingAdapter();
 		}
 
 		@Override
-		public Adapter caseAttributeMapping(AttributeMapping object) {
+		public Adapter caseAttributeMapping(AttributeMapping object)
+		{
 			return createAttributeMappingAdapter();
 		}
 
 		@Override
-		public Adapter caseDomainGeneralizationSet(DomainGeneralizationSet object) {
+		public Adapter caseDomainGeneralizationSet(DomainGeneralizationSet object)
+		{
 			return createDomainGeneralizationSetAdapter();
 		}
 
 		@Override
-		public Adapter caseController(Controller object) {
+		public Adapter caseController(Controller object)
+		{
 			return createControllerAdapter();
 		}
 
 		@Override
-		public Adapter caseTagProperty(TagProperty object) {
+		public Adapter caseTagProperty(TagProperty object)
+		{
 			return createTagPropertyAdapter();
 		}
 
 		@Override
-		public Adapter caseResultProperty(ResultProperty object) {
+		public Adapter caseResultProperty(ResultProperty object)
+		{
 			return createResultPropertyAdapter();
 		}
 
 		@Override
-		public Adapter caseClassMappingPropery(ClassMappingPropery object) {
+		public Adapter caseClassMappingPropery(ClassMappingPropery object)
+		{
 			return createClassMappingProperyAdapter();
 		}
 
 		@Override
-		public Adapter caseAttributeMappingProperty(AttributeMappingProperty object) {
+		public Adapter caseAttributeMappingProperty(AttributeMappingProperty object)
+		{
 			return createAttributeMappingPropertyAdapter();
 		}
 
 		@Override
-		public Adapter caseServiceRealization(ServiceRealization object) {
+		public Adapter caseServiceRealization(ServiceRealization object)
+		{
 			return createServiceRealizationAdapter();
 		}
 
 		@Override
-		public Adapter caseNavigationGeneralizationSet(NavigationGeneralizationSet object) {
+		public Adapter caseNavigationGeneralizationSet(NavigationGeneralizationSet object)
+		{
 			return createNavigationGeneralizationSetAdapter();
 		}
 
 		@Override
-		public Adapter caseDAOGeneralizationSet(DAOGeneralizationSet object) {
+		public Adapter caseDAOGeneralizationSet(DAOGeneralizationSet object)
+		{
 			return createDAOGeneralizationSetAdapter();
 		}
 
 		@Override
-		public Adapter caseServiceGeneralizationSet(ServiceGeneralizationSet object) {
+		public Adapter caseServiceGeneralizationSet(ServiceGeneralizationSet object)
+		{
 			return createServiceGeneralizationSetAdapter();
 		}
 
 		@Override
-		public Adapter caseSemanticPackage(SemanticPackage object) {
+		public Adapter caseSemanticPackage(SemanticPackage object)
+		{
 			return createSemanticPackageAdapter();
 		}
 
 		@Override
-		public Adapter caseIRI(IRI object) {
+		public Adapter caseIRI(IRI object)
+		{
 			return createIRIAdapter();
 		}
 
 		@Override
-		public Adapter caseVocabularyModel(VocabularyModel object) {
+		public Adapter caseVocabularyModel(VocabularyModel object)
+		{
 			return createVocabularyModelAdapter();
 		}
 
 		@Override
-		public Adapter caseVocabulary(Vocabulary object) {
+		public Adapter caseVocabulary(Vocabulary object)
+		{
 			return createVocabularyAdapter();
 		}
 
 		@Override
-		public Adapter caseAxiom(Axiom object) {
+		public Adapter caseAxiom(Axiom object)
+		{
 			return createAxiomAdapter();
 		}
 
 		@Override
-		public Adapter caseAnnotation(Annotation object) {
+		public Adapter caseAnnotation(Annotation object)
+		{
 			return createAnnotationAdapter();
 		}
 
 		@Override
-		public Adapter caseVocabularyConstraints(VocabularyConstraints object) {
+		public Adapter caseVocabularyConstraints(VocabularyConstraints object)
+		{
 			return createVocabularyConstraintsAdapter();
 		}
 
 		@Override
-		public Adapter caseVocabularyAssociation(VocabularyAssociation object) {
+		public Adapter caseVocabularyAssociation(VocabularyAssociation object)
+		{
 			return createVocabularyAssociationAdapter();
 		}
 
 		@Override
-		public Adapter caseVocabularyProperty(VocabularyProperty object) {
+		public Adapter caseVocabularyProperty(VocabularyProperty object)
+		{
 			return createVocabularyPropertyAdapter();
 		}
 
 		@Override
-		public Adapter caseVocabularyEntity(VocabularyEntity object) {
+		public Adapter caseVocabularyEntity(VocabularyEntity object)
+		{
 			return createVocabularyEntityAdapter();
 		}
 
 		@Override
-		public Adapter caseObjectProperty(ObjectProperty object) {
+		public Adapter caseObjectProperty(ObjectProperty object)
+		{
 			return createObjectPropertyAdapter();
 		}
 
 		@Override
-		public Adapter caseDataProperty(DataProperty object) {
+		public Adapter caseDataProperty(DataProperty object)
+		{
 			return createDataPropertyAdapter();
 		}
 
 		@Override
-		public Adapter caseVocabularyDataType(VocabularyDataType object) {
+		public Adapter caseVocabularyDataType(VocabularyDataType object)
+		{
 			return createVocabularyDataTypeAdapter();
 		}
 
 		@Override
-		public Adapter caseNamedIndividual(NamedIndividual object) {
+		public Adapter caseNamedIndividual(NamedIndividual object)
+		{
 			return createNamedIndividualAdapter();
 		}
 
 		@Override
-		public Adapter caseVocabularyClass(VocabularyClass object) {
+		public Adapter caseVocabularyClass(VocabularyClass object)
+		{
 			return createVocabularyClassAdapter();
 		}
 
 		@Override
-		public Adapter caseAnonymousIndividual(AnonymousIndividual object) {
+		public Adapter caseAnonymousIndividual(AnonymousIndividual object)
+		{
 			return createAnonymousIndividualAdapter();
 		}
 
 		@Override
-		public Adapter caseIndividual(Individual object) {
+		public Adapter caseIndividual(Individual object)
+		{
 			return createIndividualAdapter();
 		}
 
 		@Override
-		public Adapter caseVocabularyLiteral(VocabularyLiteral object) {
+		public Adapter caseVocabularyLiteral(VocabularyLiteral object)
+		{
 			return createVocabularyLiteralAdapter();
 		}
 
 		@Override
-		public Adapter caseDomainVocabularyAssociation(DomainVocabularyAssociation object) {
+		public Adapter caseDomainVocabularyAssociation(DomainVocabularyAssociation object)
+		{
 			return createDomainVocabularyAssociationAdapter();
 		}
 
 		@Override
-		public Adapter caseDomainVocabularyProperty(DomainVocabularyProperty object) {
+		public Adapter caseDomainVocabularyProperty(DomainVocabularyProperty object)
+		{
 			return createDomainVocabularyPropertyAdapter();
 		}
 
 		@Override
-		public Adapter caseDomainAttribute(DomainAttribute object) {
+		public Adapter caseDomainAttribute(DomainAttribute object)
+		{
 			return createDomainAttributeAdapter();
 		}
 
 		@Override
-		public Adapter caseDomainAuthAttribute(DomainAuthAttribute object) {
+		public Adapter caseDomainAuthAttribute(DomainAuthAttribute object)
+		{
 			return createDomainAuthAttributeAdapter();
 		}
 
 		@Override
-		public Adapter caseAuthUserName(AuthUserName object) {
+		public Adapter caseAuthUserName(AuthUserName object)
+		{
 			return createAuthUserNameAdapter();
 		}
 
 		@Override
-		public Adapter caseAuthPassword(AuthPassword object) {
+		public Adapter caseAuthPassword(AuthPassword object)
+		{
 			return createAuthPasswordAdapter();
 		}
 
 		@Override
-		public Adapter caseAuthRoleName(AuthRoleName object) {
+		public Adapter caseAuthRoleName(AuthRoleName object)
+		{
 			return createAuthRoleNameAdapter();
 		}
 
 		@Override
-		public Adapter caseAuthPermName(AuthPermName object) {
+		public Adapter caseAuthPermName(AuthPermName object)
+		{
 			return createAuthPermNameAdapter();
 		}
 
 		@Override
-		public Adapter caseDomainProperty(DomainProperty object) {
+		public Adapter caseDomainProperty(DomainProperty object)
+		{
 			return createDomainPropertyAdapter();
 		}
 
 		@Override
-		public Adapter caseFrontControllerTemplate(FrontControllerTemplate object) {
+		public Adapter caseFrontControllerTemplate(FrontControllerTemplate object)
+		{
 			return createFrontControllerTemplateAdapter();
 		}
 
 		@Override
-		public Adapter caseDITemplate(DITemplate object) {
+		public Adapter caseDITemplate(DITemplate object)
+		{
 			return createDITemplateAdapter();
 		}
 
 		@Override
-		public Adapter caseORMTemplate(ORMTemplate object) {
+		public Adapter caseORMTemplate(ORMTemplate object)
+		{
 			return createORMTemplateAdapter();
 		}
 
 		@Override
-		public Adapter caseDAOTemplate(DAOTemplate object) {
+		public Adapter caseDAOTemplate(DAOTemplate object)
+		{
 			return createDAOTemplateAdapter();
 		}
 
 		@Override
-		public Adapter caseFrameWebConfiguration(FrameWebConfiguration object) {
+		public Adapter caseFrameWebConfiguration(FrameWebConfiguration object)
+		{
 			return createFrameWebConfigurationAdapter();
 		}
 
 		@Override
-		public Adapter caseRestControllerTemplate(RestControllerTemplate object) {
+		public Adapter caseRestControllerTemplate(RestControllerTemplate object)
+		{
 			return createRestControllerTemplateAdapter();
 		}
 
 		@Override
-		public Adapter caseRestControllerMethod(RestControllerMethod object) {
+		public Adapter caseRestControllerMethod(RestControllerMethod object)
+		{
 			return createRestControllerMethodAdapter();
 		}
 
 		@Override
-		public Adapter caseRestControllerClass(RestControllerClass object) {
+		public Adapter caseRestControllerClass(RestControllerClass object)
+		{
 			return createRestControllerClassAdapter();
 		}
 
 		@Override
-		public Adapter casePartial(Partial object) {
+		public Adapter casePartial(Partial object)
+		{
 			return createPartialAdapter();
 		}
 
 		@Override
-		public Adapter caseNavigationAggregationAssociation(NavigationAggregationAssociation object) {
+		public Adapter caseNavigationAggregationAssociation(NavigationAggregationAssociation object)
+		{
 			return createNavigationAggregationAssociationAdapter();
 		}
 
 		@Override
-		public Adapter caseNavigationAggregationTarget(NavigationAggregationTarget object) {
+		public Adapter caseNavigationAggregationTarget(NavigationAggregationTarget object)
+		{
 			return createNavigationAggregationTargetAdapter();
 		}
 
 		@Override
-		public Adapter caseNavigationAggregationSource(NavigationAggregationSource object) {
+		public Adapter caseNavigationAggregationSource(NavigationAggregationSource object)
+		{
 			return createNavigationAggregationSourceAdapter();
 		}
 
 		@Override
-		public Adapter caseNavigationSPAProperties(NavigationSPAProperties object) {
+		public Adapter caseNavigationSPAProperties(NavigationSPAProperties object)
+		{
 			return createNavigationSPAPropertiesAdapter();
 		}
 
 		@Override
-		public Adapter caseEModelElement(EModelElement object) {
+		public Adapter caseNavigationAggregationAssociationSPAMethod(NavigationAggregationAssociationSPAMethod object)
+		{
+			return createNavigationAggregationAssociationSPAMethodAdapter();
+		}
+
+		@Override
+		public Adapter caseNavigationAggregationAssociationSPAAttribute(
+				NavigationAggregationAssociationSPAAttribute object)
+		{
+			return createNavigationAggregationAssociationSPAAttributeAdapter();
+		}
+
+		@Override
+		public Adapter caseEModelElement(EModelElement object)
+		{
 			return createEModelElementAdapter();
 		}
 
 		@Override
-		public Adapter caseElement(Element object) {
+		public Adapter caseElement(Element object)
+		{
 			return createElementAdapter();
 		}
 
 		@Override
-		public Adapter caseNamedElement(NamedElement object) {
+		public Adapter caseNamedElement(NamedElement object)
+		{
 			return createNamedElementAdapter();
 		}
 
 		@Override
-		public Adapter caseNamespace(Namespace object) {
+		public Adapter caseNamespace(Namespace object)
+		{
 			return createNamespaceAdapter();
 		}
 
 		@Override
-		public Adapter caseParameterableElement(ParameterableElement object) {
+		public Adapter caseParameterableElement(ParameterableElement object)
+		{
 			return createParameterableElementAdapter();
 		}
 
 		@Override
-		public Adapter casePackageableElement(PackageableElement object) {
+		public Adapter casePackageableElement(PackageableElement object)
+		{
 			return createPackageableElementAdapter();
 		}
 
 		@Override
-		public Adapter caseTemplateableElement(TemplateableElement object) {
+		public Adapter caseTemplateableElement(TemplateableElement object)
+		{
 			return createTemplateableElementAdapter();
 		}
 
 		@Override
-		public Adapter casePackage(org.eclipse.uml2.uml.Package object) {
+		public Adapter casePackage(org.eclipse.uml2.uml.Package object)
+		{
 			return createPackageAdapter();
 		}
 
 		@Override
-		public Adapter caseModel(Model object) {
+		public Adapter caseModel(Model object)
+		{
 			return createModelAdapter();
 		}
 
 		@Override
-		public Adapter caseProfile(Profile object) {
+		public Adapter caseProfile(Profile object)
+		{
 			return createProfileAdapter();
 		}
 
 		@Override
-		public Adapter caseRedefinableElement(RedefinableElement object) {
+		public Adapter caseRedefinableElement(RedefinableElement object)
+		{
 			return createRedefinableElementAdapter();
 		}
 
 		@Override
-		public Adapter caseType(Type object) {
+		public Adapter caseType(Type object)
+		{
 			return createTypeAdapter();
 		}
 
 		@Override
-		public Adapter caseClassifier(Classifier object) {
+		public Adapter caseClassifier(Classifier object)
+		{
 			return createClassifierAdapter();
 		}
 
 		@Override
-		public Adapter caseRelationship(Relationship object) {
+		public Adapter caseRelationship(Relationship object)
+		{
 			return createRelationshipAdapter();
 		}
 
 		@Override
-		public Adapter caseAssociation(Association object) {
+		public Adapter caseAssociation(Association object)
+		{
 			return createAssociationAdapter();
 		}
 
 		@Override
-		public Adapter caseFeature(Feature object) {
+		public Adapter caseFeature(Feature object)
+		{
 			return createFeatureAdapter();
 		}
 
 		@Override
-		public Adapter caseTypedElement(TypedElement object) {
+		public Adapter caseTypedElement(TypedElement object)
+		{
 			return createTypedElementAdapter();
 		}
 
 		@Override
-		public Adapter caseMultiplicityElement(MultiplicityElement object) {
+		public Adapter caseMultiplicityElement(MultiplicityElement object)
+		{
 			return createMultiplicityElementAdapter();
 		}
 
 		@Override
-		public Adapter caseStructuralFeature(StructuralFeature object) {
+		public Adapter caseStructuralFeature(StructuralFeature object)
+		{
 			return createStructuralFeatureAdapter();
 		}
 
 		@Override
-		public Adapter caseConnectableElement(ConnectableElement object) {
+		public Adapter caseConnectableElement(ConnectableElement object)
+		{
 			return createConnectableElementAdapter();
 		}
 
 		@Override
-		public Adapter caseDeploymentTarget(DeploymentTarget object) {
+		public Adapter caseDeploymentTarget(DeploymentTarget object)
+		{
 			return createDeploymentTargetAdapter();
 		}
 
 		@Override
-		public Adapter caseProperty(Property object) {
+		public Adapter caseProperty(Property object)
+		{
 			return createPropertyAdapter();
 		}
 
 		@Override
-		public Adapter caseStructuredClassifier(StructuredClassifier object) {
+		public Adapter caseStructuredClassifier(StructuredClassifier object)
+		{
 			return createStructuredClassifierAdapter();
 		}
 
 		@Override
-		public Adapter caseEncapsulatedClassifier(EncapsulatedClassifier object) {
+		public Adapter caseEncapsulatedClassifier(EncapsulatedClassifier object)
+		{
 			return createEncapsulatedClassifierAdapter();
 		}
 
 		@Override
-		public Adapter caseBehavioredClassifier(BehavioredClassifier object) {
+		public Adapter caseBehavioredClassifier(BehavioredClassifier object)
+		{
 			return createBehavioredClassifierAdapter();
 		}
 
 		@Override
-		public Adapter caseClass(org.eclipse.uml2.uml.Class object) {
+		public Adapter caseClass(org.eclipse.uml2.uml.Class object)
+		{
 			return createClassAdapter();
 		}
 
 		@Override
-		public Adapter caseInterface(Interface object) {
+		public Adapter caseInterface(Interface object)
+		{
 			return createInterfaceAdapter();
 		}
 
 		@Override
-		public Adapter caseDirectedRelationship(DirectedRelationship object) {
+		public Adapter caseDirectedRelationship(DirectedRelationship object)
+		{
 			return createDirectedRelationshipAdapter();
 		}
 
 		@Override
-		public Adapter caseDependency(Dependency object) {
+		public Adapter caseDependency(Dependency object)
+		{
 			return createDependencyAdapter();
 		}
 
 		@Override
-		public Adapter caseAbstraction(Abstraction object) {
+		public Adapter caseAbstraction(Abstraction object)
+		{
 			return createAbstractionAdapter();
 		}
 
 		@Override
-		public Adapter caseRealization(Realization object) {
+		public Adapter caseRealization(Realization object)
+		{
 			return createRealizationAdapter();
 		}
 
 		@Override
-		public Adapter caseInterfaceRealization(InterfaceRealization object) {
+		public Adapter caseInterfaceRealization(InterfaceRealization object)
+		{
 			return createInterfaceRealizationAdapter();
 		}
 
 		@Override
-		public Adapter caseBehavioralFeature(BehavioralFeature object) {
+		public Adapter caseBehavioralFeature(BehavioralFeature object)
+		{
 			return createBehavioralFeatureAdapter();
 		}
 
 		@Override
-		public Adapter caseOperation(Operation object) {
+		public Adapter caseOperation(Operation object)
+		{
 			return createOperationAdapter();
 		}
 
 		@Override
-		public Adapter caseGeneralization(Generalization object) {
+		public Adapter caseGeneralization(Generalization object)
+		{
 			return createGeneralizationAdapter();
 		}
 
 		@Override
-		public Adapter caseStereotype(Stereotype object) {
+		public Adapter caseStereotype(Stereotype object)
+		{
 			return createStereotypeAdapter();
 		}
 
 		@Override
-		public Adapter caseConstraint(Constraint object) {
+		public Adapter caseConstraint(Constraint object)
+		{
 			return createConstraintAdapter();
 		}
 
 		@Override
-		public Adapter caseGeneralizationSet(GeneralizationSet object) {
+		public Adapter caseGeneralizationSet(GeneralizationSet object)
+		{
 			return createGeneralizationSetAdapter();
 		}
 
 		@Override
-		public Adapter caseDataType(DataType object) {
+		public Adapter caseDataType(DataType object)
+		{
 			return createDataTypeAdapter();
 		}
 
 		@Override
-		public Adapter caseValueSpecification(ValueSpecification object) {
+		public Adapter caseValueSpecification(ValueSpecification object)
+		{
 			return createValueSpecificationAdapter();
 		}
 
 		@Override
-		public Adapter caseLiteralSpecification(LiteralSpecification object) {
+		public Adapter caseLiteralSpecification(LiteralSpecification object)
+		{
 			return createLiteralSpecificationAdapter();
 		}
 
 		@Override
-		public Adapter caseLiteralString(LiteralString object) {
+		public Adapter caseLiteralString(LiteralString object)
+		{
 			return createLiteralStringAdapter();
 		}
 
 		@Override
-		public Adapter defaultCase(EObject object) {
+		public Adapter defaultCase(EObject object)
+		{
 			return createEObjectAdapter();
 		}
 	};
@@ -977,7 +1169,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	@Override
-	public Adapter createAdapter(Notifier target) {
+	public Adapter createAdapter(Notifier target)
+	{
 		return modelSwitch.doSwitch((EObject) target);
 	}
 
@@ -991,7 +1184,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebProject
 	 * @generated
 	 */
-	public Adapter createFramewebProjectAdapter() {
+	public Adapter createFramewebProjectAdapter()
+	{
 		return null;
 	}
 
@@ -1005,7 +1199,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebModel
 	 * @generated
 	 */
-	public Adapter createFramewebModelAdapter() {
+	public Adapter createFramewebModelAdapter()
+	{
 		return null;
 	}
 
@@ -1019,7 +1214,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkProfile
 	 * @generated
 	 */
-	public Adapter createFrameworkProfileAdapter() {
+	public Adapter createFrameworkProfileAdapter()
+	{
 		return null;
 	}
 
@@ -1033,7 +1229,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.EntityModel
 	 * @generated
 	 */
-	public Adapter createEntityModelAdapter() {
+	public Adapter createEntityModelAdapter()
+	{
 		return null;
 	}
 
@@ -1047,7 +1244,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationModel
 	 * @generated
 	 */
-	public Adapter createNavigationModelAdapter() {
+	public Adapter createNavigationModelAdapter()
+	{
 		return null;
 	}
 
@@ -1061,7 +1259,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationModel
 	 * @generated
 	 */
-	public Adapter createApplicationModelAdapter() {
+	public Adapter createApplicationModelAdapter()
+	{
 		return null;
 	}
 
@@ -1075,7 +1274,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.PersistenceModel
 	 * @generated
 	 */
-	public Adapter createPersistenceModelAdapter() {
+	public Adapter createPersistenceModelAdapter()
+	{
 		return null;
 	}
 
@@ -1089,7 +1289,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DomainAssociation
 	 * @generated
 	 */
-	public Adapter createDomainAssociationAdapter() {
+	public Adapter createDomainAssociationAdapter()
+	{
 		return null;
 	}
 
@@ -1103,7 +1304,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.Attribute
 	 * @generated
 	 */
-	public Adapter createAttributeAdapter() {
+	public Adapter createAttributeAdapter()
+	{
 		return null;
 	}
 
@@ -1117,7 +1319,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.VersionAttribute
 	 * @generated
 	 */
-	public Adapter createVersionAttributeAdapter() {
+	public Adapter createVersionAttributeAdapter()
+	{
 		return null;
 	}
 
@@ -1131,7 +1334,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.IdAttribute
 	 * @generated
 	 */
-	public Adapter createIdAttributeAdapter() {
+	public Adapter createIdAttributeAdapter()
+	{
 		return null;
 	}
 
@@ -1145,7 +1349,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.LOBAttribute
 	 * @generated
 	 */
-	public Adapter createLOBAttributeAdapter() {
+	public Adapter createLOBAttributeAdapter()
+	{
 		return null;
 	}
 
@@ -1159,7 +1364,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.EmbeddedAttribute
 	 * @generated
 	 */
-	public Adapter createEmbeddedAttributeAdapter() {
+	public Adapter createEmbeddedAttributeAdapter()
+	{
 		return null;
 	}
 
@@ -1173,7 +1379,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DecimalAttribute
 	 * @generated
 	 */
-	public Adapter createDecimalAttributeAdapter() {
+	public Adapter createDecimalAttributeAdapter()
+	{
 		return null;
 	}
 
@@ -1187,7 +1394,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DateTimeAttribute
 	 * @generated
 	 */
-	public Adapter createDateTimeAttributeAdapter() {
+	public Adapter createDateTimeAttributeAdapter()
+	{
 		return null;
 	}
 
@@ -1201,7 +1409,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.Page
 	 * @generated
 	 */
-	public Adapter createPageAdapter() {
+	public Adapter createPageAdapter()
+	{
 		return null;
 	}
 
@@ -1215,7 +1424,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthPage
 	 * @generated
 	 */
-	public Adapter createAuthPageAdapter() {
+	public Adapter createAuthPageAdapter()
+	{
 		return null;
 	}
 
@@ -1229,7 +1439,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DAOInterface
 	 * @generated
 	 */
-	public Adapter createDAOInterfaceAdapter() {
+	public Adapter createDAOInterfaceAdapter()
+	{
 		return null;
 	}
 
@@ -1243,7 +1454,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DAOClass
 	 * @generated
 	 */
-	public Adapter createDAOClassAdapter() {
+	public Adapter createDAOClassAdapter()
+	{
 		return null;
 	}
 
@@ -1257,7 +1469,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DAORealization
 	 * @generated
 	 */
-	public Adapter createDAORealizationAdapter() {
+	public Adapter createDAORealizationAdapter()
+	{
 		return null;
 	}
 
@@ -1271,7 +1484,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass
 	 * @generated
 	 */
-	public Adapter createFrontControllerClassAdapter() {
+	public Adapter createFrontControllerClassAdapter()
+	{
 		return null;
 	}
 
@@ -1285,7 +1499,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.IOParameter
 	 * @generated
 	 */
-	public Adapter createIOParameterAdapter() {
+	public Adapter createIOParameterAdapter()
+	{
 		return null;
 	}
 
@@ -1299,7 +1514,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ResultDependency
 	 * @generated
 	 */
-	public Adapter createResultDependencyAdapter() {
+	public Adapter createResultDependencyAdapter()
+	{
 		return null;
 	}
 
@@ -1313,7 +1529,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthSuccessUrl
 	 * @generated
 	 */
-	public Adapter createAuthSuccessUrlAdapter() {
+	public Adapter createAuthSuccessUrlAdapter()
+	{
 		return null;
 	}
 
@@ -1327,7 +1544,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthFailureUrl
 	 * @generated
 	 */
-	public Adapter createAuthFailureUrlAdapter() {
+	public Adapter createAuthFailureUrlAdapter()
+	{
 		return null;
 	}
 
@@ -1341,7 +1559,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAssociation
 	 * @generated
 	 */
-	public Adapter createNavigationAssociationAdapter() {
+	public Adapter createNavigationAssociationAdapter()
+	{
 		return null;
 	}
 
@@ -1355,7 +1574,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerMethod
 	 * @generated
 	 */
-	public Adapter createFrontControllerMethodAdapter() {
+	public Adapter createFrontControllerMethodAdapter()
+	{
 		return null;
 	}
 
@@ -1369,7 +1589,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthProcessingMethod
 	 * @generated
 	 */
-	public Adapter createAuthProcessingMethodAdapter() {
+	public Adapter createAuthProcessingMethodAdapter()
+	{
 		return null;
 	}
 
@@ -1383,7 +1604,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass
 	 * @generated
 	 */
-	public Adapter createServiceClassAdapter() {
+	public Adapter createServiceClassAdapter()
+	{
 		return null;
 	}
 
@@ -1397,7 +1619,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceClass
 	 * @generated
 	 */
-	public Adapter createAuthServiceClassAdapter() {
+	public Adapter createAuthServiceClassAdapter()
+	{
 		return null;
 	}
 
@@ -1411,7 +1634,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ServiceInterface
 	 * @generated
 	 */
-	public Adapter createServiceInterfaceAdapter() {
+	public Adapter createServiceInterfaceAdapter()
+	{
 		return null;
 	}
 
@@ -1425,7 +1649,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceInterface
 	 * @generated
 	 */
-	public Adapter createAuthServiceInterfaceAdapter() {
+	public Adapter createAuthServiceInterfaceAdapter()
+	{
 		return null;
 	}
 
@@ -1439,7 +1664,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ServiceGeneralization
 	 * @generated
 	 */
-	public Adapter createServiceGeneralizationAdapter() {
+	public Adapter createServiceGeneralizationAdapter()
+	{
 		return null;
 	}
 
@@ -1453,7 +1679,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ServiceControllerAssociation
 	 * @generated
 	 */
-	public Adapter createServiceControllerAssociationAdapter() {
+	public Adapter createServiceControllerAssociationAdapter()
+	{
 		return null;
 	}
 
@@ -1467,7 +1694,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass
 	 * @generated
 	 */
-	public Adapter createDomainClassAdapter() {
+	public Adapter createDomainClassAdapter()
+	{
 		return null;
 	}
 
@@ -1481,7 +1709,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthUser
 	 * @generated
 	 */
-	public Adapter createAuthUserAdapter() {
+	public Adapter createAuthUserAdapter()
+	{
 		return null;
 	}
 
@@ -1495,7 +1724,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthRole
 	 * @generated
 	 */
-	public Adapter createAuthRoleAdapter() {
+	public Adapter createAuthRoleAdapter()
+	{
 		return null;
 	}
 
@@ -1509,7 +1739,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthPermission
 	 * @generated
 	 */
-	public Adapter createAuthPermissionAdapter() {
+	public Adapter createAuthPermissionAdapter()
+	{
 		return null;
 	}
 
@@ -1523,7 +1754,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerDependency
 	 * @generated
 	 */
-	public Adapter createFrontControllerDependencyAdapter() {
+	public Adapter createFrontControllerDependencyAdapter()
+	{
 		return null;
 	}
 
@@ -1537,7 +1769,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.PageDependency
 	 * @generated
 	 */
-	public Adapter createPageDependencyAdapter() {
+	public Adapter createPageDependencyAdapter()
+	{
 		return null;
 	}
 
@@ -1551,7 +1784,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DAOServiceAssociation
 	 * @generated
 	 */
-	public Adapter createDAOServiceAssociationAdapter() {
+	public Adapter createDAOServiceAssociationAdapter()
+	{
 		return null;
 	}
 
@@ -1565,7 +1799,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAttribute
 	 * @generated
 	 */
-	public Adapter createNavigationAttributeAdapter() {
+	public Adapter createNavigationAttributeAdapter()
+	{
 		return null;
 	}
 
@@ -1579,7 +1814,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationClass
 	 * @generated
 	 */
-	public Adapter createNavigationClassAdapter() {
+	public Adapter createNavigationClassAdapter()
+	{
 		return null;
 	}
 
@@ -1593,7 +1829,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DomainMethod
 	 * @generated
 	 */
-	public Adapter createDomainMethodAdapter() {
+	public Adapter createDomainMethodAdapter()
+	{
 		return null;
 	}
 
@@ -1607,7 +1844,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DAOAttribute
 	 * @generated
 	 */
-	public Adapter createDAOAttributeAdapter() {
+	public Adapter createDAOAttributeAdapter()
+	{
 		return null;
 	}
 
@@ -1621,7 +1859,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ServiceMethod
 	 * @generated
 	 */
-	public Adapter createServiceMethodAdapter() {
+	public Adapter createServiceMethodAdapter()
+	{
 		return null;
 	}
 
@@ -1635,7 +1874,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceMethod
 	 * @generated
 	 */
-	public Adapter createAuthServiceMethodAdapter() {
+	public Adapter createAuthServiceMethodAdapter()
+	{
 		return null;
 	}
 
@@ -1649,7 +1889,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ServiceAttribute
 	 * @generated
 	 */
-	public Adapter createServiceAttributeAdapter() {
+	public Adapter createServiceAttributeAdapter()
+	{
 		return null;
 	}
 
@@ -1663,7 +1904,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ServiceAssociation
 	 * @generated
 	 */
-	public Adapter createServiceAssociationAdapter() {
+	public Adapter createServiceAssociationAdapter()
+	{
 		return null;
 	}
 
@@ -1677,7 +1919,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationDependency
 	 * @generated
 	 */
-	public Adapter createNavigationDependencyAdapter() {
+	public Adapter createNavigationDependencyAdapter()
+	{
 		return null;
 	}
 
@@ -1691,7 +1934,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DAOMethod
 	 * @generated
 	 */
-	public Adapter createDAOMethodAdapter() {
+	public Adapter createDAOMethodAdapter()
+	{
 		return null;
 	}
 
@@ -1705,7 +1949,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage
 	 * @generated
 	 */
-	public Adapter createDomainPackageAdapter() {
+	public Adapter createDomainPackageAdapter()
+	{
 		return null;
 	}
 
@@ -1719,7 +1964,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ViewPackage
 	 * @generated
 	 */
-	public Adapter createViewPackageAdapter() {
+	public Adapter createViewPackageAdapter()
+	{
 		return null;
 	}
 
@@ -1733,7 +1979,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ControllerPackage
 	 * @generated
 	 */
-	public Adapter createControllerPackageAdapter() {
+	public Adapter createControllerPackageAdapter()
+	{
 		return null;
 	}
 
@@ -1747,7 +1994,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.PersistencePackage
 	 * @generated
 	 */
-	public Adapter createPersistencePackageAdapter() {
+	public Adapter createPersistencePackageAdapter()
+	{
 		return null;
 	}
 
@@ -1761,7 +2009,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationPackage
 	 * @generated
 	 */
-	public Adapter createApplicationPackageAdapter() {
+	public Adapter createApplicationPackageAdapter()
+	{
 		return null;
 	}
 
@@ -1775,7 +2024,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.UIComponent
 	 * @generated
 	 */
-	public Adapter createUIComponentAdapter() {
+	public Adapter createUIComponentAdapter()
+	{
 		return null;
 	}
 
@@ -1789,7 +2039,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthForm
 	 * @generated
 	 */
-	public Adapter createAuthFormAdapter() {
+	public Adapter createAuthFormAdapter()
+	{
 		return null;
 	}
 
@@ -1803,7 +2054,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ResultType
 	 * @generated
 	 */
-	public Adapter createResultTypeAdapter() {
+	public Adapter createResultTypeAdapter()
+	{
 		return null;
 	}
 
@@ -1817,7 +2069,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationPackage
 	 * @generated
 	 */
-	public Adapter createNavigationPackageAdapter() {
+	public Adapter createNavigationPackageAdapter()
+	{
 		return null;
 	}
 
@@ -1831,7 +2084,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DomainGeneralization
 	 * @generated
 	 */
-	public Adapter createDomainGeneralizationAdapter() {
+	public Adapter createDomainGeneralizationAdapter()
+	{
 		return null;
 	}
 
@@ -1845,7 +2099,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.UIComponentField
 	 * @generated
 	 */
-	public Adapter createUIComponentFieldAdapter() {
+	public Adapter createUIComponentFieldAdapter()
+	{
 		return null;
 	}
 
@@ -1859,7 +2114,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.TagLib
 	 * @generated
 	 */
-	public Adapter createTagLibAdapter() {
+	public Adapter createTagLibAdapter()
+	{
 		return null;
 	}
 
@@ -1873,7 +2129,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.Tag
 	 * @generated
 	 */
-	public Adapter createTagAdapter() {
+	public Adapter createTagAdapter()
+	{
 		return null;
 	}
 
@@ -1887,7 +2144,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationCompositionPart
 	 * @generated
 	 */
-	public Adapter createNavigationCompositionPartAdapter() {
+	public Adapter createNavigationCompositionPartAdapter()
+	{
 		return null;
 	}
 
@@ -1901,7 +2159,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationCompositionWhole
 	 * @generated
 	 */
-	public Adapter createNavigationCompositionWholeAdapter() {
+	public Adapter createNavigationCompositionWholeAdapter()
+	{
 		return null;
 	}
 
@@ -1915,7 +2174,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationProperty
 	 * @generated
 	 */
-	public Adapter createNavigationPropertyAdapter() {
+	public Adapter createNavigationPropertyAdapter()
+	{
 		return null;
 	}
 
@@ -1929,7 +2189,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ResultSet
 	 * @generated
 	 */
-	public Adapter createResultSetAdapter() {
+	public Adapter createResultSetAdapter()
+	{
 		return null;
 	}
 
@@ -1943,7 +2204,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationConstraint
 	 * @generated
 	 */
-	public Adapter createNavigationConstraintAdapter() {
+	public Adapter createNavigationConstraintAdapter()
+	{
 		return null;
 	}
 
@@ -1957,7 +2219,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.PageConstraint
 	 * @generated
 	 */
-	public Adapter createPageConstraintAdapter() {
+	public Adapter createPageConstraintAdapter()
+	{
 		return null;
 	}
 
@@ -1971,7 +2234,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ResultConstraint
 	 * @generated
 	 */
-	public Adapter createResultConstraintAdapter() {
+	public Adapter createResultConstraintAdapter()
+	{
 		return null;
 	}
 
@@ -1985,7 +2249,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.MethodConstraint
 	 * @generated
 	 */
-	public Adapter createMethodConstraintAdapter() {
+	public Adapter createMethodConstraintAdapter()
+	{
 		return null;
 	}
 
@@ -1999,7 +2264,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ChainingConstraint
 	 * @generated
 	 */
-	public Adapter createChainingConstraintAdapter() {
+	public Adapter createChainingConstraintAdapter()
+	{
 		return null;
 	}
 
@@ -2013,7 +2279,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationGeneralization
 	 * @generated
 	 */
-	public Adapter createNavigationGeneralizationAdapter() {
+	public Adapter createNavigationGeneralizationAdapter()
+	{
 		return null;
 	}
 
@@ -2027,7 +2294,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DomainConstraints
 	 * @generated
 	 */
-	public Adapter createDomainConstraintsAdapter() {
+	public Adapter createDomainConstraintsAdapter()
+	{
 		return null;
 	}
 
@@ -2041,7 +2309,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DAOGeneralization
 	 * @generated
 	 */
-	public Adapter createDAOGeneralizationAdapter() {
+	public Adapter createDAOGeneralizationAdapter()
+	{
 		return null;
 	}
 
@@ -2055,7 +2324,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.MappingLib
 	 * @generated
 	 */
-	public Adapter createMappingLibAdapter() {
+	public Adapter createMappingLibAdapter()
+	{
 		return null;
 	}
 
@@ -2069,7 +2339,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ClassMapping
 	 * @generated
 	 */
-	public Adapter createClassMappingAdapter() {
+	public Adapter createClassMappingAdapter()
+	{
 		return null;
 	}
 
@@ -2083,7 +2354,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AttributeMapping
 	 * @generated
 	 */
-	public Adapter createAttributeMappingAdapter() {
+	public Adapter createAttributeMappingAdapter()
+	{
 		return null;
 	}
 
@@ -2097,7 +2369,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DomainGeneralizationSet
 	 * @generated
 	 */
-	public Adapter createDomainGeneralizationSetAdapter() {
+	public Adapter createDomainGeneralizationSetAdapter()
+	{
 		return null;
 	}
 
@@ -2111,7 +2384,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.Controller
 	 * @generated
 	 */
-	public Adapter createControllerAdapter() {
+	public Adapter createControllerAdapter()
+	{
 		return null;
 	}
 
@@ -2125,7 +2399,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.TagProperty
 	 * @generated
 	 */
-	public Adapter createTagPropertyAdapter() {
+	public Adapter createTagPropertyAdapter()
+	{
 		return null;
 	}
 
@@ -2139,7 +2414,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ResultProperty
 	 * @generated
 	 */
-	public Adapter createResultPropertyAdapter() {
+	public Adapter createResultPropertyAdapter()
+	{
 		return null;
 	}
 
@@ -2153,7 +2429,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ClassMappingPropery
 	 * @generated
 	 */
-	public Adapter createClassMappingProperyAdapter() {
+	public Adapter createClassMappingProperyAdapter()
+	{
 		return null;
 	}
 
@@ -2167,7 +2444,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AttributeMappingProperty
 	 * @generated
 	 */
-	public Adapter createAttributeMappingPropertyAdapter() {
+	public Adapter createAttributeMappingPropertyAdapter()
+	{
 		return null;
 	}
 
@@ -2181,7 +2459,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ServiceRealization
 	 * @generated
 	 */
-	public Adapter createServiceRealizationAdapter() {
+	public Adapter createServiceRealizationAdapter()
+	{
 		return null;
 	}
 
@@ -2195,7 +2474,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationGeneralizationSet
 	 * @generated
 	 */
-	public Adapter createNavigationGeneralizationSetAdapter() {
+	public Adapter createNavigationGeneralizationSetAdapter()
+	{
 		return null;
 	}
 
@@ -2209,7 +2489,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DAOGeneralizationSet
 	 * @generated
 	 */
-	public Adapter createDAOGeneralizationSetAdapter() {
+	public Adapter createDAOGeneralizationSetAdapter()
+	{
 		return null;
 	}
 
@@ -2223,7 +2504,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ServiceGeneralizationSet
 	 * @generated
 	 */
-	public Adapter createServiceGeneralizationSetAdapter() {
+	public Adapter createServiceGeneralizationSetAdapter()
+	{
 		return null;
 	}
 
@@ -2237,7 +2519,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.SemanticPackage
 	 * @generated
 	 */
-	public Adapter createSemanticPackageAdapter() {
+	public Adapter createSemanticPackageAdapter()
+	{
 		return null;
 	}
 
@@ -2251,7 +2534,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.IRI
 	 * @generated
 	 */
-	public Adapter createIRIAdapter() {
+	public Adapter createIRIAdapter()
+	{
 		return null;
 	}
 
@@ -2265,7 +2549,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyModel
 	 * @generated
 	 */
-	public Adapter createVocabularyModelAdapter() {
+	public Adapter createVocabularyModelAdapter()
+	{
 		return null;
 	}
 
@@ -2279,7 +2564,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.Vocabulary
 	 * @generated
 	 */
-	public Adapter createVocabularyAdapter() {
+	public Adapter createVocabularyAdapter()
+	{
 		return null;
 	}
 
@@ -2293,7 +2579,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.Axiom
 	 * @generated
 	 */
-	public Adapter createAxiomAdapter() {
+	public Adapter createAxiomAdapter()
+	{
 		return null;
 	}
 
@@ -2307,7 +2594,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.Annotation
 	 * @generated
 	 */
-	public Adapter createAnnotationAdapter() {
+	public Adapter createAnnotationAdapter()
+	{
 		return null;
 	}
 
@@ -2321,7 +2609,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyConstraints
 	 * @generated
 	 */
-	public Adapter createVocabularyConstraintsAdapter() {
+	public Adapter createVocabularyConstraintsAdapter()
+	{
 		return null;
 	}
 
@@ -2335,7 +2624,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyAssociation
 	 * @generated
 	 */
-	public Adapter createVocabularyAssociationAdapter() {
+	public Adapter createVocabularyAssociationAdapter()
+	{
 		return null;
 	}
 
@@ -2349,7 +2639,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyProperty
 	 * @generated
 	 */
-	public Adapter createVocabularyPropertyAdapter() {
+	public Adapter createVocabularyPropertyAdapter()
+	{
 		return null;
 	}
 
@@ -2363,7 +2654,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyEntity
 	 * @generated
 	 */
-	public Adapter createVocabularyEntityAdapter() {
+	public Adapter createVocabularyEntityAdapter()
+	{
 		return null;
 	}
 
@@ -2377,7 +2669,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ObjectProperty
 	 * @generated
 	 */
-	public Adapter createObjectPropertyAdapter() {
+	public Adapter createObjectPropertyAdapter()
+	{
 		return null;
 	}
 
@@ -2391,7 +2684,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DataProperty
 	 * @generated
 	 */
-	public Adapter createDataPropertyAdapter() {
+	public Adapter createDataPropertyAdapter()
+	{
 		return null;
 	}
 
@@ -2405,7 +2699,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyDataType
 	 * @generated
 	 */
-	public Adapter createVocabularyDataTypeAdapter() {
+	public Adapter createVocabularyDataTypeAdapter()
+	{
 		return null;
 	}
 
@@ -2419,7 +2714,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NamedIndividual
 	 * @generated
 	 */
-	public Adapter createNamedIndividualAdapter() {
+	public Adapter createNamedIndividualAdapter()
+	{
 		return null;
 	}
 
@@ -2433,7 +2729,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyClass
 	 * @generated
 	 */
-	public Adapter createVocabularyClassAdapter() {
+	public Adapter createVocabularyClassAdapter()
+	{
 		return null;
 	}
 
@@ -2447,7 +2744,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AnonymousIndividual
 	 * @generated
 	 */
-	public Adapter createAnonymousIndividualAdapter() {
+	public Adapter createAnonymousIndividualAdapter()
+	{
 		return null;
 	}
 
@@ -2461,7 +2759,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.Individual
 	 * @generated
 	 */
-	public Adapter createIndividualAdapter() {
+	public Adapter createIndividualAdapter()
+	{
 		return null;
 	}
 
@@ -2475,7 +2774,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyLiteral
 	 * @generated
 	 */
-	public Adapter createVocabularyLiteralAdapter() {
+	public Adapter createVocabularyLiteralAdapter()
+	{
 		return null;
 	}
 
@@ -2489,7 +2789,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DomainVocabularyAssociation
 	 * @generated
 	 */
-	public Adapter createDomainVocabularyAssociationAdapter() {
+	public Adapter createDomainVocabularyAssociationAdapter()
+	{
 		return null;
 	}
 
@@ -2503,7 +2804,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DomainVocabularyProperty
 	 * @generated
 	 */
-	public Adapter createDomainVocabularyPropertyAdapter() {
+	public Adapter createDomainVocabularyPropertyAdapter()
+	{
 		return null;
 	}
 
@@ -2517,7 +2819,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DomainAttribute
 	 * @generated
 	 */
-	public Adapter createDomainAttributeAdapter() {
+	public Adapter createDomainAttributeAdapter()
+	{
 		return null;
 	}
 
@@ -2531,7 +2834,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DomainAuthAttribute
 	 * @generated
 	 */
-	public Adapter createDomainAuthAttributeAdapter() {
+	public Adapter createDomainAuthAttributeAdapter()
+	{
 		return null;
 	}
 
@@ -2545,7 +2849,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthUserName
 	 * @generated
 	 */
-	public Adapter createAuthUserNameAdapter() {
+	public Adapter createAuthUserNameAdapter()
+	{
 		return null;
 	}
 
@@ -2559,7 +2864,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthPassword
 	 * @generated
 	 */
-	public Adapter createAuthPasswordAdapter() {
+	public Adapter createAuthPasswordAdapter()
+	{
 		return null;
 	}
 
@@ -2573,7 +2879,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthRoleName
 	 * @generated
 	 */
-	public Adapter createAuthRoleNameAdapter() {
+	public Adapter createAuthRoleNameAdapter()
+	{
 		return null;
 	}
 
@@ -2587,7 +2894,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.AuthPermName
 	 * @generated
 	 */
-	public Adapter createAuthPermNameAdapter() {
+	public Adapter createAuthPermNameAdapter()
+	{
 		return null;
 	}
 
@@ -2601,7 +2909,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DomainProperty
 	 * @generated
 	 */
-	public Adapter createDomainPropertyAdapter() {
+	public Adapter createDomainPropertyAdapter()
+	{
 		return null;
 	}
 
@@ -2615,7 +2924,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate
 	 * @generated
 	 */
-	public Adapter createFrontControllerTemplateAdapter() {
+	public Adapter createFrontControllerTemplateAdapter()
+	{
 		return null;
 	}
 
@@ -2629,7 +2939,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate
 	 * @generated
 	 */
-	public Adapter createDITemplateAdapter() {
+	public Adapter createDITemplateAdapter()
+	{
 		return null;
 	}
 
@@ -2643,7 +2954,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate
 	 * @generated
 	 */
-	public Adapter createORMTemplateAdapter() {
+	public Adapter createORMTemplateAdapter()
+	{
 		return null;
 	}
 
@@ -2657,7 +2969,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate
 	 * @generated
 	 */
-	public Adapter createDAOTemplateAdapter() {
+	public Adapter createDAOTemplateAdapter()
+	{
 		return null;
 	}
 
@@ -2671,7 +2984,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration
 	 * @generated
 	 */
-	public Adapter createFrameWebConfigurationAdapter() {
+	public Adapter createFrameWebConfigurationAdapter()
+	{
 		return null;
 	}
 
@@ -2685,7 +2999,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerTemplate
 	 * @generated
 	 */
-	public Adapter createRestControllerTemplateAdapter() {
+	public Adapter createRestControllerTemplateAdapter()
+	{
 		return null;
 	}
 
@@ -2699,7 +3014,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod
 	 * @generated
 	 */
-	public Adapter createRestControllerMethodAdapter() {
+	public Adapter createRestControllerMethodAdapter()
+	{
 		return null;
 	}
 
@@ -2713,7 +3029,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerClass
 	 * @generated
 	 */
-	public Adapter createRestControllerClassAdapter() {
+	public Adapter createRestControllerClassAdapter()
+	{
 		return null;
 	}
 
@@ -2727,7 +3044,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.Partial
 	 * @generated
 	 */
-	public Adapter createPartialAdapter() {
+	public Adapter createPartialAdapter()
+	{
 		return null;
 	}
 
@@ -2741,7 +3059,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation
 	 * @generated
 	 */
-	public Adapter createNavigationAggregationAssociationAdapter() {
+	public Adapter createNavigationAggregationAssociationAdapter()
+	{
 		return null;
 	}
 
@@ -2755,7 +3074,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationTarget
 	 * @generated
 	 */
-	public Adapter createNavigationAggregationTargetAdapter() {
+	public Adapter createNavigationAggregationTargetAdapter()
+	{
 		return null;
 	}
 
@@ -2769,7 +3089,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationSource
 	 * @generated
 	 */
-	public Adapter createNavigationAggregationSourceAdapter() {
+	public Adapter createNavigationAggregationSourceAdapter()
+	{
 		return null;
 	}
 
@@ -2783,7 +3104,38 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationSPAProperties
 	 * @generated
 	 */
-	public Adapter createNavigationSPAPropertiesAdapter() {
+	public Adapter createNavigationSPAPropertiesAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAMethod <em>Navigation Aggregation Association SPA Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAMethod
+	 * @generated
+	 */
+	public Adapter createNavigationAggregationAssociationSPAMethodAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAAttribute <em>Navigation Aggregation Association SPA Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAAttribute
+	 * @generated
+	 */
+	public Adapter createNavigationAggregationAssociationSPAAttributeAdapter()
+	{
 		return null;
 	}
 
@@ -2797,7 +3149,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.emf.ecore.EModelElement
 	 * @generated
 	 */
-	public Adapter createEModelElementAdapter() {
+	public Adapter createEModelElementAdapter()
+	{
 		return null;
 	}
 
@@ -2811,7 +3164,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.Element
 	 * @generated
 	 */
-	public Adapter createElementAdapter() {
+	public Adapter createElementAdapter()
+	{
 		return null;
 	}
 
@@ -2825,7 +3179,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.NamedElement
 	 * @generated
 	 */
-	public Adapter createNamedElementAdapter() {
+	public Adapter createNamedElementAdapter()
+	{
 		return null;
 	}
 
@@ -2839,7 +3194,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.Namespace
 	 * @generated
 	 */
-	public Adapter createNamespaceAdapter() {
+	public Adapter createNamespaceAdapter()
+	{
 		return null;
 	}
 
@@ -2853,7 +3209,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.ParameterableElement
 	 * @generated
 	 */
-	public Adapter createParameterableElementAdapter() {
+	public Adapter createParameterableElementAdapter()
+	{
 		return null;
 	}
 
@@ -2867,7 +3224,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.PackageableElement
 	 * @generated
 	 */
-	public Adapter createPackageableElementAdapter() {
+	public Adapter createPackageableElementAdapter()
+	{
 		return null;
 	}
 
@@ -2881,7 +3239,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.TemplateableElement
 	 * @generated
 	 */
-	public Adapter createTemplateableElementAdapter() {
+	public Adapter createTemplateableElementAdapter()
+	{
 		return null;
 	}
 
@@ -2895,7 +3254,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.Package
 	 * @generated
 	 */
-	public Adapter createPackageAdapter() {
+	public Adapter createPackageAdapter()
+	{
 		return null;
 	}
 
@@ -2909,7 +3269,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.Model
 	 * @generated
 	 */
-	public Adapter createModelAdapter() {
+	public Adapter createModelAdapter()
+	{
 		return null;
 	}
 
@@ -2923,7 +3284,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.Profile
 	 * @generated
 	 */
-	public Adapter createProfileAdapter() {
+	public Adapter createProfileAdapter()
+	{
 		return null;
 	}
 
@@ -2937,7 +3299,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.RedefinableElement
 	 * @generated
 	 */
-	public Adapter createRedefinableElementAdapter() {
+	public Adapter createRedefinableElementAdapter()
+	{
 		return null;
 	}
 
@@ -2951,7 +3314,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.Type
 	 * @generated
 	 */
-	public Adapter createTypeAdapter() {
+	public Adapter createTypeAdapter()
+	{
 		return null;
 	}
 
@@ -2965,7 +3329,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.Classifier
 	 * @generated
 	 */
-	public Adapter createClassifierAdapter() {
+	public Adapter createClassifierAdapter()
+	{
 		return null;
 	}
 
@@ -2979,7 +3344,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.Relationship
 	 * @generated
 	 */
-	public Adapter createRelationshipAdapter() {
+	public Adapter createRelationshipAdapter()
+	{
 		return null;
 	}
 
@@ -2993,7 +3359,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.Association
 	 * @generated
 	 */
-	public Adapter createAssociationAdapter() {
+	public Adapter createAssociationAdapter()
+	{
 		return null;
 	}
 
@@ -3007,7 +3374,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.Feature
 	 * @generated
 	 */
-	public Adapter createFeatureAdapter() {
+	public Adapter createFeatureAdapter()
+	{
 		return null;
 	}
 
@@ -3021,7 +3389,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.TypedElement
 	 * @generated
 	 */
-	public Adapter createTypedElementAdapter() {
+	public Adapter createTypedElementAdapter()
+	{
 		return null;
 	}
 
@@ -3035,7 +3404,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.MultiplicityElement
 	 * @generated
 	 */
-	public Adapter createMultiplicityElementAdapter() {
+	public Adapter createMultiplicityElementAdapter()
+	{
 		return null;
 	}
 
@@ -3049,7 +3419,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.StructuralFeature
 	 * @generated
 	 */
-	public Adapter createStructuralFeatureAdapter() {
+	public Adapter createStructuralFeatureAdapter()
+	{
 		return null;
 	}
 
@@ -3063,7 +3434,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.ConnectableElement
 	 * @generated
 	 */
-	public Adapter createConnectableElementAdapter() {
+	public Adapter createConnectableElementAdapter()
+	{
 		return null;
 	}
 
@@ -3077,7 +3449,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.DeploymentTarget
 	 * @generated
 	 */
-	public Adapter createDeploymentTargetAdapter() {
+	public Adapter createDeploymentTargetAdapter()
+	{
 		return null;
 	}
 
@@ -3091,7 +3464,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.Property
 	 * @generated
 	 */
-	public Adapter createPropertyAdapter() {
+	public Adapter createPropertyAdapter()
+	{
 		return null;
 	}
 
@@ -3105,7 +3479,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.StructuredClassifier
 	 * @generated
 	 */
-	public Adapter createStructuredClassifierAdapter() {
+	public Adapter createStructuredClassifierAdapter()
+	{
 		return null;
 	}
 
@@ -3119,7 +3494,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.EncapsulatedClassifier
 	 * @generated
 	 */
-	public Adapter createEncapsulatedClassifierAdapter() {
+	public Adapter createEncapsulatedClassifierAdapter()
+	{
 		return null;
 	}
 
@@ -3133,7 +3509,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.BehavioredClassifier
 	 * @generated
 	 */
-	public Adapter createBehavioredClassifierAdapter() {
+	public Adapter createBehavioredClassifierAdapter()
+	{
 		return null;
 	}
 
@@ -3147,7 +3524,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.Class
 	 * @generated
 	 */
-	public Adapter createClassAdapter() {
+	public Adapter createClassAdapter()
+	{
 		return null;
 	}
 
@@ -3161,7 +3539,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.Interface
 	 * @generated
 	 */
-	public Adapter createInterfaceAdapter() {
+	public Adapter createInterfaceAdapter()
+	{
 		return null;
 	}
 
@@ -3175,7 +3554,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.DirectedRelationship
 	 * @generated
 	 */
-	public Adapter createDirectedRelationshipAdapter() {
+	public Adapter createDirectedRelationshipAdapter()
+	{
 		return null;
 	}
 
@@ -3189,7 +3569,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.Dependency
 	 * @generated
 	 */
-	public Adapter createDependencyAdapter() {
+	public Adapter createDependencyAdapter()
+	{
 		return null;
 	}
 
@@ -3203,7 +3584,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.Abstraction
 	 * @generated
 	 */
-	public Adapter createAbstractionAdapter() {
+	public Adapter createAbstractionAdapter()
+	{
 		return null;
 	}
 
@@ -3217,7 +3599,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.Realization
 	 * @generated
 	 */
-	public Adapter createRealizationAdapter() {
+	public Adapter createRealizationAdapter()
+	{
 		return null;
 	}
 
@@ -3231,7 +3614,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.InterfaceRealization
 	 * @generated
 	 */
-	public Adapter createInterfaceRealizationAdapter() {
+	public Adapter createInterfaceRealizationAdapter()
+	{
 		return null;
 	}
 
@@ -3245,7 +3629,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.BehavioralFeature
 	 * @generated
 	 */
-	public Adapter createBehavioralFeatureAdapter() {
+	public Adapter createBehavioralFeatureAdapter()
+	{
 		return null;
 	}
 
@@ -3259,7 +3644,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.Operation
 	 * @generated
 	 */
-	public Adapter createOperationAdapter() {
+	public Adapter createOperationAdapter()
+	{
 		return null;
 	}
 
@@ -3273,7 +3659,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.Generalization
 	 * @generated
 	 */
-	public Adapter createGeneralizationAdapter() {
+	public Adapter createGeneralizationAdapter()
+	{
 		return null;
 	}
 
@@ -3287,7 +3674,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.Stereotype
 	 * @generated
 	 */
-	public Adapter createStereotypeAdapter() {
+	public Adapter createStereotypeAdapter()
+	{
 		return null;
 	}
 
@@ -3301,7 +3689,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.Constraint
 	 * @generated
 	 */
-	public Adapter createConstraintAdapter() {
+	public Adapter createConstraintAdapter()
+	{
 		return null;
 	}
 
@@ -3315,7 +3704,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.GeneralizationSet
 	 * @generated
 	 */
-	public Adapter createGeneralizationSetAdapter() {
+	public Adapter createGeneralizationSetAdapter()
+	{
 		return null;
 	}
 
@@ -3329,7 +3719,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.DataType
 	 * @generated
 	 */
-	public Adapter createDataTypeAdapter() {
+	public Adapter createDataTypeAdapter()
+	{
 		return null;
 	}
 
@@ -3343,7 +3734,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.ValueSpecification
 	 * @generated
 	 */
-	public Adapter createValueSpecificationAdapter() {
+	public Adapter createValueSpecificationAdapter()
+	{
 		return null;
 	}
 
@@ -3357,7 +3749,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.LiteralSpecification
 	 * @generated
 	 */
-	public Adapter createLiteralSpecificationAdapter() {
+	public Adapter createLiteralSpecificationAdapter()
+	{
 		return null;
 	}
 
@@ -3371,7 +3764,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.eclipse.uml2.uml.LiteralString
 	 * @generated
 	 */
-	public Adapter createLiteralStringAdapter() {
+	public Adapter createLiteralStringAdapter()
+	{
 		return null;
 	}
 
@@ -3383,7 +3777,8 @@ public class FramewebAdapterFactory extends AdapterFactoryImpl {
 	 * @return the new adapter.
 	 * @generated
 	 */
-	public Adapter createEObjectAdapter() {
+	public Adapter createEObjectAdapter()
+	{
 		return null;
 	}
 

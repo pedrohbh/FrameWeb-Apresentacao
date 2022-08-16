@@ -33,7 +33,8 @@ import org.eclipse.uml2.uml.internal.impl.OperationImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class RestControllerMethodImpl extends OperationImpl implements RestControllerMethod {
+public class RestControllerMethodImpl extends OperationImpl implements RestControllerMethod
+{
 	/**
 	 * The default value of the '{@link #getRequestType() <em>Request Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -123,7 +124,8 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RestControllerMethodImpl() {
+	protected RestControllerMethodImpl()
+	{
 		super();
 	}
 
@@ -133,7 +135,8 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.REST_CONTROLLER_METHOD;
 	}
 
@@ -143,7 +146,8 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @generated
 	 */
 	@Override
-	public HttpMethodType getRequestType() {
+	public HttpMethodType getRequestType()
+	{
 		return requestType;
 	}
 
@@ -153,7 +157,8 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @generated
 	 */
 	@Override
-	public void setRequestType(HttpMethodType newRequestType) {
+	public void setRequestType(HttpMethodType newRequestType)
+	{
 		HttpMethodType oldRequestType = requestType;
 		requestType = newRequestType == null ? REQUEST_TYPE_EDEFAULT : newRequestType;
 		if (eNotificationRequired())
@@ -167,7 +172,8 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @generated
 	 */
 	@Override
-	public boolean isIsDefault() {
+	public boolean isIsDefault()
+	{
 		return isDefault;
 	}
 
@@ -177,7 +183,8 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @generated
 	 */
 	@Override
-	public void setIsDefault(boolean newIsDefault) {
+	public void setIsDefault(boolean newIsDefault)
+	{
 		boolean oldIsDefault = isDefault;
 		isDefault = newIsDefault;
 		if (eNotificationRequired())
@@ -191,11 +198,14 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @generated
 	 */
 	@Override
-	public Type getMethodType() {
-		if (methodType != null && methodType.eIsProxy()) {
+	public Type getMethodType()
+	{
+		if (methodType != null && methodType.eIsProxy())
+		{
 			InternalEObject oldMethodType = (InternalEObject) methodType;
 			methodType = (Type) eResolveProxy(oldMethodType);
-			if (methodType != oldMethodType) {
+			if (methodType != oldMethodType)
+			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							FramewebPackage.REST_CONTROLLER_METHOD__METHOD_TYPE, oldMethodType, methodType));
@@ -209,7 +219,8 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Type basicGetMethodType() {
+	public Type basicGetMethodType()
+	{
 		return methodType;
 	}
 
@@ -219,7 +230,8 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @generated
 	 */
 	@Override
-	public void setMethodType(Type newMethodType) {
+	public void setMethodType(Type newMethodType)
+	{
 		Type oldMethodType = methodType;
 		methodType = newMethodType;
 		if (eNotificationRequired())
@@ -233,7 +245,8 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @generated
 	 */
 	@Override
-	public String getRequestMapping() {
+	public String getRequestMapping()
+	{
 		return requestMapping;
 	}
 
@@ -243,7 +256,8 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @generated
 	 */
 	@Override
-	public void setRequestMapping(String newRequestMapping) {
+	public void setRequestMapping(String newRequestMapping)
+	{
 		String oldRequestMapping = requestMapping;
 		requestMapping = newRequestMapping;
 		if (eNotificationRequired())
@@ -257,7 +271,8 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @generated
 	 */
 	@Override
-	public HttpStatus getDesiredResponseStatus() {
+	public HttpStatus getDesiredResponseStatus()
+	{
 		return desiredResponseStatus;
 	}
 
@@ -267,7 +282,8 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @generated
 	 */
 	@Override
-	public void setDesiredResponseStatus(HttpStatus newDesiredResponseStatus) {
+	public void setDesiredResponseStatus(HttpStatus newDesiredResponseStatus)
+	{
 		HttpStatus oldDesiredResponseStatus = desiredResponseStatus;
 		desiredResponseStatus = newDesiredResponseStatus == null ? DESIRED_RESPONSE_STATUS_EDEFAULT
 				: newDesiredResponseStatus;
@@ -283,8 +299,10 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_TYPE:
 			return getRequestType();
 		case FramewebPackage.REST_CONTROLLER_METHOD__IS_DEFAULT:
@@ -307,8 +325,10 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_TYPE:
 			setRequestType((HttpMethodType) newValue);
 			return;
@@ -334,8 +354,10 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_TYPE:
 			setRequestType(REQUEST_TYPE_EDEFAULT);
 			return;
@@ -361,8 +383,10 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_TYPE:
 			return requestType != REQUEST_TYPE_EDEFAULT;
 		case FramewebPackage.REST_CONTROLLER_METHOD__IS_DEFAULT:
@@ -384,7 +408,8 @@ public class RestControllerMethodImpl extends OperationImpl implements RestContr
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.Model;
  * @model
  * @generated
  */
-public interface FramewebModel extends Model {
+public interface FramewebModel extends Model
+{
 } // FramewebModel

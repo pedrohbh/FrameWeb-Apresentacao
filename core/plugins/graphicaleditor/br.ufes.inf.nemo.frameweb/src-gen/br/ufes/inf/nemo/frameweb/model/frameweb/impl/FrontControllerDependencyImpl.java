@@ -30,7 +30,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 @SuppressWarnings("all")
-public class FrontControllerDependencyImpl extends NavigationDependencyImpl implements FrontControllerDependency {
+public class FrontControllerDependencyImpl extends NavigationDependencyImpl implements FrontControllerDependency
+{
 	/**
 	 * The cached value of the '{@link #getMethod() <em>Method</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -56,7 +57,8 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FrontControllerDependencyImpl() {
+	protected FrontControllerDependencyImpl()
+	{
 		super();
 	}
 
@@ -66,7 +68,8 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.FRONT_CONTROLLER_DEPENDENCY;
 	}
 
@@ -76,11 +79,14 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 	 * @generated
 	 */
 	@Override
-	public FrontControllerMethod getMethod() {
-		if (method != null && method.eIsProxy()) {
+	public FrontControllerMethod getMethod()
+	{
+		if (method != null && method.eIsProxy())
+		{
 			InternalEObject oldMethod = (InternalEObject) method;
 			method = (FrontControllerMethod) eResolveProxy(oldMethod);
-			if (method != oldMethod) {
+			if (method != oldMethod)
+			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							FramewebPackage.FRONT_CONTROLLER_DEPENDENCY__METHOD, oldMethod, method));
@@ -94,7 +100,8 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FrontControllerMethod basicGetMethod() {
+	public FrontControllerMethod basicGetMethod()
+	{
 		return method;
 	}
 
@@ -104,7 +111,8 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 	 * @generated
 	 */
 	@Override
-	public void setMethod(FrontControllerMethod newMethod) {
+	public void setMethod(FrontControllerMethod newMethod)
+	{
 		FrontControllerMethod oldMethod = method;
 		method = newMethod;
 		if (eNotificationRequired())
@@ -118,7 +126,8 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 	 * @generated
 	 */
 	@Override
-	public MethodConstraint getMethodDependendencyConstraint() {
+	public MethodConstraint getMethodDependendencyConstraint()
+	{
 		return methodDependendencyConstraint;
 	}
 
@@ -128,10 +137,12 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 	 * @generated
 	 */
 	public NotificationChain basicSetMethodDependendencyConstraint(MethodConstraint newMethodDependendencyConstraint,
-			NotificationChain msgs) {
+			NotificationChain msgs)
+	{
 		MethodConstraint oldMethodDependendencyConstraint = methodDependendencyConstraint;
 		methodDependendencyConstraint = newMethodDependendencyConstraint;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
 					FramewebPackage.FRONT_CONTROLLER_DEPENDENCY__METHOD_DEPENDENDENCY_CONSTRAINT,
 					oldMethodDependendencyConstraint, newMethodDependendencyConstraint);
@@ -149,8 +160,10 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 	 * @generated
 	 */
 	@Override
-	public void setMethodDependendencyConstraint(MethodConstraint newMethodDependendencyConstraint) {
-		if (newMethodDependendencyConstraint != methodDependendencyConstraint) {
+	public void setMethodDependendencyConstraint(MethodConstraint newMethodDependendencyConstraint)
+	{
+		if (newMethodDependendencyConstraint != methodDependendencyConstraint)
+		{
 			NotificationChain msgs = null;
 			if (methodDependendencyConstraint != null)
 				msgs = ((InternalEObject) methodDependendencyConstraint).eInverseRemove(this,
@@ -177,8 +190,10 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRONT_CONTROLLER_DEPENDENCY__METHOD_DEPENDENDENCY_CONSTRAINT:
 			return basicSetMethodDependendencyConstraint(null, msgs);
 		}
@@ -191,8 +206,10 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRONT_CONTROLLER_DEPENDENCY__METHOD:
 			if (resolve)
 				return getMethod();
@@ -209,8 +226,10 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRONT_CONTROLLER_DEPENDENCY__METHOD:
 			setMethod((FrontControllerMethod) newValue);
 			return;
@@ -227,8 +246,10 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRONT_CONTROLLER_DEPENDENCY__METHOD:
 			setMethod((FrontControllerMethod) null);
 			return;
@@ -245,8 +266,10 @@ public class FrontControllerDependencyImpl extends NavigationDependencyImpl impl
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.FRONT_CONTROLLER_DEPENDENCY__METHOD:
 			return method != null;
 		case FramewebPackage.FRONT_CONTROLLER_DEPENDENCY__METHOD_DEPENDENDENCY_CONSTRAINT:

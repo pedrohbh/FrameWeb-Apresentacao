@@ -18,7 +18,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface DateTimeAttribute extends Attribute {
+public interface DateTimeAttribute extends Attribute
+{
 	/**
 	 * Returns the value of the '<em><b>Date Time Precision</b></em>' attribute.
 	 * The literals are from the enumeration {@link br.ufes.inf.nemo.frameweb.model.frameweb.DateTimePrecision}.

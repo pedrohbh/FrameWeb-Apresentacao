@@ -29,14 +29,16 @@ import org.eclipse.uml2.uml.edit.providers.ProfileItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FrameworkProfileItemProvider extends ProfileItemProvider {
+public class FrameworkProfileItemProvider extends ProfileItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FrameworkProfileItemProvider(AdapterFactory adapterFactory) {
+	public FrameworkProfileItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -47,8 +49,10 @@ public class FrameworkProfileItemProvider extends ProfileItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addCategoryPropertyDescriptor(object);
@@ -64,7 +68,8 @@ public class FrameworkProfileItemProvider extends ProfileItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCategoryPropertyDescriptor(Object object) {
+	protected void addCategoryPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_FrameworkProfile_category_feature"),
@@ -80,7 +85,8 @@ public class FrameworkProfileItemProvider extends ProfileItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addKindPropertyDescriptor(Object object) {
+	protected void addKindPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_FrameworkProfile_kind_feature"),
@@ -96,7 +102,8 @@ public class FrameworkProfileItemProvider extends ProfileItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addVersionPropertyDescriptor(Object object) {
+	protected void addVersionPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_FrameworkProfile_version_feature"),
@@ -113,7 +120,8 @@ public class FrameworkProfileItemProvider extends ProfileItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/FrameworkProfile"));
 	}
 
@@ -123,7 +131,8 @@ public class FrameworkProfileItemProvider extends ProfileItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -134,7 +143,8 @@ public class FrameworkProfileItemProvider extends ProfileItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((FrameworkProfile) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_FrameworkProfile_type")
 				: getString("_UI_FrameworkProfile_type") + " " + label;
@@ -148,10 +158,12 @@ public class FrameworkProfileItemProvider extends ProfileItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(FrameworkProfile.class)) {
+		switch (notification.getFeatureID(FrameworkProfile.class))
+		{
 		case FramewebPackage.FRAMEWORK_PROFILE__CATEGORY:
 		case FramewebPackage.FRAMEWORK_PROFILE__KIND:
 		case FramewebPackage.FRAMEWORK_PROFILE__VERSION:
@@ -169,7 +181,8 @@ public class FrameworkProfileItemProvider extends ProfileItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.NAMESPACE__OWNED_RULE,
@@ -621,7 +634,8 @@ public class FrameworkProfileItemProvider extends ProfileItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -636,7 +650,8 @@ public class FrameworkProfileItemProvider extends ProfileItemProvider {
 				|| childFeature == UMLPackage.Literals.PACKAGE__OWNED_STEREOTYPE
 				|| childFeature == UMLPackage.Literals.PACKAGE__OWNED_TYPE;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
@@ -650,7 +665,8 @@ public class FrameworkProfileItemProvider extends ProfileItemProvider {
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		return FramewebEditPlugin.INSTANCE;
 	}
 

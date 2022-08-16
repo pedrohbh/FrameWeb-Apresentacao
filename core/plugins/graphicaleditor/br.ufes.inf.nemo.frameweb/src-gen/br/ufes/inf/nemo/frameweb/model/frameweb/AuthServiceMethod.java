@@ -18,7 +18,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface AuthServiceMethod extends ServiceMethod {
+public interface AuthServiceMethod extends ServiceMethod
+{
 	/**
 	 * Returns the value of the '<em><b>Permission Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -22,14 +22,16 @@ import org.eclipse.uml2.uml.UMLPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AuthRoleItemProvider extends DomainClassItemProvider {
+public class AuthRoleItemProvider extends DomainClassItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AuthRoleItemProvider(AdapterFactory adapterFactory) {
+	public AuthRoleItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -40,8 +42,10 @@ public class AuthRoleItemProvider extends DomainClassItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addAuthRoleNamePropertyDescriptor(object);
@@ -55,7 +59,8 @@ public class AuthRoleItemProvider extends DomainClassItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAuthRoleNamePropertyDescriptor(Object object) {
+	protected void addAuthRoleNamePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_AuthRole_authRoleName_feature"),
@@ -71,7 +76,8 @@ public class AuthRoleItemProvider extends DomainClassItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/AuthRole"));
 	}
 
@@ -81,7 +87,8 @@ public class AuthRoleItemProvider extends DomainClassItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -92,7 +99,8 @@ public class AuthRoleItemProvider extends DomainClassItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((AuthRole) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_AuthRole_type")
 				: getString("_UI_AuthRole_type") + " " + label;
@@ -106,7 +114,8 @@ public class AuthRoleItemProvider extends DomainClassItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 		super.notifyChanged(notification);
 	}
@@ -119,7 +128,8 @@ public class AuthRoleItemProvider extends DomainClassItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 
@@ -130,7 +140,8 @@ public class AuthRoleItemProvider extends DomainClassItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -143,7 +154,8 @@ public class AuthRoleItemProvider extends DomainClassItemProvider {
 				|| childFeature == UMLPackage.Literals.BEHAVIORED_CLASSIFIER__CLASSIFIER_BEHAVIOR
 				|| childFeature == UMLPackage.Literals.BEHAVIORED_CLASSIFIER__OWNED_BEHAVIOR;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}

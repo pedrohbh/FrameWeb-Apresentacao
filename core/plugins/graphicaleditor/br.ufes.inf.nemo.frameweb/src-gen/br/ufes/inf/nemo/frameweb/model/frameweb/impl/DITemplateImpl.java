@@ -29,7 +29,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 @SuppressWarnings("all")
-public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
+public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate
+{
 	/**
 	 * The default value of the '{@link #getInterfaceTemplate() <em>Interface Template</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -135,7 +136,8 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DITemplateImpl() {
+	protected DITemplateImpl()
+	{
 		super();
 	}
 
@@ -145,7 +147,8 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.DI_TEMPLATE;
 	}
 
@@ -155,7 +158,8 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * @generated
 	 */
 	@Override
-	public String getInterfaceTemplate() {
+	public String getInterfaceTemplate()
+	{
 		return interfaceTemplate;
 	}
 
@@ -165,7 +169,8 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * @generated
 	 */
 	@Override
-	public void setInterfaceTemplate(String newInterfaceTemplate) {
+	public void setInterfaceTemplate(String newInterfaceTemplate)
+	{
 		String oldInterfaceTemplate = interfaceTemplate;
 		interfaceTemplate = newInterfaceTemplate;
 		if (eNotificationRequired())
@@ -179,7 +184,8 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * @generated
 	 */
 	@Override
-	public String getClassTemplate() {
+	public String getClassTemplate()
+	{
 		return classTemplate;
 	}
 
@@ -189,7 +195,8 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * @generated
 	 */
 	@Override
-	public void setClassTemplate(String newClassTemplate) {
+	public void setClassTemplate(String newClassTemplate)
+	{
 		String oldClassTemplate = classTemplate;
 		classTemplate = newClassTemplate;
 		if (eNotificationRequired())
@@ -203,7 +210,8 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * @generated
 	 */
 	@Override
-	public String getClassExtension() {
+	public String getClassExtension()
+	{
 		return classExtension;
 	}
 
@@ -213,7 +221,8 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * @generated
 	 */
 	@Override
-	public void setClassExtension(String newClassExtension) {
+	public void setClassExtension(String newClassExtension)
+	{
 		String oldClassExtension = classExtension;
 		classExtension = newClassExtension;
 		if (eNotificationRequired())
@@ -227,7 +236,8 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * @generated
 	 */
 	@Override
-	public String getAuthInterfaceTemplate() {
+	public String getAuthInterfaceTemplate()
+	{
 		return authInterfaceTemplate;
 	}
 
@@ -237,7 +247,8 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * @generated
 	 */
 	@Override
-	public void setAuthInterfaceTemplate(String newAuthInterfaceTemplate) {
+	public void setAuthInterfaceTemplate(String newAuthInterfaceTemplate)
+	{
 		String oldAuthInterfaceTemplate = authInterfaceTemplate;
 		authInterfaceTemplate = newAuthInterfaceTemplate;
 		if (eNotificationRequired())
@@ -251,7 +262,8 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * @generated
 	 */
 	@Override
-	public String getAuthClassTemplate() {
+	public String getAuthClassTemplate()
+	{
 		return authClassTemplate;
 	}
 
@@ -261,7 +273,8 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * @generated
 	 */
 	@Override
-	public void setAuthClassTemplate(String newAuthClassTemplate) {
+	public void setAuthClassTemplate(String newAuthClassTemplate)
+	{
 		String oldAuthClassTemplate = authClassTemplate;
 		authClassTemplate = newAuthClassTemplate;
 		if (eNotificationRequired())
@@ -275,8 +288,10 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DI_TEMPLATE__INTERFACE_TEMPLATE:
 			return getInterfaceTemplate();
 		case FramewebPackage.DI_TEMPLATE__CLASS_TEMPLATE:
@@ -297,8 +312,10 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DI_TEMPLATE__INTERFACE_TEMPLATE:
 			setInterfaceTemplate((String) newValue);
 			return;
@@ -324,8 +341,10 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DI_TEMPLATE__INTERFACE_TEMPLATE:
 			setInterfaceTemplate(INTERFACE_TEMPLATE_EDEFAULT);
 			return;
@@ -351,8 +370,10 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DI_TEMPLATE__INTERFACE_TEMPLATE:
 			return INTERFACE_TEMPLATE_EDEFAULT == null ? interfaceTemplate != null
 					: !INTERFACE_TEMPLATE_EDEFAULT.equals(interfaceTemplate);
@@ -378,7 +399,8 @@ public class DITemplateImpl extends FrameworkProfileImpl implements DITemplate {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.DependencyImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public abstract class NavigationDependencyImpl extends DependencyImpl implements NavigationDependency {
+public abstract class NavigationDependencyImpl extends DependencyImpl implements NavigationDependency
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NavigationDependencyImpl() {
+	protected NavigationDependencyImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public abstract class NavigationDependencyImpl extends DependencyImpl implements
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.NAVIGATION_DEPENDENCY;
 	}
 

@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface ChainingConstraint extends NavigationConstraint {
+public interface ChainingConstraint extends NavigationConstraint
+{
 } // ChainingConstraint

@@ -31,14 +31,16 @@ import org.eclipse.uml2.uml.edit.providers.PackageItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class VocabularyItemProvider extends PackageItemProvider {
+public class VocabularyItemProvider extends PackageItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VocabularyItemProvider(AdapterFactory adapterFactory) {
+	public VocabularyItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -49,8 +51,10 @@ public class VocabularyItemProvider extends PackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addVocabularyIRIPropertyDescriptor(object);
@@ -65,7 +69,8 @@ public class VocabularyItemProvider extends PackageItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addVocabularyIRIPropertyDescriptor(Object object) {
+	protected void addVocabularyIRIPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Vocabulary_vocabularyIRI_feature"),
@@ -80,7 +85,8 @@ public class VocabularyItemProvider extends PackageItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addVocabularyDocumentPropertyDescriptor(Object object) {
+	protected void addVocabularyDocumentPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Vocabulary_vocabularyDocument_feature"),
@@ -99,8 +105,10 @@ public class VocabularyItemProvider extends PackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object)
+	{
+		if (childrenFeatures == null)
+		{
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(FramewebPackage.Literals.VOCABULARY__DIRECTLY_IMPORTS_DOCUMENTS);
 			childrenFeatures.add(FramewebPackage.Literals.VOCABULARY__AXIOMS);
@@ -115,7 +123,8 @@ public class VocabularyItemProvider extends PackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
+	protected EStructuralFeature getChildFeature(Object object, Object child)
+	{
 		// Check the type of the specified child object and return the proper feature to use for
 		// adding (see {@link AddCommand}) it as a child.
 
@@ -129,7 +138,8 @@ public class VocabularyItemProvider extends PackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/Vocabulary"));
 	}
 
@@ -139,7 +149,8 @@ public class VocabularyItemProvider extends PackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -150,7 +161,8 @@ public class VocabularyItemProvider extends PackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((Vocabulary) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_Vocabulary_type")
 				: getString("_UI_Vocabulary_type") + " " + label;
@@ -164,10 +176,12 @@ public class VocabularyItemProvider extends PackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Vocabulary.class)) {
+		switch (notification.getFeatureID(Vocabulary.class))
+		{
 		case FramewebPackage.VOCABULARY__VOCABULARY_DOCUMENT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
@@ -188,7 +202,8 @@ public class VocabularyItemProvider extends PackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.NAMESPACE__OWNED_RULE,
@@ -649,7 +664,8 @@ public class VocabularyItemProvider extends PackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -662,7 +678,8 @@ public class VocabularyItemProvider extends PackageItemProvider {
 				|| childFeature == FramewebPackage.Literals.VOCABULARY__AXIOMS
 				|| childFeature == FramewebPackage.Literals.VOCABULARY__ANNOTATIONS;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
@@ -676,7 +693,8 @@ public class VocabularyItemProvider extends PackageItemProvider {
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		return FramewebEditPlugin.INSTANCE;
 	}
 

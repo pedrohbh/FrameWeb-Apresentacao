@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class VocabularyModelImpl extends FramewebModelImpl implements VocabularyModel {
+public class VocabularyModelImpl extends FramewebModelImpl implements VocabularyModel
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VocabularyModelImpl() {
+	protected VocabularyModelImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class VocabularyModelImpl extends FramewebModelImpl implements Vocabulary
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.VOCABULARY_MODEL;
 	}
 

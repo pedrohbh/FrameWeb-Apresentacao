@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class PartialImpl extends PageImpl implements Partial {
+public class PartialImpl extends PageImpl implements Partial
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PartialImpl() {
+	protected PartialImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class PartialImpl extends PageImpl implements Partial {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.PARTIAL;
 	}
 

@@ -20,7 +20,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface DAOClass extends org.eclipse.uml2.uml.Class {
+public interface DAOClass extends org.eclipse.uml2.uml.Class
+{
 	/**
 	 * Returns the value of the '<em><b>Sufix</b></em>' attribute.
 	 * The default value is <code>""</code>.

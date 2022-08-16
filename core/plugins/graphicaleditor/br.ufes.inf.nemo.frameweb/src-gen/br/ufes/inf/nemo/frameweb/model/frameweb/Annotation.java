@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface Annotation extends org.eclipse.uml2.uml.Class {
+public interface Annotation extends org.eclipse.uml2.uml.Class
+{
 } // Annotation

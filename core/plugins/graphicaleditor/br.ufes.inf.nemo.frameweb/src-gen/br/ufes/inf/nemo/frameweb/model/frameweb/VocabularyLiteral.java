@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.LiteralString;
  * @model
  * @generated
  */
-public interface VocabularyLiteral extends LiteralString {
+public interface VocabularyLiteral extends LiteralString
+{
 } // VocabularyLiteral

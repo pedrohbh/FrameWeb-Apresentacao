@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.PackageImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class ApplicationPackageImpl extends PackageImpl implements ApplicationPackage {
+public class ApplicationPackageImpl extends PackageImpl implements ApplicationPackage
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApplicationPackageImpl() {
+	protected ApplicationPackageImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class ApplicationPackageImpl extends PackageImpl implements ApplicationPa
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.APPLICATION_PACKAGE;
 	}
 

@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class AnonymousIndividualImpl extends IndividualImpl implements AnonymousIndividual {
+public class AnonymousIndividualImpl extends IndividualImpl implements AnonymousIndividual
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AnonymousIndividualImpl() {
+	protected AnonymousIndividualImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class AnonymousIndividualImpl extends IndividualImpl implements Anonymous
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.ANONYMOUS_INDIVIDUAL;
 	}
 

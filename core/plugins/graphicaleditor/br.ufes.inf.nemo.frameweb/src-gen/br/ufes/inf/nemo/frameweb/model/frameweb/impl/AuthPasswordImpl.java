@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class AuthPasswordImpl extends DomainAuthAttributeImpl implements AuthPassword {
+public class AuthPasswordImpl extends DomainAuthAttributeImpl implements AuthPassword
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AuthPasswordImpl() {
+	protected AuthPasswordImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class AuthPasswordImpl extends DomainAuthAttributeImpl implements AuthPas
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.AUTH_PASSWORD;
 	}
 

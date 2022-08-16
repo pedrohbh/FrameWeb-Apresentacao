@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.Property;
  * @model
  * @generated
  */
-public interface DomainProperty extends Property {
+public interface DomainProperty extends Property
+{
 } // DomainProperty

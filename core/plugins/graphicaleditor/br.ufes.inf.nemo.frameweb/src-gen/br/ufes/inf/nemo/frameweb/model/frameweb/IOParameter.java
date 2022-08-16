@@ -20,7 +20,8 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface IOParameter extends NavigationAttribute {
+public interface IOParameter extends NavigationAttribute
+{
 	/**
 	 * Returns the value of the '<em><b>Display</b></em>' reference list.
 	 * The list contents are of type {@link br.ufes.inf.nemo.frameweb.model.frameweb.UIComponentField}.

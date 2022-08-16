@@ -43,7 +43,8 @@ import org.eclipse.uml2.uml.internal.impl.PackageImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class VocabularyImpl extends PackageImpl implements Vocabulary {
+public class VocabularyImpl extends PackageImpl implements Vocabulary
+{
 	/**
 	 * The cached value of the '{@link #getDirectlyImportsDocuments() <em>Directly Imports Documents</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -109,7 +110,8 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VocabularyImpl() {
+	protected VocabularyImpl()
+	{
 		super();
 	}
 
@@ -119,7 +121,8 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.VOCABULARY;
 	}
 
@@ -129,8 +132,10 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 * @generated
 	 */
 	@Override
-	public EList<IRI> getDirectlyImportsDocuments() {
-		if (directlyImportsDocuments == null) {
+	public EList<IRI> getDirectlyImportsDocuments()
+	{
+		if (directlyImportsDocuments == null)
+		{
 			directlyImportsDocuments = new EObjectContainmentEList<IRI>(IRI.class, this,
 					FramewebPackage.VOCABULARY__DIRECTLY_IMPORTS_DOCUMENTS);
 		}
@@ -143,11 +148,14 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 * @generated
 	 */
 	@Override
-	public IRI getVocabularyIRI() {
-		if (vocabularyIRI != null && vocabularyIRI.eIsProxy()) {
+	public IRI getVocabularyIRI()
+	{
+		if (vocabularyIRI != null && vocabularyIRI.eIsProxy())
+		{
 			InternalEObject oldVocabularyIRI = (InternalEObject) vocabularyIRI;
 			vocabularyIRI = (IRI) eResolveProxy(oldVocabularyIRI);
-			if (vocabularyIRI != oldVocabularyIRI) {
+			if (vocabularyIRI != oldVocabularyIRI)
+			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							FramewebPackage.VOCABULARY__VOCABULARY_IRI, oldVocabularyIRI, vocabularyIRI));
@@ -161,7 +169,8 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IRI basicGetVocabularyIRI() {
+	public IRI basicGetVocabularyIRI()
+	{
 		return vocabularyIRI;
 	}
 
@@ -171,7 +180,8 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 * @generated
 	 */
 	@Override
-	public void setVocabularyIRI(IRI newVocabularyIRI) {
+	public void setVocabularyIRI(IRI newVocabularyIRI)
+	{
 		IRI oldVocabularyIRI = vocabularyIRI;
 		vocabularyIRI = newVocabularyIRI;
 		if (eNotificationRequired())
@@ -185,8 +195,10 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 * @generated
 	 */
 	@Override
-	public EList<Axiom> getAxioms() {
-		if (axioms == null) {
+	public EList<Axiom> getAxioms()
+	{
+		if (axioms == null)
+		{
 			axioms = new EObjectContainmentEList<Axiom>(Axiom.class, this, FramewebPackage.VOCABULARY__AXIOMS);
 		}
 		return axioms;
@@ -198,8 +210,10 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 * @generated
 	 */
 	@Override
-	public EList<Annotation> getAnnotations() {
-		if (annotations == null) {
+	public EList<Annotation> getAnnotations()
+	{
+		if (annotations == null)
+		{
 			annotations = new EObjectContainmentEList<Annotation>(Annotation.class, this,
 					FramewebPackage.VOCABULARY__ANNOTATIONS);
 		}
@@ -212,7 +226,8 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 * @generated
 	 */
 	@Override
-	public String getVocabularyDocument() {
+	public String getVocabularyDocument()
+	{
 		return vocabularyDocument;
 	}
 
@@ -222,7 +237,8 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 * @generated
 	 */
 	@Override
-	public void setVocabularyDocument(String newVocabularyDocument) {
+	public void setVocabularyDocument(String newVocabularyDocument)
+	{
 		String oldVocabularyDocument = vocabularyDocument;
 		vocabularyDocument = newVocabularyDocument;
 		if (eNotificationRequired())
@@ -236,8 +252,10 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.VOCABULARY__DIRECTLY_IMPORTS_DOCUMENTS:
 			return ((InternalEList<?>) getDirectlyImportsDocuments()).basicRemove(otherEnd, msgs);
 		case FramewebPackage.VOCABULARY__AXIOMS:
@@ -254,8 +272,10 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.VOCABULARY__DIRECTLY_IMPORTS_DOCUMENTS:
 			return getDirectlyImportsDocuments();
 		case FramewebPackage.VOCABULARY__VOCABULARY_IRI:
@@ -279,8 +299,10 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.VOCABULARY__DIRECTLY_IMPORTS_DOCUMENTS:
 			getDirectlyImportsDocuments().clear();
 			getDirectlyImportsDocuments().addAll((Collection<? extends IRI>) newValue);
@@ -309,8 +331,10 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.VOCABULARY__DIRECTLY_IMPORTS_DOCUMENTS:
 			getDirectlyImportsDocuments().clear();
 			return;
@@ -336,8 +360,10 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.VOCABULARY__DIRECTLY_IMPORTS_DOCUMENTS:
 			return directlyImportsDocuments != null && !directlyImportsDocuments.isEmpty();
 		case FramewebPackage.VOCABULARY__VOCABULARY_IRI:
@@ -359,7 +385,8 @@ public class VocabularyImpl extends PackageImpl implements Vocabulary {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

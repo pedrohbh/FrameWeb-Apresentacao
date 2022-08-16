@@ -26,7 +26,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class AuthRoleNameImpl extends DomainAuthAttributeImpl implements AuthRoleName {
+public class AuthRoleNameImpl extends DomainAuthAttributeImpl implements AuthRoleName
+{
 	/**
 	 * The default value of the '{@link #getGeneration() <em>Generation</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -52,7 +53,8 @@ public class AuthRoleNameImpl extends DomainAuthAttributeImpl implements AuthRol
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AuthRoleNameImpl() {
+	protected AuthRoleNameImpl()
+	{
 		super();
 	}
 
@@ -62,7 +64,8 @@ public class AuthRoleNameImpl extends DomainAuthAttributeImpl implements AuthRol
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.AUTH_ROLE_NAME;
 	}
 
@@ -72,7 +75,8 @@ public class AuthRoleNameImpl extends DomainAuthAttributeImpl implements AuthRol
 	 * @generated
 	 */
 	@Override
-	public Generation getGeneration() {
+	public Generation getGeneration()
+	{
 		return generation;
 	}
 
@@ -82,7 +86,8 @@ public class AuthRoleNameImpl extends DomainAuthAttributeImpl implements AuthRol
 	 * @generated
 	 */
 	@Override
-	public void setGeneration(Generation newGeneration) {
+	public void setGeneration(Generation newGeneration)
+	{
 		Generation oldGeneration = generation;
 		generation = newGeneration == null ? GENERATION_EDEFAULT : newGeneration;
 		if (eNotificationRequired())
@@ -96,8 +101,10 @@ public class AuthRoleNameImpl extends DomainAuthAttributeImpl implements AuthRol
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.AUTH_ROLE_NAME__GENERATION:
 			return getGeneration();
 		}
@@ -110,8 +117,10 @@ public class AuthRoleNameImpl extends DomainAuthAttributeImpl implements AuthRol
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.AUTH_ROLE_NAME__GENERATION:
 			setGeneration((Generation) newValue);
 			return;
@@ -125,8 +134,10 @@ public class AuthRoleNameImpl extends DomainAuthAttributeImpl implements AuthRol
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.AUTH_ROLE_NAME__GENERATION:
 			setGeneration(GENERATION_EDEFAULT);
 			return;
@@ -140,8 +151,10 @@ public class AuthRoleNameImpl extends DomainAuthAttributeImpl implements AuthRol
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.AUTH_ROLE_NAME__GENERATION:
 			return generation != GENERATION_EDEFAULT;
 		}
@@ -154,9 +167,12 @@ public class AuthRoleNameImpl extends DomainAuthAttributeImpl implements AuthRol
 	 * @generated
 	 */
 	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == IdAttribute.class) {
-			switch (derivedFeatureID) {
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
+	{
+		if (baseClass == IdAttribute.class)
+		{
+			switch (derivedFeatureID)
+			{
 			case FramewebPackage.AUTH_ROLE_NAME__GENERATION:
 				return FramewebPackage.ID_ATTRIBUTE__GENERATION;
 			default:
@@ -172,9 +188,12 @@ public class AuthRoleNameImpl extends DomainAuthAttributeImpl implements AuthRol
 	 * @generated
 	 */
 	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == IdAttribute.class) {
-			switch (baseFeatureID) {
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
+	{
+		if (baseClass == IdAttribute.class)
+		{
+			switch (baseFeatureID)
+			{
 			case FramewebPackage.ID_ATTRIBUTE__GENERATION:
 				return FramewebPackage.AUTH_ROLE_NAME__GENERATION;
 			default:
@@ -190,7 +209,8 @@ public class AuthRoleNameImpl extends DomainAuthAttributeImpl implements AuthRol
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

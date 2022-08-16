@@ -17,7 +17,8 @@ import org.eclipse.emf.common.util.Enumerator;
  * @model
  * @generated
  */
-public enum Cascade implements Enumerator {
+public enum Cascade implements Enumerator
+{
 	/**
 	 * The '<em><b>Remove</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -192,10 +193,13 @@ public enum Cascade implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Cascade get(String literal) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+	public static Cascade get(String literal)
+	{
+		for (int i = 0; i < VALUES_ARRAY.length; ++i)
+		{
 			Cascade result = VALUES_ARRAY[i];
-			if (result.toString().equals(literal)) {
+			if (result.toString().equals(literal))
+			{
 				return result;
 			}
 		}
@@ -210,10 +214,13 @@ public enum Cascade implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Cascade getByName(String name) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+	public static Cascade getByName(String name)
+	{
+		for (int i = 0; i < VALUES_ARRAY.length; ++i)
+		{
 			Cascade result = VALUES_ARRAY[i];
-			if (result.getName().equals(name)) {
+			if (result.getName().equals(name))
+			{
 				return result;
 			}
 		}
@@ -228,8 +235,10 @@ public enum Cascade implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Cascade get(int value) {
-		switch (value) {
+	public static Cascade get(int value)
+	{
+		switch (value)
+		{
 		case REMOVE_VALUE:
 			return REMOVE;
 		case MERGE_VALUE:
@@ -273,7 +282,8 @@ public enum Cascade implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private Cascade(int value, String name, String literal) {
+	private Cascade(int value, String name, String literal)
+	{
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -285,7 +295,8 @@ public enum Cascade implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public int getValue() {
+	public int getValue()
+	{
 		return value;
 	}
 
@@ -295,7 +306,8 @@ public enum Cascade implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -305,7 +317,8 @@ public enum Cascade implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public String getLiteral() {
+	public String getLiteral()
+	{
 		return literal;
 	}
 
@@ -316,7 +329,8 @@ public enum Cascade implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return literal;
 	}
 

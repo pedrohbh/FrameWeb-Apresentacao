@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public abstract class NavigationPropertyImpl extends PropertyImpl implements NavigationProperty {
+public abstract class NavigationPropertyImpl extends PropertyImpl implements NavigationProperty
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NavigationPropertyImpl() {
+	protected NavigationPropertyImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public abstract class NavigationPropertyImpl extends PropertyImpl implements Nav
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.NAVIGATION_PROPERTY;
 	}
 

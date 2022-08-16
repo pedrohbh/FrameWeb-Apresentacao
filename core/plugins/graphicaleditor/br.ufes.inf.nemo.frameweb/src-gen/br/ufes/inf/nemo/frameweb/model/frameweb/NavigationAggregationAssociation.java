@@ -16,13 +16,16 @@ import org.eclipse.uml2.uml.Association;
  * <ul>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation#getRelacoes <em>Relacoes</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation#getSpaProperties <em>Spa Properties</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation#getSpaMethod <em>Spa Method</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation#getSpaAttribute <em>Spa Attribute</em>}</li>
  * </ul>
  *
  * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getNavigationAggregationAssociation()
  * @model
  * @generated
  */
-public interface NavigationAggregationAssociation extends Association {
+public interface NavigationAggregationAssociation extends Association
+{
 
 	/**
 	 * Returns the value of the '<em><b>Relacoes</b></em>' reference list.
@@ -47,4 +50,28 @@ public interface NavigationAggregationAssociation extends Association {
 	 * @generated
 	 */
 	EList<NavigationSPAProperties> getSpaProperties();
+
+	/**
+	 * Returns the value of the '<em><b>Spa Method</b></em>' containment reference list.
+	 * The list contents are of type {@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAMethod}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Spa Method</em>' containment reference list.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getNavigationAggregationAssociation_SpaMethod()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<NavigationAggregationAssociationSPAMethod> getSpaMethod();
+
+	/**
+	 * Returns the value of the '<em><b>Spa Attribute</b></em>' containment reference list.
+	 * The list contents are of type {@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAAttribute}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Spa Attribute</em>' containment reference list.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getNavigationAggregationAssociation_SpaAttribute()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<NavigationAggregationAssociationSPAAttribute> getSpaAttribute();
 } // NavigationAggregationAssociation

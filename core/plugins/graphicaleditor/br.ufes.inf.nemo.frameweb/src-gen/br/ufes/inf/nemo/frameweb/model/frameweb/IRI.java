@@ -21,7 +21,8 @@ import org.eclipse.uml2.uml.Property;
  * @model extendedMetaData="name='IRI'"
  * @generated
  */
-public interface IRI extends Property {
+public interface IRI extends Property
+{
 	/**
 	 * Returns the value of the '<em><b>Iri</b></em>' attribute.
 	 * <!-- begin-user-doc -->

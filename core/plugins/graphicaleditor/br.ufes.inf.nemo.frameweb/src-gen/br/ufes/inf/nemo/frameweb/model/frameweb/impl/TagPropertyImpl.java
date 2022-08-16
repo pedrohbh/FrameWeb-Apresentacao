@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class TagPropertyImpl extends PropertyImpl implements TagProperty {
+public class TagPropertyImpl extends PropertyImpl implements TagProperty
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TagPropertyImpl() {
+	protected TagPropertyImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class TagPropertyImpl extends PropertyImpl implements TagProperty {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.TAG_PROPERTY;
 	}
 

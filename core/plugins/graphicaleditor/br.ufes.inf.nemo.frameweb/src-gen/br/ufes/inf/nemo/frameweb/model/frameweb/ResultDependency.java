@@ -20,7 +20,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface ResultDependency extends NavigationDependency {
+public interface ResultDependency extends NavigationDependency
+{
 	/**
 	 * Returns the value of the '<em><b>Result Method</b></em>' reference.
 	 * <!-- begin-user-doc -->

@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.PackageImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class ResultSetImpl extends PackageImpl implements ResultSet {
+public class ResultSetImpl extends PackageImpl implements ResultSet
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ResultSetImpl() {
+	protected ResultSetImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class ResultSetImpl extends PackageImpl implements ResultSet {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.RESULT_SET;
 	}
 

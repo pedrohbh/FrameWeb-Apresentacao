@@ -18,7 +18,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface UIComponentField extends NavigationAttribute {
+public interface UIComponentField extends NavigationAttribute
+{
 	/**
 	 * Returns the value of the '<em><b>Inject</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link br.ufes.inf.nemo.frameweb.model.frameweb.IOParameter#getDisplay <em>Display</em>}'.

@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface NavigationCompositionWhole extends NavigationProperty {
+public interface NavigationCompositionWhole extends NavigationProperty
+{
 } // NavigationCompositionWhole

@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class DomainAttributeImpl extends AttributeImpl implements DomainAttribute {
+public class DomainAttributeImpl extends AttributeImpl implements DomainAttribute
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DomainAttributeImpl() {
+	protected DomainAttributeImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class DomainAttributeImpl extends AttributeImpl implements DomainAttribut
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.DOMAIN_ATTRIBUTE;
 	}
 

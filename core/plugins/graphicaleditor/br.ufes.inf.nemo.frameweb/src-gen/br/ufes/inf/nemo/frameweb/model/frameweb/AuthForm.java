@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface AuthForm extends UIComponent {
+public interface AuthForm extends UIComponent
+{
 } // AuthForm

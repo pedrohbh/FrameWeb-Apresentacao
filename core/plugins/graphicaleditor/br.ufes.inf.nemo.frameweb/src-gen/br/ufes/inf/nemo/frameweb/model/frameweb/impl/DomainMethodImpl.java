@@ -30,7 +30,8 @@ import org.eclipse.uml2.uml.internal.impl.OperationImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class DomainMethodImpl extends OperationImpl implements DomainMethod {
+public class DomainMethodImpl extends OperationImpl implements DomainMethod
+{
 	/**
 	 * The cached value of the '{@link #getMethodType() <em>Method Type</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -46,7 +47,8 @@ public class DomainMethodImpl extends OperationImpl implements DomainMethod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DomainMethodImpl() {
+	protected DomainMethodImpl()
+	{
 		super();
 	}
 
@@ -56,7 +58,8 @@ public class DomainMethodImpl extends OperationImpl implements DomainMethod {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.DOMAIN_METHOD;
 	}
 
@@ -66,11 +69,14 @@ public class DomainMethodImpl extends OperationImpl implements DomainMethod {
 	 * @generated
 	 */
 	@Override
-	public Type getMethodType() {
-		if (methodType != null && methodType.eIsProxy()) {
+	public Type getMethodType()
+	{
+		if (methodType != null && methodType.eIsProxy())
+		{
 			InternalEObject oldMethodType = (InternalEObject) methodType;
 			methodType = (Type) eResolveProxy(oldMethodType);
-			if (methodType != oldMethodType) {
+			if (methodType != oldMethodType)
+			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							FramewebPackage.DOMAIN_METHOD__METHOD_TYPE, oldMethodType, methodType));
@@ -84,7 +90,8 @@ public class DomainMethodImpl extends OperationImpl implements DomainMethod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Type basicGetMethodType() {
+	public Type basicGetMethodType()
+	{
 		return methodType;
 	}
 
@@ -94,7 +101,8 @@ public class DomainMethodImpl extends OperationImpl implements DomainMethod {
 	 * @generated
 	 */
 	@Override
-	public void setMethodType(Type newMethodType) {
+	public void setMethodType(Type newMethodType)
+	{
 		Type oldMethodType = methodType;
 		methodType = newMethodType;
 		if (eNotificationRequired())
@@ -108,8 +116,10 @@ public class DomainMethodImpl extends OperationImpl implements DomainMethod {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DOMAIN_METHOD__METHOD_TYPE:
 			if (resolve)
 				return getMethodType();
@@ -124,8 +134,10 @@ public class DomainMethodImpl extends OperationImpl implements DomainMethod {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DOMAIN_METHOD__METHOD_TYPE:
 			setMethodType((Type) newValue);
 			return;
@@ -139,8 +151,10 @@ public class DomainMethodImpl extends OperationImpl implements DomainMethod {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DOMAIN_METHOD__METHOD_TYPE:
 			setMethodType((Type) null);
 			return;
@@ -154,8 +168,10 @@ public class DomainMethodImpl extends OperationImpl implements DomainMethod {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DOMAIN_METHOD__METHOD_TYPE:
 			return methodType != null;
 		}

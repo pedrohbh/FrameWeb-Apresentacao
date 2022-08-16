@@ -31,7 +31,8 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class NavigationSPAPropertiesImpl extends MinimalEObjectImpl.Container implements NavigationSPAProperties {
+public class NavigationSPAPropertiesImpl extends MinimalEObjectImpl.Container implements NavigationSPAProperties
+{
 	/**
 	 * The cached value of the '{@link #getSpaAttributes() <em>Spa Attributes</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -57,7 +58,8 @@ public class NavigationSPAPropertiesImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NavigationSPAPropertiesImpl() {
+	protected NavigationSPAPropertiesImpl()
+	{
 		super();
 	}
 
@@ -67,7 +69,8 @@ public class NavigationSPAPropertiesImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.NAVIGATION_SPA_PROPERTIES;
 	}
 
@@ -77,8 +80,10 @@ public class NavigationSPAPropertiesImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public EList<UIComponentField> getSpaAttributes() {
-		if (spaAttributes == null) {
+	public EList<UIComponentField> getSpaAttributes()
+	{
+		if (spaAttributes == null)
+		{
 			spaAttributes = new EObjectResolvingEList<UIComponentField>(UIComponentField.class, this,
 					FramewebPackage.NAVIGATION_SPA_PROPERTIES__SPA_ATTRIBUTES);
 		}
@@ -91,8 +96,10 @@ public class NavigationSPAPropertiesImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public EList<FrontControllerMethod> getSpaMethods() {
-		if (spaMethods == null) {
+	public EList<FrontControllerMethod> getSpaMethods()
+	{
+		if (spaMethods == null)
+		{
 			spaMethods = new EObjectResolvingEList<FrontControllerMethod>(FrontControllerMethod.class, this,
 					FramewebPackage.NAVIGATION_SPA_PROPERTIES__SPA_METHODS);
 		}
@@ -105,8 +112,10 @@ public class NavigationSPAPropertiesImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.NAVIGATION_SPA_PROPERTIES__SPA_ATTRIBUTES:
 			return getSpaAttributes();
 		case FramewebPackage.NAVIGATION_SPA_PROPERTIES__SPA_METHODS:
@@ -122,8 +131,10 @@ public class NavigationSPAPropertiesImpl extends MinimalEObjectImpl.Container im
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.NAVIGATION_SPA_PROPERTIES__SPA_ATTRIBUTES:
 			getSpaAttributes().clear();
 			getSpaAttributes().addAll((Collection<? extends UIComponentField>) newValue);
@@ -142,8 +153,10 @@ public class NavigationSPAPropertiesImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.NAVIGATION_SPA_PROPERTIES__SPA_ATTRIBUTES:
 			getSpaAttributes().clear();
 			return;
@@ -160,8 +173,10 @@ public class NavigationSPAPropertiesImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.NAVIGATION_SPA_PROPERTIES__SPA_ATTRIBUTES:
 			return spaAttributes != null && !spaAttributes.isEmpty();
 		case FramewebPackage.NAVIGATION_SPA_PROPERTIES__SPA_METHODS:

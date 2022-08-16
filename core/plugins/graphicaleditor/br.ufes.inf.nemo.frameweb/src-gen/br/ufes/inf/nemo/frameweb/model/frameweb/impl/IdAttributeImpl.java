@@ -26,7 +26,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 @SuppressWarnings("all")
-public class IdAttributeImpl extends AttributeImpl implements IdAttribute {
+public class IdAttributeImpl extends AttributeImpl implements IdAttribute
+{
 	/**
 	 * The default value of the '{@link #getGeneration() <em>Generation</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -52,7 +53,8 @@ public class IdAttributeImpl extends AttributeImpl implements IdAttribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IdAttributeImpl() {
+	protected IdAttributeImpl()
+	{
 		super();
 	}
 
@@ -62,7 +64,8 @@ public class IdAttributeImpl extends AttributeImpl implements IdAttribute {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.ID_ATTRIBUTE;
 	}
 
@@ -72,7 +75,8 @@ public class IdAttributeImpl extends AttributeImpl implements IdAttribute {
 	 * @generated
 	 */
 	@Override
-	public Generation getGeneration() {
+	public Generation getGeneration()
+	{
 		return generation;
 	}
 
@@ -82,7 +86,8 @@ public class IdAttributeImpl extends AttributeImpl implements IdAttribute {
 	 * @generated
 	 */
 	@Override
-	public void setGeneration(Generation newGeneration) {
+	public void setGeneration(Generation newGeneration)
+	{
 		Generation oldGeneration = generation;
 		generation = newGeneration == null ? GENERATION_EDEFAULT : newGeneration;
 		if (eNotificationRequired())
@@ -96,8 +101,10 @@ public class IdAttributeImpl extends AttributeImpl implements IdAttribute {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.ID_ATTRIBUTE__GENERATION:
 			return getGeneration();
 		}
@@ -110,8 +117,10 @@ public class IdAttributeImpl extends AttributeImpl implements IdAttribute {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.ID_ATTRIBUTE__GENERATION:
 			setGeneration((Generation) newValue);
 			return;
@@ -125,8 +134,10 @@ public class IdAttributeImpl extends AttributeImpl implements IdAttribute {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.ID_ATTRIBUTE__GENERATION:
 			setGeneration(GENERATION_EDEFAULT);
 			return;
@@ -140,8 +151,10 @@ public class IdAttributeImpl extends AttributeImpl implements IdAttribute {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.ID_ATTRIBUTE__GENERATION:
 			return generation != GENERATION_EDEFAULT;
 		}
@@ -154,7 +167,8 @@ public class IdAttributeImpl extends AttributeImpl implements IdAttribute {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

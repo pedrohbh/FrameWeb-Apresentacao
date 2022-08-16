@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class EmbeddedAttributeImpl extends AttributeImpl implements EmbeddedAttribute {
+public class EmbeddedAttributeImpl extends AttributeImpl implements EmbeddedAttribute
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EmbeddedAttributeImpl() {
+	protected EmbeddedAttributeImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class EmbeddedAttributeImpl extends AttributeImpl implements EmbeddedAttr
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.EMBEDDED_ATTRIBUTE;
 	}
 

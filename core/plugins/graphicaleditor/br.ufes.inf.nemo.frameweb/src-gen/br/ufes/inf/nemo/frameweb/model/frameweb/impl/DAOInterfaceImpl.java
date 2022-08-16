@@ -28,7 +28,8 @@ import org.eclipse.uml2.uml.internal.impl.InterfaceImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class DAOInterfaceImpl extends InterfaceImpl implements DAOInterface {
+public class DAOInterfaceImpl extends InterfaceImpl implements DAOInterface
+{
 	/**
 	 * The default value of the '{@link #getInfix() <em>Infix</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -74,7 +75,8 @@ public class DAOInterfaceImpl extends InterfaceImpl implements DAOInterface {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DAOInterfaceImpl() {
+	protected DAOInterfaceImpl()
+	{
 		super();
 	}
 
@@ -84,7 +86,8 @@ public class DAOInterfaceImpl extends InterfaceImpl implements DAOInterface {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.DAO_INTERFACE;
 	}
 
@@ -94,7 +97,8 @@ public class DAOInterfaceImpl extends InterfaceImpl implements DAOInterface {
 	 * @generated
 	 */
 	@Override
-	public String getInfix() {
+	public String getInfix()
+	{
 		return infix;
 	}
 
@@ -104,7 +108,8 @@ public class DAOInterfaceImpl extends InterfaceImpl implements DAOInterface {
 	 * @generated
 	 */
 	@Override
-	public void setInfix(String newInfix) {
+	public void setInfix(String newInfix)
+	{
 		String oldInfix = infix;
 		infix = newInfix;
 		if (eNotificationRequired())
@@ -118,7 +123,8 @@ public class DAOInterfaceImpl extends InterfaceImpl implements DAOInterface {
 	 * @generated
 	 */
 	@Override
-	public String getSufix() {
+	public String getSufix()
+	{
 		return sufix;
 	}
 
@@ -128,8 +134,10 @@ public class DAOInterfaceImpl extends InterfaceImpl implements DAOInterface {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DAO_INTERFACE__INFIX:
 			return getInfix();
 		case FramewebPackage.DAO_INTERFACE__SUFIX:
@@ -144,8 +152,10 @@ public class DAOInterfaceImpl extends InterfaceImpl implements DAOInterface {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DAO_INTERFACE__INFIX:
 			setInfix((String) newValue);
 			return;
@@ -159,8 +169,10 @@ public class DAOInterfaceImpl extends InterfaceImpl implements DAOInterface {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DAO_INTERFACE__INFIX:
 			setInfix(INFIX_EDEFAULT);
 			return;
@@ -174,8 +186,10 @@ public class DAOInterfaceImpl extends InterfaceImpl implements DAOInterface {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DAO_INTERFACE__INFIX:
 			return INFIX_EDEFAULT == null ? infix != null : !INFIX_EDEFAULT.equals(infix);
 		case FramewebPackage.DAO_INTERFACE__SUFIX:
@@ -190,7 +204,8 @@ public class DAOInterfaceImpl extends InterfaceImpl implements DAOInterface {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

@@ -37,7 +37,8 @@ import org.eclipse.uml2.uml.internal.impl.AssociationImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class DomainAssociationImpl extends AssociationImpl implements DomainAssociation {
+public class DomainAssociationImpl extends AssociationImpl implements DomainAssociation
+{
 	/**
 	 * The default value of the '{@link #getCollection() <em>Collection</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -123,7 +124,8 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DomainAssociationImpl() {
+	protected DomainAssociationImpl()
+	{
 		super();
 	}
 
@@ -133,7 +135,8 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.DOMAIN_ASSOCIATION;
 	}
 
@@ -143,7 +146,8 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * @generated
 	 */
 	@Override
-	public Collection getCollection() {
+	public Collection getCollection()
+	{
 		return collection;
 	}
 
@@ -153,7 +157,8 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * @generated
 	 */
 	@Override
-	public void setCollection(Collection newCollection) {
+	public void setCollection(Collection newCollection)
+	{
 		Collection oldCollection = collection;
 		collection = newCollection == null ? COLLECTION_EDEFAULT : newCollection;
 		if (eNotificationRequired())
@@ -167,7 +172,8 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * @generated
 	 */
 	@Override
-	public Cascade getCascade() {
+	public Cascade getCascade()
+	{
 		return cascade;
 	}
 
@@ -177,7 +183,8 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * @generated
 	 */
 	@Override
-	public void setCascade(Cascade newCascade) {
+	public void setCascade(Cascade newCascade)
+	{
 		Cascade oldCascade = cascade;
 		cascade = newCascade == null ? CASCADE_EDEFAULT : newCascade;
 		if (eNotificationRequired())
@@ -191,7 +198,8 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * @generated
 	 */
 	@Override
-	public Fetch getFetch() {
+	public Fetch getFetch()
+	{
 		return fetch;
 	}
 
@@ -201,7 +209,8 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * @generated
 	 */
 	@Override
-	public void setFetch(Fetch newFetch) {
+	public void setFetch(Fetch newFetch)
+	{
 		Fetch oldFetch = fetch;
 		fetch = newFetch == null ? FETCH_EDEFAULT : newFetch;
 		if (eNotificationRequired())
@@ -215,7 +224,8 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * @generated
 	 */
 	@Override
-	public Order getOrder() {
+	public Order getOrder()
+	{
 		return order;
 	}
 
@@ -225,7 +235,8 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * @generated
 	 */
 	@Override
-	public void setOrder(Order newOrder) {
+	public void setOrder(Order newOrder)
+	{
 		Order oldOrder = order;
 		order = newOrder == null ? ORDER_EDEFAULT : newOrder;
 		if (eNotificationRequired())
@@ -238,7 +249,8 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * <!-- end-user-doc -->
 	 */
 	@Override
-	public Property getSourceMember() {
+	public Property getSourceMember()
+	{
 		//		Property sourceMember = getMemberEnds().stream().filter(member -> member.getName().equals("Source")).findFirst()
 		//				.get();
 		Property sourceMember = getMemberEnds().get(0);
@@ -251,7 +263,8 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * <!-- end-user-doc -->
 	 */
 	@Override
-	public Property getTargetMember() {
+	public Property getTargetMember()
+	{
 		//		Property targetMember = getMemberEnds().stream().filter(member -> member.getName().equals("Target")).findFirst()
 		//				.get();
 		Property targetMember = getMemberEnds().get(1);
@@ -264,22 +277,29 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * <!-- end-user-doc -->
 	 */
 	@Override
-	public String getSourceToTargetCardinality() {
+	public String getSourceToTargetCardinality()
+	{
 		Property sourceMember = getSourceMember();
 		Property targetMember = getTargetMember();
 
-		if ((sourceMember.getLower() == 1 || sourceMember.getLower() == 0) && sourceMember.getUpper() == 1) {
-			if (targetMember.getUpper() == -1 || targetMember.getUpper() > 1) {
+		if ((sourceMember.getLower() == 1 || sourceMember.getLower() == 0) && sourceMember.getUpper() == 1)
+		{
+			if (targetMember.getUpper() == -1 || targetMember.getUpper() > 1)
+			{
 				return "OneToMany";
 
-			} else {
+			} else
+			{
 				return "OneToOne";
 			}
 
-		} else {
-			if (targetMember.getUpper() == -1 || targetMember.getUpper() > 1) {
+		} else
+		{
+			if (targetMember.getUpper() == -1 || targetMember.getUpper() > 1)
+			{
 				return "ManyToMany";
-			} else {
+			} else
+			{
 				return "ManyToOne";
 			}
 		}
@@ -290,16 +310,20 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * <!-- end-user-doc -->
 	 */
 	@Override
-	public String getTargetToSourceCardinality() {
+	public String getTargetToSourceCardinality()
+	{
 		String relationCardinality = getSourceToTargetCardinality();
 
-		if (relationCardinality == "OneToMany") {
+		if (relationCardinality == "OneToMany")
+		{
 			return "ManyToOne";
 
-		} else if (relationCardinality == "ManyToOne") {
+		} else if (relationCardinality == "ManyToOne")
+		{
 			return "OneToMany";
 
-		} else {
+		} else
+		{
 			return relationCardinality;
 		}
 	}
@@ -310,8 +334,10 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DOMAIN_ASSOCIATION__COLLECTION:
 			return getCollection();
 		case FramewebPackage.DOMAIN_ASSOCIATION__CASCADE:
@@ -330,8 +356,10 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DOMAIN_ASSOCIATION__COLLECTION:
 			setCollection((Collection) newValue);
 			return;
@@ -354,8 +382,10 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DOMAIN_ASSOCIATION__COLLECTION:
 			setCollection(COLLECTION_EDEFAULT);
 			return;
@@ -378,8 +408,10 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DOMAIN_ASSOCIATION__COLLECTION:
 			return collection != COLLECTION_EDEFAULT;
 		case FramewebPackage.DOMAIN_ASSOCIATION__CASCADE:
@@ -398,8 +430,10 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * @generated
 	 */
 	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
+	{
+		switch (operationID)
+		{
 		case FramewebPackage.DOMAIN_ASSOCIATION___GET_SOURCE_MEMBER:
 			return getSourceMember();
 		case FramewebPackage.DOMAIN_ASSOCIATION___GET_TARGET_MEMBER:
@@ -418,7 +452,8 @@ public class DomainAssociationImpl extends AssociationImpl implements DomainAsso
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

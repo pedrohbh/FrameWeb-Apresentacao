@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface AuthProcessingMethod extends FrontControllerMethod {
+public interface AuthProcessingMethod extends FrontControllerMethod
+{
 } // AuthProcessingMethod

@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface LOBAttribute extends Attribute {
+public interface LOBAttribute extends Attribute
+{
 } // LOBAttribute

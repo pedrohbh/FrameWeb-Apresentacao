@@ -32,7 +32,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 @SuppressWarnings("all")
-public class IOParameterImpl extends NavigationAttributeImpl implements IOParameter {
+public class IOParameterImpl extends NavigationAttributeImpl implements IOParameter
+{
 	/**
 	 * The cached value of the '{@link #getDisplay() <em>Display</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -48,7 +49,8 @@ public class IOParameterImpl extends NavigationAttributeImpl implements IOParame
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IOParameterImpl() {
+	protected IOParameterImpl()
+	{
 		super();
 	}
 
@@ -58,7 +60,8 @@ public class IOParameterImpl extends NavigationAttributeImpl implements IOParame
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.IO_PARAMETER;
 	}
 
@@ -68,8 +71,10 @@ public class IOParameterImpl extends NavigationAttributeImpl implements IOParame
 	 * @generated
 	 */
 	@Override
-	public EList<UIComponentField> getDisplay() {
-		if (display == null) {
+	public EList<UIComponentField> getDisplay()
+	{
+		if (display == null)
+		{
 			display = new EObjectWithInverseResolvingEList<UIComponentField>(UIComponentField.class, this,
 					FramewebPackage.IO_PARAMETER__DISPLAY, FramewebPackage.UI_COMPONENT_FIELD__INJECT);
 		}
@@ -83,8 +88,10 @@ public class IOParameterImpl extends NavigationAttributeImpl implements IOParame
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.IO_PARAMETER__DISPLAY:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getDisplay()).basicAdd(otherEnd, msgs);
 		}
@@ -97,8 +104,10 @@ public class IOParameterImpl extends NavigationAttributeImpl implements IOParame
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.IO_PARAMETER__DISPLAY:
 			return ((InternalEList<?>) getDisplay()).basicRemove(otherEnd, msgs);
 		}
@@ -111,8 +120,10 @@ public class IOParameterImpl extends NavigationAttributeImpl implements IOParame
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.IO_PARAMETER__DISPLAY:
 			return getDisplay();
 		}
@@ -126,8 +137,10 @@ public class IOParameterImpl extends NavigationAttributeImpl implements IOParame
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.IO_PARAMETER__DISPLAY:
 			getDisplay().clear();
 			getDisplay().addAll((Collection<? extends UIComponentField>) newValue);
@@ -142,8 +155,10 @@ public class IOParameterImpl extends NavigationAttributeImpl implements IOParame
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.IO_PARAMETER__DISPLAY:
 			getDisplay().clear();
 			return;
@@ -157,8 +172,10 @@ public class IOParameterImpl extends NavigationAttributeImpl implements IOParame
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.IO_PARAMETER__DISPLAY:
 			return display != null && !display.isEmpty();
 		}

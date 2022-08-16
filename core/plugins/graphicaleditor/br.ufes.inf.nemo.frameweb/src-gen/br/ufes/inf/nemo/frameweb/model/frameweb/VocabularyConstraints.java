@@ -20,7 +20,8 @@ import org.eclipse.uml2.uml.Constraint;
  * @model
  * @generated
  */
-public interface VocabularyConstraints extends Constraint {
+public interface VocabularyConstraints extends Constraint
+{
 	/**
 	 * Returns the value of the '<em><b>Sub Property Of</b></em>' attribute.
 	 * <!-- begin-user-doc -->

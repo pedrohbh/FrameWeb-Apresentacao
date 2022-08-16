@@ -421,6 +421,10 @@
         eType="#//UIComponentField"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="spaProperties" upperBound="-1"
         eType="#//NavigationSPAProperties"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="spaMethod" upperBound="-1"
+        eType="#//NavigationAggregationAssociationSPAMethod" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="spaAttribute" upperBound="-1"
+        eType="#//NavigationAggregationAssociationSPAAttribute" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NavigationAggregationTarget" eSuperTypes="#//NavigationProperty"/>
   <eClassifiers xsi:type="ecore:EClass" name="NavigationAggregationSource" eSuperTypes="#//NavigationProperty"/>
@@ -429,5 +433,13 @@
         eType="#//UIComponentField"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="spaMethods" upperBound="-1"
         eType="#//FrontControllerMethod"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NavigationAggregationAssociationSPAMethod">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="spaMethod" eType="#//FrontControllerMethod"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NavigationAggregationAssociationSPAAttribute">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="spaAttribute" eType="#//UIComponentField"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.InterfaceRealizationImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class DAORealizationImpl extends InterfaceRealizationImpl implements DAORealization {
+public class DAORealizationImpl extends InterfaceRealizationImpl implements DAORealization
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DAORealizationImpl() {
+	protected DAORealizationImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class DAORealizationImpl extends InterfaceRealizationImpl implements DAOR
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.DAO_REALIZATION;
 	}
 

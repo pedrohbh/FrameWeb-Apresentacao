@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.ClassImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class AnnotationImpl extends ClassImpl implements Annotation {
+public class AnnotationImpl extends ClassImpl implements Annotation
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AnnotationImpl() {
+	protected AnnotationImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class AnnotationImpl extends ClassImpl implements Annotation {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.ANNOTATION;
 	}
 

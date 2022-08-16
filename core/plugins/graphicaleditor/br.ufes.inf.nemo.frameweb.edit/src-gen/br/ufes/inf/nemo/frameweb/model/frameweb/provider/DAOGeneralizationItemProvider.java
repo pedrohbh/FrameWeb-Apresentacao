@@ -22,14 +22,16 @@ import org.eclipse.uml2.uml.edit.providers.GeneralizationItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DAOGeneralizationItemProvider extends GeneralizationItemProvider {
+public class DAOGeneralizationItemProvider extends GeneralizationItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DAOGeneralizationItemProvider(AdapterFactory adapterFactory) {
+	public DAOGeneralizationItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -40,8 +42,10 @@ public class DAOGeneralizationItemProvider extends GeneralizationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 		}
@@ -55,7 +59,8 @@ public class DAOGeneralizationItemProvider extends GeneralizationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/DAOGeneralization"));
 	}
 
@@ -65,7 +70,8 @@ public class DAOGeneralizationItemProvider extends GeneralizationItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -76,7 +82,8 @@ public class DAOGeneralizationItemProvider extends GeneralizationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		DAOGeneralization daoGeneralization = (DAOGeneralization) object;
 		return getString("_UI_DAOGeneralization_type") + " " + daoGeneralization.isSubstitutable();
 	}
@@ -89,7 +96,8 @@ public class DAOGeneralizationItemProvider extends GeneralizationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 		super.notifyChanged(notification);
 	}
@@ -102,7 +110,8 @@ public class DAOGeneralizationItemProvider extends GeneralizationItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 
@@ -113,7 +122,8 @@ public class DAOGeneralizationItemProvider extends GeneralizationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		return FramewebEditPlugin.INSTANCE;
 	}
 

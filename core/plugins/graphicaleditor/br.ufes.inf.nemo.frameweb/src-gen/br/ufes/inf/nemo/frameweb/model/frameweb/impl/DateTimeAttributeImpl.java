@@ -26,7 +26,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 @SuppressWarnings("all")
-public class DateTimeAttributeImpl extends AttributeImpl implements DateTimeAttribute {
+public class DateTimeAttributeImpl extends AttributeImpl implements DateTimeAttribute
+{
 	/**
 	 * The default value of the '{@link #getDateTimePrecision() <em>Date Time Precision</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -52,7 +53,8 @@ public class DateTimeAttributeImpl extends AttributeImpl implements DateTimeAttr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DateTimeAttributeImpl() {
+	protected DateTimeAttributeImpl()
+	{
 		super();
 	}
 
@@ -62,7 +64,8 @@ public class DateTimeAttributeImpl extends AttributeImpl implements DateTimeAttr
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.DATE_TIME_ATTRIBUTE;
 	}
 
@@ -72,7 +75,8 @@ public class DateTimeAttributeImpl extends AttributeImpl implements DateTimeAttr
 	 * @generated
 	 */
 	@Override
-	public DateTimePrecision getDateTimePrecision() {
+	public DateTimePrecision getDateTimePrecision()
+	{
 		return dateTimePrecision;
 	}
 
@@ -82,7 +86,8 @@ public class DateTimeAttributeImpl extends AttributeImpl implements DateTimeAttr
 	 * @generated
 	 */
 	@Override
-	public void setDateTimePrecision(DateTimePrecision newDateTimePrecision) {
+	public void setDateTimePrecision(DateTimePrecision newDateTimePrecision)
+	{
 		DateTimePrecision oldDateTimePrecision = dateTimePrecision;
 		dateTimePrecision = newDateTimePrecision == null ? DATE_TIME_PRECISION_EDEFAULT : newDateTimePrecision;
 		if (eNotificationRequired())
@@ -96,8 +101,10 @@ public class DateTimeAttributeImpl extends AttributeImpl implements DateTimeAttr
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DATE_TIME_ATTRIBUTE__DATE_TIME_PRECISION:
 			return getDateTimePrecision();
 		}
@@ -110,8 +117,10 @@ public class DateTimeAttributeImpl extends AttributeImpl implements DateTimeAttr
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DATE_TIME_ATTRIBUTE__DATE_TIME_PRECISION:
 			setDateTimePrecision((DateTimePrecision) newValue);
 			return;
@@ -125,8 +134,10 @@ public class DateTimeAttributeImpl extends AttributeImpl implements DateTimeAttr
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DATE_TIME_ATTRIBUTE__DATE_TIME_PRECISION:
 			setDateTimePrecision(DATE_TIME_PRECISION_EDEFAULT);
 			return;
@@ -140,8 +151,10 @@ public class DateTimeAttributeImpl extends AttributeImpl implements DateTimeAttr
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DATE_TIME_ATTRIBUTE__DATE_TIME_PRECISION:
 			return dateTimePrecision != DATE_TIME_PRECISION_EDEFAULT;
 		}
@@ -154,7 +167,8 @@ public class DateTimeAttributeImpl extends AttributeImpl implements DateTimeAttr
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

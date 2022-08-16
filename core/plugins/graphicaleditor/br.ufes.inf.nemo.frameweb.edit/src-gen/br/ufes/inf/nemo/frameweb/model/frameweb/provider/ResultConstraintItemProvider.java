@@ -24,14 +24,16 @@ import org.eclipse.uml2.uml.UMLPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ResultConstraintItemProvider extends NavigationConstraintItemProvider {
+public class ResultConstraintItemProvider extends NavigationConstraintItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResultConstraintItemProvider(AdapterFactory adapterFactory) {
+	public ResultConstraintItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -42,8 +44,10 @@ public class ResultConstraintItemProvider extends NavigationConstraintItemProvid
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addExecutePropertyDescriptor(object);
@@ -60,7 +64,8 @@ public class ResultConstraintItemProvider extends NavigationConstraintItemProvid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addExecutePropertyDescriptor(Object object) {
+	protected void addExecutePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_ResultConstraint_execute_feature"),
@@ -76,7 +81,8 @@ public class ResultConstraintItemProvider extends NavigationConstraintItemProvid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAjaxPropertyDescriptor(Object object) {
+	protected void addAjaxPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_ResultConstraint_ajax_feature"),
@@ -92,7 +98,8 @@ public class ResultConstraintItemProvider extends NavigationConstraintItemProvid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addResultPropertyDescriptor(Object object) {
+	protected void addResultPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_ResultConstraint_result_feature"),
@@ -108,7 +115,8 @@ public class ResultConstraintItemProvider extends NavigationConstraintItemProvid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRenderPropertyDescriptor(Object object) {
+	protected void addRenderPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_ResultConstraint_render_feature"),
@@ -125,7 +133,8 @@ public class ResultConstraintItemProvider extends NavigationConstraintItemProvid
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/ResultConstraint"));
 	}
 
@@ -135,7 +144,8 @@ public class ResultConstraintItemProvider extends NavigationConstraintItemProvid
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -146,7 +156,8 @@ public class ResultConstraintItemProvider extends NavigationConstraintItemProvid
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((ResultConstraint) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_ResultConstraint_type")
 				: getString("_UI_ResultConstraint_type") + " " + label;
@@ -160,10 +171,12 @@ public class ResultConstraintItemProvider extends NavigationConstraintItemProvid
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(ResultConstraint.class)) {
+		switch (notification.getFeatureID(ResultConstraint.class))
+		{
 		case FramewebPackage.RESULT_CONSTRAINT__EXECUTE:
 		case FramewebPackage.RESULT_CONSTRAINT__AJAX:
 		case FramewebPackage.RESULT_CONSTRAINT__RESULT:
@@ -182,7 +195,8 @@ public class ResultConstraintItemProvider extends NavigationConstraintItemProvid
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 
@@ -193,14 +207,16 @@ public class ResultConstraintItemProvider extends NavigationConstraintItemProvid
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
 		boolean qualify = childFeature == UMLPackage.Literals.NAMED_ELEMENT__NAME_EXPRESSION
 				|| childFeature == UMLPackage.Literals.CONSTRAINT__SPECIFICATION;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}

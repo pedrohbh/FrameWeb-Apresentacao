@@ -27,7 +27,8 @@ import org.eclipse.uml2.uml.internal.impl.ClassImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class DomainClassImpl extends ClassImpl implements DomainClass {
+public class DomainClassImpl extends ClassImpl implements DomainClass
+{
 	/**
 	 * The default value of the '{@link #getTable() <em>Table</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -53,7 +54,8 @@ public class DomainClassImpl extends ClassImpl implements DomainClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DomainClassImpl() {
+	protected DomainClassImpl()
+	{
 		super();
 	}
 
@@ -63,7 +65,8 @@ public class DomainClassImpl extends ClassImpl implements DomainClass {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.DOMAIN_CLASS;
 	}
 
@@ -73,7 +76,8 @@ public class DomainClassImpl extends ClassImpl implements DomainClass {
 	 * @generated
 	 */
 	@Override
-	public String getTable() {
+	public String getTable()
+	{
 		return table;
 	}
 
@@ -83,7 +87,8 @@ public class DomainClassImpl extends ClassImpl implements DomainClass {
 	 * @generated
 	 */
 	@Override
-	public void setTable(String newTable) {
+	public void setTable(String newTable)
+	{
 		String oldTable = table;
 		table = newTable;
 		if (eNotificationRequired())
@@ -97,8 +102,10 @@ public class DomainClassImpl extends ClassImpl implements DomainClass {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DOMAIN_CLASS__TABLE:
 			return getTable();
 		}
@@ -111,8 +118,10 @@ public class DomainClassImpl extends ClassImpl implements DomainClass {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DOMAIN_CLASS__TABLE:
 			setTable((String) newValue);
 			return;
@@ -126,8 +135,10 @@ public class DomainClassImpl extends ClassImpl implements DomainClass {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DOMAIN_CLASS__TABLE:
 			setTable(TABLE_EDEFAULT);
 			return;
@@ -141,8 +152,10 @@ public class DomainClassImpl extends ClassImpl implements DomainClass {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DOMAIN_CLASS__TABLE:
 			return TABLE_EDEFAULT == null ? table != null : !TABLE_EDEFAULT.equals(table);
 		}
@@ -155,7 +168,8 @@ public class DomainClassImpl extends ClassImpl implements DomainClass {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

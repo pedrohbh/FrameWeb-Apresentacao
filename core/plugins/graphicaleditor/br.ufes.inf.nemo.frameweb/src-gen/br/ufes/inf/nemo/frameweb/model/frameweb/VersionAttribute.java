@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface VersionAttribute extends Attribute {
+public interface VersionAttribute extends Attribute
+{
 } // VersionAttribute

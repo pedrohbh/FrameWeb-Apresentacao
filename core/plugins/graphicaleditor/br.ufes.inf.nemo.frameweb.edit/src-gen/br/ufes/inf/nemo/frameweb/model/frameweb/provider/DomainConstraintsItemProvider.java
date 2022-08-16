@@ -29,14 +29,16 @@ import org.eclipse.uml2.uml.edit.providers.ConstraintItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DomainConstraintsItemProvider extends ConstraintItemProvider {
+public class DomainConstraintsItemProvider extends ConstraintItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DomainConstraintsItemProvider(AdapterFactory adapterFactory) {
+	public DomainConstraintsItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -47,8 +49,10 @@ public class DomainConstraintsItemProvider extends ConstraintItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addCollectionPropertyDescriptor(object);
@@ -65,7 +69,8 @@ public class DomainConstraintsItemProvider extends ConstraintItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCollectionPropertyDescriptor(Object object) {
+	protected void addCollectionPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_DomainConstraints_collection_feature"),
@@ -81,7 +86,8 @@ public class DomainConstraintsItemProvider extends ConstraintItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addFetchPropertyDescriptor(Object object) {
+	protected void addFetchPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_DomainConstraints_fetch_feature"),
@@ -97,7 +103,8 @@ public class DomainConstraintsItemProvider extends ConstraintItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addOrderPropertyDescriptor(Object object) {
+	protected void addOrderPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_DomainConstraints_order_feature"),
@@ -113,7 +120,8 @@ public class DomainConstraintsItemProvider extends ConstraintItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCascadePropertyDescriptor(Object object) {
+	protected void addCascadePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_DomainConstraints_cascade_feature"),
@@ -130,7 +138,8 @@ public class DomainConstraintsItemProvider extends ConstraintItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/DomainConstraints"));
 	}
 
@@ -140,7 +149,8 @@ public class DomainConstraintsItemProvider extends ConstraintItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -151,7 +161,8 @@ public class DomainConstraintsItemProvider extends ConstraintItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((DomainConstraints) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_DomainConstraints_type")
 				: getString("_UI_DomainConstraints_type") + " " + label;
@@ -165,10 +176,12 @@ public class DomainConstraintsItemProvider extends ConstraintItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(DomainConstraints.class)) {
+		switch (notification.getFeatureID(DomainConstraints.class))
+		{
 		case FramewebPackage.DOMAIN_CONSTRAINTS__COLLECTION:
 		case FramewebPackage.DOMAIN_CONSTRAINTS__FETCH:
 		case FramewebPackage.DOMAIN_CONSTRAINTS__ORDER:
@@ -187,7 +200,8 @@ public class DomainConstraintsItemProvider extends ConstraintItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.CONSTRAINT__SPECIFICATION,
@@ -201,14 +215,16 @@ public class DomainConstraintsItemProvider extends ConstraintItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
 		boolean qualify = childFeature == UMLPackage.Literals.NAMED_ELEMENT__NAME_EXPRESSION
 				|| childFeature == UMLPackage.Literals.CONSTRAINT__SPECIFICATION;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
@@ -222,7 +238,8 @@ public class DomainConstraintsItemProvider extends ConstraintItemProvider {
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		return FramewebEditPlugin.INSTANCE;
 	}
 

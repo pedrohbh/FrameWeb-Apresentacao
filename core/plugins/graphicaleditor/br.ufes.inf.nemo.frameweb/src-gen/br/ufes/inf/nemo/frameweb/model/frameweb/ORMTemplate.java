@@ -23,7 +23,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface ORMTemplate extends FrameworkProfile {
+public interface ORMTemplate extends FrameworkProfile
+{
 	/**
 	 * Returns the value of the '<em><b>Class Template</b></em>' attribute.
 	 * <!-- begin-user-doc -->

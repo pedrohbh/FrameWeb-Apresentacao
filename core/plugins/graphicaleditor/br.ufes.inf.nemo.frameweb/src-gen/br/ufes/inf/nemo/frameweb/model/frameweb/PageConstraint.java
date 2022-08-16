@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface PageConstraint extends NavigationConstraint {
+public interface PageConstraint extends NavigationConstraint
+{
 } // PageConstraint

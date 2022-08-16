@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class LOBAttributeImpl extends AttributeImpl implements LOBAttribute {
+public class LOBAttributeImpl extends AttributeImpl implements LOBAttribute
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LOBAttributeImpl() {
+	protected LOBAttributeImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class LOBAttributeImpl extends AttributeImpl implements LOBAttribute {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.LOB_ATTRIBUTE;
 	}
 

@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.PackageImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class SemanticPackageImpl extends PackageImpl implements SemanticPackage {
+public class SemanticPackageImpl extends PackageImpl implements SemanticPackage
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SemanticPackageImpl() {
+	protected SemanticPackageImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class SemanticPackageImpl extends PackageImpl implements SemanticPackage 
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.SEMANTIC_PACKAGE;
 	}
 

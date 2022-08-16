@@ -19,7 +19,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface FrontControllerDependency extends NavigationDependency {
+public interface FrontControllerDependency extends NavigationDependency
+{
 	/**
 	 * Returns the value of the '<em><b>Method</b></em>' reference.
 	 * <!-- begin-user-doc -->

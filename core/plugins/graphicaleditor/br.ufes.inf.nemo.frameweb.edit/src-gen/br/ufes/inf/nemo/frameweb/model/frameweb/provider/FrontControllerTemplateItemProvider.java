@@ -24,14 +24,16 @@ import org.eclipse.uml2.uml.UMLPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FrontControllerTemplateItemProvider extends FrameworkProfileItemProvider {
+public class FrontControllerTemplateItemProvider extends FrameworkProfileItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FrontControllerTemplateItemProvider(AdapterFactory adapterFactory) {
+	public FrontControllerTemplateItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -42,8 +44,10 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addClassTemplatePropertyDescriptor(object);
@@ -66,7 +70,8 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addClassTemplatePropertyDescriptor(Object object) {
+	protected void addClassTemplatePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_FrontControllerTemplate_classTemplate_feature"),
@@ -82,7 +87,8 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPageTemplatePropertyDescriptor(Object object) {
+	protected void addPageTemplatePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_FrontControllerTemplate_pageTemplate_feature"),
@@ -98,7 +104,8 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAuthPageTemplatePropertyDescriptor(Object object) {
+	protected void addAuthPageTemplatePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_FrontControllerTemplate_authPageTemplate_feature"),
@@ -114,7 +121,8 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addFormTemplatePropertyDescriptor(Object object) {
+	protected void addFormTemplatePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_FrontControllerTemplate_formTemplate_feature"),
@@ -130,7 +138,8 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addClassExtensionPropertyDescriptor(Object object) {
+	protected void addClassExtensionPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_FrontControllerTemplate_classExtension_feature"),
@@ -146,7 +155,8 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPageExtensionPropertyDescriptor(Object object) {
+	protected void addPageExtensionPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_FrontControllerTemplate_pageExtension_feature"),
@@ -162,7 +172,8 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRestClassTemplatePropertyDescriptor(Object object) {
+	protected void addRestClassTemplatePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_FrontControllerTemplate_restClassTemplate_feature"),
@@ -178,7 +189,8 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPartialTemplatePropertyDescriptor(Object object) {
+	protected void addPartialTemplatePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_FrontControllerTemplate_partialTemplate_feature"),
@@ -194,7 +206,8 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPartialExtensionPropertyDescriptor(Object object) {
+	protected void addPartialExtensionPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_FrontControllerTemplate_partialExtension_feature"),
@@ -210,7 +223,8 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIsSPAFrameworkPropertyDescriptor(Object object) {
+	protected void addIsSPAFrameworkPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_FrontControllerTemplate_isSPAFramework_feature"),
@@ -227,7 +241,8 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/FrontControllerTemplate"));
 	}
 
@@ -237,7 +252,8 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -248,7 +264,8 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((FrontControllerTemplate) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_FrontControllerTemplate_type")
 				: getString("_UI_FrontControllerTemplate_type") + " " + label;
@@ -262,10 +279,12 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(FrontControllerTemplate.class)) {
+		switch (notification.getFeatureID(FrontControllerTemplate.class))
+		{
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__CLASS_TEMPLATE:
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__PAGE_TEMPLATE:
 		case FramewebPackage.FRONT_CONTROLLER_TEMPLATE__AUTH_PAGE_TEMPLATE:
@@ -290,7 +309,8 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 
@@ -301,7 +321,8 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -316,7 +337,8 @@ public class FrontControllerTemplateItemProvider extends FrameworkProfileItemPro
 				|| childFeature == UMLPackage.Literals.PACKAGE__OWNED_STEREOTYPE
 				|| childFeature == UMLPackage.Literals.PACKAGE__OWNED_TYPE;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}

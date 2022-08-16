@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public abstract class IndividualImpl extends PropertyImpl implements Individual {
+public abstract class IndividualImpl extends PropertyImpl implements Individual
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IndividualImpl() {
+	protected IndividualImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public abstract class IndividualImpl extends PropertyImpl implements Individual 
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.INDIVIDUAL;
 	}
 

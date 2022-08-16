@@ -61,7 +61,8 @@ import org.eclipse.uml2.uml.util.UMLValidator;
  * @generated
  */
 @SuppressWarnings("all")
-public class DataPropertyImpl extends VocabularyEntityImpl implements DataProperty {
+public class DataPropertyImpl extends VocabularyEntityImpl implements DataProperty
+{
 	/**
 	 * The default value of the '{@link #isDerived() <em>Is Derived</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -137,7 +138,8 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DataPropertyImpl() {
+	protected DataPropertyImpl()
+	{
 		super();
 	}
 
@@ -147,7 +149,8 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.DATA_PROPERTY;
 	}
 
@@ -157,7 +160,8 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public EList<Element> getRelatedElements() {
+	public EList<Element> getRelatedElements()
+	{
 		// TODO: implement this method to return the 'Related Element' reference list
 		// Ensure that you remove @generated or mark it @generated NOT
 		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
@@ -171,7 +175,8 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public EList<Type> getEndTypes() {
+	public EList<Type> getEndTypes()
+	{
 		// TODO: implement this method to return the 'End Type' reference list
 		// Ensure that you remove @generated or mark it @generated NOT
 		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
@@ -185,7 +190,8 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public boolean isDerived() {
+	public boolean isDerived()
+	{
 		return isDerived;
 	}
 
@@ -195,7 +201,8 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public void setIsDerived(boolean newIsDerived) {
+	public void setIsDerived(boolean newIsDerived)
+	{
 		boolean oldIsDerived = isDerived;
 		isDerived = newIsDerived;
 		if (eNotificationRequired())
@@ -209,8 +216,10 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public EList<Property> getMemberEnds() {
-		if (memberEnds == null) {
+	public EList<Property> getMemberEnds()
+	{
+		if (memberEnds == null)
+		{
 			memberEnds = new EObjectWithInverseResolvingEList<Property>(Property.class, this,
 					FramewebPackage.DATA_PROPERTY__MEMBER_END, UMLPackage.PROPERTY__ASSOCIATION);
 		}
@@ -223,8 +232,10 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public EList<Property> getOwnedEnds() {
-		if (ownedEnds == null) {
+	public EList<Property> getOwnedEnds()
+	{
+		if (ownedEnds == null)
+		{
 			ownedEnds = new EObjectContainmentWithInverseEList.Resolving<Property>(Property.class, this,
 					FramewebPackage.DATA_PROPERTY__OWNED_END, UMLPackage.PROPERTY__OWNING_ASSOCIATION);
 		}
@@ -237,8 +248,10 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public EList<Property> getNavigableOwnedEnds() {
-		if (navigableOwnedEnds == null) {
+	public EList<Property> getNavigableOwnedEnds()
+	{
+		if (navigableOwnedEnds == null)
+		{
 			navigableOwnedEnds = new EObjectResolvingEList<Property>(Property.class, this,
 					FramewebPackage.DATA_PROPERTY__NAVIGABLE_OWNED_END);
 		}
@@ -251,7 +264,8 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public String getPrefix() {
+	public String getPrefix()
+	{
 		return prefix;
 	}
 
@@ -261,7 +275,8 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public void setPrefix(String newPrefix) {
+	public void setPrefix(String newPrefix)
+	{
 		String oldPrefix = prefix;
 		prefix = newPrefix;
 		if (eNotificationRequired())
@@ -275,13 +290,16 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public boolean validateSpecializedEndNumber(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateSpecializedEndNumber(DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
+		if (false)
+		{
+			if (diagnostics != null)
+			{
 				diagnostics
 						.add(new BasicDiagnostic(Diagnostic.ERROR, UMLValidator.DIAGNOSTIC_SOURCE,
 								UMLValidator.ASSOCIATION__SPECIALIZED_END_NUMBER,
@@ -301,13 +319,16 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public boolean validateSpecializedEndTypes(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateSpecializedEndTypes(DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
+		if (false)
+		{
+			if (diagnostics != null)
+			{
 				diagnostics
 						.add(new BasicDiagnostic(Diagnostic.ERROR, UMLValidator.DIAGNOSTIC_SOURCE,
 								UMLValidator.ASSOCIATION__SPECIALIZED_END_TYPES,
@@ -327,13 +348,16 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public boolean validateBinaryAssociations(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateBinaryAssociations(DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
+		if (false)
+		{
+			if (diagnostics != null)
+			{
 				diagnostics
 						.add(new BasicDiagnostic(Diagnostic.ERROR, UMLValidator.DIAGNOSTIC_SOURCE,
 								UMLValidator.ASSOCIATION__BINARY_ASSOCIATIONS,
@@ -353,13 +377,16 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public boolean validateAssociationEnds(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateAssociationEnds(DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
+		if (false)
+		{
+			if (diagnostics != null)
+			{
 				diagnostics
 						.add(new BasicDiagnostic(Diagnostic.ERROR, UMLValidator.DIAGNOSTIC_SOURCE,
 								UMLValidator.ASSOCIATION__ASSOCIATION_ENDS,
@@ -379,13 +406,16 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public boolean validateEndsMustBeTyped(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateEndsMustBeTyped(DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
+		if (false)
+		{
+			if (diagnostics != null)
+			{
 				diagnostics
 						.add(new BasicDiagnostic(Diagnostic.ERROR, UMLValidator.DIAGNOSTIC_SOURCE,
 								UMLValidator.ASSOCIATION__ENDS_MUST_BE_TYPED,
@@ -405,7 +435,8 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public boolean isBinary() {
+	public boolean isBinary()
+	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -418,8 +449,10 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DATA_PROPERTY__MEMBER_END:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getMemberEnds()).basicAdd(otherEnd, msgs);
 		case FramewebPackage.DATA_PROPERTY__OWNED_END:
@@ -434,8 +467,10 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DATA_PROPERTY__MEMBER_END:
 			return ((InternalEList<?>) getMemberEnds()).basicRemove(otherEnd, msgs);
 		case FramewebPackage.DATA_PROPERTY__OWNED_END:
@@ -450,8 +485,10 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DATA_PROPERTY__RELATED_ELEMENT:
 			return getRelatedElements();
 		case FramewebPackage.DATA_PROPERTY__END_TYPE:
@@ -477,8 +514,10 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DATA_PROPERTY__IS_DERIVED:
 			setIsDerived((Boolean) newValue);
 			return;
@@ -507,8 +546,10 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DATA_PROPERTY__IS_DERIVED:
 			setIsDerived(IS_DERIVED_EDEFAULT);
 			return;
@@ -534,8 +575,10 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DATA_PROPERTY__RELATED_ELEMENT:
 			return !getRelatedElements().isEmpty();
 		case FramewebPackage.DATA_PROPERTY__END_TYPE:
@@ -560,17 +603,22 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == Relationship.class) {
-			switch (derivedFeatureID) {
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
+	{
+		if (baseClass == Relationship.class)
+		{
+			switch (derivedFeatureID)
+			{
 			case FramewebPackage.DATA_PROPERTY__RELATED_ELEMENT:
 				return UMLPackage.RELATIONSHIP__RELATED_ELEMENT;
 			default:
 				return -1;
 			}
 		}
-		if (baseClass == Association.class) {
-			switch (derivedFeatureID) {
+		if (baseClass == Association.class)
+		{
+			switch (derivedFeatureID)
+			{
 			case FramewebPackage.DATA_PROPERTY__END_TYPE:
 				return UMLPackage.ASSOCIATION__END_TYPE;
 			case FramewebPackage.DATA_PROPERTY__IS_DERIVED:
@@ -585,8 +633,10 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 				return -1;
 			}
 		}
-		if (baseClass == VocabularyAssociation.class) {
-			switch (derivedFeatureID) {
+		if (baseClass == VocabularyAssociation.class)
+		{
+			switch (derivedFeatureID)
+			{
 			case FramewebPackage.DATA_PROPERTY__PREFIX:
 				return FramewebPackage.VOCABULARY_ASSOCIATION__PREFIX;
 			default:
@@ -602,17 +652,22 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == Relationship.class) {
-			switch (baseFeatureID) {
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
+	{
+		if (baseClass == Relationship.class)
+		{
+			switch (baseFeatureID)
+			{
 			case UMLPackage.RELATIONSHIP__RELATED_ELEMENT:
 				return FramewebPackage.DATA_PROPERTY__RELATED_ELEMENT;
 			default:
 				return -1;
 			}
 		}
-		if (baseClass == Association.class) {
-			switch (baseFeatureID) {
+		if (baseClass == Association.class)
+		{
+			switch (baseFeatureID)
+			{
 			case UMLPackage.ASSOCIATION__END_TYPE:
 				return FramewebPackage.DATA_PROPERTY__END_TYPE;
 			case UMLPackage.ASSOCIATION__IS_DERIVED:
@@ -627,8 +682,10 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 				return -1;
 			}
 		}
-		if (baseClass == VocabularyAssociation.class) {
-			switch (baseFeatureID) {
+		if (baseClass == VocabularyAssociation.class)
+		{
+			switch (baseFeatureID)
+			{
 			case FramewebPackage.VOCABULARY_ASSOCIATION__PREFIX:
 				return FramewebPackage.DATA_PROPERTY__PREFIX;
 			default:
@@ -644,15 +701,20 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
-		if (baseClass == Relationship.class) {
-			switch (baseOperationID) {
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass)
+	{
+		if (baseClass == Relationship.class)
+		{
+			switch (baseOperationID)
+			{
 			default:
 				return -1;
 			}
 		}
-		if (baseClass == Association.class) {
-			switch (baseOperationID) {
+		if (baseClass == Association.class)
+		{
+			switch (baseOperationID)
+			{
 			case UMLPackage.ASSOCIATION___VALIDATE_SPECIALIZED_END_NUMBER__DIAGNOSTICCHAIN_MAP:
 				return FramewebPackage.DATA_PROPERTY___VALIDATE_SPECIALIZED_END_NUMBER__DIAGNOSTICCHAIN_MAP;
 			case UMLPackage.ASSOCIATION___VALIDATE_SPECIALIZED_END_TYPES__DIAGNOSTICCHAIN_MAP:
@@ -671,8 +733,10 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 				return -1;
 			}
 		}
-		if (baseClass == VocabularyAssociation.class) {
-			switch (baseOperationID) {
+		if (baseClass == VocabularyAssociation.class)
+		{
+			switch (baseOperationID)
+			{
 			default:
 				return -1;
 			}
@@ -687,8 +751,10 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 */
 	@Override
 	@SuppressWarnings("unchecked")
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
+	{
+		switch (operationID)
+		{
 		case FramewebPackage.DATA_PROPERTY___VALIDATE_SPECIALIZED_END_NUMBER__DIAGNOSTICCHAIN_MAP:
 			return validateSpecializedEndNumber((DiagnosticChain) arguments.get(0),
 					(Map<Object, Object>) arguments.get(1));
@@ -714,7 +780,8 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 
@@ -728,73 +795,85 @@ public class DataPropertyImpl extends VocabularyEntityImpl implements DataProper
 	}
 
 	@Override
-	public Property createNavigableOwnedEnd(String arg0, Type arg1) {
+	public Property createNavigableOwnedEnd(String arg0, Type arg1)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property createNavigableOwnedEnd(String arg0, Type arg1, EClass arg2) {
+	public Property createNavigableOwnedEnd(String arg0, Type arg1, EClass arg2)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property createOwnedEnd(String arg0, Type arg1) {
+	public Property createOwnedEnd(String arg0, Type arg1)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property createOwnedEnd(String arg0, Type arg1, EClass arg2) {
+	public Property createOwnedEnd(String arg0, Type arg1, EClass arg2)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Type getEndType(String arg0) {
+	public Type getEndType(String arg0)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Type getEndType(String arg0, boolean arg1, EClass arg2) {
+	public Type getEndType(String arg0, boolean arg1, EClass arg2)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getMemberEnd(String arg0, Type arg1) {
+	public Property getMemberEnd(String arg0, Type arg1)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getMemberEnd(String arg0, Type arg1, boolean arg2, EClass arg3) {
+	public Property getMemberEnd(String arg0, Type arg1, boolean arg2, EClass arg3)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getNavigableOwnedEnd(String arg0, Type arg1) {
+	public Property getNavigableOwnedEnd(String arg0, Type arg1)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getNavigableOwnedEnd(String arg0, Type arg1, boolean arg2, EClass arg3, boolean arg4) {
+	public Property getNavigableOwnedEnd(String arg0, Type arg1, boolean arg2, EClass arg3, boolean arg4)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getOwnedEnd(String arg0, Type arg1) {
+	public Property getOwnedEnd(String arg0, Type arg1)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Property getOwnedEnd(String arg0, Type arg1, boolean arg2, EClass arg3, boolean arg4) {
+	public Property getOwnedEnd(String arg0, Type arg1, boolean arg2, EClass arg3, boolean arg4)
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}

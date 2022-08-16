@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.ClassImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class RestControllerClassImpl extends ClassImpl implements RestControllerClass {
+public class RestControllerClassImpl extends ClassImpl implements RestControllerClass
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RestControllerClassImpl() {
+	protected RestControllerClassImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class RestControllerClassImpl extends ClassImpl implements RestController
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.REST_CONTROLLER_CLASS;
 	}
 

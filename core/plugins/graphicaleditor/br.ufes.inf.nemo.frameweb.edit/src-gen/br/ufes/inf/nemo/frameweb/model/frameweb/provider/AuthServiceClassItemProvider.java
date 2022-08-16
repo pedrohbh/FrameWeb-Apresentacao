@@ -24,14 +24,16 @@ import org.eclipse.uml2.uml.UMLPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AuthServiceClassItemProvider extends ServiceClassItemProvider {
+public class AuthServiceClassItemProvider extends ServiceClassItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AuthServiceClassItemProvider(AdapterFactory adapterFactory) {
+	public AuthServiceClassItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -42,8 +44,10 @@ public class AuthServiceClassItemProvider extends ServiceClassItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addPermissionNamePropertyDescriptor(object);
@@ -57,7 +61,8 @@ public class AuthServiceClassItemProvider extends ServiceClassItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPermissionNamePropertyDescriptor(Object object) {
+	protected void addPermissionNamePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_AuthServiceClass_permissionName_feature"),
@@ -74,7 +79,8 @@ public class AuthServiceClassItemProvider extends ServiceClassItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/AuthServiceClass"));
 	}
 
@@ -84,7 +90,8 @@ public class AuthServiceClassItemProvider extends ServiceClassItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -95,7 +102,8 @@ public class AuthServiceClassItemProvider extends ServiceClassItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((AuthServiceClass) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_AuthServiceClass_type")
 				: getString("_UI_AuthServiceClass_type") + " " + label;
@@ -109,10 +117,12 @@ public class AuthServiceClassItemProvider extends ServiceClassItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(AuthServiceClass.class)) {
+		switch (notification.getFeatureID(AuthServiceClass.class))
+		{
 		case FramewebPackage.AUTH_SERVICE_CLASS__PERMISSION_NAME:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
@@ -128,7 +138,8 @@ public class AuthServiceClassItemProvider extends ServiceClassItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 
@@ -139,7 +150,8 @@ public class AuthServiceClassItemProvider extends ServiceClassItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -152,7 +164,8 @@ public class AuthServiceClassItemProvider extends ServiceClassItemProvider {
 				|| childFeature == UMLPackage.Literals.BEHAVIORED_CLASSIFIER__CLASSIFIER_BEHAVIOR
 				|| childFeature == UMLPackage.Literals.BEHAVIORED_CLASSIFIER__OWNED_BEHAVIOR;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}

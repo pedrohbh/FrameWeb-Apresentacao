@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class DomainPropertyImpl extends PropertyImpl implements DomainProperty {
+public class DomainPropertyImpl extends PropertyImpl implements DomainProperty
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DomainPropertyImpl() {
+	protected DomainPropertyImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class DomainPropertyImpl extends PropertyImpl implements DomainProperty {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.DOMAIN_PROPERTY;
 	}
 

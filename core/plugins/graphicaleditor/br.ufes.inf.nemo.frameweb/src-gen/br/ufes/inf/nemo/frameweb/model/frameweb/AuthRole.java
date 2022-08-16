@@ -18,7 +18,8 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface AuthRole extends DomainClass {
+public interface AuthRole extends DomainClass
+{
 	/**
 	 * Returns the value of the '<em><b>Auth Role Name</b></em>' reference.
 	 * <!-- begin-user-doc -->

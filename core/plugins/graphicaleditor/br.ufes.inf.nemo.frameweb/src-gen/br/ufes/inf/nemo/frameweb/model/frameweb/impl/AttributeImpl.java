@@ -30,7 +30,8 @@ import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public abstract class AttributeImpl extends PropertyImpl implements Attribute {
+public abstract class AttributeImpl extends PropertyImpl implements Attribute
+{
 	/**
 	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -116,7 +117,8 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AttributeImpl() {
+	protected AttributeImpl()
+	{
 		super();
 	}
 
@@ -126,7 +128,8 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.ATTRIBUTE;
 	}
 
@@ -136,7 +139,8 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * @generated
 	 */
 	@Override
-	public long getSize() {
+	public long getSize()
+	{
 		return size;
 	}
 
@@ -146,7 +150,8 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * @generated
 	 */
 	@Override
-	public void setSize(long newSize) {
+	public void setSize(long newSize)
+	{
 		long oldSize = size;
 		size = newSize;
 		if (eNotificationRequired())
@@ -159,7 +164,8 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * @generated
 	 */
 	@Override
-	public boolean isIsNull() {
+	public boolean isIsNull()
+	{
 		return isNull;
 	}
 
@@ -169,7 +175,8 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * @generated
 	 */
 	@Override
-	public void setIsNull(boolean newIsNull) {
+	public void setIsNull(boolean newIsNull)
+	{
 		boolean oldIsNull = isNull;
 		isNull = newIsNull;
 		if (eNotificationRequired())
@@ -183,7 +190,8 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * @generated
 	 */
 	@Override
-	public boolean isIsPersistent() {
+	public boolean isIsPersistent()
+	{
 		return isPersistent;
 	}
 
@@ -193,7 +201,8 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * @generated
 	 */
 	@Override
-	public void setIsPersistent(boolean newIsPersistent) {
+	public void setIsPersistent(boolean newIsPersistent)
+	{
 		boolean oldIsPersistent = isPersistent;
 		isPersistent = newIsPersistent;
 		if (eNotificationRequired())
@@ -207,7 +216,8 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * @generated
 	 */
 	@Override
-	public String getOwlEquivalentProperty() {
+	public String getOwlEquivalentProperty()
+	{
 		return owlEquivalentProperty;
 	}
 
@@ -217,7 +227,8 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * @generated
 	 */
 	@Override
-	public void setOwlEquivalentProperty(String newOwlEquivalentProperty) {
+	public void setOwlEquivalentProperty(String newOwlEquivalentProperty)
+	{
 		String oldOwlEquivalentProperty = owlEquivalentProperty;
 		owlEquivalentProperty = newOwlEquivalentProperty;
 		if (eNotificationRequired())
@@ -231,8 +242,10 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.ATTRIBUTE__SIZE:
 			return getSize();
 		case FramewebPackage.ATTRIBUTE__IS_NULL:
@@ -251,8 +264,10 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.ATTRIBUTE__SIZE:
 			setSize((Long) newValue);
 			return;
@@ -275,8 +290,10 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.ATTRIBUTE__SIZE:
 			setSize(SIZE_EDEFAULT);
 			return;
@@ -299,8 +316,10 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.ATTRIBUTE__SIZE:
 			return size != SIZE_EDEFAULT;
 		case FramewebPackage.ATTRIBUTE__IS_NULL:
@@ -320,7 +339,8 @@ public abstract class AttributeImpl extends PropertyImpl implements Attribute {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

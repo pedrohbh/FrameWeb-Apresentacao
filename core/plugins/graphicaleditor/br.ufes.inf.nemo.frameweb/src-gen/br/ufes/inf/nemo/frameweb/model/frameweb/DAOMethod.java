@@ -22,7 +22,8 @@ import org.eclipse.uml2.uml.Type;
  * @model
  * @generated
  */
-public interface DAOMethod extends Operation {
+public interface DAOMethod extends Operation
+{
 	/**
 	 * Returns the value of the '<em><b>Method Type</b></em>' reference.
 	 * <!-- begin-user-doc -->

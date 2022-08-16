@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.Association;
  * @model
  * @generated
  */
-public interface DomainVocabularyAssociation extends Association {
+public interface DomainVocabularyAssociation extends Association
+{
 } // DomainVocabularyAssociation

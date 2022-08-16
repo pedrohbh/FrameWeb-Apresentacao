@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.ConstraintImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public abstract class NavigationConstraintImpl extends ConstraintImpl implements NavigationConstraint {
+public abstract class NavigationConstraintImpl extends ConstraintImpl implements NavigationConstraint
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NavigationConstraintImpl() {
+	protected NavigationConstraintImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public abstract class NavigationConstraintImpl extends ConstraintImpl implements
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.NAVIGATION_CONSTRAINT;
 	}
 

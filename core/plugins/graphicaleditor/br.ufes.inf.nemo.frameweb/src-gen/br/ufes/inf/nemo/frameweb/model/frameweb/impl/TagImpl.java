@@ -27,7 +27,8 @@ import org.eclipse.uml2.uml.internal.impl.StereotypeImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class TagImpl extends StereotypeImpl implements Tag {
+public class TagImpl extends StereotypeImpl implements Tag
+{
 	/**
 	 * The default value of the '{@link #getCodeGenerationTemplate() <em>Code Generation Template</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -53,7 +54,8 @@ public class TagImpl extends StereotypeImpl implements Tag {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TagImpl() {
+	protected TagImpl()
+	{
 		super();
 	}
 
@@ -63,7 +65,8 @@ public class TagImpl extends StereotypeImpl implements Tag {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.TAG;
 	}
 
@@ -73,7 +76,8 @@ public class TagImpl extends StereotypeImpl implements Tag {
 	 * @generated
 	 */
 	@Override
-	public String getCodeGenerationTemplate() {
+	public String getCodeGenerationTemplate()
+	{
 		return codeGenerationTemplate;
 	}
 
@@ -83,7 +87,8 @@ public class TagImpl extends StereotypeImpl implements Tag {
 	 * @generated
 	 */
 	@Override
-	public void setCodeGenerationTemplate(String newCodeGenerationTemplate) {
+	public void setCodeGenerationTemplate(String newCodeGenerationTemplate)
+	{
 		String oldCodeGenerationTemplate = codeGenerationTemplate;
 		codeGenerationTemplate = newCodeGenerationTemplate;
 		if (eNotificationRequired())
@@ -97,8 +102,10 @@ public class TagImpl extends StereotypeImpl implements Tag {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.TAG__CODE_GENERATION_TEMPLATE:
 			return getCodeGenerationTemplate();
 		}
@@ -111,8 +118,10 @@ public class TagImpl extends StereotypeImpl implements Tag {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.TAG__CODE_GENERATION_TEMPLATE:
 			setCodeGenerationTemplate((String) newValue);
 			return;
@@ -126,8 +135,10 @@ public class TagImpl extends StereotypeImpl implements Tag {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.TAG__CODE_GENERATION_TEMPLATE:
 			setCodeGenerationTemplate(CODE_GENERATION_TEMPLATE_EDEFAULT);
 			return;
@@ -141,8 +152,10 @@ public class TagImpl extends StereotypeImpl implements Tag {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.TAG__CODE_GENERATION_TEMPLATE:
 			return CODE_GENERATION_TEMPLATE_EDEFAULT == null ? codeGenerationTemplate != null
 					: !CODE_GENERATION_TEMPLATE_EDEFAULT.equals(codeGenerationTemplate);
@@ -156,7 +169,8 @@ public class TagImpl extends StereotypeImpl implements Tag {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

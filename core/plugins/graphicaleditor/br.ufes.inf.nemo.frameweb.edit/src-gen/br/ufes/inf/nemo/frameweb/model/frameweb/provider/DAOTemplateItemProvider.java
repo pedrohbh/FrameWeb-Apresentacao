@@ -24,14 +24,16 @@ import org.eclipse.uml2.uml.UMLPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DAOTemplateItemProvider extends FrameworkProfileItemProvider {
+public class DAOTemplateItemProvider extends FrameworkProfileItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DAOTemplateItemProvider(AdapterFactory adapterFactory) {
+	public DAOTemplateItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -42,8 +44,10 @@ public class DAOTemplateItemProvider extends FrameworkProfileItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addClassTemplatePropertyDescriptor(object);
@@ -60,7 +64,8 @@ public class DAOTemplateItemProvider extends FrameworkProfileItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addClassTemplatePropertyDescriptor(Object object) {
+	protected void addClassTemplatePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_DAOTemplate_classTemplate_feature"),
@@ -76,7 +81,8 @@ public class DAOTemplateItemProvider extends FrameworkProfileItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addInterfaceTemplatePropertyDescriptor(Object object) {
+	protected void addInterfaceTemplatePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_DAOTemplate_interfaceTemplate_feature"),
@@ -92,7 +98,8 @@ public class DAOTemplateItemProvider extends FrameworkProfileItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addClassExtensionPropertyDescriptor(Object object) {
+	protected void addClassExtensionPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_DAOTemplate_classExtension_feature"),
@@ -108,7 +115,8 @@ public class DAOTemplateItemProvider extends FrameworkProfileItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addInterfaceExtensionPropertyDescriptor(Object object) {
+	protected void addInterfaceExtensionPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_DAOTemplate_interfaceExtension_feature"),
@@ -125,7 +133,8 @@ public class DAOTemplateItemProvider extends FrameworkProfileItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/DAOTemplate"));
 	}
 
@@ -135,7 +144,8 @@ public class DAOTemplateItemProvider extends FrameworkProfileItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -146,7 +156,8 @@ public class DAOTemplateItemProvider extends FrameworkProfileItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((DAOTemplate) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_DAOTemplate_type")
 				: getString("_UI_DAOTemplate_type") + " " + label;
@@ -160,10 +171,12 @@ public class DAOTemplateItemProvider extends FrameworkProfileItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(DAOTemplate.class)) {
+		switch (notification.getFeatureID(DAOTemplate.class))
+		{
 		case FramewebPackage.DAO_TEMPLATE__CLASS_TEMPLATE:
 		case FramewebPackage.DAO_TEMPLATE__INTERFACE_TEMPLATE:
 		case FramewebPackage.DAO_TEMPLATE__CLASS_EXTENSION:
@@ -182,7 +195,8 @@ public class DAOTemplateItemProvider extends FrameworkProfileItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 
@@ -193,7 +207,8 @@ public class DAOTemplateItemProvider extends FrameworkProfileItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -208,7 +223,8 @@ public class DAOTemplateItemProvider extends FrameworkProfileItemProvider {
 				|| childFeature == UMLPackage.Literals.PACKAGE__OWNED_STEREOTYPE
 				|| childFeature == UMLPackage.Literals.PACKAGE__OWNED_TYPE;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}

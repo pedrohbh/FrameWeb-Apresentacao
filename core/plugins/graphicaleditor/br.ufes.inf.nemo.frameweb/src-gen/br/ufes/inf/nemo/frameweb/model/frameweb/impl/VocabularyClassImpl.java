@@ -27,7 +27,8 @@ import org.eclipse.uml2.uml.internal.impl.ClassImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class VocabularyClassImpl extends ClassImpl implements VocabularyClass {
+public class VocabularyClassImpl extends ClassImpl implements VocabularyClass
+{
 	/**
 	 * The default value of the '{@link #getPrefix() <em>Prefix</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -53,7 +54,8 @@ public class VocabularyClassImpl extends ClassImpl implements VocabularyClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VocabularyClassImpl() {
+	protected VocabularyClassImpl()
+	{
 		super();
 	}
 
@@ -63,7 +65,8 @@ public class VocabularyClassImpl extends ClassImpl implements VocabularyClass {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.VOCABULARY_CLASS;
 	}
 
@@ -73,7 +76,8 @@ public class VocabularyClassImpl extends ClassImpl implements VocabularyClass {
 	 * @generated
 	 */
 	@Override
-	public String getPrefix() {
+	public String getPrefix()
+	{
 		return prefix;
 	}
 
@@ -83,7 +87,8 @@ public class VocabularyClassImpl extends ClassImpl implements VocabularyClass {
 	 * @generated
 	 */
 	@Override
-	public void setPrefix(String newPrefix) {
+	public void setPrefix(String newPrefix)
+	{
 		String oldPrefix = prefix;
 		prefix = newPrefix;
 		if (eNotificationRequired())
@@ -97,8 +102,10 @@ public class VocabularyClassImpl extends ClassImpl implements VocabularyClass {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.VOCABULARY_CLASS__PREFIX:
 			return getPrefix();
 		}
@@ -111,8 +118,10 @@ public class VocabularyClassImpl extends ClassImpl implements VocabularyClass {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.VOCABULARY_CLASS__PREFIX:
 			setPrefix((String) newValue);
 			return;
@@ -126,8 +135,10 @@ public class VocabularyClassImpl extends ClassImpl implements VocabularyClass {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.VOCABULARY_CLASS__PREFIX:
 			setPrefix(PREFIX_EDEFAULT);
 			return;
@@ -141,8 +152,10 @@ public class VocabularyClassImpl extends ClassImpl implements VocabularyClass {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.VOCABULARY_CLASS__PREFIX:
 			return PREFIX_EDEFAULT == null ? prefix != null : !PREFIX_EDEFAULT.equals(prefix);
 		}
@@ -155,7 +168,8 @@ public class VocabularyClassImpl extends ClassImpl implements VocabularyClass {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

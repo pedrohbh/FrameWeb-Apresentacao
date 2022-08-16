@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class EntityModelImpl extends FramewebModelImpl implements EntityModel {
+public class EntityModelImpl extends FramewebModelImpl implements EntityModel
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EntityModelImpl() {
+	protected EntityModelImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class EntityModelImpl extends FramewebModelImpl implements EntityModel {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.ENTITY_MODEL;
 	}
 

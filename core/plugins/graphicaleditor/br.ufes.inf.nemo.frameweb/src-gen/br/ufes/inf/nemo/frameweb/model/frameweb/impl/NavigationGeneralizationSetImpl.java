@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.GeneralizationSetImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class NavigationGeneralizationSetImpl extends GeneralizationSetImpl implements NavigationGeneralizationSet {
+public class NavigationGeneralizationSetImpl extends GeneralizationSetImpl implements NavigationGeneralizationSet
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NavigationGeneralizationSetImpl() {
+	protected NavigationGeneralizationSetImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class NavigationGeneralizationSetImpl extends GeneralizationSetImpl imple
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.NAVIGATION_GENERALIZATION_SET;
 	}
 

@@ -31,7 +31,8 @@ import org.eclipse.uml2.uml.internal.impl.OperationImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class DAOMethodImpl extends OperationImpl implements DAOMethod {
+public class DAOMethodImpl extends OperationImpl implements DAOMethod
+{
 	/**
 	 * The cached value of the '{@link #getMethodType() <em>Method Type</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -66,7 +67,8 @@ public class DAOMethodImpl extends OperationImpl implements DAOMethod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DAOMethodImpl() {
+	protected DAOMethodImpl()
+	{
 		super();
 	}
 
@@ -76,7 +78,8 @@ public class DAOMethodImpl extends OperationImpl implements DAOMethod {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.DAO_METHOD;
 	}
 
@@ -86,11 +89,14 @@ public class DAOMethodImpl extends OperationImpl implements DAOMethod {
 	 * @generated
 	 */
 	@Override
-	public Type getMethodType() {
-		if (methodType != null && methodType.eIsProxy()) {
+	public Type getMethodType()
+	{
+		if (methodType != null && methodType.eIsProxy())
+		{
 			InternalEObject oldMethodType = (InternalEObject) methodType;
 			methodType = (Type) eResolveProxy(oldMethodType);
-			if (methodType != oldMethodType) {
+			if (methodType != oldMethodType)
+			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FramewebPackage.DAO_METHOD__METHOD_TYPE,
 							oldMethodType, methodType));
@@ -104,7 +110,8 @@ public class DAOMethodImpl extends OperationImpl implements DAOMethod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Type basicGetMethodType() {
+	public Type basicGetMethodType()
+	{
 		return methodType;
 	}
 
@@ -114,7 +121,8 @@ public class DAOMethodImpl extends OperationImpl implements DAOMethod {
 	 * @generated
 	 */
 	@Override
-	public void setMethodType(Type newMethodType) {
+	public void setMethodType(Type newMethodType)
+	{
 		Type oldMethodType = methodType;
 		methodType = newMethodType;
 		if (eNotificationRequired())
@@ -128,7 +136,8 @@ public class DAOMethodImpl extends OperationImpl implements DAOMethod {
 	 * @generated
 	 */
 	@Override
-	public String getQuery() {
+	public String getQuery()
+	{
 		return query;
 	}
 
@@ -138,7 +147,8 @@ public class DAOMethodImpl extends OperationImpl implements DAOMethod {
 	 * @generated
 	 */
 	@Override
-	public void setQuery(String newQuery) {
+	public void setQuery(String newQuery)
+	{
 		String oldQuery = query;
 		query = newQuery;
 		if (eNotificationRequired())
@@ -151,8 +161,10 @@ public class DAOMethodImpl extends OperationImpl implements DAOMethod {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DAO_METHOD__METHOD_TYPE:
 			if (resolve)
 				return getMethodType();
@@ -169,8 +181,10 @@ public class DAOMethodImpl extends OperationImpl implements DAOMethod {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DAO_METHOD__METHOD_TYPE:
 			setMethodType((Type) newValue);
 			return;
@@ -187,8 +201,10 @@ public class DAOMethodImpl extends OperationImpl implements DAOMethod {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DAO_METHOD__METHOD_TYPE:
 			setMethodType((Type) null);
 			return;
@@ -205,8 +221,10 @@ public class DAOMethodImpl extends OperationImpl implements DAOMethod {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.DAO_METHOD__METHOD_TYPE:
 			return methodType != null;
 		case FramewebPackage.DAO_METHOD__QUERY:
@@ -221,7 +239,8 @@ public class DAOMethodImpl extends OperationImpl implements DAOMethod {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy())
 			return super.toString();
 

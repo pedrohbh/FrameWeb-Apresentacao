@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ApplicationModelImpl extends FramewebModelImpl implements ApplicationModel {
+public class ApplicationModelImpl extends FramewebModelImpl implements ApplicationModel
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApplicationModelImpl() {
+	protected ApplicationModelImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class ApplicationModelImpl extends FramewebModelImpl implements Applicati
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.APPLICATION_MODEL;
 	}
 

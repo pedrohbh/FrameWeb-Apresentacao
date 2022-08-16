@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class AuthServiceInterfaceImpl extends ServiceInterfaceImpl implements AuthServiceInterface {
+public class AuthServiceInterfaceImpl extends ServiceInterfaceImpl implements AuthServiceInterface
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AuthServiceInterfaceImpl() {
+	protected AuthServiceInterfaceImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class AuthServiceInterfaceImpl extends ServiceInterfaceImpl implements Au
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.AUTH_SERVICE_INTERFACE;
 	}
 

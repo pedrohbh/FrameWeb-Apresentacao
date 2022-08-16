@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.DataType;
  * @model
  * @generated
  */
-public interface VocabularyDataType extends VocabularyEntity, DataType {
+public interface VocabularyDataType extends VocabularyEntity, DataType
+{
 } // VocabularyDataType

@@ -23,7 +23,8 @@ import org.eclipse.uml2.uml.Constraint;
  * @model
  * @generated
  */
-public interface DomainConstraints extends Constraint {
+public interface DomainConstraints extends Constraint
+{
 	/**
 	 * Returns the value of the '<em><b>Collection</b></em>' attribute.
 	 * The literals are from the enumeration {@link br.ufes.inf.nemo.frameweb.model.frameweb.Collection}.

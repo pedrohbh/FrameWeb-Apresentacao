@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.AssociationImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class DomainVocabularyAssociationImpl extends AssociationImpl implements DomainVocabularyAssociation {
+public class DomainVocabularyAssociationImpl extends AssociationImpl implements DomainVocabularyAssociation
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DomainVocabularyAssociationImpl() {
+	protected DomainVocabularyAssociationImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class DomainVocabularyAssociationImpl extends AssociationImpl implements 
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.DOMAIN_VOCABULARY_ASSOCIATION;
 	}
 

@@ -29,14 +29,16 @@ import org.eclipse.uml2.uml.edit.providers.OperationItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class RestControllerMethodItemProvider extends OperationItemProvider {
+public class RestControllerMethodItemProvider extends OperationItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RestControllerMethodItemProvider(AdapterFactory adapterFactory) {
+	public RestControllerMethodItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -47,8 +49,10 @@ public class RestControllerMethodItemProvider extends OperationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addRequestTypePropertyDescriptor(object);
@@ -66,7 +70,8 @@ public class RestControllerMethodItemProvider extends OperationItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRequestTypePropertyDescriptor(Object object) {
+	protected void addRequestTypePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_RestControllerMethod_requestType_feature"),
@@ -82,7 +87,8 @@ public class RestControllerMethodItemProvider extends OperationItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIsDefaultPropertyDescriptor(Object object) {
+	protected void addIsDefaultPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_RestControllerMethod_isDefault_feature"),
@@ -98,7 +104,8 @@ public class RestControllerMethodItemProvider extends OperationItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addMethodTypePropertyDescriptor(Object object) {
+	protected void addMethodTypePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_RestControllerMethod_methodType_feature"),
@@ -113,7 +120,8 @@ public class RestControllerMethodItemProvider extends OperationItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRequestMappingPropertyDescriptor(Object object) {
+	protected void addRequestMappingPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_RestControllerMethod_requestMapping_feature"),
@@ -129,7 +137,8 @@ public class RestControllerMethodItemProvider extends OperationItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDesiredResponseStatusPropertyDescriptor(Object object) {
+	protected void addDesiredResponseStatusPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_RestControllerMethod_desiredResponseStatus_feature"),
@@ -146,7 +155,8 @@ public class RestControllerMethodItemProvider extends OperationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/RestControllerMethod"));
 	}
 
@@ -156,7 +166,8 @@ public class RestControllerMethodItemProvider extends OperationItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -167,7 +178,8 @@ public class RestControllerMethodItemProvider extends OperationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((RestControllerMethod) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_RestControllerMethod_type")
 				: getString("_UI_RestControllerMethod_type") + " " + label;
@@ -181,10 +193,12 @@ public class RestControllerMethodItemProvider extends OperationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(RestControllerMethod.class)) {
+		switch (notification.getFeatureID(RestControllerMethod.class))
+		{
 		case FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_TYPE:
 		case FramewebPackage.REST_CONTROLLER_METHOD__IS_DEFAULT:
 		case FramewebPackage.REST_CONTROLLER_METHOD__REQUEST_MAPPING:
@@ -203,7 +217,8 @@ public class RestControllerMethodItemProvider extends OperationItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(UMLPackage.Literals.NAMESPACE__OWNED_RULE,
@@ -286,7 +301,8 @@ public class RestControllerMethodItemProvider extends OperationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -295,7 +311,8 @@ public class RestControllerMethodItemProvider extends OperationItemProvider {
 				|| childFeature == UMLPackage.Literals.OPERATION__POSTCONDITION
 				|| childFeature == UMLPackage.Literals.OPERATION__PRECONDITION;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
@@ -309,7 +326,8 @@ public class RestControllerMethodItemProvider extends OperationItemProvider {
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		return FramewebEditPlugin.INSTANCE;
 	}
 

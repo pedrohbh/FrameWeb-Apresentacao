@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.GeneralizationSet;
  * @model
  * @generated
  */
-public interface ServiceGeneralizationSet extends GeneralizationSet {
+public interface ServiceGeneralizationSet extends GeneralizationSet
+{
 } // ServiceGeneralizationSet

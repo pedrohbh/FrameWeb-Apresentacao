@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.GeneralizationImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class DAOGeneralizationImpl extends GeneralizationImpl implements DAOGeneralization {
+public class DAOGeneralizationImpl extends GeneralizationImpl implements DAOGeneralization
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DAOGeneralizationImpl() {
+	protected DAOGeneralizationImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class DAOGeneralizationImpl extends GeneralizationImpl implements DAOGene
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.DAO_GENERALIZATION;
 	}
 

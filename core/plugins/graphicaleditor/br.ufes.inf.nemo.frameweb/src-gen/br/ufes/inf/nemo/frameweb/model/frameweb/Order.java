@@ -17,7 +17,8 @@ import org.eclipse.emf.common.util.Enumerator;
  * @model
  * @generated
  */
-public enum Order implements Enumerator {
+public enum Order implements Enumerator
+{
 	/**
 	 * The '<em><b>Natural</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -117,10 +118,13 @@ public enum Order implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Order get(String literal) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+	public static Order get(String literal)
+	{
+		for (int i = 0; i < VALUES_ARRAY.length; ++i)
+		{
 			Order result = VALUES_ARRAY[i];
-			if (result.toString().equals(literal)) {
+			if (result.toString().equals(literal))
+			{
 				return result;
 			}
 		}
@@ -135,10 +139,13 @@ public enum Order implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Order getByName(String name) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+	public static Order getByName(String name)
+	{
+		for (int i = 0; i < VALUES_ARRAY.length; ++i)
+		{
 			Order result = VALUES_ARRAY[i];
-			if (result.getName().equals(name)) {
+			if (result.getName().equals(name))
+			{
 				return result;
 			}
 		}
@@ -153,8 +160,10 @@ public enum Order implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Order get(int value) {
-		switch (value) {
+	public static Order get(int value)
+	{
+		switch (value)
+		{
 		case NATURAL_VALUE:
 			return NATURAL;
 		case COLUMN_NAME_ASC_VALUE:
@@ -192,7 +201,8 @@ public enum Order implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private Order(int value, String name, String literal) {
+	private Order(int value, String name, String literal)
+	{
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -204,7 +214,8 @@ public enum Order implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public int getValue() {
+	public int getValue()
+	{
 		return value;
 	}
 
@@ -214,7 +225,8 @@ public enum Order implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -224,7 +236,8 @@ public enum Order implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public String getLiteral() {
+	public String getLiteral()
+	{
 		return literal;
 	}
 
@@ -235,7 +248,8 @@ public enum Order implements Enumerator {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return literal;
 	}
 

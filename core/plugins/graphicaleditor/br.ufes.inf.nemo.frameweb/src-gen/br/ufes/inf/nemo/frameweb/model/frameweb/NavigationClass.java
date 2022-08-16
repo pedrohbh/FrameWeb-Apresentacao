@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model abstract="true"
  * @generated
  */
-public interface NavigationClass extends org.eclipse.uml2.uml.Class {
+public interface NavigationClass extends org.eclipse.uml2.uml.Class
+{
 } // NavigationClass

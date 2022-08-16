@@ -17,13 +17,15 @@ import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
  * @generated
  */
 @SuppressWarnings("restriction")
-public class ServiceAttributeImpl extends PropertyImpl implements ServiceAttribute {
+public class ServiceAttributeImpl extends PropertyImpl implements ServiceAttribute
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ServiceAttributeImpl() {
+	protected ServiceAttributeImpl()
+	{
 		super();
 	}
 
@@ -33,7 +35,8 @@ public class ServiceAttributeImpl extends PropertyImpl implements ServiceAttribu
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.SERVICE_ATTRIBUTE;
 	}
 

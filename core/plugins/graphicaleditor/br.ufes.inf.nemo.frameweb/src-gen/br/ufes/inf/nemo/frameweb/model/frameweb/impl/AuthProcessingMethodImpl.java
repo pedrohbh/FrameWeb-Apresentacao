@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class AuthProcessingMethodImpl extends FrontControllerMethodImpl implements AuthProcessingMethod {
+public class AuthProcessingMethodImpl extends FrontControllerMethodImpl implements AuthProcessingMethod
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AuthProcessingMethodImpl() {
+	protected AuthProcessingMethodImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class AuthProcessingMethodImpl extends FrontControllerMethodImpl implemen
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.AUTH_PROCESSING_METHOD;
 	}
 

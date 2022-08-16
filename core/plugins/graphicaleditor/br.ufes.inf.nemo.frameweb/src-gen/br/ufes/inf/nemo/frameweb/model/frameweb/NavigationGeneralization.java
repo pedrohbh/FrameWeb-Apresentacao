@@ -14,5 +14,6 @@ import org.eclipse.uml2.uml.Generalization;
  * @model
  * @generated
  */
-public interface NavigationGeneralization extends Generalization {
+public interface NavigationGeneralization extends Generalization
+{
 } // NavigationGeneralization

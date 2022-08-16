@@ -26,7 +26,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class AuthRoleImpl extends DomainClassImpl implements AuthRole {
+public class AuthRoleImpl extends DomainClassImpl implements AuthRole
+{
 	/**
 	 * The cached value of the '{@link #getAuthRoleName() <em>Auth Role Name</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -42,7 +43,8 @@ public class AuthRoleImpl extends DomainClassImpl implements AuthRole {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AuthRoleImpl() {
+	protected AuthRoleImpl()
+	{
 		super();
 	}
 
@@ -52,7 +54,8 @@ public class AuthRoleImpl extends DomainClassImpl implements AuthRole {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.AUTH_ROLE;
 	}
 
@@ -62,11 +65,14 @@ public class AuthRoleImpl extends DomainClassImpl implements AuthRole {
 	 * @generated
 	 */
 	@Override
-	public AuthRoleName getAuthRoleName() {
-		if (authRoleName != null && authRoleName.eIsProxy()) {
+	public AuthRoleName getAuthRoleName()
+	{
+		if (authRoleName != null && authRoleName.eIsProxy())
+		{
 			InternalEObject oldAuthRoleName = (InternalEObject) authRoleName;
 			authRoleName = (AuthRoleName) eResolveProxy(oldAuthRoleName);
-			if (authRoleName != oldAuthRoleName) {
+			if (authRoleName != oldAuthRoleName)
+			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FramewebPackage.AUTH_ROLE__AUTH_ROLE_NAME,
 							oldAuthRoleName, authRoleName));
@@ -80,7 +86,8 @@ public class AuthRoleImpl extends DomainClassImpl implements AuthRole {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AuthRoleName basicGetAuthRoleName() {
+	public AuthRoleName basicGetAuthRoleName()
+	{
 		return authRoleName;
 	}
 
@@ -90,7 +97,8 @@ public class AuthRoleImpl extends DomainClassImpl implements AuthRole {
 	 * @generated
 	 */
 	@Override
-	public void setAuthRoleName(AuthRoleName newAuthRoleName) {
+	public void setAuthRoleName(AuthRoleName newAuthRoleName)
+	{
 		AuthRoleName oldAuthRoleName = authRoleName;
 		authRoleName = newAuthRoleName;
 		if (eNotificationRequired())
@@ -104,8 +112,10 @@ public class AuthRoleImpl extends DomainClassImpl implements AuthRole {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.AUTH_ROLE__AUTH_ROLE_NAME:
 			if (resolve)
 				return getAuthRoleName();
@@ -120,8 +130,10 @@ public class AuthRoleImpl extends DomainClassImpl implements AuthRole {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.AUTH_ROLE__AUTH_ROLE_NAME:
 			setAuthRoleName((AuthRoleName) newValue);
 			return;
@@ -135,8 +147,10 @@ public class AuthRoleImpl extends DomainClassImpl implements AuthRole {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.AUTH_ROLE__AUTH_ROLE_NAME:
 			setAuthRoleName((AuthRoleName) null);
 			return;
@@ -150,8 +164,10 @@ public class AuthRoleImpl extends DomainClassImpl implements AuthRole {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 		case FramewebPackage.AUTH_ROLE__AUTH_ROLE_NAME:
 			return authRoleName != null;
 		}

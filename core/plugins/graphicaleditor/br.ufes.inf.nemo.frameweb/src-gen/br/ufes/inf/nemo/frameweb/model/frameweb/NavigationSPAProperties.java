@@ -23,7 +23,8 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface NavigationSPAProperties extends EObject {
+public interface NavigationSPAProperties extends EObject
+{
 	/**
 	 * Returns the value of the '<em><b>Spa Attributes</b></em>' reference list.
 	 * The list contents are of type {@link br.ufes.inf.nemo.frameweb.model.frameweb.UIComponentField}.

@@ -24,14 +24,16 @@ import org.eclipse.uml2.uml.UMLPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DecimalAttributeItemProvider extends AttributeItemProvider {
+public class DecimalAttributeItemProvider extends AttributeItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DecimalAttributeItemProvider(AdapterFactory adapterFactory) {
+	public DecimalAttributeItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -42,8 +44,10 @@ public class DecimalAttributeItemProvider extends AttributeItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addDecimalPrecisionPropertyDescriptor(object);
@@ -58,7 +62,8 @@ public class DecimalAttributeItemProvider extends AttributeItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDecimalPrecisionPropertyDescriptor(Object object) {
+	protected void addDecimalPrecisionPropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_DecimalAttribute_decimalPrecision_feature"),
@@ -74,7 +79,8 @@ public class DecimalAttributeItemProvider extends AttributeItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDecimalScalePropertyDescriptor(Object object) {
+	protected void addDecimalScalePropertyDescriptor(Object object)
+	{
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_DecimalAttribute_decimalScale_feature"),
@@ -91,7 +97,8 @@ public class DecimalAttributeItemProvider extends AttributeItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/DecimalAttribute"));
 	}
 
@@ -101,7 +108,8 @@ public class DecimalAttributeItemProvider extends AttributeItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -112,7 +120,8 @@ public class DecimalAttributeItemProvider extends AttributeItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
+	public String getText(Object object)
+	{
 		String label = ((DecimalAttribute) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_DecimalAttribute_type")
 				: getString("_UI_DecimalAttribute_type") + " " + label;
@@ -126,10 +135,12 @@ public class DecimalAttributeItemProvider extends AttributeItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(DecimalAttribute.class)) {
+		switch (notification.getFeatureID(DecimalAttribute.class))
+		{
 		case FramewebPackage.DECIMAL_ATTRIBUTE__DECIMAL_PRECISION:
 		case FramewebPackage.DECIMAL_ATTRIBUTE__DECIMAL_SCALE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
@@ -146,7 +157,8 @@ public class DecimalAttributeItemProvider extends AttributeItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 
@@ -157,7 +169,8 @@ public class DecimalAttributeItemProvider extends AttributeItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
 		Object childFeature = feature;
 		Object childObject = child;
 
@@ -166,7 +179,8 @@ public class DecimalAttributeItemProvider extends AttributeItemProvider {
 				|| childFeature == UMLPackage.Literals.MULTIPLICITY_ELEMENT__UPPER_VALUE
 				|| childFeature == UMLPackage.Literals.PROPERTY__DEFAULT_VALUE;
 
-		if (qualify) {
+		if (qualify)
+		{
 			return getString("_UI_CreateChild_text2",
 					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}

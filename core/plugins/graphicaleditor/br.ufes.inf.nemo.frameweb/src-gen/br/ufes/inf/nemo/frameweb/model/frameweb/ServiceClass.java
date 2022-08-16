@@ -12,5 +12,6 @@ package br.ufes.inf.nemo.frameweb.model.frameweb;
  * @model
  * @generated
  */
-public interface ServiceClass extends org.eclipse.uml2.uml.Class {
+public interface ServiceClass extends org.eclipse.uml2.uml.Class
+{
 } // ServiceClass

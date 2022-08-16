@@ -14,13 +14,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class NavigationAggregationTargetImpl extends NavigationPropertyImpl implements NavigationAggregationTarget {
+public class NavigationAggregationTargetImpl extends NavigationPropertyImpl implements NavigationAggregationTarget
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NavigationAggregationTargetImpl() {
+	protected NavigationAggregationTargetImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class NavigationAggregationTargetImpl extends NavigationPropertyImpl impl
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return FramewebPackage.Literals.NAVIGATION_AGGREGATION_TARGET;
 	}
 
