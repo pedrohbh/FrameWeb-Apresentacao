@@ -1,28 +1,19 @@
 package br.ufes.inf.nemo.FrameWeb_Martins2015.design;
 
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.TreeIterator;
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EDataType;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.ecore.util.EcoreEList;
-//import org.eclipse.sirius.diagram.business.internal.metamodel.spec.DNodeContainerSpec;
-import org.eclipse.sirius.viewpoint.DRepresentationElement;
-import org.eclipse.uml2.uml.Association;
-import org.eclipse.uml2.uml.Element;
-import org.eclipse.uml2.uml.NamedElement;
-import org.eclipse.uml2.uml.Property;
-
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import javax.lang.model.type.PrimitiveType;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.util.EcoreEList;
+import org.eclipse.uml2.uml.Association;
+import org.eclipse.uml2.uml.Element;
+import org.eclipse.uml2.uml.Property;
 
-import br.ufes.inf.nemo.FrameWeb_Martins2015.*;
+import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebFactory;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerDependency;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAAttribute;
@@ -610,17 +601,35 @@ public class Extend
 		// SCRIPT ORIGINAL PARA O LABEL DO NAVIGATION ASSOCIATION
 		// aql:self.memberEnd->at(2).upper
 	}
-	
-	public List<NavigationAggregationAssociationSPAAttribute> retornaAtrributoExemplo(NavigationAggregationAssociation navigationAggregationAssociation, UIComponentField elemento)
+
+	public List<NavigationAggregationAssociationSPAAttribute> retornaAtrributoExemplo(
+			NavigationAggregationAssociation navigationAggregationAssociation, UIComponentField elemento)
 	{
-		System.out.println("Olá");
-		return null;
+		List<NavigationAggregationAssociationSPAAttribute> lista = navigationAggregationAssociation.getSpaAttribute();
+		if (elemento == null)
+		{
+			return lista;
+
+		}
+		for (NavigationAggregationAssociationSPAAttribute spa : lista)
+		{
+			if (spa.getSpaAttribute().equals(elemento))
+				return lista;
+		}
+		FramewebFactory factory = FramewebFactory.eINSTANCE;
+
+		NavigationAggregationAssociationSPAAttribute sPAAttribute = factory
+				.createNavigationAggregationAssociationSPAAttribute();
+		sPAAttribute.setSpaAttribute(elemento);
+		lista.add(sPAAttribute);
+
+		return lista;
 	}
 
 	public List<UIComponentField> retornaListaExemplo(NavigationAggregationAssociation navigationAggregationAssociation)
 	{
 		List<UIComponentField> listaNova = new LinkedList<>();
-		
+
 		// Parte atributos partial
 		Partial partial = (Partial) navigationAggregationAssociation.getMemberEnds().get(1).getType();
 		for (Property property : partial.getOwnedAttributes())
@@ -641,7 +650,8 @@ public class Extend
 				if (property.getType() instanceof UIComponent)
 				{
 					UIComponent component = (UIComponent) property.getType();
-					component.getAttributes().stream().filter(t -> t instanceof UIComponentField).forEach(t -> listaNova.add((UIComponentField) t));
+					component.getAttributes().stream().filter(t -> t instanceof UIComponentField)
+							.forEach(t -> listaNova.add((UIComponentField) t));
 				}
 			}
 		}
