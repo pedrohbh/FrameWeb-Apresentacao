@@ -618,10 +618,10 @@ public class Extend
 		}
 		FramewebFactory factory = FramewebFactory.eINSTANCE;
 
-		NavigationAggregationAssociationSPAAttribute sPAAttribute = factory
+		NavigationAggregationAssociationSPAAttribute spaAttribute = factory
 				.createNavigationAggregationAssociationSPAAttribute();
-		sPAAttribute.setSpaAttribute(elemento);
-		lista.add(sPAAttribute);
+		spaAttribute.setSpaAttribute(elemento);
+		lista.add(spaAttribute);
 
 		return lista;
 	}
