@@ -25,6 +25,7 @@ import javax.lang.model.type.PrimitiveType;
 import br.ufes.inf.nemo.FrameWeb_Martins2015.*;
 import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerDependency;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation;
+import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAAttribute;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Partial;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ResultDependency;
@@ -608,6 +609,12 @@ public class Extend
 			return "";
 		// SCRIPT ORIGINAL PARA O LABEL DO NAVIGATION ASSOCIATION
 		// aql:self.memberEnd->at(2).upper
+	}
+	
+	public List<NavigationAggregationAssociationSPAAttribute> retornaAtrributoExemplo(NavigationAggregationAssociation navigationAggregationAssociation, UIComponentField elemento)
+	{
+		System.out.println("Olá");
+		return null;
 	}
 
 	public List<UIComponentField> retornaListaExemplo(NavigationAggregationAssociation navigationAggregationAssociation)
