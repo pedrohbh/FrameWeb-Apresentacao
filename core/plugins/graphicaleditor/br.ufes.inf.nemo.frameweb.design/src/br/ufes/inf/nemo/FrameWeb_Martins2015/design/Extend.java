@@ -615,7 +615,9 @@ public class Extend
 		{
 			if (spa.getSpaAttribute().equals(elemento))
 				return lista;
-		}
+		}		
+		
+		// Criação Instância
 		FramewebFactory factory = FramewebFactory.eINSTANCE;
 
 		NavigationAggregationAssociationSPAAttribute spaAttribute = factory

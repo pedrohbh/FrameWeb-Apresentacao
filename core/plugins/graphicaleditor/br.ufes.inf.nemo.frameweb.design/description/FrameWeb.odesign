@@ -2259,7 +2259,7 @@
           <layout xsi:type="properties:FillLayoutDescription" orientation="HORIZONTAL"/>
         </controls>
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="ReferenciaTeste" referenceNameExpression="spaAttribute" referenceOwnerExpression="var:self"/>
-        <controls xsi:type="properties:ListDescription" name="ListaNavAgrrTeste" labelExpression="Spa Properties Attribute" valueExpression="feature:spaAttribute" displayExpression="aql:value.spaAttribute.name">
+        <controls xsi:type="properties:ListDescription" name="ListaNavAgrrTeste" labelExpression="Spa Properties Attribute" valueExpression="feature:spaAttribute" displayExpression="aql:value.spaAttribute.name + ' : ' + value.spaAttribute.type.name">
           <onClickOperation>
             <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
           </onClickOperation>
