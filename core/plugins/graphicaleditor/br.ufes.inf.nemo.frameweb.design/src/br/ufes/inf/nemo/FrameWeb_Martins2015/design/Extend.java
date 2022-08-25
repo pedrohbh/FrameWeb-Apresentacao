@@ -689,7 +689,7 @@ public class Extend
 			String stringFinal = "{pros_attributes = [";
 			navigationAggregationAssociation.getSpaAttributes().stream()
 					.forEach(t -> stringBuffer.append(t.getAttribute().getName() + ", "));
-			String processada = stringFinal.toString();
+			String processada = stringBuffer.toString();
 			processada = processada.substring(0, processada.lastIndexOf(", "));
 			stringFinal += processada + "]}";
 			return stringFinal;
