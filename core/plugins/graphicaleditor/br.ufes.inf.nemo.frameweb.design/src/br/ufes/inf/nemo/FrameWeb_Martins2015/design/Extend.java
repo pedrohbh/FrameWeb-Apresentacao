@@ -603,7 +603,7 @@ public class Extend
 	}
 
 	/*
-	 * public List<NavigationAggregationAssociationSPAAttribute>
+	 * // Método original public List<NavigationAggregationAssociationSPAAttribute>
 	 * retornaAtrributoExemplo( NavigationAggregationAssociation
 	 * navigationAggregationAssociation, UIComponentField elemento) {
 	 * List<NavigationAggregationAssociationSPAAttribute> lista =
@@ -621,6 +621,30 @@ public class Extend
 	 * 
 	 * return lista; }
 	 */
+
+	public List<NavigationAggregationAssociationSPAAttribute> addSpaAttribute(
+			NavigationAggregationAssociation navigationAggregationAssociation, UIComponentField elemento)
+	{
+		List<NavigationAggregationAssociationSPAAttribute> lista = navigationAggregationAssociation.getSpaAttributes();
+		if (elemento == null)
+		{
+			return lista;
+		}
+		for (NavigationAggregationAssociationSPAAttribute spa : lista)
+		{
+			if (spa.getAttribute().equals(elemento))
+				return lista;
+		}
+
+		FramewebFactory factory = FramewebFactory.eINSTANCE;
+
+		NavigationAggregationAssociationSPAAttribute spaAttribute = factory
+				.createNavigationAggregationAssociationSPAAttribute();
+		spaAttribute.setAttribute(elemento);
+		lista.add(spaAttribute);
+
+		return lista;
+	}
 
 	public List<UIComponentField> returnListOfSPAPropsAttributesCandidates(
 			NavigationAggregationAssociation navigationAggregationAssociation)
