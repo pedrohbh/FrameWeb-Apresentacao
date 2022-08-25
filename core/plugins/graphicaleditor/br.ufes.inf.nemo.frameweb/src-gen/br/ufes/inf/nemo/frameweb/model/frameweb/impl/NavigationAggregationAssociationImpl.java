@@ -6,15 +6,12 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAAttribute;
 import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAMethod;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationSPAProperties;
-import br.ufes.inf.nemo.frameweb.model.frameweb.UIComponentField;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.uml2.uml.internal.impl.AssociationImpl;
 
@@ -26,10 +23,8 @@ import org.eclipse.uml2.uml.internal.impl.AssociationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.NavigationAggregationAssociationImpl#getRelacoes <em>Relacoes</em>}</li>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.NavigationAggregationAssociationImpl#getSpaProperties <em>Spa Properties</em>}</li>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.NavigationAggregationAssociationImpl#getSpaMethod <em>Spa Method</em>}</li>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.NavigationAggregationAssociationImpl#getSpaAttribute <em>Spa Attribute</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.NavigationAggregationAssociationImpl#getSpaMethods <em>Spa Methods</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.NavigationAggregationAssociationImpl#getSpaAttributes <em>Spa Attributes</em>}</li>
  * </ul>
  *
  * @generated
@@ -37,44 +32,24 @@ import org.eclipse.uml2.uml.internal.impl.AssociationImpl;
 public class NavigationAggregationAssociationImpl extends AssociationImpl implements NavigationAggregationAssociation
 {
 	/**
-	 * The cached value of the '{@link #getRelacoes() <em>Relacoes</em>}' reference list.
+	 * The cached value of the '{@link #getSpaMethods() <em>Spa Methods</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRelacoes()
+	 * @see #getSpaMethods()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<UIComponentField> relacoes;
+	protected EList<NavigationAggregationAssociationSPAMethod> spaMethods;
 
 	/**
-	 * The cached value of the '{@link #getSpaProperties() <em>Spa Properties</em>}' reference list.
+	 * The cached value of the '{@link #getSpaAttributes() <em>Spa Attributes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSpaProperties()
+	 * @see #getSpaAttributes()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<NavigationSPAProperties> spaProperties;
-
-	/**
-	 * The cached value of the '{@link #getSpaMethod() <em>Spa Method</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSpaMethod()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<NavigationAggregationAssociationSPAMethod> spaMethod;
-
-	/**
-	 * The cached value of the '{@link #getSpaAttribute() <em>Spa Attribute</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSpaAttribute()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<NavigationAggregationAssociationSPAAttribute> spaAttribute;
+	protected EList<NavigationAggregationAssociationSPAAttribute> spaAttributes;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -103,47 +78,15 @@ public class NavigationAggregationAssociationImpl extends AssociationImpl implem
 	 * @generated
 	 */
 	@Override
-	public EList<UIComponentField> getRelacoes()
+	public EList<NavigationAggregationAssociationSPAMethod> getSpaMethods()
 	{
-		if (relacoes == null)
+		if (spaMethods == null)
 		{
-			relacoes = new EObjectResolvingEList<UIComponentField>(UIComponentField.class, this,
-					FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__RELACOES);
-		}
-		return relacoes;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<NavigationSPAProperties> getSpaProperties()
-	{
-		if (spaProperties == null)
-		{
-			spaProperties = new EObjectResolvingEList<NavigationSPAProperties>(NavigationSPAProperties.class, this,
-					FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_PROPERTIES);
-		}
-		return spaProperties;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<NavigationAggregationAssociationSPAMethod> getSpaMethod()
-	{
-		if (spaMethod == null)
-		{
-			spaMethod = new EObjectContainmentEList<NavigationAggregationAssociationSPAMethod>(
+			spaMethods = new EObjectContainmentEList<NavigationAggregationAssociationSPAMethod>(
 					NavigationAggregationAssociationSPAMethod.class, this,
-					FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHOD);
+					FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHODS);
 		}
-		return spaMethod;
+		return spaMethods;
 	}
 
 	/**
@@ -152,15 +95,15 @@ public class NavigationAggregationAssociationImpl extends AssociationImpl implem
 	 * @generated
 	 */
 	@Override
-	public EList<NavigationAggregationAssociationSPAAttribute> getSpaAttribute()
+	public EList<NavigationAggregationAssociationSPAAttribute> getSpaAttributes()
 	{
-		if (spaAttribute == null)
+		if (spaAttributes == null)
 		{
-			spaAttribute = new EObjectContainmentEList<NavigationAggregationAssociationSPAAttribute>(
+			spaAttributes = new EObjectContainmentEList<NavigationAggregationAssociationSPAAttribute>(
 					NavigationAggregationAssociationSPAAttribute.class, this,
-					FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTE);
+					FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTES);
 		}
-		return spaAttribute;
+		return spaAttributes;
 	}
 
 	/**
@@ -173,10 +116,10 @@ public class NavigationAggregationAssociationImpl extends AssociationImpl implem
 	{
 		switch (featureID)
 		{
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHOD:
-			return ((InternalEList<?>) getSpaMethod()).basicRemove(otherEnd, msgs);
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTE:
-			return ((InternalEList<?>) getSpaAttribute()).basicRemove(otherEnd, msgs);
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHODS:
+			return ((InternalEList<?>) getSpaMethods()).basicRemove(otherEnd, msgs);
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTES:
+			return ((InternalEList<?>) getSpaAttributes()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -191,14 +134,10 @@ public class NavigationAggregationAssociationImpl extends AssociationImpl implem
 	{
 		switch (featureID)
 		{
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__RELACOES:
-			return getRelacoes();
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_PROPERTIES:
-			return getSpaProperties();
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHOD:
-			return getSpaMethod();
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTE:
-			return getSpaAttribute();
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHODS:
+			return getSpaMethods();
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTES:
+			return getSpaAttributes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -214,21 +153,13 @@ public class NavigationAggregationAssociationImpl extends AssociationImpl implem
 	{
 		switch (featureID)
 		{
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__RELACOES:
-			getRelacoes().clear();
-			getRelacoes().addAll((Collection<? extends UIComponentField>) newValue);
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHODS:
+			getSpaMethods().clear();
+			getSpaMethods().addAll((Collection<? extends NavigationAggregationAssociationSPAMethod>) newValue);
 			return;
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_PROPERTIES:
-			getSpaProperties().clear();
-			getSpaProperties().addAll((Collection<? extends NavigationSPAProperties>) newValue);
-			return;
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHOD:
-			getSpaMethod().clear();
-			getSpaMethod().addAll((Collection<? extends NavigationAggregationAssociationSPAMethod>) newValue);
-			return;
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTE:
-			getSpaAttribute().clear();
-			getSpaAttribute().addAll((Collection<? extends NavigationAggregationAssociationSPAAttribute>) newValue);
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTES:
+			getSpaAttributes().clear();
+			getSpaAttributes().addAll((Collection<? extends NavigationAggregationAssociationSPAAttribute>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -244,17 +175,11 @@ public class NavigationAggregationAssociationImpl extends AssociationImpl implem
 	{
 		switch (featureID)
 		{
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__RELACOES:
-			getRelacoes().clear();
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHODS:
+			getSpaMethods().clear();
 			return;
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_PROPERTIES:
-			getSpaProperties().clear();
-			return;
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHOD:
-			getSpaMethod().clear();
-			return;
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTE:
-			getSpaAttribute().clear();
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTES:
+			getSpaAttributes().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -270,14 +195,10 @@ public class NavigationAggregationAssociationImpl extends AssociationImpl implem
 	{
 		switch (featureID)
 		{
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__RELACOES:
-			return relacoes != null && !relacoes.isEmpty();
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_PROPERTIES:
-			return spaProperties != null && !spaProperties.isEmpty();
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHOD:
-			return spaMethod != null && !spaMethod.isEmpty();
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTE:
-			return spaAttribute != null && !spaAttribute.isEmpty();
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHODS:
+			return spaMethods != null && !spaMethods.isEmpty();
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTES:
+			return spaAttributes != null && !spaAttributes.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

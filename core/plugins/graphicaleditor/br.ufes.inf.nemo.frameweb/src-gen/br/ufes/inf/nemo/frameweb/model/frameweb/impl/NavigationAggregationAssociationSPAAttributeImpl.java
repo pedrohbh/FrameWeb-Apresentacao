@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.NavigationAggregationAssociationSPAAttributeImpl#getValue <em>Value</em>}</li>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.NavigationAggregationAssociationSPAAttributeImpl#getSpaAttribute <em>Spa Attribute</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.NavigationAggregationAssociationSPAAttributeImpl#getAttribute <em>Attribute</em>}</li>
  * </ul>
  *
  * @generated
@@ -52,14 +52,14 @@ public class NavigationAggregationAssociationSPAAttributeImpl extends MinimalEOb
 	protected String value = VALUE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getSpaAttribute() <em>Spa Attribute</em>}' reference.
+	 * The cached value of the '{@link #getAttribute() <em>Attribute</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSpaAttribute()
+	 * @see #getAttribute()
 	 * @generated
 	 * @ordered
 	 */
-	protected UIComponentField spaAttribute;
+	protected UIComponentField attribute;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -114,21 +114,21 @@ public class NavigationAggregationAssociationSPAAttributeImpl extends MinimalEOb
 	 * @generated
 	 */
 	@Override
-	public UIComponentField getSpaAttribute()
+	public UIComponentField getAttribute()
 	{
-		if (spaAttribute != null && spaAttribute.eIsProxy())
+		if (attribute != null && attribute.eIsProxy())
 		{
-			InternalEObject oldSpaAttribute = (InternalEObject) spaAttribute;
-			spaAttribute = (UIComponentField) eResolveProxy(oldSpaAttribute);
-			if (spaAttribute != oldSpaAttribute)
+			InternalEObject oldAttribute = (InternalEObject) attribute;
+			attribute = (UIComponentField) eResolveProxy(oldAttribute);
+			if (attribute != oldAttribute)
 			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE__SPA_ATTRIBUTE,
-							oldSpaAttribute, spaAttribute));
+							FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE__ATTRIBUTE, oldAttribute,
+							attribute));
 			}
 		}
-		return spaAttribute;
+		return attribute;
 	}
 
 	/**
@@ -136,9 +136,9 @@ public class NavigationAggregationAssociationSPAAttributeImpl extends MinimalEOb
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UIComponentField basicGetSpaAttribute()
+	public UIComponentField basicGetAttribute()
 	{
-		return spaAttribute;
+		return attribute;
 	}
 
 	/**
@@ -147,14 +147,14 @@ public class NavigationAggregationAssociationSPAAttributeImpl extends MinimalEOb
 	 * @generated
 	 */
 	@Override
-	public void setSpaAttribute(UIComponentField newSpaAttribute)
+	public void setAttribute(UIComponentField newAttribute)
 	{
-		UIComponentField oldSpaAttribute = spaAttribute;
-		spaAttribute = newSpaAttribute;
+		UIComponentField oldAttribute = attribute;
+		attribute = newAttribute;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE__SPA_ATTRIBUTE, oldSpaAttribute,
-					spaAttribute));
+					FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE__ATTRIBUTE, oldAttribute,
+					attribute));
 	}
 
 	/**
@@ -169,10 +169,10 @@ public class NavigationAggregationAssociationSPAAttributeImpl extends MinimalEOb
 		{
 		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE__VALUE:
 			return getValue();
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE__SPA_ATTRIBUTE:
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE__ATTRIBUTE:
 			if (resolve)
-				return getSpaAttribute();
-			return basicGetSpaAttribute();
+				return getAttribute();
+			return basicGetAttribute();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -190,8 +190,8 @@ public class NavigationAggregationAssociationSPAAttributeImpl extends MinimalEOb
 		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE__VALUE:
 			setValue((String) newValue);
 			return;
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE__SPA_ATTRIBUTE:
-			setSpaAttribute((UIComponentField) newValue);
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE__ATTRIBUTE:
+			setAttribute((UIComponentField) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -210,8 +210,8 @@ public class NavigationAggregationAssociationSPAAttributeImpl extends MinimalEOb
 		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE__VALUE:
 			setValue(VALUE_EDEFAULT);
 			return;
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE__SPA_ATTRIBUTE:
-			setSpaAttribute((UIComponentField) null);
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE__ATTRIBUTE:
+			setAttribute((UIComponentField) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -229,8 +229,8 @@ public class NavigationAggregationAssociationSPAAttributeImpl extends MinimalEOb
 		{
 		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE__VALUE:
 			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE__SPA_ATTRIBUTE:
-			return spaAttribute != null;
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE__ATTRIBUTE:
+			return attribute != null;
 		}
 		return super.eIsSet(featureID);
 	}

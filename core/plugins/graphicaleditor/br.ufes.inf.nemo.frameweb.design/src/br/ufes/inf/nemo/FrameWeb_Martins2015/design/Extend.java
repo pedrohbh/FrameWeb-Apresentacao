@@ -602,31 +602,25 @@ public class Extend
 		// aql:self.memberEnd->at(2).upper
 	}
 
-	public List<NavigationAggregationAssociationSPAAttribute> retornaAtrributoExemplo(
-			NavigationAggregationAssociation navigationAggregationAssociation, UIComponentField elemento)
-	{
-		List<NavigationAggregationAssociationSPAAttribute> lista = navigationAggregationAssociation.getSpaAttribute();
-		if (elemento == null)
-		{
-			return lista;
-
-		}
-		for (NavigationAggregationAssociationSPAAttribute spa : lista)
-		{
-			if (spa.getSpaAttribute().equals(elemento))
-				return lista;
-		}		
-		
-		// Criação Instância
-		FramewebFactory factory = FramewebFactory.eINSTANCE;
-
-		NavigationAggregationAssociationSPAAttribute spaAttribute = factory
-				.createNavigationAggregationAssociationSPAAttribute();
-		spaAttribute.setSpaAttribute(elemento);
-		lista.add(spaAttribute);
-
-		return lista;
-	}
+	/*
+	 * public List<NavigationAggregationAssociationSPAAttribute>
+	 * retornaAtrributoExemplo( NavigationAggregationAssociation
+	 * navigationAggregationAssociation, UIComponentField elemento) {
+	 * List<NavigationAggregationAssociationSPAAttribute> lista =
+	 * navigationAggregationAssociation.getSpaAttribute(); if (elemento == null) {
+	 * return lista;
+	 * 
+	 * } for (NavigationAggregationAssociationSPAAttribute spa : lista) { if
+	 * (spa.getSpaAttribute().equals(elemento)) return lista; }
+	 * 
+	 * // Criação Instância FramewebFactory factory = FramewebFactory.eINSTANCE;
+	 * 
+	 * NavigationAggregationAssociationSPAAttribute spaAttribute = factory
+	 * .createNavigationAggregationAssociationSPAAttribute();
+	 * spaAttribute.setSpaAttribute(elemento); lista.add(spaAttribute);
+	 * 
+	 * return lista; }
+	 */
 
 	public List<UIComponentField> retornaListaExemplo(NavigationAggregationAssociation navigationAggregationAssociation)
 	{
@@ -665,21 +659,36 @@ public class Extend
 	public String processLabelNavigationAggregationAssociationMedium(
 			NavigationAggregationAssociation navigationAggregationAssociation)
 	{
-		if (navigationAggregationAssociation.getRelacoes().size() > 0)
+		if ( navigationAggregationAssociation.getSpaAttributes().size() > 0 )
 		{
 			StringBuffer stringBuffer = new StringBuffer();
 			String stringFinal = "{pros_attributes = [";
-
-			navigationAggregationAssociation.getRelacoes().stream()
-					.forEach(t -> stringBuffer.append(t.getName() + ", "));
-			String processada = stringBuffer.toString();
+			navigationAggregationAssociation.getSpaAttributes().stream().forEach(t -> stringBuffer.append(t.getAttribute().getName() + ", "));
+			String processada = stringFinal.toString();
 			processada = processada.substring(0, processada.lastIndexOf(", "));
 			stringFinal += processada + "]}";
 			return stringFinal;
-		}
+		}	
 
 		return "";
 	}
+
+	// Método Original
+	/*
+	 * public String processLabelNavigationAggregationAssociationMedium(
+	 * NavigationAggregationAssociation navigationAggregationAssociation) { if
+	 * (navigationAggregationAssociation.getRelacoes().size() > 0) { StringBuffer
+	 * stringBuffer = new StringBuffer(); String stringFinal =
+	 * "{pros_attributes = [";
+	 * 
+	 * navigationAggregationAssociation.getRelacoes().stream() .forEach(t ->
+	 * stringBuffer.append(t.getName() + ", ")); String processada =
+	 * stringBuffer.toString(); processada = processada.substring(0,
+	 * processada.lastIndexOf(", ")); stringFinal += processada + "]}"; return
+	 * stringFinal; }
+	 * 
+	 * return ""; }
+	 */
 
 	public String processLabelNavigationAggregationAssociationLower(
 			NavigationAggregationAssociation navigationAggregationAssociation)

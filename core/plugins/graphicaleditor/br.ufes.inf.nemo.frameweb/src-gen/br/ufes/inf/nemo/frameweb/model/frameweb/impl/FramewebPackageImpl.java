@@ -2,150 +2,6 @@
  */
 package br.ufes.inf.nemo.frameweb.model.frameweb.impl;
 
-import br.ufes.inf.nemo.frameweb.model.frameweb.Annotation;
-import br.ufes.inf.nemo.frameweb.model.frameweb.AnonymousIndividual;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationModel;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ApplicationPackage;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Attribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.AttributeMapping;
-import br.ufes.inf.nemo.frameweb.model.frameweb.AttributeMappingProperty;
-import br.ufes.inf.nemo.frameweb.model.frameweb.AuthFailureUrl;
-import br.ufes.inf.nemo.frameweb.model.frameweb.AuthForm;
-import br.ufes.inf.nemo.frameweb.model.frameweb.AuthPage;
-import br.ufes.inf.nemo.frameweb.model.frameweb.AuthPassword;
-import br.ufes.inf.nemo.frameweb.model.frameweb.AuthPermName;
-import br.ufes.inf.nemo.frameweb.model.frameweb.AuthPermission;
-import br.ufes.inf.nemo.frameweb.model.frameweb.AuthProcessingMethod;
-import br.ufes.inf.nemo.frameweb.model.frameweb.AuthRole;
-import br.ufes.inf.nemo.frameweb.model.frameweb.AuthRoleName;
-import br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceClass;
-import br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceInterface;
-import br.ufes.inf.nemo.frameweb.model.frameweb.AuthServiceMethod;
-import br.ufes.inf.nemo.frameweb.model.frameweb.AuthSuccessUrl;
-import br.ufes.inf.nemo.frameweb.model.frameweb.AuthUser;
-import br.ufes.inf.nemo.frameweb.model.frameweb.AuthUserName;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Axiom;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Cascade;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ChainingConstraint;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ClassMapping;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ClassMappingPropery;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Collection;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ConstantNameList;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Controller;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ControllerPackage;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DAOAttribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DAOClass;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DAOGeneralization;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DAOGeneralizationSet;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DAOInterface;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DAOMethod;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DAORealization;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DAOServiceAssociation;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DAOTemplate;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DITemplate;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DataProperty;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DateTimeAttribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DateTimePrecision;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DecimalAttribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAssociation;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAttribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainAuthAttribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainClass;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainConstraints;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainGeneralization;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainGeneralizationSet;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainMethod;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainPackage;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainProperty;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainVocabularyAssociation;
-import br.ufes.inf.nemo.frameweb.model.frameweb.DomainVocabularyProperty;
-import br.ufes.inf.nemo.frameweb.model.frameweb.EmbeddedAttribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.EntityModel;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Fetch;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FrameWebConfiguration;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebFactory;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebModel;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FramewebProject;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkCategoryList;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkKindList;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FrameworkProfile;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerClass;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerDependency;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerMethod;
-import br.ufes.inf.nemo.frameweb.model.frameweb.FrontControllerTemplate;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Generation;
-import br.ufes.inf.nemo.frameweb.model.frameweb.HttpMethodType;
-import br.ufes.inf.nemo.frameweb.model.frameweb.HttpStatus;
-import br.ufes.inf.nemo.frameweb.model.frameweb.IOParameter;
-import br.ufes.inf.nemo.frameweb.model.frameweb.IdAttribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Individual;
-import br.ufes.inf.nemo.frameweb.model.frameweb.InheritanceMapping;
-import br.ufes.inf.nemo.frameweb.model.frameweb.LOBAttribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.MappingLib;
-import br.ufes.inf.nemo.frameweb.model.frameweb.MethodConstraint;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NamedIndividual;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAAttribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAMethod;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationSource;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationTarget;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAssociation;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAttribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationClass;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationCompositionPart;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationCompositionWhole;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationConstraint;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationDependency;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationGeneralization;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationGeneralizationSet;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationModel;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationPackage;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationProperty;
-import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationSPAProperties;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ORMTemplate;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ObjectProperty;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Order;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
-import br.ufes.inf.nemo.frameweb.model.frameweb.PageConstraint;
-import br.ufes.inf.nemo.frameweb.model.frameweb.PageDependency;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Partial;
-import br.ufes.inf.nemo.frameweb.model.frameweb.PersistenceModel;
-import br.ufes.inf.nemo.frameweb.model.frameweb.PersistencePackage;
-import br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerClass;
-import br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerMethod;
-import br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerTemplate;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ResultConstraint;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ResultDependency;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ResultProperty;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ResultSet;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ResultType;
-import br.ufes.inf.nemo.frameweb.model.frameweb.SemanticPackage;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceAssociation;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceAttribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceClass;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceControllerAssociation;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceGeneralization;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceGeneralizationSet;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceInterface;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceMethod;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ServiceRealization;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Tag;
-import br.ufes.inf.nemo.frameweb.model.frameweb.TagLib;
-import br.ufes.inf.nemo.frameweb.model.frameweb.TagProperty;
-import br.ufes.inf.nemo.frameweb.model.frameweb.UIComponent;
-import br.ufes.inf.nemo.frameweb.model.frameweb.UIComponentField;
-import br.ufes.inf.nemo.frameweb.model.frameweb.VersionAttribute;
-import br.ufes.inf.nemo.frameweb.model.frameweb.ViewPackage;
-import br.ufes.inf.nemo.frameweb.model.frameweb.Vocabulary;
-import br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyAssociation;
-import br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyClass;
-import br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyConstraints;
-import br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyDataType;
-import br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyEntity;
-import br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyLiteral;
-import br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyModel;
-import br.ufes.inf.nemo.frameweb.model.frameweb.VocabularyProperty;
 import br.ufes.inf.nemo.frameweb.model.frameweb.*;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -3880,7 +3736,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getNavigationAggregationAssociation_Relacoes()
+	public EReference getNavigationAggregationAssociation_SpaMethods()
 	{
 		return (EReference) navigationAggregationAssociationEClass.getEStructuralFeatures().get(0);
 	}
@@ -3891,31 +3747,9 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getNavigationAggregationAssociation_SpaProperties()
+	public EReference getNavigationAggregationAssociation_SpaAttributes()
 	{
 		return (EReference) navigationAggregationAssociationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getNavigationAggregationAssociation_SpaMethod()
-	{
-		return (EReference) navigationAggregationAssociationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getNavigationAggregationAssociation_SpaAttribute()
-	{
-		return (EReference) navigationAggregationAssociationEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -3990,7 +3824,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getNavigationAggregationAssociationSPAMethod_SpaMethod()
+	public EReference getNavigationAggregationAssociationSPAMethod_Method()
 	{
 		return (EReference) navigationAggregationAssociationSPAMethodEClass.getEStructuralFeatures().get(0);
 	}
@@ -4034,7 +3868,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getNavigationAggregationAssociationSPAAttribute_SpaAttribute()
+	public EReference getNavigationAggregationAssociationSPAAttribute_Attribute()
 	{
 		return (EReference) navigationAggregationAssociationSPAAttributeEClass.getEStructuralFeatures().get(1);
 	}
@@ -4588,10 +4422,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		partialEClass = createEClass(PARTIAL);
 
 		navigationAggregationAssociationEClass = createEClass(NAVIGATION_AGGREGATION_ASSOCIATION);
-		createEReference(navigationAggregationAssociationEClass, NAVIGATION_AGGREGATION_ASSOCIATION__RELACOES);
-		createEReference(navigationAggregationAssociationEClass, NAVIGATION_AGGREGATION_ASSOCIATION__SPA_PROPERTIES);
-		createEReference(navigationAggregationAssociationEClass, NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHOD);
-		createEReference(navigationAggregationAssociationEClass, NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTE);
+		createEReference(navigationAggregationAssociationEClass, NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHODS);
+		createEReference(navigationAggregationAssociationEClass, NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTES);
 
 		navigationAggregationTargetEClass = createEClass(NAVIGATION_AGGREGATION_TARGET);
 
@@ -4603,7 +4435,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		navigationAggregationAssociationSPAMethodEClass = createEClass(NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD);
 		createEReference(navigationAggregationAssociationSPAMethodEClass,
-				NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__SPA_METHOD);
+				NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__METHOD);
 		createEAttribute(navigationAggregationAssociationSPAMethodEClass,
 				NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__VALUE);
 
@@ -4612,7 +4444,7 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		createEAttribute(navigationAggregationAssociationSPAAttributeEClass,
 				NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE__VALUE);
 		createEReference(navigationAggregationAssociationSPAAttributeEClass,
-				NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE__SPA_ATTRIBUTE);
+				NAVIGATION_AGGREGATION_ASSOCIATION_SPA_ATTRIBUTE__ATTRIBUTE);
 
 		// Create enums
 		frameworkCategoryListEEnum = createEEnum(FRAMEWORK_CATEGORY_LIST);
@@ -5499,18 +5331,12 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		initEClass(navigationAggregationAssociationEClass, NavigationAggregationAssociation.class,
 				"NavigationAggregationAssociation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getNavigationAggregationAssociation_Relacoes(), this.getUIComponentField(), null, "relacoes",
-				null, 0, -1, NavigationAggregationAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNavigationAggregationAssociation_SpaProperties(), this.getNavigationSPAProperties(), null,
-				"spaProperties", null, 0, -1, NavigationAggregationAssociation.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNavigationAggregationAssociation_SpaMethod(),
-				this.getNavigationAggregationAssociationSPAMethod(), null, "spaMethod", null, 0, -1,
+		initEReference(getNavigationAggregationAssociation_SpaMethods(),
+				this.getNavigationAggregationAssociationSPAMethod(), null, "spaMethods", null, 0, -1,
 				NavigationAggregationAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNavigationAggregationAssociation_SpaAttribute(),
-				this.getNavigationAggregationAssociationSPAAttribute(), null, "spaAttribute", null, 0, -1,
+		initEReference(getNavigationAggregationAssociation_SpaAttributes(),
+				this.getNavigationAggregationAssociationSPAAttribute(), null, "spaAttributes", null, 0, -1,
 				NavigationAggregationAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -5531,8 +5357,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 
 		initEClass(navigationAggregationAssociationSPAMethodEClass, NavigationAggregationAssociationSPAMethod.class,
 				"NavigationAggregationAssociationSPAMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getNavigationAggregationAssociationSPAMethod_SpaMethod(), this.getFrontControllerMethod(), null,
-				"spaMethod", null, 0, 1, NavigationAggregationAssociationSPAMethod.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEReference(getNavigationAggregationAssociationSPAMethod_Method(), this.getFrontControllerMethod(), null,
+				"method", null, 0, 1, NavigationAggregationAssociationSPAMethod.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNavigationAggregationAssociationSPAMethod_Value(), theEcorePackage.getEString(), "value",
 				null, 0, 1, NavigationAggregationAssociationSPAMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
@@ -5544,8 +5370,8 @@ public class FramewebPackageImpl extends EPackageImpl implements FramewebPackage
 		initEAttribute(getNavigationAggregationAssociationSPAAttribute_Value(), theEcorePackage.getEString(), "value",
 				null, 0, 1, NavigationAggregationAssociationSPAAttribute.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNavigationAggregationAssociationSPAAttribute_SpaAttribute(), this.getUIComponentField(), null,
-				"spaAttribute", null, 0, 1, NavigationAggregationAssociationSPAAttribute.class, !IS_TRANSIENT,
+		initEReference(getNavigationAggregationAssociationSPAAttribute_Attribute(), this.getUIComponentField(), null,
+				"attribute", null, 0, 1, NavigationAggregationAssociationSPAAttribute.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 

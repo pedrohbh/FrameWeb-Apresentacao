@@ -14,10 +14,8 @@ import org.eclipse.uml2.uml.Association;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation#getRelacoes <em>Relacoes</em>}</li>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation#getSpaProperties <em>Spa Properties</em>}</li>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation#getSpaMethod <em>Spa Method</em>}</li>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation#getSpaAttribute <em>Spa Attribute</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation#getSpaMethods <em>Spa Methods</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociation#getSpaAttributes <em>Spa Attributes</em>}</li>
  * </ul>
  *
  * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getNavigationAggregationAssociation()
@@ -28,50 +26,26 @@ public interface NavigationAggregationAssociation extends Association
 {
 
 	/**
-	 * Returns the value of the '<em><b>Relacoes</b></em>' reference list.
-	 * The list contents are of type {@link br.ufes.inf.nemo.frameweb.model.frameweb.UIComponentField}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Relacoes</em>' reference list.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getNavigationAggregationAssociation_Relacoes()
-	 * @model
-	 * @generated
-	 */
-	EList<UIComponentField> getRelacoes();
-
-	/**
-	 * Returns the value of the '<em><b>Spa Properties</b></em>' reference list.
-	 * The list contents are of type {@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationSPAProperties}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Spa Properties</em>' reference list.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getNavigationAggregationAssociation_SpaProperties()
-	 * @model
-	 * @generated
-	 */
-	EList<NavigationSPAProperties> getSpaProperties();
-
-	/**
-	 * Returns the value of the '<em><b>Spa Method</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Spa Methods</b></em>' containment reference list.
 	 * The list contents are of type {@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAMethod}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Spa Method</em>' containment reference list.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getNavigationAggregationAssociation_SpaMethod()
+	 * @return the value of the '<em>Spa Methods</em>' containment reference list.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getNavigationAggregationAssociation_SpaMethods()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<NavigationAggregationAssociationSPAMethod> getSpaMethod();
+	EList<NavigationAggregationAssociationSPAMethod> getSpaMethods();
 
 	/**
-	 * Returns the value of the '<em><b>Spa Attribute</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Spa Attributes</b></em>' containment reference list.
 	 * The list contents are of type {@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAAttribute}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Spa Attribute</em>' containment reference list.
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getNavigationAggregationAssociation_SpaAttribute()
+	 * @return the value of the '<em>Spa Attributes</em>' containment reference list.
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getNavigationAggregationAssociation_SpaAttributes()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<NavigationAggregationAssociationSPAAttribute> getSpaAttribute();
+	EList<NavigationAggregationAssociationSPAAttribute> getSpaAttributes();
 } // NavigationAggregationAssociation

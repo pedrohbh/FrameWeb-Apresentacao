@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAMethod#getSpaMethod <em>Spa Method</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAMethod#getMethod <em>Method</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAMethod#getValue <em>Value</em>}</li>
  * </ul>
  *
@@ -24,26 +24,26 @@ import org.eclipse.emf.ecore.EObject;
 public interface NavigationAggregationAssociationSPAMethod extends EObject
 {
 	/**
-	 * Returns the value of the '<em><b>Spa Method</b></em>' reference.
+	 * Returns the value of the '<em><b>Method</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Spa Method</em>' reference.
-	 * @see #setSpaMethod(FrontControllerMethod)
-	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getNavigationAggregationAssociationSPAMethod_SpaMethod()
+	 * @return the value of the '<em>Method</em>' reference.
+	 * @see #setMethod(FrontControllerMethod)
+	 * @see br.ufes.inf.nemo.frameweb.model.frameweb.FramewebPackage#getNavigationAggregationAssociationSPAMethod_Method()
 	 * @model
 	 * @generated
 	 */
-	FrontControllerMethod getSpaMethod();
+	FrontControllerMethod getMethod();
 
 	/**
-	 * Sets the value of the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAMethod#getSpaMethod <em>Spa Method</em>}' reference.
+	 * Sets the value of the '{@link br.ufes.inf.nemo.frameweb.model.frameweb.NavigationAggregationAssociationSPAMethod#getMethod <em>Method</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Spa Method</em>' reference.
-	 * @see #getSpaMethod()
+	 * @param value the new value of the '<em>Method</em>' reference.
+	 * @see #getMethod()
 	 * @generated
 	 */
-	void setSpaMethod(FrontControllerMethod value);
+	void setMethod(FrontControllerMethod value);
 
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.

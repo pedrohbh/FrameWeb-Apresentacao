@@ -58,28 +58,28 @@ public class NavigationAggregationAssociationSPAMethodItemProvider extends ItemP
 		{
 			super.getPropertyDescriptors(object);
 
-			addSpaMethodPropertyDescriptor(object);
+			addMethodPropertyDescriptor(object);
 			addValuePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Spa Method feature.
+	 * This adds a property descriptor for the Method feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSpaMethodPropertyDescriptor(Object object)
+	protected void addMethodPropertyDescriptor(Object object)
 	{
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_NavigationAggregationAssociationSPAMethod_spaMethod_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_NavigationAggregationAssociationSPAMethod_spaMethod_feature",
-						"_UI_NavigationAggregationAssociationSPAMethod_type"),
-				FramewebPackage.Literals.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__SPA_METHOD, true, false, true,
-				null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_NavigationAggregationAssociationSPAMethod_method_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_NavigationAggregationAssociationSPAMethod_method_feature",
+								"_UI_NavigationAggregationAssociationSPAMethod_type"),
+						FramewebPackage.Literals.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__METHOD, true, false,
+						true, null, null, null));
 	}
 
 	/**

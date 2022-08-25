@@ -14,7 +14,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.uml2.uml.UMLPackage;
@@ -53,45 +52,8 @@ public class NavigationAggregationAssociationItemProvider extends AssociationIte
 		{
 			super.getPropertyDescriptors(object);
 
-			addRelacoesPropertyDescriptor(object);
-			addSpaPropertiesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Relacoes feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRelacoesPropertyDescriptor(Object object)
-	{
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_NavigationAggregationAssociation_relacoes_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_NavigationAggregationAssociation_relacoes_feature",
-						"_UI_NavigationAggregationAssociation_type"),
-				FramewebPackage.Literals.NAVIGATION_AGGREGATION_ASSOCIATION__RELACOES, true, false, true, null, null,
-				null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Spa Properties feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSpaPropertiesPropertyDescriptor(Object object)
-	{
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_NavigationAggregationAssociation_spaProperties_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_NavigationAggregationAssociation_spaProperties_feature",
-								"_UI_NavigationAggregationAssociation_type"),
-						FramewebPackage.Literals.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_PROPERTIES, true, false, true,
-						null, null, null));
 	}
 
 	/**
@@ -108,8 +70,8 @@ public class NavigationAggregationAssociationItemProvider extends AssociationIte
 		if (childrenFeatures == null)
 		{
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(FramewebPackage.Literals.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHOD);
-			childrenFeatures.add(FramewebPackage.Literals.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTE);
+			childrenFeatures.add(FramewebPackage.Literals.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHODS);
+			childrenFeatures.add(FramewebPackage.Literals.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTES);
 		}
 		return childrenFeatures;
 	}
@@ -179,8 +141,8 @@ public class NavigationAggregationAssociationItemProvider extends AssociationIte
 
 		switch (notification.getFeatureID(NavigationAggregationAssociation.class))
 		{
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHOD:
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTE:
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHODS:
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTES:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -410,11 +372,11 @@ public class NavigationAggregationAssociationItemProvider extends AssociationIte
 				FramewebFactory.eINSTANCE.createNavigationAggregationSource()));
 
 		newChildDescriptors
-				.add(createChildParameter(FramewebPackage.Literals.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHOD,
+				.add(createChildParameter(FramewebPackage.Literals.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_METHODS,
 						FramewebFactory.eINSTANCE.createNavigationAggregationAssociationSPAMethod()));
 
 		newChildDescriptors
-				.add(createChildParameter(FramewebPackage.Literals.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTE,
+				.add(createChildParameter(FramewebPackage.Literals.NAVIGATION_AGGREGATION_ASSOCIATION__SPA_ATTRIBUTES,
 						FramewebFactory.eINSTANCE.createNavigationAggregationAssociationSPAAttribute()));
 	}
 

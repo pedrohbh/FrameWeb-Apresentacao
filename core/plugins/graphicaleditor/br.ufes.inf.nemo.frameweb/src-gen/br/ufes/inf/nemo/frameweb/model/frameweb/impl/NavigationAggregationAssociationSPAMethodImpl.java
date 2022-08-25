@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.NavigationAggregationAssociationSPAMethodImpl#getSpaMethod <em>Spa Method</em>}</li>
+ *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.NavigationAggregationAssociationSPAMethodImpl#getMethod <em>Method</em>}</li>
  *   <li>{@link br.ufes.inf.nemo.frameweb.model.frameweb.impl.NavigationAggregationAssociationSPAMethodImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
@@ -32,14 +32,14 @@ public class NavigationAggregationAssociationSPAMethodImpl extends MinimalEObjec
 		implements NavigationAggregationAssociationSPAMethod
 {
 	/**
-	 * The cached value of the '{@link #getSpaMethod() <em>Spa Method</em>}' reference.
+	 * The cached value of the '{@link #getMethod() <em>Method</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSpaMethod()
+	 * @see #getMethod()
 	 * @generated
 	 * @ordered
 	 */
-	protected FrontControllerMethod spaMethod;
+	protected FrontControllerMethod method;
 
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -88,21 +88,20 @@ public class NavigationAggregationAssociationSPAMethodImpl extends MinimalEObjec
 	 * @generated
 	 */
 	@Override
-	public FrontControllerMethod getSpaMethod()
+	public FrontControllerMethod getMethod()
 	{
-		if (spaMethod != null && spaMethod.eIsProxy())
+		if (method != null && method.eIsProxy())
 		{
-			InternalEObject oldSpaMethod = (InternalEObject) spaMethod;
-			spaMethod = (FrontControllerMethod) eResolveProxy(oldSpaMethod);
-			if (spaMethod != oldSpaMethod)
+			InternalEObject oldMethod = (InternalEObject) method;
+			method = (FrontControllerMethod) eResolveProxy(oldMethod);
+			if (method != oldMethod)
 			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__SPA_METHOD, oldSpaMethod,
-							spaMethod));
+							FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__METHOD, oldMethod, method));
 			}
 		}
-		return spaMethod;
+		return method;
 	}
 
 	/**
@@ -110,9 +109,9 @@ public class NavigationAggregationAssociationSPAMethodImpl extends MinimalEObjec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FrontControllerMethod basicGetSpaMethod()
+	public FrontControllerMethod basicGetMethod()
 	{
-		return spaMethod;
+		return method;
 	}
 
 	/**
@@ -121,14 +120,13 @@ public class NavigationAggregationAssociationSPAMethodImpl extends MinimalEObjec
 	 * @generated
 	 */
 	@Override
-	public void setSpaMethod(FrontControllerMethod newSpaMethod)
+	public void setMethod(FrontControllerMethod newMethod)
 	{
-		FrontControllerMethod oldSpaMethod = spaMethod;
-		spaMethod = newSpaMethod;
+		FrontControllerMethod oldMethod = method;
+		method = newMethod;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__SPA_METHOD, oldSpaMethod,
-					spaMethod));
+					FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__METHOD, oldMethod, method));
 	}
 
 	/**
@@ -167,10 +165,10 @@ public class NavigationAggregationAssociationSPAMethodImpl extends MinimalEObjec
 	{
 		switch (featureID)
 		{
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__SPA_METHOD:
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__METHOD:
 			if (resolve)
-				return getSpaMethod();
-			return basicGetSpaMethod();
+				return getMethod();
+			return basicGetMethod();
 		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__VALUE:
 			return getValue();
 		}
@@ -187,8 +185,8 @@ public class NavigationAggregationAssociationSPAMethodImpl extends MinimalEObjec
 	{
 		switch (featureID)
 		{
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__SPA_METHOD:
-			setSpaMethod((FrontControllerMethod) newValue);
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__METHOD:
+			setMethod((FrontControllerMethod) newValue);
 			return;
 		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__VALUE:
 			setValue((String) newValue);
@@ -207,8 +205,8 @@ public class NavigationAggregationAssociationSPAMethodImpl extends MinimalEObjec
 	{
 		switch (featureID)
 		{
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__SPA_METHOD:
-			setSpaMethod((FrontControllerMethod) null);
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__METHOD:
+			setMethod((FrontControllerMethod) null);
 			return;
 		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__VALUE:
 			setValue(VALUE_EDEFAULT);
@@ -227,8 +225,8 @@ public class NavigationAggregationAssociationSPAMethodImpl extends MinimalEObjec
 	{
 		switch (featureID)
 		{
-		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__SPA_METHOD:
-			return spaMethod != null;
+		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__METHOD:
+			return method != null;
 		case FramewebPackage.NAVIGATION_AGGREGATION_ASSOCIATION_SPA_METHOD__VALUE:
 			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
