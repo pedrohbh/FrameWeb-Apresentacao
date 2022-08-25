@@ -622,7 +622,8 @@ public class Extend
 	 * return lista; }
 	 */
 
-	public List<UIComponentField> retornaListaExemplo(NavigationAggregationAssociation navigationAggregationAssociation)
+	public List<UIComponentField> returnListOfSPAPropsAttributesCandidates(
+			NavigationAggregationAssociation navigationAggregationAssociation)
 	{
 		List<UIComponentField> listaNova = new LinkedList<>();
 
@@ -652,23 +653,23 @@ public class Extend
 			}
 		}
 
-		listaNova.add(null);
 		return listaNova;
 	}
 
 	public String processLabelNavigationAggregationAssociationMedium(
 			NavigationAggregationAssociation navigationAggregationAssociation)
 	{
-		if ( navigationAggregationAssociation.getSpaAttributes().size() > 0 )
+		if (navigationAggregationAssociation.getSpaAttributes().size() > 0)
 		{
 			StringBuffer stringBuffer = new StringBuffer();
 			String stringFinal = "{pros_attributes = [";
-			navigationAggregationAssociation.getSpaAttributes().stream().forEach(t -> stringBuffer.append(t.getAttribute().getName() + ", "));
+			navigationAggregationAssociation.getSpaAttributes().stream()
+					.forEach(t -> stringBuffer.append(t.getAttribute().getName() + ", "));
 			String processada = stringFinal.toString();
 			processada = processada.substring(0, processada.lastIndexOf(", "));
 			stringFinal += processada + "]}";
 			return stringFinal;
-		}	
+		}
 
 		return "";
 	}
