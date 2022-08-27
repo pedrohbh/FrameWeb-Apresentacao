@@ -242,8 +242,14 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 													}
 												}
 											}
-											partialsReferenciadas.add(
-													new ReferencedPartials(nomeParcialReferenciada, upperBoundPartial));
+											ReferencedPartials referencedPartial = new ReferencedPartials(
+													nomeParcialReferenciada, upperBoundPartial);
+											// Parte referente ao SPAProperties
+											navigationAggregationAssociation.getSpaAttributes().stream().forEach(
+													t -> referencedPartial.addSpaPropAttribute(t.getAttribute()));
+											// Fim da parte SPAProperties
+
+											partialsReferenciadas.add(referencedPartial);
 											break;
 										}
 									}
@@ -310,10 +316,6 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 							}
 							partialProperties.put("partialNameDash", partialNameDash);
 							partialProperties.put("partialCamelCase", partialCamelCase);
-
-							// Parte referente ao SPAProperties
-
-							// Fim da parte SPAProperties
 
 							String code = ClassCodeGenerator.render(partial, partialUIComponents, partialProperties,
 									partialsReferenciadas, partialTemplate);

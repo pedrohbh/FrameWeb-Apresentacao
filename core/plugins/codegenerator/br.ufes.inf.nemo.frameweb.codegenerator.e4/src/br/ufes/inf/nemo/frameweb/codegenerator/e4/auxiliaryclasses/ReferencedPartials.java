@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.NavigationModelCodeGenerator;
+import br.ufes.inf.nemo.frameweb.model.frameweb.UIComponentField;
 
 public class ReferencedPartials
 {
@@ -11,7 +12,7 @@ public class ReferencedPartials
 	private Integer upperBound;
 	private String nameDash;
 	private String nameCamelCase;
-	private final List<String> spaPropsAttributes = new LinkedList<>();
+	private final List<UIComponentField> spaPropsAttributes = new LinkedList<>();
 
 	public ReferencedPartials(String name)
 	{
@@ -67,14 +68,14 @@ public class ReferencedPartials
 		this.nameCamelCase = nameCamelCase;
 	}
 
-	public List<String> getSpaPropsAttributes()
+	public List<UIComponentField> getSpaPropsAttributes()
 	{
 		return spaPropsAttributes;
 	}
 
-	public void addSpaPropAttribute(String prop)
+	public void addSpaPropAttribute(UIComponentField spaAttribute)
 	{
-		this.spaPropsAttributes.add(prop);
+		this.spaPropsAttributes.add(spaAttribute);
 	}
 
 	private void processNames()
