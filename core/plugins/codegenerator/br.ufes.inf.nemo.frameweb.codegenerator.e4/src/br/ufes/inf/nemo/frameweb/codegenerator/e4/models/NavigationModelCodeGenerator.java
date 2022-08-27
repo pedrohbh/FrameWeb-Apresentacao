@@ -224,7 +224,7 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 													nomeParcialReferenciada = ((Dependency) p
 															.getSourceDirectedRelationships().get(j)
 															.getSourceDirectedRelationships()).getSuppliers().get(0)
-																	.getName();
+															.getName();
 													break;
 												}
 											}
@@ -287,11 +287,11 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 							{
 								List<FrontControllerMethod> methodsController = ((FrontControllerClass) partialProperties
 										.get("FrontControllerClass")).getOperations().stream()
-												.filter(FrontControllerMethod.class::isInstance)
-												.map(FrontControllerMethod.class::cast).collect(Collectors.toList());
+										.filter(FrontControllerMethod.class::isInstance)
+										.map(FrontControllerMethod.class::cast).collect(Collectors.toList());
 								partialProperties.put("methodsController", methodsController);
 							}
-							
+
 							// Partial Properties
 							partialProperties.put("partialName", nomePartial);
 							String[] splitNome = separaPorMaiuscula(nomePartial);
@@ -310,6 +310,10 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 							}
 							partialProperties.put("partialNameDash", partialNameDash);
 							partialProperties.put("partialCamelCase", partialCamelCase);
+
+							// Parte referente ao SPAProperties
+
+							// Fim da parte SPAProperties
 
 							String code = ClassCodeGenerator.render(partial, partialUIComponents, partialProperties,
 									partialsReferenciadas, partialTemplate);

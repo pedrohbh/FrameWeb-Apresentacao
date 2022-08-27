@@ -1,5 +1,8 @@
 package br.ufes.inf.nemo.frameweb.codegenerator.e4.auxiliaryclasses;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.models.NavigationModelCodeGenerator;
 
 public class ReferencedPartials
@@ -8,6 +11,7 @@ public class ReferencedPartials
 	private Integer upperBound;
 	private String nameDash;
 	private String nameCamelCase;
+	private final List<String> spaPropsAttributes = new LinkedList<>();
 
 	public ReferencedPartials(String name)
 	{
@@ -62,7 +66,17 @@ public class ReferencedPartials
 	{
 		this.nameCamelCase = nameCamelCase;
 	}
-	
+
+	public List<String> getSpaPropsAttributes()
+	{
+		return spaPropsAttributes;
+	}
+
+	public void addSpaPropAttribute(String prop)
+	{
+		this.spaPropsAttributes.add(prop);
+	}
+
 	private void processNames()
 	{
 		String[] splitNomeRef = NavigationModelCodeGenerator.separaPorMaiuscula(name);
@@ -82,5 +96,5 @@ public class ReferencedPartials
 		this.nameDash = partialRefNameDash;
 		this.nameCamelCase = partialRefCamelCase;
 	}
-	
+
 }
