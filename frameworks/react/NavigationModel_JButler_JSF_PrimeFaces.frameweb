@@ -180,6 +180,21 @@
       <packagedElement xsi:type="frameweb:Tag" name="p"/>
       <packagedElement xsi:type="frameweb:Tag" name="span"/>
       <packagedElement xsi:type="frameweb:Tag" name="h1"/>
+      <packagedElement xsi:type="frameweb:Tag" name="input type=&quot;radio&quot;"/>
+      <packagedElement xsi:type="frameweb:Tag" name="input type=&quot;checkbox&quot;"/>
+      <packagedElement xsi:type="frameweb:Tag" name="input type=&quot;password&quot;"/>
+      <packagedElement xsi:type="frameweb:Tag" name="input type=&quot;date&quot;"/>
+      <packagedElement xsi:type="frameweb:Tag" name="input type=&quot;email&quot;"/>
+      <packagedElement xsi:type="frameweb:Tag" name="input type=&quot;file&quot;"/>
+      <packagedElement xsi:type="frameweb:Tag" name="input type=&quot;text&quot;"/>
+      <packagedElement xsi:type="frameweb:Tag" name="input type=&quot;color&quot;"/>
+      <packagedElement xsi:type="frameweb:Tag" name="a"/>
+      <packagedElement xsi:type="frameweb:Tag" name="img"/>
+      <packagedElement xsi:type="frameweb:Tag" name="div"/>
+      <packagedElement xsi:type="frameweb:Tag" name="h2"/>
+      <packagedElement xsi:type="frameweb:Tag" name="h3"/>
+      <packagedElement xsi:type="frameweb:Tag" name="h4"/>
+      <packagedElement xsi:type="frameweb:Tag" name="h5"/>
     </packagedElement>
   </configures>
 </frameweb:FramewebProject>
