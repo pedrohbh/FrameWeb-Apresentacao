@@ -9,7 +9,7 @@
 		{%- elseif attribute.Type.Name == "outputText" -%}{%- set tag = "h:outputText" -%}
 		{%- elseif attribute.Type.Name == "panelGroup" -%}{%- set tag = "h:panelGroup" -%}
 		{%- elseif attribute.Type.Name == "selectManyListbox" -%}{%- set tag = "h:selectManyListbox" -%}
-		{%- else -%}{%- set tag = "<p>" -%}{%- endif -%}
+		{%- else -%}{%- set tag = attribute.Type.Name -%}{%- endif -%}
 		<{{ tag }} id="{{ attribute.Name }}">{{ left }} {{ attribute.Name }} {{ right }}</{{ tag }}>
 	{%- endif -%}{%- endfor -%}
 	{% if partialProperties.get("hasMethod") %}
@@ -29,7 +29,7 @@
 		{% for attribute in form.Attributes %}
 			{%- if attribute.Type.Name == "input[text]" -%}{%- set tag = 'input type="text"' -%}
 			{%- elseif attribute.Type.Name == "outputLink" -%}{%- set tag = "h:outputLink" -%}
-			{%- else -%}{%- set tag = "nao_definido" -%}{%- endif -%}
+			{%- else -%}{%- set tag = attribute.Type.Name -%}{%- endif -%}
 			<{{ tag }} id="{{ attribute.Name }}" v-model="{{ left }} {{ attribute.Name }} {{ right }}" />
 		{% endfor %}
     {% endfor %}
