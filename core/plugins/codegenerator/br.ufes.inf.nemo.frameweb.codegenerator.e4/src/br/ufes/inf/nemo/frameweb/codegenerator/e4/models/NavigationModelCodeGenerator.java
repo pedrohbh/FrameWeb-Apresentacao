@@ -189,7 +189,7 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 							
 							for ( ResultDependency resultDependency : resultDependencies)
 							{
-								if ( resultDependency.getSuppliers().get(0).equals(partial) )
+								if ( resultDependency.getClients().stream().filter(t -> t.equals(partial)).findFirst().orElse(null) != null )
 								{
 									redirectLinks.add(resultDependency);
 								}
