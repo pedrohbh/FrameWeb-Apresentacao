@@ -31,6 +31,7 @@ import br.ufes.inf.nemo.frameweb.model.frameweb.NavigationModel;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Page;
 import br.ufes.inf.nemo.frameweb.model.frameweb.Partial;
 import br.ufes.inf.nemo.frameweb.model.frameweb.RestControllerClass;
+import br.ufes.inf.nemo.frameweb.model.frameweb.ResultDependency;
 import br.ufes.inf.nemo.frameweb.model.frameweb.UIComponent;
 import br.ufes.inf.nemo.frameweb.model.frameweb.ViewPackage;
 import br.ufes.inf.nemo.frameweb.utils.IFileUtils;
@@ -41,6 +42,7 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 
 	private List<ControllerPackage> controllerPackages;
 	private List<ViewPackage> viewPackages;
+	private List<ResultDependency> resultDependencies;
 	private FrontControllerTemplate frontControllerTemplate;
 	private ProjectProperties projectConfiguration;
 
@@ -53,6 +55,9 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 
 		viewPackages = navigationModel.getOwnedElements().stream().filter(ViewPackage.class::isInstance)
 				.map(ViewPackage.class::cast).collect(Collectors.toList());
+
+		this.resultDependencies = navigationModel.getOwnedElements().stream().filter(ResultDependency.class::isInstance)
+				.map(ResultDependency.class::cast).collect(Collectors.toList());
 
 		this.frontControllerTemplate = frontControllerTemplate;
 		this.projectConfiguration = projectConfiguration;
@@ -175,11 +180,20 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 				viewPackage.getOwnedTypes().stream().filter(Partial.class::isInstance).map(Partial.class::cast)
 						.forEach(partial -> {
 							List<String> invocatedMethodsNames = new LinkedList<>();
+							List<ResultDependency> redirectLinks = new LinkedList<>();
 							List<UIComponent> partialUIComponents = new ArrayList<>();
 							Map<String, Object> partialProperties = new HashMap<>();
 							partialProperties.put("hasMethod", false);
 							partialProperties.put("hasMethodForm", false);
 							String nomePartial = partial.getName();
+							
+							for ( ResultDependency resultDependency : resultDependencies)
+							{
+								if ( resultDependency.getSuppliers().get(0).equals(partial) )
+								{
+									redirectLinks.add(resultDependency);
+								}
+							}
 
 							for (Association navigationAssociation : partial.getAssociations())
 							{
