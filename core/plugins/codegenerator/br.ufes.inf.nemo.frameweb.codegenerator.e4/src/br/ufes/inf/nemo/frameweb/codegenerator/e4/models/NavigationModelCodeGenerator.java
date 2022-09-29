@@ -339,7 +339,8 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 							}
 							partialProperties.put("partialNameDash", partialNameDash);
 							partialProperties.put("partialCamelCase", partialCamelCase);
-
+							
+							partialProperties.put("redirectLinksSPA", redirectLinkSPAs);
 							String code = ClassCodeGenerator.render(partial, partialUIComponents, partialProperties,
 									partialsReferenciadas, partialTemplate);
 
