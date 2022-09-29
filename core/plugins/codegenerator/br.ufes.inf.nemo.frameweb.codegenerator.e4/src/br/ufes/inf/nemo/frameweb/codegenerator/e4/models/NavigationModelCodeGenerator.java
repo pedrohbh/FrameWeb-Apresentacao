@@ -17,6 +17,7 @@ import org.eclipse.uml2.uml.NamedElement;
 import org.eclipse.uml2.uml.Property;
 
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.ProjectProperties;
+import br.ufes.inf.nemo.frameweb.codegenerator.e4.auxiliaryclasses.RedirectLinkSPA;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.auxiliaryclasses.ReferencedPartials;
 import br.ufes.inf.nemo.frameweb.codegenerator.e4.classes.ClassCodeGenerator;
 import br.ufes.inf.nemo.frameweb.model.frameweb.AuthPage;
@@ -181,6 +182,7 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 						.forEach(partial -> {
 							List<String> invocatedMethodsNames = new LinkedList<>();
 							List<ResultDependency> redirectLinks = new LinkedList<>();
+							List<RedirectLinkSPA> redirectLinkSPAs = new LinkedList<>();
 							List<UIComponent> partialUIComponents = new ArrayList<>();
 							Map<String, Object> partialProperties = new HashMap<>();
 							partialProperties.put("hasMethod", false);
@@ -192,6 +194,13 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 								if ( resultDependency.getClients().stream().filter(t -> t.equals(partial)).findFirst().orElse(null) != null )
 								{
 									redirectLinks.add(resultDependency);
+									Partial pacote = (Partial) resultDependency.getSuppliers().stream().findFirst().orElse(null);
+									if ( pacote == null )
+									{
+										continue;
+									}
+									String nomeCompleto = pacote.getPackage().getName() + "/" + pacote.getName() + partialExtension;
+									redirectLinkSPAs.add(new RedirectLinkSPA(pacote.getName(), nomeCompleto));									
 								}
 							}
 
