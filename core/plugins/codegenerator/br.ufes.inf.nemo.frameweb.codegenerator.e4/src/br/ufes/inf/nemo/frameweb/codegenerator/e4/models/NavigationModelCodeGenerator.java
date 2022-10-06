@@ -144,7 +144,11 @@ public class NavigationModelCodeGenerator implements ModelCodeGenerator
 			List<UIComponent> uiComponents = viewPackage.getOwnedTypes().stream().filter(UIComponent.class::isInstance)
 					.map(UIComponent.class::cast).collect(Collectors.toList());
 
-			viewPackage.getOwnedTypes().stream().filter(Page.class::isInstance).map(Page.class::cast).forEach(page -> {
+			viewPackage.getOwnedTypes().stream().filter(t -> {
+				return t instanceof Page && !(t instanceof Partial);				
+			}).map(Page.class::cast).forEach(page -> {
+			
+			
 //						FIXME nao foi possivel obter o formulario atraves da associacao de page e, para
 //						solucionar isso (provisoriamente), uma uniao foi feita entre as associacoes de
 //						formulario e pagina. O correto a se fazer e obter os dados do formulario atraves
