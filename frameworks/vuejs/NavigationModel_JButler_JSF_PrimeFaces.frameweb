@@ -195,6 +195,9 @@
       <packagedElement xsi:type="frameweb:Tag" name="h3"/>
       <packagedElement xsi:type="frameweb:Tag" name="h4"/>
       <packagedElement xsi:type="frameweb:Tag" name="h5"/>
+      <packagedElement xsi:type="frameweb:Tag" name="External Component"/>
+      <packagedElement xsi:type="frameweb:Tag" name="table"/>
+      <packagedElement xsi:type="frameweb:Tag" name="li"/>
     </packagedElement>
   </configures>
 </frameweb:FramewebProject>
