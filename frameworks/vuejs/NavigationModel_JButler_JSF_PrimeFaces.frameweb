@@ -198,6 +198,12 @@
       <packagedElement xsi:type="frameweb:Tag" name="External Component"/>
       <packagedElement xsi:type="frameweb:Tag" name="table"/>
       <packagedElement xsi:type="frameweb:Tag" name="li"/>
+      <packagedElement xsi:type="frameweb:Tag" name="td"/>
+      <packagedElement xsi:type="frameweb:Tag" name="input type=&quot;textarea&quot;"/>
+      <packagedElement xsi:type="frameweb:Tag" name="input type=&quot;select&quot;"/>
+      <packagedElement xsi:type="frameweb:Tag" name="input type=&quot;number&quot;"/>
+      <packagedElement xsi:type="frameweb:Tag" name="b"/>
+      <packagedElement xsi:type="frameweb:Tag" name="strong"/>
     </packagedElement>
   </configures>
 </frameweb:FramewebProject>
